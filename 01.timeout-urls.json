@@ -9,25 +9,24 @@
         "https://https://www.statista.com/statistics/1245553/kubernetes-security-incidents-experienced/"
     ],
     "347259": [
-        "https://https://www.cloudflare.com/learning/ssl/transport-layer-security-tls/"
+        "https://without/tag/without/www/https"
     ],
     "347218": [
-        "https://https://www.kali.org/",
         "https://https://www.kalilinux.in/2020/05/lockphish.html",
         "https://https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8864450/",
         "https://https://https://www.kali.org/docs/introduction/what-is-kali-linux/",
-        "https://https://www.kali.org/docs/introduction/what-is-kali-linux/"
+        "https://https://www.kali.org/"
     ],
     "347177": [
-        "https://https://www.hackread.com/malware-targeted-windows-2022/",
-        "https://https://www.kernel.org/doc/html/v4.14/admin-guide/LSM/Smack.html"
+        "https://https://www.kernel.org/doc/html/v4.14/admin-guide/LSM/Smack.html",
+        "https://https://www.hackread.com/malware-targeted-windows-2022/"
     ],
     "347039": [
         "https://https://www.makeuseof.com/tag/brute-force-attack/"
     ],
     "346932": [
-        "https://https://www.linuxfoundation.org/",
         "https://https://www.cedarpolicy.com/en/tutorial",
+        "https://https://www.linuxfoundation.org/",
         "https://https://www.linux-kvm.org/page/Main_Page"
     ],
     "346821": [
@@ -47,12 +46,12 @@
         "https://https://www.phoronix.com/news/Intel-CVE-2023-28410"
     ],
     "346804": [
-        "https://https://www.linuxfoundation.org/press/press-release/state-of-open-source-security",
-        "https://https://www.thecube.net/events/linux-foundation/open-source-summit-na-2023"
+        "https://https://www.thecube.net/events/linux-foundation/open-source-summit-na-2023",
+        "https://https://www.linuxfoundation.org/press/press-release/state-of-open-source-security"
     ],
     "346803": [
-        "https://https://www.techradar.com/best/best-malware-removal",
-        "https://https://www.techradar.com/best/best-linux-distros"
+        "https://https://www.techradar.com/best/best-linux-distros",
+        "https://https://www.techradar.com/best/best-malware-removal"
     ],
     "346552": [
         "https://https://www.neowin.net/news/microsofts-exfat-to-get-massive-performance-boost-on-linux-again-thanks-to-sony/",
@@ -1498,5 +1497,9 @@
     "298509": [
         "https://https://www.cisa.gov/uscert/ncas/current-activity/2021/12/10/apache-releases-log4j-version-2150-address-critical-rce",
         "https://https://www.zdnet.com/article/security-warning-new-zero-day-in-the-log4j-java-library-is-already-being-exploited/"
+    ],
+    "101884": [
+        "http://https://www.gnupg.org",
+        "http://osiris.shmoo.com/"
     ]
 }

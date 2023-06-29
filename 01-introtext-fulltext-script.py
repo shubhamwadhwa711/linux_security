@@ -136,8 +136,6 @@ def find_broken_url_in_tags(a_tags):
             yield {'tag': a, 'text': text, 'can_replace': False, 'ftp': True}
         elif href.startswith('#'):
             continue
-        elif href.startswith('https://https://') or href.startswith('http://https://'):
-            yield {'tag': a, 'text': text, 'can_replace': False, 'protocol': True}
         elif any(site in href for site in SKIP_CHECK_SITES):
             # Skipped checking if site is in SKIP_CHECK_SITES
             continue
@@ -169,12 +167,16 @@ def find_ftp_link(text, ftp_link):
 
 def find_text_links(text):
     # Regular expression pattern to match HTTP and HTTPS links not within anchor tags
-    pattern = r'(?<!href=")(?P<url>(?:http|https)://[^\s<>"]+|www\.[^\s<>"]+)'
+    # pattern = r'(?<!href=")(?P<url>(?:http|https)://[^\s<>"]+|www\.[^\s<>"]+)'
+    pattern = r'(?<!href="|href=\')(http[s]?:\/\/(?:[^\s<>"]+|www\.[^\s<>"]+))(?![^<]*>|[^<>]*<\/a>)'
+  
+
+
     # Find all matches
     matches = re.findall(pattern, text)
-    cleaned_matches = [re.sub(r'^(?:http|https)://', '', url) for url in matches]
+    # cleaned_matches = [re.sub(r'^(?:http|https)://', '', url) for url in matches]
     # Return the list of links
-    return cleaned_matches
+    return matches
 
 def check_double_https(text):
     # Regular expression pattern to match URLs containing "https://https://"
@@ -241,6 +243,7 @@ def extract_a_tag_in_html(logger: Logger, id: int, field: str, html: Optional[st
                     http_urls.append(url)
 
         if len(http_urls) > 0:
+            # http_urls = [url.replace('https://https://', 'https://') if url.startswith('https://https://') else url for url in http_urls]
             for result in do_http_request(urls=http_urls, logger=logger, id=id):
                 url = result.get('url')
                 if not result.get('is_broken', False):
@@ -307,10 +310,27 @@ def extract_a_tag_in_html(logger: Logger, id: int, field: str, html: Optional[st
                     modified_html = re.sub(re.escape(url), '', modified_html)
                     logger.info(f'ID: {id} #COLUMN: {field} #FTP_URL: {url if url else ("null")} - Replaced with #TEXT: (null)')
 
-        # a_tags = soup.find_all('a', attrs={'href': url})
+        
         http_text_links = find_text_links(modified_html)
-        # double_https=check_double_https(modified_html)
+        # rm_url=[a.get('href',None) for a in a_tags]
+        # rm_url = [url for url in rm_url if  not url.startswith(('www','http', 'https', 'ftp', '@', '#', 'mail')) and url not in http_text_links]
         # print(http_text_links)
+
+        # if len(rm_url)>0:
+        #     for result in do_http_request(urls=rm_url, logger=logger, id=id):
+        #         url=result.get('url')
+        #         if not result.get('is_broken', False):
+        #             updates.append(True)
+        #             if result.get('status_code') in VALID_HTTP_STATUS_CODES:
+        #                 logger.warning(f'ID: {id} #COLUMN: {field} #URL: {url} #STATUS_CODE: {result.get("status_code")}')
+        #             else:
+        #                 modified_html = re.sub(re.escape(url), '', modified_html)
+        #                 logger.info(f'ID: {id} #COLUMN: {field} #URL: {original_url if original_url else ("null")} #STATUS_CODE: {result.get("status_code")} - Replaced with #TEXT: (null)')
+        #             continue
+        #         updates.append(True)
+        #         modified_html = re.sub(re.escape(url), '', modified_html)
+        #         logger.info(f'ID: {id} #COLUMN: {field} #URL: {url if url else ("null")} #STATUS_CODE: {result.get("status_code")} - Replaced with #TEXT: (null)')
+
         if len(http_text_links) > 0:
             url_startwith_www = [url for url in http_text_links if url.startswith('www')]
             url_startwith_http = [url for url in http_text_links if url not in url_startwith_www]
@@ -339,7 +359,8 @@ def extract_a_tag_in_html(logger: Logger, id: int, field: str, html: Optional[st
             if len(url_startwith_www) > 0:
                 for result in do_http_request(urls=['https://{}'.format(url) for url in url_startwith_www], logger=logger, id=id):
                     url = result.get('url')
-                    original_url = f"http://{url[8:]}"
+                    original_url = url[8:]
+                    # original_url = f"http://{url[8:]}"
                     if not result.get('is_broken', False):
                         updates.append(True)
                         if result.get('status_code') in STATUS_CODES_FOR_FURTHER_CHECK:
@@ -442,7 +463,7 @@ def main(commit: bool = False, id: Optional[int] = 0):
                 sql = "SELECT c.id, c.introtext, c.fulltext FROM xu5gc_content AS c WHERE id =%s"
                 args = (id)
             else:
-                sql = 'SELECT c.id, c.introtext, c.fulltext FROM xu5gc_content AS c LEFT JOIN xu5gc_categories cat ON cat.id = c.catid WHERE c.state = 1 AND cat.published = 1 ORDER BY c.id DESC LIMIT %s'
+                sql = 'SELECT c.id, c.introtext, c.fulltext FROM xu5gc_content AS c LEFT JOIN xu5gc_categories cat ON cat.id = c.catid WHERE c.id=347259 AND c.state = 1 AND cat.published = 1 ORDER BY c.id DESC LIMIT %s'
                 args = (limit)
 
             with connection.cursor() as cursor:
