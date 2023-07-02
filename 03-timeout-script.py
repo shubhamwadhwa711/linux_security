@@ -3,8 +3,8 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 from json import JSONDecodeError
 import json
 import requests
-import lxml
-import chardet
+# import lxml
+# import chardet
 import pymysql.cursors
 import os
 import sys
@@ -37,6 +37,11 @@ from utils import (
     SKIP_CHECK_SITES,
 )
 
+def find_text_links(text):
+    # Regular expression pattern to match HTTP and HTTPS links not within anchor tags
+    # pattern = r'(?<!href=")(?P<url>(?:http|https)://[^\s<>"]+|www\.[^\s<>"]+)'
+    pattern = r'(?<!href="|href=\')(http[s]?:\/\/(?:[^\s<>"]+|www\.[^\s<>"]+))(?![^<]*>|[^<>]*<\/a>)'
+
 def do_http_request(urls, logger: Logger, id: int, timeout = HTTP_REQUEST_TIMEOUT):
     with ThreadPoolExecutor() as executor:
         futures = {executor.submit(check_http_broken_link, url=url, timeout=timeout): url for url in urls}
@@ -68,20 +73,20 @@ def find_a_tag_in_html(logger: Logger, field: str, html: Optional[str] = None, u
         updates = []
         for url in urls:
             a_tags = soup.find_all('a', attrs={'href': url})
-            if len(a_tags) == 0:
+            if len(a_tags) == 0 and url in str(soup):
+                html = html.replace(url, ' ')
+                updates.append(True)
                 continue
-
             for tag in a_tags:
                 text = tag.text.strip()
                 updates.append(True)
                 if text and len(text) > 0 and url not in text:
-                    tag.replace_with(text)
+                    html = html.replace(str(tag), f'{text} ')
                     logger.info(f'#COLUMN: {field} #URL: {url} - Replaced with #TEXT: {text}')
                 else:
                     tag.decompose()
                     logger.info(f'#COLUMN: {field} #URL: {url} #TEXT: (empty) removed')
-
-        return str(soup), any(updates)
+        return html, any(updates)
     except Exception as e:
         logger.exception(e)
         raise e
@@ -222,6 +227,7 @@ def main(commit, file_path, is_urla: bool = False, timeout: int = 15):
         # Connect to the database
         connection: Connection = pymysql.connect(
             host=config.get('mysql', 'host'),
+            port=int(config.get('mysql', 'port')),
             user=config.get('mysql', 'user'),
             password=config.get('mysql', 'password'),
             database=config.get('mysql', 'database'),
