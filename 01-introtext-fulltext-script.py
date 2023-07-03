@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 import requests
 import lxml
-import chardet
+# import chardet
 import pymysql.cursors
 from pymysql import Connection
 import validators
@@ -18,6 +18,7 @@ from ftplib import all_errors
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from bs4 import BeautifulSoup, MarkupResemblesLocatorWarning
 from typing import Dict, Any, Optional
+import copy
 
 warnings.filterwarnings("ignore", category=MarkupResemblesLocatorWarning)
 
@@ -178,13 +179,37 @@ def find_text_links(text):
     # Return the list of links
     return matches
 
-def check_double_https(text):
-    # Regular expression pattern to match URLs containing "https://https://"
-    pattern = r'(?P<url>(?:http|https)://https://[^\s<>"]+|www\.[^\s<>"]+)'
-    # Find all matches
-    matches = re.findall(pattern, text)
-    return matches
 
+
+
+
+def strip_trailing_chars(url):
+    if url.endswith(('&gt;', '&gt')):
+        url = url.rstrip('&gt;')
+    if url.endswith(('.',')', ':',';')):
+        url = url.rstrip('.;:)')
+    return url
+
+def check_https_urls(url):
+
+    if url.startswith("https://https://") or url.startswith("http://https://"):
+       return True
+    return False
+        
+def get_double_https(urls):
+    obj={
+    
+    }
+    for url in urls:
+        original_url=copy.deepcopy(url)
+        if url.startswith('https://https://'):
+            url=url.replace('https://https://', 'https://')
+        elif url.startswith('http://https://'):
+            url=url.replace('http://https://',"http://") 
+        url=strip_trailing_chars(url)
+        obj[url]=original_url
+    return obj
+  
 
 def find_www_links(text):
     # Regular expression pattern to match HTTP and HTTPS links not within anchor tags
@@ -201,7 +226,8 @@ def extract_a_tag_in_html(logger: Logger, id: int, field: str, html: Optional[st
         if html is None or len(html) == 0:
             return None, False, for_more_check_urls
 
-        soup = BeautifulSoup(html, 'lxml')
+        # soup = BeautifulSoup(html, 'lxml')
+        soup=BeautifulSoup(html,'html.parser')
         a_tags = soup.find_all('a')
         if len(a_tags) == 0:
             return None, False, for_more_check_urls
@@ -241,12 +267,25 @@ def extract_a_tag_in_html(logger: Logger, id: int, field: str, html: Optional[st
                     if not url.startswith('http'):
                         url = f'{base_url}/{url[1:] if url.startswith("/") else url}'
                     http_urls.append(url)
+      
 
         if len(http_urls) > 0:
-            # http_urls = [url.replace('https://https://', 'https://') if url.startswith('https://https://') else url for url in http_urls]
+            http_urls_obj=get_double_https(http_urls)
+            http_urls=list(http_urls_obj.keys())
+            
+            # http_urls = []
+            # http_urls = [strip_trailing_chars(url) for url in http_urls]
             for result in do_http_request(urls=http_urls, logger=logger, id=id):
-                url = result.get('url')
+                parsed_url = result.get('url')
+                url=http_urls_obj[parsed_url]
                 if not result.get('is_broken', False):
+                    if check_https_urls(url):
+                        a_tags = soup.find_all('a', attrs={'href': url})
+                        for tag in a_tags:
+                            tag['href']=parsed_url 
+                            logger.info(f'ID: {id} #COLUMN: {field} #URL: {url} replaced with {parsed_url}') 
+                        updates.append(True)
+                        continue
                     # Link is still existing - no need to do anything
                     updates.append(False)
                     if result.get('status_code') in VALID_HTTP_STATUS_CODES:
@@ -264,6 +303,7 @@ def extract_a_tag_in_html(logger: Logger, id: int, field: str, html: Optional[st
                     continue
 
                 updates.append(True)
+
                 for tag in a_tags:
                     text = tag.text.strip()
                     if text == url or len(text) == 0:
@@ -307,7 +347,7 @@ def extract_a_tag_in_html(logger: Logger, id: int, field: str, html: Optional[st
                 found = find_ftp_link(modified_html, url)
                 if found:
                     updates.append(True)
-                    modified_html = re.sub(re.escape(url), '', modified_html)
+                    modified_html = re.sub(re.escape(url), ' ', modified_html)
                     logger.info(f'ID: {id} #COLUMN: {field} #FTP_URL: {url if url else ("null")} - Replaced with #TEXT: (null)')
 
         
@@ -334,6 +374,7 @@ def extract_a_tag_in_html(logger: Logger, id: int, field: str, html: Optional[st
         if len(http_text_links) > 0:
             url_startwith_www = [url for url in http_text_links if url.startswith('www')]
             url_startwith_http = [url for url in http_text_links if url not in url_startwith_www]
+            url_startwith_http =[strip_trailing_chars(url) for url in url_startwith_http]
             for result in do_http_request(urls=url_startwith_http, logger=logger, id=id):
                 url = result.get('url')
                 # original_url=f'https://{url}'
@@ -353,7 +394,7 @@ def extract_a_tag_in_html(logger: Logger, id: int, field: str, html: Optional[st
                     continue
             
                 updates.append(True)
-                modified_html = re.sub(re.escape(url), '', modified_html)
+                modified_html = re.sub(re.escape(url), ' ', modified_html)
                 logger.info(f'ID: {id} #COLUMN: {field} #URL: {url if url else ("null")} #STATUS_CODE: {result.get("status_code")} - Replaced with #TEXT: (null)')
                 
             if len(url_startwith_www) > 0:
@@ -372,7 +413,7 @@ def extract_a_tag_in_html(logger: Logger, id: int, field: str, html: Optional[st
                         continue
                 
                     updates.append(True)
-                    modified_html = re.sub(re.escape(url), '', modified_html)
+                    modified_html = re.sub(re.escape(url), ' ', modified_html)
                     logger.info(f'ID: {id} #COLUMN: {field} #URL: {url if url else ("null")} #STATUS_CODE: {result.get("status_code")} - Replaced with #TEXT: (null)')
 
         return modified_html, any(updates), for_more_check_urls

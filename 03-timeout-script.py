@@ -246,6 +246,7 @@ def main(commit, file_path, is_urla: bool = False, timeout: int = 15):
             logger.info(f'{"*"*20} Processing ID: {id} {"*"*20}')
             remain_urls = [*urls]
             replace_urls = []
+            urls=[url.replace("http://https://","http://").replace("https://https://","https://") if url.startswith("http://https://") or url.startswith("https://https://") else url for url in urls]
             for result in do_http_request(urls=urls, logger=logger, id=id, timeout=timeout):
                 url = result.get('url')
                 if not result.get('is_broken', False):
