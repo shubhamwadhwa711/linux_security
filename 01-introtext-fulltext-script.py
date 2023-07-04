@@ -156,7 +156,8 @@ def find_broken_url_in_tags(a_tags):
 
 def find_ftp_links(text):
     # Define the regex pattern for FTP links
-    pattern = r"ftp://\S+"
+    # pattern = r"ftp://\S+"
+    pattern=r'ftp://[^">\s]+'
     # Find all matches in the text
     matches = re.findall(pattern, text)
     return matches
@@ -182,12 +183,19 @@ def find_text_links(text):
 
 
 
-
+# added function to remove parenthesis or periods and &gt
 def strip_trailing_chars(url):
     if url.endswith(('&gt;', '&gt')):
         url = url.rstrip('&gt;')
-    if url.endswith(('.',')', ':',';')):
-        url = url.rstrip('.;:)')
+    if url.endswith(('.',')' ,':',';','>')):
+        url = url.rstrip('.;:),>')
+    return url
+
+def strip_trailing_in_anchor(url):
+    if url.endswith(('&gt;', '&gt')):
+        url = url.rstrip('&gt;')
+    if url.endswith(('.',':',';','>')):
+        url = url.rstrip('.;:,>')
     return url
 
 def check_https_urls(url):
@@ -196,6 +204,8 @@ def check_https_urls(url):
        return True
     return False
         
+
+    
 def get_double_https(urls):
     obj={
     
@@ -206,9 +216,15 @@ def get_double_https(urls):
             url=url.replace('https://https://', 'https://')
         elif url.startswith('http://https://'):
             url=url.replace('http://https://',"http://") 
-        url=strip_trailing_chars(url)
+        url=strip_trailing_in_anchor(url)
         obj[url]=original_url
     return obj
+
+#added a function to remove whitespaces  into the text links
+def remove_whitespace_from_url(url):
+    # Remove whitespace characters from the URL
+    url = re.sub(r'\s', '', url)
+    return url
   
 
 def find_www_links(text):
@@ -250,14 +266,18 @@ def extract_a_tag_in_html(logger: Logger, id: int, field: str, html: Optional[st
             url = tag.get('href')
             if can_replace:
                 updates.append(True)
-                if len(text) > 0 and url not in text:
+        #  added new condition to handle if href attribute is not present in the anchor tag
+                if not url:  
+                    tag.replace_with(text)
+                    logger.info(f'ID: {id} #COLUMN: {field} #URL: {url if url else "(null)"} - Replaced with #TEXT: {text}')
+                elif len(text) > 0 and url not in text:
                     tag.replace_with(text)
                     logger.info(f'ID: {id} #COLUMN: {field} #URL: {url if url else "(null)"} - Replaced with #TEXT: {text}')
                 else:
                     tag.decompose()
                     logger.info(f'ID: {id} #COLUMN: {field} #URL: {url if url else "(null)"} #TEXT: (null) removed')
-                if is_protocol_failiure:
-                    tag.replace_with(text)
+                # if is_protocol_failiure:
+                #     tag.replace_with(text)
             else:
                 if is_fpt_link:
                     ftp_urls.append(url)
@@ -374,7 +394,10 @@ def extract_a_tag_in_html(logger: Logger, id: int, field: str, html: Optional[st
         if len(http_text_links) > 0:
             url_startwith_www = [url for url in http_text_links if url.startswith('www')]
             url_startwith_http = [url for url in http_text_links if url not in url_startwith_www]
-            url_startwith_http =[strip_trailing_chars(url) for url in url_startwith_http]
+            url_startwith_http = [remove_whitespace_from_url(strip_trailing_chars(url)) for url in url_startwith_http]
+
+            # url_startwith_http =[strip_trailing_chars(url) for url in url_startwith_http]
+            # url_startwith_http =[remove_whitespace_from_url(url) for url in url_startwith_http]
             for result in do_http_request(urls=url_startwith_http, logger=logger, id=id):
                 url = result.get('url')
                 # original_url=f'https://{url}'
@@ -504,7 +527,7 @@ def main(commit: bool = False, id: Optional[int] = 0):
                 sql = "SELECT c.id, c.introtext, c.fulltext FROM xu5gc_content AS c WHERE id =%s"
                 args = (id)
             else:
-                sql = 'SELECT c.id, c.introtext, c.fulltext FROM xu5gc_content AS c LEFT JOIN xu5gc_categories cat ON cat.id = c.catid WHERE c.id=347259 AND c.state = 1 AND cat.published = 1 ORDER BY c.id DESC LIMIT %s'
+                sql = 'SELECT c.id, c.introtext, c.fulltext FROM xu5gc_content AS c LEFT JOIN xu5gc_categories cat ON cat.id = c.catid WHERE c.id=111769 AND c.state = 1 AND cat.published = 1 ORDER BY c.id DESC LIMIT %s'
                 args = (limit)
 
             with connection.cursor() as cursor:
