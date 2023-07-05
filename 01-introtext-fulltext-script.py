@@ -192,8 +192,8 @@ def strip_trailing_chars(url):
     return url
 
 def strip_trailing_in_anchor(url):
-    if url.endswith(('&gt;', '&gt')):
-        url = url.rstrip('&gt;')
+    # if url.endswith(('&gt;', '&gt')):
+    #     url = url.rstrip('&gt;')
     if url.endswith(('.',':',';','>')):
         url = url.rstrip('.;:,>')
     return url
@@ -527,7 +527,7 @@ def main(commit: bool = False, id: Optional[int] = 0):
                 sql = "SELECT c.id, c.introtext, c.fulltext FROM xu5gc_content AS c WHERE id =%s"
                 args = (id)
             else:
-                sql = 'SELECT c.id, c.introtext, c.fulltext FROM xu5gc_content AS c LEFT JOIN xu5gc_categories cat ON cat.id = c.catid WHERE c.id=111769 AND c.state = 1 AND cat.published = 1 ORDER BY c.id DESC LIMIT %s'
+                sql = 'SELECT c.id, c.introtext, c.fulltext FROM xu5gc_content AS c LEFT JOIN xu5gc_categories cat ON cat.id = c.catid WHERE c.id=347259 AND c.state = 1 AND cat.published = 1 ORDER BY c.id DESC LIMIT %s'
                 args = (limit)
 
             with connection.cursor() as cursor:
