@@ -185,15 +185,15 @@ def find_text_links(text):
 
 # added function to remove parenthesis or periods and &gt
 def strip_trailing_chars(url):
-    if url.endswith(('&gt;', '&gt')):
-        url = url.rstrip('&gt;')
     if url.endswith(('.',')' ,':',';','>')):
         url = url.rstrip('.;:),>')
+    if url.endswith(('&gt;', '&gt')):
+        url = url.rstrip('&gt;')
     return url
 
 def strip_trailing_in_anchor(url):
-    # if url.endswith(('&gt;', '&gt')):
-    #     url = url.rstrip('&gt;')
+    if url.endswith(('&gt;', '&gt')):
+        url = url.rstrip('&gt;')
     if url.endswith(('.',':',';','>')):
         url = url.rstrip('.;:,>')
     return url
@@ -267,9 +267,11 @@ def extract_a_tag_in_html(logger: Logger, id: int, field: str, html: Optional[st
             if can_replace:
                 updates.append(True)
         #  added new condition to handle if href attribute is not present in the anchor tag
-                if not url:  
-                    tag.replace_with(text)
-                    logger.info(f'ID: {id} #COLUMN: {field} #URL: {url if url else "(null)"} - Replaced with #TEXT: {text}')
+                if not url:
+                    logger.info(f'ID: {id} #COLUMN: {field} #URL: {url if url else "(null)"} - Skipping Anchor Tag as no href attribute found')
+                    continue
+                    # tag.replace_with(text)
+                    # logger.info(f'ID: {id} #COLUMN: {field} #URL: {url if url else "(null)"} - Replaced with #TEXT: {text}')
                 elif len(text) > 0 and url not in text:
                     tag.replace_with(text)
                     logger.info(f'ID: {id} #COLUMN: {field} #URL: {url if url else "(null)"} - Replaced with #TEXT: {text}')
@@ -527,7 +529,7 @@ def main(commit: bool = False, id: Optional[int] = 0):
                 sql = "SELECT c.id, c.introtext, c.fulltext FROM xu5gc_content AS c WHERE id =%s"
                 args = (id)
             else:
-                sql = 'SELECT c.id, c.introtext, c.fulltext FROM xu5gc_content AS c LEFT JOIN xu5gc_categories cat ON cat.id = c.catid WHERE c.id=347259 AND c.state = 1 AND cat.published = 1 ORDER BY c.id DESC LIMIT %s'
+                sql = 'SELECT c.id, c.introtext, c.fulltext FROM xu5gc_content AS c LEFT JOIN xu5gc_categories cat ON cat.id = c.catid WHERE c.id=111769 AND c.state = 1 AND cat.published = 1 ORDER BY c.id DESC LIMIT %s'
                 args = (limit)
 
             with connection.cursor() as cursor:

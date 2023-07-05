@@ -1,0 +1,676 @@
+2023-07-05 20:14:17 - INFO - ******************** Processing ID: 111769 ******************** (1/92392 - 0.0%)
+2023-07-05 20:14:56 - INFO - ID: 111769 #COLUMN: fulltext #URL: (null) - Skipping Anchor Tag as no href attribute found
+2023-07-05 20:15:00 - INFO - ID: 111769 #COLUMN: fulltext #URL: (null) - Skipping Anchor Tag as no href attribute found
+2023-07-05 20:15:02 - INFO - ID: 111769 #COLUMN: fulltext #URL: (null) - Skipping Anchor Tag as no href attribute found
+2023-07-05 20:15:03 - INFO - ID: 111769 #COLUMN: fulltext #URL: (null) - Skipping Anchor Tag as no href attribute found
+2023-07-05 20:15:06 - INFO - ID: 111769 #COLUMN: fulltext #URL: (null) - Skipping Anchor Tag as no href attribute found
+2023-07-05 20:15:06 - INFO - ID: 111769 #COLUMN: fulltext #URL: (null) - Skipping Anchor Tag as no href attribute found
+2023-07-05 20:15:07 - INFO - Skipped ID: 111769 #COLUMN: fulltext #URL: http://europe.cnn.com/2002/BUSINESS/04/29/vivendi.hacker/index.html #STATUS_CODE: 301
+2023-07-05 20:15:07 - INFO - Skipped ID: 111769 #COLUMN: fulltext #URL: http://story.news.yahoo.com/news?tmpl=story&u=/ap/20020414/ap_on_hi_te/purloined_voice_mail_3 #STATUS_CODE: 301
+2023-07-05 20:15:07 - INFO - Skipped ID: 111769 #COLUMN: fulltext #URL: http://www.economist.com/science/tq/displaystory.cfm?story_id=1020715 #STATUS_CODE: 301
+2023-07-05 20:15:07 - INFO - Skipped ID: 111769 #COLUMN: fulltext #URL: http://www.newsfactor.com/perl/story/17273.html #STATUS_CODE: 301
+2023-07-05 20:15:07 - INFO - Skipped ID: 111769 #COLUMN: fulltext #URL: http://www.acm.org/ubiquity/views/j_carlisle_1.html #STATUS_CODE: 301
+2023-07-05 20:15:07 - INFO - Skipped ID: 111769 #COLUMN: fulltext #URL: http://www.cnn.com/2002/TECH/internet/04/24/virus.hype/index.html #STATUS_CODE: 302
+2023-07-05 20:15:07 - INFO - Skipped ID: 111769 #COLUMN: fulltext #URL: http://www.nocinfragard.org #STATUS_CODE: 301
+2023-07-05 20:15:07 - INFO - Skipped ID: 111769 #COLUMN: fulltext #URL: http://slashdot.org/article.pl?sid=02/04/21/0058214&mode=thread #STATUS_CODE: 301
+2023-07-05 20:15:08 - INFO - Skipped ID: 111769 #COLUMN: fulltext #URL: http://www.theregister.co.uk/content/55/25168.html #STATUS_CODE: 301
+2023-07-05 20:15:08 - INFO - Skipped ID: 111769 #COLUMN: fulltext #URL: http://www.msnbc.com/news/742677.asp #STATUS_CODE: 301
+2023-07-05 20:15:12 - ERROR - #ID: 111769 #URL http://www.itas.fzk.de/mahp/weber/merkle.htm Error: HTTPConnectionPool(host='www.itas.fzk.de', port=80): Max retries exceeded with url: /mahp/weber/merkle.htm (Caused by NameResolutionError("<urllib3.connection.HTTPConnection object at 0x7f6d6c84e530>: Failed to resolve 'www.itas.fzk.de' ([Errno -2] Name or service not known)"))
+2023-07-05 20:15:12 - INFO - ID: 111769 #COLUMN: fulltext #URL: http://www.itas.fzk.de/mahp/weber/merkle.htm #STATUS_CODE: 500 #TEXT: http://www.itas.fzk.de/mahp/weber/merkle.htm removed
+2023-07-05 20:15:12 - ERROR - #ID: 111769 #URL http://www.itas.fzk.de/mahp/weber/diffie.htm Error: HTTPConnectionPool(host='www.itas.fzk.de', port=80): Max retries exceeded with url: /mahp/weber/diffie.htm (Caused by NameResolutionError("<urllib3.connection.HTTPConnection object at 0x7f6d6c84eef0>: Failed to resolve 'www.itas.fzk.de' ([Errno -2] Name or service not known)"))
+2023-07-05 20:15:12 - INFO - ID: 111769 #COLUMN: fulltext #URL: http://www.itas.fzk.de/mahp/weber/diffie.htm #STATUS_CODE: 500 #TEXT: http://www.itas.fzk.de/mahp/weber/diffie.htm removed
+2023-07-05 20:15:12 - INFO - Skipped ID: 111769 #COLUMN: fulltext #URL: http://www.computerworld.com/securitytopics/security/story/0,10801,70112,00.html #STATUS_CODE: 301
+2023-07-05 20:15:12 - INFO - Skipped ID: 111769 #COLUMN: fulltext #URL: http://www.computerworld.com/securitytopics/security/story/0,10801,70048,00.html #STATUS_CODE: 301
+2023-07-05 20:15:12 - INFO - Skipped ID: 111769 #COLUMN: fulltext #URL: http://www.cl.cam.ac.uk/~fapp2/kerckhoffs/la_cryptographie_militaire_i.htm #STATUS_CODE: 302
+2023-07-05 20:15:12 - INFO - Skipped ID: 111769 #COLUMN: fulltext #URL: http://www.usenix.org/events/usenix02/ #STATUS_CODE: 301
+2023-07-05 20:15:14 - INFO - Skipped ID: 111769 #COLUMN: fulltext #URL: http://seattlepi.nwsource.com/local/68217_thumb27.shtml #STATUS_CODE: 301
+2023-07-05 20:15:18 - INFO - Skipped ID: 111769 #COLUMN: fulltext #URL: http://news.com.com/2009-1017-891346.html #STATUS_CODE: 200
+2023-07-05 20:15:18 - INFO - Skipped ID: 111769 #COLUMN: fulltext #URL: http://news.com.com/2100-1001-887065.html #STATUS_CODE: 200
+2023-07-05 20:15:18 - INFO - Skipped ID: 111769 #COLUMN: fulltext #URL: http://msdn.microsoft.com/library/default.asp? #STATUS_CODE: 307
+2023-07-05 20:15:23 - ERROR - #ID: 111769 #URL http://www.computing.vnunet.com/News/1130941 Error: HTTPConnectionPool(host='www.computing.vnunet.com', port=80): Max retries exceeded with url: /News/1130941 (Caused by NameResolutionError("<urllib3.connection.HTTPConnection object at 0x7f6d6c369150>: Failed to resolve 'www.computing.vnunet.com' ([Errno -2] Name or service not known)"))
+2023-07-05 20:15:23 - INFO - ID: 111769 #COLUMN: fulltext #URL: http://www.computing.vnunet.com/News/1130941 #STATUS_CODE: 500 - Replaced with #TEXT: (null)
+2023-07-05 20:15:23 - ERROR - #ID: 111769 #URL http://images.ucomics.com/comics/bz/2002/bz020417.gif Error: HTTPConnectionPool(host='images.ucomics.com', port=80): Max retries exceeded with url: /comics/bz/2002/bz020417.gif (Caused by NameResolutionError("<urllib3.connection.HTTPConnection object at 0x7f6d6c368070>: Failed to resolve 'images.ucomics.com' ([Errno -2] Name or service not known)"))
+2023-07-05 20:15:23 - INFO - ID: 111769 #COLUMN: fulltext #URL: http://images.ucomics.com/comics/bz/2002/bz020417.gif #STATUS_CODE: 500 - Replaced with #TEXT: (null)
+2023-07-05 20:15:23 - ERROR - #ID: 111769 #URL http://online.securityfocus.com/columnists/80 Error: HTTPConnectionPool(host='online.securityfocus.com', port=80): Max retries exceeded with url: /columnists/80 (Caused by NameResolutionError("<urllib3.connection.HTTPConnection object at 0x7f6d6c74a1a0>: Failed to resolve 'online.securityfocus.com' ([Errno -2] Name or service not known)"))
+2023-07-05 20:15:23 - INFO - ID: 111769 #COLUMN: fulltext #URL: http://online.securityfocus.com/columnists/80 #STATUS_CODE: 500 - Replaced with #TEXT: (null)
+2023-07-05 20:15:23 - INFO - Skipped ID: 111769 #COLUMN: fulltext #URL: http://www.nwfusion.com/news/2002/0415idsevad.html #STATUS_CODE: 301
+2023-07-05 20:15:23 - ERROR - #ID: 111769 #URL http://news.zdnet.co.uk/story/0,,t269-s2108940,00.html Error: HTTPConnectionPool(host='news.zdnet.co.uk', port=80): Max retries exceeded with url: /story/0,,t269-s2108940,00.html (Caused by NameResolutionError("<urllib3.connection.HTTPConnection object at 0x7f6d6c36b820>: Failed to resolve 'news.zdnet.co.uk' ([Errno -2] Name or service not known)"))
+2023-07-05 20:15:23 - INFO - ID: 111769 #COLUMN: fulltext #URL: http://news.zdnet.co.uk/story/0,,t269-s2108940,00.html #STATUS_CODE: 500 - Replaced with #TEXT: (null)
+2023-07-05 20:15:24 - INFO - Skipped ID: 111769 #COLUMN: fulltext #URL: http://www.counterpane.com/crypto-gram-0105.html#1 #STATUS_CODE: 301
+2023-07-05 20:15:24 - INFO - Skipped ID: 111769 #COLUMN: fulltext #URL: http://www.counterpane.com/crypto-gram-0105.html#7 #STATUS_CODE: 301
+2023-07-05 20:15:24 - INFO - Skipped ID: 111769 #COLUMN: fulltext #URL: http://www.counterpane.com/crypto-gram-9905.html#international #STATUS_CODE: 301
+2023-07-05 20:15:24 - INFO - Skipped ID: 111769 #COLUMN: fulltext #URL: http://www.counterpane.com/crypto-gram.html&gt #STATUS_CODE: 301
+2023-07-05 20:15:24 - INFO - Skipped ID: 111769 #COLUMN: fulltext #URL: http://www.counterpane.com/crypto-gram-0005.html#ilyvirus #STATUS_CODE: 301
+2023-07-05 20:15:24 - INFO - Skipped ID: 111769 #COLUMN: fulltext #URL: http://www.counterpane.com/crypto-gram-0105.html#8 #STATUS_CODE: 301
+2023-07-05 20:15:24 - INFO - Skipped ID: 111769 #COLUMN: fulltext #URL: http://www.counterpane.com/crypto-gram.html #STATUS_CODE: 301
+2023-07-05 20:15:24 - INFO - Skipped ID: 111769 #COLUMN: fulltext #URL: http://www.counterpane.com/crypto-gram.html&gt #STATUS_CODE: 301
+2023-07-05 20:15:24 - INFO - Skipped ID: 111769 #COLUMN: fulltext #URL: http://www.counterpane.com/crypto-gram-0105.html#3 #STATUS_CODE: 301
+2023-07-05 20:15:24 - INFO - Skipped ID: 111769 #COLUMN: fulltext #URL: http://www.counterpane.com #STATUS_CODE: 301
+2023-07-05 20:15:24 - ERROR - #ID: 111769 #URL http://www.key3media.co.jp/rsa2002/eng/index.html Error: HTTPConnectionPool(host='www.key3media.co.jp', port=80): Max retries exceeded with url: /rsa2002/eng/index.html (Caused by NameResolutionError("<urllib3.connection.HTTPConnection object at 0x7f6d6c3b62f0>: Failed to resolve 'www.key3media.co.jp' ([Errno -2] Name or service not known)"))
+2023-07-05 20:15:24 - INFO - ID: 111769 #COLUMN: fulltext #URL: http://www.key3media.co.jp/rsa2002/eng/index.html #STATUS_CODE: 500 - Replaced with #TEXT: (null)
+2023-07-05 20:15:24 - INFO - Skipped ID: 111769 #COLUMN: fulltext #URL: http://www.counterpane.com/ #STATUS_CODE: 301
+2023-07-05 20:15:24 - INFO - Skipped ID: 111769 #COLUMN: fulltext #URL: http://www.counterpane.com/crypto-gram-0005.html#TrustedClientSoftware #STATUS_CODE: 301
+2023-07-05 20:15:24 - INFO - Skipped ID: 111769 #COLUMN: fulltext #URL: http://www.counterpane.com/crypto-gram-9805.html#nonsecre #STATUS_CODE: 301
+2023-07-05 20:15:25 - INFO - ID: 111769 #COLUMN: fulltext #URL: http://www.osopinion.com/perl/story/17344.html #STATUS_CODE: 404 - Replaced with #TEXT: (null)
+2023-07-05 20:15:25 - INFO - Skipped ID: 111769 #COLUMN: fulltext #URL: http://www.counterpane.com/pr-red100.html #STATUS_CODE: 301
+2023-07-05 20:15:25 - INFO - Skipped ID: 111769 #COLUMN: fulltext #URL: http://www.counterpane.com/crypto-gram.html&gt #STATUS_CODE: 301
+2023-07-05 20:15:25 - INFO - Skipped ID: 111769 #COLUMN: fulltext #URL: http://www.counterpane.com/crypto-gram.html #STATUS_CODE: 301
+2023-07-05 20:15:25 - INFO - Skipped ID: 111769 #COLUMN: fulltext #URL: http://www.counterpane.com/crypto-gram-9808.html#biometrics #STATUS_CODE: 301
+2023-07-05 20:15:25 - INFO - ID: 111769 #COLUMN: fulltext #URL: http://www.osopinion.com/perl/story/17692.html #STATUS_CODE: 404 - Replaced with #TEXT: (null)
+2023-07-05 20:15:25 - INFO - Skipped ID: 111769 #COLUMN: fulltext #URL: http://www.counterpane.com/unsubform.html&gt #STATUS_CODE: 301
+2023-07-05 20:15:25 - INFO - Skipped ID: 111769 #COLUMN: fulltext #URL: http://www.counterpane.com/ #STATUS_CODE: 301
+2023-07-05 20:15:25 - ERROR - #ID: 111769 #URL http://www.vnunet.com/News/1131506 Error: HTTPConnectionPool(host='www.vnunet.com', port=80): Max retries exceeded with url: /News/1131506 (Caused by NameResolutionError("<urllib3.connection.HTTPConnection object at 0x7f6d6c3933d0>: Failed to resolve 'www.vnunet.com' ([Errno -2] Name or service not known)"))
+2023-07-05 20:15:25 - INFO - ID: 111769 #COLUMN: fulltext #URL: http://www.vnunet.com/News/1131506 #STATUS_CODE: 500 - Replaced with #TEXT: (null)
+2023-07-05 20:15:26 - INFO - Skipped ID: 111769 #COLUMN: fulltext #URL: http://www.reason.com/0205/fe.mg.hollywood.shtml #STATUS_CODE: 301
+2023-07-05 20:15:26 - INFO - Skipped ID: 111769 #COLUMN: fulltext #URL: http://www.gao.gov/new.items/d02687t.pdf #STATUS_CODE: 301
+2023-07-05 20:15:26 - INFO - Skipped ID: 111769 #COLUMN: fulltext #URL: http://www.redherring.com/insider/2002/0513/tech-rh100.html #STATUS_CODE: 301
+2023-07-05 20:15:26 - INFO - Skipped ID: 111769 #COLUMN: fulltext #URL: http://www.itu.int/itudoc/itu-t/workshop/security/present/s5p4.pdf #STATUS_CODE: 302
+2023-07-05 20:15:28 - INFO - Skipped ID: 111769 #COLUMN: fulltext #URL: http://www.theregus.com/content/4/24624.html #STATUS_CODE: 301
+2023-07-05 20:15:31 - INFO - Skipped ID: 111769 #COLUMN: fulltext #URL: http://www.silicon.com/a52986 #STATUS_CODE: 301
+2023-07-05 20:15:31 - INFO - Skipped ID: 111769 #COLUMN: fulltext #URL: http://www.silicon.com/a53068 #STATUS_CODE: 301
+2023-07-05 20:15:33 - WARNING - #ID: 111769 #URL http://books.nap.edu/html/id_questions Error: Timeout HTTPConnectionPool(host='books.nap.edu', port=80): Max retries exceeded with url: /html/id_questions (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f6d6c390400>, 'Connection to books.nap.edu timed out. (connect timeout=10)'))
+2023-07-05 20:15:33 - INFO - ID: 111769 #COLUMN: fulltext #URL: http://books.nap.edu/html/id_questions added for more checking
+2023-07-05 20:15:35 - WARNING - #ID: 111769 #URL http://corporate.verisign.com/news/2002/pr_20020507.html Error: Timeout HTTPConnectionPool(host='corporate.verisign.com', port=80): Max retries exceeded with url: /news/2002/pr_20020507.html (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f6d6c3b5c60>, 'Connection to corporate.verisign.com timed out. (connect timeout=10)'))
+2023-07-05 20:15:35 - INFO - ID: 111769 #COLUMN: fulltext #URL: http://corporate.verisign.com/news/2002/pr_20020507.html added for more checking
+2023-07-05 20:15:35 - WARNING - #ID: 111769 #URL http://www.iss.net/campaigns/index.php Error: Timeout HTTPConnectionPool(host='www.iss.net', port=80): Max retries exceeded with url: /campaigns/index.php (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f6d6c390d60>, 'Connection to www.iss.net timed out. (connect timeout=10)'))
+2023-07-05 20:15:35 - INFO - ID: 111769 #COLUMN: fulltext #URL: http://www.iss.net/campaigns/index.php added for more checking
+2023-07-05 20:15:38 - INFO - Skipped ID: 111769 #COLUMN: fulltext #URL: http://www.wired.com/news/business/0,1367,52162,00.html #STATUS_CODE: 301
+2023-07-05 20:16:57 - INFO - Processing ID: 111769 completed
+2023-07-05 20:16:57 - INFO - ******************** Processing ID: 111768 ******************** (2/92392 - 0.0%)
+2023-07-05 20:17:02 - INFO - Skipped ID: 111768 - Not found any URLs in both introtext, fulltext fields
+2023-07-05 20:17:02 - INFO - ******************** Processing ID: 111767 ******************** (3/92392 - 0.0%)
+2023-07-05 20:17:02 - INFO - Skipped ID: 111767 - Not found any URLs in both introtext, fulltext fields
+2023-07-05 20:17:02 - INFO - ******************** Processing ID: 111766 ******************** (4/92392 - 0.0%)
+2023-07-05 20:17:02 - INFO - Skipped ID: 111766 - Not found any URLs in both introtext, fulltext fields
+2023-07-05 20:17:02 - INFO - ******************** Processing ID: 111765 ******************** (5/92392 - 0.0%)
+2023-07-05 20:17:02 - INFO - Skipped ID: 111765 - Not found any URLs in both introtext, fulltext fields
+2023-07-05 20:17:02 - INFO - ******************** Processing ID: 111764 ******************** (6/92392 - 0.0%)
+2023-07-05 20:17:02 - INFO - Skipped ID: 111764 - Not found any URLs in both introtext, fulltext fields
+2023-07-05 20:17:02 - INFO - ******************** Processing ID: 111763 ******************** (7/92392 - 0.0%)
+2023-07-05 20:17:02 - INFO - Skipped ID: 111763 - Not found any URLs in both introtext, fulltext fields
+2023-07-05 20:17:02 - INFO - ******************** Processing ID: 111762 ******************** (8/92392 - 0.0%)
+2023-07-05 20:17:02 - INFO - Skipped ID: 111762 - Not found any URLs in both introtext, fulltext fields
+2023-07-05 20:17:02 - INFO - ******************** Processing ID: 111761 ******************** (9/92392 - 0.0%)
+2023-07-05 20:17:02 - INFO - Skipped ID: 111761 - Not found any URLs in both introtext, fulltext fields
+2023-07-05 20:17:02 - INFO - ******************** Processing ID: 111760 ******************** (10/92392 - 0.0%)
+2023-07-05 20:17:02 - INFO - Skipped ID: 111760 - Not found any URLs in both introtext, fulltext fields
+2023-07-05 20:17:02 - INFO - ******************** Processing ID: 111759 ******************** (11/92392 - 0.0%)
+2023-07-05 20:17:02 - INFO - Skipped ID: 111759 - Not found any URLs in both introtext, fulltext fields
+2023-07-05 20:17:02 - INFO - ******************** Processing ID: 111758 ******************** (12/92392 - 0.0%)
+2023-07-05 20:17:02 - INFO - Skipped ID: 111758 - Not found any URLs in both introtext, fulltext fields
+2023-07-05 20:17:02 - INFO - ******************** Processing ID: 111757 ******************** (13/92392 - 0.0%)
+2023-07-05 20:17:02 - INFO - Skipped ID: 111757 - Not found any URLs in both introtext, fulltext fields
+2023-07-05 20:17:02 - INFO - ******************** Processing ID: 111756 ******************** (14/92392 - 0.0%)
+2023-07-05 20:17:02 - INFO - Skipped ID: 111756 - Not found any URLs in both introtext, fulltext fields
+2023-07-05 20:17:02 - INFO - ******************** Processing ID: 111754 ******************** (15/92392 - 0.0%)
+2023-07-05 20:17:02 - INFO - Skipped ID: 111754 - Not found any URLs in both introtext, fulltext fields
+2023-07-05 20:17:02 - INFO - ******************** Processing ID: 111753 ******************** (16/92392 - 0.0%)
+2023-07-05 20:17:02 - INFO - Skipped ID: 111753 - Not found any URLs in both introtext, fulltext fields
+2023-07-05 20:17:02 - INFO - ******************** Processing ID: 111752 ******************** (17/92392 - 0.0%)
+2023-07-05 20:17:02 - INFO - Skipped ID: 111752 - Not found any URLs in both introtext, fulltext fields
+2023-07-05 20:17:02 - INFO - ******************** Processing ID: 111751 ******************** (18/92392 - 0.0%)
+2023-07-05 20:17:02 - INFO - Skipped ID: 111751 - Not found any URLs in both introtext, fulltext fields
+2023-07-05 20:17:02 - INFO - ******************** Processing ID: 111750 ******************** (19/92392 - 0.0%)
+2023-07-05 20:17:02 - INFO - Skipped ID: 111750 - Not found any URLs in both introtext, fulltext fields
+2023-07-05 20:17:02 - INFO - ******************** Processing ID: 111749 ******************** (20/92392 - 0.0%)
+2023-07-05 20:17:02 - INFO - Skipped ID: 111749 - Not found any URLs in both introtext, fulltext fields
+2023-07-05 20:17:02 - INFO - ******************** Processing ID: 111747 ******************** (21/92392 - 0.0%)
+2023-07-05 20:17:02 - INFO - Skipped ID: 111747 - Not found any URLs in both introtext, fulltext fields
+2023-07-05 20:17:02 - INFO - ******************** Processing ID: 111745 ******************** (22/92392 - 0.0%)
+2023-07-05 20:17:02 - INFO - Skipped ID: 111745 - Not found any URLs in both introtext, fulltext fields
+2023-07-05 20:17:02 - INFO - ******************** Processing ID: 111744 ******************** (23/92392 - 0.0%)
+2023-07-05 20:17:02 - INFO - Skipped ID: 111744 - Not found any URLs in both introtext, fulltext fields
+2023-07-05 20:17:02 - INFO - ******************** Processing ID: 111743 ******************** (24/92392 - 0.0%)
+2023-07-05 20:17:02 - INFO - Skipped ID: 111743 - Not found any URLs in both introtext, fulltext fields
+2023-07-05 20:17:02 - INFO - ******************** Processing ID: 111742 ******************** (25/92392 - 0.0%)
+2023-07-05 20:17:02 - INFO - Skipped ID: 111742 - Not found any URLs in both introtext, fulltext fields
+2023-07-05 20:17:02 - INFO - ******************** Processing ID: 111741 ******************** (26/92392 - 0.0%)
+2023-07-05 20:17:02 - INFO - Skipped ID: 111741 - Not found any URLs in both introtext, fulltext fields
+2023-07-05 20:17:02 - INFO - ******************** Processing ID: 111740 ******************** (27/92392 - 0.0%)
+2023-07-05 20:17:02 - INFO - Skipped ID: 111740 - Not found any URLs in both introtext, fulltext fields
+2023-07-05 20:17:02 - INFO - ******************** Processing ID: 111739 ******************** (28/92392 - 0.0%)
+2023-07-05 20:17:02 - INFO - Skipped ID: 111739 - Not found any URLs in both introtext, fulltext fields
+2023-07-05 20:17:02 - INFO - ******************** Processing ID: 111737 ******************** (29/92392 - 0.0%)
+2023-07-05 20:17:02 - INFO - Skipped ID: 111737 - Not found any URLs in both introtext, fulltext fields
+2023-07-05 20:17:02 - INFO - ******************** Processing ID: 111736 ******************** (30/92392 - 0.0%)
+2023-07-05 20:17:02 - INFO - Skipped ID: 111736 - Not found any URLs in both introtext, fulltext fields
+2023-07-05 20:17:02 - INFO - ******************** Processing ID: 111735 ******************** (31/92392 - 0.0%)
+2023-07-05 20:17:02 - INFO - Skipped ID: 111735 - Not found any URLs in both introtext, fulltext fields
+2023-07-05 20:17:02 - INFO - ******************** Processing ID: 111733 ******************** (32/92392 - 0.0%)
+2023-07-05 20:17:02 - INFO - Skipped ID: 111733 - Not found any URLs in both introtext, fulltext fields
+2023-07-05 20:17:02 - INFO - ******************** Processing ID: 111732 ******************** (33/92392 - 0.0%)
+2023-07-05 20:17:02 - INFO - Skipped ID: 111732 - Not found any URLs in both introtext, fulltext fields
+2023-07-05 20:17:02 - INFO - ******************** Processing ID: 111731 ******************** (34/92392 - 0.0%)
+2023-07-05 20:17:02 - INFO - Skipped ID: 111731 - Not found any URLs in both introtext, fulltext fields
+2023-07-05 20:17:02 - INFO - ******************** Processing ID: 111729 ******************** (35/92392 - 0.0%)
+2023-07-05 20:17:02 - INFO - Skipped ID: 111729 - Not found any URLs in both introtext, fulltext fields
+2023-07-05 20:17:02 - INFO - ******************** Processing ID: 111728 ******************** (36/92392 - 0.0%)
+2023-07-05 20:17:02 - INFO - Skipped ID: 111728 - Not found any URLs in both introtext, fulltext fields
+2023-07-05 20:17:02 - INFO - ******************** Processing ID: 111726 ******************** (37/92392 - 0.0%)
+2023-07-05 20:17:02 - INFO - Skipped ID: 111726 - Not found any URLs in both introtext, fulltext fields
+2023-07-05 20:17:02 - INFO - ******************** Processing ID: 111725 ******************** (38/92392 - 0.0%)
+2023-07-05 20:17:02 - INFO - Skipped ID: 111725 - Not found any URLs in both introtext, fulltext fields
+2023-07-05 20:17:02 - INFO - ******************** Processing ID: 111723 ******************** (39/92392 - 0.0%)
+2023-07-05 20:17:02 - INFO - Skipped ID: 111723 - Not found any URLs in both introtext, fulltext fields
+2023-07-05 20:17:02 - INFO - ******************** Processing ID: 111722 ******************** (40/92392 - 0.0%)
+2023-07-05 20:17:02 - INFO - Skipped ID: 111722 - Not found any URLs in both introtext, fulltext fields
+2023-07-05 20:17:02 - INFO - ******************** Processing ID: 111720 ******************** (41/92392 - 0.0%)
+2023-07-05 20:17:02 - INFO - Skipped ID: 111720 - Not found any URLs in both introtext, fulltext fields
+2023-07-05 20:17:02 - INFO - ******************** Processing ID: 111719 ******************** (42/92392 - 0.0%)
+2023-07-05 20:17:02 - INFO - Skipped ID: 111719 - Not found any URLs in both introtext, fulltext fields
+2023-07-05 20:17:02 - INFO - ******************** Processing ID: 111718 ******************** (43/92392 - 0.0%)
+2023-07-05 20:17:02 - INFO - Skipped ID: 111718 - Not found any URLs in both introtext, fulltext fields
+2023-07-05 20:17:02 - INFO - ******************** Processing ID: 111717 ******************** (44/92392 - 0.0%)
+2023-07-05 20:17:02 - INFO - Skipped ID: 111717 - Not found any URLs in both introtext, fulltext fields
+2023-07-05 20:17:02 - INFO - ******************** Processing ID: 111715 ******************** (45/92392 - 0.0%)
+2023-07-05 20:17:02 - INFO - Skipped ID: 111715 - Not found any URLs in both introtext, fulltext fields
+2023-07-05 20:17:02 - INFO - ******************** Processing ID: 111714 ******************** (46/92392 - 0.0%)
+2023-07-05 20:17:02 - INFO - Skipped ID: 111714 - Not found any URLs in both introtext, fulltext fields
+2023-07-05 20:17:02 - INFO - ******************** Processing ID: 111710 ******************** (47/92392 - 0.1%)
+2023-07-05 20:17:02 - INFO - Skipped ID: 111710 - Not found any URLs in both introtext, fulltext fields
+2023-07-05 20:17:02 - INFO - ******************** Processing ID: 111709 ******************** (48/92392 - 0.1%)
+2023-07-05 20:17:02 - INFO - Skipped ID: 111709 - Not found any URLs in both introtext, fulltext fields
+2023-07-05 20:17:02 - INFO - ******************** Processing ID: 111707 ******************** (49/92392 - 0.1%)
+2023-07-05 20:17:02 - INFO - Skipped ID: 111707 - Not found any URLs in both introtext, fulltext fields
+2023-07-05 20:17:02 - INFO - ******************** Processing ID: 111706 ******************** (50/92392 - 0.1%)
+2023-07-05 20:17:02 - INFO - Skipped ID: 111706 - Not found any URLs in both introtext, fulltext fields
+2023-07-05 20:17:02 - INFO - ******************** Processing ID: 111705 ******************** (51/92392 - 0.1%)
+2023-07-05 20:17:02 - INFO - Skipped ID: 111705 - Not found any URLs in both introtext, fulltext fields
+2023-07-05 20:17:02 - INFO - ******************** Processing ID: 111704 ******************** (52/92392 - 0.1%)
+2023-07-05 20:17:02 - INFO - Skipped ID: 111704 - Not found any URLs in both introtext, fulltext fields
+2023-07-05 20:17:02 - INFO - ******************** Processing ID: 111703 ******************** (53/92392 - 0.1%)
+2023-07-05 20:17:02 - INFO - Skipped ID: 111703 - Not found any URLs in both introtext, fulltext fields
+2023-07-05 20:17:02 - INFO - ******************** Processing ID: 111702 ******************** (54/92392 - 0.1%)
+2023-07-05 20:17:02 - INFO - Skipped ID: 111702 - Not found any URLs in both introtext, fulltext fields
+2023-07-05 20:17:02 - INFO - ******************** Processing ID: 111699 ******************** (55/92392 - 0.1%)
+2023-07-05 20:17:02 - INFO - Skipped ID: 111699 - Not found any URLs in both introtext, fulltext fields
+2023-07-05 20:17:02 - INFO - ******************** Processing ID: 111698 ******************** (56/92392 - 0.1%)
+2023-07-05 20:17:08 - INFO - ID: 111698 #COLUMN: fulltext #URL: http://https://www.zone-h.org/defaced/2002/05/02/asiapac.gartner.com/press/ replaced with http://www.zone-h.org/defaced/2002/05/02/asiapac.gartner.com/press/
+2023-07-05 20:17:08 - INFO - Processing ID: 111698 completed
+2023-07-05 20:17:08 - INFO - ******************** Processing ID: 111696 ******************** (57/92392 - 0.1%)
+2023-07-05 20:17:09 - INFO - Skipped ID: 111696 - Not found any URLs in both introtext, fulltext fields
+2023-07-05 20:17:09 - INFO - ******************** Processing ID: 111695 ******************** (58/92392 - 0.1%)
+2023-07-05 20:17:09 - INFO - Skipped ID: 111695 - Not found any URLs in both introtext, fulltext fields
+2023-07-05 20:17:09 - INFO - ******************** Processing ID: 111694 ******************** (59/92392 - 0.1%)
+2023-07-05 20:17:09 - INFO - Skipped ID: 111694 - Not found any URLs in both introtext, fulltext fields
+2023-07-05 20:17:09 - INFO - ******************** Processing ID: 111693 ******************** (60/92392 - 0.1%)
+2023-07-05 20:17:09 - INFO - Skipped ID: 111693 - Not found any URLs in both introtext, fulltext fields
+2023-07-05 20:17:09 - INFO - ******************** Processing ID: 111692 ******************** (61/92392 - 0.1%)
+2023-07-05 20:17:09 - INFO - Skipped ID: 111692 - Not found any URLs in both introtext, fulltext fields
+2023-07-05 20:17:09 - INFO - ******************** Processing ID: 111691 ******************** (62/92392 - 0.1%)
+2023-07-05 20:17:09 - INFO - Skipped ID: 111691 - Not found any URLs in both introtext, fulltext fields
+2023-07-05 20:17:09 - INFO - ******************** Processing ID: 111690 ******************** (63/92392 - 0.1%)
+2023-07-05 20:17:09 - INFO - Skipped ID: 111690 - Not found any URLs in both introtext, fulltext fields
+2023-07-05 20:17:09 - INFO - ******************** Processing ID: 111687 ******************** (64/92392 - 0.1%)
+2023-07-05 20:17:09 - INFO - Skipped ID: 111687 - Not found any URLs in both introtext, fulltext fields
+2023-07-05 20:17:09 - INFO - ******************** Processing ID: 111686 ******************** (65/92392 - 0.1%)
+2023-07-05 20:17:09 - INFO - Skipped ID: 111686 - Not found any URLs in both introtext, fulltext fields
+2023-07-05 20:17:09 - INFO - ******************** Processing ID: 111684 ******************** (66/92392 - 0.1%)
+2023-07-05 20:17:09 - INFO - Skipped ID: 111684 - Not found any URLs in both introtext, fulltext fields
+2023-07-05 20:17:09 - INFO - ******************** Processing ID: 111682 ******************** (67/92392 - 0.1%)
+2023-07-05 20:17:09 - INFO - Skipped ID: 111682 - Not found any URLs in both introtext, fulltext fields
+2023-07-05 20:17:09 - INFO - ******************** Processing ID: 111681 ******************** (68/92392 - 0.1%)
+2023-07-05 20:17:09 - INFO - ID: 111681 #COLUMN: fulltext #URL: http://https://www.zone-h.org/defaced/2002/04/30/epg.er.usgs.gov/ replaced with http://www.zone-h.org/defaced/2002/04/30/epg.er.usgs.gov/
+2023-07-05 20:17:09 - INFO - ID: 111681 #COLUMN: fulltext #URL: http://https://www.zone-h.org/defaced/2002/04/30/www.iibonline.org/ replaced with http://www.zone-h.org/defaced/2002/04/30/www.iibonline.org/
+2023-07-05 20:17:09 - INFO - ID: 111681 #COLUMN: fulltext #URL: http://https://www.zone-h.org/defaced/2002/04/30/www.peoplesstate.com/ replaced with http://www.zone-h.org/defaced/2002/04/30/www.peoplesstate.com/
+2023-07-05 20:17:09 - INFO - ID: 111681 #COLUMN: fulltext #URL: http://https://www.zone-h.org/defaced/2002/04/30/www.copiahbank.com/ replaced with http://www.zone-h.org/defaced/2002/04/30/www.copiahbank.com/
+2023-07-05 20:17:09 - INFO - ID: 111681 #COLUMN: fulltext #URL: http://https://www.zone-h.org/defaced/2002/04/30/www.mfbanknet.com/ replaced with http://www.zone-h.org/defaced/2002/04/30/www.mfbanknet.com/
+2023-07-05 20:17:09 - INFO - ID: 111681 #COLUMN: fulltext #URL: http://https://www.zone-h.org/defaced/2002/04/30/www.madisonbt.com/ replaced with http://www.zone-h.org/defaced/2002/04/30/www.madisonbt.com/
+2023-07-05 20:17:09 - INFO - ID: 111681 #COLUMN: fulltext #URL: http://https://www.zone-h.org/defaced/2002/04/30/www.gflsb.com/ replaced with http://www.zone-h.org/defaced/2002/04/30/www.gflsb.com/
+2023-07-05 20:17:09 - INFO - ID: 111681 #COLUMN: fulltext #URL: http://https://www.zone-h.org/defaced/2002/04/30/www.acbonline.org/ replaced with http://www.zone-h.org/defaced/2002/04/30/www.acbonline.org/
+2023-07-05 20:17:09 - INFO - ID: 111681 #COLUMN: fulltext #URL: http://https://www.zone-h.org/defaced/2002/04/30/www.mandpbank.com/ replaced with http://www.zone-h.org/defaced/2002/04/30/www.mandpbank.com/
+2023-07-05 20:17:09 - INFO - ID: 111681 #COLUMN: fulltext #URL: http://https://www.zone-h.org/defaced/2002/04/30/www.therealbank.com/ replaced with http://www.zone-h.org/defaced/2002/04/30/www.therealbank.com/
+2023-07-05 20:17:09 - INFO - ID: 111681 #COLUMN: fulltext #URL: http://https://www.zone-h.org/defaced/2002/04/30/project.nist.gov/ replaced with http://www.zone-h.org/defaced/2002/04/30/project.nist.gov/
+2023-07-05 20:17:09 - INFO - ID: 111681 #COLUMN: fulltext #URL: http://https://www.zone-h.org/defaced/2002/04/30/www.cbak.com/ replaced with http://www.zone-h.org/defaced/2002/04/30/www.cbak.com/
+2023-07-05 20:17:10 - INFO - ID: 111681 #COLUMN: fulltext #URL: http://https://www.zone-h.org/defaced/2002/04/30/www.hazlehurst.net/ replaced with http://www.zone-h.org/defaced/2002/04/30/www.hazlehurst.net/
+2023-07-05 20:17:11 - INFO - ID: 111681 #COLUMN: fulltext #URL: http://https://www.zone-h.org/defaced/2002/04/30/www.ibanks.org/ replaced with http://www.zone-h.org/defaced/2002/04/30/www.ibanks.org/
+2023-07-05 20:17:13 - INFO - ID: 111681 #COLUMN: fulltext #URL: http://https://www.zone-h.org/defaced/2002/04/30/www.bankwbr.com/ replaced with http://www.zone-h.org/defaced/2002/04/30/www.bankwbr.com/
+2023-07-05 20:17:13 - INFO - Processing ID: 111681 completed
+2023-07-05 20:17:13 - INFO - ******************** Processing ID: 111680 ******************** (69/92392 - 0.1%)
+2023-07-05 20:17:13 - INFO - Skipped ID: 111680 - Not found any URLs in both introtext, fulltext fields
+2023-07-05 20:17:13 - INFO - ******************** Processing ID: 111679 ******************** (70/92392 - 0.1%)
+2023-07-05 20:17:13 - INFO - Skipped ID: 111679 - Not found any URLs in both introtext, fulltext fields
+2023-07-05 20:17:13 - INFO - ******************** Processing ID: 111678 ******************** (71/92392 - 0.1%)
+2023-07-05 20:17:13 - INFO - Skipped ID: 111678 - Not found any URLs in both introtext, fulltext fields
+2023-07-05 20:17:13 - INFO - ******************** Processing ID: 111676 ******************** (72/92392 - 0.1%)
+2023-07-05 20:17:13 - INFO - Skipped ID: 111676 - Not found any URLs in both introtext, fulltext fields
+2023-07-05 20:17:13 - INFO - ******************** Processing ID: 111674 ******************** (73/92392 - 0.1%)
+2023-07-05 20:17:13 - INFO - Skipped ID: 111674 - Not found any URLs in both introtext, fulltext fields
+2023-07-05 20:17:13 - INFO - ******************** Processing ID: 111673 ******************** (74/92392 - 0.1%)
+2023-07-05 20:17:13 - INFO - Skipped ID: 111673 - Not found any URLs in both introtext, fulltext fields
+2023-07-05 20:17:13 - INFO - ******************** Processing ID: 111672 ******************** (75/92392 - 0.1%)
+2023-07-05 20:17:38 - WARNING - #ID: 111672 #URL https://www.netlock.com Error: Timeout HTTPSConnectionPool(host='www.netlock.com', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x7f6d6c3915a0>, 'Connection to www.netlock.com timed out. (connect timeout=10)'))
+2023-07-05 20:17:38 - INFO - ID: 111672 #COLUMN: fulltext #URL: https://www.netlock.com added for more checking
+2023-07-05 20:17:38 - INFO - ******************** Processing ID: 111671 ******************** (76/92392 - 0.1%)
+2023-07-05 20:17:38 - INFO - Skipped ID: 111671 - Not found any URLs in both introtext, fulltext fields
+2023-07-05 20:17:38 - INFO - ******************** Processing ID: 111670 ******************** (77/92392 - 0.1%)
+2023-07-05 20:17:38 - INFO - Skipped ID: 111670 - Not found any URLs in both introtext, fulltext fields
+2023-07-05 20:17:38 - INFO - ******************** Processing ID: 111668 ******************** (78/92392 - 0.1%)
+2023-07-05 20:17:44 - INFO - ID: 111668 #COLUMN: fulltext #URL: http://https://www.zone-h.org/defaced/2002/04/26/www.tricareonline.osd.mil/ replaced with http://www.zone-h.org/defaced/2002/04/26/www.tricareonline.osd.mil/
+2023-07-05 20:17:44 - INFO - ID: 111668 #COLUMN: fulltext #URL: http://https://www.zone-h.org/defaced/2002/04/26/tmip.hirs.osd.mil/ replaced with http://www.zone-h.org/defaced/2002/04/26/tmip.hirs.osd.mil/
+2023-07-05 20:17:44 - INFO - ID: 111668 #COLUMN: fulltext #URL: http://https://www.zone-h.org/defaced/2002/04/26/hmrha.hirs.osd.mil/ replaced with http://www.zone-h.org/defaced/2002/04/26/hmrha.hirs.osd.mil/
+2023-07-05 20:17:44 - INFO - Processing ID: 111668 completed
+2023-07-05 20:17:44 - INFO - ******************** Processing ID: 111667 ******************** (79/92392 - 0.1%)
+2023-07-05 20:17:44 - INFO - Skipped ID: 111667 - Not found any URLs in both introtext, fulltext fields
+2023-07-05 20:17:44 - INFO - ******************** Processing ID: 111666 ******************** (80/92392 - 0.1%)
+2023-07-05 20:17:44 - INFO - Skipped ID: 111666 - Not found any URLs in both introtext, fulltext fields
+2023-07-05 20:17:44 - INFO - ******************** Processing ID: 111665 ******************** (81/92392 - 0.1%)
+2023-07-05 20:17:44 - INFO - Skipped ID: 111665 - Not found any URLs in both introtext, fulltext fields
+2023-07-05 20:17:44 - INFO - ******************** Processing ID: 111664 ******************** (82/92392 - 0.1%)
+2023-07-05 20:17:44 - INFO - Skipped ID: 111664 - Not found any URLs in both introtext, fulltext fields
+2023-07-05 20:17:44 - INFO - ******************** Processing ID: 111663 ******************** (83/92392 - 0.1%)
+2023-07-05 20:17:44 - INFO - Skipped ID: 111663 - Not found any URLs in both introtext, fulltext fields
+2023-07-05 20:17:44 - INFO - ******************** Processing ID: 111662 ******************** (84/92392 - 0.1%)
+2023-07-05 20:17:44 - INFO - Skipped ID: 111662 - Not found any URLs in both introtext, fulltext fields
+2023-07-05 20:17:44 - INFO - ******************** Processing ID: 111661 ******************** (85/92392 - 0.1%)
+2023-07-05 20:17:44 - INFO - Skipped ID: 111661 - Not found any URLs in both introtext, fulltext fields
+2023-07-05 20:17:44 - INFO - ******************** Processing ID: 111659 ******************** (86/92392 - 0.1%)
+2023-07-05 20:17:44 - INFO - Skipped ID: 111659 - Not found any URLs in both introtext, fulltext fields
+2023-07-05 20:17:44 - INFO - ******************** Processing ID: 111658 ******************** (87/92392 - 0.1%)
+2023-07-05 20:17:44 - INFO - Skipped ID: 111658 - Not found any URLs in both introtext, fulltext fields
+2023-07-05 20:17:44 - INFO - ******************** Processing ID: 111657 ******************** (88/92392 - 0.1%)
+2023-07-05 20:17:44 - INFO - Skipped ID: 111657 - Not found any URLs in both introtext, fulltext fields
+2023-07-05 20:17:44 - INFO - ******************** Processing ID: 111656 ******************** (89/92392 - 0.1%)
+2023-07-05 20:17:44 - INFO - Skipped ID: 111656 - Not found any URLs in both introtext, fulltext fields
+2023-07-05 20:17:44 - INFO - ******************** Processing ID: 111655 ******************** (90/92392 - 0.1%)
+2023-07-05 20:17:44 - INFO - Skipped ID: 111655 - Not found any URLs in both introtext, fulltext fields
+2023-07-05 20:17:44 - INFO - ******************** Processing ID: 111654 ******************** (91/92392 - 0.1%)
+2023-07-05 20:17:44 - INFO - Skipped ID: 111654 - Not found any URLs in both introtext, fulltext fields
+2023-07-05 20:17:45 - INFO - ******************** Processing ID: 111653 ******************** (92/92392 - 0.1%)
+2023-07-05 20:17:45 - INFO - Skipped ID: 111653 - Not found any URLs in both introtext, fulltext fields
+2023-07-05 20:17:45 - INFO - ******************** Processing ID: 111652 ******************** (93/92392 - 0.1%)
+2023-07-05 20:17:45 - ERROR - #ID: 111652 #URL http:// Error: Invalid URL 'http://': No host supplied
+2023-07-05 20:17:45 - ERROR - Invalid URL 'http://': No host supplied
+2023-07-05 20:17:45 - INFO - ID: 111652 #COLUMN: fulltext #URL: http:// #STATUS_CODE: 500 #TEXT: http:// removed
+2023-07-05 20:17:45 - INFO - ID: 111652 #COLUMN: fulltext #URL: http:// #STATUS_CODE: 500 #TEXT: http:// removed
+2023-07-05 20:17:48 - INFO - ID: 111652 #COLUMN: fulltext #URL: http://https://www.angelfire.com/sk/stackshield/download.html replaced with http://www.angelfire.com/sk/stackshield/download.html
+2023-07-05 20:17:48 - INFO - Skipped ID: 111652 #COLUMN: fulltext #URL: http://go.microsoft.com/fwlink/?LinkId=7260 #STATUS_CODE: 302
+2023-07-05 20:17:48 - INFO - Skipped ID: 111652 #COLUMN: fulltext #URL: http://go.microsoft.com/fwlink/?LinkId=7260 #STATUS_CODE: 302
+2023-07-05 20:17:53 - INFO - Skipped ID: 111652 #COLUMN: fulltext #URL: http://www.wikipedia.com/wiki/Morris+Worm #STATUS_CODE: 301
+2023-07-05 20:17:54 - INFO - Skipped ID: 111652 #COLUMN: fulltext #URL: http://www.trl.ibm.com/projects/security/ssp/ #STATUS_CODE: 301
+2023-07-05 20:18:03 - WARNING - #ID: 111652 #URL http://www.corest.com/corelabs/papers Error: Timeout HTTPConnectionPool(host='www.corest.com', port=80): Max retries exceeded with url: /corelabs/papers (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f6d6c348e80>, 'Connection to www.corest.com timed out. (connect timeout=10)'))
+2023-07-05 20:18:03 - INFO - ID: 111652 #COLUMN: fulltext #URL: http://www.corest.com/corelabs/papers added for more checking
+2023-07-05 20:18:03 - WARNING - #ID: 111652 #URL http://www.corest.com Error: Timeout HTTPConnectionPool(host='www.corest.com', port=80): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f6d6c3b4ca0>, 'Connection to www.corest.com timed out. (connect timeout=10)'))
+2023-07-05 20:18:03 - INFO - ID: 111652 #COLUMN: fulltext #URL: http://www.corest.com added for more checking
+2023-07-05 20:18:03 - WARNING - #ID: 111652 #URL http://www.corest.com Error: Timeout HTTPConnectionPool(host='www.corest.com', port=80): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f6d6c34a1d0>, 'Connection to www.corest.com timed out. (connect timeout=10)'))
+2023-07-05 20:18:03 - INFO - ID: 111652 #COLUMN: fulltext #URL: http://www.corest.com added for more checking
+2023-07-05 20:18:03 - INFO - Processing ID: 111652 completed
+2023-07-05 20:18:03 - INFO - ******************** Processing ID: 111651 ******************** (94/92392 - 0.1%)
+2023-07-05 20:18:03 - INFO - Skipped ID: 111651 - Not found any URLs in both introtext, fulltext fields
+2023-07-05 20:18:03 - INFO - ******************** Processing ID: 111650 ******************** (95/92392 - 0.1%)
+2023-07-05 20:18:03 - INFO - Skipped ID: 111650 - Not found any URLs in both introtext, fulltext fields
+2023-07-05 20:18:03 - INFO - ******************** Processing ID: 111648 ******************** (96/92392 - 0.1%)
+2023-07-05 20:18:08 - INFO - Skipped ID: 111648 #COLUMN: fulltext #URL: http://www.zone-h.org/defaced/2002/04/23/https://www.saudiairlines.com/ #STATUS_CODE: 200
+2023-07-05 20:18:09 - INFO - ID: 111648 #COLUMN: fulltext #URL: http://https://www.zone-h.org/defaced/2002/04/23/www.iflyrga.com/ replaced with http://www.zone-h.org/defaced/2002/04/23/www.iflyrga.com/
+2023-07-05 20:18:09 - INFO - ID: 111648 #COLUMN: fulltext #URL: http://https://www.zone-h.org/defaced/2002/04/24/extra-cas.faa.gov/ replaced with http://www.zone-h.org/defaced/2002/04/24/extra-cas.faa.gov/
+2023-07-05 20:18:09 - ERROR - #ID: 111648 #URL https://https://www.Zone-H.org Error: HTTPSConnectionPool(host='https', port=443): Max retries exceeded with url: //www.Zone-H.org (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x7f6d6c32dea0>: Failed to resolve 'https' ([Errno -2] Name or service not known)"))
+2023-07-05 20:18:09 - INFO - ID: 111648 #COLUMN: fulltext #URL: https://https://www.Zone-H.org #STATUS_CODE: 500 - Replaced with #TEXT: (null)
+2023-07-05 20:18:09 - ERROR - #ID: 111648 #URL https://https://www.Zone-H.org Error: HTTPSConnectionPool(host='https', port=443): Max retries exceeded with url: //www.Zone-H.org (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x7f6d6c32cc70>: Failed to resolve 'https' ([Errno -2] Name or service not known)"))
+2023-07-05 20:18:09 - INFO - ID: 111648 #COLUMN: fulltext #URL: https://https://www.Zone-H.org #STATUS_CODE: 500 - Replaced with #TEXT: (null)
+2023-07-05 20:18:22 - INFO - Skipped ID: 111648 #COLUMN: fulltext #URL: https://www.saudiairlines.com #STATUS_CODE: 200
+2023-07-05 20:18:22 - INFO - Processing ID: 111648 completed
+2023-07-05 20:18:22 - INFO - ******************** Processing ID: 111647 ******************** (97/92392 - 0.1%)
+2023-07-05 20:18:22 - INFO - Skipped ID: 111647 - Not found any URLs in both introtext, fulltext fields
+2023-07-05 20:18:22 - INFO - ******************** Processing ID: 111646 ******************** (98/92392 - 0.1%)
+2023-07-05 20:18:22 - INFO - Skipped ID: 111646 - Not found any URLs in both introtext, fulltext fields
+2023-07-05 20:18:22 - INFO - ******************** Processing ID: 111644 ******************** (99/92392 - 0.1%)
+2023-07-05 20:18:22 - INFO - Skipped ID: 111644 - Not found any URLs in both introtext, fulltext fields
+2023-07-05 20:18:22 - INFO - ******************** Processing ID: 111643 ******************** (100/92392 - 0.1%)
+2023-07-05 20:18:22 - INFO - Skipped ID: 111643 - Not found any URLs in both introtext, fulltext fields
+2023-07-05 20:18:22 - INFO - ******************** Processing ID: 111642 ******************** (101/92392 - 0.1%)
+2023-07-05 20:18:22 - INFO - Skipped ID: 111642 - Not found any URLs in both introtext, fulltext fields
+2023-07-05 20:18:22 - INFO - ******************** Processing ID: 111641 ******************** (102/92392 - 0.1%)
+2023-07-05 20:18:22 - INFO - Skipped ID: 111641 - Not found any URLs in both introtext, fulltext fields
+2023-07-05 20:18:22 - INFO - ******************** Processing ID: 111640 ******************** (103/92392 - 0.1%)
+2023-07-05 20:18:22 - INFO - Skipped ID: 111640 - Not found any URLs in both introtext, fulltext fields
+2023-07-05 20:18:22 - INFO - ******************** Processing ID: 111638 ******************** (104/92392 - 0.1%)
+2023-07-05 20:18:22 - INFO - Skipped ID: 111638 - Not found any URLs in both introtext, fulltext fields
+2023-07-05 20:18:22 - INFO - ******************** Processing ID: 111637 ******************** (105/92392 - 0.1%)
+2023-07-05 20:18:22 - INFO - Skipped ID: 111637 - Not found any URLs in both introtext, fulltext fields
+2023-07-05 20:18:22 - INFO - ******************** Processing ID: 111636 ******************** (106/92392 - 0.1%)
+2023-07-05 20:18:22 - INFO - Skipped ID: 111636 - Not found any URLs in both introtext, fulltext fields
+2023-07-05 20:18:22 - INFO - ******************** Processing ID: 111635 ******************** (107/92392 - 0.1%)
+2023-07-05 20:18:22 - INFO - Skipped ID: 111635 - Not found any URLs in both introtext, fulltext fields
+2023-07-05 20:18:22 - INFO - ******************** Processing ID: 111634 ******************** (108/92392 - 0.1%)
+2023-07-05 20:18:22 - INFO - Skipped ID: 111634 - Not found any URLs in both introtext, fulltext fields
+2023-07-05 20:18:22 - INFO - ******************** Processing ID: 111631 ******************** (109/92392 - 0.1%)
+2023-07-05 20:18:22 - INFO - Skipped ID: 111631 - Not found any URLs in both introtext, fulltext fields
+2023-07-05 20:18:22 - INFO - ******************** Processing ID: 111630 ******************** (110/92392 - 0.1%)
+2023-07-05 20:18:22 - INFO - Skipped ID: 111630 - Not found any URLs in both introtext, fulltext fields
+2023-07-05 20:18:22 - INFO - ******************** Processing ID: 111629 ******************** (111/92392 - 0.1%)
+2023-07-05 20:18:22 - INFO - Skipped ID: 111629 - Not found any URLs in both introtext, fulltext fields
+2023-07-05 20:18:22 - INFO - ******************** Processing ID: 111628 ******************** (112/92392 - 0.1%)
+2023-07-05 20:18:22 - INFO - Skipped ID: 111628 - Not found any URLs in both introtext, fulltext fields
+2023-07-05 20:18:22 - INFO - ******************** Processing ID: 111627 ******************** (113/92392 - 0.1%)
+2023-07-05 20:18:22 - INFO - Skipped ID: 111627 - Not found any URLs in both introtext, fulltext fields
+2023-07-05 20:18:22 - INFO - ******************** Processing ID: 111626 ******************** (114/92392 - 0.1%)
+2023-07-05 20:18:22 - INFO - Skipped ID: 111626 - Not found any URLs in both introtext, fulltext fields
+2023-07-05 20:18:22 - INFO - ******************** Processing ID: 111625 ******************** (115/92392 - 0.1%)
+2023-07-05 20:18:22 - INFO - Skipped ID: 111625 - Not found any URLs in both introtext, fulltext fields
+2023-07-05 20:18:22 - INFO - ******************** Processing ID: 111624 ******************** (116/92392 - 0.1%)
+2023-07-05 20:18:22 - INFO - Skipped ID: 111624 - Not found any URLs in both introtext, fulltext fields
+2023-07-05 20:18:22 - INFO - ******************** Processing ID: 111622 ******************** (117/92392 - 0.1%)
+2023-07-05 20:18:22 - INFO - Skipped ID: 111622 - Not found any URLs in both introtext, fulltext fields
+2023-07-05 20:18:22 - INFO - ******************** Processing ID: 111621 ******************** (118/92392 - 0.1%)
+2023-07-05 20:18:22 - INFO - Skipped ID: 111621 - Not found any URLs in both introtext, fulltext fields
+2023-07-05 20:18:22 - INFO - ******************** Processing ID: 111620 ******************** (119/92392 - 0.1%)
+2023-07-05 20:18:22 - INFO - Skipped ID: 111620 - Not found any URLs in both introtext, fulltext fields
+2023-07-05 20:18:22 - INFO - ******************** Processing ID: 111619 ******************** (120/92392 - 0.1%)
+2023-07-05 20:18:22 - INFO - Skipped ID: 111619 - Not found any URLs in both introtext, fulltext fields
+2023-07-05 20:18:22 - INFO - ******************** Processing ID: 111617 ******************** (121/92392 - 0.1%)
+2023-07-05 20:18:22 - INFO - Skipped ID: 111617 - Not found any URLs in both introtext, fulltext fields
+2023-07-05 20:18:22 - INFO - ******************** Processing ID: 111616 ******************** (122/92392 - 0.1%)
+2023-07-05 20:18:22 - INFO - Skipped ID: 111616 - Not found any URLs in both introtext, fulltext fields
+2023-07-05 20:18:22 - INFO - ******************** Processing ID: 111615 ******************** (123/92392 - 0.1%)
+2023-07-05 20:18:22 - INFO - Skipped ID: 111615 - Not found any URLs in both introtext, fulltext fields
+2023-07-05 20:18:22 - INFO - ******************** Processing ID: 111614 ******************** (124/92392 - 0.1%)
+2023-07-05 20:18:22 - INFO - Skipped ID: 111614 - Not found any URLs in both introtext, fulltext fields
+2023-07-05 20:18:22 - INFO - ******************** Processing ID: 111613 ******************** (125/92392 - 0.1%)
+2023-07-05 20:18:22 - INFO - Skipped ID: 111613 - Not found any URLs in both introtext, fulltext fields
+2023-07-05 20:18:22 - INFO - ******************** Processing ID: 111612 ******************** (126/92392 - 0.1%)
+2023-07-05 20:18:22 - INFO - Skipped ID: 111612 - Not found any URLs in both introtext, fulltext fields
+2023-07-05 20:18:22 - INFO - ******************** Processing ID: 111611 ******************** (127/92392 - 0.1%)
+2023-07-05 20:18:22 - INFO - Skipped ID: 111611 - Not found any URLs in both introtext, fulltext fields
+2023-07-05 20:18:22 - INFO - ******************** Processing ID: 111610 ******************** (128/92392 - 0.1%)
+2023-07-05 20:18:22 - INFO - Skipped ID: 111610 - Not found any URLs in both introtext, fulltext fields
+2023-07-05 20:18:22 - INFO - ******************** Processing ID: 111608 ******************** (129/92392 - 0.1%)
+2023-07-05 20:18:22 - INFO - Skipped ID: 111608 - Not found any URLs in both introtext, fulltext fields
+2023-07-05 20:18:22 - INFO - ******************** Processing ID: 111605 ******************** (130/92392 - 0.1%)
+2023-07-05 20:18:22 - INFO - Skipped ID: 111605 - Not found any URLs in both introtext, fulltext fields
+2023-07-05 20:18:22 - INFO - ******************** Processing ID: 111604 ******************** (131/92392 - 0.1%)
+2023-07-05 20:18:22 - INFO - Skipped ID: 111604 - Not found any URLs in both introtext, fulltext fields
+2023-07-05 20:18:22 - INFO - ******************** Processing ID: 111602 ******************** (132/92392 - 0.1%)
+2023-07-05 20:18:22 - INFO - Skipped ID: 111602 - Not found any URLs in both introtext, fulltext fields
+2023-07-05 20:18:22 - INFO - ******************** Processing ID: 111601 ******************** (133/92392 - 0.1%)
+2023-07-05 20:18:22 - INFO - Skipped ID: 111601 - Not found any URLs in both introtext, fulltext fields
+2023-07-05 20:18:22 - INFO - ******************** Processing ID: 111600 ******************** (134/92392 - 0.1%)
+2023-07-05 20:18:22 - INFO - Skipped ID: 111600 - Not found any URLs in both introtext, fulltext fields
+2023-07-05 20:18:22 - INFO - ******************** Processing ID: 111599 ******************** (135/92392 - 0.1%)
+2023-07-05 20:18:22 - INFO - Skipped ID: 111599 - Not found any URLs in both introtext, fulltext fields
+2023-07-05 20:18:22 - INFO - ******************** Processing ID: 111598 ******************** (136/92392 - 0.1%)
+2023-07-05 20:18:22 - INFO - Skipped ID: 111598 - Not found any URLs in both introtext, fulltext fields
+2023-07-05 20:18:22 - INFO - ******************** Processing ID: 111597 ******************** (137/92392 - 0.1%)
+2023-07-05 20:18:22 - INFO - Skipped ID: 111597 - Not found any URLs in both introtext, fulltext fields
+2023-07-05 20:18:22 - INFO - ******************** Processing ID: 111596 ******************** (138/92392 - 0.1%)
+2023-07-05 20:18:22 - INFO - ID: 111596 #COLUMN: fulltext #URL: (null) - Skipping Anchor Tag as no href attribute found
+2023-07-05 20:18:22 - INFO - ID: 111596 #COLUMN: fulltext #URL: (null) - Skipping Anchor Tag as no href attribute found
+2023-07-05 20:18:22 - INFO - ID: 111596 #COLUMN: fulltext #URL: (null) - Skipping Anchor Tag as no href attribute found
+2023-07-05 20:18:22 - INFO - ID: 111596 #COLUMN: fulltext #URL: (null) - Skipping Anchor Tag as no href attribute found
+2023-07-05 20:18:22 - INFO - ID: 111596 #COLUMN: fulltext #URL: (null) - Skipping Anchor Tag as no href attribute found
+2023-07-05 20:18:22 - INFO - ID: 111596 #COLUMN: fulltext #URL: (null) - Skipping Anchor Tag as no href attribute found
+2023-07-05 20:18:22 - INFO - ID: 111596 #COLUMN: fulltext #URL: (null) - Skipping Anchor Tag as no href attribute found
+2023-07-05 20:18:22 - INFO - Skipped ID: 111596 #COLUMN: fulltext #URL: http://www.newscientist.com/news/news.jsp?id=ns99992067 #STATUS_CODE: 301
+2023-07-05 20:18:22 - INFO - Skipped ID: 111596 #COLUMN: fulltext #URL: http://www.cnn.com/2002/TECH/internet/04/07/cybercrime.survey/index.html #STATUS_CODE: 302
+2023-07-05 20:18:22 - INFO - Skipped ID: 111596 #COLUMN: fulltext #URL: http://www.theregister.co.uk/content/6/24747.html #STATUS_CODE: 301
+2023-07-05 20:18:23 - INFO - Skipped ID: 111596 #COLUMN: fulltext #URL: http://www.theregister.co.uk/content/55/24482.html #STATUS_CODE: 301
+2023-07-05 20:18:23 - INFO - Skipped ID: 111596 #COLUMN: fulltext #URL: http://cyberlaw.stanford.edu/ #STATUS_CODE: 301
+2023-07-05 20:18:24 - INFO - Skipped ID: 111596 #COLUMN: fulltext #URL: http://www.cert.org/archive/pdf/attack_trends.pdf #STATUS_CODE: 301
+2023-07-05 20:18:24 - INFO - Skipped ID: 111596 #COLUMN: fulltext #URL: http://www.cert.org/advisories/CA-2002-03.html #STATUS_CODE: 301
+2023-07-05 20:18:24 - INFO - Skipped ID: 111596 #COLUMN: fulltext #URL: http://news.com.com/2100-1017-870959.html #STATUS_CODE: 200
+2023-07-05 20:18:24 - INFO - Skipped ID: 111596 #COLUMN: fulltext #URL: http://news.com.com/2100-1023-866337.html #STATUS_CODE: 200
+2023-07-05 20:18:24 - INFO - Skipped ID: 111596 #COLUMN: fulltext #URL: http://news.com.com/2100-1001-862994.html?tag=cd_mh #STATUS_CODE: 200
+2023-07-05 20:18:35 - INFO - Skipped ID: 111596 #COLUMN: fulltext #URL: http://zdnet.com.com/2110-1105-863643.html #STATUS_CODE: 200
+2023-07-05 20:18:35 - WARNING - #ID: 111596 #URL http://www.infosecuritymag.com/2002/apr/news.shtml#factoringfriction Error: Timeout HTTPConnectionPool(host='www.infosecuritymag.com', port=80): Max retries exceeded with url: /2002/apr/news.shtml (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f6d6c34af80>, 'Connection to www.infosecuritymag.com timed out. (connect timeout=10)'))
+2023-07-05 20:18:35 - INFO - ID: 111596 #COLUMN: fulltext #URL: http://www.infosecuritymag.com/2002/apr/news.shtml#factoringfriction added for more checking
+2023-07-05 20:18:36 - INFO - Skipped ID: 111596 #COLUMN: fulltext #URL: http://xxx.lanl.gov/abs/cond-mat/0203011 #STATUS_CODE: 302
+2023-07-05 20:18:41 - WARNING - #ID: 111596 #URL http://www.infosecnews.com/opinion/2002/02/27_02.htm Error: Timeout HTTPConnectionPool(host='www.infosecnews.com', port=80): Read timed out. (read timeout=10)
+2023-07-05 20:18:41 - INFO - ID: 111596 #COLUMN: fulltext #URL: http://www.infosecnews.com/opinion/2002/02/27_02.htm added for more checking
+2023-07-05 20:18:41 - ERROR - #ID: 111596 #URL http://online.securityfocus.com/archive/1/263924 Error: HTTPConnectionPool(host='online.securityfocus.com', port=80): Max retries exceeded with url: /archive/1/263924 (Caused by NameResolutionError("<urllib3.connection.HTTPConnection object at 0x7f6d6c3bf130>: Failed to resolve 'online.securityfocus.com' ([Errno -2] Name or service not known)"))
+2023-07-05 20:18:41 - INFO - ID: 111596 #COLUMN: fulltext #URL: http://online.securityfocus.com/archive/1/263924 #STATUS_CODE: 500 - Replaced with #TEXT: (null)
+2023-07-05 20:18:41 - ERROR - #ID: 111596 #URL http://www.vnunet.com/News/1129730 Error: HTTPConnectionPool(host='www.vnunet.com', port=80): Max retries exceeded with url: /News/1129730 (Caused by NameResolutionError("<urllib3.connection.HTTPConnection object at 0x7f6d6c20e620>: Failed to resolve 'www.vnunet.com' ([Errno -2] Name or service not known)"))
+2023-07-05 20:18:41 - INFO - ID: 111596 #COLUMN: fulltext #URL: http://www.vnunet.com/News/1129730 #STATUS_CODE: 500 - Replaced with #TEXT: (null)
+2023-07-05 20:18:41 - ERROR - #ID: 111596 #URL http://online.securityfocus.com/columnists/71 Error: HTTPConnectionPool(host='online.securityfocus.com', port=80): Max retries exceeded with url: /columnists/71 (Caused by NameResolutionError("<urllib3.connection.HTTPConnection object at 0x7f6d6c2487c0>: Failed to resolve 'online.securityfocus.com' ([Errno -2] Name or service not known)"))
+2023-07-05 20:18:41 - INFO - ID: 111596 #COLUMN: fulltext #URL: http://online.securityfocus.com/columnists/71 #STATUS_CODE: 500 - Replaced with #TEXT: (null)
+2023-07-05 20:18:41 - INFO - Skipped ID: 111596 #COLUMN: fulltext #URL: http://www.ietf.org/internet-drafts/draft-ymbk-obscurity-00.tx #STATUS_CODE: 301
+2023-07-05 20:18:42 - INFO - Skipped ID: 111596 #COLUMN: fulltext #URL: http://abcnews.go.com/sections/us/CrimeBlotter/crimeblotter011107.html #STATUS_CODE: 301
+2023-07-05 20:18:42 - INFO - Skipped ID: 111596 #COLUMN: fulltext #URL: http://www.wired.com/news/technology/0,1282,50598,00.html #STATUS_CODE: 301
+2023-07-05 20:18:42 - INFO - Skipped ID: 111596 #COLUMN: fulltext #URL: http://www.wired.com/news/politics/0,1283,51274,00.html #STATUS_CODE: 301
+2023-07-05 20:18:43 - INFO - Skipped ID: 111596 #COLUMN: fulltext #URL: http://www.businessweek.com/bwdaily/dnflash/mar2002/nf20020312_9960.htm #STATUS_CODE: 301
+2023-07-05 20:18:43 - ERROR - #ID: 111596 #URL http://www.rsasecurity.com/rsalabs/technotes/bernstein.html Error: HTTPConnectionPool(host='www.rsasecurity.com', port=80): Max retries exceeded with url: /rsalabs/technotes/bernstein.html (Caused by NameResolutionError("<urllib3.connection.HTTPConnection object at 0x7f6d6c20c940>: Failed to resolve 'www.rsasecurity.com' ([Errno -2] Name or service not known)"))
+2023-07-05 20:18:43 - INFO - ID: 111596 #COLUMN: fulltext #URL: http://www.rsasecurity.com/rsalabs/technotes/bernstein.html #STATUS_CODE: 500 - Replaced with #TEXT: (null)
+2023-07-05 20:18:43 - ERROR - #ID: 111596 #URL http://online.securityfocus.com/news/364 Error: HTTPConnectionPool(host='online.securityfocus.com', port=80): Max retries exceeded with url: /news/364 (Caused by NameResolutionError("<urllib3.connection.HTTPConnection object at 0x7f6d6c36bb50>: Failed to resolve 'online.securityfocus.com' ([Errno -2] Name or service not known)"))
+2023-07-05 20:18:43 - INFO - ID: 111596 #COLUMN: fulltext #URL: http://online.securityfocus.com/news/364 #STATUS_CODE: 500 - Replaced with #TEXT: (null)
+2023-07-05 20:18:47 - INFO - Skipped ID: 111596 #COLUMN: fulltext #URL: http://www.theregus.com/content/6/24407.html #STATUS_CODE: 301
+2023-07-05 20:18:47 - INFO - Skipped ID: 111596 #COLUMN: fulltext #URL: http://www.counterpane.com #STATUS_CODE: 301
+2023-07-05 20:18:47 - INFO - Skipped ID: 111596 #COLUMN: fulltext #URL: http://www.counterpane.com/crypto-gram-9904.html#smartcards #STATUS_CODE: 301
+2023-07-05 20:18:47 - INFO - Skipped ID: 111596 #COLUMN: fulltext #URL: http://www.counterpane.com/crypto-gram-9904.html#differen #STATUS_CODE: 301
+2023-07-05 20:18:47 - ERROR - #ID: 111596 #URL http://online.securityfocus.com/infocus/1564 Error: HTTPConnectionPool(host='online.securityfocus.com', port=80): Max retries exceeded with url: /infocus/1564 (Caused by NameResolutionError("<urllib3.connection.HTTPConnection object at 0x7f6d6c32da50>: Failed to resolve 'online.securityfocus.com' ([Errno -2] Name or service not known)"))
+2023-07-05 20:18:47 - INFO - ID: 111596 #COLUMN: fulltext #URL: http://online.securityfocus.com/infocus/1564 #STATUS_CODE: 500 - Replaced with #TEXT: (null)
+2023-07-05 20:18:47 - INFO - Skipped ID: 111596 #COLUMN: fulltext #URL: http://www.counterpane.com/crypto-gram.html&gt #STATUS_CODE: 301
+2023-07-05 20:18:47 - INFO - Skipped ID: 111596 #COLUMN: fulltext #URL: http://www.counterpane.com/crypto-gram-0104.html#3 #STATUS_CODE: 301
+2023-07-05 20:18:47 - INFO - Skipped ID: 111596 #COLUMN: fulltext #URL: http://www.counterpane.com/crypto-gram-0004.html#MicrosoftActiveSetup #STATUS_CODE: 301
+2023-07-05 20:18:47 - ERROR - #ID: 111596 #URL http://online.securityfocus.com/infocus/1567 Error: HTTPConnectionPool(host='online.securityfocus.com', port=80): Max retries exceeded with url: /infocus/1567 (Caused by NameResolutionError("<urllib3.connection.HTTPConnection object at 0x7f6d6c32ebc0>: Failed to resolve 'online.securityfocus.com' ([Errno -2] Name or service not known)"))
+2023-07-05 20:18:47 - INFO - ID: 111596 #COLUMN: fulltext #URL: http://online.securityfocus.com/infocus/1567 #STATUS_CODE: 500 - Replaced with #TEXT: (null)
+2023-07-05 20:18:47 - INFO - Skipped ID: 111596 #COLUMN: fulltext #URL: http://www.counterpane.com/crypto-gram-0004.html#TheUniformComputerInformationTransactionsAct(UCITA #STATUS_CODE: 301
+2023-07-05 20:18:47 - INFO - Skipped ID: 111596 #COLUMN: fulltext #URL: http://www.counterpane.com/crypto-gram-9904.html#certificates #STATUS_CODE: 301
+2023-07-05 20:18:47 - INFO - Skipped ID: 111596 #COLUMN: fulltext #URL: http://www.counterpane.com/crypto-gram.html #STATUS_CODE: 301
+2023-07-05 20:18:47 - INFO - Skipped ID: 111596 #COLUMN: fulltext #URL: http://www.counterpane.com/crypto-gram-0104.html#1 #STATUS_CODE: 301
+2023-07-05 20:18:47 - INFO - Skipped ID: 111596 #COLUMN: fulltext #URL: http://www.counterpane.com/crypto-gram-0203.html#6 #STATUS_CODE: 301
+2023-07-05 20:18:47 - INFO - Skipped ID: 111596 #COLUMN: fulltext #URL: http://www.gocsi.com/press/20020407.html #STATUS_CODE: 302
+2023-07-05 20:18:47 - INFO - ID: 111596 #COLUMN: fulltext #URL: http://www.osopinion.com/perl/story/17009.html #STATUS_CODE: 404 - Replaced with #TEXT: (null)
+2023-07-05 20:18:47 - INFO - ID: 111596 #COLUMN: fulltext #URL: http://www.osopinion.com/perl/story/16840.html #STATUS_CODE: 404 - Replaced with #TEXT: (null)
+2023-07-05 20:18:47 - INFO - Skipped ID: 111596 #COLUMN: fulltext #URL: http://www.cio.com/archive/031502/truth.html #STATUS_CODE: 301
+2023-07-05 20:18:47 - INFO - Skipped ID: 111596 #COLUMN: fulltext #URL: http://www.cs.berkeley.edu/~nweaver/0wn2.html #STATUS_CODE: 301
+2023-07-05 20:18:47 - INFO - ID: 111596 #COLUMN: fulltext #URL: http://www.osopinion.com/perl/story/17092.html #STATUS_CODE: 404 - Replaced with #TEXT: (null)
+2023-07-05 20:18:47 - INFO - Skipped ID: 111596 #COLUMN: fulltext #URL: http://www.businessweek.com/bw50/content/mar2002/a3776082.htm #STATUS_CODE: 301
+2023-07-05 20:18:47 - INFO - Skipped ID: 111596 #COLUMN: fulltext #URL: http://www.counterpane.com/pr-500.html #STATUS_CODE: 301
+2023-07-05 20:18:47 - INFO - Skipped ID: 111596 #COLUMN: fulltext #URL: http://www.counterpane.com/nimda.pdf #STATUS_CODE: 301
+2023-07-05 20:18:47 - INFO - Skipped ID: 111596 #COLUMN: fulltext #URL: http://www.counterpane.com/pr-womble.html #STATUS_CODE: 301
+2023-07-05 20:18:47 - INFO - Skipped ID: 111596 #COLUMN: fulltext #URL: http://www.counterpane.com/eventreports1.pdf #STATUS_CODE: 301
+2023-07-05 20:18:47 - INFO - Skipped ID: 111596 #COLUMN: fulltext #URL: http://www.counterpane.com/eventreports2.pdf #STATUS_CODE: 301
+2023-07-05 20:18:47 - INFO - Skipped ID: 111596 #COLUMN: fulltext #URL: http://www.counterpane.com/pr-currenex.html #STATUS_CODE: 301
+2023-07-05 20:18:47 - INFO - Skipped ID: 111596 #COLUMN: fulltext #URL: http://www.counterpane.com/pr-open.html #STATUS_CODE: 301
+2023-07-05 20:18:47 - INFO - Skipped ID: 111596 #COLUMN: fulltext #URL: http://www.counterpane.com/cgi-bin/seminars.cgi #STATUS_CODE: 301
+2023-07-05 20:18:49 - INFO - Skipped ID: 111596 #COLUMN: fulltext #URL: http://www.zdnet.co.uk/news/specials/2000/10/enterprise/techrepublic/2002/13/article004.html #STATUS_CODE: 301
+2023-07-05 20:18:49 - INFO - Skipped ID: 111596 #COLUMN: fulltext #URL: http://www.salon.com/tech/feature/2002/04/09/trustworthy/index.html #STATUS_CODE: 301
+2023-07-05 20:18:50 - INFO - Skipped ID: 111596 #COLUMN: fulltext #URL: http://www.trustmatta.com/services/docs/Matta_Counterintelligence.pdf #STATUS_CODE: 301
+2023-07-05 20:18:51 - WARNING - #ID: 111596 #URL http://thomas.loc.gov/cgi-bin/bdquery/z?d107:s.02048 Error: Timeout HTTPConnectionPool(host='thomas.loc.gov', port=80): Read timed out. (read timeout=10)
+2023-07-05 20:18:51 - INFO - ID: 111596 #COLUMN: fulltext #URL: http://thomas.loc.gov/cgi-bin/bdquery/z?d107:s.02048 added for more checking
+2023-07-05 20:19:02 - WARNING - #ID: 111596 #URL http://www.itbuynet.com/pdf/0202-security.pdf Error: Timeout HTTPConnectionPool(host='www.itbuynet.com', port=80): Max retries exceeded with url: /pdf/0202-security.pdf (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f6d6c248910>, 'Connection to www.itbuynet.com timed out. (connect timeout=10)'))
+2023-07-05 20:19:02 - INFO - ID: 111596 #COLUMN: fulltext #URL: http://www.itbuynet.com/pdf/0202-security.pdf added for more checking
+2023-07-05 20:19:02 - WARNING - #ID: 111596 #URL http://www.itbuynet.com/pdf/0202-security.pdf Error: Timeout HTTPConnectionPool(host='www.itbuynet.com', port=80): Max retries exceeded with url: /pdf/0202-security.pdf (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f6d6c249240>, 'Connection to www.itbuynet.com timed out. (connect timeout=10)'))
+2023-07-05 20:19:02 - INFO - ID: 111596 #COLUMN: fulltext #URL: http://www.itbuynet.com/pdf/0202-security.pdf added for more checking
+2023-07-05 20:19:02 - WARNING - #ID: 111596 #URL http://nsa2.www.conxion.com/emailexec/download.htm Error: Timeout HTTPConnectionPool(host='nsa2.www.conxion.com', port=80): Max retries exceeded with url: /emailexec/download.htm (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f6d6c249cf0>, 'Connection to nsa2.www.conxion.com timed out. (connect timeout=10)'))
+2023-07-05 20:19:02 - INFO - ID: 111596 #COLUMN: fulltext #URL: http://nsa2.www.conxion.com/emailexec/download.htm added for more checking
+2023-07-05 20:19:02 - INFO - Processing ID: 111596 completed
+2023-07-05 20:19:02 - INFO - ******************** Processing ID: 111595 ******************** (139/92392 - 0.2%)
+2023-07-05 20:19:02 - INFO - Skipped ID: 111595 - Not found any URLs in both introtext, fulltext fields
+2023-07-05 20:19:02 - INFO - ******************** Processing ID: 111593 ******************** (140/92392 - 0.2%)
+2023-07-05 20:19:02 - INFO - Skipped ID: 111593 - Not found any URLs in both introtext, fulltext fields
+2023-07-05 20:19:02 - INFO - ******************** Processing ID: 111592 ******************** (141/92392 - 0.2%)
+2023-07-05 20:19:02 - INFO - Skipped ID: 111592 - Not found any URLs in both introtext, fulltext fields
+2023-07-05 20:19:02 - INFO - ******************** Processing ID: 111591 ******************** (142/92392 - 0.2%)
+2023-07-05 20:19:02 - INFO - Skipped ID: 111591 - Not found any URLs in both introtext, fulltext fields
+2023-07-05 20:19:02 - INFO - ******************** Processing ID: 111590 ******************** (143/92392 - 0.2%)
+2023-07-05 20:19:02 - INFO - Skipped ID: 111590 - Not found any URLs in both introtext, fulltext fields
+2023-07-05 20:19:02 - INFO - ******************** Processing ID: 111589 ******************** (144/92392 - 0.2%)
+2023-07-05 20:19:02 - INFO - Skipped ID: 111589 - Not found any URLs in both introtext, fulltext fields
+2023-07-05 20:19:02 - INFO - ******************** Processing ID: 111588 ******************** (145/92392 - 0.2%)
+2023-07-05 20:19:02 - INFO - Skipped ID: 111588 - Not found any URLs in both introtext, fulltext fields
+2023-07-05 20:19:02 - INFO - ******************** Processing ID: 111585 ******************** (146/92392 - 0.2%)
+2023-07-05 20:19:02 - INFO - Skipped ID: 111585 - Not found any URLs in both introtext, fulltext fields
+2023-07-05 20:19:02 - INFO - ******************** Processing ID: 111584 ******************** (147/92392 - 0.2%)
+2023-07-05 20:19:02 - INFO - Skipped ID: 111584 - Not found any URLs in both introtext, fulltext fields
+2023-07-05 20:19:02 - INFO - ******************** Processing ID: 111583 ******************** (148/92392 - 0.2%)
+2023-07-05 20:19:02 - INFO - Skipped ID: 111583 - Not found any URLs in both introtext, fulltext fields
+2023-07-05 20:19:02 - INFO - ******************** Processing ID: 111582 ******************** (149/92392 - 0.2%)
+2023-07-05 20:19:02 - INFO - Skipped ID: 111582 - Not found any URLs in both introtext, fulltext fields
+2023-07-05 20:19:02 - INFO - ******************** Processing ID: 111579 ******************** (150/92392 - 0.2%)
+2023-07-05 20:19:02 - INFO - Skipped ID: 111579 - Not found any URLs in both introtext, fulltext fields
+2023-07-05 20:19:02 - INFO - ******************** Processing ID: 111577 ******************** (151/92392 - 0.2%)
+2023-07-05 20:19:10 - INFO - ID: 111577 #COLUMN: fulltext #URL: http://https://www.avolio.com/calendar.html replaced with http://www.avolio.com/calendar.html
+2023-07-05 20:19:13 - INFO - ID: 111577 #COLUMN: fulltext #URL: http://https://www.avolio.com/columns/WhatAreIDS.html replaced with http://www.avolio.com/columns/WhatAreIDS.html
+2023-07-05 20:19:14 - INFO - ID: 111577 #COLUMN: fulltext #URL: http://https://www.avolio.com/courses/tools+techniques.html replaced with http://www.avolio.com/courses/tools+techniques.html
+2023-07-05 20:19:14 - INFO - ID: 111577 #COLUMN: fulltext #URL: http://https://www.avolio.com/columns/17-TheNefariousAny.html replaced with http://www.avolio.com/columns/17-TheNefariousAny.html
+2023-07-05 20:19:14 - INFO - ID: 111577 #COLUMN: fulltext #URL: http://https://www.avolio.com/columns/BasicRouterSecurity.html replaced with http://www.avolio.com/columns/BasicRouterSecurity.html
+2023-07-05 20:19:15 - INFO - Skipped ID: 111577 #COLUMN: fulltext #URL: http://www.gocsi.com/ #STATUS_CODE: 302
+2023-07-05 20:19:15 - INFO - Skipped ID: 111577 #COLUMN: fulltext #URL: http://www.avolio.com/ #STATUS_CODE: 301
+2023-07-05 20:19:15 - INFO - Skipped ID: 111577 #COLUMN: fulltext #URL: http://www.avolio.com/columns/tokens.html #STATUS_CODE: 301
+2023-07-05 20:19:19 - INFO - Skipped ID: 111577 #COLUMN: fulltext #URL: http://www.cio.com/archive/010102/sandwich.html #STATUS_CODE: 301
+2023-07-05 20:19:20 - INFO - Skipped ID: 111577 #COLUMN: fulltext #URL: http://sysinfo.com/eds.html #STATUS_CODE: 301
+2023-07-05 20:19:20 - INFO - Processing ID: 111577 completed
+2023-07-05 20:19:20 - INFO - ******************** Processing ID: 111575 ******************** (152/92392 - 0.2%)
+2023-07-05 20:19:20 - INFO - Skipped ID: 111575 - Not found any URLs in both introtext, fulltext fields
+2023-07-05 20:19:20 - INFO - ******************** Processing ID: 111574 ******************** (153/92392 - 0.2%)
+2023-07-05 20:19:20 - INFO - Skipped ID: 111574 - Not found any URLs in both introtext, fulltext fields
+2023-07-05 20:19:20 - INFO - ******************** Processing ID: 111573 ******************** (154/92392 - 0.2%)
+2023-07-05 20:19:20 - INFO - Skipped ID: 111573 - Not found any URLs in both introtext, fulltext fields
+2023-07-05 20:19:20 - INFO - ******************** Processing ID: 111571 ******************** (155/92392 - 0.2%)
+2023-07-05 20:19:20 - INFO - Skipped ID: 111571 - Not found any URLs in both introtext, fulltext fields
+2023-07-05 20:19:20 - INFO - ******************** Processing ID: 111570 ******************** (156/92392 - 0.2%)
+2023-07-05 20:19:20 - INFO - Skipped ID: 111570 - Not found any URLs in both introtext, fulltext fields
+2023-07-05 20:19:20 - INFO - ******************** Processing ID: 111568 ******************** (157/92392 - 0.2%)
+2023-07-05 20:19:20 - INFO - Skipped ID: 111568 - Not found any URLs in both introtext, fulltext fields
+2023-07-05 20:19:20 - INFO - ******************** Processing ID: 111567 ******************** (158/92392 - 0.2%)
+2023-07-05 20:19:20 - INFO - Skipped ID: 111567 - Not found any URLs in both introtext, fulltext fields
+2023-07-05 20:19:20 - INFO - ******************** Processing ID: 111565 ******************** (159/92392 - 0.2%)
+2023-07-05 20:19:20 - INFO - Skipped ID: 111565 - Not found any URLs in both introtext, fulltext fields
+2023-07-05 20:19:20 - INFO - ******************** Processing ID: 111564 ******************** (160/92392 - 0.2%)
+2023-07-05 20:19:20 - INFO - Skipped ID: 111564 - Not found any URLs in both introtext, fulltext fields
+2023-07-05 20:19:20 - INFO - ******************** Processing ID: 111562 ******************** (161/92392 - 0.2%)
+2023-07-05 20:19:20 - INFO - Skipped ID: 111562 - Not found any URLs in both introtext, fulltext fields
+2023-07-05 20:19:20 - INFO - ******************** Processing ID: 111561 ******************** (162/92392 - 0.2%)
+2023-07-05 20:19:20 - INFO - Skipped ID: 111561 - Not found any URLs in both introtext, fulltext fields
+2023-07-05 20:19:20 - INFO - ******************** Processing ID: 111560 ******************** (163/92392 - 0.2%)
+2023-07-05 20:19:20 - INFO - Skipped ID: 111560 - Not found any URLs in both introtext, fulltext fields
+2023-07-05 20:19:20 - INFO - ******************** Processing ID: 111558 ******************** (164/92392 - 0.2%)
+2023-07-05 20:19:20 - INFO - Skipped ID: 111558 - Not found any URLs in both introtext, fulltext fields
+2023-07-05 20:19:20 - INFO - ******************** Processing ID: 111557 ******************** (165/92392 - 0.2%)
+2023-07-05 20:19:20 - INFO - Skipped ID: 111557 - Not found any URLs in both introtext, fulltext fields
+2023-07-05 20:19:20 - INFO - ******************** Processing ID: 111556 ******************** (166/92392 - 0.2%)
+2023-07-05 20:19:20 - INFO - Skipped ID: 111556 - Not found any URLs in both introtext, fulltext fields
+2023-07-05 20:19:20 - INFO - ******************** Processing ID: 111555 ******************** (167/92392 - 0.2%)
+2023-07-05 20:19:20 - INFO - Skipped ID: 111555 - Not found any URLs in both introtext, fulltext fields
+2023-07-05 20:19:20 - INFO - ******************** Processing ID: 111554 ******************** (168/92392 - 0.2%)
+2023-07-05 20:19:20 - INFO - Skipped ID: 111554 - Not found any URLs in both introtext, fulltext fields
+2023-07-05 20:19:20 - INFO - ******************** Processing ID: 111553 ******************** (169/92392 - 0.2%)
+2023-07-05 20:19:20 - INFO - Skipped ID: 111553 - Not found any URLs in both introtext, fulltext fields
+2023-07-05 20:19:20 - INFO - ******************** Processing ID: 111552 ******************** (170/92392 - 0.2%)
+2023-07-05 20:19:20 - INFO - Skipped ID: 111552 - Not found any URLs in both introtext, fulltext fields
+2023-07-05 20:19:20 - INFO - ******************** Processing ID: 111547 ******************** (171/92392 - 0.2%)
+2023-07-05 20:19:20 - INFO - Skipped ID: 111547 - Not found any URLs in both introtext, fulltext fields
+2023-07-05 20:19:21 - INFO - ******************** Processing ID: 111545 ******************** (172/92392 - 0.2%)
+2023-07-05 20:19:21 - INFO - Skipped ID: 111545 - Not found any URLs in both introtext, fulltext fields
+2023-07-05 20:19:21 - INFO - ******************** Processing ID: 111543 ******************** (173/92392 - 0.2%)
+2023-07-05 20:19:21 - INFO - Skipped ID: 111543 - Not found any URLs in both introtext, fulltext fields
+2023-07-05 20:19:21 - INFO - ******************** Processing ID: 111540 ******************** (174/92392 - 0.2%)
+2023-07-05 20:19:21 - INFO - Skipped ID: 111540 - Not found any URLs in both introtext, fulltext fields
+2023-07-05 20:19:21 - INFO - ******************** Processing ID: 111536 ******************** (175/92392 - 0.2%)
+2023-07-05 20:19:21 - INFO - Skipped ID: 111536 - Not found any URLs in both introtext, fulltext fields
+2023-07-05 20:19:21 - INFO - ******************** Processing ID: 111535 ******************** (176/92392 - 0.2%)
+2023-07-05 20:19:21 - INFO - Skipped ID: 111535 - Not found any URLs in both introtext, fulltext fields
+2023-07-05 20:19:21 - INFO - ******************** Processing ID: 111534 ******************** (177/92392 - 0.2%)
+2023-07-05 20:19:21 - INFO - Skipped ID: 111534 - Not found any URLs in both introtext, fulltext fields
+2023-07-05 20:19:21 - INFO - ******************** Processing ID: 111532 ******************** (178/92392 - 0.2%)
+2023-07-05 20:19:21 - INFO - Skipped ID: 111532 - Not found any URLs in both introtext, fulltext fields
+2023-07-05 20:19:21 - INFO - ******************** Processing ID: 111531 ******************** (179/92392 - 0.2%)
+2023-07-05 20:19:21 - INFO - Skipped ID: 111531 - Not found any URLs in both introtext, fulltext fields
+2023-07-05 20:19:21 - INFO - ******************** Processing ID: 111529 ******************** (180/92392 - 0.2%)
+2023-07-05 20:19:21 - INFO - Skipped ID: 111529 - Not found any URLs in both introtext, fulltext fields
+2023-07-05 20:19:21 - INFO - ******************** Processing ID: 111528 ******************** (181/92392 - 0.2%)
+2023-07-05 20:19:21 - INFO - Skipped ID: 111528 - Not found any URLs in both introtext, fulltext fields
+2023-07-05 20:19:21 - INFO - ******************** Processing ID: 111527 ******************** (182/92392 - 0.2%)
+2023-07-05 20:19:21 - INFO - Skipped ID: 111527 - Not found any URLs in both introtext, fulltext fields
+2023-07-05 20:19:21 - INFO - ******************** Processing ID: 111526 ******************** (183/92392 - 0.2%)
+2023-07-05 20:19:21 - INFO - Skipped ID: 111526 - Not found any URLs in both introtext, fulltext fields
+2023-07-05 20:19:21 - INFO - ******************** Processing ID: 111525 ******************** (184/92392 - 0.2%)
+2023-07-05 20:19:21 - INFO - Skipped ID: 111525 - Not found any URLs in both introtext, fulltext fields
+2023-07-05 20:19:21 - INFO - ******************** Processing ID: 111524 ******************** (185/92392 - 0.2%)
+2023-07-05 20:19:21 - INFO - Skipped ID: 111524 - Not found any URLs in both introtext, fulltext fields
+2023-07-05 20:19:21 - INFO - ******************** Processing ID: 111523 ******************** (186/92392 - 0.2%)
+2023-07-05 20:19:21 - INFO - Skipped ID: 111523 - Not found any URLs in both introtext, fulltext fields
+2023-07-05 20:19:21 - INFO - ******************** Processing ID: 111522 ******************** (187/92392 - 0.2%)
+2023-07-05 20:19:21 - INFO - Skipped ID: 111522 - Not found any URLs in both introtext, fulltext fields
+2023-07-05 20:19:21 - INFO - ******************** Processing ID: 111521 ******************** (188/92392 - 0.2%)
+2023-07-05 20:19:21 - INFO - Skipped ID: 111521 - Not found any URLs in both introtext, fulltext fields
+2023-07-05 20:19:21 - INFO - ******************** Processing ID: 111520 ******************** (189/92392 - 0.2%)
+2023-07-05 20:19:21 - INFO - Skipped ID: 111520 - Not found any URLs in both introtext, fulltext fields
+2023-07-05 20:19:21 - INFO - ******************** Processing ID: 111519 ******************** (190/92392 - 0.2%)
+2023-07-05 20:19:21 - INFO - Skipped ID: 111519 - Not found any URLs in both introtext, fulltext fields
+2023-07-05 20:19:21 - INFO - ******************** Processing ID: 111515 ******************** (191/92392 - 0.2%)
+2023-07-05 20:19:21 - INFO - Skipped ID: 111515 - Not found any URLs in both introtext, fulltext fields
+2023-07-05 20:19:21 - INFO - ******************** Processing ID: 111514 ******************** (192/92392 - 0.2%)
+2023-07-05 20:19:26 - INFO - Skipped ID: 111514 #COLUMN: fulltext #URL: https://linuxsecurity.com/feature_stories/dsniff-monitoring.html #STATUS_CODE: 301
+2023-07-05 20:19:26 - INFO - ******************** Processing ID: 111513 ******************** (193/92392 - 0.2%)
+2023-07-05 20:19:26 - INFO - Skipped ID: 111513 - Not found any URLs in both introtext, fulltext fields
+2023-07-05 20:19:26 - INFO - ******************** Processing ID: 111512 ******************** (194/92392 - 0.2%)
+2023-07-05 20:19:26 - INFO - Skipped ID: 111512 - Not found any URLs in both introtext, fulltext fields
+2023-07-05 20:19:26 - INFO - ******************** Processing ID: 111511 ******************** (195/92392 - 0.2%)
+2023-07-05 20:19:26 - INFO - Skipped ID: 111511 - Not found any URLs in both introtext, fulltext fields
+2023-07-05 20:19:26 - INFO - ******************** Processing ID: 111510 ******************** (196/92392 - 0.2%)
+2023-07-05 20:19:26 - INFO - Skipped ID: 111510 - Not found any URLs in both introtext, fulltext fields
+2023-07-05 20:19:26 - INFO - ******************** Processing ID: 111509 ******************** (197/92392 - 0.2%)
+2023-07-05 20:19:26 - INFO - Skipped ID: 111509 - Not found any URLs in both introtext, fulltext fields
+2023-07-05 20:19:26 - INFO - ******************** Processing ID: 111508 ******************** (198/92392 - 0.2%)
+2023-07-05 20:19:26 - INFO - Skipped ID: 111508 - Not found any URLs in both introtext, fulltext fields
+2023-07-05 20:19:26 - INFO - ******************** Processing ID: 111507 ******************** (199/92392 - 0.2%)
+2023-07-05 20:19:26 - INFO - Skipped ID: 111507 - Not found any URLs in both introtext, fulltext fields
+2023-07-05 20:19:26 - INFO - ******************** Processing ID: 111506 ******************** (200/92392 - 0.2%)
+2023-07-05 20:19:26 - INFO - Skipped ID: 111506 - Not found any URLs in both introtext, fulltext fields
+2023-07-05 20:19:26 - INFO - ******************** Processing ID: 111505 ******************** (201/92392 - 0.2%)
+2023-07-05 20:19:26 - INFO - Skipped ID: 111505 - Not found any URLs in both introtext, fulltext fields
+2023-07-05 20:19:27 - INFO - ******************** Processing ID: 111504 ******************** (202/92392 - 0.2%)
+2023-07-05 20:19:27 - INFO - Skipped ID: 111504 - Not found any URLs in both introtext, fulltext fields
+2023-07-05 20:19:27 - INFO - ******************** Processing ID: 111503 ******************** (203/92392 - 0.2%)
+2023-07-05 20:19:27 - INFO - Skipped ID: 111503 - Not found any URLs in both introtext, fulltext fields
+2023-07-05 20:19:27 - INFO - ******************** Processing ID: 111499 ******************** (204/92392 - 0.2%)
+2023-07-05 20:19:27 - INFO - Skipped ID: 111499 - Not found any URLs in both introtext, fulltext fields
+2023-07-05 20:19:27 - INFO - ******************** Processing ID: 111498 ******************** (205/92392 - 0.2%)
+2023-07-05 20:19:27 - INFO - Skipped ID: 111498 - Not found any URLs in both introtext, fulltext fields
+2023-07-05 20:19:27 - INFO - ******************** Processing ID: 111497 ******************** (206/92392 - 0.2%)
+2023-07-05 20:19:27 - INFO - Skipped ID: 111497 - Not found any URLs in both introtext, fulltext fields
+2023-07-05 20:19:27 - INFO - ******************** Processing ID: 111496 ******************** (207/92392 - 0.2%)
+2023-07-05 20:19:27 - INFO - Skipped ID: 111496 - Not found any URLs in both introtext, fulltext fields
+2023-07-05 20:19:27 - INFO - ******************** Processing ID: 111494 ******************** (208/92392 - 0.2%)
+2023-07-05 20:19:27 - INFO - Skipped ID: 111494 - Not found any URLs in both introtext, fulltext fields
+2023-07-05 20:19:27 - INFO - ******************** Processing ID: 111493 ******************** (209/92392 - 0.2%)
+2023-07-05 20:19:27 - INFO - Skipped ID: 111493 - Not found any URLs in both introtext, fulltext fields
+2023-07-05 20:19:27 - INFO - ******************** Processing ID: 111491 ******************** (210/92392 - 0.2%)
+2023-07-05 20:19:27 - INFO - Skipped ID: 111491 - Not found any URLs in both introtext, fulltext fields
+2023-07-05 20:19:27 - INFO - ******************** Processing ID: 111490 ******************** (211/92392 - 0.2%)
+2023-07-05 20:19:27 - INFO - Skipped ID: 111490 - Not found any URLs in both introtext, fulltext fields
+2023-07-05 20:19:27 - INFO - ******************** Processing ID: 111489 ******************** (212/92392 - 0.2%)
+2023-07-05 20:19:27 - INFO - Skipped ID: 111489 - Not found any URLs in both introtext, fulltext fields
+2023-07-05 20:19:27 - INFO - ******************** Processing ID: 111488 ******************** (213/92392 - 0.2%)
+2023-07-05 20:19:27 - INFO - Skipped ID: 111488 - Not found any URLs in both introtext, fulltext fields
+2023-07-05 20:19:27 - INFO - ******************** Processing ID: 111487 ******************** (214/92392 - 0.2%)
+2023-07-05 20:19:27 - INFO - Skipped ID: 111487 - Not found any URLs in both introtext, fulltext fields
+2023-07-05 20:19:27 - INFO - ******************** Processing ID: 111486 ******************** (215/92392 - 0.2%)
+2023-07-05 20:19:27 - INFO - Skipped ID: 111486 - Not found any URLs in both introtext, fulltext fields
+2023-07-05 20:19:27 - INFO - ******************** Processing ID: 111485 ******************** (216/92392 - 0.2%)
+2023-07-05 20:19:27 - INFO - Skipped ID: 111485 - Not found any URLs in both introtext, fulltext fields
+2023-07-05 20:19:27 - INFO - ******************** Processing ID: 111483 ******************** (217/92392 - 0.2%)
+2023-07-05 20:19:27 - INFO - Skipped ID: 111483 - Not found any URLs in both introtext, fulltext fields
+2023-07-05 20:19:27 - INFO - ******************** Processing ID: 111482 ******************** (218/92392 - 0.2%)
+2023-07-05 20:19:27 - INFO - Skipped ID: 111482 - Not found any URLs in both introtext, fulltext fields
+2023-07-05 20:19:27 - INFO - ******************** Processing ID: 111481 ******************** (219/92392 - 0.2%)
+2023-07-05 20:19:27 - INFO - Skipped ID: 111481 - Not found any URLs in both introtext, fulltext fields
+2023-07-05 20:19:27 - INFO - ******************** Processing ID: 111480 ******************** (220/92392 - 0.2%)
+2023-07-05 20:19:27 - INFO - Skipped ID: 111480 - Not found any URLs in both introtext, fulltext fields
+2023-07-05 20:19:27 - INFO - ******************** Processing ID: 111479 ******************** (221/92392 - 0.2%)
+2023-07-05 20:19:27 - INFO - Skipped ID: 111479 - Not found any URLs in both introtext, fulltext fields
+2023-07-05 20:19:27 - INFO - ******************** Processing ID: 111478 ******************** (222/92392 - 0.2%)
+2023-07-05 20:19:27 - INFO - Skipped ID: 111478 - Not found any URLs in both introtext, fulltext fields
+2023-07-05 20:19:27 - INFO - ******************** Processing ID: 111476 ******************** (223/92392 - 0.2%)
+2023-07-05 20:19:27 - INFO - Skipped ID: 111476 - Not found any URLs in both introtext, fulltext fields
+2023-07-05 20:19:27 - INFO - ******************** Processing ID: 111475 ******************** (224/92392 - 0.2%)
+2023-07-05 20:19:27 - INFO - Skipped ID: 111475 - Not found any URLs in both introtext, fulltext fields
+2023-07-05 20:19:27 - INFO - ******************** Processing ID: 111473 ******************** (225/92392 - 0.2%)
+2023-07-05 20:19:27 - INFO - Skipped ID: 111473 - Not found any URLs in both introtext, fulltext fields
+2023-07-05 20:19:27 - INFO - ******************** Processing ID: 111471 ******************** (226/92392 - 0.2%)
+2023-07-05 20:19:27 - INFO - Skipped ID: 111471 - Not found any URLs in both introtext, fulltext fields
+2023-07-05 20:19:27 - INFO - ******************** Processing ID: 111470 ******************** (227/92392 - 0.2%)
+2023-07-05 20:19:27 - INFO - Skipped ID: 111470 - Not found any URLs in both introtext, fulltext fields
+2023-07-05 20:19:27 - INFO - ******************** Processing ID: 111468 ******************** (228/92392 - 0.2%)
+2023-07-05 20:19:27 - INFO - Skipped ID: 111468 - Not found any URLs in both introtext, fulltext fields
+2023-07-05 20:19:27 - INFO - ******************** Processing ID: 111466 ******************** (229/92392 - 0.2%)
+2023-07-05 20:19:27 - INFO - Skipped ID: 111466 - Not found any URLs in both introtext, fulltext fields
+2023-07-05 20:19:27 - INFO - ******************** Processing ID: 111465 ******************** (230/92392 - 0.2%)
+2023-07-05 20:19:27 - INFO - Skipped ID: 111465 - Not found any URLs in both introtext, fulltext fields
+2023-07-05 20:19:27 - INFO - ******************** Processing ID: 111464 ******************** (231/92392 - 0.3%)
+2023-07-05 20:19:27 - INFO - Skipped ID: 111464 - Not found any URLs in both introtext, fulltext fields
+2023-07-05 20:19:27 - INFO - ******************** Processing ID: 111462 ******************** (232/92392 - 0.3%)
+2023-07-05 20:19:27 - INFO - Skipped ID: 111462 - Not found any URLs in both introtext, fulltext fields
+2023-07-05 20:19:27 - INFO - ******************** Processing ID: 111461 ******************** (233/92392 - 0.3%)
+2023-07-05 20:19:27 - INFO - Skipped ID: 111461 - Not found any URLs in both introtext, fulltext fields
+2023-07-05 20:19:27 - INFO - ******************** Processing ID: 111458 ******************** (234/92392 - 0.3%)
