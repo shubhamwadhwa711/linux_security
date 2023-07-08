@@ -157,7 +157,7 @@ def find_broken_url_in_tags(a_tags):
 def find_ftp_links(text):
     # Define the regex pattern for FTP links
     # pattern = r"ftp://\S+"
-    pattern=r'(?<!href="|href=\')(ftp[s]?:\/\/(?:[^\s<>"]+|www\.[^\s<>"]+)\s*[^\s<>"]+)(?![^<]*>|[^<>]*<\/a>)'
+    pattern=r'(?<!href="|href=\')(ftp[s]?:\/\/(?:[^\s<>"]+|www\.[^\s<>"]+)\s{0,2}[^\s<>"]+)(?![^<]*>|[^<>]*<\/a>)'
     # Find all matches in the text
     matches = re.findall(pattern, text)
     return matches
@@ -171,7 +171,7 @@ def find_text_links(text):
     # Regular expression pattern to match HTTP and HTTPS links not within anchor tags
     # pattern = r'(?<!href=")(?P<url>(?:http|https)://[^\s<>"]+|www\.[^\s<>"]+)'
     # pattern = r'(?<!href="|href=\')(http[s]?:\/\/(?:[^\s<>"]+|www\.[^\s<>"]+))(?![^<]*>|[^<>]*<\/a>)'
-    pattern = r'(?<!href="|href=\')(http[s]?:\/\/(?:[^\s<>"]+|www\.[^\s<>"]+)\s*[^\s<>"]+)(?![^<]*>|[^<>]*<\/a>)'
+    pattern = r'(?<!href="|href=\')(http[s]?:\/\/(?:[^\s<>"]+|www\.[^\s<>"]+)\s{0,2}[^\s<>"]+)(?![^<]*>|[^<>]*<\/a>)'
 
 
     # Find all matches
@@ -207,9 +207,7 @@ def check_https_urls(url):
 
     
 def get_double_https(urls):
-    obj={
-    
-    }
+    obj=dict()
     for url in urls:
         original_url=copy.deepcopy(url)
         if url.startswith('https://https://'):
@@ -221,16 +219,17 @@ def get_double_https(urls):
     return obj
 
 #added a function to remove whitespaces  into the text links
-def remove_whitespace_from_url(url):
+def remove_escape_chars_from_url(url):
     # Remove whitespace characters from the URL
     url = re.sub(r'\s', '', url)
-    return url
-  
-def remove_next_line_from_url(url):
-    # Remove whitespace characters from the URL
     url = re.sub(r'\n', '', url)
     return url
-   
+
+
+def normalize_urls(url):
+    url = remove_escape_chars_from_url(url)
+    url = strip_trailing_in_anchor(url)
+    return url
 
 def find_www_links(text):
     # Regular expression pattern to match HTTP and HTTPS links not within anchor tags
@@ -346,7 +345,7 @@ def extract_a_tag_in_html(logger: Logger, id: int, field: str, html: Optional[st
         modified_html = str(soup)
         ftp_links = find_ftp_links(modified_html)
         ftp_urls.extend(ftp_links)
-        ftp_urls = [remove_next_line_from_url(strip_trailing_chars(url)) for url in ftp_urls]
+        ftp_urls = [normalize_urls(url) for url in ftp_urls]
         if len(ftp_urls) > 0:
             logger.info(f'ID: {id} #COLUMN: {field} #FTP_URLS: {ftp_urls} will be checking')
             for result in do_ftp_request(urls=ftp_urls, logger=logger, id=id):
@@ -401,7 +400,7 @@ def extract_a_tag_in_html(logger: Logger, id: int, field: str, html: Optional[st
         if len(http_text_links) > 0:
             url_startwith_www = [url for url in http_text_links if url.startswith('www')]
             url_startwith_http = [url for url in http_text_links if url not in url_startwith_www]
-            url_startwith_http = [remove_whitespace_from_url(strip_trailing_chars(url)) for url in url_startwith_http]
+            url_startwith_http = [normalize_urls(url) for url in url_startwith_http]
 
             # url_startwith_http =[strip_trailing_chars(url) for url in url_startwith_http]
             # url_startwith_http =[remove_whitespace_from_url(url) for url in url_startwith_http]
