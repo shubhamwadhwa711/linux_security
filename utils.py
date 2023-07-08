@@ -19,7 +19,7 @@ STATUS_CODES_FOR_FURTHER_CHECK = ['Timeout', 'SSLError', 'ConnectionError']
 VALID_FTP_STATUS_CODES = []
 
 # Skiped twitter, facebook
-SKIP_CHECK_SITES = ['twitter.com', 'facebook.com']
+SKIP_CHECK_SITES = ['twitter.com', 'facebook.com', 'linkedin.com']
 SITE_WITH_GET_METHOD = ['portswigger.net']
 
 formatter = logging.Formatter(
@@ -95,7 +95,7 @@ def check_http_broken_link(url, timeout: int = HTTP_REQUEST_TIMEOUT):
         headers = {"User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36"},
         timeout=timeout
     )
-    if response.status_code  in [405,403] or any(site in url for site in SITE_WITH_GET_METHOD): # 405 Method Not Allowed - Try with GET instead
+    if response.status_code  in [405,403, 301, 302] or any(site in url for site in SITE_WITH_GET_METHOD): # 405 Method Not Allowed - Try with GET instead
         response = requests.get(
             url=url,
             headers = {"User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36"},

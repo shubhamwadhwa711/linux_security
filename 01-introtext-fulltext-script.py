@@ -157,7 +157,7 @@ def find_broken_url_in_tags(a_tags):
 def find_ftp_links(text):
     # Define the regex pattern for FTP links
     # pattern = r"ftp://\S+"
-    pattern=r'ftp://[^">\s]+'
+    pattern=r'(?<!href="|href=\')(ftp[s]?:\/\/(?:[^\s<>"]+|www\.[^\s<>"]+)\s*[^\s<>"]+)(?![^<]*>|[^<>]*<\/a>)'
     # Find all matches in the text
     matches = re.findall(pattern, text)
     return matches
@@ -170,8 +170,8 @@ def find_ftp_link(text, ftp_link):
 def find_text_links(text):
     # Regular expression pattern to match HTTP and HTTPS links not within anchor tags
     # pattern = r'(?<!href=")(?P<url>(?:http|https)://[^\s<>"]+|www\.[^\s<>"]+)'
-    pattern = r'(?<!href="|href=\')(http[s]?:\/\/(?:[^\s<>"]+|www\.[^\s<>"]+))(?![^<]*>|[^<>]*<\/a>)'
-  
+    # pattern = r'(?<!href="|href=\')(http[s]?:\/\/(?:[^\s<>"]+|www\.[^\s<>"]+))(?![^<]*>|[^<>]*<\/a>)'
+    pattern = r'(?<!href="|href=\')(http[s]?:\/\/(?:[^\s<>"]+|www\.[^\s<>"]+)\s*[^\s<>"]+)(?![^<]*>|[^<>]*<\/a>)'
 
 
     # Find all matches
@@ -185,17 +185,17 @@ def find_text_links(text):
 
 # added function to remove parenthesis or periods and &gt
 def strip_trailing_chars(url):
-    if url.endswith(('.',')' ,':',';','>')):
-        url = url.rstrip('.;:),>')
+    if url.endswith(('.',')' ,':',';','>', '*', ',')):
+        url = url.rstrip('.;:),>*,')
     if url.endswith(('&gt;', '&gt')):
         url = url.rstrip('&gt;')
     return url
 
 def strip_trailing_in_anchor(url):
+    if url.endswith(('.',':',';','>', '*', ',', '<pkg>')):
+        url = url.rstrip('.;:,>*,<pkg>')
     if url.endswith(('&gt;', '&gt')):
         url = url.rstrip('&gt;')
-    if url.endswith(('.',':',';','>')):
-        url = url.rstrip('.;:,>')
     return url
 
 def check_https_urls(url):
@@ -226,6 +226,11 @@ def remove_whitespace_from_url(url):
     url = re.sub(r'\s', '', url)
     return url
   
+def remove_next_line_from_url(url):
+    # Remove whitespace characters from the URL
+    url = re.sub(r'\n', '', url)
+    return url
+   
 
 def find_www_links(text):
     # Regular expression pattern to match HTTP and HTTPS links not within anchor tags
@@ -341,7 +346,7 @@ def extract_a_tag_in_html(logger: Logger, id: int, field: str, html: Optional[st
         modified_html = str(soup)
         ftp_links = find_ftp_links(modified_html)
         ftp_urls.extend(ftp_links)
-    
+        ftp_urls = [remove_next_line_from_url(strip_trailing_chars(url)) for url in ftp_urls]
         if len(ftp_urls) > 0:
             logger.info(f'ID: {id} #COLUMN: {field} #FTP_URLS: {ftp_urls} will be checking')
             for result in do_ftp_request(urls=ftp_urls, logger=logger, id=id):
@@ -529,7 +534,7 @@ def main(commit: bool = False, id: Optional[int] = 0):
                 sql = "SELECT c.id, c.introtext, c.fulltext FROM xu5gc_content AS c WHERE id =%s"
                 args = (id)
             else:
-                sql = 'SELECT c.id, c.introtext, c.fulltext FROM xu5gc_content AS c LEFT JOIN xu5gc_categories cat ON cat.id = c.catid WHERE c.id=111769 AND c.state = 1 AND cat.published = 1 ORDER BY c.id DESC LIMIT %s'
+                sql = 'SELECT c.id, c.introtext, c.fulltext FROM xu5gc_content AS c LEFT JOIN xu5gc_categories cat ON cat.id = c.catid WHERE c.state = 1 AND cat.published = 1 ORDER BY c.id DESC LIMIT %s'
                 args = (limit)
 
             with connection.cursor() as cursor:
