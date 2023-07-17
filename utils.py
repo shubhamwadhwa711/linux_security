@@ -8,9 +8,10 @@ from ftplib import FTP
 from copy import copy
 from pathlib import Path
 from typing import Tuple, Optional
+from requests.exceptions import ConnectionError, ReadTimeout
 
-HTTP_REQUEST_TIMEOUT = 10
-FTP_REQUEST_TIMEOUT = 10
+HTTP_REQUEST_TIMEOUT = 20
+FTP_REQUEST_TIMEOUT = 20
 
 # Skiped Cloudflare status 403
 # Skiped Amazon status 503
@@ -80,7 +81,7 @@ def timeit(method):
     return wrapper
 
 
-def check_http_broken_link(url, timeout: int = HTTP_REQUEST_TIMEOUT):
+def check_http_broken_link(url, logger, id, timeout: int = HTTP_REQUEST_TIMEOUT):
     """Http status code
 
         1xx - informational
@@ -89,13 +90,22 @@ def check_http_broken_link(url, timeout: int = HTTP_REQUEST_TIMEOUT):
         4xx - client error
         5xx - server error
     """
-
-    response = requests.head(
-        url=url,
-        headers = {"User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36"},
-        timeout=timeout
-    )
-    if response.status_code  in [405,403, 301, 302] or any(site in url for site in SITE_WITH_GET_METHOD): # 405 Method Not Allowed - Try with GET instead
+    try:
+        response = requests.head(
+            url=url,
+            headers = {"User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36"},
+            timeout=timeout
+        )
+        if response.status_code  in [405,403, 301, 302] or any(site in url for site in SITE_WITH_GET_METHOD): # 405 Method Not Allowed - Try with GET instead
+            response = requests.get(
+                url=url,
+                headers = {"User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36"},
+                timeout=timeout
+            )
+            return response
+    except (ReadTimeout, ConnectionError) as e:
+        logger.warning(f'#ID: {id} #URL {url} Error: {str(e)}')
+        logger.info(f'#ID: {id} #URL {url} - Requesting again using GET request instead of HEAD')
         response = requests.get(
             url=url,
             headers = {"User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36"},
