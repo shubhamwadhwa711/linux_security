@@ -12,18 +12,28 @@
             "console": "integratedTerminal",
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             // "args": ["--file", "01.timeout-urls.json", "--timeout", "10"],
             "args": ["--id", "291264"],
 =======
             "args": ["--file", "01.timeout-urls.json", "--timeout", "20","--commit"],
 >>>>>>> 0bf34b7 (fix 03.script at 'find a tag in html fucntion')
 =======
+=======
+>>>>>>> 9c1994f (script updates)
             "args": ["--file", "01.timeout-urls.json", "--timeout", "20","--commit"],
 =======
             // "args": ["--file", "01.timeout-urls.json", "--timeout", "10"],
             "args": ["--id", "291264"],
 >>>>>>> 8895888 (script updates)
+<<<<<<< HEAD
 >>>>>>> 9ab4123 (script updates)
+=======
+=======
+            // "args": ["--file", "01.timeout-urls.json", "--timeout", "10"],
+            "args": ["--id", "291264"],
+>>>>>>> 8895888 (script updates)
+>>>>>>> 9c1994f (script updates)
             "justMyCode": false
         }
     ]
