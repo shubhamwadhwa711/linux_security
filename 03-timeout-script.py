@@ -44,7 +44,7 @@ def find_text_links(text):
 
 def do_http_request(urls, logger: Logger, id: int, timeout = HTTP_REQUEST_TIMEOUT):
     with ThreadPoolExecutor() as executor:
-        futures = {executor.submit(check_http_broken_link, url=url, timeout=timeout): url for url in urls}
+        futures = {executor.submit(check_http_broken_link, url=url, logger=logger, id=id, timeout=timeout): url for url in urls}
         for future in as_completed(futures):
             url = futures[future]
             try:

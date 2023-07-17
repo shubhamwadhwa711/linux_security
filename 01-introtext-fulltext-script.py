@@ -69,7 +69,7 @@ def do_update(connection: Connection, logger: Logger, id, introtext: Optional[st
 # @timeit
 def do_http_request(urls, logger: Logger, id: int):
     with ThreadPoolExecutor() as executor:
-        futures = {executor.submit(check_http_broken_link, url=url, timeout=HTTP_REQUEST_TIMEOUT): url for url in urls}
+        futures = {executor.submit(check_http_broken_link, url=url, logger=logger, id=id, timeout=HTTP_REQUEST_TIMEOUT): url for url in urls}
         for future in as_completed(futures):
             url = futures[future]
             try:
@@ -157,7 +157,7 @@ def find_broken_url_in_tags(a_tags):
 def find_ftp_links(text):
     # Define the regex pattern for FTP links
     # pattern = r"ftp://\S+"
-    pattern=r'(?<!href="|href=\')(ftp[s]?:\/\/(?:[^\s<>"]+|www\.[^\s<>"]+)\s{0,2}[^\s<>"]+)(?![^<]*>|[^<>]*<\/a>)'
+    pattern= r"""(?<!href="|href=\')(ftp[s]?:\/\/(?:[^\s<>")'\(]+|www\.[^\s<>")'\(]+)[^\s<>")'\(]+)(?![^<]*>|[^<>]*<\/a>)"""
     # Find all matches in the text
     matches = re.findall(pattern, text)
     return matches
@@ -171,31 +171,28 @@ def find_text_links(text):
     # Regular expression pattern to match HTTP and HTTPS links not within anchor tags
     # pattern = r'(?<!href=")(?P<url>(?:http|https)://[^\s<>"]+|www\.[^\s<>"]+)'
     # pattern = r'(?<!href="|href=\')(http[s]?:\/\/(?:[^\s<>"]+|www\.[^\s<>"]+))(?![^<]*>|[^<>]*<\/a>)'
-    pattern = r'(?<!href="|href=\')(http[s]?:\/\/(?:[^\s<>"]+|www\.[^\s<>"]+)\s{0,2}[^\s<>"]+)(?![^<]*>|[^<>]*<\/a>)'
-
-
+    # pattern = r'(?<!href="|href=\')(http[s]?:\/\/(?:[^\s<>"]+|www\.[^\s<>"]+)\s{0,2}[^\s<>"]+)(?![^<]*>|[^<>]*<\/a>)'
+    # pattern = r"""(?<!href="|href=\')(http[s]?:\/\/(?:[^\s<>")'\(]+|www\.[^\s<>")'\(]+)[^\s<>")'\((&gt);]+(?:\.[^\s<>")'\(&gt;]+)?(?![^<]*>|[^<>]*<\/a>))"""
+    # pattern = r"""(?<!href="|href=\')(http[s]?:\/\/(?:[^\s<>")'\(]+|www\.[^\s<>")'\(]+)[^\s<>")'\(]+)(?![^<]*>|[^<>]*<\/a>)"""
+    # pattern = r"""(?<!href="|href=\')(http[s]?:\/\/(?:[^\s<>")'\(]+|www\.[^\s<>")'\(]+\s{0,2})[^\s<>")'\(]+)(?![^<]*>|[^<>]*<\/a>)"""
+    pattern = r"""(?<!href="|href=\')(http[s]?:\/\/(?:[^\s<>")'\(]+|www\.[^\s<>")'\(]+)[^\s<>")'\(\*]+)(?![^<]*>|[^<>]*<\/a>)""" # to consider one space between the url
     # Find all matches
     matches = re.findall(pattern, text)
+    # if not matches:
+    #     pattern = r'(?<!href=")(?P<url>(?:http|https)://[^\s<>"]+|www\.[^\s<>"]+)'
+    #     matches = re.findall(pattern, text)
     # cleaned_matches = [re.sub(r'^(?:http|https)://', '', url) for url in matches]
     # Return the list of links
     return matches
 
 
-
-
 # added function to remove parenthesis or periods and &gt
-def strip_trailing_chars(url):
-    if url.endswith(('.',')' ,':',';','>', '*', ',')):
-        url = url.rstrip('.;:),>*,')
-    if url.endswith(('&gt;', '&gt')):
-        url = url.rstrip('&gt;')
-    return url
 
 def strip_trailing_in_anchor(url):
     if url.endswith(('.',':',';','>', '*', ',', '<pkg>')):
-        url = url.rstrip('.;:,>*,<pkg>')
-    if url.endswith(('&gt;', '&gt')):
-        url = url.rstrip('&gt;')
+        url = url.rstrip('.;:,>*,')
+    # if url.endswith(('&gt;', '&gt')):
+    url = url.replace('&gt', '')
     return url
 
 def check_https_urls(url):
@@ -377,7 +374,7 @@ def extract_a_tag_in_html(logger: Logger, id: int, field: str, html: Optional[st
                     logger.info(f'ID: {id} #COLUMN: {field} #FTP_URL: {url if url else ("null")} - Replaced with #TEXT: (null)')
 
         
-        http_text_links = find_text_links(modified_html)
+        http_text_links = find_text_links(html)
         # rm_url=[a.get('href',None) for a in a_tags]
         # rm_url = [url for url in rm_url if  not url.startswith(('www','http', 'https', 'ftp', '@', '#', 'mail')) and url not in http_text_links]
         # print(http_text_links)

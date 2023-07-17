@@ -51,7 +51,7 @@ def do_update(connection: Connection, id: int, urls: Optional[Any] = None, fullt
 # @timeit
 def do_http_request(urls: List[str], logger: Logger, id: int):
     with ThreadPoolExecutor() as executor:
-        futures = {executor.submit(check_http_broken_link, url=url, timeout=HTTP_REQUEST_TIMEOUT): url for url in urls}
+        futures = {executor.submit(check_http_broken_link, url=url, logger=logger, id=id, timeout=HTTP_REQUEST_TIMEOUT): url for url in urls}
         for future in as_completed(futures):
             url = futures[future]
             try:
