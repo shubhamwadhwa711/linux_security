@@ -10,8 +10,12 @@
             "request": "launch",
             "program": "${file}",
             "console": "integratedTerminal",
+<<<<<<< HEAD
             // "args": ["--file", "01.timeout-urls.json", "--timeout", "10"],
             "args": ["--id", "291264"],
+=======
+            "args": ["--file", "01.timeout-urls.json", "--timeout", "20","--commit"],
+>>>>>>> 0bf34b7 (fix 03.script at 'find a tag in html fucntion')
             "justMyCode": false
         }
     ]

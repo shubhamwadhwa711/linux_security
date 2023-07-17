@@ -4047,3 +4047,19 @@
 2023-07-03 17:44:31 - ERROR - #ID 112282 #URL http://https://www.cert.org/advisories/CA-2002-23.html Error: HTTPConnectionPool(host='https', port=80): Max retries exceeded with url: //www.cert.org/advisories/CA-2002-23.html (Caused by NameResolutionError("<urllib3.connection.HTTPConnection object at 0x7f48dc78f8b0>: Failed to resolve 'https' ([Errno -3] Temporary failure in name resolution)"))
 2023-07-03 18:23:17 - INFO - ******************** Processing ID: 112282 ********************
 2023-07-03 18:32:36 - INFO - ******************** Processing ID: 112282 ********************
+2023-07-17 10:41:55 - INFO - ******************** Processing ID: 103766 ********************
+2023-07-17 10:42:10 - ERROR - #ID 103766 #URL http://security.e-matters.de/advisories/012002.html Error: Timeout HTTPConnectionPool(host='security.e-matters.de', port=80): Max retries exceeded with url: /advisories/012002.html (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7febf6b019f0>, 'Connection to security.e-matters.de timed out. (connect timeout=15)'))
+2023-07-17 10:42:10 - INFO - #COLUMN: fulltext #URL: http://security.e-matters.de/advisories/012002.html #TEXT: (empty) removed
+2023-07-17 10:42:10 - INFO - ID: 103766 has been updated in database
+2023-07-17 10:42:10 - INFO - Processing ID: 103766 completed
+2023-07-17 10:43:38 - INFO - There is no URLs to check
+2023-07-17 10:45:06 - INFO - ******************** Processing ID: 103766 ********************
+2023-07-17 10:45:56 - ERROR - #ID 103766 #URL http://security.e-matters.de/advisories/012002.html Error: Timeout HTTPConnectionPool(host='security.e-matters.de', port=80): Max retries exceeded with url: /advisories/012002.html (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f2cf1341c90>, 'Connection to security.e-matters.de timed out. (connect timeout=20)'))
+2023-07-17 10:48:25 - INFO - ******************** Processing ID: 103766 ********************
+2023-07-17 10:48:56 - ERROR - #ID 103766 #URL http://security.e-matters.de/advisories/012002.html Error: Timeout HTTPConnectionPool(host='security.e-matters.de', port=80): Max retries exceeded with url: /advisories/012002.html (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f4246c17a30>, 'Connection to security.e-matters.de timed out. (connect timeout=20)'))
+2023-07-17 10:54:45 - INFO - #COLUMN: fulltext #URL: http://security.e-matters.de/advisories/012002.html #TEXT: (empty) removed
+2023-07-17 11:09:34 - INFO - ******************** Processing ID: 103766 ********************
+2023-07-17 11:10:32 - ERROR - #ID 103766 #URL http://security.e-matters.de/advisories/012002.html Error: Timeout HTTPConnectionPool(host='security.e-matters.de', port=80): Max retries exceeded with url: /advisories/012002.html (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f4453001a80>, 'Connection to security.e-matters.de timed out. (connect timeout=20)'))
+2023-07-17 11:11:01 - INFO - #COLUMN: fulltext #URL: http://security.e-matters.de/advisories/012002.html #TEXT: (empty) removed
+2023-07-17 11:11:15 - INFO - ID: 103766 has been updated in database
+2023-07-17 11:11:22 - INFO - Processing ID: 103766 completed

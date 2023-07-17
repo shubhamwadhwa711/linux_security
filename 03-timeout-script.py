@@ -69,24 +69,26 @@ def find_a_tag_in_html(logger: Logger, field: str, html: Optional[str] = None, u
         if html is None or len(html) == 0:
             return None, False
 
-        soup = BeautifulSoup(html, 'lxml')
+        soup = BeautifulSoup(html, 'html.parser')
         updates = []
         for url in urls:
             a_tags = soup.find_all('a', attrs={'href': url})
             if len(a_tags) == 0 and url in str(soup):
-                html = html.replace(url, ' ')
+                # html = html.replace(url, ' ')
+                url.replace_with(' ')
                 updates.append(True)
                 continue
             for tag in a_tags:
                 text = tag.text.strip()
                 updates.append(True)
                 if text and len(text) > 0 and url not in text:
-                    html = html.replace(str(tag), f'{text} ')
+                    tag.replace_with(text)
+                    # html = html.replace(str(tag), f'{text} ')
                     logger.info(f'#COLUMN: {field} #URL: {url} - Replaced with #TEXT: {text}')
                 else:
                     tag.decompose()
                     logger.info(f'#COLUMN: {field} #URL: {url} #TEXT: (empty) removed')
-        return html, any(updates)
+        return soup, any(updates)
     except Exception as e:
         logger.exception(e)
         raise e
