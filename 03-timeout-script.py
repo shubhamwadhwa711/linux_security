@@ -40,7 +40,8 @@ from utils import (
 def find_text_links(text):
     # Regular expression pattern to match HTTP and HTTPS links not within anchor tags
     # pattern = r'(?<!href=")(?P<url>(?:http|https)://[^\s<>"]+|www\.[^\s<>"]+)'
-    pattern = r'(?<!href="|href=\')(http[s]?:\/\/(?:[^\s<>"]+|www\.[^\s<>"]+))(?![^<]*>|[^<>]*<\/a>)'
+    # pattern = r'(?<!href="|href=\')(http[s]?:\/\/(?:[^\s<>"]+|www\.[^\s<>"]+))(?![^<]*>|[^<>]*<\/a>)'
+    pattern = r"""(?<!href="|href=\')(http[s]?:\/\/(?:[^\s<>")'\(]+|www\.[^\s<>")'\(]+)[^\s<>")'\(\*]+)(?![^<]*>|[^<>]*<\/a>)"""
 
 def do_http_request(urls, logger: Logger, id: int, timeout = HTTP_REQUEST_TIMEOUT):
     with ThreadPoolExecutor() as executor:
