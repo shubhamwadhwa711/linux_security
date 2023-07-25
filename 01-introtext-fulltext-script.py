@@ -177,7 +177,7 @@ def find_text_links(text):
     # pattern = r"""(?<!href="|href=\')(http[s]?:\/\/(?:[^\s<>")'\(]+|www\.[^\s<>")'\(]+\s{0,2})[^\s<>")'\(]+)(?![^<]*>|[^<>]*<\/a>)"""
     pattern = r"""(?<!href="|href=\')(http[s]?:\/\/(?:[^\s<>")'\(]+|www\.[^\s<>")'\(]+)[^\s<>")'\(\*]+)(?![^<]*>|[^<>]*<\/a>)""" # to consider one space between the url
     # Find all matches
-    matches = re.findall(pattern, text)
+    matches = re.findall(pattern, text,re.DOTALL)
     # if not matches:
     #     pattern = r'(?<!href=")(?P<url>(?:http|https)://[^\s<>"]+|www\.[^\s<>"]+)'
     #     matches = re.findall(pattern, text)
@@ -218,7 +218,7 @@ def get_double_https(urls):
 #added a function to remove whitespaces  into the text links
 def remove_escape_chars_from_url(url):
     # Remove whitespace characters from the URL
-    url = re.sub(r'\s', '', url)
+    # url = re.sub(r'\s', '', url)
     url = re.sub(r'\n', '', url)
     return url
 
@@ -246,8 +246,8 @@ def extract_a_tag_in_html(logger: Logger, id: int, field: str, html: Optional[st
         # soup = BeautifulSoup(html, 'lxml')
         soup=BeautifulSoup(html,'html.parser')
         a_tags = soup.find_all('a')
-        if len(a_tags) == 0:
-            return None, False, for_more_check_urls
+        # if len(a_tags) == 0:
+        #     return None, False, for_more_check_urls
 
         http_urls = []
         ftp_urls = []
@@ -312,13 +312,13 @@ def extract_a_tag_in_html(logger: Logger, id: int, field: str, html: Optional[st
                     # Link is still existing - no need to do anything
                     updates.append(False)
                     if result.get('status_code') in VALID_HTTP_STATUS_CODES:
-                        logger.warning(f'ID: {id} #COLUMN: {field} #URL: {url} #STATUS_CODE: {result.get("status_code")}')
+                        logger.warning(f'ID: {id} #COLUMN: {field} #URL: {parsed_url} #STATUS_CODE: {result.get("status_code")}')
                     else:
                         if result.get('status_code') in STATUS_CODES_FOR_FURTHER_CHECK:
-                            logger.info(f'ID: {id} #COLUMN: {field} #URL: {url} added for more checking')
+                            logger.info(f'ID: {id} #COLUMN: {field} #URL: {parsed_url} added for more checking')
                             for_more_check_urls.add(url)
                         else:
-                            logger.info(f'Skipped ID: {id} #COLUMN: {field} #URL: {url} #STATUS_CODE: {result.get("status_code")}')
+                            logger.info(f'Skipped ID: {id} #COLUMN: {field} #URL: {parsed_url} #STATUS_CODE: {result.get("status_code")}')
                     continue
 
                 a_tags = soup.find_all('a', attrs={'href': url})
