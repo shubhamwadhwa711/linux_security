@@ -10,12 +10,8 @@
             "request": "launch",
             "program": "${file}",
             "console": "integratedTerminal",
-<<<<<<< HEAD
-            "args": ["--file", "01.timeout-urls.json", "--timeout", "20","--commit"],
-=======
             // "args": ["--file", "01.timeout-urls.json", "--timeout", "10"],
-            "args": ["--id", "291264"],
->>>>>>> 8895888 (script updates)
+            "args": ["--id", "215768"],
             "justMyCode": false
         }
     ]

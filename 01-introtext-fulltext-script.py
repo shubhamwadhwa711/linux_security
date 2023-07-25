@@ -185,7 +185,6 @@ def find_text_links(text):
     # Return the list of links
     return matches
 
-
 # added function to remove parenthesis or periods and &gt
 
 def strip_trailing_in_anchor(url):
@@ -218,7 +217,7 @@ def get_double_https(urls):
 #added a function to remove whitespaces  into the text links
 def remove_escape_chars_from_url(url):
     # Remove whitespace characters from the URL
-    url = re.sub(r'\s', '', url)
+    # url = re.sub(r'\s', '', url)
     url = re.sub(r'\n', '', url)
     return url
 
@@ -246,8 +245,8 @@ def extract_a_tag_in_html(logger: Logger, id: int, field: str, html: Optional[st
         # soup = BeautifulSoup(html, 'lxml')
         soup=BeautifulSoup(html,'html.parser')
         a_tags = soup.find_all('a')
-        if len(a_tags) == 0:
-            return None, False, for_more_check_urls
+        # if len(a_tags) == 0:
+        #     return None, False, for_more_check_urls
 
         http_urls = []
         ftp_urls = []
@@ -312,13 +311,13 @@ def extract_a_tag_in_html(logger: Logger, id: int, field: str, html: Optional[st
                     # Link is still existing - no need to do anything
                     updates.append(False)
                     if result.get('status_code') in VALID_HTTP_STATUS_CODES:
-                        logger.warning(f'ID: {id} #COLUMN: {field} #URL: {url} #STATUS_CODE: {result.get("status_code")}')
+                        logger.warning(f'ID: {id} #COLUMN: {field} #URL: {parsed_url} #STATUS_CODE: {result.get("status_code")}')
                     else:
                         if result.get('status_code') in STATUS_CODES_FOR_FURTHER_CHECK:
-                            logger.info(f'ID: {id} #COLUMN: {field} #URL: {url} added for more checking')
+                            logger.info(f'ID: {id} #COLUMN: {field} #URL: {parsed_url} added for more checking')
                             for_more_check_urls.add(url)
                         else:
-                            logger.info(f'Skipped ID: {id} #COLUMN: {field} #URL: {url} #STATUS_CODE: {result.get("status_code")}')
+                            logger.info(f'Skipped ID: {id} #COLUMN: {field} #URL: {parsed_url} #STATUS_CODE: {result.get("status_code")}')
                     continue
 
                 a_tags = soup.find_all('a', attrs={'href': url})
@@ -373,7 +372,42 @@ def extract_a_tag_in_html(logger: Logger, id: int, field: str, html: Optional[st
                     modified_html = re.sub(re.escape(url), ' ', modified_html)
                     logger.info(f'ID: {id} #COLUMN: {field} #FTP_URL: {url if url else ("null")} - Replaced with #TEXT: (null)')
 
+        def find_broken_text_links(text):
+            pattern=r"""(?<!href="|href=\')(http[s]?:\/\/(?:[^\s<>")'\(]+|www\.[^\s<>")'\(]+)-\n{1}[^\s<>")'\(\*]+)(?![^<]*>|[^<>]*<\/a>)"""
+            matches=re.findall(pattern,text)
+            broken_links={}
+            for m in matches:
+                joined_url=re.sub(r'\n', '',m)
+                broken_links[joined_url]=m
+            return broken_links
+
+        http_broken_text_links=find_broken_text_links(html)
         
+        if len(http_broken_text_links)>0:
+            broken_urls=http_broken_text_links.keys()
+            broken_url_startwith_http=[normalize_urls(url) for url in broken_urls]
+            for result in do_http_request(urls=broken_url_startwith_http, logger=logger, id=id):
+                url = result.get('url')
+                exact_broken_url=http_broken_text_links[url]
+                if not result.get('is_broken', False):
+                    updates.append(True)
+                    modified_html = re.sub(exact_broken_url,url, modified_html)
+                    logger.warning(f'ID: {id} #COLUMN: {field} #URL: {exact_broken_url} replaced with {url}')
+                    if result.get('status_code') in VALID_HTTP_STATUS_CODES:
+                        # modified_html = re.sub(re.escape(original_url), url, modified_html)
+                        logger.warning(f'ID: {id} #COLUMN: {field} #URL: {url} #STATUS_CODE: {result.get("status_code")}')
+                    else:
+                        if result.get('status_code') in STATUS_CODES_FOR_FURTHER_CHECK:
+                            logger.info(f'ID: {id} #COLUMN: {field} #URL: {url} added for more checking')
+                            for_more_check_urls.add(url)
+                        else:
+                            logger.info(f'Skipped ID: {id} #COLUMN: {field} #URL: {url} #STATUS_CODE: {result.get("status_code")}')
+                    continue
+            
+                updates.append(True)
+                modified_html = re.sub(re.escape(exact_broken_url), ' ', modified_html)
+                logger.info(f'ID: {id} #COLUMN: {field} #URL: {url if url else ("null")} #STATUS_CODE: {result.get("status_code")} - Replaced with #TEXT: (null)')
+                
         http_text_links = find_text_links(html)
         # rm_url=[a.get('href',None) for a in a_tags]
         # rm_url = [url for url in rm_url if  not url.startswith(('www','http', 'https', 'ftp', '@', '#', 'mail')) and url not in http_text_links]
@@ -442,6 +476,8 @@ def extract_a_tag_in_html(logger: Logger, id: int, field: str, html: Optional[st
                     modified_html = re.sub(re.escape(url), ' ', modified_html)
                     logger.info(f'ID: {id} #COLUMN: {field} #URL: {url if url else ("null")} #STATUS_CODE: {result.get("status_code")} - Replaced with #TEXT: (null)')
 
+        
+    
         return modified_html, any(updates), for_more_check_urls
     except Exception as e:
         logger.exception(e)
