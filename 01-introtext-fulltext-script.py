@@ -175,7 +175,9 @@ def find_text_links(text):
     # pattern = r"""(?<!href="|href=\')(http[s]?:\/\/(?:[^\s<>")'\(]+|www\.[^\s<>")'\(]+)[^\s<>")'\((&gt);]+(?:\.[^\s<>")'\(&gt;]+)?(?![^<]*>|[^<>]*<\/a>))"""
     # pattern = r"""(?<!href="|href=\')(http[s]?:\/\/(?:[^\s<>")'\(]+|www\.[^\s<>")'\(]+)[^\s<>")'\(]+)(?![^<]*>|[^<>]*<\/a>)"""
     # pattern = r"""(?<!href="|href=\')(http[s]?:\/\/(?:[^\s<>")'\(]+|www\.[^\s<>")'\(]+\s{0,2})[^\s<>")'\(]+)(?![^<]*>|[^<>]*<\/a>)"""
-    pattern = r"""(?<!href="|href=\')(http[s]?:\/\/(?:[^\s<>")'\(]+|www\.[^\s<>")'\(]+)[^\s<>")'\(\*]+)(?![^<]*>|[^<>]*<\/a>)""" # to consider one space between the url
+    # pattern = r"""(?<!href="|href=\')(http[s]?:\/\/(?:[^\s<>")'\(]+|www\.[^\s<>")'\(]+)[^\s<>")'\(\*]+)(?![^<]*>|[^<>]*<\/a>)""" 
+    pattern=r"""(?<!href="|href=\')(http[s]?:\/\/(?:[^\s<>")'\(;]+|www\.[^\s<>")'\(]+)[^\s<>")'\(\*;]+)(?![^<]*>|[^<>]*<\/a>)"""
+    # to consider one space between the url
     # Find all matches
     matches = re.findall(pattern, text)
     # if not matches:
@@ -374,7 +376,8 @@ def extract_a_tag_in_html(logger: Logger, id: int, field: str, html: Optional[st
                     logger.info(f'ID: {id} #COLUMN: {field} #FTP_URL: {url if url else ("null")} - Replaced with #TEXT: (null)')
 
         def find_broken_text_links(text):
-            pattern=r"""(?<!href="|href=\')(http[s]?:\/\/(?:[^\s<>")'\(]+|www\.[^\s<>")'\(]+)-\n{1}[^\s<>")'\(\*]+)(?![^<]*>|[^<>]*<\/a>)"""
+            # pattern=r"""(?<!href="|href=\')(http[s]?:\/\/(?:[^\s<>")'\(]+|www\.[^\s<>")'\(]+)-\n{1}[^\s<>")'\(\*]+)(?![^<]*>|[^<>]*<\/a>)"""
+            pattern=r"""(?<!href="|href=\')(http[s]?:\/\/(?:[^\s<>")'\(;]+|www\.[^\s<>")'\(]+)-\n{1}[^\s<>")'\(\*;]+)(?![^<]*>|[^<>]*<\/a>)"""
             matches=re.findall(pattern,text)
             broken_links={}
             for m in matches:
