@@ -188,8 +188,8 @@ def find_text_links(text):
 # added function to remove parenthesis or periods and &gt
 
 def strip_trailing_in_anchor(url):
-    if url.endswith(('.',':',';','>', '*', ',', '<pkg>')):
-        url = url.rstrip('.;:,>*,')
+    if url.endswith(('.',':',';','>', '*', ',', '<pkg>','!')):
+        url = url.rstrip('.;:,>*,!')
     # if url.endswith(('&gt;', '&gt')):
     url = url.replace('&gt', '')
     return url
@@ -342,6 +342,7 @@ def extract_a_tag_in_html(logger: Logger, id: int, field: str, html: Optional[st
         ftp_links = find_ftp_links(modified_html)
         ftp_urls.extend(ftp_links)
         ftp_urls = [normalize_urls(url) for url in ftp_urls]
+        ftp_urls=["ftp://ftp.RedHat.com/RedHat/updates/6.2/sparc/krb5-libs-1.1.1-21.sparc.rpm"]
         if len(ftp_urls) > 0:
             logger.info(f'ID: {id} #COLUMN: {field} #FTP_URLS: {ftp_urls} will be checking')
             for result in do_ftp_request(urls=ftp_urls, logger=logger, id=id):

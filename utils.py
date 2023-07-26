@@ -9,14 +9,19 @@ from copy import copy
 from pathlib import Path
 from typing import Tuple, Optional
 from requests.exceptions import ConnectionError, ReadTimeout
+from urllib import robotparser
+from urllib.parse import urlparse
+from urllib.request import urlopen
+from selenium import webdriver
+from selenium.webdriver.chrome.options import Options
 
 HTTP_REQUEST_TIMEOUT = 20
-FTP_REQUEST_TIMEOUT = 20
+FTP_REQUEST_TIMEOUT = 5
 
 # Skiped Cloudflare status 403
 # Skiped Amazon status 503
 VALID_HTTP_STATUS_CODES = [403, 503]
-STATUS_CODES_FOR_FURTHER_CHECK = ['Timeout', 'SSLError', 'ConnectionError']
+STATUS_CODES_FOR_FURTHER_CHECK = ['Timeout', 'SSLError', 'ConnectionError',500]
 VALID_FTP_STATUS_CODES = []
 
 # Skiped twitter, facebook
@@ -68,6 +73,27 @@ def get_logger(name, log_file, level=logging.INFO):
     return logger
 
 
+def selenium_check(url,response):
+    
+    chrome_options = Options()
+    chrome_options.add_argument("--headless")
+    driver = webdriver.Chrome(options=chrome_options)
+    driver.get(url)
+    search_texts = ["404", "not found", "page not found"]  # Add more search texts if needed
+
+
+
+    for text in search_texts:
+        if text.lower() in driver.page_source.lower():
+            driver.quit()
+            return response
+    response.status_code=200
+    driver.quit()
+    return response
+  
+
+ 
+
 def timeit(method):
     @wraps(method)
     def wrapper(*args, **kwargs):
@@ -103,6 +129,9 @@ def check_http_broken_link(url, logger, id, timeout: int = HTTP_REQUEST_TIMEOUT)
                 timeout=timeout
             )
             return response
+        if response.status_code==404:
+           return selenium_check(url,response)
+
     except (ReadTimeout, ConnectionError) as e:
         logger.warning(f'#ID: {id} #URL {url} Error: {str(e)}')
         logger.info(f'#ID: {id} #URL {url} - Requesting again using GET request instead of HEAD')
@@ -131,6 +160,7 @@ def check_ftp_broken_link(url, timeout: int = FTP_REQUEST_TIMEOUT):
     ftp = FTP(host_url, timeout=timeout)
     ftp.login()
     resp = ftp.sendcmd(f'MDTM {main_path}')
+    ftp.quit()
     return resp
 
 

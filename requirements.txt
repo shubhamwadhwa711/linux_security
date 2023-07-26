@@ -10,3 +10,5 @@ requests==2.30.0
 soupsieve==2.4.1
 urllib3==2.0.2
 validators==0.20.0
+urllib
+selenium

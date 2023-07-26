@@ -28114,3 +28114,221 @@ devel/2016-October/008194.html replaced with https://lists.gnupg.org/pipermail/g
 2023-07-25 18:47:49 - WARNING - ID: 347218 #COLUMN: fulltext #URL: https://blog.box.com/what-is-electronic-signature #STATUS_CODE: 403
 2023-07-25 18:47:50 - INFO - Skipped ID: 347218 #COLUMN: fulltext #URL: https://github.com/BiZken/PhishMailer #STATUS_CODE: 200
 2023-07-25 18:47:50 - INFO - Skipped ID: 347218 #COLUMN: fulltext #URL: https://skynettools.com/phishmailer-create-professional-phishing-emails-fast-and-easy/ #STATUS_CODE: 200
+2023-07-25 18:47:51 - INFO - Skipped ID: 347218 #COLUMN: fulltext #URL: https://github.com/iinc0gnit0/BlackPhish #STATUS_CODE: 200
+2023-07-25 18:47:51 - INFO - Skipped ID: 347218 #COLUMN: fulltext #URL: https://github.com/jaykali/lockphish #STATUS_CODE: 200
+2023-07-25 18:47:51 - INFO - Skipped ID: 347218 #COLUMN: fulltext #URL: https://guardiandigital.com/free-email-security-best-practices #STATUS_CODE: 200
+2023-07-25 18:47:51 - INFO - Skipped ID: 347218 #COLUMN: fulltext #URL: https://guardiandigital.com/phishing-ebook #STATUS_CODE: 200
+2023-07-25 18:47:52 - INFO - Skipped ID: 347218 #COLUMN: fulltext #URL: https://guardiandigital.com/email-security-tips/avoid-phishing-emails #STATUS_CODE: 200
+2023-07-25 18:47:52 - INFO - Skipped ID: 347218 #COLUMN: fulltext #URL: https://guardiandigital.com/cloud-email-security #STATUS_CODE: 200
+2023-07-25 18:47:52 - INFO - Skipped ID: 347218 #COLUMN: fulltext #URL: https://guardiandigital.com/resources/blog/email-security-best-practices #STATUS_CODE: 200
+2023-07-25 18:47:52 - INFO - Skipped ID: 347218 #COLUMN: fulltext #URL: https://ngrok.com/ #STATUS_CODE: 200
+2023-07-25 18:47:54 - INFO - Skipped ID: 347218 #COLUMN: fulltext #URL: https://guardiandigital.com//resources/blog/guide-on-phishing #STATUS_CODE: 200
+2023-07-25 18:47:56 - INFO - Skipped ID: 347218 #COLUMN: fulltext #URL: https://github.com/iinc0gnit0/BlackPhish #STATUS_CODE: 200
+2023-07-25 18:47:56 - INFO - Skipped ID: 347218 #COLUMN: fulltext #URL: https://github.com/kali-linux-tutorial/lockphish #STATUS_CODE: 200
+2023-07-25 18:47:56 - INFO - Skipped ID: 347218 #COLUMN: fulltext #URL: https://www.github.com/BiZken/PhishMailer.git #STATUS_CODE: 200
+2023-07-25 18:47:57 - INFO - Skipped ID: 347218 #COLUMN: fulltext #URL: https://www.github.com/BiZken/PhishMailer.git #STATUS_CODE: 200
+2023-07-25 18:47:57 - INFO - ******************** Processing ID: 347217 ******************** (288/92392 - 0.3%)
+2023-07-25 18:47:57 - INFO - Skipped ID: 347217 #COLUMN: fulltext #URL: https://www.debian.org/security/faq #STATUS_CODE: 200
+2023-07-25 18:47:58 - INFO - Skipped ID: 347217 #COLUMN: fulltext #URL: https://www.debian.org/security/ #STATUS_CODE: 200
+2023-07-25 18:47:58 - INFO - Skipped ID: 347217 #COLUMN: fulltext #URL: https://www.debian.org/security/ #STATUS_CODE: 200
+2023-07-25 18:48:00 - INFO - Skipped ID: 347217 #COLUMN: fulltext #URL: https://security-tracker.debian.org/tracker/gpac #STATUS_CODE: 200
+2023-07-25 18:48:00 - INFO - ******************** Processing ID: 347216 ******************** (289/92392 - 0.3%)
+2023-07-25 18:48:01 - INFO - Skipped ID: 347216 #COLUMN: fulltext #URL: https://www.debian.org/security/ #STATUS_CODE: 200
+2023-07-25 18:48:01 - INFO - Skipped ID: 347216 #COLUMN: fulltext #URL: https://www.debian.org/security/faq #STATUS_CODE: 200
+2023-07-25 18:48:01 - INFO - Skipped ID: 347216 #COLUMN: fulltext #URL: https://www.debian.org/security/ #STATUS_CODE: 200
+2023-07-25 18:48:04 - INFO - Skipped ID: 347216 #COLUMN: fulltext #URL: https://security-tracker.debian.org/tracker/sniproxy #STATUS_CODE: 200
+2023-07-25 18:48:04 - INFO - ******************** Processing ID: 347215 ******************** (290/92392 - 0.3%)
+2023-07-25 18:48:05 - INFO - Skipped ID: 347215 #COLUMN: fulltext #URL: http://linux.oracle.com/errata/ELSA-2023-3318.html #STATUS_CODE: 200
+2023-07-25 18:48:06 - INFO - Skipped ID: 347215 #COLUMN: fulltext #URL: https://oss.oracle.com/mailman/listinfo/el-errata #STATUS_CODE: 200
+2023-07-25 18:48:07 - INFO - Skipped ID: 347215 #COLUMN: fulltext #URL: http://oss.oracle.com/ol9/SRPMS-updates//go-toolset-1.19.9-1.el9_2.src.rpm #STATUS_CODE: 200
+2023-07-25 18:48:12 - INFO - Skipped ID: 347215 #COLUMN: fulltext #URL: http://oss.oracle.com/ol9/SRPMS-updates//golang-1.19.9-2.el9_2.src.rpm #STATUS_CODE: 200
+2023-07-25 18:48:28 - INFO - ******************** Processing ID: 347214 ******************** (291/92392 - 0.3%)
+2023-07-25 18:48:29 - INFO - Skipped ID: 347214 #COLUMN: fulltext #URL: http://linux.oracle.com/errata/ELSA-2023-12355.html #STATUS_CODE: 200
+2023-07-25 18:48:30 - INFO - Skipped ID: 347214 #COLUMN: fulltext #URL: https://oss.oracle.com/mailman/listinfo/el-errata #STATUS_CODE: 200
+2023-07-25 18:48:33 - INFO - Skipped ID: 347214 #COLUMN: fulltext #URL: http://oss.oracle.com/ol7/SRPMS-updates//istio-1.16.4-1.el7.src.rpm #STATUS_CODE: 200
+2023-07-25 18:48:42 - INFO - Skipped ID: 347214 #COLUMN: fulltext #URL: http://oss.oracle.com/ol7/SRPMS-updates//kubernetes-1.25.7-2.el7.src.rpm #STATUS_CODE: 200
+2023-07-26 16:09:52 - INFO - ******************** Processing ID: 261081 ******************** (1/1 - 100.0%)
+2023-07-26 16:10:55 - INFO - Skipped ID: 261081 #COLUMN: fulltext #URL: http://nodejs.org/ #STATUS_CODE: 200
+2023-07-26 16:10:56 - INFO - Skipped ID: 261081 #COLUMN: fulltext #URL: https://nodejs.org/en/blog/release/v8.9.4/ #STATUS_CODE: 200
+2023-07-26 16:10:56 - INFO - Skipped ID: 261081 #COLUMN: fulltext #URL: https://nodejs.org/en/blog/release/v8.11.3/ #STATUS_CODE: 200
+2023-07-26 16:10:56 - INFO - Skipped ID: 261081 #COLUMN: fulltext #URL: https://fedoraproject.org/wiki/Fedora_28_Mass_Rebuild #STATUS_CODE: 200
+2023-07-26 16:10:56 - INFO - Skipped ID: 261081 #COLUMN: fulltext #URL: https://nodejs.org/en/blog/release/v8.11.0/ #STATUS_CODE: 200
+2023-07-26 16:10:56 - INFO - Skipped ID: 261081 #COLUMN: fulltext #URL: https://nodejs.org/en/blog/release/v8.9.3/ #STATUS_CODE: 200
+2023-07-26 16:10:57 - INFO - Skipped ID: 261081 #COLUMN: fulltext #URL: https://nodejs.org/en/blog/release/v8.9.2/ #STATUS_CODE: 200
+2023-07-26 16:10:57 - INFO - Skipped ID: 261081 #COLUMN: fulltext #URL: https://nodejs.org/en/blog/release/v8.11.2/ #STATUS_CODE: 200
+2023-07-26 16:10:57 - INFO - Skipped ID: 261081 #COLUMN: fulltext #URL: https://nodejs.org/en/blog/release/v8.10.0/ #STATUS_CODE: 200
+2023-07-26 16:10:57 - INFO - Skipped ID: 261081 #COLUMN: fulltext #URL: https://nodejs.org/en/blog/release/v8.8.0/ #STATUS_CODE: 200
+2023-07-26 16:10:57 - INFO - Skipped ID: 261081 #COLUMN: fulltext #URL: https://nodejs.org/en/blog/release/v8.7.0/ #STATUS_CODE: 200
+2023-07-26 16:10:58 - INFO - Skipped ID: 261081 #COLUMN: fulltext #URL: https://nodejs.org/en/blog/release/v8.6.0/ #STATUS_CODE: 200
+2023-07-26 16:10:58 - INFO - Skipped ID: 261081 #COLUMN: fulltext #URL: http://dnf.readthedocs.io/en/latest/command_ref.html#upgrade-command-label #STATUS_CODE: 200
+2023-07-26 16:10:58 - INFO - Skipped ID: 261081 #COLUMN: fulltext #URL: https://bugzilla.redhat.com/show_bug.cgi?id=1591014 #STATUS_CODE: 200
+2023-07-26 16:10:58 - INFO - Skipped ID: 261081 #COLUMN: fulltext #URL: https://bugzilla.redhat.com/show_bug.cgi?id=1591009 #STATUS_CODE: 200
+2023-07-26 16:10:59 - INFO - Skipped ID: 261081 #COLUMN: fulltext #URL: https://bugzilla.redhat.com/show_bug.cgi?id=1591019 #STATUS_CODE: 200
+2023-07-26 16:10:59 - INFO - Skipped ID: 261081 #COLUMN: fulltext #URL: https://fedoraproject.org/wiki/Mailing_list_guidelines #STATUS_CODE: 200
+2023-07-26 16:10:59 - INFO - Skipped ID: 261081 #COLUMN: fulltext #URL: https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/E4NZYDJWDA7IWLZ76VO4GKQ4ZJMVXWLL/ #STATUS_CODE: 200
+2023-07-26 16:11:00 - INFO - Skipped ID: 261081 #COLUMN: fulltext #URL: https://fedoraproject.org/keys #STATUS_CODE: 200
+2023-07-26 16:11:00 - INFO - Skipped ID: 261081 #COLUMN: fulltext #URL: https://getfedora.org/code-of-conduct.html #STATUS_CODE: 200
+2023-07-26 16:14:14 - INFO - ******************** Processing ID: 261081 ******************** (1/1 - 100.0%)
+2023-07-26 16:14:31 - INFO - Skipped ID: 261081 #COLUMN: fulltext #URL: http://nodejs.org/ #STATUS_CODE: 200
+2023-07-26 16:14:31 - INFO - Skipped ID: 261081 #COLUMN: fulltext #URL: https://fedoraproject.org/wiki/Fedora_28_Mass_Rebuild #STATUS_CODE: 200
+2023-07-26 16:14:31 - INFO - Skipped ID: 261081 #COLUMN: fulltext #URL: https://nodejs.org/en/blog/release/v8.11.3/ #STATUS_CODE: 200
+2023-07-26 16:14:31 - INFO - Skipped ID: 261081 #COLUMN: fulltext #URL: https://nodejs.org/en/blog/release/v8.11.0/ #STATUS_CODE: 200
+2023-07-26 16:14:31 - INFO - Skipped ID: 261081 #COLUMN: fulltext #URL: https://nodejs.org/en/blog/release/v8.11.2/ #STATUS_CODE: 200
+2023-07-26 16:14:31 - INFO - Skipped ID: 261081 #COLUMN: fulltext #URL: https://nodejs.org/en/blog/release/v8.10.0/ #STATUS_CODE: 200
+2023-07-26 16:14:31 - INFO - Skipped ID: 261081 #COLUMN: fulltext #URL: https://nodejs.org/en/blog/release/v8.9.3/ #STATUS_CODE: 200
+2023-07-26 16:14:31 - INFO - Skipped ID: 261081 #COLUMN: fulltext #URL: https://nodejs.org/en/blog/release/v8.9.4/ #STATUS_CODE: 200
+2023-07-26 16:14:32 - INFO - Skipped ID: 261081 #COLUMN: fulltext #URL: https://nodejs.org/en/blog/release/v8.9.2/ #STATUS_CODE: 200
+2023-07-26 16:14:32 - INFO - Skipped ID: 261081 #COLUMN: fulltext #URL: https://nodejs.org/en/blog/release/v8.8.0/ #STATUS_CODE: 200
+2023-07-26 16:14:32 - INFO - Skipped ID: 261081 #COLUMN: fulltext #URL: http://dnf.readthedocs.io/en/latest/command_ref.html#upgrade-command-label #STATUS_CODE: 200
+2023-07-26 16:14:32 - INFO - Skipped ID: 261081 #COLUMN: fulltext #URL: https://nodejs.org/en/blog/release/v8.7.0/ #STATUS_CODE: 200
+2023-07-26 16:14:32 - INFO - Skipped ID: 261081 #COLUMN: fulltext #URL: https://nodejs.org/en/blog/release/v8.6.0/ #STATUS_CODE: 200
+2023-07-26 16:14:33 - INFO - Skipped ID: 261081 #COLUMN: fulltext #URL: https://bugzilla.redhat.com/show_bug.cgi?id=1591014 #STATUS_CODE: 200
+2023-07-26 16:14:33 - INFO - Skipped ID: 261081 #COLUMN: fulltext #URL: https://bugzilla.redhat.com/show_bug.cgi?id=1591019 #STATUS_CODE: 200
+2023-07-26 16:14:33 - INFO - Skipped ID: 261081 #COLUMN: fulltext #URL: https://bugzilla.redhat.com/show_bug.cgi?id=1591009 #STATUS_CODE: 200
+2023-07-26 16:14:33 - INFO - Skipped ID: 261081 #COLUMN: fulltext #URL: https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/E4NZYDJWDA7IWLZ76VO4GKQ4ZJMVXWLL/ #STATUS_CODE: 200
+2023-07-26 16:14:33 - INFO - Skipped ID: 261081 #COLUMN: fulltext #URL: https://fedoraproject.org/wiki/Mailing_list_guidelines #STATUS_CODE: 200
+2023-07-26 16:14:34 - INFO - Skipped ID: 261081 #COLUMN: fulltext #URL: https://getfedora.org/code-of-conduct.html #STATUS_CODE: 200
+2023-07-26 16:14:37 - INFO - Skipped ID: 261081 #COLUMN: fulltext #URL: https://fedoraproject.org/keys #STATUS_CODE: 200
+2023-07-26 16:18:15 - INFO - ==================== All records have been processed ====================
+2023-07-26 16:19:46 - INFO - ******************** Processing ID: 345550 ******************** (1/1 - 100.0%)
+2023-07-26 16:25:05 - INFO - ******************** Processing ID: 347259 ******************** (1/1 - 100.0%)
+2023-07-26 16:25:13 - INFO - Skipped ID: 347259 #COLUMN: introtext #URL: https://blogs.jpcert.or.jp/en/2023/05/gobrat.html #STATUS_CODE: 200
+2023-07-26 16:26:38 - INFO - ******************** Processing ID: 347259 ******************** (1/1 - 100.0%)
+2023-07-26 16:26:43 - INFO - Skipped ID: 347259 #COLUMN: introtext #URL: https://blogs.jpcert.or.jp/en/2023/05/gobrat.html #STATUS_CODE: 200
+2023-07-26 16:37:14 - INFO - ******************** Processing ID: 110347 ******************** (1/1 - 100.0%)
+2023-07-26 16:40:09 - WARNING - #ID: 110347 #URL http://www.worm.com! Error: HTTPConnectionPool(host='www.worm.com!', port=80): Max retries exceeded with url: / (Caused by NameResolutionError("<urllib3.connection.HTTPConnection object at 0x7fb39e1ee740>: Failed to resolve 'www.worm.com!' ([Errno -2] Name or service not known)"))
+2023-07-26 16:40:09 - WARNING - #ID: 110347 #URL http://www.counterpane.com;A Error: HTTPConnectionPool(host='www.counterpane.com;a', port=80): Max retries exceeded with url: / (Caused by NameResolutionError("<urllib3.connection.HTTPConnection object at 0x7fb39e1ec970>: Failed to resolve 'www.counterpane.com;a' ([Errno -2] Name or service not known)"))
+2023-07-26 16:40:09 - INFO - #ID: 110347 #URL http://www.worm.com! - Requesting again using GET request instead of HEAD
+2023-07-26 16:40:09 - INFO - #ID: 110347 #URL http://www.counterpane.com;A - Requesting again using GET request instead of HEAD
+2023-07-26 16:40:09 - ERROR - #ID: 110347 #URL http://www.worm.com! Error: HTTPConnectionPool(host='www.worm.com!', port=80): Max retries exceeded with url: / (Caused by NameResolutionError("<urllib3.connection.HTTPConnection object at 0x7fb39e191750>: Failed to resolve 'www.worm.com!' ([Errno -2] Name or service not known)"))
+2023-07-26 16:40:09 - INFO - ID: 110347 #COLUMN: fulltext #URL: http://www.worm.com! #STATUS_CODE: 500 - Replaced with #TEXT: (null)
+2023-07-26 16:44:43 - INFO - ******************** Processing ID: 347259 ******************** (1/1 - 100.0%)
+2023-07-26 16:44:46 - INFO - Skipped ID: 347259 #COLUMN: introtext #URL: https://blogs.jpcert.or.jp/en/2023/05/gobrat.html #STATUS_CODE: 200
+2023-07-26 16:44:52 - WARNING - #ID: 347259 #URL http://www.worm.com! Error: HTTPConnectionPool(host='www.worm.com!', port=80): Max retries exceeded with url: / (Caused by NameResolutionError("<urllib3.connection.HTTPConnection object at 0x7f3790fad3c0>: Failed to resolve 'www.worm.com!' ([Errno -2] Name or service not known)"))
+2023-07-26 16:44:52 - INFO - #ID: 347259 #URL http://www.worm.com! - Requesting again using GET request instead of HEAD
+2023-07-26 16:44:52 - ERROR - #ID: 347259 #URL http://www.worm.com! Error: HTTPConnectionPool(host='www.worm.com!', port=80): Max retries exceeded with url: / (Caused by NameResolutionError("<urllib3.connection.HTTPConnection object at 0x7f3790fadc30>: Failed to resolve 'www.worm.com!' ([Errno -2] Name or service not known)"))
+2023-07-26 16:44:52 - INFO - ID: 347259 #COLUMN: fulltext #URL: http://www.worm.com! #STATUS_CODE: 500 - Replaced with #TEXT: (null)
+2023-07-26 16:44:53 - INFO - Processing ID: 347259 completed
+2023-07-26 16:44:56 - INFO - ==================== All records have been processed ====================
+2023-07-26 16:45:09 - INFO - ******************** Processing ID: 347259 ******************** (1/1 - 100.0%)
+2023-07-26 16:45:14 - INFO - Skipped ID: 347259 #COLUMN: introtext #URL: https://blogs.jpcert.or.jp/en/2023/05/gobrat.html #STATUS_CODE: 200
+2023-07-26 16:45:45 - WARNING - #ID: 347259 #URL http://www.worm.com! Error: HTTPConnectionPool(host='www.worm.com!', port=80): Max retries exceeded with url: / (Caused by NameResolutionError("<urllib3.connection.HTTPConnection object at 0x7fe387f92800>: Failed to resolve 'www.worm.com!' ([Errno -2] Name or service not known)"))
+2023-07-26 16:45:45 - INFO - #ID: 347259 #URL http://www.worm.com! - Requesting again using GET request instead of HEAD
+2023-07-26 16:45:45 - ERROR - #ID: 347259 #URL http://www.worm.com! Error: HTTPConnectionPool(host='www.worm.com!', port=80): Max retries exceeded with url: / (Caused by NameResolutionError("<urllib3.connection.HTTPConnection object at 0x7fe387f93400>: Failed to resolve 'www.worm.com!' ([Errno -2] Name or service not known)"))
+2023-07-26 18:04:42 - INFO - ID: 347259 #COLUMN: fulltext #URL: http://www.worm.com! #STATUS_CODE: 500 - Replaced with #TEXT: (null)
+2023-07-26 18:04:42 - INFO - Processing ID: 347259 completed
+2023-07-26 18:04:42 - INFO - ==================== All records have been processed ====================
+2023-07-26 18:04:46 - INFO - ******************** Processing ID: 347259 ******************** (1/1 - 100.0%)
+2023-07-26 18:04:50 - INFO - Skipped ID: 347259 #COLUMN: introtext #URL: https://blogs.jpcert.or.jp/en/2023/05/gobrat.html #STATUS_CODE: 200
+2023-07-26 18:05:07 - ERROR - 'NoneType' object has no attribute 'status_code'
+Traceback (most recent call last):
+  File "/home/jarvis/projects/linux_security/01-introtext-fulltext-script.py", line 439, in extract_a_tag_in_html
+    for result in do_http_request(urls=url_startwith_http, logger=logger, id=id):
+  File "/home/jarvis/projects/linux_security/01-introtext-fulltext-script.py", line 98, in do_http_request
+    if response.status_code < 400 or response.status_code in VALID_HTTP_STATUS_CODES:
+AttributeError: 'NoneType' object has no attribute 'status_code'
+2023-07-26 18:05:07 - ERROR - 'NoneType' object has no attribute 'status_code'
+2023-07-26 18:05:12 - INFO - ==================== All records have been processed ====================
+2023-07-26 18:05:48 - INFO - ******************** Processing ID: 347259 ******************** (1/1 - 100.0%)
+2023-07-26 18:05:54 - INFO - Skipped ID: 347259 #COLUMN: introtext #URL: https://blogs.jpcert.or.jp/en/2023/05/gobrat.html #STATUS_CODE: 200
+2023-07-26 18:05:59 - ERROR - 'NoneType' object has no attribute 'status_code'
+Traceback (most recent call last):
+  File "/home/jarvis/projects/linux_security/01-introtext-fulltext-script.py", line 439, in extract_a_tag_in_html
+    for result in do_http_request(urls=url_startwith_http, logger=logger, id=id):
+  File "/home/jarvis/projects/linux_security/01-introtext-fulltext-script.py", line 98, in do_http_request
+    if response.status_code < 400 or response.status_code in VALID_HTTP_STATUS_CODES:
+AttributeError: 'NoneType' object has no attribute 'status_code'
+2023-07-26 18:05:59 - ERROR - 'NoneType' object has no attribute 'status_code'
+2023-07-26 18:06:54 - INFO - ******************** Processing ID: 347259 ******************** (1/1 - 100.0%)
+2023-07-26 18:07:25 - INFO - Skipped ID: 347259 #COLUMN: introtext #URL: https://blogs.jpcert.or.jp/en/2023/05/gobrat.html #STATUS_CODE: 200
+2023-07-26 18:09:31 - INFO - ******************** Processing ID: 347259 ******************** (1/1 - 100.0%)
+2023-07-26 18:09:49 - INFO - Skipped ID: 347259 #COLUMN: introtext #URL: https://blogs.jpcert.or.jp/en/2023/05/gobrat.html #STATUS_CODE: 200
+2023-07-26 18:11:24 - INFO - ******************** Processing ID: 347259 ******************** (1/1 - 100.0%)
+2023-07-26 18:11:29 - INFO - Skipped ID: 347259 #COLUMN: introtext #URL: https://blogs.jpcert.or.jp/en/2023/05/gobrat.html #STATUS_CODE: 200
+2023-07-26 18:13:53 - INFO - ******************** Processing ID: 347259 ******************** (1/1 - 100.0%)
+2023-07-26 18:13:58 - INFO - Skipped ID: 347259 #COLUMN: introtext #URL: https://blogs.jpcert.or.jp/en/2023/05/gobrat.html #STATUS_CODE: 200
+2023-07-26 18:15:57 - INFO - ******************** Processing ID: 347259 ******************** (1/1 - 100.0%)
+2023-07-26 18:16:01 - INFO - Skipped ID: 347259 #COLUMN: introtext #URL: https://blogs.jpcert.or.jp/en/2023/05/gobrat.html #STATUS_CODE: 200
+2023-07-26 18:16:29 - INFO - ID: 347259 #COLUMN: introtext #URL: https://crates.io/crates/bodhi-cli/dfregr #STATUS_CODE: 404 - Replaced with #TEXT: (null)
+2023-07-26 18:16:55 - INFO - ID: 347259 #COLUMN: fulltext #URL: https://crates.io/crates/bodhi-cli/dfregr #STATUS_CODE: 404 - Replaced with #TEXT: (null)
+2023-07-26 18:16:55 - INFO - Processing ID: 347259 completed
+2023-07-26 18:16:55 - INFO - ==================== All records have been processed ====================
+2023-07-26 18:17:48 - INFO - ******************** Processing ID: 347259 ******************** (1/1 - 100.0%)
+2023-07-26 18:17:52 - INFO - Skipped ID: 347259 #COLUMN: introtext #URL: https://blogs.jpcert.or.jp/en/2023/05/gobrat.html #STATUS_CODE: 200
+2023-07-26 18:18:04 - INFO - Skipped ID: 347259 #COLUMN: introtext #URL: https://crates.io/crates/bodhi-cli #STATUS_CODE: 200
+2023-07-26 18:20:07 - INFO - ******************** Processing ID: 102331 ******************** (1/1 - 100.0%)
+2023-07-26 18:20:37 - INFO - ID: 102331 #COLUMN: fulltext #FTP_URLS: ['ftp://ftp.RedHat.com/RedHat/updates/6.2/i386/krb5-configs-1.1.1-21.i386.rpm', 'ftp://ftp.RedHat.com/RedHat/updates/6.2/i386/krb5-devel-1.1.1-21.i386.rpm', 'ftp://ftp.RedHat.com/RedHat/updates/6.2/i386/krb5-libs-1.1.1-21.i386.rpm', 'ftp://ftp.RedHat.com/RedHat/updates/6.2/i386/krb5-server-1.1.1-21.i386.rpm', 'ftp://ftp.RedHat.com/RedHat/updates/6.2/i386/krb5-workstation-1.1.1-21.i386.rpm', 'ftp://ftp.RedHat.com/RedHat/updates/6.2/alpha/krb5-configs-1.1.1-21.alpha.rpm', 'ftp://ftp.RedHat.com/RedHat/updates/6.2/alpha/krb5-devel-1.1.1-21.alpha.rpm', 'ftp://ftp.RedHat.com/RedHat/updates/6.2/alpha/krb5-libs-1.1.1-21.alpha.rpm', 'ftp://ftp.RedHat.com/RedHat/updates/6.2/alpha/krb5-server-1.1.1-21.alpha.rpm', 'ftp://ftp.RedHat.com/RedHat/updates/6.2/alpha/krb5-workstation-1.1.1-21.alpha.rpm', 'ftp://ftp.RedHat.com/RedHat/updates/6.2/sparc/krb5-configs-1.1.1-21.sparc.rpm', 'ftp://ftp.RedHat.com/RedHat/updates/6.2/sparc/krb5-devel-1.1.1-21.sparc.rpm', 'ftp://ftp.RedHat.com/RedHat/updates/6.2/sparc/krb5-libs-1.1.1-21.sparc.rpm', 'ftp://ftp.RedHat.com/RedHat/updates/6.2/sparc/krb5-server-1.1.1-21.sparc.rpm', 'ftp://ftp.RedHat.com/RedHat/updates/6.2/sparc/krb5-workstation-1.1.1-21.sparc.rpm', 'ftp://ftp.RedHat.com/RedHat/updates/6.2/SRPMS/krb5-1.1.1-21.src.rpm'] will be checking
+2023-07-26 18:20:38 - ERROR - #ID: 102331 #FTP_URL ftp://ftp.RedHat.com/RedHat/updates/6.2/i386/krb5-devel-1.1.1-21.i386.rpm #Error: 421 There are too many connections from your internet address.
+2023-07-26 18:20:38 - INFO - ID: 102331 #COLUMN: fulltext #FTP_URL: ftp://ftp.RedHat.com/RedHat/updates/6.2/i386/krb5-devel-1.1.1-21.i386.rpm - Replaced with #TEXT: (null)
+2023-07-26 18:20:38 - ERROR - #ID: 102331 #FTP_URL ftp://ftp.RedHat.com/RedHat/updates/6.2/i386/krb5-libs-1.1.1-21.i386.rpm #Error: 421 There are too many connections from your internet address.
+2023-07-26 18:20:38 - INFO - ID: 102331 #COLUMN: fulltext #FTP_URL: ftp://ftp.RedHat.com/RedHat/updates/6.2/i386/krb5-libs-1.1.1-21.i386.rpm - Replaced with #TEXT: (null)
+2023-07-26 18:20:38 - ERROR - #ID: 102331 #FTP_URL ftp://ftp.RedHat.com/RedHat/updates/6.2/i386/krb5-server-1.1.1-21.i386.rpm #Error: 421 There are too many connections from your internet address.
+2023-07-26 18:20:38 - INFO - ID: 102331 #COLUMN: fulltext #FTP_URL: ftp://ftp.RedHat.com/RedHat/updates/6.2/i386/krb5-server-1.1.1-21.i386.rpm - Replaced with #TEXT: (null)
+2023-07-26 18:20:38 - ERROR - #ID: 102331 #FTP_URL ftp://ftp.RedHat.com/RedHat/updates/6.2/alpha/krb5-workstation-1.1.1-21.alpha.rpm #Error: 421 There are too many connections from your internet address.
+2023-07-26 18:20:38 - INFO - ID: 102331 #COLUMN: fulltext #FTP_URL: ftp://ftp.RedHat.com/RedHat/updates/6.2/alpha/krb5-workstation-1.1.1-21.alpha.rpm - Replaced with #TEXT: (null)
+2023-07-26 18:20:38 - ERROR - #ID: 102331 #FTP_URL ftp://ftp.RedHat.com/RedHat/updates/6.2/alpha/krb5-server-1.1.1-21.alpha.rpm #Error: 421 There are too many connections from your internet address.
+2023-07-26 18:20:38 - INFO - ID: 102331 #COLUMN: fulltext #FTP_URL: ftp://ftp.RedHat.com/RedHat/updates/6.2/alpha/krb5-server-1.1.1-21.alpha.rpm - Replaced with #TEXT: (null)
+2023-07-26 18:20:38 - ERROR - #ID: 102331 #FTP_URL ftp://ftp.RedHat.com/RedHat/updates/6.2/sparc/krb5-configs-1.1.1-21.sparc.rpm #Error: 421 There are too many connections from your internet address.
+2023-07-26 18:20:38 - INFO - ID: 102331 #COLUMN: fulltext #FTP_URL: ftp://ftp.RedHat.com/RedHat/updates/6.2/sparc/krb5-configs-1.1.1-21.sparc.rpm - Replaced with #TEXT: (null)
+2023-07-26 18:20:39 - ERROR - #ID: 102331 #FTP_URL ftp://ftp.RedHat.com/RedHat/updates/6.2/alpha/krb5-configs-1.1.1-21.alpha.rpm #Error: 550 Could not get file modification time.
+2023-07-26 18:20:39 - INFO - ID: 102331 #COLUMN: fulltext #FTP_URL: ftp://ftp.RedHat.com/RedHat/updates/6.2/alpha/krb5-configs-1.1.1-21.alpha.rpm - Replaced with #TEXT: (null)
+2023-07-26 18:20:39 - ERROR - #ID: 102331 #FTP_URL ftp://ftp.RedHat.com/RedHat/updates/6.2/i386/krb5-configs-1.1.1-21.i386.rpm #Error: 550 Could not get file modification time.
+2023-07-26 18:20:39 - INFO - ID: 102331 #COLUMN: fulltext #FTP_URL: ftp://ftp.RedHat.com/RedHat/updates/6.2/i386/krb5-configs-1.1.1-21.i386.rpm - Replaced with #TEXT: (null)
+2023-07-26 18:20:39 - ERROR - #ID: 102331 #FTP_URL ftp://ftp.RedHat.com/RedHat/updates/6.2/i386/krb5-workstation-1.1.1-21.i386.rpm #Error: 550 Could not get file modification time.
+2023-07-26 18:20:39 - INFO - ID: 102331 #COLUMN: fulltext #FTP_URL: ftp://ftp.RedHat.com/RedHat/updates/6.2/i386/krb5-workstation-1.1.1-21.i386.rpm - Replaced with #TEXT: (null)
+2023-07-26 18:20:39 - ERROR - #ID: 102331 #FTP_URL ftp://ftp.RedHat.com/RedHat/updates/6.2/alpha/krb5-devel-1.1.1-21.alpha.rpm #Error: 550 Could not get file modification time.
+2023-07-26 18:20:39 - INFO - ID: 102331 #COLUMN: fulltext #FTP_URL: ftp://ftp.RedHat.com/RedHat/updates/6.2/alpha/krb5-devel-1.1.1-21.alpha.rpm - Replaced with #TEXT: (null)
+2023-07-26 18:20:39 - ERROR - #ID: 102331 #FTP_URL ftp://ftp.RedHat.com/RedHat/updates/6.2/alpha/krb5-libs-1.1.1-21.alpha.rpm #Error: 550 Could not get file modification time.
+2023-07-26 18:20:39 - INFO - ID: 102331 #COLUMN: fulltext #FTP_URL: ftp://ftp.RedHat.com/RedHat/updates/6.2/alpha/krb5-libs-1.1.1-21.alpha.rpm - Replaced with #TEXT: (null)
+2023-07-26 18:20:39 - ERROR - #ID: 102331 #FTP_URL ftp://ftp.RedHat.com/RedHat/updates/6.2/sparc/krb5-libs-1.1.1-21.sparc.rpm #Error: 421 There are too many connections from your internet address.
+2023-07-26 18:20:39 - INFO - ID: 102331 #COLUMN: fulltext #FTP_URL: ftp://ftp.RedHat.com/RedHat/updates/6.2/sparc/krb5-libs-1.1.1-21.sparc.rpm - Replaced with #TEXT: (null)
+2023-07-26 18:20:39 - ERROR - #ID: 102331 #FTP_URL ftp://ftp.RedHat.com/RedHat/updates/6.2/sparc/krb5-devel-1.1.1-21.sparc.rpm #Error: 421 There are too many connections from your internet address.
+2023-07-26 18:20:39 - INFO - ID: 102331 #COLUMN: fulltext #FTP_URL: ftp://ftp.RedHat.com/RedHat/updates/6.2/sparc/krb5-devel-1.1.1-21.sparc.rpm - Replaced with #TEXT: (null)
+2023-07-26 18:20:39 - ERROR - #ID: 102331 #FTP_URL ftp://ftp.RedHat.com/RedHat/updates/6.2/sparc/krb5-server-1.1.1-21.sparc.rpm #Error: 421 There are too many connections from your internet address.
+2023-07-26 18:20:39 - INFO - ID: 102331 #COLUMN: fulltext #FTP_URL: ftp://ftp.RedHat.com/RedHat/updates/6.2/sparc/krb5-server-1.1.1-21.sparc.rpm - Replaced with #TEXT: (null)
+2023-07-26 18:20:39 - ERROR - #ID: 102331 #FTP_URL ftp://ftp.RedHat.com/RedHat/updates/6.2/SRPMS/krb5-1.1.1-21.src.rpm #Error: 421 There are too many connections from your internet address.
+2023-07-26 18:20:39 - INFO - ID: 102331 #COLUMN: fulltext #FTP_URL: ftp://ftp.RedHat.com/RedHat/updates/6.2/SRPMS/krb5-1.1.1-21.src.rpm - Replaced with #TEXT: (null)
+2023-07-26 18:20:39 - ERROR - #ID: 102331 #FTP_URL ftp://ftp.RedHat.com/RedHat/updates/6.2/sparc/krb5-workstation-1.1.1-21.sparc.rpm #Error: 421 There are too many connections from your internet address.
+2023-07-26 18:20:39 - INFO - ID: 102331 #COLUMN: fulltext #FTP_URL: ftp://ftp.RedHat.com/RedHat/updates/6.2/sparc/krb5-workstation-1.1.1-21.sparc.rpm - Replaced with #TEXT: (null)
+2023-07-26 18:38:26 - INFO - ******************** Processing ID: 102331 ******************** (1/1 - 100.0%)
+2023-07-26 18:39:49 - INFO - ID: 102331 #COLUMN: fulltext #FTP_URLS: ['ftp://ftp.RedHat.com/RedHat/updates/6.2/i386/krb5-configs-1.1.1-21.i386.rpm', 'ftp://ftp.RedHat.com/RedHat/updates/6.2/i386/krb5-devel-1.1.1-21.i386.rpm', 'ftp://ftp.RedHat.com/RedHat/updates/6.2/i386/krb5-libs-1.1.1-21.i386.rpm', 'ftp://ftp.RedHat.com/RedHat/updates/6.2/i386/krb5-server-1.1.1-21.i386.rpm', 'ftp://ftp.RedHat.com/RedHat/updates/6.2/i386/krb5-workstation-1.1.1-21.i386.rpm', 'ftp://ftp.RedHat.com/RedHat/updates/6.2/alpha/krb5-configs-1.1.1-21.alpha.rpm', 'ftp://ftp.RedHat.com/RedHat/updates/6.2/alpha/krb5-devel-1.1.1-21.alpha.rpm', 'ftp://ftp.RedHat.com/RedHat/updates/6.2/alpha/krb5-libs-1.1.1-21.alpha.rpm', 'ftp://ftp.RedHat.com/RedHat/updates/6.2/alpha/krb5-server-1.1.1-21.alpha.rpm', 'ftp://ftp.RedHat.com/RedHat/updates/6.2/alpha/krb5-workstation-1.1.1-21.alpha.rpm', 'ftp://ftp.RedHat.com/RedHat/updates/6.2/sparc/krb5-configs-1.1.1-21.sparc.rpm', 'ftp://ftp.RedHat.com/RedHat/updates/6.2/sparc/krb5-devel-1.1.1-21.sparc.rpm', 'ftp://ftp.RedHat.com/RedHat/updates/6.2/sparc/krb5-libs-1.1.1-21.sparc.rpm', 'ftp://ftp.RedHat.com/RedHat/updates/6.2/sparc/krb5-server-1.1.1-21.sparc.rpm', 'ftp://ftp.RedHat.com/RedHat/updates/6.2/sparc/krb5-workstation-1.1.1-21.sparc.rpm', 'ftp://ftp.RedHat.com/RedHat/updates/6.2/SRPMS/krb5-1.1.1-21.src.rpm'] will be checking
+2023-07-26 18:39:50 - ERROR - #ID: 102331 #FTP_URL ftp://ftp.RedHat.com/RedHat/updates/6.2/i386/krb5-server-1.1.1-21.i386.rpm #Error: 421 There are too many connections from your internet address.
+2023-07-26 18:39:50 - INFO - ID: 102331 #COLUMN: fulltext #FTP_URL: ftp://ftp.RedHat.com/RedHat/updates/6.2/i386/krb5-server-1.1.1-21.i386.rpm - Replaced with #TEXT: (null)
+2023-07-26 18:39:50 - ERROR - #ID: 102331 #FTP_URL ftp://ftp.RedHat.com/RedHat/updates/6.2/alpha/krb5-configs-1.1.1-21.alpha.rpm #Error: 421 There are too many connections from your internet address.
+2023-07-26 18:39:50 - INFO - ID: 102331 #COLUMN: fulltext #FTP_URL: ftp://ftp.RedHat.com/RedHat/updates/6.2/alpha/krb5-configs-1.1.1-21.alpha.rpm - Replaced with #TEXT: (null)
+2023-07-26 18:39:50 - ERROR - #ID: 102331 #FTP_URL ftp://ftp.RedHat.com/RedHat/updates/6.2/alpha/krb5-libs-1.1.1-21.alpha.rpm #Error: 421 There are too many connections from your internet address.
+2023-07-26 18:39:50 - INFO - ID: 102331 #COLUMN: fulltext #FTP_URL: ftp://ftp.RedHat.com/RedHat/updates/6.2/alpha/krb5-libs-1.1.1-21.alpha.rpm - Replaced with #TEXT: (null)
+2023-07-26 18:39:51 - ERROR - #ID: 102331 #FTP_URL ftp://ftp.RedHat.com/RedHat/updates/6.2/alpha/krb5-server-1.1.1-21.alpha.rpm #Error: 421 There are too many connections from your internet address.
+2023-07-26 18:39:51 - INFO - ID: 102331 #COLUMN: fulltext #FTP_URL: ftp://ftp.RedHat.com/RedHat/updates/6.2/alpha/krb5-server-1.1.1-21.alpha.rpm - Replaced with #TEXT: (null)
+2023-07-26 18:39:51 - ERROR - #ID: 102331 #FTP_URL ftp://ftp.RedHat.com/RedHat/updates/6.2/alpha/krb5-workstation-1.1.1-21.alpha.rpm #Error: 421 There are too many connections from your internet address.
+2023-07-26 18:39:51 - INFO - ID: 102331 #COLUMN: fulltext #FTP_URL: ftp://ftp.RedHat.com/RedHat/updates/6.2/alpha/krb5-workstation-1.1.1-21.alpha.rpm - Replaced with #TEXT: (null)
+2023-07-26 18:39:51 - ERROR - #ID: 102331 #FTP_URL ftp://ftp.RedHat.com/RedHat/updates/6.2/sparc/krb5-configs-1.1.1-21.sparc.rpm #Error: 421 There are too many connections from your internet address.
+2023-07-26 18:39:51 - INFO - ID: 102331 #COLUMN: fulltext #FTP_URL: ftp://ftp.RedHat.com/RedHat/updates/6.2/sparc/krb5-configs-1.1.1-21.sparc.rpm - Replaced with #TEXT: (null)
+2023-07-26 18:39:51 - ERROR - #ID: 102331 #FTP_URL ftp://ftp.RedHat.com/RedHat/updates/6.2/i386/krb5-libs-1.1.1-21.i386.rpm #Error: 550 Could not get file modification time.
+2023-07-26 18:39:51 - INFO - ID: 102331 #COLUMN: fulltext #FTP_URL: ftp://ftp.RedHat.com/RedHat/updates/6.2/i386/krb5-libs-1.1.1-21.i386.rpm - Replaced with #TEXT: (null)
+2023-07-26 18:39:51 - ERROR - #ID: 102331 #FTP_URL ftp://ftp.RedHat.com/RedHat/updates/6.2/alpha/krb5-devel-1.1.1-21.alpha.rpm #Error: 550 Could not get file modification time.
+2023-07-26 18:39:51 - INFO - ID: 102331 #COLUMN: fulltext #FTP_URL: ftp://ftp.RedHat.com/RedHat/updates/6.2/alpha/krb5-devel-1.1.1-21.alpha.rpm - Replaced with #TEXT: (null)
+2023-07-26 18:39:51 - ERROR - #ID: 102331 #FTP_URL ftp://ftp.RedHat.com/RedHat/updates/6.2/i386/krb5-workstation-1.1.1-21.i386.rpm #Error: 550 Could not get file modification time.
+2023-07-26 18:39:51 - INFO - ID: 102331 #COLUMN: fulltext #FTP_URL: ftp://ftp.RedHat.com/RedHat/updates/6.2/i386/krb5-workstation-1.1.1-21.i386.rpm - Replaced with #TEXT: (null)
+2023-07-26 18:39:51 - ERROR - #ID: 102331 #FTP_URL ftp://ftp.RedHat.com/RedHat/updates/6.2/i386/krb5-devel-1.1.1-21.i386.rpm #Error: 550 Could not get file modification time.
+2023-07-26 18:39:51 - INFO - ID: 102331 #COLUMN: fulltext #FTP_URL: ftp://ftp.RedHat.com/RedHat/updates/6.2/i386/krb5-devel-1.1.1-21.i386.rpm - Replaced with #TEXT: (null)
+2023-07-26 18:39:51 - ERROR - #ID: 102331 #FTP_URL ftp://ftp.RedHat.com/RedHat/updates/6.2/i386/krb5-configs-1.1.1-21.i386.rpm #Error: 550 Could not get file modification time.
+2023-07-26 18:39:51 - INFO - ID: 102331 #COLUMN: fulltext #FTP_URL: ftp://ftp.RedHat.com/RedHat/updates/6.2/i386/krb5-configs-1.1.1-21.i386.rpm - Replaced with #TEXT: (null)
+2023-07-26 18:39:52 - ERROR - #ID: 102331 #FTP_URL ftp://ftp.RedHat.com/RedHat/updates/6.2/sparc/krb5-libs-1.1.1-21.sparc.rpm #Error: 421 There are too many connections from your internet address.
+2023-07-26 18:39:52 - INFO - ID: 102331 #COLUMN: fulltext #FTP_URL: ftp://ftp.RedHat.com/RedHat/updates/6.2/sparc/krb5-libs-1.1.1-21.sparc.rpm - Replaced with #TEXT: (null)
+2023-07-26 18:39:52 - ERROR - #ID: 102331 #FTP_URL ftp://ftp.RedHat.com/RedHat/updates/6.2/sparc/krb5-devel-1.1.1-21.sparc.rpm #Error: 421 There are too many connections from your internet address.
+2023-07-26 18:39:52 - INFO - ID: 102331 #COLUMN: fulltext #FTP_URL: ftp://ftp.RedHat.com/RedHat/updates/6.2/sparc/krb5-devel-1.1.1-21.sparc.rpm - Replaced with #TEXT: (null)
+2023-07-26 18:39:52 - ERROR - #ID: 102331 #FTP_URL ftp://ftp.RedHat.com/RedHat/updates/6.2/sparc/krb5-server-1.1.1-21.sparc.rpm #Error: 421 There are too many connections from your internet address.
+2023-07-26 18:39:52 - INFO - ID: 102331 #COLUMN: fulltext #FTP_URL: ftp://ftp.RedHat.com/RedHat/updates/6.2/sparc/krb5-server-1.1.1-21.sparc.rpm - Replaced with #TEXT: (null)
+2023-07-26 18:39:52 - ERROR - #ID: 102331 #FTP_URL ftp://ftp.RedHat.com/RedHat/updates/6.2/SRPMS/krb5-1.1.1-21.src.rpm #Error: 421 There are too many connections from your internet address.
+2023-07-26 18:39:52 - INFO - ID: 102331 #COLUMN: fulltext #FTP_URL: ftp://ftp.RedHat.com/RedHat/updates/6.2/SRPMS/krb5-1.1.1-21.src.rpm - Replaced with #TEXT: (null)
+2023-07-26 18:39:52 - ERROR - #ID: 102331 #FTP_URL ftp://ftp.RedHat.com/RedHat/updates/6.2/sparc/krb5-workstation-1.1.1-21.sparc.rpm #Error: 421 There are too many connections from your internet address.
+2023-07-26 18:39:52 - INFO - ID: 102331 #COLUMN: fulltext #FTP_URL: ftp://ftp.RedHat.com/RedHat/updates/6.2/sparc/krb5-workstation-1.1.1-21.sparc.rpm - Replaced with #TEXT: (null)
+2023-07-26 18:40:10 - INFO - ******************** Processing ID: 102331 ******************** (1/1 - 100.0%)
+2023-07-26 18:40:57 - INFO - ID: 102331 #COLUMN: fulltext #FTP_URLS: ['ftp://ftp.RedHat.com/RedHat/updates/6.2/i386/krb5-configs-1.1.1-21.i386.rpm', 'ftp://ftp.RedHat.com/RedHat/updates/6.2/i386/krb5-devel-1.1.1-21.i386.rpm', 'ftp://ftp.RedHat.com/RedHat/updates/6.2/i386/krb5-libs-1.1.1-21.i386.rpm', 'ftp://ftp.RedHat.com/RedHat/updates/6.2/i386/krb5-server-1.1.1-21.i386.rpm', 'ftp://ftp.RedHat.com/RedHat/updates/6.2/i386/krb5-workstation-1.1.1-21.i386.rpm', 'ftp://ftp.RedHat.com/RedHat/updates/6.2/alpha/krb5-configs-1.1.1-21.alpha.rpm', 'ftp://ftp.RedHat.com/RedHat/updates/6.2/alpha/krb5-devel-1.1.1-21.alpha.rpm', 'ftp://ftp.RedHat.com/RedHat/updates/6.2/alpha/krb5-libs-1.1.1-21.alpha.rpm', 'ftp://ftp.RedHat.com/RedHat/updates/6.2/alpha/krb5-server-1.1.1-21.alpha.rpm', 'ftp://ftp.RedHat.com/RedHat/updates/6.2/alpha/krb5-workstation-1.1.1-21.alpha.rpm', 'ftp://ftp.RedHat.com/RedHat/updates/6.2/sparc/krb5-configs-1.1.1-21.sparc.rpm', 'ftp://ftp.RedHat.com/RedHat/updates/6.2/sparc/krb5-devel-1.1.1-21.sparc.rpm', 'ftp://ftp.RedHat.com/RedHat/updates/6.2/sparc/krb5-libs-1.1.1-21.sparc.rpm', 'ftp://ftp.RedHat.com/RedHat/updates/6.2/sparc/krb5-server-1.1.1-21.sparc.rpm', 'ftp://ftp.RedHat.com/RedHat/updates/6.2/sparc/krb5-workstation-1.1.1-21.sparc.rpm', 'ftp://ftp.RedHat.com/RedHat/updates/6.2/SRPMS/krb5-1.1.1-21.src.rpm'] will be checking
+2023-07-26 18:45:02 - INFO - ******************** Processing ID: 102331 ******************** (1/1 - 100.0%)
+2023-07-26 18:45:34 - INFO - ID: 102331 #COLUMN: introtext #FTP_URLS: ['ftp://ftp.RedHat.com/RedHat/updates/6.2/sparc/krb5-libs-1.1.1-21.sparc.rpm'] will be checking
+2023-07-26 18:48:44 - ERROR - #ID: 102331 #FTP_URL ftp://ftp.RedHat.com/RedHat/updates/6.2/sparc/krb5-libs-1.1.1-21.sparc.rpm #Error: 550 Could not get file modification time.
+2023-07-26 18:50:47 - INFO - ID: 102331 #COLUMN: fulltext #FTP_URLS: ['ftp://ftp.RedHat.com/RedHat/updates/6.2/sparc/krb5-libs-1.1.1-21.sparc.rpm'] will be checking
+2023-07-26 18:50:52 - ERROR - #ID: 102331 #FTP_URL ftp://ftp.RedHat.com/RedHat/updates/6.2/sparc/krb5-libs-1.1.1-21.sparc.rpm #Error: 550 Could not get file modification time.
+2023-07-26 18:50:52 - INFO - ID: 102331 #COLUMN: fulltext #FTP_URL: ftp://ftp.RedHat.com/RedHat/updates/6.2/sparc/krb5-libs-1.1.1-21.sparc.rpm - Replaced with #TEXT: (null)
