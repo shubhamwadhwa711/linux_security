@@ -28609,3 +28609,88 @@ AttributeError: 'NoneType' object has no attribute 'status_code'
 2023-07-26 23:45:51 - INFO - Skipped ID: 347837 #COLUMN: fulltext #URL: https://oss.oracle.com/mailman/listinfo/el-errata #STATUS_CODE: 200
 2023-07-26 23:45:52 - INFO - Skipped ID: 347837 #COLUMN: fulltext #URL: http://linux.oracle.com/errata/ELSA-2023-3584.html #STATUS_CODE: 200
 2023-07-26 23:45:58 - INFO - Skipped ID: 347837 #COLUMN: fulltext #URL: http://oss.oracle.com/ol8/SRPMS-updates//c-ares-1.13.0-6.el8_8.2.src.rpm #STATUS_CODE: 200
+2023-07-27 16:50:32 - INFO - ******************** Processing ID: 102331 ******************** (1/1 - 100.0%)
+2023-07-27 16:50:34 - INFO - ID: 102331 #COLUMN: introtext #FTP_URLS: ['ftp://ftp.RedHat.com/RedHat/updates/6.2/sparc/krb5-libs-1.1.1-21.sparc.rpm'] will be checking
+2023-07-27 16:50:45 - ERROR - #ID: 102331 #FTP_URL ftp://ftp.RedHat.com/RedHat/updates/6.2/sparc/krb5-libs-1.1.1-21.sparc.rpm #Error: 550 Could not get file modification time.
+2023-07-27 16:51:23 - INFO - ******************** Processing ID: 102331 ******************** (1/1 - 100.0%)
+2023-07-27 16:53:42 - INFO - ******************** Processing ID: 102331 ******************** (1/1 - 100.0%)
+2023-07-27 17:32:51 - INFO - ******************** Processing ID: 102331 ******************** (1/1 - 100.0%)
+2023-07-27 17:33:19 - ERROR - 'generator' object has no attribute 'decode'
+Traceback (most recent call last):
+  File "/home/jarvis/projects/linux_security/01-introtext-fulltext-script.py", line 351, in extract_a_tag_in_html
+    for result in check_url_against_domains(url for url in ftp_urls):
+  File "/home/jarvis/projects/linux_security/utils.py", line 97, in check_url_against_domains
+    parsed_url = urlparse(url)
+  File "/usr/lib/python3.10/urllib/parse.py", line 400, in urlparse
+    url, scheme, _coerce_result = _coerce_args(url, scheme)
+  File "/usr/lib/python3.10/urllib/parse.py", line 136, in _coerce_args
+    return _decode_args(args) + (_encode_result,)
+  File "/usr/lib/python3.10/urllib/parse.py", line 120, in _decode_args
+    return tuple(x.decode(encoding, errors) if x else '' for x in args)
+  File "/usr/lib/python3.10/urllib/parse.py", line 120, in <genexpr>
+    return tuple(x.decode(encoding, errors) if x else '' for x in args)
+AttributeError: 'generator' object has no attribute 'decode'
+2023-07-27 17:33:19 - ERROR - 'generator' object has no attribute 'decode'
+2023-07-27 17:36:01 - INFO - ******************** Processing ID: 102331 ******************** (1/1 - 100.0%)
+2023-07-27 17:36:05 - ERROR - 'list' object has no attribute 'decode'
+Traceback (most recent call last):
+  File "/home/jarvis/projects/linux_security/01-introtext-fulltext-script.py", line 351, in extract_a_tag_in_html
+    for result in check_url_against_domains([url for url in ftp_urls]):
+  File "/home/jarvis/projects/linux_security/utils.py", line 97, in check_url_against_domains
+    parsed_url = urlparse(url)
+  File "/usr/lib/python3.10/urllib/parse.py", line 400, in urlparse
+    url, scheme, _coerce_result = _coerce_args(url, scheme)
+  File "/usr/lib/python3.10/urllib/parse.py", line 136, in _coerce_args
+    return _decode_args(args) + (_encode_result,)
+  File "/usr/lib/python3.10/urllib/parse.py", line 120, in _decode_args
+    return tuple(x.decode(encoding, errors) if x else '' for x in args)
+  File "/usr/lib/python3.10/urllib/parse.py", line 120, in <genexpr>
+    return tuple(x.decode(encoding, errors) if x else '' for x in args)
+AttributeError: 'list' object has no attribute 'decode'
+2023-07-27 17:36:05 - ERROR - 'list' object has no attribute 'decode'
+2023-07-27 17:39:35 - INFO - ==================== All records have been processed ====================
+2023-07-27 17:39:57 - INFO - ******************** Processing ID: 102331 ******************** (1/1 - 100.0%)
+2023-07-27 17:42:31 - INFO - ID: 102331 #COLUMN: fulltext #FTP_URLS: ftp://ftp.RedHat.com/RedHat/updates/6.2/i386/krb5-configs-1.1.1-21.i386.rpm is Replaced with null
+2023-07-27 17:42:59 - INFO - ID: 102331 #COLUMN: fulltext #FTP_URLS: ftp://ftp.RedHat.com/RedHat/updates/6.2/i386/krb5-devel-1.1.1-21.i386.rpm is Replaced with null
+2023-07-27 17:43:00 - INFO - ID: 102331 #COLUMN: fulltext #FTP_URLS: ftp://ftp.RedHat.com/RedHat/updates/6.2/i386/krb5-libs-1.1.1-21.i386.rpm is Replaced with null
+2023-07-27 17:43:04 - INFO - ID: 102331 #COLUMN: fulltext #FTP_URLS: ftp://ftp.RedHat.com/RedHat/updates/6.2/i386/krb5-server-1.1.1-21.i386.rpm is Replaced with null
+2023-07-27 17:43:04 - INFO - ID: 102331 #COLUMN: fulltext #FTP_URLS: ftp://ftp.RedHat.com/RedHat/updates/6.2/i386/krb5-workstation-1.1.1-21.i386.rpm is Replaced with null
+2023-07-27 17:43:04 - INFO - ID: 102331 #COLUMN: fulltext #FTP_URLS: ftp://ftp.RedHat.com/RedHat/updates/6.2/alpha/krb5-configs-1.1.1-21.alpha.rpm is Replaced with null
+2023-07-27 17:43:04 - INFO - ID: 102331 #COLUMN: fulltext #FTP_URLS: ftp://ftp.RedHat.com/RedHat/updates/6.2/alpha/krb5-devel-1.1.1-21.alpha.rpm is Replaced with null
+2023-07-27 17:43:04 - INFO - ID: 102331 #COLUMN: fulltext #FTP_URLS: ftp://ftp.RedHat.com/RedHat/updates/6.2/alpha/krb5-libs-1.1.1-21.alpha.rpm is Replaced with null
+2023-07-27 17:43:04 - INFO - ID: 102331 #COLUMN: fulltext #FTP_URLS: ftp://ftp.RedHat.com/RedHat/updates/6.2/alpha/krb5-server-1.1.1-21.alpha.rpm is Replaced with null
+2023-07-27 17:43:04 - INFO - ID: 102331 #COLUMN: fulltext #FTP_URLS: ftp://ftp.RedHat.com/RedHat/updates/6.2/alpha/krb5-workstation-1.1.1-21.alpha.rpm is Replaced with null
+2023-07-27 17:43:04 - INFO - ID: 102331 #COLUMN: fulltext #FTP_URLS: ftp://ftp.RedHat.com/RedHat/updates/6.2/sparc/krb5-configs-1.1.1-21.sparc.rpm is Replaced with null
+2023-07-27 17:43:04 - INFO - ID: 102331 #COLUMN: fulltext #FTP_URLS: ftp://ftp.RedHat.com/RedHat/updates/6.2/sparc/krb5-devel-1.1.1-21.sparc.rpm is Replaced with null
+2023-07-27 17:43:04 - INFO - ID: 102331 #COLUMN: fulltext #FTP_URLS: ftp://ftp.RedHat.com/RedHat/updates/6.2/sparc/krb5-libs-1.1.1-21.sparc.rpm is Replaced with null
+2023-07-27 17:43:04 - INFO - ID: 102331 #COLUMN: fulltext #FTP_URLS: ftp://ftp.RedHat.com/RedHat/updates/6.2/sparc/krb5-server-1.1.1-21.sparc.rpm is Replaced with null
+2023-07-27 17:43:04 - INFO - ID: 102331 #COLUMN: fulltext #FTP_URLS: ftp://ftp.RedHat.com/RedHat/updates/6.2/sparc/krb5-workstation-1.1.1-21.sparc.rpm is Replaced with null
+2023-07-27 17:43:04 - INFO - ID: 102331 #COLUMN: fulltext #FTP_URLS: ftp://ftp.RedHat.com/RedHat/updates/6.2/SRPMS/krb5-1.1.1-21.src.rpm is Replaced with null
+2023-07-27 17:43:42 - WARNING - #ID: 102331 #URL http://www.securityfocus.com/bid/1220 Error: HTTPConnectionPool(host='www.securityfocus.com', port=80): Max retries exceeded with url: /bid/1220 (Caused by NameResolutionError("<urllib3.connection.HTTPConnection object at 0x7f9c78c02710>: Failed to resolve 'www.securityfocus.com' ([Errno -2] Name or service not known)"))
+2023-07-27 17:43:42 - WARNING - #ID: 102331 #URL http://www.securityfocus.com/bid/1338 Error: HTTPConnectionPool(host='www.securityfocus.com', port=80): Max retries exceeded with url: /bid/1338 (Caused by NameResolutionError("<urllib3.connection.HTTPConnection object at 0x7f9c78c01de0>: Failed to resolve 'www.securityfocus.com' ([Errno -2] Name or service not known)"))
+2023-07-27 17:43:42 - INFO - #ID: 102331 #URL http://www.securityfocus.com/bid/1338 - Requesting again using GET request instead of HEAD
+2023-07-27 17:43:42 - INFO - #ID: 102331 #URL http://www.securityfocus.com/bid/1220 - Requesting again using GET request instead of HEAD
+2023-07-27 17:43:42 - ERROR - #ID: 102331 #URL http://www.securityfocus.com/bid/1338 Error: HTTPConnectionPool(host='www.securityfocus.com', port=80): Max retries exceeded with url: /bid/1338 (Caused by NameResolutionError("<urllib3.connection.HTTPConnection object at 0x7f9c7958d990>: Failed to resolve 'www.securityfocus.com' ([Errno -2] Name or service not known)"))
+2023-07-27 17:43:42 - INFO - ID: 102331 #COLUMN: fulltext #URL: http://www.securityfocus.com/bid/1338 #STATUS_CODE: 500 - Replaced with #TEXT: (null)
+2023-07-27 17:43:42 - ERROR - #ID: 102331 #URL http://www.securityfocus.com/bid/1220 Error: HTTPConnectionPool(host='www.securityfocus.com', port=80): Max retries exceeded with url: /bid/1220 (Caused by NameResolutionError("<urllib3.connection.HTTPConnection object at 0x7f9c7958f190>: Failed to resolve 'www.securityfocus.com' ([Errno -2] Name or service not known)"))
+2023-07-27 17:43:42 - INFO - ID: 102331 #COLUMN: fulltext #URL: http://www.securityfocus.com/bid/1220 #STATUS_CODE: 500 - Replaced with #TEXT: (null)
+2023-07-27 17:43:43 - INFO - Skipped ID: 102331 #COLUMN: fulltext #URL: http://web.mit.edu/kerberos/www/advisories/index.html #STATUS_CODE: 200
+2023-07-27 17:43:44 - INFO - ID: 102331 #COLUMN: fulltext #URL: http://www.RedHat.com/corp/contact.html #STATUS_CODE: 404 - Replaced with #TEXT: (null)
+2023-07-27 17:44:43 - WARNING - #ID: 102331 #URL http://bugzilla.RedHat.com/bugzilla Error: HTTPSConnectionPool(host='bz-https-bugzilla--prod.apps.ext-waf.spoke.prod.us-west-2.aws.paas.redhat.com', port=8443): Max retries exceeded with url: /bugzilla/ (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x7f9c7958dc90>, 'Connection to bz-https-bugzilla--prod.apps.ext-waf.spoke.prod.us-west-2.aws.paas.redhat.com timed out. (connect timeout=20)'))
+2023-07-27 17:44:43 - INFO - #ID: 102331 #URL http://bugzilla.RedHat.com/bugzilla - Requesting again using GET request instead of HEAD
+2023-07-27 17:45:44 - WARNING - #ID: 102331 #URL http://bugzilla.RedHat.com/bugzilla Error: Timeout HTTPSConnectionPool(host='bz-https-bugzilla--prod.apps.ext-waf.spoke.prod.us-west-2.aws.paas.redhat.com', port=8443): Max retries exceeded with url: /bugzilla/ (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x7f9c7953a830>, 'Connection to bz-https-bugzilla--prod.apps.ext-waf.spoke.prod.us-west-2.aws.paas.redhat.com timed out. (connect timeout=20)'))
+2023-07-27 17:45:44 - INFO - ID: 102331 #COLUMN: fulltext #URL: http://bugzilla.RedHat.com/bugzilla added for more checking
+2023-07-27 17:47:15 - INFO - Processing ID: 102331 completed
+2023-07-27 17:47:17 - INFO - ==================== All records have been processed ====================
+2023-07-27 17:51:37 - INFO - ******************** Processing ID: 347259 ******************** (1/1 - 100.0%)
+2023-07-27 17:51:42 - INFO - Skipped ID: 347259 #COLUMN: introtext #URL: https://blogs.jpcert.or.jp/en/2023/05/gobrat.html #STATUS_CODE: 200
+2023-07-27 17:53:42 - WARNING - #ID: 347259 #URL http://www.securityfocus.com/bid/1220 Error: HTTPConnectionPool(host='www.securityfocus.com', port=80): Max retries exceeded with url: /bid/1220 (Caused by NameResolutionError("<urllib3.connection.HTTPConnection object at 0x7fc86bfa6c50>: Failed to resolve 'www.securityfocus.com' ([Errno -2] Name or service not known)"))
+2023-07-27 17:53:42 - INFO - #ID: 347259 #URL http://www.securityfocus.com/bid/1220 - Requesting again using GET request instead of HEAD
+2023-07-27 17:57:11 - ERROR - #ID: 347259 #URL http://www.securityfocus.com/bid/1220 Error: HTTPConnectionPool(host='www.securityfocus.com', port=80): Max retries exceeded with url: /bid/1220 (Caused by NameResolutionError("<urllib3.connection.HTTPConnection object at 0x7fc86bfa4580>: Failed to resolve 'www.securityfocus.com' ([Errno -2] Name or service not known)"))
+2023-07-27 18:03:49 - INFO - ID: 347259 #COLUMN: fulltext #URL: http://www.securityfocus.com/bid/1220 #STATUS_CODE: 500 - Replaced with #TEXT: (null)
+2023-07-27 18:10:56 - INFO - ******************** Processing ID: 347259 ******************** (1/1 - 100.0%)
+2023-07-27 18:11:09 - INFO - Skipped ID: 347259 #COLUMN: introtext #URL: https://blogs.jpcert.or.jp/en/2023/05/gobrat.html #STATUS_CODE: 200
+2023-07-27 18:11:20 - WARNING - #ID: 347259 #URL http://www.securityfocus.com/bid/1220 Error: HTTPConnectionPool(host='www.securityfocus.com', port=80): Max retries exceeded with url: /bid/1220 (Caused by NameResolutionError("<urllib3.connection.HTTPConnection object at 0x7f74d6a2eb60>: Failed to resolve 'www.securityfocus.com' ([Errno -2] Name or service not known)"))
+2023-07-27 18:11:20 - INFO - #ID: 347259 #URL http://www.securityfocus.com/bid/1220 - Requesting again using GET request instead of HEAD
+2023-07-27 18:11:27 - ERROR - #ID: 347259 #URL http://www.securityfocus.com/bid/1220 Error: HTTPConnectionPool(host='www.securityfocus.com', port=80): Max retries exceeded with url: /bid/1220 (Caused by NameResolutionError("<urllib3.connection.HTTPConnection object at 0x7f74d6aac670>: Failed to resolve 'www.securityfocus.com' ([Errno -2] Name or service not known)"))
+2023-07-27 18:13:02 - INFO - ******************** Processing ID: 288355 ******************** (1/1 - 100.0%)

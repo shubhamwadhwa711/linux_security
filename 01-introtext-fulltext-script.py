@@ -29,7 +29,9 @@ from utils import (
     percentage,
     check_http_broken_link,
     check_ftp_broken_link,
+    check_url_against_domains,
     write_file,
+    DECOMPOSE_URLS,
     HTTP_REQUEST_TIMEOUT,   
     FTP_REQUEST_TIMEOUT,
     VALID_HTTP_STATUS_CODES,
@@ -344,36 +346,58 @@ def extract_a_tag_in_html(logger: Logger, id: int, field: str, html: Optional[st
         ftp_links = find_ftp_links(modified_html)
         ftp_urls.extend(ftp_links)
         ftp_urls = [normalize_urls(url) for url in ftp_urls]
-        ftp_urls=["ftp://ftp.RedHat.com/RedHat/updates/6.2/sparc/krb5-libs-1.1.1-21.sparc.rpm"]
         if len(ftp_urls) > 0:
-            logger.info(f'ID: {id} #COLUMN: {field} #FTP_URLS: {ftp_urls} will be checking')
-            for result in do_ftp_request(urls=ftp_urls, logger=logger, id=id):
-                url = result.get('url')
-                if not result.get('is_broken', False):
-                    # Link is still existing - no need to do anything
-                    updates.append(False)
-                    logger.info(f'Skipped ID: {id} #COLUMN: {field} #FTP_URL: {url if url else ("null")} #STATUS_CODE: {result.get("status_code")}')
-                    continue
-
-                a_tags = soup.find_all('a', attrs={'href': url})
-                if len(a_tags) > 0:
+            correct_ftp=[]
+            results=[check_url_against_domains(url) for url in ftp_urls]
+            for result,url in zip(results,ftp_urls):
+                if result:
                     updates.append(True)
-                    for tag in a_tags:
-                        text = tag.text.strip()
-                        if text == url or len(text) == 0:
-                            # If the link text is also a URL, we should probably remove the entire link and link text, as it will also create a problem
-                            tag.decompose()
-                            logger.info(f'ID: {id} #COLUMN: {field} #FTP_URL: {url if url else ("null")} #STATUS_CODE: {result.get("status_code")} #TEXT: {"(null)" if len(text) == 0 else text} removed')
-                        else:
-                            # Replace tag with tag text only
-                            tag.replace_with(text)
-                            logger.info(f'ID: {id} #COLUMN: {field} #FTP_URL: {url if url else ("null")} #STATUS_CODE: {result.get("status_code")} - Replaced with #TEXT: {text}')
+                    a_tags = soup.find_all('a', attrs={'href': url})
+                    if len(a_tags)>0:
+                        for tag in a_tags:
+                            text=tag.text.strip()
+                            if text==url or len(text)==0:
+                                tag.decompose()
+                                logger.info(f'ID: {id} #COLUMN: {field} #FTP_URL: {url if url else ("null")} #present in DECOMPOSE  FTP URLS  #TEXT: {"(null)" if len(text) == 0 else text} removed')
+                            else:
+                                tag.replace_with(text)
+                                logger.info(f'ID: {id} #COLUMN: {field} #FTP_URL: {url if url else ("null")} #present in DECOMPOSE  FTP URLS  #TEXT: Replaced with #TEXT: {text}')
+                    else:
+                        modified_html=re.sub(re.escape(url)," ",modified_html)
+                        logger.info(f'ID: {id} #COLUMN: {field} #FTP_URLS: {url} is Replaced with null')
+                else:
+                    correct_ftp.append(url)
 
-                found = find_ftp_link(modified_html, url)
-                if found:
-                    updates.append(True)
-                    modified_html = re.sub(re.escape(url), ' ', modified_html)
-                    logger.info(f'ID: {id} #COLUMN: {field} #FTP_URL: {url if url else ("null")} - Replaced with #TEXT: (null)')
+
+            if len(correct_ftp)>0:
+                logger.info(f'ID: {id} #COLUMN: {field} #FTP_URLS: {correct_ftp} will be checking')
+                for result in do_ftp_request(urls=correct_ftp, logger=logger, id=id):
+                    url = result.get('url')
+                    if not result.get('is_broken', False):
+                        # Link is still existing - no need to do anything
+                        updates.append(False)
+                        logger.info(f'Skipped ID: {id} #COLUMN: {field} #FTP_URL: {url if url else ("null")} #STATUS_CODE: {result.get("status_code")}')
+                        continue
+
+                    a_tags = soup.find_all('a', attrs={'href': url})
+                    if len(a_tags) > 0:
+                        updates.append(True)
+                        for tag in a_tags:
+                            text = tag.text.strip()
+                            if text == url or len(text) == 0:
+                                # If the link text is also a URL, we should probably remove the entire link and link text, as it will also create a problem
+                                tag.decompose()
+                                logger.info(f'ID: {id} #COLUMN: {field} #FTP_URL: {url if url else ("null")} #STATUS_CODE: {result.get("status_code")} #TEXT: {"(null)" if len(text) == 0 else text} removed')
+                            else:
+                                # Replace tag with tag text only
+                                tag.replace_with(text)
+                                logger.info(f'ID: {id} #COLUMN: {field} #FTP_URL: {url if url else ("null")} #STATUS_CODE: {result.get("status_code")} - Replaced with #TEXT: {text}')
+
+                    found = find_ftp_link(modified_html, url)
+                    if found:
+                        updates.append(True)
+                        modified_html = re.sub(re.escape(url), ' ', modified_html)
+                        logger.info(f'ID: {id} #COLUMN: {field} #FTP_URL: {url if url else ("null")} - Replaced with #TEXT: (null)')
 
         def find_broken_text_links(text):
             # pattern=r"""(?<!href="|href=\')(http[s]?:\/\/(?:[^\s<>")'\(]+|www\.[^\s<>")'\(]+)-\n{1}[^\s<>")'\(\*]+)(?![^<]*>|[^<>]*<\/a>)"""

@@ -26,6 +26,7 @@ VALID_FTP_STATUS_CODES = []
 
 # Skiped twitter, facebook
 SKIP_CHECK_SITES = ['twitter.com', 'facebook.com', 'linkedin.com']
+DECOMPOSE_URLS=['ftp.RedHat.com']
 SITE_WITH_GET_METHOD = ['portswigger.net']
 
 formatter = logging.Formatter(
@@ -90,6 +91,15 @@ def selenium_check(url,response):
     response.status_code=200
     driver.quit()
     return response
+
+
+def check_url_against_domains(url):
+    parsed_url = urlparse(url)
+    if parsed_url.scheme == 'ftp':
+        domain = parsed_url.netloc
+        if any(domain.endswith(d) for d in DECOMPOSE_URLS):
+            return True
+    return False
   
 
  
