@@ -436,7 +436,7 @@ def extract_a_tag_in_html(logger: Logger, id: int, field: str, html: Optional[st
                 modified_html = re.sub(re.escape(exact_broken_url), ' ', modified_html)
                 logger.info(f'ID: {id} #COLUMN: {field} #URL: {url if url else ("null")} #STATUS_CODE: {result.get("status_code")} - Replaced with #TEXT: (null)')
                 
-        http_text_links = find_text_links(html)
+        http_text_links = find_text_links(modified_html)
         # rm_url=[a.get('href',None) for a in a_tags]
         # rm_url = [url for url in rm_url if  not url.startswith(('www','http', 'https', 'ftp', '@', '#', 'mail')) and url not in http_text_links]
         # print(http_text_links)
