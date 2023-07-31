@@ -25,7 +25,7 @@ STATUS_CODES_FOR_FURTHER_CHECK = ['Timeout', 'SSLError', 'ConnectionError',500]
 VALID_FTP_STATUS_CODES = []
 
 # Skiped twitter, facebook
-SKIP_CHECK_SITES = ['twitter.com', 'facebook.com', 'linkedin.com']
+SKIP_CHECK_SITES = ['twitter.com', 'facebook.com', 'linkedin.com','www.facebook.com','www.linkedin.com','www.twitter.com']
 DECOMPOSE_URLS=['ftp.redhat.com', 'download.fedora.redhat.com', 'kbase.redhat.com', 'listserv.fnal.gov', 'fedora.redhat.com', 'updates.redhat.com', ]
 SITE_WITH_GET_METHOD = ['portswigger.net']
 

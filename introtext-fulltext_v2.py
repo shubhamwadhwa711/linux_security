@@ -303,8 +303,18 @@ def check_http_urls(logger:Logger, id:int,field:str,updates:list,html:Optional[s
                 logger.info(f'ID: {id} #COLUMN: {field} #URL: {url if url else "(null)"} #STATUS_CODE: {result.get("status_code")} - Replaced with #TEXT: {text}')
     return str(soup),updates,for_more_check_urls
 
+def skip_check_sites(urls):
+    remaining_urls=[]
+    for url in urls:
+        if urlparse(url).netloc in SKIP_CHECK_SITES:
+            continue
+        remaining_urls.append(url)
+    return remaining_urls
+
+
 def check_is_url_valid(html:str, logger:Logger, id:int,field:str,base_url:str,updates:list):
-    all_urls = create_relative_urls(html,base_url)
+    urls = create_relative_urls(html,base_url)
+    all_urls=skip_check_sites(urls)
     ftp_urls = list(filter(lambda x: is_ftp_links(x), all_urls))
     http_urls = list(filter(lambda x: not is_ftp_links(x), all_urls))
     html,updates,for_more_check_urls = check_ftp_urls(html=html,urls= ftp_urls, logger=logger, id=id,field=field,updates=updates)
