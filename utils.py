@@ -15,7 +15,7 @@ from urllib.request import urlopen
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 
-HTTP_REQUEST_TIMEOUT = 20
+HTTP_REQUEST_TIMEOUT = 10
 FTP_REQUEST_TIMEOUT = 5
 
 # Skiped Cloudflare status 403
@@ -26,7 +26,7 @@ VALID_FTP_STATUS_CODES = []
 
 # Skiped twitter, facebook
 SKIP_CHECK_SITES = ['twitter.com', 'facebook.com', 'linkedin.com']
-DECOMPOSE_URLS=['ftp.RedHat.com']
+DECOMPOSE_URLS=['ftp.redhat.com', 'download.fedora.redhat.com', 'kbase.redhat.com', 'listserv.fnal.gov', 'fedora.redhat.com', 'updates.redhat.com', ]
 SITE_WITH_GET_METHOD = ['portswigger.net']
 
 formatter = logging.Formatter(
@@ -95,8 +95,9 @@ def selenium_check(url,response):
 
 def check_url_against_domains(url):
     parsed_url = urlparse(url)
-    if parsed_url.scheme == 'ftp':
+    if parsed_url.scheme in ['ftp','http','https']:
         domain = parsed_url.netloc
+        domain=domain.lower()
         if any(domain.endswith(d) for d in DECOMPOSE_URLS):
             return True
     return False
@@ -153,7 +154,14 @@ def check_http_broken_link(url, logger, id, timeout: int = HTTP_REQUEST_TIMEOUT)
         return response
     return response
 
-
+def check_broken_url(url, timeout):
+    """
+    check url type
+    if ftp:
+        return check_ftp_broken_link
+    return check_http_brokien_link
+    
+    """
 
 def check_ftp_broken_link(url, timeout: int = FTP_REQUEST_TIMEOUT):
     ftp_urls = url.replace("ftp://","").split("/")

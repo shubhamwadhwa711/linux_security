@@ -73,11 +73,11 @@ def find_a_tag_in_html(logger: Logger, field: str, html: Optional[str] = None, u
         updates = []
         for url in urls:
             a_tags = soup.find_all('a', attrs={'href': url})
-            if len(a_tags) == 0 and url in str(soup):
-                # html = html.replace(url, ' ')
-                url.replace_with(' ')
+            str_soup = str(soup)
+            if len(a_tags) == 0 and url in str_soup:
+                str_soup = str_soup.replace(url, ' ')
                 updates.append(True)
-                continue
+                soup = BeautifulSoup(str_soup, 'html.parser')
             for tag in a_tags:
                 text = tag.text.strip()
                 updates.append(True)

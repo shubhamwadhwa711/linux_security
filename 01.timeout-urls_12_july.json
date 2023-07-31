@@ -1,25 +1,5 @@
 {
-    "346263": [
-        "https://fedoraproject.org/keys"
-    ],
-    "345551": [
-        "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org"
-    ],
     "345550": [
-        "https://fedoraproject.org/wiki/Mailing_list_guidelines"
-    ],
-    "344243": [
-        "https://www"
-    ],
-    "110347": [
-        "http://www.newsbytes.com/news/01/168397.html",
-        "http://www.newsbytes.com/news/01/167998.html",
-        "http://www.linuxplanet.com/linuxplanet/opinions/3642/1/",
-        "http://www.interhack.net/people/cmcurtin/snake-oil-faq.html",
-        "http://www.chantilley.com",
-        "http://www.ciac.org/ciac/bulletins/l-117.shtml"
-    ],
-    "102331": [
-        "http://bugzilla.RedHat.com/bugzilla"
+        "https://fedorapro.org/wiki/Mailing_list_guidelines"
     ]
 }

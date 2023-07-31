@@ -189,6 +189,16 @@ def find_text_links(text):
     # Return the list of links
     return matches
 
+def find_broken_text_links(text):
+        # pattern=r"""(?<!href="|href=\')(http[s]?:\/\/(?:[^\s<>")'\(]+|www\.[^\s<>")'\(]+)-\n{1}[^\s<>")'\(\*]+)(?![^<]*>|[^<>]*<\/a>)"""
+        pattern=r"""(?<!href="|href=\')(http[s]?:\/\/(?:[^\s<>")'\(;]+|www\.[^\s<>")'\(]+)-\n{1}[^\s<>")'\(\*;]+)(?![^<]*>|[^<>]*<\/a>)"""
+        matches=re.findall(pattern,text)
+        broken_links={}
+        for m in matches:
+            joined_url=re.sub(r'\n', '',m)
+            broken_links[joined_url]=m
+        return broken_links
+
 # added function to remove parenthesis or periods and &gt
 
 def strip_trailing_in_anchor(url):
@@ -340,7 +350,14 @@ def extract_a_tag_in_html(logger: Logger, id: int, field: str, html: Optional[st
                         # Replace tag with tag text only
                         tag.replace_with(text)
                         logger.info(f'ID: {id} #COLUMN: {field} #URL: {url if url else "(null)"} #STATUS_CODE: {result.get("status_code")} - Replaced with #TEXT: {text}')
-
+        
+        def decompose_urls(text):
+            decompose_broken_text_links=find_broken_text_links(html)
+            decompose_broken_text_links=decompose_broken_text_links.keys()
+            decompose_text_links=find_text_links(modified_html)
+            decompose_text_links.extend(decompose_broken_text_links)
+            results=[check_url_against_domains(url) for url in decompose_text_links]
+            return results,decompose_text_links
 
         modified_html = str(soup)
         ftp_links = find_ftp_links(modified_html)
@@ -399,16 +416,6 @@ def extract_a_tag_in_html(logger: Logger, id: int, field: str, html: Optional[st
                         modified_html = re.sub(re.escape(url), ' ', modified_html)
                         logger.info(f'ID: {id} #COLUMN: {field} #FTP_URL: {url if url else ("null")} - Replaced with #TEXT: (null)')
 
-        def find_broken_text_links(text):
-            # pattern=r"""(?<!href="|href=\')(http[s]?:\/\/(?:[^\s<>")'\(]+|www\.[^\s<>")'\(]+)-\n{1}[^\s<>")'\(\*]+)(?![^<]*>|[^<>]*<\/a>)"""
-            pattern=r"""(?<!href="|href=\')(http[s]?:\/\/(?:[^\s<>")'\(;]+|www\.[^\s<>")'\(]+)-\n{1}[^\s<>")'\(\*;]+)(?![^<]*>|[^<>]*<\/a>)"""
-            matches=re.findall(pattern,text)
-            broken_links={}
-            for m in matches:
-                joined_url=re.sub(r'\n', '',m)
-                broken_links[joined_url]=m
-            return broken_links
-
         http_broken_text_links=find_broken_text_links(html)
         
         if len(http_broken_text_links)>0:
@@ -437,25 +444,7 @@ def extract_a_tag_in_html(logger: Logger, id: int, field: str, html: Optional[st
                 logger.info(f'ID: {id} #COLUMN: {field} #URL: {url if url else ("null")} #STATUS_CODE: {result.get("status_code")} - Replaced with #TEXT: (null)')
                 
         http_text_links = find_text_links(modified_html)
-        # rm_url=[a.get('href',None) for a in a_tags]
-        # rm_url = [url for url in rm_url if  not url.startswith(('www','http', 'https', 'ftp', '@', '#', 'mail')) and url not in http_text_links]
-        # print(http_text_links)
-
-        # if len(rm_url)>0:
-        #     for result in do_http_request(urls=rm_url, logger=logger, id=id):
-        #         url=result.get('url')
-        #         if not result.get('is_broken', False):
-        #             updates.append(True)
-        #             if result.get('status_code') in VALID_HTTP_STATUS_CODES:
-        #                 logger.warning(f'ID: {id} #COLUMN: {field} #URL: {url} #STATUS_CODE: {result.get("status_code")}')
-        #             else:
-        #                 modified_html = re.sub(re.escape(url), '', modified_html)
-        #                 logger.info(f'ID: {id} #COLUMN: {field} #URL: {original_url if original_url else ("null")} #STATUS_CODE: {result.get("status_code")} - Replaced with #TEXT: (null)')
-        #             continue
-        #         updates.append(True)
-        #         modified_html = re.sub(re.escape(url), '', modified_html)
-        #         logger.info(f'ID: {id} #COLUMN: {field} #URL: {url if url else ("null")} #STATUS_CODE: {result.get("status_code")} - Replaced with #TEXT: (null)')
-
+  
         if len(http_text_links) > 0:
             url_startwith_www = [url for url in http_text_links if url.startswith('www')]
             url_startwith_http = [url for url in http_text_links if url not in url_startwith_www]

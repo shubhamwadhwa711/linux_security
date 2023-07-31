@@ -4063,3 +4063,32 @@
 2023-07-17 11:11:01 - INFO - #COLUMN: fulltext #URL: http://security.e-matters.de/advisories/012002.html #TEXT: (empty) removed
 2023-07-17 11:11:15 - INFO - ID: 103766 has been updated in database
 2023-07-17 11:11:22 - INFO - Processing ID: 103766 completed
+2023-07-31 19:47:50 - INFO - ******************** Processing ID: 109940 ********************
+2023-07-31 19:48:31 - WARNING - #ID: 109940 #URL http://www.synnergy.net/ Error: HTTPConnectionPool(host='ww25.synnergy.net', port=80): Max retries exceeded with url: /?subid1=20230801-0018-1106-b732-065fff7dccbb (Caused by NameResolutionError("<urllib3.connection.HTTPConnection object at 0x7fb1cedb5a50>: Failed to resolve 'ww25.synnergy.net' ([Errno -3] Temporary failure in name resolution)"))
+2023-07-31 19:48:31 - INFO - #ID: 109940 #URL http://www.synnergy.net/ - Requesting again using GET request instead of HEAD
+2023-07-31 19:48:57 - ERROR - #ID 109940 #URL http://www.synnergy.net/ Error: HTTPConnectionPool(host='ww38.synnergy.net', port=80): Max retries exceeded with url: / (Caused by NameResolutionError("<urllib3.connection.HTTPConnection object at 0x7fb1cedb6980>: Failed to resolve 'ww38.synnergy.net' ([Errno -3] Temporary failure in name resolution)"))
+2023-07-31 19:48:57 - INFO - Processing ID: 109940 completed
+2023-07-31 19:50:25 - INFO - ******************** Processing ID: 109940 ********************
+2023-07-31 19:50:27 - INFO - Skipped ID: 109940 #URL: http://www.synnergy.net/ #STATUS_CODE: 200
+2023-07-31 19:50:27 - INFO - Processing ID: 109940 completed
+2023-07-31 19:56:27 - INFO - ******************** Processing ID: 346263 ********************
+2023-07-31 19:56:31 - INFO - Skipped ID: 346263 #URL: https://fedoraproject.org/keys #STATUS_CODE: 200
+2023-07-31 19:56:31 - INFO - Processing ID: 346263 completed
+2023-07-31 19:56:31 - INFO - ******************** Processing ID: 345551 ********************
+2023-07-31 19:56:36 - INFO - Skipped ID: 345551 #URL: https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org #STATUS_CODE: 200
+2023-07-31 19:56:36 - INFO - Processing ID: 345551 completed
+2023-07-31 19:56:36 - INFO - ******************** Processing ID: 345550 ********************
+2023-07-31 19:56:37 - WARNING - #ID: 345550 #URL https://fedorapro.org/wiki/Mailing_list_guidelines Error: HTTPSConnectionPool(host='fedorapro.org', port=443): Max retries exceeded with url: /wiki/Mailing_list_guidelines (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x7f0653d907c0>: Failed to resolve 'fedorapro.org' ([Errno -2] Name or service not known)"))
+2023-07-31 19:56:37 - INFO - #ID: 345550 #URL https://fedorapro.org/wiki/Mailing_list_guidelines - Requesting again using GET request instead of HEAD
+2023-07-31 19:56:37 - ERROR - #ID 345550 #URL https://fedorapro.org/wiki/Mailing_list_guidelines Error: HTTPSConnectionPool(host='fedorapro.org', port=443): Max retries exceeded with url: /wiki/Mailing_list_guidelines (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x7f0653d90910>: Failed to resolve 'fedorapro.org' ([Errno -2] Name or service not known)"))
+2023-07-31 19:56:37 - INFO - Processing ID: 345550 completed
+2023-07-31 19:57:56 - INFO - ******************** Processing ID: 346263 ********************
+2023-07-31 19:57:58 - INFO - Skipped ID: 346263 #URL: https://fedoraproject.org/keys #STATUS_CODE: 200
+2023-07-31 19:58:29 - INFO - Processing ID: 346263 completed
+2023-07-31 19:58:29 - INFO - ******************** Processing ID: 345551 ********************
+2023-07-31 19:58:34 - INFO - Skipped ID: 345551 #URL: https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org #STATUS_CODE: 200
+2023-07-31 19:58:42 - INFO - Processing ID: 345551 completed
+2023-07-31 19:58:42 - INFO - ******************** Processing ID: 345550 ********************
+2023-07-31 19:58:43 - WARNING - #ID: 345550 #URL https://fedorapro.org/wiki/Mailing_list_guidelines Error: HTTPSConnectionPool(host='fedorapro.org', port=443): Max retries exceeded with url: /wiki/Mailing_list_guidelines (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x7f12b77af1f0>: Failed to resolve 'fedorapro.org' ([Errno -2] Name or service not known)"))
+2023-07-31 19:58:43 - INFO - #ID: 345550 #URL https://fedorapro.org/wiki/Mailing_list_guidelines - Requesting again using GET request instead of HEAD
+2023-07-31 19:58:43 - ERROR - #ID 345550 #URL https://fedorapro.org/wiki/Mailing_list_guidelines Error: HTTPSConnectionPool(host='fedorapro.org', port=443): Max retries exceeded with url: /wiki/Mailing_list_guidelines (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x7f12b77ac6d0>: Failed to resolve 'fedorapro.org' ([Errno -2] Name or service not known)"))
