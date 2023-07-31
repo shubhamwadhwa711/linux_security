@@ -27,7 +27,8 @@ VALID_FTP_STATUS_CODES = []
 # Skiped twitter, facebook
 SKIP_CHECK_SITES = ['twitter.com', 'facebook.com', 'linkedin.com','www.facebook.com','www.linkedin.com','www.twitter.com']
 DECOMPOSE_URLS=['ftp.redhat.com', 'download.fedora.redhat.com', 'kbase.redhat.com', 'listserv.fnal.gov', 'fedora.redhat.com', 'updates.redhat.com', ]
-SITE_WITH_GET_METHOD = ['portswigger.net']
+# SITE_WITH_GET_METHOD = ['portswigger.net']
+SITE_WITH_GET_METHOD = ['portswigger.net', 'www.amd.com']
 
 formatter = logging.Formatter(
     fmt='%(asctime)s - %(levelname)s - %(message)s',
@@ -128,20 +129,31 @@ def check_http_broken_link(url, logger, id, timeout: int = HTTP_REQUEST_TIMEOUT)
         5xx - server error
     """
     try:
-        response = requests.head(
-            url=url,
-            headers = {"User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36"},
-            timeout=timeout
-        )
-        if response.status_code  in [405,403, 301, 302] or any(site in url for site in SITE_WITH_GET_METHOD): # 405 Method Not Allowed - Try with GET instead
+        if (site in url for site in SITE_WITH_GET_METHOD):
             response = requests.get(
                 url=url,
                 headers = {"User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36"},
                 timeout=timeout
             )
+            if response.status_code==404:
+                return selenium_check(url,response)
             return response
-        if response.status_code==404:
-           return selenium_check(url,response)
+        else:
+            response = requests.head(
+                url=url,
+                headers = {"User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36"},
+                timeout=timeout
+            )
+            if response.status_code  in [405,403, 301, 302] or any(site in url for site in SITE_WITH_GET_METHOD): # 405 Method Not Allowed - Try with GET instead
+                response = requests.get(
+                    url=url,
+                    headers = {"User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36"},
+                    timeout=timeout
+                )
+            if response.status_code==404:
+                return selenium_check(url,response)
+            return response
+    
 
     except (ReadTimeout, ConnectionError) as e:
         logger.warning(f'#ID: {id} #URL {url} Error: {str(e)}')
