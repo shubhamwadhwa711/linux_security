@@ -12,7 +12,7 @@ import configparser
 import os
 from logging import Logger
 import re
-
+import json
 from pymysql import MySQLError
 from ftplib import all_errors
 
@@ -290,6 +290,7 @@ def check_http_urls(logger:Logger, id:int,field:str,updates:list,html:Optional[s
         a_tags = soup.find_all('a', attrs={'href': url})
         if len(a_tags) == 0 and url in str_soup:
             str_soup=str_soup.replace(url," ")
+            logger.info(f'Skipped ID: {id} #COLUMN: {field} #URL: {url} #STATUS_CODE: {result.get("status_code")} #Replace with {"NULL"}')
             updates.append(True)
             soup=BeautifulSoup(str_soup,"html.parser")
         updates.append(True)
@@ -338,14 +339,29 @@ def process_html_text(logger: Logger, id: int, field: str, html: Optional[str] =
 def do_remove_url(record: Dict[str, Any], logger: Logger, base_url: str):
     id = record.get("id")
     introtext = record.get("introtext")
-    adjusted_introtext, need_update_introtext,intro_timeout_urls,= process_html_text(
-        logger=logger, id=id, field="introtext", html=introtext, base_url=base_url
-    )
+    introtext_json_data = introtext.strip().strip("\\")
+    if introtext_json_data.startswith("{") and introtext_json_data.endswith("}"):
+        logger.info(f"Skipped ID: {id} - introtext is a json data")
+        adjusted_introtext, need_update_introtext, intro_timeout_urls = None, None, []
+    else:
+        logger.info(f"processing  {id} - introtext is not JSON, proceeding further to check HTML")
+        adjusted_introtext, need_update_introtext, intro_timeout_urls = process_html_text(
+            logger=logger, id=id, field="introtext", html=introtext, base_url=base_url
+        )
+
 
     fulltext = record.get("fulltext")
-    adjusted_fulltext, need_update_fulltext, full_timeout_urls = process_html_text(
-        logger=logger, id=id, field="fulltext", html=fulltext, base_url=base_url
+    fulltext_json_data = fulltext.strip().strip("\\")
+    if  fulltext_json_data.startswith("{") and fulltext_json_data.endswith("}"):
+        logger.info(
+        f"Skipped ID: {id} - fulltext a json data"
     )
+        adjusted_fulltext, need_update_fulltext, full_timeout_urls = None, None, []
+    else:
+        logger.info(f"processing {id} - fulltext is not json proceeding further to check html")
+        adjusted_fulltext, need_update_fulltext, full_timeout_urls = process_html_text(
+            logger=logger, id=id, field="fulltext", html=fulltext, base_url=base_url
+        )
     if adjusted_introtext is None and adjusted_fulltext is None:
         logger.info(
             f"Skipped ID: {id} - Not found any URLs in both introtext, fulltext fields"

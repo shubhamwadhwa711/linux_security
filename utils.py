@@ -20,7 +20,7 @@ FTP_REQUEST_TIMEOUT = 5
 
 # Skiped Cloudflare status 403
 # Skiped Amazon status 503
-VALID_HTTP_STATUS_CODES = [403, 503]
+VALID_HTTP_STATUS_CODES = [403, 503, 429]
 STATUS_CODES_FOR_FURTHER_CHECK = ['Timeout', 'SSLError', 'ConnectionError',500]
 VALID_FTP_STATUS_CODES = []
 
@@ -129,7 +129,7 @@ def check_http_broken_link(url, logger, id, timeout: int = HTTP_REQUEST_TIMEOUT)
         5xx - server error
     """
     try:
-        if (site in url for site in SITE_WITH_GET_METHOD):
+        if any(site in url for site in SITE_WITH_GET_METHOD):
             response = requests.get(
                 url=url,
                 headers = {"User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36"},
