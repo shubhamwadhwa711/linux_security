@@ -19,5 +19,11 @@
         "https://twitter.com/lnxsec",
         "https://www.linkedin.com/company/linuxsecurity/",
         "https://valicyber.com/"
+    ],
+    "256466": [
+        "http://support.novell.com/security/cve/CVE-2013-0504.html",
+        "http://support.novell.com/security/cve/CVE-2014-0503.html",
+        "https://bugzilla.novell.com/867808",
+        "http://helpx.adobe.com/security/products/flash-player/apsb14"
     ]
 }

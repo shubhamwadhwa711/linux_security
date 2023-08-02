@@ -234,23 +234,26 @@ def check_ftp_urls( logger:Logger, id:int, updates:list,field:str, html: Optiona
             updates.append(False)
             logger.info(f'Skipped ID: {id} #COLUMN: {field} #FTP_URL: {url if url else ("null")} #STATUS_CODE: {result.get("status_code")}')
             continue
-        a_tags = soup.find_all('a', attrs={'href': url})
-        str_soup=str(soup)
-        if len(a_tags) == 0 and url in str_soup:
-            str_soup=str_soup.replace(url," ")
+        if result.get('status_code')==404:
+            a_tags = soup.find_all('a', attrs={'href': url})
+            str_soup=str(soup)
+            if len(a_tags) == 0 and url in str_soup:
+                str_soup=str_soup.replace(url," ")
+                updates.append(True)
+                soup=BeautifulSoup(str_soup,'html.parser')
             updates.append(True)
-            soup=BeautifulSoup(str_soup,'html.parser')
-        updates.append(True)
-        for tag in a_tags:
-            text = tag.text.strip()
-            if text == url or len(text) == 0:
-                # If the link text is also a URL, we should probably remove the entire link and link text, as it will also create a problem
-                logger.info(f'ID: {id} #COLUMN: {field} #URL: {url if url else "(null)"} #STATUS_CODE: {result.get("status_code")} #TEXT: {"(null)" if len(text) == 0 else text} removed')
-                tag.decompose()
-            else:
-                # Replace tag with tag text only
-                tag.replace_with(text)
-                logger.info(f'ID: {id} #COLUMN: {field} #URL: {url if url else "(null)"} #STATUS_CODE: {result.get("status_code")} - Replaced with #TEXT: {text}')
+            for tag in a_tags:
+                text = tag.text.strip()
+                if text == url or len(text) == 0:
+                    # If the link text is also a URL, we should probably remove the entire link and link text, as it will also create a problem
+                    logger.info(f'ID: {id} #COLUMN: {field} #URL: {url if url else "(null)"} #STATUS_CODE: {result.get("status_code")} #TEXT: {"(null)" if len(text) == 0 else text} removed')
+                    tag.decompose()
+                else:
+                    # Replace tag with tag text only
+                    tag.replace_with(text)
+                    logger.info(f'ID: {id} #COLUMN: {field} #URL: {url if url else "(null)"} #STATUS_CODE: {result.get("status_code")} - Replaced with #TEXT: {text}')
+        else:
+            for_more_check_urls.add(url)
     return str(soup), updates,for_more_check_urls
 
 def check_http_urls(logger:Logger, id:int,field:str,updates:list,html:Optional[str]=None, urls:list=None):
@@ -286,28 +289,35 @@ def check_http_urls(logger:Logger, id:int,field:str,updates:list,html:Optional[s
                 else:
                     logger.info(f'Skipped ID: {id} #COLUMN: {field} #URL: {parsed_url} #STATUS_CODE: {result.get("status_code")}')
             continue
-
-        a_tags = soup.find_all('a', attrs={'href': url})
-        if len(a_tags) == 0 and url in str_soup:
-            str_soup=str_soup.replace(url," ")
-            logger.info(f'Skipped ID: {id} #COLUMN: {field} #URL: {url} #STATUS_CODE: {result.get("status_code")} #Replace with {"NULL"}')
+        
+        
+        if result.get('status_code')==404:
+            a_tags = soup.find_all('a', attrs={'href': url})
+            if len(a_tags) == 0 and url in str_soup:
+                str_soup=str_soup.replace(url," ")
+                logger.info(f'Skipped ID: {id} #COLUMN: {field} #URL: {url} #STATUS_CODE: {result.get("status_code")} #Replace with {"NULL"}')
+                updates.append(True)
+                soup=BeautifulSoup(str_soup,"html.parser")
             updates.append(True)
-            soup=BeautifulSoup(str_soup,"html.parser")
-        updates.append(True)
-        for tag in a_tags:
-            text = tag.text.strip()
-            if text == url or len(text) == 0:
-                logger.info(f'ID: {id} #COLUMN: {field} #URL: {url if url else "(null)"} #STATUS_CODE: {result.get("status_code")} #TEXT: {"(null)" if len(text) == 0 else text} removed')
-                tag.decompose()
-            else:
-                tag.replace_with(text)
-                logger.info(f'ID: {id} #COLUMN: {field} #URL: {url if url else "(null)"} #STATUS_CODE: {result.get("status_code")} - Replaced with #TEXT: {text}')
+            for tag in a_tags:
+                text = tag.text.strip()
+                if text == url or len(text) == 0:
+                    logger.info(f'ID: {id} #COLUMN: {field} #URL: {url if url else "(null)"} #STATUS_CODE: {result.get("status_code")} #TEXT: {"(null)" if len(text) == 0 else text} removed')
+                    tag.decompose()
+                else:
+                    tag.replace_with(text)
+                    logger.info(f'ID: {id} #COLUMN: {field} #URL: {url if url else "(null)"} #STATUS_CODE: {result.get("status_code")} - Replaced with #TEXT: {text}')
+        else:
+            for_more_check_urls.add(url)
+            logger.info(f'ID: {id} #COLUMN: {field} #URL: {url} added for more checking')
+    
     return str(soup),updates,for_more_check_urls
 
-def skip_check_sites(urls):
+def skip_check_sites(urls,logger:Logger):
     remaining_urls=[]
     for url in urls:
         if urlparse(url).netloc in SKIP_CHECK_SITES:
+            logger.info(f"{url} is skiped for checking:- present in SKIP_CHECK_SITES ")
             continue
         remaining_urls.append(url)
     return remaining_urls
@@ -315,7 +325,7 @@ def skip_check_sites(urls):
 
 def check_is_url_valid(html:str, logger:Logger, id:int,field:str,base_url:str,updates:list):
     urls = create_relative_urls(html,base_url)
-    all_urls=skip_check_sites(urls)
+    all_urls=skip_check_sites(urls,logger)
     ftp_urls = list(filter(lambda x: is_ftp_links(x), all_urls))
     http_urls = list(filter(lambda x: not is_ftp_links(x), all_urls))
     html,updates,for_more_check_urls = check_ftp_urls(html=html,urls= ftp_urls, logger=logger, id=id,field=field,updates=updates)

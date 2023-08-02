@@ -4097,3 +4097,37 @@
 2023-07-31 22:06:12 - INFO - #ID: 345550 #URL https://fedorapro.org/wiki/Mailing_list_guidelines - Requesting again using GET request instead of HEAD
 2023-07-31 22:06:12 - ERROR - #ID 345550 #URL https://fedorapro.org/wiki/Mailing_list_guidelines Error: HTTPSConnectionPool(host='fedorapro.org', port=443): Max retries exceeded with url: /wiki/Mailing_list_guidelines (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x7f4178168130>: Failed to resolve 'fedorapro.org' ([Errno -2] Name or service not known)"))
 2023-07-31 22:14:39 - INFO - Processing ID: 345550 completed
+2023-08-02 18:23:43 - INFO - ******************** Processing ID: 345550 ********************
+2023-08-02 18:23:48 - WARNING - #ID: 345550 #URL https://fedorapro.org/wiki/Mailing_list_guidelines Error: HTTPSConnectionPool(host='fedorapro.org', port=443): Max retries exceeded with url: /wiki/Mailing_list_guidelines (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x7efd0c3a01c0>: Failed to resolve 'fedorapro.org' ([Errno -2] Name or service not known)"))
+2023-08-02 18:23:48 - INFO - #ID: 345550 #URL https://fedorapro.org/wiki/Mailing_list_guidelines - Requesting again using GET request instead of HEAD
+2023-08-02 18:23:49 - ERROR - #ID 345550 #URL https://fedorapro.org/wiki/Mailing_list_guidelines Error: HTTPSConnectionPool(host='fedorapro.org', port=443): Max retries exceeded with url: /wiki/Mailing_list_guidelines (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x7efd0c3a0970>: Failed to resolve 'fedorapro.org' ([Errno -2] Name or service not known)"))
+2023-08-02 18:38:30 - INFO - ******************** Processing ID: 345550 ********************
+2023-08-02 18:38:50 - WARNING - #ID: 345550 #URL https://fedorapro.org/wiki/Mailing_list_guidelines Error: HTTPSConnectionPool(host='fedorapro.org', port=443): Max retries exceeded with url: /wiki/Mailing_list_guidelines (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x7fd984027790>: Failed to resolve 'fedorapro.org' ([Errno -2] Name or service not known)"))
+2023-08-02 18:38:50 - INFO - #ID: 345550 #URL https://fedorapro.org/wiki/Mailing_list_guidelines - Requesting again using GET request instead of HEAD
+2023-08-02 18:38:50 - ERROR - #ID 345550 #URL https://fedorapro.org/wiki/Mailing_list_guidelines Error: HTTPSConnectionPool(host='fedorapro.org', port=443): Max retries exceeded with url: /wiki/Mailing_list_guidelines (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x7fd98406d600>: Failed to resolve 'fedorapro.org' ([Errno -2] Name or service not known)"))
+2023-08-02 18:40:19 - INFO - ******************** Processing ID: 345550 ********************
+2023-08-02 18:40:22 - WARNING - #ID: 345550 #URL https://fedorapro.org/wiki/Mailing_list_guidelines Error: HTTPSConnectionPool(host='fedorapro.org', port=443): Max retries exceeded with url: /wiki/Mailing_list_guidelines (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x7f6cc0d36d40>: Failed to resolve 'fedorapro.org' ([Errno -2] Name or service not known)"))
+2023-08-02 18:40:22 - INFO - #ID: 345550 #URL https://fedorapro.org/wiki/Mailing_list_guidelines - Requesting again using GET request instead of HEAD
+2023-08-02 18:40:22 - ERROR - #ID 345550 #URL https://fedorapro.org/wiki/Mailing_list_guidelines Error: HTTPSConnectionPool(host='fedorapro.org', port=443): Max retries exceeded with url: /wiki/Mailing_list_guidelines (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x7f6cc0d376d0>: Failed to resolve 'fedorapro.org' ([Errno -2] Name or service not known)"))
+2023-08-02 18:45:55 - INFO - ******************** Processing ID: 345550 ********************
+2023-08-02 18:46:04 - WARNING - #ID: 345550 #URL https://fedorapro.org/wiki/Mailing_list_guidelines Error: HTTPSConnectionPool(host='fedorapro.org', port=443): Max retries exceeded with url: /wiki/Mailing_list_guidelines (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x7fd70df2f130>: Failed to resolve 'fedorapro.org' ([Errno -2] Name or service not known)"))
+2023-08-02 18:46:04 - INFO - #ID: 345550 #URL https://fedorapro.org/wiki/Mailing_list_guidelines - Requesting again using GET request instead of HEAD
+2023-08-02 18:46:04 - ERROR - #ID 345550 #URL https://fedorapro.org/wiki/Mailing_list_guidelines Error: HTTPSConnectionPool(host='fedorapro.org', port=443): Max retries exceeded with url: /wiki/Mailing_list_guidelines (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x7fd70df84310>: Failed to resolve 'fedorapro.org' ([Errno -2] Name or service not known)"))
+2023-08-02 18:51:28 - INFO - Processing ID: 345550 completed
+2023-08-02 18:51:28 - INFO - ******************** Processing ID: 348333 ********************
+2023-08-02 18:51:33 - INFO - Skipped ID: 348333 #URL: https://open.spotify.com/show/3xNtp27g90IRWzwNuTAiaD #STATUS_CODE: 200
+2023-08-02 18:51:35 - INFO - Skipped ID: 348333 #URL: https://github.com/Vali-Cyber/SecurityPerf #STATUS_CODE: 200
+2023-08-02 18:51:36 - INFO - Skipped ID: 348333 #URL: https://github.com/mitre/caldera #STATUS_CODE: 200
+2023-08-02 18:51:37 - INFO - Skipped ID: 348333 #URL: https://www.facebook.com/lnxsec #STATUS_CODE: 200
+2023-08-02 18:51:38 - INFO - Skipped ID: 348333 #URL: https://linuxsecurity.com/features/zerolock-how-to-defend-against-ransomware-on-linux #STATUS_CODE: 200
+2023-08-02 18:51:40 - INFO - Skipped ID: 348333 #URL: https://linuxsecurity.com/features/10-common-security-mistakes-sysadmins-make-how-to-avoid-these-pitfalls #STATUS_CODE: 200
+2023-08-02 18:51:40 - INFO - Skipped ID: 348333 #URL: https://linuxsecurity.com/features/must-read-articles/linux-malware-the-truth-about-this-growing-threat-updated #STATUS_CODE: 200
+2023-08-02 18:51:41 - INFO - Skipped ID: 348333 #URL: https://linuxsecurity.com/features/top-6-vulnerability-scanning-tools #STATUS_CODE: 200
+2023-08-02 18:51:41 - INFO - Skipped ID: 348333 #URL: https://linuxsecurity.com/features/how-secure-is-linux #STATUS_CODE: 200
+2023-08-02 18:51:42 - INFO - Skipped ID: 348333 #URL: https://linuxsecurity.com/features/linux-container-security-primer #STATUS_CODE: 200
+2023-08-02 18:51:43 - INFO - Skipped ID: 348333 #URL: https://linuxsecurity.com/features/must-read-articles/top-tips-for-securing-your-linux-system-in-2020 #STATUS_CODE: 200
+2023-08-02 18:51:43 - INFO - Skipped ID: 348333 #URL: https://valicyber.com/securityperf/ #STATUS_CODE: 200
+2023-08-02 18:51:47 - INFO - Skipped ID: 348333 #URL: https://linuxsecurity.com/features/history-of-malware-on-linux-and-what-s-being-done-to-stop-it #STATUS_CODE: 200
+2023-08-02 18:51:47 - INFO - Skipped ID: 348333 #URL: https://valicyber.com/ #STATUS_CODE: 200
+2023-08-02 18:51:48 - INFO - Skipped ID: 348333 #URL: https://twitter.com/lnxsec #STATUS_CODE: 200
+2023-08-02 18:53:06 - INFO - #COLUMN: fulltext #URL: https://www.linkedin.com/company/linuxsecurity/ - Replaced with #TEXT: LinkedIn
