@@ -85,7 +85,7 @@ def find_broken_urls(text):
 
 def find_urls(text):
         # pattern=r"""\b(?:(?:(?:(?:http[s]?|ftp[s]):\/\/)|(?:www))|(?<=href="|href=\'))[^\s<>]+\b[\/]?"""
-        pattern = r"""\b(?:(?:(?:(?:https?|ftp?|sftp?):\/\/)|(?:www))|(?:ftp)|(?<=href="|href=\'))[^\s<>]+\b[\/]?"""
+        pattern = r"""\b(?:(?:(?:(?:https?|ftp?|sftp?):\/\/)|(?:www.))|(?:ftp)|(?<=href="|href=\'))[^\s<>]+\b[\/]?"""
         matches=re.findall(pattern,text)
         return matches
 
@@ -104,6 +104,11 @@ def decompose_known_urls(html:str,logger:Logger,id:int,field:str):
     soup=BeautifulSoup(html,'html.parser')
     for url in all_urls:
         parsed_url = urlparse(url)
+        if parsed_url.scheme=="":
+            new_parsed_url=f"https://{url}"
+            logger.info(f'ID: {id} #COLUMN: {field} #URL: {url} replaced with {new_parsed_url}')
+            soup = re.sub(re.escape(url), new_parsed_url, str(soup))
+            updates.append(True)
         domain = parsed_url.netloc
         domain=domain.lower()
         str_soup = str(soup)
