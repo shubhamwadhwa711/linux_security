@@ -11,7 +11,8 @@
             "program": "${file}",
             "console": "integratedTerminal",
             // "args": ["--file", "01.timeout-urls_12_july.json", "--timeout", "10"],
-            "args": ["--id", "126375"],
+            "args": ["--id", "126375","--commit"],
+            // 
             "justMyCode": false
         }
     ]
