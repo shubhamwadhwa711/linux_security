@@ -14,6 +14,8 @@ from urllib.parse import urlparse
 from urllib.request import urlopen
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
+import asyncio
+import aiohttp
 
 HTTP_REQUEST_TIMEOUT = 10
 FTP_REQUEST_TIMEOUT = 5
@@ -75,21 +77,22 @@ def get_logger(name, log_file, level=logging.INFO):
     return logger
 
 
-def selenium_check(url,response):
-    
+async def selenium_check(url,response,logger):
     chrome_options = Options()
     chrome_options.add_argument("--headless")
     driver = webdriver.Chrome(options=chrome_options)
     driver.get(url)
     search_texts = ["404", "not found", "page not found"]  # Add more search texts if needed
-
-
-
     for text in search_texts:
         if text.lower() in driver.page_source.lower():
             driver.quit()
+            if str(response.url) != url:
+                logger.info(f"response url not match with original url set the original url with in place of response url ")
+                st=response.url
+                st=url
+                response=st
             return response
-    response.status_code=200
+    response.status=200
     driver.quit()
     return response
 
@@ -119,52 +122,79 @@ def timeit(method):
     return wrapper
 
 
-def check_http_broken_link(url, logger, id, timeout: int = HTTP_REQUEST_TIMEOUT):
-    """Http status code
-
-        1xx - informational
-        2xx - success
-        3xx - redirection
-        4xx - client error
-        5xx - server error
-    """
+async  def check_http_broken_link(url, session:aiohttp.ClientSession, logger,id,timeout: int = HTTP_REQUEST_TIMEOUT):
     try:
         if any(site in url for site in SITE_WITH_GET_METHOD):
-            response = requests.get(
-                url=url,
-                headers = {"User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36"},
-                timeout=timeout
-            )
-            if response.status_code==404:
-                return selenium_check(url,response)
-            return response
+            async with session.get(url, headers={"User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36"}, timeout=timeout) as response:
+                if response.status == 404:
+                    return await selenium_check(url, response,logger)
+                return response
         else:
-            response = requests.head(
-                url=url,
-                headers = {"User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36"},
-                timeout=timeout
-            )
-            if response.status_code  in [405,403, 301, 302] or any(site in url for site in SITE_WITH_GET_METHOD): # 405 Method Not Allowed - Try with GET instead
-                response = requests.get(
-                    url=url,
-                    headers = {"User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36"},
-                    timeout=timeout
-                )
-            if response.status_code==404:
-                return selenium_check(url,response)
-            return response
-    
+            async with session.head(url, headers={"User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36"}, timeout=timeout) as response:
+                if response.status in [405, 403, 301, 302]:
+                    async with session.get(url, headers={"User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36"}, timeout=timeout) as response:
+                        pass  
+                if response.status == 404:
+                    return await selenium_check(url, response,logger)
 
-    except (ReadTimeout, ConnectionError) as e:
+                return response
+           
+    except (aiohttp.ClientError, asyncio.TimeoutError) as e:
         logger.warning(f'#ID: {id} #URL {url} Error: {str(e)}')
         logger.info(f'#ID: {id} #URL {url} - Requesting again using GET request instead of HEAD')
-        response = requests.get(
-            url=url,
-            headers = {"User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36"},
-            timeout=timeout
-        )
-        return response
-    return response
+        try:
+            async with session.get(url, headers={"User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36"}, timeout=timeout) as response:
+                return response
+        except Exception as e:
+            return e
+        
+    
+
+# def check_http_broken_link(url, session:aiohttp.ClientSession,logger, id, timeout: int = HTTP_REQUEST_TIMEOUT):
+#     """Http status code
+
+#         1xx - informational
+#         2xx - success
+#         3xx - redirection
+#         4xx - client error
+#         5xx - server error
+#     """
+#     try:
+#         if any(site in url for site in SITE_WITH_GET_METHOD):
+#             response = requests.get(
+#                 url=url,
+#                 headers = {"User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36"},
+#                 timeout=timeout
+#             )
+#             if response.status_code==404:
+#                 return selenium_check(url,response)
+#             return response
+#         else:
+#             response = requests.head(
+#                 url=url,
+#                 headers = {"User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36"},
+#                 timeout=timeout
+#             )
+#             if response.status_code  in [405,403, 301, 302] or any(site in url for site in SITE_WITH_GET_METHOD): # 405 Method Not Allowed - Try with GET instead
+#                 response = requests.get(
+#                     url=url,
+#                     headers = {"User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36"},
+#                     timeout=timeout
+#                 )
+#             if response.status_code==404:
+#                 return selenium_check(url,response)
+#             return response
+
+#     except (ReadTimeout, ConnectionError) as e:
+#         logger.warning(f'#ID: {id} #URL {url} Error: {str(e)}')
+#         logger.info(f'#ID: {id} #URL {url} - Requesting again using GET request instead of HEAD')
+#         response = requests.get(
+#             url=url,
+#             headers = {"User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36"},
+#             timeout=timeout
+#         )
+#         return response
+#     return response
 
 def check_broken_url(url, timeout):
     """

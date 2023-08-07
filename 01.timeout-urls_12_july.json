@@ -32,7 +32,7 @@
         "https://ftpci100"
     ],
     "348396": [
-        "https://registry.centos.org/v2/"
+        "https://issues.redhat.com/"
     ],
     "348377": [
         "https://ftpci100"
@@ -41,7 +41,7 @@
         "https://news/security-vulnerabilities/linux-kernel-dos-privilege-escalation-vulns-fixed"
     ],
     "348339": [
-        "https://registry.centos.org/v2/"
+        "https://issues.redhat.com/"
     ],
     "348287": [
         "https://features/unlocking-the-secrets-of-linux-security",
@@ -2022,5 +2022,8 @@
     "301069": [
         "https://ftp-debuginfo-7.2.5-1.63.2",
         "https://ftp-7.2.5-1.63.2"
+    ],
+    "110347": [
+        "http://www.counterpane.com/&gt"
     ]
 }

@@ -21,6 +21,8 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 from bs4 import BeautifulSoup, MarkupResemblesLocatorWarning
 from typing import Dict, Any, Optional
 import copy
+import asyncio
+import aiohttp
 
 warnings.filterwarnings("ignore", category=MarkupResemblesLocatorWarning)
 from utils import (
@@ -85,7 +87,7 @@ def find_broken_urls(text):
 
 def find_urls(text):
         # pattern=r"""\b(?:(?:(?:(?:http[s]?|ftp[s]):\/\/)|(?:www))|(?<=href="|href=\'))[^\s<>]+\b[\/]?"""
-        pattern = r"""\b(?:(?:(?:(?:https?|ftp?|sftp?):\/\/)|(?:www))|(?:ftp)|(?<=href="|href=\'))[^\s<>]+\b[\/]?"""
+        pattern = r"""\b(?:(?:(?:(?:https?|ftp?|sftp?):\/\/)|(?:www))|(?:ftp)|(?<=href="|href=\'))[^\s<>;]+\b[\/]?"""
         matches=re.findall(pattern,text)
         return matches
 
@@ -104,7 +106,7 @@ def decompose_known_urls(html:str,logger:Logger,id:int,field:str):
     soup=BeautifulSoup(html,'html.parser')
     for url in all_urls:
         parsed_url = urlparse(url)
-        if parsed_url.scheme=="":
+        if parsed_url.scheme=="" and url.startswith('www'):
             new_parsed_url=f"https://{url}"
             logger.info(f'ID: {id} #COLUMN: {field} #URL: {url} replaced with {new_parsed_url}')
             soup = re.sub(re.escape(url), new_parsed_url, str(soup))
@@ -170,38 +172,78 @@ def get_double_https(urls):
     return obj
 
 
-def do_http_request(urls, logger: Logger, id: int):
-    with ThreadPoolExecutor() as executor:
-        futures = {executor.submit(check_http_broken_link, url=url, logger=logger, id=id, timeout=HTTP_REQUEST_TIMEOUT): url for url in urls}
-        for future in as_completed(futures):
-            url = futures[future]
-            try:
-                response = future.result()
-            except requests.Timeout as e:
-                logger.warning(f'#ID: {id} #URL {url} Error: Timeout {str(e)}')
-                yield {'is_broken': False, 'status_code': 'Timeout', 'url': url}
-            except requests.exceptions.SSLError as e:
-                logger.warning(f'#ID: {id} #URL {url} Error: SSLError {str(e)}')
-                yield {'is_broken': False, 'status_code': 'SSLError', 'url': url}
-            except requests.exceptions.ConnectionError as e:
-                if ("[Errno 11001] getaddrinfo failed" in str(e) or     # Windows
-                    "[Errno -2] Name or service not known" in str(e) or # Linux
-                    "[Errno 8] nodename nor servname" in str(e) or
-                    "[Errno -5] No address associated with hostname" in str(e)):      # OS X
-                    logger.error(f'#ID: {id} #URL {url} Error: {str(e)}')
-                    yield {'is_broken': True, 'status_code': 500, 'url': url}
-                else:
-                    logger.warning(f'#ID: {id} #URL {url} Error: {str(e)}')
-                    yield {'is_broken': False, 'status_code': 'ConnectionError', 'url': url}
-            except Exception as e:
+async def new_do_http_request(urls,session,logger:Logger,id:int):
+    tasks=[]
+    for url in urls:
+        task = asyncio.create_task(check_http_broken_link(url=url, session=session,logger=logger,id=id))
+        tasks.append(task)
+    result = await asyncio.gather(*tasks)
+    for response in result:
+        try:
+            url=response.url 
+            if response.status< 400 or response.status in VALID_HTTP_STATUS_CODES:
+                yield {'is_broken': False, 'status_code': response.status, 'url': url}
+            else:
+                yield {'is_broken': True, 'status_code': response.status, 'url': url}
+     
+        except aiohttp.ClientSSLError as e:
+            logger.warning(f'#ID: {id} #URL {url} Error: SSLError {str(e)}')
+            yield {'is_broken': False, 'status_code': 'SSLError', 'url': url}
+        except aiohttp.ClientConnectionError as e:
+            if ("[Errno 11001] getaddrinfo failed" in str(e) or  "[Errno -2] Name or service not known" in str(e) or "[Errno 8] nodename nor servname" in str(e) or"[Errno -5] No address associated with hostname" in str(e)):      # OS X
                 logger.error(f'#ID: {id} #URL {url} Error: {str(e)}')
-                logger.error(str(e))
                 yield {'is_broken': True, 'status_code': 500, 'url': url}
             else:
-                if response.status_code < 400 or response.status_code in VALID_HTTP_STATUS_CODES:
-                    yield {'is_broken': False, 'status_code': response.status_code, 'url': url}
-                else:
-                    yield {'is_broken': True, 'status_code': response.status_code, 'url': url}
+                logger.warning(f'#ID: {id} #URL {url} Error: {str(e)}') 
+                yield {'is_broken': False, 'status_code': 'ConnectionError', 'url': url}
+        except asyncio.TimeoutError as e:
+            logger.warning(f'#ID: {id} Error: Timeout {str(e)}')
+            yield {'is_broken': False, 'status_code': 'Timeout', 'url': url}
+        # except aiohttp.ClientTimeout() as e:
+        #     logger.warning(f'#ID: {id} Error: Timeout {str(e)}')
+        #     yield {'is_broken': False, 'status_code': 'Timeout', 'url': url}    
+
+        except aiohttp.ClientError as e:
+            logger.warning(f'#ID: {id} #URL {url} Error: Timeout {str(e)}')
+            yield {'is_broken': True, 'status_code': response.status, 'url': url}
+        except Exception as e:
+                logger.error(f'#ID: {id} #URL {url} Error: {str(e)}')
+                yield {'is_broken': True, 'status_code': 500, 'url': url}
+        
+   
+
+# def do_http_request(urls, logger: Logger, id: int):
+#     with ThreadPoolExecutor() as executor:
+#         futures = {executor.submit(check_http_broken_link, url=url, logger=logger, id=id, timeout=HTTP_REQUEST_TIMEOUT): url for url in urls}
+#         for future in as_completed(futures):
+#             url = futures[future]
+#             try:
+#                 response = future.result()
+#             except requests.Timeout as e:
+#                 logger.warning(f'#ID: {id} #URL {url} Error: Timeout {str(e)}')
+#                 yield {'is_broken': False, 'status_code': 'Timeout', 'url': url}
+#             except requests.exceptions.SSLError as e:
+#                 logger.warning(f'#ID: {id} #URL {url} Error: SSLError {str(e)}')
+#                 yield {'is_broken': False, 'status_code': 'SSLError', 'url': url}
+#             except requests.exceptions.ConnectionError as e:
+#                 if ("[Errno 11001] getaddrinfo failed" in str(e) or     # Windows
+#                     "[Errno -2] Name or service not known" in str(e) or # Linux
+#                     "[Errno 8] nodename nor servname" in str(e) or
+#                     "[Errno -5] No address associated with hostname" in str(e)):      # OS X
+#                     logger.error(f'#ID: {id} #URL {url} Error: {str(e)}')
+#                     yield {'is_broken': True, 'status_code': 500, 'url': url}
+#                 else:
+#                     logger.warning(f'#ID: {id} #URL {url} Error: {str(e)}')
+#                     yield {'is_broken': False, 'status_code': 'ConnectionError', 'url': url}
+#             except Exception as e:
+#                 logger.error(f'#ID: {id} #URL {url} Error: {str(e)}')
+#                 logger.error(str(e))
+#                 yield {'is_broken': True, 'status_code': 500, 'url': url}
+#             else:
+#                 if response.status_code < 400 or response.status_code in VALID_HTTP_STATUS_CODES:
+#                     yield {'is_broken': False, 'status_code': response.status_code, 'url': url}
+#                 else:
+#                     yield {'is_broken': True, 'status_code': response.status_code, 'url': url}
 
 def do_ftp_request(urls, logger: Logger, id: int):
     with ThreadPoolExecutor() as executor:
@@ -261,60 +303,63 @@ def check_ftp_urls( logger:Logger, id:int, updates:list,field:str, html: Optiona
             for_more_check_urls.add(url)
     return str(soup), updates,for_more_check_urls
 
-def check_http_urls(logger:Logger, id:int,field:str,updates:list,html:Optional[str]=None, urls:list=None):
+async def check_http_urls(logger:Logger, id:int,field:str,updates:list,html:Optional[str]=None, urls:list=None):
     for_more_check_urls = set()
     soup=BeautifulSoup(html,'html.parser')
     str_soup=str(soup)
     urls_obj=get_double_https(urls)
     urls=list(urls_obj.keys())
-    for result in do_http_request(urls=urls, logger=logger, id=id):
-        parsed_url = result.get('url')
-        url=urls_obj[parsed_url]
-        if not result.get('is_broken', False):
-            if check_https_urls(url):
-                a_tags = soup.find_all('a', attrs={'href': url})
-                if len(a_tags)==0 and url in str_soup:
-                    str_soup=str_soup.replace(url,parsed_url) 
-                    updates.append(True)
-                    logger.info(f'ID: {id} #COLUMN: {field} #URL: {url} replaced with {parsed_url}')
-                    soup=BeautifulSoup(str_soup,"html.parser")
-                for tag in a_tags:
-                    tag['href']=parsed_url 
-                    logger.info(f'ID: {id} #COLUMN: {field} #URL: {url} replaced with {parsed_url}') 
-                updates.append(True)
-                continue
+    if len(urls)!=0:
+        async with aiohttp.ClientSession() as session:
+            async for result in new_do_http_request(urls=urls, session=session, logger=logger, id=id):
+        # for result in do_http_request(urls=urls, logger=logger, id=id):
+                parsed_url = result.get('url')
+                url=urls_obj.get(str(parsed_url),"")
+                if not result.get('is_broken', False):
+                    if check_https_urls(url):
+                        a_tags = soup.find_all('a', attrs={'href': url})
+                        if len(a_tags)==0 and url in str_soup:
+                            str_soup=str_soup.replace(url,parsed_url) 
+                            updates.append(True)
+                            logger.info(f'ID: {id} #COLUMN: {field} #URL: {url} replaced with {parsed_url}')
+                            soup=BeautifulSoup(str_soup,"html.parser")
+                        for tag in a_tags:
+                            tag['href']=parsed_url 
+                            logger.info(f'ID: {id} #COLUMN: {field} #URL: {url} replaced with {parsed_url}') 
+                        updates.append(True)
+                        continue
 
-            updates.append(False)
-            if result.get('status_code') in VALID_HTTP_STATUS_CODES:
-                logger.warning(f'ID: {id} #COLUMN: {field} #URL: {parsed_url} #STATUS_CODE: {result.get("status_code")}')
-            else:
-                if result.get('status_code') in STATUS_CODES_FOR_FURTHER_CHECK:
-                    logger.info(f'ID: {id} #COLUMN: {field} #URL: {parsed_url} added for more checking')
+                    updates.append(False)
+                    if result.get('status_code') in VALID_HTTP_STATUS_CODES:
+                        logger.warning(f'ID: {id} #COLUMN: {field} #URL: {parsed_url} #STATUS_CODE: {result.get("status_code")}')
+                    else:
+                        if result.get('status_code') in STATUS_CODES_FOR_FURTHER_CHECK:
+                            logger.info(f'ID: {id} #COLUMN: {field} #URL: {parsed_url} added for more checking')
+                            for_more_check_urls.add(url)
+                        else:
+                            logger.info(f'Skipped ID: {id} #COLUMN: {field} #URL: {parsed_url} #STATUS_CODE: {result.get("status_code")}')
+                    continue
+                
+                
+                if result.get('status_code')==404:
+                    a_tags = soup.find_all('a', attrs={'href': url})
+                    if len(a_tags) == 0 and url in str_soup:
+                        str_soup=str_soup.replace(url," ")
+                        logger.info(f'Skipped ID: {id} #COLUMN: {field} #URL: {url} #STATUS_CODE: {result.get("status_code")} #Replace with {"NULL"}')
+                        updates.append(True)
+                        soup=BeautifulSoup(str_soup,"html.parser")
+                    updates.append(True)
+                    for tag in a_tags:
+                        text = tag.text.strip()
+                        if text == url or len(text) == 0:
+                            logger.info(f'ID: {id} #COLUMN: {field} #URL: {url if url else "(null)"} #STATUS_CODE: {result.get("status_code")} #TEXT: {"(null)" if len(text) == 0 else text} removed')
+                            tag.decompose()
+                        else:
+                            tag.replace_with(text)
+                            logger.info(f'ID: {id} #COLUMN: {field} #URL: {url if url else "(null)"} #STATUS_CODE: {result.get("status_code")} - Replaced with #TEXT: {text}')
+                else:
                     for_more_check_urls.add(url)
-                else:
-                    logger.info(f'Skipped ID: {id} #COLUMN: {field} #URL: {parsed_url} #STATUS_CODE: {result.get("status_code")}')
-            continue
-        
-        
-        if result.get('status_code')==404:
-            a_tags = soup.find_all('a', attrs={'href': url})
-            if len(a_tags) == 0 and url in str_soup:
-                str_soup=str_soup.replace(url," ")
-                logger.info(f'Skipped ID: {id} #COLUMN: {field} #URL: {url} #STATUS_CODE: {result.get("status_code")} #Replace with {"NULL"}')
-                updates.append(True)
-                soup=BeautifulSoup(str_soup,"html.parser")
-            updates.append(True)
-            for tag in a_tags:
-                text = tag.text.strip()
-                if text == url or len(text) == 0:
-                    logger.info(f'ID: {id} #COLUMN: {field} #URL: {url if url else "(null)"} #STATUS_CODE: {result.get("status_code")} #TEXT: {"(null)" if len(text) == 0 else text} removed')
-                    tag.decompose()
-                else:
-                    tag.replace_with(text)
-                    logger.info(f'ID: {id} #COLUMN: {field} #URL: {url if url else "(null)"} #STATUS_CODE: {result.get("status_code")} - Replaced with #TEXT: {text}')
-        else:
-            for_more_check_urls.add(url)
-            logger.info(f'ID: {id} #COLUMN: {field} #URL: {url} added for more checking')
+                    logger.info(f'ID: {id} #COLUMN: {field} #URL: {url} added for more checking')
     
     return str(soup),updates,for_more_check_urls
 
@@ -334,7 +379,7 @@ def check_is_url_valid(html:str, logger:Logger, id:int,field:str,base_url:str,up
     ftp_urls = list(filter(lambda x: is_ftp_links(x), all_urls))
     http_urls = list(filter(lambda x: not is_ftp_links(x), all_urls))
     html,updates,for_more_check_urls = check_ftp_urls(html=html,urls= ftp_urls, logger=logger, id=id,field=field,updates=updates)
-    html,updates,for_more_check_urls = check_http_urls(html=html, urls=http_urls, logger=logger, id=id,field=field,updates=updates)
+    html,updates,for_more_check_urls = asyncio.run(check_http_urls(html=html, urls=http_urls, logger=logger, id=id,field=field,updates=updates))
     return html,any(updates),for_more_check_urls
 
 def process_html_text(logger: Logger, id: int, field: str, html: Optional[str] = None, base_url: str = None):
