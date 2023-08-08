@@ -78,7 +78,7 @@ def do_update(
         raise e
     
 def find_broken_urls(text):
-    pattern = r"""\b(?:(?:(?:(?:https?|ftp?|sftp?):\/\/)|(?:www))|(?:ftp)|(?<=href="|href=\'))[^\s<>]+(?:-\n){1}[^\s<>]+\b[\/]?"""
+    pattern = r"""\b(?:(?:(?:(?:https?|ftp?|sftp?):\/\/)|(?:www))|(?:ftp:)|(?<=href="|href=\'))[^\s<>]+(?:-\n){1}[^\s<>;]+\b[\/]?"""
     matches=re.findall(pattern,text)
     broken_links={}
     for m in matches:
@@ -88,7 +88,7 @@ def find_broken_urls(text):
 
 def find_urls(text):
         # pattern=r"""\b(?:(?:(?:(?:http[s]?|ftp[s]):\/\/)|(?:www))|(?<=href="|href=\'))[^\s<>]+\b[\/]?"""
-        pattern = r"""\b(?:(?:(?:(?:https?|ftp?|sftp?):\/\/)|(?:www))|(?:ftp)|(?<=href="|href=\'))[^\s<>;]+\b[\/]?"""
+        pattern = r"""\b(?:(?:(?:(?:https?|ftp?|sftp?):\/\/)|(?:www))|(?:ftp:)|(?<=href="|href=\'))[^\s<>;]+\b[\/]?"""
         matches=re.findall(pattern,text)
         return matches
 
@@ -180,7 +180,7 @@ async def new_do_http_request(urls,session,logger:Logger,id:int):
         tasks.append(task)
     result = await asyncio.gather(*tasks)
     for response in result:
-        if not response['is_error']:
+        if not response['is_error'] or isinstance(response['status_code'],int):
             if response['status_code']< 400 or response['status_code'] in VALID_HTTP_STATUS_CODES:
                 yield {'is_broken': False, 'status_code': response['status_code'], 'url': response['url']}
             else:
@@ -335,7 +335,7 @@ def check_ftp_urls( logger:Logger, id:int, updates:list,field:str, html: Optiona
             for_more_check_urls.add(url)
     return str(soup), updates,for_more_check_urls
 
-async def check_http_urls(logger:Logger, id:int,field:str,updates:list,html:Optional[str]=None, urls:list=None):
+async def check_http_urls(logger:Logger, id:int,field:str,updates:list,base_url:str,html:Optional[str]=None, urls:list=None):
     for_more_check_urls = set()
     soup=BeautifulSoup(html,'html.parser')
     str_soup=str(soup)
@@ -425,7 +425,7 @@ def check_is_url_valid(html:str, logger:Logger, id:int,field:str,base_url:str,up
     ftp_urls = list(filter(lambda x: is_ftp_links(x), all_urls))
     http_urls = list(filter(lambda x: not is_ftp_links(x), all_urls))
     html,updates,for_more_check_urls = check_ftp_urls(html=html,urls= ftp_urls, logger=logger, id=id,field=field,updates=updates)
-    html,updates,for_more_check_urls = asyncio.run(check_http_urls(html=html, urls=http_urls, logger=logger, id=id,field=field,updates=updates))
+    html,updates,for_more_check_urls = asyncio.run(check_http_urls(html=html, urls=http_urls, logger=logger, id=id,field=field,updates=updates,base_url=base_url))
     return html,any(updates),for_more_check_urls
 
 def process_html_text(logger: Logger, id: int, field: str, html: Optional[str] = None, base_url: str = None):

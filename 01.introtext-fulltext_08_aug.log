@@ -1,0 +1,679 @@
+2023-08-08 16:18:18 - INFO - ******************** Processing ID: 348476 ******************** (1/93342 - 0.0%)
+2023-08-08 16:18:18 - INFO - processing  348476 - introtext is not JSON, proceeding further to check HTML
+2023-08-08 16:18:18 - INFO - processing 348476 - fulltext is not json proceeding further to check html
+2023-08-08 16:18:20 - INFO - Skipped ID: 348476 #COLUMN: fulltext #URL: https://advisories.mageia.org/MGASA-2023-0239.html #STATUS_CODE: 200
+2023-08-08 16:18:20 - INFO - Skipped ID: 348476 #COLUMN: fulltext #URL: https://bugs.mageia.org/show_bug.cgi?id=32124 #STATUS_CODE: 200
+2023-08-08 16:18:20 - INFO - Skipped ID: 348476 #COLUMN: fulltext #URL: https://www.oracle.com/security-alerts/cpujul2023.html#AppendixOVIR #STATUS_CODE: 200
+2023-08-08 16:18:20 - INFO - Skipped ID: 348476 #COLUMN: fulltext #URL: https://www.virtualbox.org/wiki/Changelog-7.0#v10 #STATUS_CODE: 200
+2023-08-08 16:18:20 - INFO - Skipped ID: 348476 #COLUMN: fulltext #URL: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-22016 #STATUS_CODE: 200
+2023-08-08 16:18:20 - INFO - Skipped ID: 348476 #COLUMN: fulltext #URL: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-22018 #STATUS_CODE: 200
+2023-08-08 16:18:20 - INFO - ******************** Processing ID: 348475 ******************** (2/93342 - 0.0%)
+2023-08-08 16:18:20 - INFO - processing  348475 - introtext is not JSON, proceeding further to check HTML
+2023-08-08 16:18:20 - INFO - processing 348475 - fulltext is not json proceeding further to check html
+2023-08-08 16:18:28 - INFO - Skipped ID: 348475 #COLUMN: fulltext #URL: http://www.openssh.com/portable.html #STATUS_CODE: 200
+2023-08-08 16:18:28 - INFO - Skipped ID: 348475 #COLUMN: fulltext #URL: https://bugzilla.redhat.com/show_bug.cgi?id=2224173 #STATUS_CODE: 200
+2023-08-08 16:18:28 - INFO - Skipped ID: 348475 #COLUMN: fulltext #URL: http://dnf.readthedocs.io/en/latest/command_ref.html#upgrade-command-label #STATUS_CODE: 200
+2023-08-08 16:18:28 - INFO - Skipped ID: 348475 #COLUMN: fulltext #URL: https://fedoraproject.org/keys #STATUS_CODE: 200
+2023-08-08 16:18:28 - INFO - Skipped ID: 348475 #COLUMN: fulltext #URL: https://docs.fedoraproject.org/en-US/project/code-of-conduct/ #STATUS_CODE: 200
+2023-08-08 16:18:28 - INFO - Skipped ID: 348475 #COLUMN: fulltext #URL: https://fedoraproject.org/wiki/Mailing_list_guidelines #STATUS_CODE: 200
+2023-08-08 16:18:28 - INFO - Skipped ID: 348475 #COLUMN: fulltext #URL: https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org #STATUS_CODE: 200
+2023-08-08 16:18:28 - INFO - Skipped ID: 348475 #COLUMN: fulltext #URL: https://pagure.io/fedora-infrastructure/new_issue #STATUS_CODE: 200
+2023-08-08 16:18:28 - INFO - ******************** Processing ID: 348474 ******************** (3/93342 - 0.0%)
+2023-08-08 16:18:28 - INFO - processing  348474 - introtext is not JSON, proceeding further to check HTML
+2023-08-08 16:18:28 - INFO - processing 348474 - fulltext is not json proceeding further to check html
+2023-08-08 16:18:30 - INFO - Skipped ID: 348474 #COLUMN: fulltext #URL: http://www.kernel.org/ #STATUS_CODE: 200
+2023-08-08 16:18:30 - INFO - Skipped ID: 348474 #COLUMN: fulltext #URL: https://bugzilla.redhat.com/show_bug.cgi?id=2220892 #STATUS_CODE: 200
+2023-08-08 16:18:30 - INFO - Skipped ID: 348474 #COLUMN: fulltext #URL: https://bugzilla.redhat.com/show_bug.cgi?id=2220893 #STATUS_CODE: 200
+2023-08-08 16:18:30 - INFO - Skipped ID: 348474 #COLUMN: fulltext #URL: http://dnf.readthedocs.io/en/latest/command_ref.html#upgrade-command-label #STATUS_CODE: 200
+2023-08-08 16:18:30 - INFO - Skipped ID: 348474 #COLUMN: fulltext #URL: https://fedoraproject.org/keys #STATUS_CODE: 200
+2023-08-08 16:18:30 - INFO - Skipped ID: 348474 #COLUMN: fulltext #URL: https://docs.fedoraproject.org/en-US/project/code-of-conduct/ #STATUS_CODE: 200
+2023-08-08 16:18:30 - INFO - Skipped ID: 348474 #COLUMN: fulltext #URL: https://fedoraproject.org/wiki/Mailing_list_guidelines #STATUS_CODE: 200
+2023-08-08 16:18:30 - INFO - Skipped ID: 348474 #COLUMN: fulltext #URL: https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org #STATUS_CODE: 200
+2023-08-08 16:18:30 - INFO - Skipped ID: 348474 #COLUMN: fulltext #URL: https://pagure.io/fedora-infrastructure/new_issue #STATUS_CODE: 200
+2023-08-08 16:18:30 - INFO - ******************** Processing ID: 348473 ******************** (4/93342 - 0.0%)
+2023-08-08 16:18:30 - INFO - processing  348473 - introtext is not JSON, proceeding further to check HTML
+2023-08-08 16:18:30 - INFO - processing 348473 - fulltext is not json proceeding further to check html
+2023-08-08 16:18:36 - INFO - Skipped ID: 348473 #COLUMN: fulltext #URL: http://www.kernel.org/ #STATUS_CODE: 200
+2023-08-08 16:18:36 - INFO - Skipped ID: 348473 #COLUMN: fulltext #URL: https://bugzilla.redhat.com/show_bug.cgi?id=2220892 #STATUS_CODE: 200
+2023-08-08 16:18:36 - INFO - Skipped ID: 348473 #COLUMN: fulltext #URL: https://bugzilla.redhat.com/show_bug.cgi?id=2220893 #STATUS_CODE: 200
+2023-08-08 16:18:36 - INFO - Skipped ID: 348473 #COLUMN: fulltext #URL: http://dnf.readthedocs.io/en/latest/command_ref.html#upgrade-command-label #STATUS_CODE: 200
+2023-08-08 16:18:36 - INFO - Skipped ID: 348473 #COLUMN: fulltext #URL: https://fedoraproject.org/keys #STATUS_CODE: 200
+2023-08-08 16:18:36 - INFO - Skipped ID: 348473 #COLUMN: fulltext #URL: https://docs.fedoraproject.org/en-US/project/code-of-conduct/ #STATUS_CODE: 200
+2023-08-08 16:18:36 - INFO - Skipped ID: 348473 #COLUMN: fulltext #URL: https://fedoraproject.org/wiki/Mailing_list_guidelines #STATUS_CODE: 200
+2023-08-08 16:18:36 - INFO - Skipped ID: 348473 #COLUMN: fulltext #URL: https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org #STATUS_CODE: 200
+2023-08-08 16:18:36 - INFO - Skipped ID: 348473 #COLUMN: fulltext #URL: https://pagure.io/fedora-infrastructure/new_issue #STATUS_CODE: 200
+2023-08-08 16:18:36 - INFO - ******************** Processing ID: 348472 ******************** (5/93342 - 0.0%)
+2023-08-08 16:18:36 - INFO - processing  348472 - introtext is not JSON, proceeding further to check HTML
+2023-08-08 16:18:36 - INFO - processing 348472 - fulltext is not json proceeding further to check html
+2023-08-08 16:18:39 - INFO - Skipped ID: 348472 #COLUMN: fulltext #URL: http://www.kernel.org/ #STATUS_CODE: 200
+2023-08-08 16:18:39 - INFO - Skipped ID: 348472 #COLUMN: fulltext #URL: https://bugzilla.redhat.com/show_bug.cgi?id=2220892 #STATUS_CODE: 200
+2023-08-08 16:18:39 - INFO - Skipped ID: 348472 #COLUMN: fulltext #URL: https://bugzilla.redhat.com/show_bug.cgi?id=2220893 #STATUS_CODE: 200
+2023-08-08 16:18:39 - INFO - Skipped ID: 348472 #COLUMN: fulltext #URL: http://dnf.readthedocs.io/en/latest/command_ref.html#upgrade-command-label #STATUS_CODE: 200
+2023-08-08 16:18:39 - INFO - Skipped ID: 348472 #COLUMN: fulltext #URL: https://fedoraproject.org/keys #STATUS_CODE: 200
+2023-08-08 16:18:39 - INFO - Skipped ID: 348472 #COLUMN: fulltext #URL: https://docs.fedoraproject.org/en-US/project/code-of-conduct/ #STATUS_CODE: 200
+2023-08-08 16:18:39 - INFO - Skipped ID: 348472 #COLUMN: fulltext #URL: https://fedoraproject.org/wiki/Mailing_list_guidelines #STATUS_CODE: 200
+2023-08-08 16:18:39 - INFO - Skipped ID: 348472 #COLUMN: fulltext #URL: https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org #STATUS_CODE: 200
+2023-08-08 16:18:39 - INFO - Skipped ID: 348472 #COLUMN: fulltext #URL: https://pagure.io/fedora-infrastructure/new_issue #STATUS_CODE: 200
+2023-08-08 16:18:39 - INFO - ******************** Processing ID: 348471 ******************** (6/93342 - 0.0%)
+2023-08-08 16:18:39 - INFO - processing  348471 - introtext is not JSON, proceeding further to check HTML
+2023-08-08 16:18:39 - INFO - processing 348471 - fulltext is not json proceeding further to check html
+2023-08-08 16:18:42 - INFO - Skipped ID: 348471 #COLUMN: fulltext #URL: http://www.kernel.org/ #STATUS_CODE: 200
+2023-08-08 16:18:42 - INFO - Skipped ID: 348471 #COLUMN: fulltext #URL: https://bugzilla.redhat.com/show_bug.cgi?id=2220892 #STATUS_CODE: 200
+2023-08-08 16:18:42 - INFO - Skipped ID: 348471 #COLUMN: fulltext #URL: https://bugzilla.redhat.com/show_bug.cgi?id=2220893 #STATUS_CODE: 200
+2023-08-08 16:18:42 - INFO - Skipped ID: 348471 #COLUMN: fulltext #URL: http://dnf.readthedocs.io/en/latest/command_ref.html#upgrade-command-label #STATUS_CODE: 200
+2023-08-08 16:18:42 - INFO - Skipped ID: 348471 #COLUMN: fulltext #URL: https://fedoraproject.org/keys #STATUS_CODE: 200
+2023-08-08 16:18:42 - INFO - Skipped ID: 348471 #COLUMN: fulltext #URL: https://docs.fedoraproject.org/en-US/project/code-of-conduct/ #STATUS_CODE: 200
+2023-08-08 16:18:42 - INFO - Skipped ID: 348471 #COLUMN: fulltext #URL: https://fedoraproject.org/wiki/Mailing_list_guidelines #STATUS_CODE: 200
+2023-08-08 16:18:42 - INFO - Skipped ID: 348471 #COLUMN: fulltext #URL: https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org #STATUS_CODE: 200
+2023-08-08 16:18:42 - INFO - Skipped ID: 348471 #COLUMN: fulltext #URL: https://pagure.io/fedora-infrastructure/new_issue #STATUS_CODE: 200
+2023-08-08 16:18:42 - INFO - ******************** Processing ID: 348470 ******************** (7/93342 - 0.0%)
+2023-08-08 16:18:42 - INFO - processing  348470 - introtext is not JSON, proceeding further to check HTML
+2023-08-08 16:18:42 - INFO - processing 348470 - fulltext is not json proceeding further to check html
+2023-08-08 16:18:44 - INFO - Skipped ID: 348470 #COLUMN: fulltext #URL: https://ghostscript.com/ #STATUS_CODE: 200
+2023-08-08 16:18:44 - INFO - Skipped ID: 348470 #COLUMN: fulltext #URL: https://bugzilla.redhat.com/show_bug.cgi?id=2217805 #STATUS_CODE: 200
+2023-08-08 16:18:44 - INFO - Skipped ID: 348470 #COLUMN: fulltext #URL: http://dnf.readthedocs.io/en/latest/command_ref.html#upgrade-command-label #STATUS_CODE: 200
+2023-08-08 16:18:44 - INFO - Skipped ID: 348470 #COLUMN: fulltext #URL: https://fedoraproject.org/keys #STATUS_CODE: 200
+2023-08-08 16:18:44 - INFO - Skipped ID: 348470 #COLUMN: fulltext #URL: https://docs.fedoraproject.org/en-US/project/code-of-conduct/ #STATUS_CODE: 200
+2023-08-08 16:18:44 - INFO - Skipped ID: 348470 #COLUMN: fulltext #URL: https://fedoraproject.org/wiki/Mailing_list_guidelines #STATUS_CODE: 200
+2023-08-08 16:18:44 - INFO - Skipped ID: 348470 #COLUMN: fulltext #URL: https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org #STATUS_CODE: 200
+2023-08-08 16:18:44 - INFO - Skipped ID: 348470 #COLUMN: fulltext #URL: https://pagure.io/fedora-infrastructure/new_issue #STATUS_CODE: 200
+2023-08-08 16:18:44 - INFO - ******************** Processing ID: 348469 ******************** (8/93342 - 0.0%)
+2023-08-08 16:18:44 - INFO - processing  348469 - introtext is not JSON, proceeding further to check HTML
+2023-08-08 16:18:44 - INFO - processing 348469 - fulltext is not json proceeding further to check html
+2023-08-08 16:18:44 - INFO - https://twitter.com/LS_Advisories is skiped for checking:- present in SKIP_CHECK_SITES 
+2023-08-08 16:18:49 - INFO - Skipped ID: 348469 #COLUMN: fulltext #URL: https://linuxsecurity.com/advisories #STATUS_CODE: 200
+2023-08-08 16:18:49 - INFO - Skipped ID: 348469 #COLUMN: fulltext #URL: https://linuxsecurity.com/register #STATUS_CODE: 200
+2023-08-08 16:18:49 - INFO - Skipped ID: 348469 #COLUMN: fulltext #URL: https://linuxsecurity.com/features/live-updates-linux-security-advisories #STATUS_CODE: 200
+2023-08-08 16:18:49 - INFO - ******************** Processing ID: 348468 ******************** (9/93342 - 0.0%)
+2023-08-08 16:18:49 - INFO - processing  348468 - introtext is not JSON, proceeding further to check HTML
+2023-08-08 16:18:49 - INFO - processing 348468 - fulltext is not json proceeding further to check html
+2023-08-08 16:18:50 - INFO - Skipped ID: 348468 #COLUMN: fulltext #URL: https://www.debian.org/security/ #STATUS_CODE: 200
+2023-08-08 16:18:50 - INFO - Skipped ID: 348468 #COLUMN: fulltext #URL: https://www.debian.org/security/faq #STATUS_CODE: 200
+2023-08-08 16:18:50 - INFO - Skipped ID: 348468 #COLUMN: fulltext #URL: https://security-tracker.debian.org/tracker/webkit2gtk #STATUS_CODE: 200
+2023-08-08 16:18:50 - INFO - ******************** Processing ID: 348467 ******************** (10/93342 - 0.0%)
+2023-08-08 16:18:50 - INFO - processing  348467 - introtext is not JSON, proceeding further to check HTML
+2023-08-08 16:18:50 - INFO - processing 348467 - fulltext is not json proceeding further to check html
+2023-08-08 16:19:06 - INFO - ******************** Processing ID: 348466 ******************** (11/93342 - 0.0%)
+2023-08-08 16:19:06 - INFO - processing  348466 - introtext is not JSON, proceeding further to check HTML
+2023-08-08 16:19:06 - INFO - processing 348466 - fulltext is not json proceeding further to check html
+2023-08-08 16:19:06 - INFO - ******************** Processing ID: 348465 ******************** (12/93342 - 0.0%)
+2023-08-08 16:19:06 - INFO - processing  348465 - introtext is not JSON, proceeding further to check HTML
+2023-08-08 16:19:06 - INFO - processing 348465 - fulltext is not json proceeding further to check html
+2023-08-08 16:19:06 - INFO - ******************** Processing ID: 348464 ******************** (13/93342 - 0.0%)
+2023-08-08 16:19:06 - INFO - processing  348464 - introtext is not JSON, proceeding further to check HTML
+2023-08-08 16:19:06 - INFO - processing 348464 - fulltext is not json proceeding further to check html
+2023-08-08 16:19:06 - INFO - ******************** Processing ID: 348463 ******************** (14/93342 - 0.0%)
+2023-08-08 16:19:06 - INFO - processing  348463 - introtext is not JSON, proceeding further to check HTML
+2023-08-08 16:19:06 - INFO - processing 348463 - fulltext is not json proceeding further to check html
+2023-08-08 16:19:06 - INFO - ******************** Processing ID: 348462 ******************** (15/93342 - 0.0%)
+2023-08-08 16:19:06 - INFO - processing  348462 - introtext is not JSON, proceeding further to check HTML
+2023-08-08 16:19:06 - INFO - processing 348462 - fulltext is not json proceeding further to check html
+2023-08-08 16:19:06 - INFO - ******************** Processing ID: 348461 ******************** (16/93342 - 0.0%)
+2023-08-08 16:19:06 - INFO - processing  348461 - introtext is not JSON, proceeding further to check HTML
+2023-08-08 16:19:06 - INFO - processing 348461 - fulltext is not json proceeding further to check html
+2023-08-08 16:19:06 - INFO - ******************** Processing ID: 348460 ******************** (17/93342 - 0.0%)
+2023-08-08 16:19:06 - INFO - processing  348460 - introtext is not JSON, proceeding further to check HTML
+2023-08-08 16:19:06 - INFO - processing 348460 - fulltext is not json proceeding further to check html
+2023-08-08 16:19:06 - INFO - ******************** Processing ID: 348459 ******************** (18/93342 - 0.0%)
+2023-08-08 16:19:06 - INFO - processing  348459 - introtext is not JSON, proceeding further to check HTML
+2023-08-08 16:19:06 - INFO - processing 348459 - fulltext is not json proceeding further to check html
+2023-08-08 16:19:06 - INFO - ******************** Processing ID: 348458 ******************** (19/93342 - 0.0%)
+2023-08-08 16:19:06 - INFO - processing  348458 - introtext is not JSON, proceeding further to check HTML
+2023-08-08 16:19:06 - INFO - processing 348458 - fulltext is not json proceeding further to check html
+2023-08-08 16:19:06 - INFO - ******************** Processing ID: 348457 ******************** (20/93342 - 0.0%)
+2023-08-08 16:19:06 - INFO - processing  348457 - introtext is not JSON, proceeding further to check HTML
+2023-08-08 16:19:06 - INFO - processing 348457 - fulltext is not json proceeding further to check html
+2023-08-08 16:19:21 - INFO - ******************** Processing ID: 348456 ******************** (21/93342 - 0.0%)
+2023-08-08 16:19:21 - INFO - processing  348456 - introtext is not JSON, proceeding further to check HTML
+2023-08-08 16:19:21 - INFO - processing 348456 - fulltext is not json proceeding further to check html
+2023-08-08 16:19:21 - INFO - ******************** Processing ID: 348455 ******************** (22/93342 - 0.0%)
+2023-08-08 16:19:21 - INFO - processing  348455 - introtext is not JSON, proceeding further to check HTML
+2023-08-08 16:19:21 - INFO - processing 348455 - fulltext is not json proceeding further to check html
+2023-08-08 16:19:21 - INFO - ******************** Processing ID: 348454 ******************** (23/93342 - 0.0%)
+2023-08-08 16:19:21 - INFO - processing  348454 - introtext is not JSON, proceeding further to check HTML
+2023-08-08 16:19:21 - INFO - processing 348454 - fulltext is not json proceeding further to check html
+2023-08-08 16:19:21 - INFO - ******************** Processing ID: 348453 ******************** (24/93342 - 0.0%)
+2023-08-08 16:19:21 - INFO - processing  348453 - introtext is not JSON, proceeding further to check HTML
+2023-08-08 16:19:21 - INFO - processing 348453 - fulltext is not json proceeding further to check html
+2023-08-08 16:19:21 - INFO - ******************** Processing ID: 348452 ******************** (25/93342 - 0.0%)
+2023-08-08 16:19:21 - INFO - processing  348452 - introtext is not JSON, proceeding further to check HTML
+2023-08-08 16:19:21 - INFO - processing 348452 - fulltext is not json proceeding further to check html
+2023-08-08 16:19:21 - INFO - ******************** Processing ID: 348451 ******************** (26/93342 - 0.0%)
+2023-08-08 16:19:21 - INFO - processing  348451 - introtext is not JSON, proceeding further to check HTML
+2023-08-08 16:19:21 - INFO - processing 348451 - fulltext is not json proceeding further to check html
+2023-08-08 16:19:21 - INFO - ******************** Processing ID: 348450 ******************** (27/93342 - 0.0%)
+2023-08-08 16:19:21 - INFO - processing  348450 - introtext is not JSON, proceeding further to check HTML
+2023-08-08 16:19:21 - INFO - processing 348450 - fulltext is not json proceeding further to check html
+2023-08-08 16:19:21 - INFO - ******************** Processing ID: 348449 ******************** (28/93342 - 0.0%)
+2023-08-08 16:19:21 - INFO - processing  348449 - introtext is not JSON, proceeding further to check HTML
+2023-08-08 16:19:21 - INFO - processing 348449 - fulltext is not json proceeding further to check html
+2023-08-08 16:19:21 - INFO - ******************** Processing ID: 348448 ******************** (29/93342 - 0.0%)
+2023-08-08 16:19:21 - INFO - processing  348448 - introtext is not JSON, proceeding further to check HTML
+2023-08-08 16:19:21 - INFO - processing 348448 - fulltext is not json proceeding further to check html
+2023-08-08 16:19:21 - INFO - ******************** Processing ID: 348447 ******************** (30/93342 - 0.0%)
+2023-08-08 16:19:21 - INFO - processing  348447 - introtext is not JSON, proceeding further to check HTML
+2023-08-08 16:19:21 - INFO - processing 348447 - fulltext is not json proceeding further to check html
+2023-08-08 16:19:35 - INFO - ******************** Processing ID: 348446 ******************** (31/93342 - 0.0%)
+2023-08-08 16:19:35 - INFO - processing  348446 - introtext is not JSON, proceeding further to check HTML
+2023-08-08 16:19:36 - INFO - Skipped ID: 348446 #COLUMN: introtext #URL: https://lib.openmpt.org/libopenmpt/2023/06/18/security-updates-0.7.2-0.6.11-0.5.25-release-0.4.37/ #STATUS_CODE: 200
+2023-08-08 16:19:36 - INFO - processing 348446 - fulltext is not json proceeding further to check html
+2023-08-08 16:19:39 - INFO - Skipped ID: 348446 #COLUMN: fulltext #URL: https://lib.openmpt.org/libopenmpt/ #STATUS_CODE: 200
+2023-08-08 16:19:39 - INFO - Skipped ID: 348446 #COLUMN: fulltext #URL: https://lib.openmpt.org/libopenmpt/2023/06/18/security-updates-0.7.2-0.6.11-0.5.25-release-0.4.37/ #STATUS_CODE: 200
+2023-08-08 16:19:39 - INFO - Skipped ID: 348446 #COLUMN: fulltext #URL: https://fedoraproject.org/wiki/Fedora_39_Mass_Rebuild #STATUS_CODE: 200
+2023-08-08 16:19:39 - INFO - Skipped ID: 348446 #COLUMN: fulltext #URL: http://dnf.readthedocs.io/en/latest/command_ref.html#upgrade-command-label #STATUS_CODE: 200
+2023-08-08 16:19:39 - INFO - Skipped ID: 348446 #COLUMN: fulltext #URL: https://fedoraproject.org/keys #STATUS_CODE: 200
+2023-08-08 16:19:39 - INFO - Skipped ID: 348446 #COLUMN: fulltext #URL: https://docs.fedoraproject.org/en-US/project/code-of-conduct/ #STATUS_CODE: 200
+2023-08-08 16:19:39 - INFO - Skipped ID: 348446 #COLUMN: fulltext #URL: https://fedoraproject.org/wiki/Mailing_list_guidelines #STATUS_CODE: 200
+2023-08-08 16:19:39 - INFO - Skipped ID: 348446 #COLUMN: fulltext #URL: https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org #STATUS_CODE: 200
+2023-08-08 16:19:39 - INFO - Skipped ID: 348446 #COLUMN: fulltext #URL: https://pagure.io/fedora-infrastructure/new_issue #STATUS_CODE: 200
+2023-08-08 16:19:39 - INFO - ******************** Processing ID: 348445 ******************** (32/93342 - 0.0%)
+2023-08-08 16:19:39 - INFO - processing  348445 - introtext is not JSON, proceeding further to check HTML
+2023-08-08 16:19:39 - INFO - processing 348445 - fulltext is not json proceeding further to check html
+2023-08-08 16:19:41 - INFO - Skipped ID: 348445 #COLUMN: fulltext #URL: https://www.samba.org #STATUS_CODE: 200
+2023-08-08 16:19:41 - INFO - Skipped ID: 348445 #COLUMN: fulltext #URL: https://bugzilla.redhat.com/show_bug.cgi?id=2222791 #STATUS_CODE: 200
+2023-08-08 16:19:41 - INFO - Skipped ID: 348445 #COLUMN: fulltext #URL: https://bugzilla.redhat.com/show_bug.cgi?id=2222792 #STATUS_CODE: 200
+2023-08-08 16:19:41 - INFO - Skipped ID: 348445 #COLUMN: fulltext #URL: https://bugzilla.redhat.com/show_bug.cgi?id=2222793 #STATUS_CODE: 200
+2023-08-08 16:19:41 - INFO - Skipped ID: 348445 #COLUMN: fulltext #URL: https://bugzilla.redhat.com/show_bug.cgi?id=2222794 #STATUS_CODE: 200
+2023-08-08 16:19:41 - INFO - Skipped ID: 348445 #COLUMN: fulltext #URL: https://bugzilla.redhat.com/show_bug.cgi?id=2222795 #STATUS_CODE: 200
+2023-08-08 16:19:41 - INFO - Skipped ID: 348445 #COLUMN: fulltext #URL: http://dnf.readthedocs.io/en/latest/command_ref.html#upgrade-command-label #STATUS_CODE: 200
+2023-08-08 16:19:41 - INFO - Skipped ID: 348445 #COLUMN: fulltext #URL: https://fedoraproject.org/keys #STATUS_CODE: 200
+2023-08-08 16:19:41 - INFO - Skipped ID: 348445 #COLUMN: fulltext #URL: https://docs.fedoraproject.org/en-US/project/code-of-conduct/ #STATUS_CODE: 200
+2023-08-08 16:19:41 - INFO - Skipped ID: 348445 #COLUMN: fulltext #URL: https://fedoraproject.org/wiki/Mailing_list_guidelines #STATUS_CODE: 200
+2023-08-08 16:19:41 - INFO - Skipped ID: 348445 #COLUMN: fulltext #URL: https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org #STATUS_CODE: 200
+2023-08-08 16:19:41 - INFO - Skipped ID: 348445 #COLUMN: fulltext #URL: https://pagure.io/fedora-infrastructure/new_issue #STATUS_CODE: 200
+2023-08-08 16:19:41 - INFO - ******************** Processing ID: 348444 ******************** (33/93342 - 0.0%)
+2023-08-08 16:19:41 - INFO - processing  348444 - introtext is not JSON, proceeding further to check HTML
+2023-08-08 16:19:41 - INFO - processing 348444 - fulltext is not json proceeding further to check html
+2023-08-08 16:19:44 - INFO - Skipped ID: 348444 #COLUMN: fulltext #URL: https://curl.se/ #STATUS_CODE: 200
+2023-08-08 16:19:44 - INFO - Skipped ID: 348444 #COLUMN: fulltext #URL: https://bugzilla.redhat.com/show_bug.cgi?id=2223893 #STATUS_CODE: 200
+2023-08-08 16:19:44 - INFO - Skipped ID: 348444 #COLUMN: fulltext #URL: http://dnf.readthedocs.io/en/latest/command_ref.html#upgrade-command-label #STATUS_CODE: 200
+2023-08-08 16:19:44 - INFO - Skipped ID: 348444 #COLUMN: fulltext #URL: https://fedoraproject.org/keys #STATUS_CODE: 200
+2023-08-08 16:19:44 - INFO - Skipped ID: 348444 #COLUMN: fulltext #URL: https://docs.fedoraproject.org/en-US/project/code-of-conduct/ #STATUS_CODE: 200
+2023-08-08 16:19:44 - INFO - Skipped ID: 348444 #COLUMN: fulltext #URL: https://fedoraproject.org/wiki/Mailing_list_guidelines #STATUS_CODE: 200
+2023-08-08 16:19:44 - INFO - Skipped ID: 348444 #COLUMN: fulltext #URL: https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org #STATUS_CODE: 200
+2023-08-08 16:19:44 - INFO - Skipped ID: 348444 #COLUMN: fulltext #URL: https://pagure.io/fedora-infrastructure/new_issue #STATUS_CODE: 200
+2023-08-08 16:19:44 - INFO - ******************** Processing ID: 348443 ******************** (34/93342 - 0.0%)
+2023-08-08 16:19:44 - INFO - processing  348443 - introtext is not JSON, proceeding further to check HTML
+2023-08-08 16:19:45 - INFO - Skipped ID: 348443 #COLUMN: introtext #URL: https://github.com/dotnet/announcements/issues/262 #STATUS_CODE: 200
+2023-08-08 16:19:45 - INFO - processing 348443 - fulltext is not json proceeding further to check html
+2023-08-08 16:19:47 - INFO - Skipped ID: 348443 #COLUMN: fulltext #URL: https://github.com/dotnet/ #STATUS_CODE: 200
+2023-08-08 16:19:47 - INFO - Skipped ID: 348443 #COLUMN: fulltext #URL: https://github.com/dotnet/announcements/issues/262 #STATUS_CODE: 200
+2023-08-08 16:19:47 - INFO - Skipped ID: 348443 #COLUMN: fulltext #URL: https://bugzilla.redhat.com/show_bug.cgi?id=2221854 #STATUS_CODE: 200
+2023-08-08 16:19:47 - INFO - Skipped ID: 348443 #COLUMN: fulltext #URL: http://dnf.readthedocs.io/en/latest/command_ref.html#upgrade-command-label #STATUS_CODE: 200
+2023-08-08 16:19:47 - INFO - Skipped ID: 348443 #COLUMN: fulltext #URL: https://fedoraproject.org/keys #STATUS_CODE: 200
+2023-08-08 16:19:47 - INFO - Skipped ID: 348443 #COLUMN: fulltext #URL: https://docs.fedoraproject.org/en-US/project/code-of-conduct/ #STATUS_CODE: 200
+2023-08-08 16:19:47 - INFO - Skipped ID: 348443 #COLUMN: fulltext #URL: https://fedoraproject.org/wiki/Mailing_list_guidelines #STATUS_CODE: 200
+2023-08-08 16:19:47 - INFO - Skipped ID: 348443 #COLUMN: fulltext #URL: https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org #STATUS_CODE: 200
+2023-08-08 16:19:47 - INFO - Skipped ID: 348443 #COLUMN: fulltext #URL: https://pagure.io/fedora-infrastructure/new_issue #STATUS_CODE: 200
+2023-08-08 16:19:47 - INFO - ******************** Processing ID: 348442 ******************** (35/93342 - 0.0%)
+2023-08-08 16:19:47 - INFO - processing  348442 - introtext is not JSON, proceeding further to check HTML
+2023-08-08 16:19:47 - INFO - Skipped ID: 348442 #COLUMN: introtext #URL: https://github.com/dotnet/announcements/issues/262 #STATUS_CODE: 200
+2023-08-08 16:19:47 - INFO - processing 348442 - fulltext is not json proceeding further to check html
+2023-08-08 16:19:49 - INFO - Skipped ID: 348442 #COLUMN: fulltext #URL: https://github.com/dotnet/ #STATUS_CODE: 200
+2023-08-08 16:19:49 - INFO - Skipped ID: 348442 #COLUMN: fulltext #URL: https://github.com/dotnet/announcements/issues/262 #STATUS_CODE: 200
+2023-08-08 16:19:49 - INFO - Skipped ID: 348442 #COLUMN: fulltext #URL: https://bugzilla.redhat.com/show_bug.cgi?id=2221854 #STATUS_CODE: 200
+2023-08-08 16:19:49 - INFO - Skipped ID: 348442 #COLUMN: fulltext #URL: http://dnf.readthedocs.io/en/latest/command_ref.html#upgrade-command-label #STATUS_CODE: 200
+2023-08-08 16:19:49 - INFO - Skipped ID: 348442 #COLUMN: fulltext #URL: https://fedoraproject.org/keys #STATUS_CODE: 200
+2023-08-08 16:19:49 - INFO - Skipped ID: 348442 #COLUMN: fulltext #URL: https://docs.fedoraproject.org/en-US/project/code-of-conduct/ #STATUS_CODE: 200
+2023-08-08 16:19:49 - INFO - Skipped ID: 348442 #COLUMN: fulltext #URL: https://fedoraproject.org/wiki/Mailing_list_guidelines #STATUS_CODE: 200
+2023-08-08 16:19:49 - INFO - Skipped ID: 348442 #COLUMN: fulltext #URL: https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org #STATUS_CODE: 200
+2023-08-08 16:19:49 - INFO - Skipped ID: 348442 #COLUMN: fulltext #URL: https://pagure.io/fedora-infrastructure/new_issue #STATUS_CODE: 200
+2023-08-08 16:19:49 - INFO - ******************** Processing ID: 348441 ******************** (36/93342 - 0.0%)
+2023-08-08 16:19:49 - INFO - processing  348441 - introtext is not JSON, proceeding further to check HTML
+2023-08-08 16:19:49 - INFO - processing 348441 - fulltext is not json proceeding further to check html
+2023-08-08 16:19:53 - INFO - Skipped ID: 348441 #COLUMN: fulltext #URL: https://access.redhat.com/errata/RHSA-2023:4166 #STATUS_CODE: 200
+2023-08-08 16:19:53 - INFO - Skipped ID: 348441 #COLUMN: fulltext #URL: https://access.redhat.com/articles/11258 #STATUS_CODE: 200
+2023-08-08 16:19:53 - INFO - Skipped ID: 348441 #COLUMN: fulltext #URL: https://bugzilla.redhat.com/ #STATUS_CODE: 200
+2023-08-08 16:19:53 - INFO - Skipped ID: 348441 #COLUMN: fulltext #URL: https://access.redhat.com/security/team/key/ #STATUS_CODE: 200
+2023-08-08 16:19:53 - INFO - Skipped ID: 348441 #COLUMN: fulltext #URL: https://access.redhat.com/security/cve/CVE-2023-22045 #STATUS_CODE: 200
+2023-08-08 16:19:53 - INFO - Skipped ID: 348441 #COLUMN: fulltext #URL: https://access.redhat.com/security/cve/CVE-2023-22049 #STATUS_CODE: 200
+2023-08-08 16:19:53 - INFO - Skipped ID: 348441 #COLUMN: fulltext #URL: https://access.redhat.com/security/updates/classification/#moderate #STATUS_CODE: 200
+2023-08-08 16:19:53 - INFO - Skipped ID: 348441 #COLUMN: fulltext #URL: https://access.redhat.com/security/team/contact/ #STATUS_CODE: 200
+2023-08-08 16:19:53 - WARNING - ID: 348441 #COLUMN: fulltext #URL: https://listman.redhat.com/mailman/listinfo/rhsa-announce #STATUS_CODE: 503
+2023-08-08 16:19:53 - INFO - ******************** Processing ID: 348440 ******************** (37/93342 - 0.0%)
+2023-08-08 16:19:53 - INFO - processing  348440 - introtext is not JSON, proceeding further to check HTML
+2023-08-08 16:19:53 - INFO - processing 348440 - fulltext is not json proceeding further to check html
+2023-08-08 16:19:57 - INFO - Skipped ID: 348440 #COLUMN: fulltext #URL: https://access.redhat.com/errata/RHSA-2023:4233 #STATUS_CODE: 200
+2023-08-08 16:19:57 - INFO - Skipped ID: 348440 #COLUMN: fulltext #URL: https://access.redhat.com/articles/11258 #STATUS_CODE: 200
+2023-08-08 16:19:57 - INFO - Skipped ID: 348440 #COLUMN: fulltext #URL: https://bugzilla.redhat.com/ #STATUS_CODE: 200
+2023-08-08 16:19:57 - INFO - Skipped ID: 348440 #COLUMN: fulltext #URL: https://access.redhat.com/security/team/key/ #STATUS_CODE: 200
+2023-08-08 16:19:57 - INFO - Skipped ID: 348440 #COLUMN: fulltext #URL: https://access.redhat.com/security/cve/CVE-2023-22006 #STATUS_CODE: 200
+2023-08-08 16:19:57 - INFO - Skipped ID: 348440 #COLUMN: fulltext #URL: https://access.redhat.com/security/cve/CVE-2023-22036 #STATUS_CODE: 200
+2023-08-08 16:19:57 - INFO - Skipped ID: 348440 #COLUMN: fulltext #URL: https://access.redhat.com/security/cve/CVE-2023-22041 #STATUS_CODE: 200
+2023-08-08 16:19:57 - INFO - Skipped ID: 348440 #COLUMN: fulltext #URL: https://access.redhat.com/security/cve/CVE-2023-22045 #STATUS_CODE: 200
+2023-08-08 16:19:57 - INFO - Skipped ID: 348440 #COLUMN: fulltext #URL: https://access.redhat.com/security/cve/CVE-2023-22049 #STATUS_CODE: 200
+2023-08-08 16:19:57 - INFO - Skipped ID: 348440 #COLUMN: fulltext #URL: https://access.redhat.com/security/cve/CVE-2023-25193 #STATUS_CODE: 200
+2023-08-08 16:19:57 - INFO - Skipped ID: 348440 #COLUMN: fulltext #URL: https://access.redhat.com/security/updates/classification/#moderate #STATUS_CODE: 200
+2023-08-08 16:19:57 - INFO - Skipped ID: 348440 #COLUMN: fulltext #URL: https://access.redhat.com/security/team/contact/ #STATUS_CODE: 200
+2023-08-08 16:19:57 - WARNING - ID: 348440 #COLUMN: fulltext #URL: https://listman.redhat.com/mailman/listinfo/rhsa-announce #STATUS_CODE: 503
+2023-08-08 16:19:57 - INFO - ******************** Processing ID: 348439 ******************** (38/93342 - 0.0%)
+2023-08-08 16:19:57 - INFO - processing  348439 - introtext is not JSON, proceeding further to check HTML
+2023-08-08 16:19:58 - INFO - Skipped ID: 348439 #COLUMN: introtext #URL: https://github.com/dotnet/announcements/issues/262 #STATUS_CODE: 200
+2023-08-08 16:19:58 - INFO - processing 348439 - fulltext is not json proceeding further to check html
+2023-08-08 16:20:00 - INFO - Skipped ID: 348439 #COLUMN: fulltext #URL: https://github.com/dotnet/ #STATUS_CODE: 200
+2023-08-08 16:20:00 - INFO - Skipped ID: 348439 #COLUMN: fulltext #URL: https://github.com/dotnet/announcements/issues/262 #STATUS_CODE: 200
+2023-08-08 16:20:00 - INFO - Skipped ID: 348439 #COLUMN: fulltext #URL: https://bugzilla.redhat.com/show_bug.cgi?id=2221854 #STATUS_CODE: 200
+2023-08-08 16:20:00 - INFO - Skipped ID: 348439 #COLUMN: fulltext #URL: http://dnf.readthedocs.io/en/latest/command_ref.html#upgrade-command-label #STATUS_CODE: 200
+2023-08-08 16:20:00 - INFO - Skipped ID: 348439 #COLUMN: fulltext #URL: https://fedoraproject.org/keys #STATUS_CODE: 200
+2023-08-08 16:20:00 - INFO - Skipped ID: 348439 #COLUMN: fulltext #URL: https://docs.fedoraproject.org/en-US/project/code-of-conduct/ #STATUS_CODE: 200
+2023-08-08 16:20:00 - INFO - Skipped ID: 348439 #COLUMN: fulltext #URL: https://fedoraproject.org/wiki/Mailing_list_guidelines #STATUS_CODE: 200
+2023-08-08 16:20:00 - INFO - Skipped ID: 348439 #COLUMN: fulltext #URL: https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org #STATUS_CODE: 200
+2023-08-08 16:20:00 - INFO - Skipped ID: 348439 #COLUMN: fulltext #URL: https://pagure.io/fedora-infrastructure/new_issue #STATUS_CODE: 200
+2023-08-08 16:20:00 - INFO - ******************** Processing ID: 348438 ******************** (39/93342 - 0.0%)
+2023-08-08 16:20:00 - INFO - processing  348438 - introtext is not JSON, proceeding further to check HTML
+2023-08-08 16:20:01 - INFO - Skipped ID: 348438 #COLUMN: introtext #URL: https://github.com/dotnet/announcements/issues/262 #STATUS_CODE: 200
+2023-08-08 16:20:01 - INFO - processing 348438 - fulltext is not json proceeding further to check html
+2023-08-08 16:20:03 - INFO - Skipped ID: 348438 #COLUMN: fulltext #URL: https://github.com/dotnet/ #STATUS_CODE: 200
+2023-08-08 16:20:03 - INFO - Skipped ID: 348438 #COLUMN: fulltext #URL: https://github.com/dotnet/announcements/issues/262 #STATUS_CODE: 200
+2023-08-08 16:20:03 - INFO - Skipped ID: 348438 #COLUMN: fulltext #URL: https://bugzilla.redhat.com/show_bug.cgi?id=2221854 #STATUS_CODE: 200
+2023-08-08 16:20:03 - INFO - Skipped ID: 348438 #COLUMN: fulltext #URL: http://dnf.readthedocs.io/en/latest/command_ref.html#upgrade-command-label #STATUS_CODE: 200
+2023-08-08 16:20:03 - INFO - Skipped ID: 348438 #COLUMN: fulltext #URL: https://fedoraproject.org/keys #STATUS_CODE: 200
+2023-08-08 16:20:03 - INFO - Skipped ID: 348438 #COLUMN: fulltext #URL: https://docs.fedoraproject.org/en-US/project/code-of-conduct/ #STATUS_CODE: 200
+2023-08-08 16:20:03 - INFO - Skipped ID: 348438 #COLUMN: fulltext #URL: https://fedoraproject.org/wiki/Mailing_list_guidelines #STATUS_CODE: 200
+2023-08-08 16:20:03 - INFO - Skipped ID: 348438 #COLUMN: fulltext #URL: https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org #STATUS_CODE: 200
+2023-08-08 16:20:03 - INFO - Skipped ID: 348438 #COLUMN: fulltext #URL: https://pagure.io/fedora-infrastructure/new_issue #STATUS_CODE: 200
+2023-08-08 16:20:03 - INFO - ******************** Processing ID: 348437 ******************** (40/93342 - 0.0%)
+2023-08-08 16:20:03 - INFO - processing  348437 - introtext is not JSON, proceeding further to check HTML
+2023-08-08 16:20:03 - INFO - processing 348437 - fulltext is not json proceeding further to check html
+2023-08-08 16:20:07 - INFO - Skipped ID: 348437 #COLUMN: fulltext #URL: https://access.redhat.com/errata/RHSA-2023:4241 #STATUS_CODE: 200
+2023-08-08 16:20:07 - INFO - Skipped ID: 348437 #COLUMN: fulltext #URL: https://access.redhat.com/articles/11258 #STATUS_CODE: 200
+2023-08-08 16:20:07 - INFO - Skipped ID: 348437 #COLUMN: fulltext #URL: https://bugzilla.redhat.com/ #STATUS_CODE: 200
+2023-08-08 16:20:07 - INFO - Skipped ID: 348437 #COLUMN: fulltext #URL: https://access.redhat.com/security/cve/CVE-2020-24736 #STATUS_CODE: 200
+2023-08-08 16:20:07 - INFO - Skipped ID: 348437 #COLUMN: fulltext #URL: https://access.redhat.com/security/cve/CVE-2023-1667 #STATUS_CODE: 200
+2023-08-08 16:20:07 - INFO - Skipped ID: 348437 #COLUMN: fulltext #URL: https://access.redhat.com/security/cve/CVE-2023-2283 #STATUS_CODE: 200
+2023-08-08 16:20:07 - INFO - Skipped ID: 348437 #COLUMN: fulltext #URL: https://access.redhat.com/security/cve/CVE-2023-3089 #STATUS_CODE: 200
+2023-08-08 16:20:07 - INFO - Skipped ID: 348437 #COLUMN: fulltext #URL: https://access.redhat.com/security/cve/CVE-2023-24329 #STATUS_CODE: 200
+2023-08-08 16:20:07 - INFO - Skipped ID: 348437 #COLUMN: fulltext #URL: https://access.redhat.com/security/cve/CVE-2023-26604 #STATUS_CODE: 200
+2023-08-08 16:20:07 - INFO - Skipped ID: 348437 #COLUMN: fulltext #URL: https://access.redhat.com/security/updates/classification/#moderate #STATUS_CODE: 200
+2023-08-08 16:20:07 - INFO - Skipped ID: 348437 #COLUMN: fulltext #URL: https://access.redhat.com/security/vulnerabilities/RHSB-2023-001 #STATUS_CODE: 200
+2023-08-08 16:20:07 - INFO - Skipped ID: 348437 #COLUMN: fulltext #URL: https://access.redhat.com/security/team/contact/ #STATUS_CODE: 200
+2023-08-08 16:20:07 - WARNING - ID: 348437 #COLUMN: fulltext #URL: https://listman.redhat.com/mailman/listinfo/rhsa-announce #STATUS_CODE: 503
+2023-08-08 16:20:21 - INFO - ******************** Processing ID: 348436 ******************** (41/93342 - 0.0%)
+2023-08-08 16:20:21 - INFO - processing  348436 - introtext is not JSON, proceeding further to check HTML
+2023-08-08 16:20:21 - INFO - processing 348436 - fulltext is not json proceeding further to check html
+2023-08-08 16:20:21 - WARNING - #ID: 348436 #URL http://partnerships.makeuseof.com/ Error: Cannot connect to host partnerships.makeuseof.com:80 ssl:default [Name or service not known]
+2023-08-08 16:20:21 - INFO - #ID: 348436 #URL http://partnerships.makeuseof.com/ - Requesting again using GET request instead of HEAD
+2023-08-08 16:20:23 - INFO - Skipped ID: 348436 #COLUMN: fulltext #URL: http://makeuseof.com/ #STATUS_CODE: 200
+2023-08-08 16:20:23 - ERROR - #ID: 348436 #URL http://partnerships.makeuseof.com/ Error: Cannot connect to host partnerships.makeuseof.com:80 ssl:default [Name or service not known]
+2023-08-08 16:20:23 - INFO - ID: 348436 #COLUMN: fulltext #URL: http://partnerships.makeuseof.com/ added for more checking
+2023-08-08 16:20:23 - INFO - ******************** Processing ID: 348435 ******************** (42/93342 - 0.0%)
+2023-08-08 16:20:23 - INFO - processing  348435 - introtext is not JSON, proceeding further to check HTML
+2023-08-08 16:20:23 - INFO - processing 348435 - fulltext is not json proceeding further to check html
+2023-08-08 16:20:23 - INFO - ******************** Processing ID: 348434 ******************** (43/93342 - 0.0%)
+2023-08-08 16:20:23 - INFO - processing  348434 - introtext is not JSON, proceeding further to check HTML
+2023-08-08 16:20:23 - INFO - processing 348434 - fulltext is not json proceeding further to check html
+2023-08-08 16:20:33 - WARNING - #ID: 348434 #URL https://cybersecuritynews.com/fortinet-firewalls-bug/ Error: 
+2023-08-08 16:20:33 - INFO - #ID: 348434 #URL https://cybersecuritynews.com/fortinet-firewalls-bug/ - Requesting again using GET request instead of HEAD
+2023-08-08 16:20:33 - WARNING - #ID: 348434 #URL https://cybersecuritynews.com/hackers-drops-bakcdoor-malware-redigo-redis-server/ Error: 
+2023-08-08 16:20:33 - INFO - #ID: 348434 #URL https://cybersecuritynews.com/hackers-drops-bakcdoor-malware-redigo-redis-server/ - Requesting again using GET request instead of HEAD
+2023-08-08 16:20:44 - WARNING - #ID: 348434 Error: Timeout 
+2023-08-08 16:20:44 - INFO - ID: 348434 #COLUMN: fulltext #URL: https://cybersecuritynews.com/fortinet-firewalls-bug/ added for more checking
+2023-08-08 16:20:44 - WARNING - #ID: 348434 Error: Timeout 
+2023-08-08 16:20:44 - INFO - ID: 348434 #COLUMN: fulltext #URL: https://cybersecuritynews.com/hackers-drops-bakcdoor-malware-redigo-redis-server/ added for more checking
+2023-08-08 16:20:44 - INFO - ******************** Processing ID: 348433 ******************** (44/93342 - 0.0%)
+2023-08-08 16:20:44 - INFO - processing  348433 - introtext is not JSON, proceeding further to check HTML
+2023-08-08 16:20:44 - INFO - processing 348433 - fulltext is not json proceeding further to check html
+2023-08-08 16:20:44 - INFO - ******************** Processing ID: 348432 ******************** (45/93342 - 0.0%)
+2023-08-08 16:20:44 - INFO - processing  348432 - introtext is not JSON, proceeding further to check HTML
+2023-08-08 16:20:44 - INFO - processing 348432 - fulltext is not json proceeding further to check html
+2023-08-08 16:20:44 - INFO - ******************** Processing ID: 348431 ******************** (46/93342 - 0.0%)
+2023-08-08 16:20:44 - INFO - processing  348431 - introtext is not JSON, proceeding further to check HTML
+2023-08-08 16:20:44 - INFO - processing 348431 - fulltext is not json proceeding further to check html
+2023-08-08 16:20:44 - INFO - ******************** Processing ID: 348430 ******************** (47/93342 - 0.1%)
+2023-08-08 16:20:44 - INFO - processing  348430 - introtext is not JSON, proceeding further to check HTML
+2023-08-08 16:20:44 - INFO - processing 348430 - fulltext is not json proceeding further to check html
+2023-08-08 16:20:44 - INFO - ******************** Processing ID: 348429 ******************** (48/93342 - 0.1%)
+2023-08-08 16:20:44 - INFO - processing  348429 - introtext is not JSON, proceeding further to check HTML
+2023-08-08 16:20:44 - INFO - processing 348429 - fulltext is not json proceeding further to check html
+2023-08-08 16:20:44 - INFO - ******************** Processing ID: 348428 ******************** (49/93342 - 0.1%)
+2023-08-08 16:20:44 - INFO - processing  348428 - introtext is not JSON, proceeding further to check HTML
+2023-08-08 16:20:44 - INFO - processing 348428 - fulltext is not json proceeding further to check html
+2023-08-08 16:20:44 - INFO - ******************** Processing ID: 348427 ******************** (50/93342 - 0.1%)
+2023-08-08 16:20:44 - INFO - processing  348427 - introtext is not JSON, proceeding further to check HTML
+2023-08-08 16:20:44 - INFO - processing 348427 - fulltext is not json proceeding further to check html
+2023-08-08 16:20:57 - INFO - ******************** Processing ID: 348426 ******************** (51/93342 - 0.1%)
+2023-08-08 16:20:57 - INFO - processing  348426 - introtext is not JSON, proceeding further to check HTML
+2023-08-08 16:20:57 - INFO - processing 348426 - fulltext is not json proceeding further to check html
+2023-08-08 16:20:57 - INFO - ******************** Processing ID: 348425 ******************** (52/93342 - 0.1%)
+2023-08-08 16:20:57 - INFO - processing  348425 - introtext is not JSON, proceeding further to check HTML
+2023-08-08 16:20:57 - INFO - processing 348425 - fulltext is not json proceeding further to check html
+2023-08-08 16:20:57 - INFO - ******************** Processing ID: 348424 ******************** (53/93342 - 0.1%)
+2023-08-08 16:20:57 - INFO - processing  348424 - introtext is not JSON, proceeding further to check HTML
+2023-08-08 16:20:57 - INFO - processing 348424 - fulltext is not json proceeding further to check html
+2023-08-08 16:20:57 - INFO - ******************** Processing ID: 348423 ******************** (54/93342 - 0.1%)
+2023-08-08 16:20:57 - INFO - processing  348423 - introtext is not JSON, proceeding further to check HTML
+2023-08-08 16:20:57 - INFO - processing 348423 - fulltext is not json proceeding further to check html
+2023-08-08 16:20:57 - INFO - ******************** Processing ID: 348422 ******************** (55/93342 - 0.1%)
+2023-08-08 16:20:57 - INFO - processing  348422 - introtext is not JSON, proceeding further to check HTML
+2023-08-08 16:20:57 - INFO - processing 348422 - fulltext is not json proceeding further to check html
+2023-08-08 16:20:57 - INFO - ******************** Processing ID: 348421 ******************** (56/93342 - 0.1%)
+2023-08-08 16:20:57 - INFO - processing  348421 - introtext is not JSON, proceeding further to check HTML
+2023-08-08 16:20:57 - INFO - processing 348421 - fulltext is not json proceeding further to check html
+2023-08-08 16:20:57 - INFO - ******************** Processing ID: 348420 ******************** (57/93342 - 0.1%)
+2023-08-08 16:20:57 - INFO - processing  348420 - introtext is not JSON, proceeding further to check HTML
+2023-08-08 16:20:57 - INFO - processing 348420 - fulltext is not json proceeding further to check html
+2023-08-08 16:20:57 - INFO - ******************** Processing ID: 348419 ******************** (58/93342 - 0.1%)
+2023-08-08 16:20:57 - INFO - processing  348419 - introtext is not JSON, proceeding further to check HTML
+2023-08-08 16:20:57 - INFO - processing 348419 - fulltext is not json proceeding further to check html
+2023-08-08 16:20:57 - INFO - ******************** Processing ID: 348418 ******************** (59/93342 - 0.1%)
+2023-08-08 16:20:57 - INFO - processing  348418 - introtext is not JSON, proceeding further to check HTML
+2023-08-08 16:20:57 - INFO - processing 348418 - fulltext is not json proceeding further to check html
+2023-08-08 16:20:57 - INFO - ******************** Processing ID: 348417 ******************** (60/93342 - 0.1%)
+2023-08-08 16:20:57 - INFO - processing  348417 - introtext is not JSON, proceeding further to check HTML
+2023-08-08 16:20:57 - INFO - processing 348417 - fulltext is not json proceeding further to check html
+2023-08-08 16:21:10 - INFO - ******************** Processing ID: 348416 ******************** (61/93342 - 0.1%)
+2023-08-08 16:21:10 - INFO - processing  348416 - introtext is not JSON, proceeding further to check HTML
+2023-08-08 16:21:10 - INFO - processing 348416 - fulltext is not json proceeding further to check html
+2023-08-08 16:21:10 - INFO - ******************** Processing ID: 348415 ******************** (62/93342 - 0.1%)
+2023-08-08 16:21:10 - INFO - processing  348415 - introtext is not JSON, proceeding further to check HTML
+2023-08-08 16:21:10 - INFO - processing 348415 - fulltext is not json proceeding further to check html
+2023-08-08 16:21:10 - INFO - ******************** Processing ID: 348414 ******************** (63/93342 - 0.1%)
+2023-08-08 16:21:10 - INFO - processing  348414 - introtext is not JSON, proceeding further to check HTML
+2023-08-08 16:21:10 - INFO - processing 348414 - fulltext is not json proceeding further to check html
+2023-08-08 16:21:10 - INFO - ******************** Processing ID: 348413 ******************** (64/93342 - 0.1%)
+2023-08-08 16:21:10 - INFO - processing  348413 - introtext is not JSON, proceeding further to check HTML
+2023-08-08 16:21:10 - INFO - processing 348413 - fulltext is not json proceeding further to check html
+2023-08-08 16:21:10 - INFO - ******************** Processing ID: 348412 ******************** (65/93342 - 0.1%)
+2023-08-08 16:21:10 - INFO - processing  348412 - introtext is not JSON, proceeding further to check HTML
+2023-08-08 16:21:10 - INFO - processing 348412 - fulltext is not json proceeding further to check html
+2023-08-08 16:21:10 - INFO - ******************** Processing ID: 348411 ******************** (66/93342 - 0.1%)
+2023-08-08 16:21:10 - INFO - processing  348411 - introtext is not JSON, proceeding further to check HTML
+2023-08-08 16:21:10 - INFO - processing 348411 - fulltext is not json proceeding further to check html
+2023-08-08 16:21:10 - INFO - ******************** Processing ID: 348410 ******************** (67/93342 - 0.1%)
+2023-08-08 16:21:10 - INFO - processing  348410 - introtext is not JSON, proceeding further to check HTML
+2023-08-08 16:21:10 - INFO - processing 348410 - fulltext is not json proceeding further to check html
+2023-08-08 16:21:10 - INFO - ******************** Processing ID: 348409 ******************** (68/93342 - 0.1%)
+2023-08-08 16:21:10 - INFO - processing  348409 - introtext is not JSON, proceeding further to check HTML
+2023-08-08 16:21:10 - INFO - processing 348409 - fulltext is not json proceeding further to check html
+2023-08-08 16:21:14 - INFO - Skipped ID: 348409 #COLUMN: fulltext #URL: https://docs.saltproject.io/en/latest/topics/releases/3006.0.html #STATUS_CODE: 200
+2023-08-08 16:21:14 - ERROR - 'int' object is not subscriptable
+Traceback (most recent call last):
+  File "/home/jarvis/projects/linux_security/introtext-fulltext_v2.py", line 438, in process_html_text
+    html,updates,for_more_check_urls=check_is_url_valid(html,logger=logger,id=id,field=field,base_url=base_url,updates=updates)
+  File "/home/jarvis/projects/linux_security/introtext-fulltext_v2.py", line 428, in check_is_url_valid
+    html,updates,for_more_check_urls = asyncio.run(check_http_urls(html=html, urls=http_urls, logger=logger, id=id,field=field,updates=updates))
+  File "/usr/lib/python3.10/asyncio/runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "/usr/lib/python3.10/asyncio/base_events.py", line 649, in run_until_complete
+    return future.result()
+  File "/home/jarvis/projects/linux_security/introtext-fulltext_v2.py", line 346, in check_http_urls
+    async for result in new_do_http_request(urls=urls, session=session, logger=logger, id=id):
+  File "/home/jarvis/projects/linux_security/introtext-fulltext_v2.py", line 190, in new_do_http_request
+    exception_type=str(data['type'])
+TypeError: 'int' object is not subscriptable
+2023-08-08 16:21:14 - ERROR - 'int' object is not subscriptable
+2023-08-08 16:21:14 - INFO - ******************** Processing ID: 348408 ******************** (69/93342 - 0.1%)
+2023-08-08 16:21:14 - INFO - processing  348408 - introtext is not JSON, proceeding further to check HTML
+2023-08-08 16:21:14 - INFO - processing 348408 - fulltext is not json proceeding further to check html
+2023-08-08 16:21:17 - ERROR - 'int' object is not subscriptable
+Traceback (most recent call last):
+  File "/home/jarvis/projects/linux_security/introtext-fulltext_v2.py", line 438, in process_html_text
+    html,updates,for_more_check_urls=check_is_url_valid(html,logger=logger,id=id,field=field,base_url=base_url,updates=updates)
+  File "/home/jarvis/projects/linux_security/introtext-fulltext_v2.py", line 428, in check_is_url_valid
+    html,updates,for_more_check_urls = asyncio.run(check_http_urls(html=html, urls=http_urls, logger=logger, id=id,field=field,updates=updates))
+  File "/usr/lib/python3.10/asyncio/runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "/usr/lib/python3.10/asyncio/base_events.py", line 649, in run_until_complete
+    return future.result()
+  File "/home/jarvis/projects/linux_security/introtext-fulltext_v2.py", line 346, in check_http_urls
+    async for result in new_do_http_request(urls=urls, session=session, logger=logger, id=id):
+  File "/home/jarvis/projects/linux_security/introtext-fulltext_v2.py", line 190, in new_do_http_request
+    exception_type=str(data['type'])
+TypeError: 'int' object is not subscriptable
+2023-08-08 16:21:17 - ERROR - 'int' object is not subscriptable
+2023-08-08 16:21:17 - INFO - ******************** Processing ID: 348407 ******************** (70/93342 - 0.1%)
+2023-08-08 16:21:17 - INFO - processing  348407 - introtext is not JSON, proceeding further to check HTML
+2023-08-08 16:21:17 - INFO - processing 348407 - fulltext is not json proceeding further to check html
+2023-08-08 16:21:22 - INFO - Skipped ID: 348407 #COLUMN: fulltext #URL: https://go.dev #STATUS_CODE: 200
+2023-08-08 16:21:22 - INFO - Skipped ID: 348407 #COLUMN: fulltext #URL: https://bugzilla.redhat.com/show_bug.cgi?id=2217561 #STATUS_CODE: 200
+2023-08-08 16:21:22 - INFO - Skipped ID: 348407 #COLUMN: fulltext #URL: https://bugzilla.redhat.com/show_bug.cgi?id=2217564 #STATUS_CODE: 200
+2023-08-08 16:21:22 - INFO - Skipped ID: 348407 #COLUMN: fulltext #URL: https://bugzilla.redhat.com/show_bug.cgi?id=2217567 #STATUS_CODE: 200
+2023-08-08 16:21:22 - INFO - Skipped ID: 348407 #COLUMN: fulltext #URL: https://bugzilla.redhat.com/show_bug.cgi?id=2217571 #STATUS_CODE: 200
+2023-08-08 16:21:22 - INFO - Skipped ID: 348407 #COLUMN: fulltext #URL: http://dnf.readthedocs.io/en/latest/command_ref.html#upgrade-command-label #STATUS_CODE: 200
+2023-08-08 16:21:22 - INFO - Skipped ID: 348407 #COLUMN: fulltext #URL: https://fedoraproject.org/keys #STATUS_CODE: 200
+2023-08-08 16:21:22 - INFO - Skipped ID: 348407 #COLUMN: fulltext #URL: https://docs.fedoraproject.org/en-US/project/code-of-conduct/ #STATUS_CODE: 200
+2023-08-08 16:21:22 - INFO - Skipped ID: 348407 #COLUMN: fulltext #URL: https://fedoraproject.org/wiki/Mailing_list_guidelines #STATUS_CODE: 200
+2023-08-08 16:21:22 - INFO - Skipped ID: 348407 #COLUMN: fulltext #URL: https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org #STATUS_CODE: 200
+2023-08-08 16:21:22 - INFO - Skipped ID: 348407 #COLUMN: fulltext #URL: https://pagure.io/fedora-infrastructure/new_issue #STATUS_CODE: 200
+2023-08-08 16:21:35 - INFO - ******************** Processing ID: 348406 ******************** (71/93342 - 0.1%)
+2023-08-08 16:21:35 - INFO - processing  348406 - introtext is not JSON, proceeding further to check HTML
+2023-08-08 16:21:37 - INFO - Skipped ID: 348406 #COLUMN: introtext #URL: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-30581 #STATUS_CODE: 200
+2023-08-08 16:21:37 - INFO - Skipped ID: 348406 #COLUMN: introtext #URL: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-30585 #STATUS_CODE: 200
+2023-08-08 16:21:37 - INFO - processing 348406 - fulltext is not json proceeding further to check html
+2023-08-08 16:21:42 - INFO - Skipped ID: 348406 #COLUMN: fulltext #URL: http://nodejs.org/ #STATUS_CODE: 308
+2023-08-08 16:21:42 - INFO - Skipped ID: 348406 #COLUMN: fulltext #URL: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-30581 #STATUS_CODE: 200
+2023-08-08 16:21:42 - INFO - Skipped ID: 348406 #COLUMN: fulltext #URL: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-30585 #STATUS_CODE: 200
+2023-08-08 16:21:42 - INFO - Skipped ID: 348406 #COLUMN: fulltext #URL: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-30588 #STATUS_CODE: 200
+2023-08-08 16:21:42 - INFO - Skipped ID: 348406 #COLUMN: fulltext #URL: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-30589 #STATUS_CODE: 200
+2023-08-08 16:21:42 - INFO - Skipped ID: 348406 #COLUMN: fulltext #URL: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-30590 #STATUS_CODE: 200
+2023-08-08 16:21:42 - INFO - Skipped ID: 348406 #COLUMN: fulltext #URL: https://www.openssl.org/news/secadv/20230328.txt #STATUS_CODE: 200
+2023-08-08 16:21:42 - INFO - Skipped ID: 348406 #COLUMN: fulltext #URL: https://www.openssl.org/news/secadv/20230420.txt #STATUS_CODE: 200
+2023-08-08 16:21:42 - INFO - Skipped ID: 348406 #COLUMN: fulltext #URL: https://www.openssl.org/news/secadv/20230530.txt #STATUS_CODE: 200
+2023-08-08 16:21:42 - INFO - Skipped ID: 348406 #COLUMN: fulltext #URL: https://github.com/c-ares/c-ares/security/advisories/GHSA-9g78-jv2r-p7vc #STATUS_CODE: 200
+2023-08-08 16:21:42 - INFO - Skipped ID: 348406 #COLUMN: fulltext #URL: https://github.com/c-ares/c-ares/security/advisories/GHSA-8r8p-23f3-64c2 #STATUS_CODE: 200
+2023-08-08 16:21:42 - INFO - Skipped ID: 348406 #COLUMN: fulltext #URL: https://github.com/c-ares/c-ares/security/advisories/GHSA-54xr-f67r-4pc4 #STATUS_CODE: 200
+2023-08-08 16:21:42 - INFO - Skipped ID: 348406 #COLUMN: fulltext #URL: https://github.com/c-ares/c-ares/security/advisories/GHSA-x6mf-cxr9-8q6v #STATUS_CODE: 200
+2023-08-08 16:21:42 - INFO - Skipped ID: 348406 #COLUMN: fulltext #URL: https://nodejs.org/en/blog/vulnerability/june-2023-security-releases/ #STATUS_CODE: 308
+2023-08-08 16:21:42 - INFO - Skipped ID: 348406 #COLUMN: fulltext #URL: http://dnf.readthedocs.io/en/latest/command_ref.html#upgrade-command-label #STATUS_CODE: 200
+2023-08-08 16:21:42 - INFO - Skipped ID: 348406 #COLUMN: fulltext #URL: https://fedoraproject.org/keys #STATUS_CODE: 200
+2023-08-08 16:21:42 - INFO - Skipped ID: 348406 #COLUMN: fulltext #URL: https://docs.fedoraproject.org/en-US/project/code-of-conduct/ #STATUS_CODE: 200
+2023-08-08 16:21:42 - INFO - Skipped ID: 348406 #COLUMN: fulltext #URL: https://fedoraproject.org/wiki/Mailing_list_guidelines #STATUS_CODE: 200
+2023-08-08 16:21:42 - INFO - Skipped ID: 348406 #COLUMN: fulltext #URL: https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org #STATUS_CODE: 200
+2023-08-08 16:21:42 - INFO - Skipped ID: 348406 #COLUMN: fulltext #URL: https://pagure.io/fedora-infrastructure/new_issue #STATUS_CODE: 200
+2023-08-08 16:21:42 - INFO - ******************** Processing ID: 348405 ******************** (72/93342 - 0.1%)
+2023-08-08 16:21:42 - INFO - processing  348405 - introtext is not JSON, proceeding further to check HTML
+2023-08-08 16:21:44 - INFO - Skipped ID: 348405 #COLUMN: introtext #URL: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-30581 #STATUS_CODE: 200
+2023-08-08 16:21:44 - INFO - Skipped ID: 348405 #COLUMN: introtext #URL: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-30585 #STATUS_CODE: 200
+2023-08-08 16:21:44 - INFO - processing 348405 - fulltext is not json proceeding further to check html
+2023-08-08 16:21:52 - WARNING - #ID: 348405 #URL https://fedoraproject.org/keys Error: Server disconnected
+2023-08-08 16:21:52 - INFO - #ID: 348405 #URL https://fedoraproject.org/keys - Requesting again using GET request instead of HEAD
+2023-08-08 16:21:54 - WARNING - #ID: 348405 #URL https://docs.fedoraproject.org/en-US/project/code-of-conduct/ Error: 
+2023-08-08 16:21:54 - INFO - #ID: 348405 #URL https://docs.fedoraproject.org/en-US/project/code-of-conduct/ - Requesting again using GET request instead of HEAD
+2023-08-08 16:21:55 - INFO - Skipped ID: 348405 #COLUMN: fulltext #URL: http://nodejs.org/ #STATUS_CODE: 308
+2023-08-08 16:21:55 - INFO - Skipped ID: 348405 #COLUMN: fulltext #URL: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-30581 #STATUS_CODE: 200
+2023-08-08 16:21:55 - INFO - Skipped ID: 348405 #COLUMN: fulltext #URL: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-30585 #STATUS_CODE: 200
+2023-08-08 16:21:55 - INFO - Skipped ID: 348405 #COLUMN: fulltext #URL: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-30588 #STATUS_CODE: 200
+2023-08-08 16:21:55 - INFO - Skipped ID: 348405 #COLUMN: fulltext #URL: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-30589 #STATUS_CODE: 200
+2023-08-08 16:21:55 - INFO - Skipped ID: 348405 #COLUMN: fulltext #URL: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-30590 #STATUS_CODE: 200
+2023-08-08 16:21:55 - INFO - Skipped ID: 348405 #COLUMN: fulltext #URL: https://www.openssl.org/news/secadv/20230328.txt #STATUS_CODE: 200
+2023-08-08 16:21:55 - INFO - Skipped ID: 348405 #COLUMN: fulltext #URL: https://www.openssl.org/news/secadv/20230420.txt #STATUS_CODE: 200
+2023-08-08 16:21:55 - INFO - Skipped ID: 348405 #COLUMN: fulltext #URL: https://www.openssl.org/news/secadv/20230530.txt #STATUS_CODE: 200
+2023-08-08 16:21:55 - INFO - Skipped ID: 348405 #COLUMN: fulltext #URL: https://github.com/c-ares/c-ares/security/advisories/GHSA-9g78-jv2r-p7vc #STATUS_CODE: 200
+2023-08-08 16:21:55 - INFO - Skipped ID: 348405 #COLUMN: fulltext #URL: https://github.com/c-ares/c-ares/security/advisories/GHSA-8r8p-23f3-64c2 #STATUS_CODE: 200
+2023-08-08 16:21:55 - INFO - Skipped ID: 348405 #COLUMN: fulltext #URL: https://github.com/c-ares/c-ares/security/advisories/GHSA-54xr-f67r-4pc4 #STATUS_CODE: 200
+2023-08-08 16:21:55 - INFO - Skipped ID: 348405 #COLUMN: fulltext #URL: https://github.com/c-ares/c-ares/security/advisories/GHSA-x6mf-cxr9-8q6v #STATUS_CODE: 200
+2023-08-08 16:21:55 - INFO - Skipped ID: 348405 #COLUMN: fulltext #URL: https://nodejs.org/en/blog/vulnerability/june-2023-security-releases/ #STATUS_CODE: 308
+2023-08-08 16:21:55 - INFO - Skipped ID: 348405 #COLUMN: fulltext #URL: http://dnf.readthedocs.io/en/latest/command_ref.html#upgrade-command-label #STATUS_CODE: 200
+2023-08-08 16:21:55 - ERROR - 'is_error'
+Traceback (most recent call last):
+  File "/home/jarvis/projects/linux_security/introtext-fulltext_v2.py", line 438, in process_html_text
+    html,updates,for_more_check_urls=check_is_url_valid(html,logger=logger,id=id,field=field,base_url=base_url,updates=updates)
+  File "/home/jarvis/projects/linux_security/introtext-fulltext_v2.py", line 428, in check_is_url_valid
+    html,updates,for_more_check_urls = asyncio.run(check_http_urls(html=html, urls=http_urls, logger=logger, id=id,field=field,updates=updates))
+  File "/usr/lib/python3.10/asyncio/runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "/usr/lib/python3.10/asyncio/base_events.py", line 649, in run_until_complete
+    return future.result()
+  File "/home/jarvis/projects/linux_security/introtext-fulltext_v2.py", line 346, in check_http_urls
+    async for result in new_do_http_request(urls=urls, session=session, logger=logger, id=id):
+  File "/home/jarvis/projects/linux_security/introtext-fulltext_v2.py", line 183, in new_do_http_request
+    if not response['is_error']:
+KeyError: 'is_error'
+2023-08-08 16:21:55 - ERROR - 'is_error'
+2023-08-08 16:21:55 - INFO - ******************** Processing ID: 348404 ******************** (73/93342 - 0.1%)
+2023-08-08 16:21:55 - INFO - processing  348404 - introtext is not JSON, proceeding further to check HTML
+2023-08-08 16:21:55 - INFO - processing 348404 - fulltext is not json proceeding further to check html
+2023-08-08 16:22:00 - INFO - Skipped ID: 348404 #COLUMN: fulltext #URL: https://CRAN.R-project.org/package=jsonlite #STATUS_CODE: 303
+2023-08-08 16:22:00 - INFO - Skipped ID: 348404 #COLUMN: fulltext #URL: https://bugzilla.redhat.com/show_bug.cgi?id=2221249 #STATUS_CODE: 200
+2023-08-08 16:22:00 - INFO - Skipped ID: 348404 #COLUMN: fulltext #URL: http://dnf.readthedocs.io/en/latest/command_ref.html#upgrade-command-label #STATUS_CODE: 200
+2023-08-08 16:22:00 - INFO - Skipped ID: 348404 #COLUMN: fulltext #URL: https://fedoraproject.org/keys #STATUS_CODE: 200
+2023-08-08 16:22:00 - INFO - Skipped ID: 348404 #COLUMN: fulltext #URL: https://docs.fedoraproject.org/en-US/project/code-of-conduct/ #STATUS_CODE: 200
+2023-08-08 16:22:00 - INFO - Skipped ID: 348404 #COLUMN: fulltext #URL: https://fedoraproject.org/wiki/Mailing_list_guidelines #STATUS_CODE: 200
+2023-08-08 16:22:00 - INFO - Skipped ID: 348404 #COLUMN: fulltext #URL: https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org #STATUS_CODE: 200
+2023-08-08 16:22:00 - INFO - Skipped ID: 348404 #COLUMN: fulltext #URL: https://pagure.io/fedora-infrastructure/new_issue #STATUS_CODE: 200
+2023-08-08 16:22:00 - INFO - ******************** Processing ID: 348403 ******************** (74/93342 - 0.1%)
+2023-08-08 16:22:00 - INFO - processing  348403 - introtext is not JSON, proceeding further to check HTML
+2023-08-08 16:22:01 - INFO - Skipped ID: 348403 #COLUMN: introtext #URL: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-30581 #STATUS_CODE: 200
+2023-08-08 16:22:01 - INFO - Skipped ID: 348403 #COLUMN: introtext #URL: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-30585 #STATUS_CODE: 200
+2023-08-08 16:22:01 - INFO - processing 348403 - fulltext is not json proceeding further to check html
+2023-08-08 16:22:04 - INFO - Skipped ID: 348403 #COLUMN: fulltext #URL: http://nodejs.org/ #STATUS_CODE: 308
+2023-08-08 16:22:04 - INFO - Skipped ID: 348403 #COLUMN: fulltext #URL: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-30581 #STATUS_CODE: 200
+2023-08-08 16:22:04 - INFO - Skipped ID: 348403 #COLUMN: fulltext #URL: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-30585 #STATUS_CODE: 200
+2023-08-08 16:22:04 - INFO - Skipped ID: 348403 #COLUMN: fulltext #URL: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-30588 #STATUS_CODE: 200
+2023-08-08 16:22:04 - INFO - Skipped ID: 348403 #COLUMN: fulltext #URL: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-30589 #STATUS_CODE: 200
+2023-08-08 16:22:04 - INFO - Skipped ID: 348403 #COLUMN: fulltext #URL: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-30590 #STATUS_CODE: 200
+2023-08-08 16:22:04 - INFO - Skipped ID: 348403 #COLUMN: fulltext #URL: https://www.openssl.org/news/secadv/20230328.txt #STATUS_CODE: 200
+2023-08-08 16:22:04 - INFO - Skipped ID: 348403 #COLUMN: fulltext #URL: https://www.openssl.org/news/secadv/20230420.txt #STATUS_CODE: 200
+2023-08-08 16:22:04 - INFO - Skipped ID: 348403 #COLUMN: fulltext #URL: https://www.openssl.org/news/secadv/20230530.txt #STATUS_CODE: 200
+2023-08-08 16:22:04 - INFO - Skipped ID: 348403 #COLUMN: fulltext #URL: https://github.com/c-ares/c-ares/security/advisories/GHSA-9g78-jv2r-p7vc #STATUS_CODE: 200
+2023-08-08 16:22:04 - INFO - Skipped ID: 348403 #COLUMN: fulltext #URL: https://github.com/c-ares/c-ares/security/advisories/GHSA-8r8p-23f3-64c2 #STATUS_CODE: 200
+2023-08-08 16:22:04 - INFO - Skipped ID: 348403 #COLUMN: fulltext #URL: https://github.com/c-ares/c-ares/security/advisories/GHSA-54xr-f67r-4pc4 #STATUS_CODE: 200
+2023-08-08 16:22:04 - INFO - Skipped ID: 348403 #COLUMN: fulltext #URL: https://github.com/c-ares/c-ares/security/advisories/GHSA-x6mf-cxr9-8q6v #STATUS_CODE: 200
+2023-08-08 16:22:04 - INFO - Skipped ID: 348403 #COLUMN: fulltext #URL: https://nodejs.org/en/blog/vulnerability/june-2023-security-releases/ #STATUS_CODE: 308
+2023-08-08 16:22:04 - INFO - Skipped ID: 348403 #COLUMN: fulltext #URL: http://dnf.readthedocs.io/en/latest/command_ref.html#upgrade-command-label #STATUS_CODE: 200
+2023-08-08 16:22:04 - INFO - Skipped ID: 348403 #COLUMN: fulltext #URL: https://fedoraproject.org/keys #STATUS_CODE: 200
+2023-08-08 16:22:04 - INFO - Skipped ID: 348403 #COLUMN: fulltext #URL: https://docs.fedoraproject.org/en-US/project/code-of-conduct/ #STATUS_CODE: 200
+2023-08-08 16:22:04 - INFO - Skipped ID: 348403 #COLUMN: fulltext #URL: https://fedoraproject.org/wiki/Mailing_list_guidelines #STATUS_CODE: 200
+2023-08-08 16:22:04 - INFO - Skipped ID: 348403 #COLUMN: fulltext #URL: https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org #STATUS_CODE: 200
+2023-08-08 16:22:04 - INFO - Skipped ID: 348403 #COLUMN: fulltext #URL: https://pagure.io/fedora-infrastructure/new_issue #STATUS_CODE: 200
+2023-08-08 16:22:04 - INFO - ******************** Processing ID: 348402 ******************** (75/93342 - 0.1%)
+2023-08-08 16:22:04 - INFO - processing  348402 - introtext is not JSON, proceeding further to check HTML
+2023-08-08 16:22:04 - INFO - processing 348402 - fulltext is not json proceeding further to check html
+2023-08-08 16:22:05 - INFO - Skipped ID: 348402 #COLUMN: fulltext #URL: https://ubuntu.com/security/notices/USN-6232-1 #STATUS_CODE: 200
+2023-08-08 16:22:05 - INFO - Skipped ID: 348402 #COLUMN: fulltext #URL: https://launchpad.net/ubuntu/+source/wkhtmltopdf/0.12.5-1ubuntu0.1 #STATUS_CODE: 200
+2023-08-08 16:22:05 - INFO - ******************** Processing ID: 348401 ******************** (76/93342 - 0.1%)
+2023-08-08 16:22:05 - INFO - processing  348401 - introtext is not JSON, proceeding further to check HTML
+2023-08-08 16:22:05 - INFO - processing 348401 - fulltext is not json proceeding further to check html
+2023-08-08 16:22:09 - INFO - Skipped ID: 348401 #COLUMN: fulltext #URL: https://access.redhat.com/errata/RHSA-2023:4159 #STATUS_CODE: 200
+2023-08-08 16:22:09 - INFO - Skipped ID: 348401 #COLUMN: fulltext #URL: https://access.redhat.com/articles/11258 #STATUS_CODE: 200
+2023-08-08 16:22:09 - INFO - Skipped ID: 348401 #COLUMN: fulltext #URL: https://bugzilla.redhat.com/ #STATUS_CODE: 200
+2023-08-08 16:22:09 - INFO - Skipped ID: 348401 #COLUMN: fulltext #URL: https://access.redhat.com/security/team/key/ #STATUS_CODE: 200
+2023-08-08 16:22:09 - INFO - Skipped ID: 348401 #COLUMN: fulltext #URL: https://access.redhat.com/security/cve/CVE-2023-22006 #STATUS_CODE: 200
+2023-08-08 16:22:09 - INFO - Skipped ID: 348401 #COLUMN: fulltext #URL: https://access.redhat.com/security/cve/CVE-2023-22036 #STATUS_CODE: 200
+2023-08-08 16:22:09 - INFO - Skipped ID: 348401 #COLUMN: fulltext #URL: https://access.redhat.com/security/cve/CVE-2023-22041 #STATUS_CODE: 200
+2023-08-08 16:22:09 - INFO - Skipped ID: 348401 #COLUMN: fulltext #URL: https://access.redhat.com/security/cve/CVE-2023-22044 #STATUS_CODE: 200
+2023-08-08 16:22:09 - INFO - Skipped ID: 348401 #COLUMN: fulltext #URL: https://access.redhat.com/security/cve/CVE-2023-22045 #STATUS_CODE: 200
+2023-08-08 16:22:09 - INFO - Skipped ID: 348401 #COLUMN: fulltext #URL: https://access.redhat.com/security/cve/CVE-2023-22049 #STATUS_CODE: 200
+2023-08-08 16:22:09 - INFO - Skipped ID: 348401 #COLUMN: fulltext #URL: https://access.redhat.com/security/cve/CVE-2023-25193 #STATUS_CODE: 200
+2023-08-08 16:22:09 - INFO - Skipped ID: 348401 #COLUMN: fulltext #URL: https://access.redhat.com/security/updates/classification/#moderate #STATUS_CODE: 200
+2023-08-08 16:22:09 - INFO - Skipped ID: 348401 #COLUMN: fulltext #URL: https://access.redhat.com/security/team/contact/ #STATUS_CODE: 200
+2023-08-08 16:22:09 - WARNING - ID: 348401 #COLUMN: fulltext #URL: https://listman.redhat.com/mailman/listinfo/rhsa-announce #STATUS_CODE: 503
+2023-08-08 16:22:09 - INFO - ******************** Processing ID: 348400 ******************** (77/93342 - 0.1%)
+2023-08-08 16:22:09 - INFO - processing  348400 - introtext is not JSON, proceeding further to check HTML
+2023-08-08 16:22:09 - INFO - processing 348400 - fulltext is not json proceeding further to check html
+2023-08-08 16:22:16 - INFO - Skipped ID: 348400 #COLUMN: fulltext #URL: https://access.redhat.com/errata/RHSA-2023:4178 #STATUS_CODE: 200
+2023-08-08 16:22:16 - INFO - Skipped ID: 348400 #COLUMN: fulltext #URL: https://access.redhat.com/articles/11258 #STATUS_CODE: 200
+2023-08-08 16:22:16 - INFO - Skipped ID: 348400 #COLUMN: fulltext #URL: https://bugzilla.redhat.com/ #STATUS_CODE: 200
+2023-08-08 16:22:16 - INFO - Skipped ID: 348400 #COLUMN: fulltext #URL: https://access.redhat.com/security/team/key/ #STATUS_CODE: 200
+2023-08-08 16:22:16 - INFO - Skipped ID: 348400 #COLUMN: fulltext #URL: https://access.redhat.com/security/cve/CVE-2023-22045 #STATUS_CODE: 200
+2023-08-08 16:22:16 - INFO - Skipped ID: 348400 #COLUMN: fulltext #URL: https://access.redhat.com/security/cve/CVE-2023-22049 #STATUS_CODE: 200
+2023-08-08 16:22:16 - INFO - Skipped ID: 348400 #COLUMN: fulltext #URL: https://access.redhat.com/security/updates/classification/#moderate #STATUS_CODE: 200
+2023-08-08 16:22:16 - INFO - Skipped ID: 348400 #COLUMN: fulltext #URL: https://access.redhat.com/security/team/contact/ #STATUS_CODE: 200
+2023-08-08 16:22:16 - WARNING - ID: 348400 #COLUMN: fulltext #URL: https://listman.redhat.com/mailman/listinfo/rhsa-announce #STATUS_CODE: 503
+2023-08-08 16:22:16 - INFO - ******************** Processing ID: 348399 ******************** (78/93342 - 0.1%)
+2023-08-08 16:22:16 - INFO - processing  348399 - introtext is not JSON, proceeding further to check HTML
+2023-08-08 16:22:16 - INFO - processing 348399 - fulltext is not json proceeding further to check html
+2023-08-08 16:22:25 - INFO - Skipped ID: 348399 #COLUMN: fulltext #URL: https://access.redhat.com/errata/RHSA-2023:4093 #STATUS_CODE: 200
+2023-08-08 16:22:25 - INFO - Skipped ID: 348399 #COLUMN: fulltext #URL: https://access.redhat.com/errata/RHSA-2023:4091 #STATUS_CODE: 200
+2023-08-08 16:22:25 - INFO - Skipped ID: 348399 #COLUMN: fulltext #URL: https://docs.openshift.com/container-platform/4.13/updating/updating-cluster-cli.html #STATUS_CODE: 200
+2023-08-08 16:22:25 - INFO - Skipped ID: 348399 #COLUMN: fulltext #URL: https://docs.openshift.com/container-platform/4.13/release_notes/ocp-4-13-release-notes.html #STATUS_CODE: 200
+2023-08-08 16:22:25 - INFO - Skipped ID: 348399 #COLUMN: fulltext #URL: https://bugzilla.redhat.com/ #STATUS_CODE: 200
+2023-08-08 16:22:25 - INFO - Skipped ID: 348399 #COLUMN: fulltext #URL: https://access.redhat.com/security/team/key/ #STATUS_CODE: 200
+2023-08-08 16:22:25 - INFO - Skipped ID: 348399 #COLUMN: fulltext #URL: https://access.redhat.com/security/cve/CVE-2023-1260 #STATUS_CODE: 200
+2023-08-08 16:22:25 - INFO - Skipped ID: 348399 #COLUMN: fulltext #URL: https://access.redhat.com/security/cve/CVE-2023-3089 #STATUS_CODE: 200
+2023-08-08 16:22:25 - INFO - Skipped ID: 348399 #COLUMN: fulltext #URL: https://access.redhat.com/security/cve/CVE-2023-24534 #STATUS_CODE: 200
+2023-08-08 16:22:25 - INFO - Skipped ID: 348399 #COLUMN: fulltext #URL: https://access.redhat.com/security/cve/CVE-2023-24536 #STATUS_CODE: 200
+2023-08-08 16:22:25 - INFO - Skipped ID: 348399 #COLUMN: fulltext #URL: https://access.redhat.com/security/cve/CVE-2023-24537 #STATUS_CODE: 200
+2023-08-08 16:22:25 - INFO - Skipped ID: 348399 #COLUMN: fulltext #URL: https://access.redhat.com/security/cve/CVE-2023-24538 #STATUS_CODE: 200
+2023-08-08 16:22:25 - INFO - Skipped ID: 348399 #COLUMN: fulltext #URL: https://access.redhat.com/security/cve/CVE-2023-24539 #STATUS_CODE: 200
+2023-08-08 16:22:25 - INFO - Skipped ID: 348399 #COLUMN: fulltext #URL: https://access.redhat.com/security/cve/CVE-2023-27561 #STATUS_CODE: 200
+2023-08-08 16:22:25 - INFO - Skipped ID: 348399 #COLUMN: fulltext #URL: https://access.redhat.com/security/cve/CVE-2023-29400 #STATUS_CODE: 200
+2023-08-08 16:22:25 - INFO - Skipped ID: 348399 #COLUMN: fulltext #URL: https://access.redhat.com/security/updates/classification/#important #STATUS_CODE: 200
+2023-08-08 16:22:25 - INFO - Skipped ID: 348399 #COLUMN: fulltext #URL: https://access.redhat.com/security/vulnerabilities/RHSB-2023-001 #STATUS_CODE: 200
+2023-08-08 16:22:25 - INFO - Skipped ID: 348399 #COLUMN: fulltext #URL: https://access.redhat.com/security/team/contact/ #STATUS_CODE: 200
+2023-08-08 16:22:25 - WARNING - ID: 348399 #COLUMN: fulltext #URL: https://listman.redhat.com/mailman/listinfo/rhsa-announce #STATUS_CODE: 503
+2023-08-08 16:22:25 - INFO - ******************** Processing ID: 348398 ******************** (79/93342 - 0.1%)
+2023-08-08 16:22:25 - INFO - processing  348398 - introtext is not JSON, proceeding further to check HTML
+2023-08-08 16:22:25 - INFO - processing 348398 - fulltext is not json proceeding further to check html
+2023-08-08 16:22:35 - WARNING - #ID: 348398 #URL https://access.redhat.com/errata/RHSA-2023:4090 Error: 
+2023-08-08 16:22:35 - INFO - #ID: 348398 #URL https://access.redhat.com/errata/RHSA-2023:4090 - Requesting again using GET request instead of HEAD
+2023-08-08 16:22:35 - WARNING - #ID: 348398 #URL https://access.redhat.com/security/cve/CVE-2023-24329 Error: 
+2023-08-08 16:22:35 - INFO - #ID: 348398 #URL https://access.redhat.com/security/cve/CVE-2023-24329 - Requesting again using GET request instead of HEAD
+2023-08-08 16:22:35 - WARNING - #ID: 348398 #URL https://access.redhat.com/security/cve/CVE-2023-32067 Error: 
+2023-08-08 16:22:35 - INFO - #ID: 348398 #URL https://access.redhat.com/security/cve/CVE-2023-32067 - Requesting again using GET request instead of HEAD
+2023-08-08 16:22:46 - WARNING - #ID: 348398 Error: Timeout 
+2023-08-08 16:22:46 - INFO - ID: 348398 #COLUMN: fulltext #URL: https://access.redhat.com/errata/RHSA-2023:4090 added for more checking
+2023-08-08 16:22:46 - INFO - Skipped ID: 348398 #COLUMN: fulltext #URL: https://access.redhat.com/errata/RHSA-2023:4091 #STATUS_CODE: 200
+2023-08-08 16:22:46 - INFO - Skipped ID: 348398 #COLUMN: fulltext #URL: https://docs.openshift.com/container-platform/4.13/updating/updating-cluster-cli.html #STATUS_CODE: 200
+2023-08-08 16:22:46 - INFO - Skipped ID: 348398 #COLUMN: fulltext #URL: https://docs.openshift.com/container-platform/4.13/release_notes/ocp-4-13-release-notes.html #STATUS_CODE: 200
+2023-08-08 16:22:46 - INFO - Skipped ID: 348398 #COLUMN: fulltext #URL: https://bugzilla.redhat.com/ #STATUS_CODE: 200
+2023-08-08 16:22:46 - INFO - Skipped ID: 348398 #COLUMN: fulltext #URL: https://issues.redhat.com/ #STATUS_CODE: 200
+2023-08-08 16:22:46 - INFO - Skipped ID: 348398 #COLUMN: fulltext #URL: https://access.redhat.com/security/cve/CVE-2022-41717 #STATUS_CODE: 200
+2023-08-08 16:22:46 - INFO - Skipped ID: 348398 #COLUMN: fulltext #URL: https://access.redhat.com/security/cve/CVE-2022-41723 #STATUS_CODE: 200
+2023-08-08 16:22:46 - INFO - Skipped ID: 348398 #COLUMN: fulltext #URL: https://access.redhat.com/security/cve/CVE-2023-1260 #STATUS_CODE: 200
+2023-08-08 16:22:46 - INFO - Skipped ID: 348398 #COLUMN: fulltext #URL: https://access.redhat.com/security/cve/CVE-2023-3089 #STATUS_CODE: 200
+2023-08-08 16:22:46 - ERROR - 'is_error'
+Traceback (most recent call last):
+  File "/home/jarvis/projects/linux_security/introtext-fulltext_v2.py", line 438, in process_html_text
+    html,updates,for_more_check_urls=check_is_url_valid(html,logger=logger,id=id,field=field,base_url=base_url,updates=updates)
+  File "/home/jarvis/projects/linux_security/introtext-fulltext_v2.py", line 428, in check_is_url_valid
+    html,updates,for_more_check_urls = asyncio.run(check_http_urls(html=html, urls=http_urls, logger=logger, id=id,field=field,updates=updates))
+  File "/usr/lib/python3.10/asyncio/runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "/usr/lib/python3.10/asyncio/base_events.py", line 649, in run_until_complete
+    return future.result()
+  File "/home/jarvis/projects/linux_security/introtext-fulltext_v2.py", line 346, in check_http_urls
+    async for result in new_do_http_request(urls=urls, session=session, logger=logger, id=id):
+  File "/home/jarvis/projects/linux_security/introtext-fulltext_v2.py", line 183, in new_do_http_request
+    if not response['is_error']:
+KeyError: 'is_error'
+2023-08-08 16:22:46 - ERROR - 'is_error'
+2023-08-08 16:22:46 - INFO - ******************** Processing ID: 348397 ******************** (80/93342 - 0.1%)
+2023-08-08 16:22:46 - INFO - processing  348397 - introtext is not JSON, proceeding further to check HTML
+2023-08-08 16:22:46 - INFO - processing 348397 - fulltext is not json proceeding further to check html
+2023-08-08 16:22:53 - INFO - Skipped ID: 348397 #COLUMN: fulltext #URL: https://access.redhat.com/errata/RHSA-2023:4238 #STATUS_CODE: 200
+2023-08-08 16:22:53 - INFO - Skipped ID: 348397 #COLUMN: fulltext #URL: https://access.redhat.com/articles/11258 #STATUS_CODE: 200
+2023-08-08 16:22:53 - INFO - Skipped ID: 348397 #COLUMN: fulltext #URL: https://bugzilla.redhat.com/ #STATUS_CODE: 200
+2023-08-08 16:22:53 - INFO - Skipped ID: 348397 #COLUMN: fulltext #URL: https://access.redhat.com/security/cve/CVE-2020-24736 #STATUS_CODE: 200
+2023-08-08 16:22:53 - INFO - Skipped ID: 348397 #COLUMN: fulltext #URL: https://access.redhat.com/security/cve/CVE-2022-2795 #STATUS_CODE: 200
+2023-08-08 16:22:53 - INFO - Skipped ID: 348397 #COLUMN: fulltext #URL: https://access.redhat.com/security/cve/CVE-2022-36227 #STATUS_CODE: 200
+2023-08-08 16:22:53 - INFO - Skipped ID: 348397 #COLUMN: fulltext #URL: https://access.redhat.com/security/cve/CVE-2022-40023 #STATUS_CODE: 200
+2023-08-08 16:22:53 - INFO - Skipped ID: 348397 #COLUMN: fulltext #URL: https://access.redhat.com/security/cve/CVE-2023-1667 #STATUS_CODE: 200
+2023-08-08 16:22:53 - INFO - Skipped ID: 348397 #COLUMN: fulltext #URL: https://access.redhat.com/security/cve/CVE-2023-2283 #STATUS_CODE: 200
+2023-08-08 16:22:53 - INFO - Skipped ID: 348397 #COLUMN: fulltext #URL: https://access.redhat.com/security/cve/CVE-2023-2491 #STATUS_CODE: 200
+2023-08-08 16:22:53 - INFO - Skipped ID: 348397 #COLUMN: fulltext #URL: https://access.redhat.com/security/cve/CVE-2023-3089 #STATUS_CODE: 200
+2023-08-08 16:22:53 - INFO - Skipped ID: 348397 #COLUMN: fulltext #URL: https://access.redhat.com/security/cve/CVE-2023-24329 #STATUS_CODE: 200
+2023-08-08 16:22:53 - INFO - Skipped ID: 348397 #COLUMN: fulltext #URL: https://access.redhat.com/security/cve/CVE-2023-26604 #STATUS_CODE: 200
+2023-08-08 16:22:53 - INFO - Skipped ID: 348397 #COLUMN: fulltext #URL: https://access.redhat.com/security/cve/CVE-2023-27535 #STATUS_CODE: 200
+2023-08-08 16:22:53 - INFO - Skipped ID: 348397 #COLUMN: fulltext #URL: https://access.redhat.com/security/updates/classification/#moderate #STATUS_CODE: 200
+2023-08-08 16:22:53 - INFO - Skipped ID: 348397 #COLUMN: fulltext #URL: https://access.redhat.com/security/vulnerabilities/RHSB-2023-001 #STATUS_CODE: 200
+2023-08-08 16:22:53 - INFO - Skipped ID: 348397 #COLUMN: fulltext #URL: https://access.redhat.com/security/team/contact/ #STATUS_CODE: 200
+2023-08-08 16:22:53 - WARNING - ID: 348397 #COLUMN: fulltext #URL: https://listman.redhat.com/mailman/listinfo/rhsa-announce #STATUS_CODE: 503
+2023-08-08 16:24:35 - INFO - ******************** Processing ID: 348409 ******************** (1/1 - 100.0%)
+2023-08-08 16:24:35 - INFO - processing  348409 - introtext is not JSON, proceeding further to check HTML
+2023-08-08 16:24:39 - INFO - processing 348409 - fulltext is not json proceeding further to check html
+2023-08-08 16:26:51 - INFO - Skipped ID: 348409 #COLUMN: fulltext #URL: https://docs.saltproject.io/en/latest/topics/releases/3006.0.html #STATUS_CODE: 200
+2023-08-08 16:29:13 - INFO - ******************** Processing ID: 348409 ******************** (1/1 - 100.0%)
+2023-08-08 16:29:13 - INFO - processing  348409 - introtext is not JSON, proceeding further to check HTML
+2023-08-08 16:29:13 - INFO - processing 348409 - fulltext is not json proceeding further to check html
+2023-08-08 16:30:06 - INFO - Skipped ID: 348409 #COLUMN: fulltext #URL: https://docs.saltproject.io/en/latest/topics/releases/3006.0.html #STATUS_CODE: 200
+2023-08-08 16:32:59 - INFO - ******************** Processing ID: 348409 ******************** (1/1 - 100.0%)
+2023-08-08 16:32:59 - INFO - processing  348409 - introtext is not JSON, proceeding further to check HTML
+2023-08-08 16:32:59 - INFO - processing 348409 - fulltext is not json proceeding further to check html
+2023-08-08 16:33:56 - WARNING - #ID: 348409 #URL https://docs.saltproject.io/en/latest/topics/releases/3006.0.html Error: 
+2023-08-08 16:33:56 - INFO - #ID: 348409 #URL https://docs.saltproject.io/en/latest/topics/releases/3006.0.html - Requesting again using GET request instead of HEAD
+2023-08-08 16:34:32 - INFO - ******************** Processing ID: 348409 ******************** (1/1 - 100.0%)
+2023-08-08 16:34:32 - INFO - processing  348409 - introtext is not JSON, proceeding further to check HTML
+2023-08-08 16:34:32 - INFO - processing 348409 - fulltext is not json proceeding further to check html
+2023-08-08 16:34:50 - INFO - Skipped ID: 348409 #COLUMN: fulltext #URL: https://docs.saltproject.io/en/latest/topics/releases/3006.0.html #STATUS_CODE: 200
+2023-08-08 16:35:19 - INFO - Processing ID: 348409 completed
+2023-08-08 16:35:19 - INFO - ==================== All records have been processed ====================
+2023-08-08 16:35:53 - INFO - ******************** Processing ID: 348409 ******************** (1/1 - 100.0%)
+2023-08-08 16:35:53 - INFO - processing  348409 - introtext is not JSON, proceeding further to check HTML
+2023-08-08 16:42:22 - INFO - processing 348409 - fulltext is not json proceeding further to check html
+2023-08-08 16:45:23 - INFO - Skipped ID: 348409 #COLUMN: fulltext #URL: https://docs.saltproject.io/en/latest/topics/releases/3006.0.html #STATUS_CODE: 200
+2023-08-08 17:05:16 - INFO - ******************** Processing ID: 348405 ******************** (1/1 - 100.0%)
+2023-08-08 17:05:16 - INFO - processing  348405 - introtext is not JSON, proceeding further to check HTML
+2023-08-08 17:05:38 - INFO - Skipped ID: 348405 #COLUMN: introtext #URL: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-30581 #STATUS_CODE: 200
+2023-08-08 17:05:45 - INFO - Skipped ID: 348405 #COLUMN: introtext #URL: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-30585 #STATUS_CODE: 200
+2023-08-08 17:05:49 - INFO - processing 348405 - fulltext is not json proceeding further to check html

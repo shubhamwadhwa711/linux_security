@@ -91,7 +91,7 @@ async def new_selenium_check(url,response,logger):
             #     st=response.url
             #     st=url
             #     response=st
-            return {'url':url,'status_code':400,'is_error':True}
+            return {'url':url,'status_code':404,'is_error':True}
     response.status=200
     driver.quit()
     return {'url':url,'status_code':200,'is_error':False}
