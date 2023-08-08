@@ -164,7 +164,7 @@ async  def new_check_http_broken_link(url, session:aiohttp.ClientSession, logger
         logger.info(f'#ID: {id} #URL {url} - Requesting again using GET request instead of HEAD')
         try:
             async with session.get(url, headers={"User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36"}, timeout=timeout) as response:
-                return {'url':url,'status_code':response.status}
+                return {'url':url,'status_code':response.status,'is_error':False}
         except Exception as e:
             return {'url':url,'status_code':{'type':type(e) ,'message':str(e)},'is_error':True}
         
