@@ -33,6 +33,7 @@ from utils import (
     check_http_broken_link,
     check_ftp_broken_link,
     check_url_against_domains,
+    new_check_http_broken_link,
     write_file,
     DECOMPOSE_URLS,
     HTTP_REQUEST_TIMEOUT,
@@ -175,40 +176,71 @@ def get_double_https(urls):
 async def new_do_http_request(urls,session,logger:Logger,id:int):
     tasks=[]
     for url in urls:
-        task = asyncio.create_task(check_http_broken_link(url=url, session=session,logger=logger,id=id))
+        task = asyncio.create_task(new_check_http_broken_link(url=url, session=session,logger=logger,id=id))
         tasks.append(task)
     result = await asyncio.gather(*tasks)
     for response in result:
-        try:
-            url=response.url 
-            if response.status< 400 or response.status in VALID_HTTP_STATUS_CODES:
-                yield {'is_broken': False, 'status_code': response.status, 'url': url}
+        if not response['is_error']:
+            if response['status_code']< 400 or response['status_code'] in VALID_HTTP_STATUS_CODES:
+                yield {'is_broken': False, 'status_code': response['status_code'], 'url': response['url']}
             else:
-                yield {'is_broken': True, 'status_code': response.status, 'url': url}
-     
-        except aiohttp.ClientSSLError as e:
-            logger.warning(f'#ID: {id} #URL {url} Error: SSLError {str(e)}')
-            yield {'is_broken': False, 'status_code': 'SSLError', 'url': url}
-        except aiohttp.ClientConnectionError as e:
-            if ("[Errno 11001] getaddrinfo failed" in str(e) or  "[Errno -2] Name or service not known" in str(e) or "[Errno 8] nodename nor servname" in str(e) or"[Errno -5] No address associated with hostname" in str(e)):      # OS X
-                logger.error(f'#ID: {id} #URL {url} Error: {str(e)}')
-                yield {'is_broken': True, 'status_code': 500, 'url': url}
-            else:
-                logger.warning(f'#ID: {id} #URL {url} Error: {str(e)}') 
-                yield {'is_broken': False, 'status_code': 'ConnectionError', 'url': url}
-        except asyncio.TimeoutError as e:
-            logger.warning(f'#ID: {id} Error: Timeout {str(e)}')
-            yield {'is_broken': False, 'status_code': 'Timeout', 'url': url}
-        # except aiohttp.ClientTimeout() as e:
-        #     logger.warning(f'#ID: {id} Error: Timeout {str(e)}')
-        #     yield {'is_broken': False, 'status_code': 'Timeout', 'url': url}    
+                yield {'is_broken': True, 'status_code': response['status_code'], 'url': response['url']}
+        else:
+            data=response['status_code']
+            exception_type=str(data['type'])
+            exception_message=data['message']
+            if any(keyword in exception_type for keyword in ['ClientConnectorError','ClientConnectionError']):  
+                if any(keyword in exception_message for keyword in ["Name or service not known","getaddrinfo failed","nodename nor servname","No address associated with hostname"]):
+                    logger.error(f"#ID: {id} #URL {response['url']} Error: {exception_message}")
+                    yield {'is_broken': True, 'status_code': 500, 'url': response['url']}
+                else:
+                    logger.warning(f"#ID: {id} #URL {response['url']} Error: {exception_message}") 
+                    yield {'is_broken': False, 'status_code': 'ConnectionError', 'url': response['url']}
 
-        except aiohttp.ClientError as e:
-            logger.warning(f'#ID: {id} #URL {url} Error: Timeout {str(e)}')
-            yield {'is_broken': True, 'status_code': response.status, 'url': url}
-        except Exception as e:
-                logger.error(f'#ID: {id} #URL {url} Error: {str(e)}')
-                yield {'is_broken': True, 'status_code': 500, 'url': url}
+            elif any(keyword in exception_type for keyword in ['ClientSSLError','ClientConnectorSSLError']):
+                logger.warning(f"#ID: {id} #URL {response['url']} Error: SSLError {exception_message}")
+                yield {'is_broken': False, 'status_code': 'SSLError', 'url': response['url']}
+
+            elif any(keyword in exception_type for keyword in ['TimeoutError']):
+                logger.warning(f'#ID: {id} Error: Timeout {exception_message}')
+                yield {'is_broken': False, 'status_code': 'Timeout', 'url': response['url']}
+            else:
+                logger.error(f'#ID: {id} #URL {url} Error: {exception_message}')
+                yield {'is_broken': True, 'status_code': 500, 'url': response['url']}
+
+        # try:
+        #     url=response.url 
+        #     if response.status< 400 or response.status in VALID_HTTP_STATUS_CODES:
+        #         yield {'is_broken': False, 'status_code': response.status, 'url': url}
+        #     else:
+        #         yield {'is_broken': True, 'status_code': response.status, 'url': url}
+        # except AttributeError as e:
+        #     url_dict=response.__dict__
+        #     if url_dict['_conn_key'].is_ssl==False:
+        #         url=f"http://{url_dict['_conn_key'].host}"
+        #     else:
+        #         url=f"https://{url_dict['_conn_key'].host}"
+
+             
+        #     if any(keyword in str(e) for keyword in ['ClientConnectorError','ClientConnectionError']):
+        #         error=url_dict.get('_os_error',None)
+        #         if error in ["[Errno -2] Name or service not known","[Errno 11001] getaddrinfo failed","[Errno 8] nodename nor servname","[Errno -5] No address associated with hostname"]:
+        #             logger.error(f'#ID: {id} #URL {url} Error: {str(e)}')
+        #             yield {'is_broken': True, 'status_code': 500, 'url': url}
+        #         else:
+        #             logger.warning(f'#ID: {id} #URL {url} Error: {str(e)}') 
+        #             yield {'is_broken': False, 'status_code': 'ConnectionError', 'url': url}
+            
+        #     if 'ClientSSLError' in str(e):
+        #         logger.warning(f'#ID: {id} #URL {url} Error: SSLError {str(e)}')
+        #         yield {'is_broken': False, 'status_code': 'SSLError', 'url': url}
+        #     if 'TimeoutError' in str(e):
+        #         logger.warning(f'#ID: {id} Error: Timeout {str(e)}')
+        #         yield {'is_broken': False, 'status_code': 'Timeout', 'url': url}
+        # except Exception as e:
+        #     logger.error(f'#ID: {id} #URL {url} Error: {str(e)}')
+        #     yield {'is_broken': True, 'status_code': 500, 'url': f"http://{response.host}"}
+    
         
    
 
@@ -311,10 +343,24 @@ async def check_http_urls(logger:Logger, id:int,field:str,updates:list,html:Opti
     urls=list(urls_obj.keys())
     if len(urls)!=0:
         async with aiohttp.ClientSession() as session:
-            async for result in new_do_http_request(urls=urls, session=session, logger=logger, id=id):
+            async for result in new_do_http_request(urls=urls, session=session, logger=logger, id=id):            
         # for result in do_http_request(urls=urls, logger=logger, id=id):
                 parsed_url = result.get('url')
                 url=urls_obj.get(str(parsed_url),"")
+                if str(parsed_url)!=url and str(parsed_url).startswith('https://www.'):
+                    new_parsed_url=str(parsed_url).replace('https://www.','http://')
+                    url=urls_obj[new_parsed_url]
+                    if not result.get('is_broken',False):
+                        a_tags = soup.find_all('a', attrs={'href': url})
+                        if len(a_tags)==0 and url in str_soup:
+                            str_soup=str_soup.replace(url,str(parsed_url))
+                            logger.info(f'ID: {id} #COLUMN: {field} #URL: {url} replaced with {str(parsed_url)}') 
+                        for tag in a_tags:
+                            tag['href']=str(parsed_url)
+                            logger.info(f'ID: {id} #COLUMN: {field} #URL: {url} replaced with {parsed_url}') 
+                            logger.info(f'Skipped ID: {id} #COLUMN: {field} #URL: {parsed_url} #STATUS_CODE: {result.get("status_code")}')
+                        updates.append(True)
+                        continue
                 if not result.get('is_broken', False):
                     if check_https_urls(url):
                         a_tags = soup.find_all('a', attrs={'href': url})
