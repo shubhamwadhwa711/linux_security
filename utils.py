@@ -77,7 +77,7 @@ def get_logger(name, log_file, level=logging.INFO):
     return logger
 
 
-async def selenium_check(url,response,logger):
+async def new_selenium_check(url,response,logger):
     chrome_options = Options()
     chrome_options.add_argument("--headless")
     driver = webdriver.Chrome(options=chrome_options)
@@ -95,6 +95,26 @@ async def selenium_check(url,response,logger):
     response.status=200
     driver.quit()
     return {'url':url,'status_code':200,'is_error':False}
+
+
+def selenium_check(url,response,logger):
+    chrome_options = Options()
+    chrome_options.add_argument("--headless")
+    driver = webdriver.Chrome(options=chrome_options)
+    driver.get(url)
+    search_texts = ["404", "not found", "page not found"]  # Add more search texts if needed
+    for text in search_texts:
+        if text.lower() in driver.page_source.lower():
+            driver.quit()
+            # if str(response.url) != url:
+            #     logger.info(f"response url not match with original url set the original url with in place of response url ")
+            #     st=response.url
+            #     st=url
+            #     response=st
+            return response
+    response.status_code=200
+    driver.quit()
+    return response
 
 
 def check_url_against_domains(url):
@@ -127,7 +147,7 @@ async  def new_check_http_broken_link(url, session:aiohttp.ClientSession, logger
         if any(site in url for site in SITE_WITH_GET_METHOD):
             async with session.get(url, headers={"User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36"}, timeout=timeout) as response:
                 if response.status == 404:
-                    return await selenium_check(url, response,logger)
+                    return await new_selenium_check(url, response,logger)
                 return {'url':url,'status_code':response.status,'is_error':False}
         else:
             async with session.head(url, headers={"User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36"}, timeout=timeout) as response:
@@ -135,7 +155,7 @@ async  def new_check_http_broken_link(url, session:aiohttp.ClientSession, logger
                     async with session.get(url, headers={"User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36"}, timeout=timeout) as response:
                         pass  
                 if response.status == 404:
-                    return await selenium_check(url, response,logger)
+                    return await new_selenium_check(url, response,logger)
 
                 return {'url':url,'status_code':response.status,'is_error':False}
            
@@ -167,7 +187,7 @@ def check_http_broken_link(url, session:aiohttp.ClientSession,logger, id, timeou
                 timeout=timeout
             )
             if response.status_code==404:
-                return selenium_check(url,response)
+                return selenium_check(url,response,logger)
             return response
         else:
             response = requests.head(
@@ -182,7 +202,7 @@ def check_http_broken_link(url, session:aiohttp.ClientSession,logger, id, timeou
                     timeout=timeout
                 )
             if response.status_code==404:
-                return selenium_check(url,response)
+                return selenium_check(url,response,logger)
             return response
 
     except (ReadTimeout, ConnectionError) as e:
