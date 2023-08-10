@@ -164,6 +164,8 @@ def get_double_https(urls):
             url=url.replace('https://https://', 'https://')
         elif url.startswith('http://https://'):
             url=url.replace('http://https://',"http://") 
+        elif url.startswith('www.'):
+            url=f"https://{url}"
         url=strip_trailing_in_anchor(url)
         obj[url]=original_url
     return obj
@@ -331,8 +333,8 @@ def check_ftp_urls( logger:Logger, id:int, updates:list,field:str, html: Optiona
             for_more_check_urls.add(url)
     return str(soup), updates,for_more_check_urls
 
-async def check_http_urls(logger:Logger, id:int,field:str,updates:list,base_url:str,html:Optional[str]=None, urls:list=None,www_urls:dict=None):
-    for_more_check_urls = set()
+async def check_http_urls(logger:Logger, id:int,field:str,updates:list,base_url:str,html:Optional[str]=None, urls:list=None,for_more_check_urls:set=None):
+    # for_more_check_urls = set()
     soup=BeautifulSoup(html,'html.parser')
     str_soup=str(soup)
     urls_obj=get_double_https(urls)
@@ -376,7 +378,7 @@ async def check_http_urls(logger:Logger, id:int,field:str,updates:list,base_url:
                         logger.warning(f'ID: {id} #COLUMN: {field} #URL: {parsed_url} #STATUS_CODE: {result.get("status_code")}')
                     else:
                         if result.get('status_code') in STATUS_CODES_FOR_FURTHER_CHECK:
-                            logger.info(f'ID: {id} #COLUMN: {field} #URL: {parsed_url} added for more checking')
+                            logger.info(f'ID: {id} #COLUMN: {field} #URL: {url} added for more checking')
                             for_more_check_urls.add(url)
                         else:
                             logger.info(f'Skipped ID: {id} #COLUMN: {field} #URL: {parsed_url} #STATUS_CODE: {result.get("status_code")}')
@@ -402,25 +404,25 @@ async def check_http_urls(logger:Logger, id:int,field:str,updates:list,base_url:
                 else:
                     for_more_check_urls.add(url)
                     logger.info(f'ID: {id} #COLUMN: {field} #URL: {url} added for more checking')
-    if len(www_urls) > 0:
-        www_urls_keys=list(www_urls.keys())
-        async with aiohttp.ClientSession() as session:
-            async for result in new_do_http_request(urls=www_urls_keys, session=session, logger=logger, id=id): 
-                    url = result.get('url')
-                    original_url=www_urls[url]
-                    if not result.get('is_broken', False):
-                        if result.get('status_code') in STATUS_CODES_FOR_FURTHER_CHECK:
-                            for_more_check_urls.add(original_url)
-                            logger.info(f'ID: {id} #COLUMN: {field} #URL: {original_url} added for more checking')
-                        else:
-                            str_soup = re.sub(re.escape(original_url), url,str_soup )
-                            updates.append(True)
-                            logger.info(f'ID: {id} #COLUMN: {field} #URL: {original_url if original_url else ("null")} #STATUS_CODE: {result.get("status_code")} - Replaced with: {url}')
-                        continue
+    # if len(www_urls) > 0:
+    #     www_urls_keys=list(www_urls.keys())
+    #     async with aiohttp.ClientSession() as session:
+    #         async for result in new_do_http_request(urls=www_urls_keys, session=session, logger=logger, id=id): 
+    #                 url = result.get('url')
+    #                 original_url=www_urls[url]
+    #                 if not result.get('is_broken', False):
+    #                     if result.get('status_code') in STATUS_CODES_FOR_FURTHER_CHECK:
+    #                         for_more_check_urls.add(original_url)
+    #                         logger.info(f'ID: {id} #COLUMN: {field} #URL: {original_url} added for more checking')
+    #                     else:
+    #                         str_soup = re.sub(re.escape(original_url), url,str_soup )
+    #                         updates.append(True)
+    #                         logger.info(f'ID: {id} #COLUMN: {field} #URL: {original_url if original_url else ("null")} #STATUS_CODE: {result.get("status_code")} - Replaced with: {url}')
+    #                     continue
                 
-                    updates.append(True)
-                    str_soup = re.sub(re.escape(original_url), ' ', str_soup)
-                    logger.info(f'ID: {id} #COLUMN: {field} #URL: {url if url else ("null")} #STATUS_CODE: {result.get("status_code")} - Replaced with #TEXT: (null)')
+    #                 updates.append(True)
+    #                 str_soup = re.sub(re.escape(original_url), ' ', str_soup)
+    #                 logger.info(f'ID: {id} #COLUMN: {field} #URL: {url if url else ("null")} #STATUS_CODE: {result.get("status_code")} - Replaced with #TEXT: (null)')
     soup=BeautifulSoup(str_soup,"html.parser")
     return str(soup),updates,for_more_check_urls
 
@@ -433,17 +435,17 @@ def skip_check_sites(urls,logger:Logger):
         remaining_urls.append(url)
     return remaining_urls
 
-def urlstartswith_www(urls):
-    www_urls={}
-    http_urls=[]
-    for url in urls:
-        parsed_url=urlparse(url  )
-        if parsed_url.scheme=="" and url.startswith('www'):
-            new_parsed_url=f"https://{url}"
-            www_urls[new_parsed_url]=url
-        else:
-            http_urls.append(url)
-    return http_urls,www_urls
+# def urlstartswith_www(urls):
+#     www_urls={}
+#     http_urls=[]
+#     for url in urls:
+#         parsed_url=urlparse(url  )
+#         if parsed_url.scheme=="" and url.startswith('www'):
+#             new_parsed_url=f"https://{url}"
+#             www_urls[new_parsed_url]=url
+#         else:
+#             http_urls.append(url)
+#     return http_urls,www_urls
     
     
         
@@ -455,11 +457,11 @@ def urlstartswith_www(urls):
 def check_is_url_valid(html:str, logger:Logger, id:int,field:str,base_url:str,updates:list):
     urls = create_relative_urls(html,base_url)
     all_urls=skip_check_sites(urls,logger)
-    all_urls,www_urls=urlstartswith_www(all_urls)
+    # all_urls,www_urls=urlstartswith_www(all_urls)
     ftp_urls = list(filter(lambda x: is_ftp_links(x), all_urls))
     http_urls = list(filter(lambda x: not is_ftp_links(x), all_urls))
     html,updates,for_more_check_urls = check_ftp_urls(html=html,urls= ftp_urls, logger=logger, id=id,field=field,updates=updates)
-    html,updates,for_more_check_urls = asyncio.run(check_http_urls(html=html, urls=http_urls, logger=logger, id=id,field=field,updates=updates,base_url=base_url,www_urls=www_urls))
+    html,updates,for_more_check_urls = asyncio.run(check_http_urls(html=html, urls=http_urls, logger=logger, id=id,field=field,updates=updates,base_url=base_url,for_more_check_urls=for_more_check_urls))
     return html,any(updates),for_more_check_urls
 
 def process_html_text(logger: Logger, id: int, field: str, html: Optional[str] = None, base_url: str = None):
