@@ -167,6 +167,9 @@ async  def new_check_http_broken_link(url, session:aiohttp.ClientSession, logger
                 return {'url':url,'status_code':response.status,'is_error':False}
         except Exception as e:
             return {'url':url,'status_code':{'type':type(e) ,'message':str(e)},'is_error':True}
+    except Exception as e:
+        logger.warning(f'#ID: {id} #URL {url} Error: {str(e)}')
+        return {'url':url,'status_code':{'type':type(e) ,'message':str(e)},'is_error':True}
         
     
 
