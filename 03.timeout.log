@@ -4131,3 +4131,16 @@
 2023-08-02 18:51:47 - INFO - Skipped ID: 348333 #URL: https://valicyber.com/ #STATUS_CODE: 200
 2023-08-02 18:51:48 - INFO - Skipped ID: 348333 #URL: https://twitter.com/lnxsec #STATUS_CODE: 200
 2023-08-02 18:53:06 - INFO - #COLUMN: fulltext #URL: https://www.linkedin.com/company/linuxsecurity/ - Replaced with #TEXT: LinkedIn
+2023-08-10 11:04:36 - INFO - ******************** Processing ID: 299843 ********************
+2023-08-10 11:04:36 - ERROR - #ID 299843 #URL www-client/google-chrome Error: check_http_broken_link() missing 1 required positional argument: 'session'
+2023-08-10 11:04:36 - ERROR - #ID 299843 #URL www-client/google-chrome-98.0.4758.102 Error: check_http_broken_link() missing 1 required positional argument: 'session'
+2023-08-10 11:04:36 - ERROR - #ID 299843 #URL www-client/chromium-98.0.4758.102 Error: check_http_broken_link() missing 1 required positional argument: 'session'
+2023-08-10 11:04:36 - ERROR - #ID 299843 #URL www-client/chromium Error: check_http_broken_link() missing 1 required positional argument: 'session'
+2023-08-10 11:05:36 - INFO - ******************** Processing ID: 299843 ********************
+2023-08-10 11:05:36 - ERROR - #ID 299843 #URL www-client/chromium-98.0.4758.102 Error: check_http_broken_link() missing 1 required positional argument: 'session'
+2023-08-10 11:05:36 - ERROR - #ID 299843 #URL www-client/google-chrome-98.0.4758.102 Error: check_http_broken_link() missing 1 required positional argument: 'session'
+2023-08-10 11:05:36 - ERROR - #ID 299843 #URL www-client/google-chrome Error: check_http_broken_link() missing 1 required positional argument: 'session'
+2023-08-10 11:05:36 - ERROR - #ID 299843 #URL www-client/chromium Error: check_http_broken_link() missing 1 required positional argument: 'session'
+2023-08-10 11:05:54 - INFO - ID: 299843 has been updated in database
+2023-08-10 11:05:54 - INFO - Processing ID: 299843 completed
+2023-08-10 11:07:19 - INFO - There is no URLs to check

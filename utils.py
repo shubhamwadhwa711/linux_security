@@ -170,7 +170,7 @@ async  def new_check_http_broken_link(url, session:aiohttp.ClientSession, logger
         
     
 
-def check_http_broken_link(url, session:aiohttp.ClientSession,logger, id, timeout: int = HTTP_REQUEST_TIMEOUT):
+def check_http_broken_link(url,logger, id, timeout: int = HTTP_REQUEST_TIMEOUT):
     """Http status code
 
         1xx - informational

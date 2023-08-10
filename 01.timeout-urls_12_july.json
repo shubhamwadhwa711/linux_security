@@ -32,7 +32,7 @@
         "https://ftpci100"
     ],
     "348396": [
-        "https://issues.redhat.com/"
+        "https://registry.centos.org/v2/"
     ],
     "348377": [
         "https://ftpci100"
@@ -41,7 +41,7 @@
         "https://news/security-vulnerabilities/linux-kernel-dos-privilege-escalation-vulns-fixed"
     ],
     "348339": [
-        "https://issues.redhat.com/"
+        "https://registry.centos.org/v2/"
     ],
     "348287": [
         "https://features/unlocking-the-secrets-of-linux-security",
@@ -359,8 +359,8 @@
         "https://www-apache/libapreq2"
     ],
     "346483": [
-        "https://www-client/google-chrome",
         "https://www-client/microsoft-edge",
+        "https://www-client/google-chrome",
         "https://www-client/chromium"
     ],
     "346477": [
@@ -451,12 +451,7 @@
         "https://component/socialads/track/redirect/127?caltype=1&amp;widget=460"
     ],
     "345731": [
-        "https://features/must-read-articles/linux-malware-the-truth-about-this-growing-threat-updated",
-        "https://features/password-guessing-as-an-attack-vector",
-        "https://features/open-source-xss-vulnerability-scanners",
-        "https://www-data",
-        "https://features/zerolock-how-to-defend-against-ransomware-on-linux",
-        "https://features/must-read-articles/anatomy-of-linux-ransomware-attack"
+        "https://www-data"
     ],
     "345652": [
         "https://features/live-updates-linux-security-advisories",
@@ -653,8 +648,8 @@
         "https://www"
     ],
     "344237": [
-        "https://cert-at.translate.goog/de/aktuelles/2023/2/massive-vmware-esxi-verschlusselungs-welle?_x_tr_sl=auto&amp;_x_tr_tl=en&amp;_x_tr_hl=en-US",
-        "https://www-cert-ssi-gouv-fr.translate.goog/alerte/CERTFR-2023-ALE-015/?_x_tr_sl=auto&amp;_x_tr_tl=en&amp;_x_tr_hl=en-US"
+        "https://www-cert-ssi-gouv-fr.translate.goog/alerte/CERTFR-2023-ALE-015/?_x_tr_sl=auto&amp",
+        "https://cert-at.translate.goog/de/aktuelles/2023/2/massive-vmware-esxi-verschlusselungs-welle?_x_tr_sl=auto&amp"
     ],
     "344236": [
         "https://features/benefits-drawbacks-of-using-a-vpn-on-linux",
@@ -696,7 +691,7 @@
         "https://pagure.io/fedora-infrastructure/new_issue"
     ],
     "343972": [
-        "https://pagure.io/fedora-infrastructure/new_issue"
+        "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org"
     ],
     "343971": [
         "https://pagure.io/fedora-infrastructure/new_issue"
@@ -806,20 +801,20 @@
         "https://news/desktop-security/why-i-love-my-chromebook-reason-1-it-s-a-linux-desktop"
     ],
     "343365": [
-        "https://cacti.net",
-        "https://www.cacti.net/info/changelog/1.2.23"
+        "https://www.cacti.net/info/changelog/1.2.23",
+        "https://cacti.net"
     ],
     "343364": [
-        "https://www.cacti.net/",
-        "https://www.cacti.net/info/changelog/1.2.23"
+        "https://www.cacti.net/info/changelog/1.2.23",
+        "https://www.cacti.net/"
     ],
     "343361": [
-        "https://cacti.net",
-        "https://www.cacti.net/info/changelog/1.2.23"
+        "https://www.cacti.net/info/changelog/1.2.23",
+        "https://cacti.net"
     ],
     "343360": [
-        "https://www.cacti.net/",
-        "https://www.cacti.net/info/changelog/1.2.23"
+        "https://www.cacti.net/info/changelog/1.2.23",
+        "https://www.cacti.net/"
     ],
     "343284": [
         "https://component/socialads/track/redirect/113?caltype=1&amp;widget=460",
@@ -987,7 +982,37 @@
         "http://ceph.com/"
     ],
     "341124": [
-        "https://ckedi"
+        "https://ckeditor.com/cke4/addon/language",
+        "https://ckeditor.com/docs/ckeditor4/latest/api/CKEDITOR_dialog_validate.html#method-inlineStyle",
+        "https://ckeditor.com/docs/ckeditor4/latest/api/CKEDITOR_config.html#cfg-entities_processNumerical",
+        "https://ckeditor.com/doc",
+        "https://ckeditor.com/cke4/addon/menubutton",
+        "https://ckeditor.com/cke4/addon/elementspath",
+        "https://ckeditor.com/docs/ckeditor4/latest/api/CKEDITOR_dialog_validate.html#method-cssLength",
+        "https://ckeditor.com/docs/ckeditor4/latest/api/CKEDITOR_editor.html#method-getSelection",
+        "https://ckeditor.com/docs/ckeditor4/latest/api/CKEDITOR_config.html#cfg-coreStyles_toggleSubSup",
+        "https://ckeditor.com/cke4/addon/preview",
+        "https://ckeditor.com/cke4/addon/flash",
+        "https://ckeditor.com/docs/ckeditor4/latest/api/CKEDITOR_config.html#cfg-removeButtons",
+        "https://ckeditor.com/docs/ckeditor4/latest/api/CKEDITOR_config.html#cfg-useComputedState",
+        "https://ckeditor.com/cke4/addon/panelbutton",
+        "https://ckeditor.com/cke4/addon/tableresize",
+        "https://ckeditor.com/cke4/addon/a11yhelp",
+        "https://ckeditor.com/docs/ckeditor4/latest/api/CKEDITOR_config.html#cfg-shiftLineBreaks",
+        "https://ckeditor.com/docs/ckeditor4/latest/api/CKEDITOR_config.html#cfg-title",
+        "https://ckeditor.com/docs/ckeditor4/latest/api/CKEDITOR_fileTools_uploadWidgetDefinition.html#property-supportedTypes",
+        "https://ckeditor.com/cke4/addon/easyimage",
+        "https://ckeditor.com/docs/ckeditor4/latest/api/CKEDITOR_tools.html#method-convertToPx",
+        "https://ckedi",
+        "https://ckeditor.com/docs/ckeditor4/latest/api/CKEDITOR_config.html#cfg-emoji_emojiListUrl",
+        "https://ckeditor.com/docs/ckeditor4/latest/api/CKEDITOR_config.html#cfg-applicationTitle",
+        "https://www.adobe.com/products/flashplayer/end-of-life.html",
+        "https://ckeditor.com/docs/ckeditor4/latest/api/CKEDITOR_dialog.html#method-setState",
+        "https://ckeditor.com/cke4/addon/autolink",
+        "https://ckeditor.com/docs/ckeditor4/latest/api/CKED",
+        "https://ckeditor.com/docs/ckeditor4/latest/api/CKEDITOR_plugins_clipboard_dataTransfer.html#method-isFileTransfer",
+        "https://ckeditor.com/docs/ckeditor4/latest/api/CKEDITOR.html#method-inline",
+        "https://ckeditor.com/cke4/addon/toolbar"
     ],
     "341103": [
         "http://twig.sensiolabs.org"
@@ -1029,8 +1054,8 @@
         "https://www-apps/gitea"
     ],
     "340540": [
-        "https://www-client/google-chrome",
         "https://www-client/microsoft-edge",
+        "https://www-client/google-chrome",
         "https://www-client/chromium"
     ],
     "340537": [
@@ -1090,8 +1115,8 @@
         "https://features/choosing-the-right-remote-access-solution-for-your-linux-environment"
     ],
     "339834": [
-        "https://www-1.13.3-12.6.1",
-        "https://www-config-1.13.3-12.6.1"
+        "https://www-config-1.13.3-12.6.1",
+        "https://www-1.13.3-12.6.1"
     ],
     "339810": [
         "https://component/socialads/track/redirect/71?caltype=1&amp;widget=460",
@@ -1131,8 +1156,8 @@
         "https://www-client/firefox"
     ],
     "339527": [
-        "https://www-client/google-chrome",
         "https://www-client/microsoft-edge",
+        "https://www-client/google-chrome",
         "https://www-client/chromium"
     ],
     "339513": [
@@ -1155,8 +1180,8 @@
         "https://component/socialads/track/redirect/78?caltype=1&amp;widget=460"
     ],
     "309267": [
-        "https://access.redhat.com/hydra/rest/securitydata/cve/CVE-2021-33909.json:::CVE-2021-33909\"],\"references\":[],\"publishedAt",
-        "https://access.redhat.com/hydra/rest/securitydata/cve/CVE-2021-32399.json:::CVE-2021-32399\",\"Red"
+        "https://access.redhat.com/hydra/rest/securitydata/cve/CVE-2021-32399.json:::CVE-2021-32399\",\"Red",
+        "https://access.redhat.com/hydra/rest/securitydata/cve/CVE-2021-33909.json:::CVE-2021-33909\"],\"references\":[],\"publishedAt"
     ],
     "307998": [
         "https://www-apps/moodle"
@@ -1259,8 +1284,11 @@
         "https://www-servers/tomcat"
     ],
     "307102": [
-        "https://www-client/google-chrome",
         "https://www-client/microsoft-edge",
+        "https://nvd.nist.gov/vuln/detail/CVE-2022-2619",
+        "https://nvd.nist.gov/vuln/detail/CVE-2022-2617",
+        "https://nvd.nist.gov/vuln/detail/CVE-2022-2615",
+        "https://www-client/google-chrome",
         "https://www-client/chromium"
     ],
     "307080": [
@@ -1285,8 +1313,8 @@
         "https://www-servers/puma"
     ],
     "306965": [
-        "https://www-client/google-chrome",
         "https://www-client/microsoft-edge",
+        "https://www-client/google-chrome",
         "https://www-client/chromium"
     ],
     "306954": [
@@ -1669,8 +1697,8 @@
         "https://cacti.net"
     ],
     "303710": [
-        "https://www.cacti.net/",
-        "https://www.cacti.net/info/changelog/1.2.20"
+        "https://www.cacti.net/info/changelog/1.2.20",
+        "https://www.cacti.net/"
     ],
     "303647": [
         "https://xxxx:8444/api/prometheus_receiver"
@@ -1713,12 +1741,12 @@
         "https://component/socialads/track/redirect/78?caltype=1&amp;widget=460"
     ],
     "303092": [
-        "https://www.cacti.net/",
-        "https://www.cacti.net/info/changelog/1.2.20"
+        "https://www.cacti.net/info/changelog/1.2.20",
+        "https://www.cacti.net/"
     ],
     "303091": [
-        "https://www.cacti.net/",
-        "https://www.cacti.net/info/changelog/1.2.20"
+        "https://www.cacti.net/info/changelog/1.2.20",
+        "https://www.cacti.net/"
     ],
     "303090": [
         "https://www.cacti.net/info/changelog/1.2.20",
@@ -2032,5 +2060,536 @@
     ],
     "347707": [
         "https://mariadb.com/kb/en/mariadb-10-5-20-release-notes/"
+    ],
+    "347690": [
+        "https://www.ptsecurity.com/ww-en/analytics/pt-esc-threat-intelligence/new-apt-group-chamelgang/"
+    ],
+    "347218": [
+        "https://www.kali.org/",
+        "https://www.kali.org/docs/introduction/what-is-kali-linux/"
+    ],
+    "346709": [
+        "http://www.mysql.com"
+    ],
+    "346708": [
+        "http://www.mysql.com"
+    ],
+    "346552": [
+        "https://www.microsoft.com/en-us/store/b/home"
+    ],
+    "346505": [
+        "http://dnf.readthedocs.io/en/latest/command_ref.html#upgrade-command-label"
+    ],
+    "346271": [
+        "https://www.eset.com/"
+    ],
+    "345689": [
+        "https://www.debian.org/lts/security/",
+        "https://wiki.debian.org/LTS"
+    ],
+    "345680": [
+        "https://www.debian.org/lts/security/",
+        "https://wiki.debian.org/LTS"
+    ],
+    "345621": [
+        "http://www.tigervnc.com"
+    ],
+    "345561": [
+        "https://wiki.debian.org/LTS"
+    ],
+    "345560": [
+        "https://wiki.debian.org/LTS"
+    ],
+    "345559": [
+        "https://wiki.debian.org/LTS"
+    ],
+    "345536": [
+        "https://www.debian.org/lts/security/",
+        "https://wiki.debian.org/LTS"
+    ],
+    "345535": [
+        "https://wiki.debian.org/LTS"
+    ],
+    "345531": [
+        "https://www.eset.com/int/kr00k/"
+    ],
+    "345529": [
+        "https://www.debian.org/lts/security/",
+        "https://wiki.debian.org/LTS"
+    ],
+    "345527": [
+        "https://wiki.debian.org/LTS"
+    ],
+    "345501": [
+        "https://www.debian.org/lts/security/",
+        "https://wiki.debian.org/LTS"
+    ],
+    "345497": [
+        "https://www.debian.org/lts/security/",
+        "https://wiki.debian.org/LTS"
+    ],
+    "345495": [
+        "https://www.debian.org/lts/security/",
+        "https://wiki.debian.org/LTS"
+    ],
+    "345436": [
+        "https://wiki.debian.org/LTS"
+    ],
+    "345375": [
+        "https://wiki.debian.org/LTS"
+    ],
+    "345357": [
+        "https://www.debian.org/lts/security/"
+    ],
+    "345327": [
+        "https://www.debian.org/lts/security/"
+    ],
+    "345326": [
+        "https://wiki.debian.org/LTS"
+    ],
+    "345144": [
+        "https://www.debian.org/lts/security/"
+    ],
+    "345143": [
+        "https://www.debian.org/security/faq"
+    ],
+    "345142": [
+        "https://www.debian.org/security/faq"
+    ],
+    "345090": [
+        "https://www.debian.org/security/faq",
+        "https://www.debian.org/security/"
+    ],
+    "345071": [
+        "https://www.debian.org/security/faq",
+        "https://www.debian.org/security/"
+    ],
+    "345069": [
+        "https://www.debian.org/lts/security/"
+    ],
+    "345050": [
+        "https://www.debian.org/lts/security/"
+    ],
+    "344979": [
+        "https://www.sentinelone.com/labs/icefire-ransomware-returns-now-targeting-linux-enterprise-networks/"
+    ],
+    "344952": [
+        "https://openssf.org/blog/2022/11/16/openssf-expands-supply-chain-integrity-efforts-with-s2c2f/"
+    ],
+    "344936": [
+        "https://www.debian.org/security/"
+    ],
+    "344810": [
+        "https://www.amd.com/en/processors/amd-secure-encrypted-virtualization"
+    ],
+    "344759": [
+        "https://www.debian.org/lts/security/2023/dla-3339"
+    ],
+    "344553": [
+        "https://www.debian.org/lts/security/"
+    ],
+    "344439": [
+        "https://www.debian.org/lts/security/"
+    ],
+    "344426": [
+        "https://www.debian.org/lts/security/"
+    ],
+    "344423": [
+        "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org"
+    ],
+    "344418": [
+        "https://www.debian.org/lts/security/"
+    ],
+    "344412": [
+        "https://www.debian.org/security/faq",
+        "https://www.debian.org/security/"
+    ],
+    "344410": [
+        "https://www.debian.org/security/faq"
+    ],
+    "344364": [
+        "https://www.debian.org/security/faq"
+    ],
+    "344363": [
+        "https://www.debian.org/security/faq"
+    ],
+    "344266": [
+        "https://www.sophos.com/en-us/products/managed-threat-response.aspx"
+    ],
+    "344074": [
+        "https://www.sentinelone.com/labs/cl0p-ransomware-targets-linux-systems-with-flawed-encryption-decryptor-available/"
+    ],
+    "343790": [
+        "https://lists.wikimedia.org/hyperkitty/list/mediawiki-announce@lists.wikimedia.org/message/UEMW64LVEH3BEXCJV43CVS6XPYURKWU3/"
+    ],
+    "343695": [
+        "https://www.sentinelone.com/labs/dragonspark-attacks-evade-detection-with-sparkrat-and-golang-source-code-interpretation/"
+    ],
+    "343141": [
+        "https://wiki.debian.org/LTS"
+    ],
+    "341332": [
+        "https://www.akamai.com/blog/security-research/kmdsbot-the-attack-and-mine-malware"
+    ],
+    "341175": [
+        "https://lists.wikimedia.org/hyperkitty/list/mediawiki-announce@lists.wikimedia.org/thread/SPYFDCGZE7KJNO73ET7QVSUXMHXVRFTE/",
+        "https://lists.wikimedia.org/hyperkitty/list/mediawiki-announce@lists.wikimedia.org/thread/DMQKMFSH4K7KLBXWZTDBGI2PWLLHJHJZ/"
+    ],
+    "341071": [
+        "https://lists.wikimedia.org/hyperkitty/list/mediawiki-announce@lists.wikimedia.org/thread/SPYFDCGZE7KJNO73ET7QVSUXMHXVRFTE/",
+        "https://lists.wikimedia.org/hyperkitty/list/mediawiki-announce@lists.wikimedia.org/thread/DMQKMFSH4K7KLBXWZTDBGI2PWLLHJHJZ/"
+    ],
+    "340192": [
+        "https://ckeditor.com/docs/ckeditor4/latest/api/CKEDITOR_config.html#cfg-emoji_followingSpace",
+        "https://ckeditor.com/docs/ckeditor4/latest/api/CKEDITOR_config.html#cfg-entities_processNumerical",
+        "https://ckeditor.com/docs/ckeditor4/latest/api/CKEDITOR_dialog_validate.html#method-equals",
+        "https://ckeditor.com/docs/ckeditor4/latest/api/CKEDITOR.html#method-replace",
+        "https://ckeditor.com/docs/ckeditor4/latest/api/CKEDITOR_ui_dialog_radio.html#method-setValue",
+        "https://ckeditor.com/cke4/addon/emoji",
+        "https://ckeditor.com/docs/ckeditor4/latest/api/CKEDITOR_ui_dialog_checkbox.html#method-setValue",
+        "https://ckeditor.com/docs/ckeditor4/latest/api/CKEDITOR_editor.html#method-getSelection",
+        "https://ckeditor.com/docs/ckeditor4/latest/api/CKEDITOR_config.html#cfg-coreStyles_toggleSubSup",
+        "https://ckeditor.com/cke4/addon/flash",
+        "https://ckeditor.com/cke4/addon/tableresize",
+        "https://ckeditor.com/docs/ckeditor4/latest/api/CKEDITOR_config.html#cfg-enterMode",
+        "https://ckeditor.com/docs/ckeditor4/latest/api/CKEDITOR_dom_document.html#method-appendStyleSheet",
+        "https://ckeditor.com/docs/ckeditor4/latest/api/CKEDITOR_config.html#cfg-shiftLineBreaks",
+        "https://ckeditor.com/cke4/addon/wysiwygarea",
+        "https://ckeditor.com/cke4/addon/print",
+        "https://ckeditor.com/docs/ckeditor4/latest/api/CKEDITOR_fileTools_uploadWidgetDefinition.html#property-supportedTypes",
+        "https://ckeditor.com/docs/ckeditor4/latest/api/CKEDITOR_plugins_mentions_configDefinition.html#property-followingSpace",
+        "https://ckeditor.com/docs/ckeditor4/latest/api/CKEDITOR_config.html#cfg-applicationTitle",
+        "https://ckeditor.com/docs/ckeditor4/latest/api/CKEDITOR_config.html#cfg-emoji_emojiListUrl",
+        "https://ckeditor.com/docs/ckeditor4/latest/api/CKEDITOR_dialog_validate.html#method-notEqual",
+        "https://www.adobe.com/products/flashplayer/end-of-life.html",
+        "https://ckeditor.com/docs/ckeditor4/latest/api/CKEDITOR_plugins_clipboard_dataTransfer.html#method-getTypes",
+        "https://ckeditor.com/docs/ckeditor4/latest/api/CKEDITOR_tools_color.html",
+        "https://ckeditor.com/cke4/addon/tableselection",
+        "https://ckeditor.com/docs/ckeditor4/latest/api/CKEDITOR_tools.html#method-buildStyleHtml",
+        "https://ckeditor.com/cke4/addon/autolink",
+        "https://ckeditor.com/docs/ckeditor4/latest/api/CKEDITOR_dialog.html#method-setState",
+        "https://ckeditor.com/docs/ckeditor4/latest/api/CKEDITOR.html#method-appendTimestamp",
+        "https://ckeditor.com/docs/ckeditor4/latest/api/CKEDITOR_plugins_clipboard_dataTransfer.html#method-isFileTransfer",
+        "https://ckeditor.com/docs/ckeditor4/latest/api/CKEDITOR.html#method-inline"
+    ],
+    "340012": [
+        "https://access.redhat.com/errata/RHBA-6903"
+    ],
+    "339520": [
+        "https://wiki.lighttpd.net/ModMagnetExamples#lua-mod_status"
+    ],
+    "307922": [
+        "https://lists.wikimedia.org/hyperkitty/list/mediawiki-announce@lists.wikimedia.org/thread/PIPYDRSHXOYW5DB7X755QDNUV5EZWPWB/"
+    ],
+    "307718": [
+        "https://www.amd.com/en/corporate/product-security/bulletin/amd-sb-1037"
+    ],
+    "307696": [
+        "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org"
+    ],
+    "307361": [
+        "https://nvd.nist.gov/vuln/detail/CVE-2021-2297",
+        "https://nvd.nist.gov/vuln/detail/CVE-2021-2309"
+    ],
+    "307100": [
+        "http://slackware.com"
+    ],
+    "307047": [
+        "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org"
+    ],
+    "306745": [
+        "https://www.amd.com/en/corporate/product-security/bulletin/amd-sb-1037"
+    ],
+    "306744": [
+        "https://www.amd.com/en/corporate/product-security/bulletin/amd-sb-1037"
+    ],
+    "306496": [
+        "https://bugzilla.suse.com/1195651"
+    ],
+    "306356": [
+        "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org"
+    ],
+    "306355": [
+        "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org"
+    ],
+    "306053": [
+        "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org"
+    ],
+    "305873": [
+        "https://bugzilla.suse.com/1200019",
+        "https://bugzilla.suse.com/1200812",
+        "https://bugzilla.suse.com/1194586",
+        "https://bugzilla.suse.com/1196306"
+    ],
+    "303019": [
+        "https://dev.mysql.com/doc/relnotes/mysql/8.0/en/news-8-0-28.html"
+    ],
+    "303006": [
+        "https://dev.mysql.com/doc/relnotes/mysql/8.0/en/news-8-0-28.html"
+    ],
+    "302899": [
+        "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org"
+    ],
+    "302826": [
+        "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org"
+    ],
+    "302761": [
+        "https://wiki.debian.org/LTS"
+    ],
+    "302720": [
+        "https://wiki.debian.org/LTS"
+    ],
+    "302699": [
+        "https://wiki.debian.org/LTS"
+    ],
+    "302667": [
+        "https://wiki.debian.org/LTS"
+    ],
+    "302199": [
+        "https://www.sophos.com/"
+    ],
+    "301064": [
+        "https://bugzilla.suse.com/1179805"
+    ],
+    "300945": [
+        "https://bugzilla.suse.com/1186328"
+    ],
+    "300921": [
+        "https://bugzilla.suse.com/1180102"
+    ],
+    "300873": [
+        "https://bugzilla.suse.com/1182715",
+        "https://bugzilla.suse.com/1185495",
+        "https://bugzilla.suse.com/1173485",
+        "https://bugzilla.suse.com/1183319",
+        "https://bugzilla.suse.com/1183278",
+        "https://bugzilla.suse.com/1183285",
+        "https://bugzilla.suse.com/1184194"
+    ],
+    "300312": [
+        "https://bugzilla.suse.com/1181126"
+    ],
+    "299858": [
+        "https://www-client/firefox"
+    ],
+    "299843": [
+        "https://www-client/google-chrome",
+        "https://www-client/chromium"
+    ],
+    "299826": [
+        "https://fedoraproject.org/keys"
+    ],
+    "299408": [
+        "https://cdn.kernel.org/pub/linux/kernel/v5.x/ChangeLog-5.15.17"
+    ],
+    "299381": [
+        "https://www-client/google-chrome",
+        "https://www-client/chromium"
+    ],
+    "298705": [
+        "https://www.pornhub.com/insights/yir-2021#Age-Demographics"
+    ],
+    "298509": [
+        "https://lh4.googleusercontent.com/FgPlWGqSqZKTd2_GsNOoP3ClmJanLparKdCIthMDcYDyhvHhwvwnpRdjLW4PjlBKyhXk3RX-4Vt9LcxoqK230hEEY0Shl7rwfm8q4McMC488zqX4bIuxghYD9J5PJQWDi6bWBvW",
+        "https://log4shell.huntress.com/"
+    ],
+    "298276": [
+        "https://crbug.com/1228248",
+        "https://security.archlinux.org/CVE-2021-38007",
+        "https://security.archlinux.org/CVE-2021-37996",
+        "https://security.archlinux.org/CVE-2021-37990",
+        "https://security.archlinux.org/CVE-2021-37988",
+        "https://crbug.com/1248862",
+        "https://security.archlinux.org/CVE-2021-38021",
+        "https://security.archlinux.org/CVE-2021-38000",
+        "https://security.archlinux.org/CVE-2021-38003",
+        "https://security.archlinux.org/CVE-2021-38019",
+        "https://security.archlinux.org/CVE-2021-38011",
+        "https://security.archlinux.org/CVE-2021-38017",
+        "https://security.archlinux.org/CVE-2021-37986",
+        "https://security.archlinux.org/CVE-2021-38015",
+        "https://security.archlinux.org/CVE-2021-38013",
+        "https://crbug.com/957553",
+        "https://security.archlinux.org/CVE-2021-37992",
+        "https://security.archlinux.org/CVE-2021-38005",
+        "https://security.archlinux.org/CVE-2021-37994",
+        "https://security.archlinux.org/CVE-2021-38009"
+    ],
+    "298247": [
+        "http://pecl.php.net/package/imagick"
+    ],
+    "298024": [
+        "http://www.busybox.net"
+    ],
+    "297945": [
+        "https://security.archlinux.org/CVE-2021-38020",
+        "https://security.archlinux.org/CVE-2021-38022",
+        "https://security.archlinux.org/CVE-2021-38010",
+        "https://security.archlinux.org/CVE-2021-38018",
+        "https://security.archlinux.org/CVE-2021-38008",
+        "https://security.archlinux.org/CVE-2021-38007",
+        "https://security.archlinux.org/AVG-2560",
+        "https://security.archlinux.org/CVE-2021-38016",
+        "https://security.archlinux.org/CVE-2021-38021",
+        "https://security.archlinux.org/CVE-2021-38019",
+        "https://security.archlinux.org/CVE-2021-38011",
+        "https://security.archlinux.org/CVE-2021-38017",
+        "https://security.archlinux.org/CVE-2021-38015",
+        "https://security.archlinux.org/CVE-2021-38014",
+        "https://security.archlinux.org/CVE-2021-38013",
+        "https://security.archlinux.org/CVE-2021-38006",
+        "https://security.archlinux.org/CVE-2021-38012",
+        "https://security.archlinux.org/CVE-2021-38005",
+        "https://security.archlinux.org/CVE-2021-38009"
+    ],
+    "297944": [
+        "https://security.archlinux.org/AVG-2525",
+        "https://security.archlinux.org/CVE-2021-37998",
+        "https://security.archlinux.org/CVE-2021-38000",
+        "https://security.archlinux.org/CVE-2021-38003",
+        "https://security.archlinux.org/CVE-2021-38002",
+        "https://security.archlinux.org/CVE-2021-37999",
+        "https://security.archlinux.org/CVE-2021-38001",
+        "https://security.archlinux.org/CVE-2021-38004",
+        "https://security.archlinux.org/CVE-2021-37997"
+    ],
+    "297943": [
+        "https://security.archlinux.org/CVE-2021-25742",
+        "https://security.archlinux.org/AVG-2490"
+    ],
+    "297942": [
+        "https://security.archlinux.org/CVE-2021-41244",
+        "https://security.archlinux.org/AVG-2559"
+    ],
+    "297883": [
+        "https://www/html/pub/"
+    ],
+    "297818": [
+        "http://pecl.php.net/package/imagick"
+    ],
+    "297777": [
+        "https://www.cacti.net/info/changelog/1.2.19",
+        "https://cacti.net"
+    ],
+    "297776": [
+        "https://www.cacti.net/info/changelog/1.2.19",
+        "https://www.cacti.net/"
+    ],
+    "297772": [
+        "https://www.cacti.net/info/changelog/1.2.19",
+        "https://www.cacti.net/"
+    ],
+    "297771": [
+        "https://www.cacti.net/info/changelog/1.2.19",
+        "https://cacti.net"
+    ],
+    "297768": [
+        "https://www.cacti.net/info/changelog/1.2.19",
+        "https://www.cacti.net/"
+    ],
+    "297767": [
+        "https://www.cacti.net/info/changelog/1.2.19",
+        "https://cacti.net"
+    ],
+    "297727": [
+        "https://dev.mysql.com/doc/relnotes/mysql/8.0/en/news-8-0-27.html"
+    ],
+    "297724": [
+        "https://dev.mysql.com/doc/relnotes/mysql/8.0/en/news-8-0-27.html"
+    ],
+    "297526": [
+        "https://security.archlinux.org/AVG-2517",
+        "https://security.archlinux.org/CVE-2021-41174"
+    ],
+    "297525": [
+        "https://security.archlinux.org/CVE-2021-37991",
+        "https://security.archlinux.org/CVE-2021-37984",
+        "https://security.archlinux.org/CVE-2021-37981",
+        "https://security.archlinux.org/CVE-2021-37985",
+        "https://security.archlinux.org/CVE-2021-37996",
+        "https://security.archlinux.org/CVE-2021-37990",
+        "https://security.archlinux.org/CVE-2021-37988",
+        "https://security.archlinux.org/AVG-2468",
+        "https://security.archlinux.org/CVE-2021-37994",
+        "https://security.archlinux.org/CVE-2021-37986",
+        "https://security.archlinux.org/CVE-2021-37983",
+        "https://security.archlinux.org/CVE-2021-37992",
+        "https://security.archlinux.org/CVE-2021-37989",
+        "https://security.archlinux.org/CVE-2021-37987",
+        "https://security.archlinux.org/CVE-2021-37982",
+        "https://security.archlinux.org/CVE-2021-37995",
+        "https://security.archlinux.org/CVE-2021-37993"
+    ],
+    "297524": [
+        "https://security.archlinux.org/CVE-2021-38508",
+        "https://security.archlinux.org/CVE-2021-38503",
+        "https://security.archlinux.org/AVG-2518",
+        "https://security.archlinux.org/CVE-2021-38506",
+        "https://security.archlinux.org/CVE-2021-38507",
+        "https://security.archlinux.org/CVE-2021-38509",
+        "https://security.archlinux.org/CVE-2021-38504"
+    ],
+    "297523": [
+        "https://security.archlinux.org/CVE-2021-38508",
+        "https://security.archlinux.org/CVE-2021-38503",
+        "https://security.archlinux.org/AVG-2511",
+        "https://security.archlinux.org/CVE-2021-38506",
+        "https://security.archlinux.org/CVE-2021-38507",
+        "https://security.archlinux.org/CVE-2021-38509",
+        "https://security.archlinux.org/CVE-2021-38504"
+    ],
+    "297522": [
+        "https://security.archlinux.org/CVE-2021-21686",
+        "https://security.archlinux.org/CVE-2021-21689",
+        "https://security.archlinux.org/CVE-2021-21691",
+        "https://security.archlinux.org/CVE-2021-21690",
+        "https://security.archlinux.org/CVE-2021-21687",
+        "https://security.archlinux.org/CVE-2021-21693",
+        "https://security.archlinux.org/AVG-2526",
+        "https://security.archlinux.org/CVE-2021-21685",
+        "https://security.archlinux.org/CVE-2021-21695",
+        "https://security.archlinux.org/CVE-2021-21696",
+        "https://security.archlinux.org/CVE-2021-21694",
+        "https://security.archlinux.org/CVE-2021-21692",
+        "https://security.archlinux.org/CVE-2021-21688",
+        "https://security.archlinux.org/CVE-2021-21697"
+    ],
+    "297454": [
+        "https://azure.microsoft.com/en-us/overview/what-is-cloud-computing/"
+    ],
+    "297434": [
+        "https://drive.google.com/uc?export=download&amp"
+    ],
+    "297318": [
+        "https://blogs.oracle.com/linux/announcing-the-unbreakable-enterprise-kernel-release-6-update-2-for-oracle-linux",
+        "https://blogs.oracle.com/linux/post/fuzzing-the-linux-kernel-x86-entry-code-part-1-of-3"
+    ],
+    "297048": [
+        "https://www.mediawiki.org/wiki/Release_notes/1.35#MediaWiki_1.35.4"
+    ],
+    "297043": [
+        "https://www.mediawiki.org/",
+        "https://www.mediawiki.org/wiki/Release_notes/1.35#MediaWiki_1.35.4"
+    ],
+    "296967": [
+        "http://slackware.com"
+    ],
+    "296935": [
+        "http://slackware.com"
+    ],
+    "296847": [
+        "http://www.ietf.org/internet-drafts/draft-mengwong-spf-00.txt"
+    ],
+    "296840": [
+        "http://www.ietf.org/internet-drafts/draft-mengwong-spf-00.txt"
+    ],
+    "296698": [
+        "https://www.libssh.org/2021/08/26/libssh-0-9-6-security-release/"
+    ],
+    "296677": [
+        "https://wiki.debian.org/LTS"
+    ],
+    "296617": [
+        "https://www.akamai.com/blog/security/capoae-malware-ramps-up-uses-multiple-vulnerabilities-and-tactics-to-spread"
     ]
 }

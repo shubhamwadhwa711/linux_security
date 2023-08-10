@@ -95,23 +95,19 @@ def find_urls(text):
 
 def process_broken_urls(html: str,logger:Logger,id:int,field:str):
     broken_links = find_broken_urls(html)
+    updates=[]
     for correct_url, broken_url in broken_links.items():
         html = re.sub(broken_url, correct_url, html)
         logger.info(f'ID: {id} #COLUMN: {field} #URL: {broken_url} replaced with {correct_url}')
-    return html
+        updates.append(True)
+    return html,updates
 
 
-def decompose_known_urls(html:str,logger:Logger,id:int,field:str):
+def decompose_known_urls(html:str,logger:Logger,id:int,field:str,updates:list):
     all_urls = find_urls(html)
-    updates=[]
     soup=BeautifulSoup(html,'html.parser')
     for url in all_urls:
         parsed_url = urlparse(url)
-        if parsed_url.scheme=="" and url.startswith('www'):
-            new_parsed_url=f"https://{url}"
-            logger.info(f'ID: {id} #COLUMN: {field} #URL: {url} replaced with {new_parsed_url}')
-            soup = re.sub(re.escape(url), new_parsed_url, str(soup))
-            updates.append(True)
         domain = parsed_url.netloc
         domain=domain.lower()
         str_soup = str(soup)
@@ -335,7 +331,7 @@ def check_ftp_urls( logger:Logger, id:int, updates:list,field:str, html: Optiona
             for_more_check_urls.add(url)
     return str(soup), updates,for_more_check_urls
 
-async def check_http_urls(logger:Logger, id:int,field:str,updates:list,base_url:str,html:Optional[str]=None, urls:list=None):
+async def check_http_urls(logger:Logger, id:int,field:str,updates:list,base_url:str,html:Optional[str]=None, urls:list=None,www_urls:dict=None):
     for_more_check_urls = set()
     soup=BeautifulSoup(html,'html.parser')
     str_soup=str(soup)
@@ -368,7 +364,7 @@ async def check_http_urls(logger:Logger, id:int,field:str,updates:list,base_url:
                             str_soup=str_soup.replace(url,parsed_url) 
                             updates.append(True)
                             logger.info(f'ID: {id} #COLUMN: {field} #URL: {url} replaced with {parsed_url}')
-                            soup=BeautifulSoup(str_soup,"html.parser")
+                            # soup=BeautifulSoup(str_soup,"html.parser")
                         for tag in a_tags:
                             tag['href']=parsed_url 
                             logger.info(f'ID: {id} #COLUMN: {field} #URL: {url} replaced with {parsed_url}') 
@@ -393,7 +389,7 @@ async def check_http_urls(logger:Logger, id:int,field:str,updates:list,base_url:
                         str_soup=str_soup.replace(url," ")
                         logger.info(f'Skipped ID: {id} #COLUMN: {field} #URL: {url} #STATUS_CODE: {result.get("status_code")} #Replace with {"NULL"}')
                         updates.append(True)
-                        soup=BeautifulSoup(str_soup,"html.parser")
+                        # soup=BeautifulSoup(str_soup,"html.parser")
                     updates.append(True)
                     for tag in a_tags:
                         text = tag.text.strip()
@@ -406,7 +402,26 @@ async def check_http_urls(logger:Logger, id:int,field:str,updates:list,base_url:
                 else:
                     for_more_check_urls.add(url)
                     logger.info(f'ID: {id} #COLUMN: {field} #URL: {url} added for more checking')
-    
+    if len(www_urls) > 0:
+        www_urls_keys=list(www_urls.keys())
+        async with aiohttp.ClientSession() as session:
+            async for result in new_do_http_request(urls=www_urls_keys, session=session, logger=logger, id=id): 
+                    url = result.get('url')
+                    original_url=www_urls[url]
+                    if not result.get('is_broken', False):
+                        if result.get('status_code') in STATUS_CODES_FOR_FURTHER_CHECK:
+                            for_more_check_urls.add(original_url)
+                            logger.info(f'ID: {id} #COLUMN: {field} #URL: {original_url} added for more checking')
+                        else:
+                            str_soup = re.sub(re.escape(original_url), url,str_soup )
+                            updates.append(True)
+                            logger.info(f'ID: {id} #COLUMN: {field} #URL: {original_url if original_url else ("null")} #STATUS_CODE: {result.get("status_code")} - Replaced with: {url}')
+                        continue
+                
+                    updates.append(True)
+                    str_soup = re.sub(re.escape(original_url), ' ', str_soup)
+                    logger.info(f'ID: {id} #COLUMN: {field} #URL: {url if url else ("null")} #STATUS_CODE: {result.get("status_code")} - Replaced with #TEXT: (null)')
+    soup=BeautifulSoup(str_soup,"html.parser")
     return str(soup),updates,for_more_check_urls
 
 def skip_check_sites(urls,logger:Logger):
@@ -418,14 +433,33 @@ def skip_check_sites(urls,logger:Logger):
         remaining_urls.append(url)
     return remaining_urls
 
+def urlstartswith_www(urls):
+    www_urls={}
+    http_urls=[]
+    for url in urls:
+        parsed_url=urlparse(url  )
+        if parsed_url.scheme=="" and url.startswith('www'):
+            new_parsed_url=f"https://{url}"
+            www_urls[new_parsed_url]=url
+        else:
+            http_urls.append(url)
+    return http_urls,www_urls
+    
+    
+        
+            # logger.info(f'ID: {id} #COLUMN: {field} #URL: {url} replaced with {new_parsed_url}')
+            # soup = re.sub(re.escape(url), new_parsed_url, str(soup))
+            # updates.append(True)
+
 
 def check_is_url_valid(html:str, logger:Logger, id:int,field:str,base_url:str,updates:list):
     urls = create_relative_urls(html,base_url)
     all_urls=skip_check_sites(urls,logger)
+    all_urls,www_urls=urlstartswith_www(all_urls)
     ftp_urls = list(filter(lambda x: is_ftp_links(x), all_urls))
     http_urls = list(filter(lambda x: not is_ftp_links(x), all_urls))
     html,updates,for_more_check_urls = check_ftp_urls(html=html,urls= ftp_urls, logger=logger, id=id,field=field,updates=updates)
-    html,updates,for_more_check_urls = asyncio.run(check_http_urls(html=html, urls=http_urls, logger=logger, id=id,field=field,updates=updates,base_url=base_url))
+    html,updates,for_more_check_urls = asyncio.run(check_http_urls(html=html, urls=http_urls, logger=logger, id=id,field=field,updates=updates,base_url=base_url,www_urls=www_urls))
     return html,any(updates),for_more_check_urls
 
 def process_html_text(logger: Logger, id: int, field: str, html: Optional[str] = None, base_url: str = None):
@@ -433,8 +467,8 @@ def process_html_text(logger: Logger, id: int, field: str, html: Optional[str] =
         for_more_check_urls = set()
         if html is None or len(html) == 0:
             return None, False, for_more_check_urls
-        html = process_broken_urls(html,logger=logger,id=id,field=field)
-        html,updates = decompose_known_urls(html,logger=logger,id=id,field=field)
+        html,updates = process_broken_urls(html,logger=logger,id=id,field=field)
+        html,updates = decompose_known_urls(html,logger=logger,id=id,field=field,updates=updates)
         html,updates,for_more_check_urls=check_is_url_valid(html,logger=logger,id=id,field=field,base_url=base_url,updates=updates)
         return html,updates,for_more_check_urls
     except Exception as e:
