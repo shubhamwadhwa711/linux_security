@@ -76,6 +76,7 @@ def find_a_tag_in_html(logger: Logger, field: str, html: Optional[str] = None, u
             a_tags = soup.find_all('a', attrs={'href': url})
             if len(a_tags) == 0 and url in str_soup:
                 str_soup = str_soup.replace(url, ' ')
+                logger.info(f'#COLUMN: {field} #URL: {url} - Replaced with  (empty) removed')
                 updates.append(True)
                 soup = BeautifulSoup(str_soup, 'html.parser')
             for tag in a_tags:
