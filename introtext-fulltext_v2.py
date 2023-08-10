@@ -78,7 +78,7 @@ def do_update(
         raise e
     
 def find_broken_urls(text):
-    pattern = r"""\b(?:(?:(?:(?:https?|ftp?|sftp?):\/\/)|(?:www))|(?:ftp:)|(?<=href="|href=\'))[^\s<>]+(?:-\n){1}[^\s<>;]+\b[\/]?"""
+    pattern = r"""\b(?:(?:(?:(?:https?|ftp?|sftp?):\/\/)|(?:www\.))|(?:ftp:)|(?<=href="|href=\'))[^\s<>]+(?:-\n){1}[^\s<>;]+\b[\/]?"""
     matches=re.findall(pattern,text)
     broken_links={}
     for m in matches:
@@ -88,7 +88,7 @@ def find_broken_urls(text):
 
 def find_urls(text):
         # pattern=r"""\b(?:(?:(?:(?:http[s]?|ftp[s]):\/\/)|(?:www))|(?<=href="|href=\'))[^\s<>]+\b[\/]?"""
-        pattern = r"""\b(?:(?:(?:(?:https?|ftp?|sftp?):\/\/)|(?:www))|(?:ftp:)|(?<=href="|href=\'))[^\s<>;]+\b[\/]?"""
+        pattern = r"""\b(?:(?:(?:(?:https?|ftp?|sftp?):\/\/)|(?:www\.))|(?:ftp:)|(?<=href="|href=\'))[^\s<>;]+\b[\/]?"""
         matches=re.findall(pattern,text)
         return matches
 
