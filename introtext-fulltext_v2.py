@@ -134,7 +134,7 @@ def create_relative_urls(html,base_url:str=None):
     all_urls = find_urls(html)
     http_urls=[]
     for url in all_urls:
-        if not any(element in url for element in ['http', 'https', 'www']) :
+        if not any(element in url for element in ['http', 'https', 'www', 'ftp', 'ftps',"mailto:"]) :
             url = f'{base_url}/{url[1:] if url.startswith("/") else url}'
         http_urls.append(url)
     return http_urls
@@ -345,20 +345,20 @@ async def check_http_urls(logger:Logger, id:int,field:str,updates:list,base_url:
         # for result in do_http_request(urls=urls, logger=logger, id=id):
                 parsed_url = result.get('url')
                 url=urls_obj.get(str(parsed_url),"")
-                if str(parsed_url)!=url and str(parsed_url).startswith('https://www.'):
-                    new_parsed_url=str(parsed_url).replace('https://www.','http://')
-                    url=urls_obj[new_parsed_url]
-                    if not result.get('is_broken',False):
-                        a_tags = soup.find_all('a', attrs={'href': url})
-                        if len(a_tags)==0 and url in str_soup:
-                            str_soup=str_soup.replace(url,str(parsed_url))
-                            logger.info(f'ID: {id} #COLUMN: {field} #URL: {url} replaced with {str(parsed_url)}') 
-                        for tag in a_tags:
-                            tag['href']=str(parsed_url)
-                            logger.info(f'ID: {id} #COLUMN: {field} #URL: {url} replaced with {parsed_url}') 
-                            logger.info(f'Skipped ID: {id} #COLUMN: {field} #URL: {parsed_url} #STATUS_CODE: {result.get("status_code")}')
-                        updates.append(True)
-                        continue
+                # if str(parsed_url)!=url and str(parsed_url).startswith('https://www.'):
+                #     new_parsed_url=str(parsed_url).replace('https://www.','http://')
+                #     url=urls_obj[new_parsed_url]
+                #     if not result.get('is_broken',False):
+                #         a_tags = soup.find_all('a', attrs={'href': url})
+                #         if len(a_tags)==0 and url in str_soup:
+                #             str_soup=str_soup.replace(url,str(parsed_url))
+                #             logger.info(f'ID: {id} #COLUMN: {field} #URL: {url} replaced with {str(parsed_url)}') 
+                #         for tag in a_tags:
+                #             tag['href']=str(parsed_url)
+                #             logger.info(f'ID: {id} #COLUMN: {field} #URL: {url} replaced with {parsed_url}') 
+                #             logger.info(f'Skipped ID: {id} #COLUMN: {field} #URL: {parsed_url} #STATUS_CODE: {result.get("status_code")}')
+                #         updates.append(True)
+                #         continue
                 if not result.get('is_broken', False):
                     if check_https_urls(url):
                         a_tags = soup.find_all('a', attrs={'href': url})
@@ -429,7 +429,7 @@ async def check_http_urls(logger:Logger, id:int,field:str,updates:list,base_url:
 def skip_check_sites(urls,logger:Logger):
     remaining_urls=[]
     for url in urls:
-        if urlparse(url).netloc in SKIP_CHECK_SITES:
+        if urlparse(url).netloc in SKIP_CHECK_SITES or urlparse(url).scheme=="mailto":
             logger.info(f"{url} is skiped for checking:- present in SKIP_CHECK_SITES ")
             continue
         remaining_urls.append(url)
@@ -445,7 +445,7 @@ def skip_check_sites(urls,logger:Logger):
 #             www_urls[new_parsed_url]=url
 #         else:
 #             http_urls.append(url)
-#     return http_urls,www_urls
+#     return http_urls,www_urls()
     
     
         
