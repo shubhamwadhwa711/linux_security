@@ -429,7 +429,7 @@ async def check_http_urls(logger:Logger, id:int,field:str,updates:list,base_url:
 def skip_check_sites(urls,logger:Logger):
     remaining_urls=[]
     for url in urls:
-        if urlparse(url).netloc in SKIP_CHECK_SITES or urlparse(url).scheme=="mailto":
+        if url.startswith('#') or urlparse(url).netloc in SKIP_CHECK_SITES or urlparse(url).scheme in ["mailto", "tel"]:
             logger.info(f"{url} is skiped for checking:- present in SKIP_CHECK_SITES ")
             continue
         remaining_urls.append(url)
