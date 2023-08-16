@@ -134,7 +134,7 @@ def create_relative_urls(html,base_url:str=None):
     all_urls = find_urls(html)
     http_urls=[]
     for url in all_urls:
-        if not any(element in url for element in ['http', 'https', 'www', 'ftp', 'ftps',"mailto:"]) :
+        if not any(url.startswith(element) for element in ['http', 'https', 'www', 'ftp', 'ftps',"mailto:", "tel:", "#"]):
             url = f'{base_url}/{url[1:] if url.startswith("/") else url}'
         http_urls.append(url)
     return http_urls
@@ -429,7 +429,7 @@ async def check_http_urls(logger:Logger, id:int,field:str,updates:list,base_url:
 def skip_check_sites(urls,logger:Logger):
     remaining_urls=[]
     for url in urls:
-        if urlparse(url).netloc in SKIP_CHECK_SITES or urlparse(url).scheme=="mailto":
+        if url.startswith('#') or urlparse(url).netloc in SKIP_CHECK_SITES or urlparse(url).scheme in ["mailto", "tel"]:
             logger.info(f"{url} is skiped for checking:- present in SKIP_CHECK_SITES ")
             continue
         remaining_urls.append(url)
