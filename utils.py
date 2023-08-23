@@ -14,6 +14,8 @@ from urllib.parse import urlparse
 from urllib.request import urlopen
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
+from selenium.webdriver.firefox.options import Options as FirefoxOptions
+from selenium.webdriver.firefox.options import Options
 from selenium.webdriver.chrome.service import Service
 import asyncio
 import aiohttp
@@ -79,11 +81,15 @@ def get_logger(name, log_file, level=logging.INFO):
 
 
 async def new_selenium_check(url,response,logger):
-    chrome_options = Options()
-    chrome_options.add_argument("--headless")
-    chrome_options.binary_location="/home/shubpy/.var/app/com.google.Chrome/cache/google-chrome"
-    chrome_service = Service(executable_path="chromedriver")
-    driver = webdriver.Chrome(options=chrome_options, service=chrome_service)
+    options = FirefoxOptions()  
+    options.add_argument("--headless")
+    driver = webdriver.Firefox(options=options)
+    # geckodriver_path="/home/admin123/Downloads/geckodriver-v0.33.0-linux-aarch64/geckodriver"
+    # chrome_options = Options()
+    # chrome_options.add_argument("--headless")
+    # chrome_options.binary_location="/home/shubpy/.var/app/com.google.Chrome/cache/google-chrome"
+    # chrome_service = Service(executable_path="chromedriver")
+    # driver = webdriver.Chrome(options=chrome_options, service=chrome_service)
     driver.get(url)
     search_texts = ["404", "not found", "page not found"]  # Add more search texts if needed
     for text in search_texts:

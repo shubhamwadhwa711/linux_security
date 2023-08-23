@@ -130,14 +130,14 @@ def decompose_known_urls(html:str,logger:Logger,id:int,field:str,updates:list):
     return str(soup),updates
     
             
-def create_relative_urls(html,base_url:str=None):
-    all_urls = find_urls(html)
-    http_urls=[]
-    for url in all_urls:
+def create_relative_urls(urls_obj:dict,base_url:str=None):
+    for url in urls_obj.keys():
+        original_url=copy.deepcopy(url)
         if not any(url.startswith(element) for element in ['http', 'https', 'www', 'ftp', 'ftps',"mailto:", "tel:", "#"]):
             url = f'{base_url}/{url[1:] if url.startswith("/") else url}'
-        http_urls.append(url)
-    return http_urls
+            del urls_obj[original_url]
+            urls_obj.update({url:original_url})
+    return urls_obj
 
 
 
@@ -338,6 +338,7 @@ async def check_http_urls(logger:Logger, id:int,field:str,updates:list,base_url:
     soup=BeautifulSoup(html,'html.parser')
     str_soup=str(soup)
     urls_obj=get_double_https(urls)
+    urls = create_relative_urls(urls_obj,base_url)
     urls=list(urls_obj.keys())
     if len(urls)!=0:
         async with aiohttp.ClientSession() as session:
@@ -366,7 +367,7 @@ async def check_http_urls(logger:Logger, id:int,field:str,updates:list,base_url:
                             str_soup=str_soup.replace(url,parsed_url) 
                             updates.append(True)
                             logger.info(f'ID: {id} #COLUMN: {field} #URL: {url} replaced with {parsed_url}')
-                            # soup=BeautifulSoup(str_soup,"html.parser")
+                            soup=BeautifulSoup(str_soup,"html.parser")
                         for tag in a_tags:
                             tag['href']=parsed_url 
                             logger.info(f'ID: {id} #COLUMN: {field} #URL: {url} replaced with {parsed_url}') 
@@ -391,7 +392,7 @@ async def check_http_urls(logger:Logger, id:int,field:str,updates:list,base_url:
                         str_soup=str_soup.replace(url," ")
                         logger.info(f'Skipped ID: {id} #COLUMN: {field} #URL: {url} #STATUS_CODE: {result.get("status_code")} #Replace with {"NULL"}')
                         updates.append(True)
-                        # soup=BeautifulSoup(str_soup,"html.parser")
+                        soup=BeautifulSoup(str_soup,"html.parser")
                     updates.append(True)
                     for tag in a_tags:
                         text = tag.text.strip()
@@ -423,12 +424,12 @@ async def check_http_urls(logger:Logger, id:int,field:str,updates:list,base_url:
     #                 updates.append(True)
     #                 str_soup = re.sub(re.escape(original_url), ' ', str_soup)
     #                 logger.info(f'ID: {id} #COLUMN: {field} #URL: {url if url else ("null")} #STATUS_CODE: {result.get("status_code")} - Replaced with #TEXT: (null)')
-    soup=BeautifulSoup(str_soup,"html.parser")
     return str(soup),updates,for_more_check_urls
 
-def skip_check_sites(urls,logger:Logger):
+def skip_check_sites(html,logger:Logger):
+    all_urls = find_urls(html)
     remaining_urls=[]
-    for url in urls:
+    for url in all_urls:
         if url.startswith('#') or urlparse(url).netloc in SKIP_CHECK_SITES or urlparse(url).scheme in ["mailto", "tel"]:
             logger.info(f"{url} is skiped for checking:- present in SKIP_CHECK_SITES ")
             continue
@@ -455,8 +456,8 @@ def skip_check_sites(urls,logger:Logger):
 
 
 def check_is_url_valid(html:str, logger:Logger, id:int,field:str,base_url:str,updates:list):
-    urls = create_relative_urls(html,base_url)
-    all_urls=skip_check_sites(urls,logger)
+    # urls = create_relative_urls(html,base_url)
+    all_urls=skip_check_sites(html,logger)
     # all_urls,www_urls=urlstartswith_www(all_urls)
     ftp_urls = list(filter(lambda x: is_ftp_links(x), all_urls))
     http_urls = list(filter(lambda x: not is_ftp_links(x), all_urls))
