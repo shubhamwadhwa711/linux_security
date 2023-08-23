@@ -107,10 +107,13 @@ async def new_selenium_check(url,response,logger):
 
 
 def selenium_check(url,response,logger):
-    chrome_options = Options()
-    chrome_options.add_argument("--headless")
-    chrome_service = Service(executable_path="chromedriver")
-    driver = webdriver.Chrome(options=chrome_options, service=chrome_service)
+    options = FirefoxOptions()  
+    options.add_argument("--headless")
+    driver = webdriver.Firefox(options=options)
+    # chrome_options = Options()
+    # chrome_options.add_argument("--headless")
+    # chrome_service = Service(executable_path="chromedriver")
+    # driver = webdriver.Chrome(options=chrome_options, service=chrome_service)
     driver.get(url)
     search_texts = ["404", "not found", "page not found"]  # Add more search texts if needed
     for text in search_texts:
