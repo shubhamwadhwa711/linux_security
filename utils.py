@@ -100,7 +100,8 @@ async def new_selenium_check(url,response,logger):
 def selenium_check(url,response,logger):
     options = FirefoxOptions()  
     options.add_argument("--headless")
-    driver = webdriver.Firefox(options=options)
+    service=Service(executable_path="/home/admin123/Downloads/geckodriver-v0.33.0-linux-aarch64")
+    driver = webdriver.Firefox(service=service,options=options)
     # chrome_options = Options()
     # chrome_options.add_argument("--headless")
     # chrome_service = Service(executable_path="chromedriver")
