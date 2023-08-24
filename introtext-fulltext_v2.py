@@ -183,7 +183,6 @@ def get_double_https(urls):
 
 async def new_do_http_request(urls,session,logger:Logger,id:int):
     tasks=[]
-    urls=['https://github.com/dotnet/core/blob/main/release']
     for url in urls:
         task = asyncio.create_task(new_check_http_broken_link(url=url, session=session,logger=logger,id=id))
         tasks.append(task)

@@ -84,6 +84,7 @@ def get_logger(name, log_file, level=logging.INFO):
 async def new_selenium_check(url,response,logger):
     options = FirefoxOptions()  
     options.add_argument("--headless")
+    # options.binary_location="/home/admin123/Downloads/geckodriver-v0.33.0-linux-aarch64"
     service=Service(executable_path="/home/admin123/Downloads/geckodriver-v0.33.0-linux-aarch64")
     driver = webdriver.Firefox(service=service,options=options)
     driver.get(url)
