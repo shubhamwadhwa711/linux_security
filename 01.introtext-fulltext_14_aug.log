@@ -28,3 +28,13 @@ Stacktrace:
 
 
 
+2023-08-24 15:59:17 - INFO - ******************** Processing ID: 348464 ******************** (1/1 - 100.0%)
+2023-08-24 15:59:20 - INFO - processing  348464 - introtext is not JSON, proceeding further to check HTML
+2023-08-24 16:00:00 - INFO - processing 348464 - fulltext is not json proceeding further to check html
+2023-08-24 16:09:49 - WARNING - #ID: 348464 #URL https://www.amd.com Error: 
+2023-08-24 16:09:49 - INFO - #ID: 348464 #URL https://www.amd.com - Requesting again using GET request instead of HEAD
+2023-08-24 16:10:15 - INFO - Skipped ID: 348464 #COLUMN: fulltext #URL: https://www.openssh.com/txt/release-9.3p2 #STATUS_CODE: 200
+2023-08-24 16:10:27 - INFO - Skipped ID: 348464 #COLUMN: fulltext #URL: https://www.cve.org/CVERecord?id=CVE-2023-38408 #STATUS_CODE: 200
+2023-08-24 16:10:27 - WARNING - #ID: 348464 Error: Timeout 
+2023-08-24 16:13:11 - INFO - ID: 348464 #COLUMN: fulltext #URL: www.amd.com added for more checking
+2023-08-24 16:13:17 - INFO - ==================== All records have been processed ====================
