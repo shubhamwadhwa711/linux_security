@@ -130,15 +130,25 @@ def decompose_known_urls(html:str,logger:Logger,id:int,field:str,updates:list):
     return str(soup),updates
     
             
-def create_relative_urls(urls_obj:dict,base_url:str=None):
-    for url in urls_obj.keys():
-        original_url=copy.deepcopy(url)
-        if not any(url.startswith(element) for element in ['http', 'https', 'www', 'ftp', 'ftps',"mailto:", "tel:", "#"]):
+# def create_relative_urls(urls_obj:dict,base_url:str=None):
+#     for url in urls_obj.keys():
+#         original_url=copy.deepcopy(url)
+#         if not any(url.startswith(element) for element in ['http', 'https', 'www', 'ftp', 'ftps',"mailto:", "tel:", "#"]):
+#             url = f'{base_url}/{url[1:] if url.startswith("/") else url}'
+#             del urls_obj[original_url]
+#             urls_obj.update({url:original_url})
+#     return urls_obj
+
+
+def create_relative_urls(urls_obj: dict, base_url: str = None):
+    urls_to_modify = list(urls_obj.keys())  # Create a copy of the keys as a list
+    for url in urls_to_modify:
+        original_url = copy.deepcopy(url)
+        if not any(url.startswith(element) for element in ['http', 'https', 'www', 'ftp', 'ftps', "mailto:", "tel:", "#"]):
             url = f'{base_url}/{url[1:] if url.startswith("/") else url}'
             del urls_obj[original_url]
-            urls_obj.update({url:original_url})
+            urls_obj[url] = original_url  
     return urls_obj
-
 
 
 def strip_trailing_in_anchor(url):
@@ -173,6 +183,7 @@ def get_double_https(urls):
 
 async def new_do_http_request(urls,session,logger:Logger,id:int):
     tasks=[]
+    urls=['https://github.com/dotnet/core/blob/main/release']
     for url in urls:
         task = asyncio.create_task(new_check_http_broken_link(url=url, session=session,logger=logger,id=id))
         tasks.append(task)

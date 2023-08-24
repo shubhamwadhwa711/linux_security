@@ -16,9 +16,10 @@ from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.firefox.options import Options as FirefoxOptions
 from selenium.webdriver.firefox.options import Options
-from selenium.webdriver.chrome.service import Service
+from selenium.webdriver.firefox.service import Service
 import asyncio
 import aiohttp
+from webdriver_manager.firefox import GeckoDriverManager
 
 HTTP_REQUEST_TIMEOUT = 10
 FTP_REQUEST_TIMEOUT = 5
@@ -83,23 +84,13 @@ def get_logger(name, log_file, level=logging.INFO):
 async def new_selenium_check(url,response,logger):
     options = FirefoxOptions()  
     options.add_argument("--headless")
-    driver = webdriver.Firefox(options=options)
-    # geckodriver_path="/home/admin123/Downloads/geckodriver-v0.33.0-linux-aarch64/geckodriver"
-    # chrome_options = Options()
-    # chrome_options.add_argument("--headless")
-    # chrome_options.binary_location="/home/shubpy/.var/app/com.google.Chrome/cache/google-chrome"
-    # chrome_service = Service(executable_path="chromedriver")
-    # driver = webdriver.Chrome(options=chrome_options, service=chrome_service)
+    service=Service(executable_path="/home/admin123/Downloads/geckodriver-v0.33.0-linux-aarch64")
+    driver = webdriver.Firefox(service=service,options=options)
     driver.get(url)
     search_texts = ["404", "not found", "page not found"]  # Add more search texts if needed
     for text in search_texts:
         if text.lower() in driver.page_source.lower():
             driver.quit()
-            # if str(response.url) != url:
-            #     logger.info(f"response url not match with original url set the original url with in place of response url ")
-            #     st=response.url
-            #     st=url
-            #     response=st
             return {'url':url,'status_code':404,'is_error':True}
     response.status=200
     driver.quit()
