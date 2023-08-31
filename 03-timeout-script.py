@@ -18,6 +18,7 @@ from pymysql import MySQLError
 from typing import Dict, Any, Optional, List
 from bs4 import BeautifulSoup, MarkupResemblesLocatorWarning
 # from typing import Dict, Any, Optional
+import re
 
 warnings.filterwarnings("ignore", category=MarkupResemblesLocatorWarning)
 
@@ -75,7 +76,9 @@ def find_a_tag_in_html(logger: Logger, field: str, html: Optional[str] = None, u
         for url in urls:
             a_tags = soup.find_all('a', attrs={'href': url})
             if len(a_tags) == 0 and url in str_soup:
-                str_soup = str_soup.replace(url, ' ')
+                # str_soup = str_soup.replace(url, ' ')
+
+                str_soup = re.sub(rf"{re.escape(url)}\n", "", str_soup)
                 logger.info(f'#COLUMN: {field} #URL: {url} - Replaced with  (empty) removed')
                 updates.append(True)
                 soup = BeautifulSoup(str_soup, 'html.parser')

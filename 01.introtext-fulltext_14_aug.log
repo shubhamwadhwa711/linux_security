@@ -56,3 +56,302 @@ Stacktrace:
 2023-08-24 23:27:03 - INFO - processing 347259 - fulltext is not json proceeding further to check html
 2023-08-24 23:30:12 - INFO - ******************** Processing ID: 347259 ******************** (1/1 - 100.0%)
 2023-08-24 23:30:12 - INFO - processing  347259 - introtext is not JSON, proceeding further to check HTML
+2023-08-31 23:00:57 - INFO - ******************** Processing ID: 101986 ******************** (1/1 - 100.0%)
+2023-08-31 23:00:57 - INFO - processing  101986 - introtext is not JSON, proceeding further to check HTML
+2023-08-31 23:02:02 - INFO - ******************** Processing ID: 347259 ******************** (1/1 - 100.0%)
+2023-08-31 23:02:02 - INFO - processing  347259 - introtext is not JSON, proceeding further to check HTML
+2023-08-31 23:02:16 - INFO - Skipped ID: 347259 #COLUMN: introtext #URL: https://blogs.jpcert.or.jp/en/2023/05/gobrat.html #STATUS_CODE: 200
+2023-08-31 23:02:46 - INFO - processing 347259 - fulltext is not json proceeding further to check html
+2023-08-31 23:03:58 - INFO - ID: 347259 #COLUMN: fulltext #URL: http://security.debian.org/dists/stable/updates/binary-
+m68k/samba_2.0.5a-1_m68k.deb replaced with http://security.debian.org/dists/stable/updates/binary-m68k/samba_2.0.5a-1_m68k.deb
+2023-08-31 23:04:01 - INFO - ID: 347259 #COLUMN: fulltext #URL: http://security.debian.org/dists/stable/updates/binary-
+m68k/smbclient_2.0.5a-1_m68k.deb replaced with http://security.debian.org/dists/stable/updates/binary-m68k/smbclient_2.0.5a-1_m68k.deb
+2023-08-31 23:04:12 - INFO - ID: 347259 #COLUMN: fulltext #URL: http://security.debian.org/dists/stable/updates/binary-
+m68k/smbfs_2.0.5a-1_m68k.deb replaced with http://security.debian.org/dists/stable/updates/binary-m68k/smbfs_2.0.5a-1_m68k.deb
+2023-08-31 23:04:12 - INFO - ID: 347259 #COLUMN: fulltext #URL: http://security.debian.org/dists/stable/updates/binary-
+m68k/smbwrapper_2.0.5a-1_m68k.deb replaced with http://security.debian.org/dists/stable/updates/binary-m68k/smbwrapper_2.0.5a-1_m68k.deb
+2023-08-31 23:04:12 - INFO - ID: 347259 #COLUMN: fulltext #URL: http://security.debian.org/dists/stable/updates/binary-
+m68k/swat_2.0.5a-1_m68k.deb replaced with http://security.debian.org/dists/stable/updates/binary-m68k/swat_2.0.5a-1_m68k.deb
+2023-08-31 23:05:41 - WARNING - #ID: 347259 #URL http://security.debian.org/dists/stable/updates/binary-m68k/samba_2.0.5a-1_m68k.deb Error: Message: Unable to locate or obtain driver for firefox; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors/driver_location
+
+2023-08-31 23:05:42 - WARNING - #ID: 347259 #URL http://security.debian.org/dists/stable/updates/binary-m68k/smbclient_2.0.5a-1_m68k.deb Error: Message: Unable to locate or obtain driver for firefox; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors/driver_location
+
+2023-08-31 23:05:42 - WARNING - #ID: 347259 #URL http://security.debian.org/dists/stable/updates/binary-m68k/smbfs_2.0.5a-1_m68k.deb Error: Message: Unable to locate or obtain driver for firefox; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors/driver_location
+
+2023-08-31 23:05:43 - WARNING - #ID: 347259 #URL http://security.debian.org/dists/stable/updates/binary-m68k/smbwrapper_2.0.5a-1_m68k.deb Error: Message: Unable to locate or obtain driver for firefox; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors/driver_location
+
+2023-08-31 23:05:44 - WARNING - #ID: 347259 #URL http://security.debian.org/dists/stable/updates/binary-m68k/swat_2.0.5a-1_m68k.deb Error: Message: Unable to locate or obtain driver for firefox; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors/driver_location
+
+2023-08-31 23:07:39 - ERROR - #ID: 347259 #URL http://security.debian.org/dists/stable/updates/binary-m68k/swat_2.0.5a-1_m68k.deb Error: Message: Unable to locate or obtain driver for firefox; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors/driver_location
+
+2023-08-31 23:09:47 - INFO - ******************** Processing ID: 347259 ******************** (1/1 - 100.0%)
+2023-08-31 23:09:47 - INFO - processing  347259 - introtext is not JSON, proceeding further to check HTML
+2023-08-31 23:10:06 - INFO - Skipped ID: 347259 #COLUMN: introtext #URL: https://blogs.jpcert.or.jp/en/2023/05/gobrat.html #STATUS_CODE: 200
+2023-08-31 23:10:09 - INFO - processing 347259 - fulltext is not json proceeding further to check html
+2023-08-31 23:10:10 - INFO - ID: 347259 #COLUMN: fulltext #URL: http://security.debian.org/dists/stable/updates/binary-
+m68k/samba_2.0.5a-1_m68k.deb replaced with http://security.debian.org/dists/stable/updates/binary-m68k/samba_2.0.5a-1_m68k.deb
+2023-08-31 23:10:10 - INFO - ID: 347259 #COLUMN: fulltext #URL: http://security.debian.org/dists/stable/updates/binary-
+m68k/smbclient_2.0.5a-1_m68k.deb replaced with http://security.debian.org/dists/stable/updates/binary-m68k/smbclient_2.0.5a-1_m68k.deb
+2023-08-31 23:10:10 - INFO - ID: 347259 #COLUMN: fulltext #URL: http://security.debian.org/dists/stable/updates/binary-
+m68k/smbfs_2.0.5a-1_m68k.deb replaced with http://security.debian.org/dists/stable/updates/binary-m68k/smbfs_2.0.5a-1_m68k.deb
+2023-08-31 23:10:10 - INFO - ID: 347259 #COLUMN: fulltext #URL: http://security.debian.org/dists/stable/updates/binary-
+m68k/smbwrapper_2.0.5a-1_m68k.deb replaced with http://security.debian.org/dists/stable/updates/binary-m68k/smbwrapper_2.0.5a-1_m68k.deb
+2023-08-31 23:10:10 - INFO - ID: 347259 #COLUMN: fulltext #URL: http://security.debian.org/dists/stable/updates/binary-
+m68k/swat_2.0.5a-1_m68k.deb replaced with http://security.debian.org/dists/stable/updates/binary-m68k/swat_2.0.5a-1_m68k.deb
+2023-08-31 23:10:22 - WARNING - #ID: 347259 #URL http://security.debian.org/dists/stable/updates/binary-m68k/samba_2.0.5a-1_m68k.deb Error: Message: Service /snap/bin/geckodriver unexpectedly exited. Status code was: -6
+
+2023-08-31 23:10:33 - WARNING - #ID: 347259 #URL http://security.debian.org/dists/stable/updates/binary-m68k/smbclient_2.0.5a-1_m68k.deb Error: Message: Service /snap/bin/geckodriver unexpectedly exited. Status code was: -6
+
+2023-08-31 23:10:36 - WARNING - #ID: 347259 #URL http://security.debian.org/dists/stable/updates/binary-m68k/smbwrapper_2.0.5a-1_m68k.deb Error: Message: Service /snap/bin/geckodriver unexpectedly exited. Status code was: -6
+
+2023-08-31 23:10:44 - WARNING - #ID: 347259 #URL http://security.debian.org/dists/stable/updates/binary-m68k/smbfs_2.0.5a-1_m68k.deb Error: Message: Service /snap/bin/geckodriver unexpectedly exited. Status code was: -6
+
+2023-08-31 23:10:47 - WARNING - #ID: 347259 #URL http://security.debian.org/dists/stable/updates/binary-m68k/swat_2.0.5a-1_m68k.deb Error: Message: Service /snap/bin/geckodriver unexpectedly exited. Status code was: -6
+
+2023-08-31 23:12:48 - INFO - ******************** Processing ID: 347259 ******************** (1/1 - 100.0%)
+2023-08-31 23:12:48 - INFO - processing  347259 - introtext is not JSON, proceeding further to check HTML
+2023-08-31 23:12:57 - INFO - Skipped ID: 347259 #COLUMN: introtext #URL: https://blogs.jpcert.or.jp/en/2023/05/gobrat.html #STATUS_CODE: 200
+2023-08-31 23:12:59 - INFO - processing 347259 - fulltext is not json proceeding further to check html
+2023-08-31 23:13:00 - INFO - ID: 347259 #COLUMN: fulltext #URL: http://security.debian.org/dists/stable/updates/binary-
+m68k/samba_2.0.5a-1_m68k.deb replaced with http://security.debian.org/dists/stable/updates/binary-m68k/samba_2.0.5a-1_m68k.deb
+2023-08-31 23:13:00 - INFO - ID: 347259 #COLUMN: fulltext #URL: http://security.debian.org/dists/stable/updates/binary-
+m68k/smbclient_2.0.5a-1_m68k.deb replaced with http://security.debian.org/dists/stable/updates/binary-m68k/smbclient_2.0.5a-1_m68k.deb
+2023-08-31 23:13:00 - INFO - ID: 347259 #COLUMN: fulltext #URL: http://security.debian.org/dists/stable/updates/binary-
+m68k/smbfs_2.0.5a-1_m68k.deb replaced with http://security.debian.org/dists/stable/updates/binary-m68k/smbfs_2.0.5a-1_m68k.deb
+2023-08-31 23:13:00 - INFO - ID: 347259 #COLUMN: fulltext #URL: http://security.debian.org/dists/stable/updates/binary-
+m68k/smbwrapper_2.0.5a-1_m68k.deb replaced with http://security.debian.org/dists/stable/updates/binary-m68k/smbwrapper_2.0.5a-1_m68k.deb
+2023-08-31 23:13:00 - INFO - ID: 347259 #COLUMN: fulltext #URL: http://security.debian.org/dists/stable/updates/binary-
+m68k/swat_2.0.5a-1_m68k.deb replaced with http://security.debian.org/dists/stable/updates/binary-m68k/swat_2.0.5a-1_m68k.deb
+2023-08-31 23:13:16 - WARNING - #ID: 347259 #URL http://security.debian.org/dists/stable/updates/binary-m68k/samba_2.0.5a-1_m68k.deb Error: Message: Service /snap/bin/geckodriver unexpectedly exited. Status code was: -6
+
+2023-08-31 23:16:12 - INFO - ******************** Processing ID: 347259 ******************** (1/1 - 100.0%)
+2023-08-31 23:16:12 - INFO - processing  347259 - introtext is not JSON, proceeding further to check HTML
+2023-08-31 23:19:04 - INFO - Skipped ID: 347259 #COLUMN: introtext #URL: https://blogs.jpcert.or.jp/en/2023/05/gobrat.html #STATUS_CODE: 200
+2023-08-31 23:19:06 - INFO - processing 347259 - fulltext is not json proceeding further to check html
+2023-08-31 23:19:08 - INFO - ID: 347259 #COLUMN: fulltext #URL: http://security.debian.org/dists/stable/updates/binary-
+m68k/samba_2.0.5a-1_m68k.deb replaced with http://security.debian.org/dists/stable/updates/binary-m68k/samba_2.0.5a-1_m68k.deb
+2023-08-31 23:19:08 - INFO - ID: 347259 #COLUMN: fulltext #URL: http://security.debian.org/dists/stable/updates/binary-
+m68k/smbclient_2.0.5a-1_m68k.deb replaced with http://security.debian.org/dists/stable/updates/binary-m68k/smbclient_2.0.5a-1_m68k.deb
+2023-08-31 23:19:08 - INFO - ID: 347259 #COLUMN: fulltext #URL: http://security.debian.org/dists/stable/updates/binary-
+m68k/smbfs_2.0.5a-1_m68k.deb replaced with http://security.debian.org/dists/stable/updates/binary-m68k/smbfs_2.0.5a-1_m68k.deb
+2023-08-31 23:19:08 - INFO - ID: 347259 #COLUMN: fulltext #URL: http://security.debian.org/dists/stable/updates/binary-
+m68k/smbwrapper_2.0.5a-1_m68k.deb replaced with http://security.debian.org/dists/stable/updates/binary-m68k/smbwrapper_2.0.5a-1_m68k.deb
+2023-08-31 23:19:08 - INFO - ID: 347259 #COLUMN: fulltext #URL: http://security.debian.org/dists/stable/updates/binary-
+m68k/swat_2.0.5a-1_m68k.deb replaced with http://security.debian.org/dists/stable/updates/binary-m68k/swat_2.0.5a-1_m68k.deb
+2023-08-31 23:19:14 - WARNING - #ID: 347259 #URL http://security.debian.org/dists/stable/updates/binary-m68k/samba_2.0.5a-1_m68k.deb Error: Message: Service /snap/bin/geckodriver unexpectedly exited. Status code was: -6
+
+2023-08-31 23:25:33 - INFO - ******************** Processing ID: 347259 ******************** (1/1 - 100.0%)
+2023-08-31 23:25:33 - INFO - processing  347259 - introtext is not JSON, proceeding further to check HTML
+2023-08-31 23:25:46 - WARNING - #ID: 347259 #URL https://blogs.jpcert.or.jp/en/2023/05/gobrat.html Error: 
+2023-08-31 23:25:46 - INFO - #ID: 347259 #URL https://blogs.jpcert.or.jp/en/2023/05/gobrat.html - Requesting again using GET request instead of HEAD
+2023-08-31 23:26:06 - WARNING - #ID: 347259 Error: Timeout 
+2023-08-31 23:26:06 - INFO - ID: 347259 #COLUMN: introtext #URL: https://blogs.jpcert.or.jp/en/2023/05/gobrat.html added for more checking
+2023-08-31 23:26:11 - INFO - processing 347259 - fulltext is not json proceeding further to check html
+2023-08-31 23:26:13 - INFO - ID: 347259 #COLUMN: fulltext #URL: http://security.debian.org/dists/stable/updates/binary-
+m68k/samba_2.0.5a-1_m68k.deb replaced with http://security.debian.org/dists/stable/updates/binary-m68k/samba_2.0.5a-1_m68k.deb
+2023-08-31 23:26:13 - INFO - ID: 347259 #COLUMN: fulltext #URL: http://security.debian.org/dists/stable/updates/binary-
+m68k/smbclient_2.0.5a-1_m68k.deb replaced with http://security.debian.org/dists/stable/updates/binary-m68k/smbclient_2.0.5a-1_m68k.deb
+2023-08-31 23:26:13 - INFO - ID: 347259 #COLUMN: fulltext #URL: http://security.debian.org/dists/stable/updates/binary-
+m68k/smbfs_2.0.5a-1_m68k.deb replaced with http://security.debian.org/dists/stable/updates/binary-m68k/smbfs_2.0.5a-1_m68k.deb
+2023-08-31 23:26:13 - INFO - ID: 347259 #COLUMN: fulltext #URL: http://security.debian.org/dists/stable/updates/binary-
+m68k/smbwrapper_2.0.5a-1_m68k.deb replaced with http://security.debian.org/dists/stable/updates/binary-m68k/smbwrapper_2.0.5a-1_m68k.deb
+2023-08-31 23:26:13 - INFO - ID: 347259 #COLUMN: fulltext #URL: http://security.debian.org/dists/stable/updates/binary-
+m68k/swat_2.0.5a-1_m68k.deb replaced with http://security.debian.org/dists/stable/updates/binary-m68k/swat_2.0.5a-1_m68k.deb
+2023-08-31 23:26:29 - WARNING - #ID: 347259 #URL http://security.debian.org/dists/stable/updates/binary-m68k/samba_2.0.5a-1_m68k.deb Error: 
+2023-08-31 23:26:29 - INFO - #ID: 347259 #URL http://security.debian.org/dists/stable/updates/binary-m68k/samba_2.0.5a-1_m68k.deb - Requesting again using GET request instead of HEAD
+2023-08-31 23:26:29 - WARNING - #ID: 347259 #URL http://security.debian.org/dists/stable/updates/binary-m68k/smbfs_2.0.5a-1_m68k.deb Error: 
+2023-08-31 23:26:29 - INFO - #ID: 347259 #URL http://security.debian.org/dists/stable/updates/binary-m68k/smbfs_2.0.5a-1_m68k.deb - Requesting again using GET request instead of HEAD
+2023-08-31 23:26:29 - WARNING - #ID: 347259 #URL http://security.debian.org/dists/stable/updates/binary-m68k/swat_2.0.5a-1_m68k.deb Error: 
+2023-08-31 23:26:29 - INFO - #ID: 347259 #URL http://security.debian.org/dists/stable/updates/binary-m68k/swat_2.0.5a-1_m68k.deb - Requesting again using GET request instead of HEAD
+2023-08-31 23:26:29 - WARNING - #ID: 347259 #URL http://security.debian.org/dists/stable/updates/binary-m68k/smbclient_2.0.5a-1_m68k.deb Error: 
+2023-08-31 23:26:29 - INFO - #ID: 347259 #URL http://security.debian.org/dists/stable/updates/binary-m68k/smbclient_2.0.5a-1_m68k.deb - Requesting again using GET request instead of HEAD
+2023-08-31 23:26:29 - WARNING - #ID: 347259 #URL http://security.debian.org/dists/stable/updates/binary-m68k/smbwrapper_2.0.5a-1_m68k.deb Error: 
+2023-08-31 23:26:29 - INFO - #ID: 347259 #URL http://security.debian.org/dists/stable/updates/binary-m68k/smbwrapper_2.0.5a-1_m68k.deb - Requesting again using GET request instead of HEAD
+2023-08-31 23:27:22 - WARNING - #ID: 347259 #URL http://security.debian.org/dists/stable/updates/binary-m68k/samba_2.0.5a-1_m68k.deb Error: Cannot connect to host security.debian.org:80 ssl:default [Temporary failure in name resolution]
+2023-08-31 23:28:03 - INFO - ******************** Processing ID: 347259 ******************** (1/1 - 100.0%)
+2023-08-31 23:28:03 - INFO - processing  347259 - introtext is not JSON, proceeding further to check HTML
+2023-08-31 23:28:12 - INFO - Skipped ID: 347259 #COLUMN: introtext #URL: https://blogs.jpcert.or.jp/en/2023/05/gobrat.html #STATUS_CODE: 200
+2023-08-31 23:28:17 - INFO - processing 347259 - fulltext is not json proceeding further to check html
+2023-08-31 23:28:17 - INFO - ID: 347259 #COLUMN: fulltext #URL: http://security.debian.org/dists/stable/updates/binary-
+m68k/samba_2.0.5a-1_m68k.deb replaced with http://security.debian.org/dists/stable/updates/binary-m68k/samba_2.0.5a-1_m68k.deb
+2023-08-31 23:28:17 - INFO - ID: 347259 #COLUMN: fulltext #URL: http://security.debian.org/dists/stable/updates/binary-
+m68k/smbclient_2.0.5a-1_m68k.deb replaced with http://security.debian.org/dists/stable/updates/binary-m68k/smbclient_2.0.5a-1_m68k.deb
+2023-08-31 23:28:17 - INFO - ID: 347259 #COLUMN: fulltext #URL: http://security.debian.org/dists/stable/updates/binary-
+m68k/smbfs_2.0.5a-1_m68k.deb replaced with http://security.debian.org/dists/stable/updates/binary-m68k/smbfs_2.0.5a-1_m68k.deb
+2023-08-31 23:28:17 - INFO - ID: 347259 #COLUMN: fulltext #URL: http://security.debian.org/dists/stable/updates/binary-
+m68k/smbwrapper_2.0.5a-1_m68k.deb replaced with http://security.debian.org/dists/stable/updates/binary-m68k/smbwrapper_2.0.5a-1_m68k.deb
+2023-08-31 23:28:17 - INFO - ID: 347259 #COLUMN: fulltext #URL: http://security.debian.org/dists/stable/updates/binary-
+m68k/swat_2.0.5a-1_m68k.deb replaced with http://security.debian.org/dists/stable/updates/binary-m68k/swat_2.0.5a-1_m68k.deb
+2023-08-31 23:28:24 - WARNING - #ID: 347259 #URL http://security.debian.org/dists/stable/updates/binary-m68k/samba_2.0.5a-1_m68k.deb Error: Message: Service /snap/bin/geckodriver unexpectedly exited. Status code was: -6
+
+2023-08-31 23:32:15 - INFO - ******************** Processing ID: 347259 ******************** (1/1 - 100.0%)
+2023-08-31 23:32:15 - INFO - processing  347259 - introtext is not JSON, proceeding further to check HTML
+2023-08-31 23:32:20 - INFO - Skipped ID: 347259 #COLUMN: introtext #URL: https://blogs.jpcert.or.jp/en/2023/05/gobrat.html #STATUS_CODE: 200
+2023-08-31 23:32:24 - INFO - processing 347259 - fulltext is not json proceeding further to check html
+2023-08-31 23:32:24 - INFO - ID: 347259 #COLUMN: fulltext #URL: http://security.debian.org/dists/stable/updates/binary-
+m68k/samba_2.0.5a-1_m68k.deb replaced with http://security.debian.org/dists/stable/updates/binary-m68k/samba_2.0.5a-1_m68k.deb
+2023-08-31 23:32:24 - INFO - ID: 347259 #COLUMN: fulltext #URL: http://security.debian.org/dists/stable/updates/binary-
+m68k/smbclient_2.0.5a-1_m68k.deb replaced with http://security.debian.org/dists/stable/updates/binary-m68k/smbclient_2.0.5a-1_m68k.deb
+2023-08-31 23:32:24 - INFO - ID: 347259 #COLUMN: fulltext #URL: http://security.debian.org/dists/stable/updates/binary-
+m68k/smbfs_2.0.5a-1_m68k.deb replaced with http://security.debian.org/dists/stable/updates/binary-m68k/smbfs_2.0.5a-1_m68k.deb
+2023-08-31 23:32:24 - INFO - ID: 347259 #COLUMN: fulltext #URL: http://security.debian.org/dists/stable/updates/binary-
+m68k/smbwrapper_2.0.5a-1_m68k.deb replaced with http://security.debian.org/dists/stable/updates/binary-m68k/smbwrapper_2.0.5a-1_m68k.deb
+2023-08-31 23:32:24 - INFO - ID: 347259 #COLUMN: fulltext #URL: http://security.debian.org/dists/stable/updates/binary-
+m68k/swat_2.0.5a-1_m68k.deb replaced with http://security.debian.org/dists/stable/updates/binary-m68k/swat_2.0.5a-1_m68k.deb
+2023-08-31 23:32:32 - WARNING - #ID: 347259 #URL http://security.debian.org/dists/stable/updates/binary-m68k/samba_2.0.5a-1_m68k.deb Error: WebDriver.__init__() got an unexpected keyword argument 'executable_path'
+2023-08-31 23:33:35 - INFO - ******************** Processing ID: 347259 ******************** (1/1 - 100.0%)
+2023-08-31 23:33:35 - INFO - processing  347259 - introtext is not JSON, proceeding further to check HTML
+2023-08-31 23:33:40 - INFO - Skipped ID: 347259 #COLUMN: introtext #URL: https://blogs.jpcert.or.jp/en/2023/05/gobrat.html #STATUS_CODE: 200
+2023-08-31 23:33:46 - INFO - processing 347259 - fulltext is not json proceeding further to check html
+2023-08-31 23:33:46 - INFO - ID: 347259 #COLUMN: fulltext #URL: http://security.debian.org/dists/stable/updates/binary-
+m68k/samba_2.0.5a-1_m68k.deb replaced with http://security.debian.org/dists/stable/updates/binary-m68k/samba_2.0.5a-1_m68k.deb
+2023-08-31 23:33:46 - INFO - ID: 347259 #COLUMN: fulltext #URL: http://security.debian.org/dists/stable/updates/binary-
+m68k/smbclient_2.0.5a-1_m68k.deb replaced with http://security.debian.org/dists/stable/updates/binary-m68k/smbclient_2.0.5a-1_m68k.deb
+2023-08-31 23:33:46 - INFO - ID: 347259 #COLUMN: fulltext #URL: http://security.debian.org/dists/stable/updates/binary-
+m68k/smbfs_2.0.5a-1_m68k.deb replaced with http://security.debian.org/dists/stable/updates/binary-m68k/smbfs_2.0.5a-1_m68k.deb
+2023-08-31 23:33:46 - INFO - ID: 347259 #COLUMN: fulltext #URL: http://security.debian.org/dists/stable/updates/binary-
+m68k/smbwrapper_2.0.5a-1_m68k.deb replaced with http://security.debian.org/dists/stable/updates/binary-m68k/smbwrapper_2.0.5a-1_m68k.deb
+2023-08-31 23:33:46 - INFO - ID: 347259 #COLUMN: fulltext #URL: http://security.debian.org/dists/stable/updates/binary-
+m68k/swat_2.0.5a-1_m68k.deb replaced with http://security.debian.org/dists/stable/updates/binary-m68k/swat_2.0.5a-1_m68k.deb
+2023-08-31 23:33:53 - WARNING - #ID: 347259 #URL http://security.debian.org/dists/stable/updates/binary-m68k/samba_2.0.5a-1_m68k.deb Error: Message: Service /snap/bin/geckodriver unexpectedly exited. Status code was: -6
+
+2023-08-31 23:37:02 - INFO - ******************** Processing ID: 347259 ******************** (1/1 - 100.0%)
+2023-08-31 23:37:02 - INFO - processing  347259 - introtext is not JSON, proceeding further to check HTML
+2023-08-31 23:37:05 - INFO - Skipped ID: 347259 #COLUMN: introtext #URL: https://blogs.jpcert.or.jp/en/2023/05/gobrat.html #STATUS_CODE: 200
+2023-08-31 23:37:09 - INFO - processing 347259 - fulltext is not json proceeding further to check html
+2023-08-31 23:37:09 - INFO - ID: 347259 #COLUMN: fulltext #URL: http://security.debian.org/dists/stable/updates/binary-
+m68k/samba_2.0.5a-1_m68k.deb replaced with http://security.debian.org/dists/stable/updates/binary-m68k/samba_2.0.5a-1_m68k.deb
+2023-08-31 23:37:09 - INFO - ID: 347259 #COLUMN: fulltext #URL: http://security.debian.org/dists/stable/updates/binary-
+m68k/smbclient_2.0.5a-1_m68k.deb replaced with http://security.debian.org/dists/stable/updates/binary-m68k/smbclient_2.0.5a-1_m68k.deb
+2023-08-31 23:37:09 - INFO - ID: 347259 #COLUMN: fulltext #URL: http://security.debian.org/dists/stable/updates/binary-
+m68k/smbfs_2.0.5a-1_m68k.deb replaced with http://security.debian.org/dists/stable/updates/binary-m68k/smbfs_2.0.5a-1_m68k.deb
+2023-08-31 23:37:09 - INFO - ID: 347259 #COLUMN: fulltext #URL: http://security.debian.org/dists/stable/updates/binary-
+m68k/smbwrapper_2.0.5a-1_m68k.deb replaced with http://security.debian.org/dists/stable/updates/binary-m68k/smbwrapper_2.0.5a-1_m68k.deb
+2023-08-31 23:37:09 - INFO - ID: 347259 #COLUMN: fulltext #URL: http://security.debian.org/dists/stable/updates/binary-
+m68k/swat_2.0.5a-1_m68k.deb replaced with http://security.debian.org/dists/stable/updates/binary-m68k/swat_2.0.5a-1_m68k.deb
+2023-08-31 23:37:15 - WARNING - #ID: 347259 #URL http://security.debian.org/dists/stable/updates/binary-m68k/samba_2.0.5a-1_m68k.deb Error: Message: Unable to locate or obtain driver for firefox; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors/driver_location
+
+2023-08-31 23:38:19 - INFO - ******************** Processing ID: 347259 ******************** (1/1 - 100.0%)
+2023-08-31 23:38:19 - INFO - processing  347259 - introtext is not JSON, proceeding further to check HTML
+2023-08-31 23:38:26 - INFO - Skipped ID: 347259 #COLUMN: introtext #URL: https://blogs.jpcert.or.jp/en/2023/05/gobrat.html #STATUS_CODE: 200
+2023-08-31 23:38:33 - INFO - processing 347259 - fulltext is not json proceeding further to check html
+2023-08-31 23:38:33 - INFO - ID: 347259 #COLUMN: fulltext #URL: http://security.debian.org/dists/stable/updates/binary-
+m68k/samba_2.0.5a-1_m68k.deb replaced with http://security.debian.org/dists/stable/updates/binary-m68k/samba_2.0.5a-1_m68k.deb
+2023-08-31 23:38:33 - INFO - ID: 347259 #COLUMN: fulltext #URL: http://security.debian.org/dists/stable/updates/binary-
+m68k/smbclient_2.0.5a-1_m68k.deb replaced with http://security.debian.org/dists/stable/updates/binary-m68k/smbclient_2.0.5a-1_m68k.deb
+2023-08-31 23:38:33 - INFO - ID: 347259 #COLUMN: fulltext #URL: http://security.debian.org/dists/stable/updates/binary-
+m68k/smbfs_2.0.5a-1_m68k.deb replaced with http://security.debian.org/dists/stable/updates/binary-m68k/smbfs_2.0.5a-1_m68k.deb
+2023-08-31 23:38:33 - INFO - ID: 347259 #COLUMN: fulltext #URL: http://security.debian.org/dists/stable/updates/binary-
+m68k/smbwrapper_2.0.5a-1_m68k.deb replaced with http://security.debian.org/dists/stable/updates/binary-m68k/smbwrapper_2.0.5a-1_m68k.deb
+2023-08-31 23:38:33 - INFO - ID: 347259 #COLUMN: fulltext #URL: http://security.debian.org/dists/stable/updates/binary-
+m68k/swat_2.0.5a-1_m68k.deb replaced with http://security.debian.org/dists/stable/updates/binary-m68k/swat_2.0.5a-1_m68k.deb
+2023-08-31 23:38:45 - WARNING - #ID: 347259 #URL http://security.debian.org/dists/stable/updates/binary-m68k/samba_2.0.5a-1_m68k.deb Error: Message: Unable to locate or obtain driver for firefox; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors/driver_location
+
+2023-08-31 23:38:45 - WARNING - #ID: 347259 #URL http://security.debian.org/dists/stable/updates/binary-m68k/smbclient_2.0.5a-1_m68k.deb Error: 
+2023-08-31 23:38:45 - INFO - #ID: 347259 #URL http://security.debian.org/dists/stable/updates/binary-m68k/smbclient_2.0.5a-1_m68k.deb - Requesting again using GET request instead of HEAD
+2023-08-31 23:38:45 - WARNING - #ID: 347259 #URL http://security.debian.org/dists/stable/updates/binary-m68k/smbfs_2.0.5a-1_m68k.deb Error: 
+2023-08-31 23:38:45 - INFO - #ID: 347259 #URL http://security.debian.org/dists/stable/updates/binary-m68k/smbfs_2.0.5a-1_m68k.deb - Requesting again using GET request instead of HEAD
+2023-08-31 23:38:45 - WARNING - #ID: 347259 #URL http://security.debian.org/dists/stable/updates/binary-m68k/smbwrapper_2.0.5a-1_m68k.deb Error: 
+2023-08-31 23:38:45 - INFO - #ID: 347259 #URL http://security.debian.org/dists/stable/updates/binary-m68k/smbwrapper_2.0.5a-1_m68k.deb - Requesting again using GET request instead of HEAD
+2023-08-31 23:38:45 - WARNING - #ID: 347259 #URL http://security.debian.org/dists/stable/updates/binary-m68k/swat_2.0.5a-1_m68k.deb Error: 
+2023-08-31 23:38:45 - INFO - #ID: 347259 #URL http://security.debian.org/dists/stable/updates/binary-m68k/swat_2.0.5a-1_m68k.deb - Requesting again using GET request instead of HEAD
+2023-08-31 23:40:11 - ERROR - #ID: 347259 #URL http://security.debian.org/dists/stable/updates/binary-m68k/swat_2.0.5a-1_m68k.deb Error: Message: Unable to locate or obtain driver for firefox; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors/driver_location
+
+2023-08-31 23:40:28 - INFO - ID: 347259 #COLUMN: fulltext #URL: http://security.debian.org/dists/stable/updates/binary-m68k/samba_2.0.5a-1_m68k.deb added for more checking
+2023-08-31 23:41:02 - INFO - Skipped ID: 347259 #COLUMN: fulltext #URL: http://security.debian.org/dists/stable/updates/binary-m68k/smbclient_2.0.5a-1_m68k.deb #STATUS_CODE: 404 #Replace with NULL
+2023-08-31 23:41:11 - INFO - Skipped ID: 347259 #COLUMN: fulltext #URL: http://security.debian.org/dists/stable/updates/binary-m68k/smbfs_2.0.5a-1_m68k.deb #STATUS_CODE: 404 #Replace with NULL
+2023-08-31 23:41:12 - INFO - Skipped ID: 347259 #COLUMN: fulltext #URL: http://security.debian.org/dists/stable/updates/binary-m68k/smbwrapper_2.0.5a-1_m68k.deb #STATUS_CODE: 404 #Replace with NULL
+2023-08-31 23:41:14 - INFO - Skipped ID: 347259 #COLUMN: fulltext #URL: http://security.debian.org/dists/stable/updates/binary-m68k/swat_2.0.5a-1_m68k.deb #STATUS_CODE: 404 #Replace with NULL
+2023-08-31 23:41:16 - INFO - Processing ID: 347259 completed
+2023-08-31 23:41:40 - INFO - ==================== All records have been processed ====================
+2023-08-31 23:42:08 - INFO - ******************** Processing ID: 347259 ******************** (1/1 - 100.0%)
+2023-08-31 23:42:08 - INFO - processing  347259 - introtext is not JSON, proceeding further to check HTML
+2023-08-31 23:42:14 - INFO - Skipped ID: 347259 #COLUMN: introtext #URL: https://blogs.jpcert.or.jp/en/2023/05/gobrat.html #STATUS_CODE: 200
+2023-08-31 23:42:17 - INFO - processing 347259 - fulltext is not json proceeding further to check html
+2023-08-31 23:42:17 - INFO - ID: 347259 #COLUMN: fulltext #URL: http://security.debian.org/dists/stable/updates/binary-
+m68k/samba_2.0.5a-1_m68k.deb replaced with http://security.debian.org/dists/stable/updates/binary-m68k/samba_2.0.5a-1_m68k.deb
+2023-08-31 23:42:17 - INFO - ID: 347259 #COLUMN: fulltext #URL: http://security.debian.org/dists/stable/updates/binary-
+m68k/smbclient_2.0.5a-1_m68k.deb replaced with http://security.debian.org/dists/stable/updates/binary-m68k/smbclient_2.0.5a-1_m68k.deb
+2023-08-31 23:42:17 - INFO - ID: 347259 #COLUMN: fulltext #URL: http://security.debian.org/dists/stable/updates/binary-
+m68k/smbfs_2.0.5a-1_m68k.deb replaced with http://security.debian.org/dists/stable/updates/binary-m68k/smbfs_2.0.5a-1_m68k.deb
+2023-08-31 23:42:17 - INFO - ID: 347259 #COLUMN: fulltext #URL: http://security.debian.org/dists/stable/updates/binary-
+m68k/smbwrapper_2.0.5a-1_m68k.deb replaced with http://security.debian.org/dists/stable/updates/binary-m68k/smbwrapper_2.0.5a-1_m68k.deb
+2023-08-31 23:42:17 - INFO - ID: 347259 #COLUMN: fulltext #URL: http://security.debian.org/dists/stable/updates/binary-
+m68k/swat_2.0.5a-1_m68k.deb replaced with http://security.debian.org/dists/stable/updates/binary-m68k/swat_2.0.5a-1_m68k.deb
+2023-08-31 23:42:23 - WARNING - #ID: 347259 #URL http://security.debian.org/dists/stable/updates/binary-m68k/smbclient_2.0.5a-1_m68k.deb Error: Message: Unable to locate or obtain driver for firefox; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors/driver_location
+
+2023-08-31 23:42:33 - WARNING - #ID: 347259 #URL http://security.debian.org/dists/stable/updates/binary-m68k/smbwrapper_2.0.5a-1_m68k.deb Error: Message: Unable to locate or obtain driver for firefox; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors/driver_location
+
+2023-08-31 23:42:40 - WARNING - #ID: 347259 #URL http://security.debian.org/dists/stable/updates/binary-m68k/smbfs_2.0.5a-1_m68k.deb Error: Message: Unable to locate or obtain driver for firefox; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors/driver_location
+
+2023-08-31 23:42:48 - WARNING - #ID: 347259 #URL http://security.debian.org/dists/stable/updates/binary-m68k/samba_2.0.5a-1_m68k.deb Error: Message: Unable to locate or obtain driver for firefox; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors/driver_location
+
+2023-08-31 23:42:50 - WARNING - #ID: 347259 #URL http://security.debian.org/dists/stable/updates/binary-m68k/swat_2.0.5a-1_m68k.deb Error: Message: Unable to locate or obtain driver for firefox; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors/driver_location
+
+2023-08-31 23:48:50 - INFO - ******************** Processing ID: 347259 ******************** (1/1 - 100.0%)
+2023-08-31 23:48:50 - INFO - processing  347259 - introtext is not JSON, proceeding further to check HTML
+2023-08-31 23:48:55 - INFO - Skipped ID: 347259 #COLUMN: introtext #URL: https://blogs.jpcert.or.jp/en/2023/05/gobrat.html #STATUS_CODE: 200
+2023-08-31 23:49:01 - INFO - processing 347259 - fulltext is not json proceeding further to check html
+2023-08-31 23:49:01 - INFO - ID: 347259 #COLUMN: fulltext #URL: http://security.debian.org/dists/stable/updates/binary-
+m68k/samba_2.0.5a-1_m68k.deb replaced with http://security.debian.org/dists/stable/updates/binary-m68k/samba_2.0.5a-1_m68k.deb
+2023-08-31 23:49:01 - INFO - ID: 347259 #COLUMN: fulltext #URL: http://security.debian.org/dists/stable/updates/binary-
+m68k/smbclient_2.0.5a-1_m68k.deb replaced with http://security.debian.org/dists/stable/updates/binary-m68k/smbclient_2.0.5a-1_m68k.deb
+2023-08-31 23:49:01 - INFO - ID: 347259 #COLUMN: fulltext #URL: http://security.debian.org/dists/stable/updates/binary-
+m68k/smbfs_2.0.5a-1_m68k.deb replaced with http://security.debian.org/dists/stable/updates/binary-m68k/smbfs_2.0.5a-1_m68k.deb
+2023-08-31 23:49:01 - INFO - ID: 347259 #COLUMN: fulltext #URL: http://security.debian.org/dists/stable/updates/binary-
+m68k/smbwrapper_2.0.5a-1_m68k.deb replaced with http://security.debian.org/dists/stable/updates/binary-m68k/smbwrapper_2.0.5a-1_m68k.deb
+2023-08-31 23:49:01 - INFO - ID: 347259 #COLUMN: fulltext #URL: http://security.debian.org/dists/stable/updates/binary-
+m68k/swat_2.0.5a-1_m68k.deb replaced with http://security.debian.org/dists/stable/updates/binary-m68k/swat_2.0.5a-1_m68k.deb
+2023-08-31 23:51:22 - WARNING - #ID: 347259 #URL http://security.debian.org/dists/stable/updates/binary-m68k/smbclient_2.0.5a-1_m68k.deb Error: Message: Failed to read marionette port
+
+2023-08-31 23:51:22 - WARNING - #ID: 347259 #URL http://security.debian.org/dists/stable/updates/binary-m68k/samba_2.0.5a-1_m68k.deb Error: 
+2023-08-31 23:51:22 - INFO - #ID: 347259 #URL http://security.debian.org/dists/stable/updates/binary-m68k/samba_2.0.5a-1_m68k.deb - Requesting again using GET request instead of HEAD
+2023-08-31 23:51:22 - WARNING - #ID: 347259 #URL http://security.debian.org/dists/stable/updates/binary-m68k/smbfs_2.0.5a-1_m68k.deb Error: 
+2023-08-31 23:51:22 - INFO - #ID: 347259 #URL http://security.debian.org/dists/stable/updates/binary-m68k/smbfs_2.0.5a-1_m68k.deb - Requesting again using GET request instead of HEAD
+2023-08-31 23:51:22 - WARNING - #ID: 347259 #URL http://security.debian.org/dists/stable/updates/binary-m68k/smbwrapper_2.0.5a-1_m68k.deb Error: 
+2023-08-31 23:51:22 - INFO - #ID: 347259 #URL http://security.debian.org/dists/stable/updates/binary-m68k/smbwrapper_2.0.5a-1_m68k.deb - Requesting again using GET request instead of HEAD
+2023-08-31 23:51:22 - WARNING - #ID: 347259 #URL http://security.debian.org/dists/stable/updates/binary-m68k/swat_2.0.5a-1_m68k.deb Error: 
+2023-08-31 23:51:22 - INFO - #ID: 347259 #URL http://security.debian.org/dists/stable/updates/binary-m68k/swat_2.0.5a-1_m68k.deb - Requesting again using GET request instead of HEAD
+2023-08-31 23:52:07 - INFO - Skipped ID: 347259 #COLUMN: fulltext #URL: http://security.debian.org/dists/stable/updates/binary-m68k/samba_2.0.5a-1_m68k.deb #STATUS_CODE: 404 #Replace with NULL
+2023-08-31 23:52:09 - ERROR - #ID: 347259 #URL http://security.debian.org/dists/stable/updates/binary-m68k/swat_2.0.5a-1_m68k.deb Error: Message: Failed to read marionette port
+
+2023-08-31 23:52:10 - INFO - ID: 347259 #COLUMN: fulltext #URL: http://security.debian.org/dists/stable/updates/binary-m68k/smbclient_2.0.5a-1_m68k.deb added for more checking
+2023-08-31 23:52:12 - INFO - Skipped ID: 347259 #COLUMN: fulltext #URL: http://security.debian.org/dists/stable/updates/binary-m68k/smbfs_2.0.5a-1_m68k.deb #STATUS_CODE: 404 #Replace with NULL
+2023-08-31 23:52:13 - INFO - Skipped ID: 347259 #COLUMN: fulltext #URL: http://security.debian.org/dists/stable/updates/binary-m68k/smbwrapper_2.0.5a-1_m68k.deb #STATUS_CODE: 404 #Replace with NULL
+2023-08-31 23:52:15 - INFO - Skipped ID: 347259 #COLUMN: fulltext #URL: http://security.debian.org/dists/stable/updates/binary-m68k/swat_2.0.5a-1_m68k.deb #STATUS_CODE: 404 #Replace with NULL
+2023-09-01 00:01:51 - INFO - Processing ID: 347259 completed
+2023-09-01 00:01:51 - INFO - ==================== All records have been processed ====================
+2023-09-01 00:02:15 - INFO - ******************** Processing ID: 347259 ******************** (1/1 - 100.0%)
+2023-09-01 00:02:15 - INFO - processing  347259 - introtext is not JSON, proceeding further to check HTML
+2023-09-01 00:02:26 - WARNING - #ID: 347259 #URL https://blogs.jpcert.or.jp/en/2023/05/gobrat.html Error: 
+2023-09-01 00:02:26 - INFO - #ID: 347259 #URL https://blogs.jpcert.or.jp/en/2023/05/gobrat.html - Requesting again using GET request instead of HEAD
+2023-09-01 00:02:49 - WARNING - #ID: 347259 Error: Timeout 
+2023-09-01 00:02:50 - INFO - ID: 347259 #COLUMN: introtext #URL: https://blogs.jpcert.or.jp/en/2023/05/gobrat.html added for more checking
+2023-09-01 00:02:56 - INFO - processing 347259 - fulltext is not json proceeding further to check html
+2023-09-01 00:02:56 - INFO - ID: 347259 #COLUMN: fulltext #URL: http://security.debian.org/dists/stable/updates/binary-
+m68k/samba_2.0.5a-1_m68k.deb replaced with http://security.debian.org/dists/stable/updates/binary-m68k/samba_2.0.5a-1_m68k.deb
+2023-09-01 00:02:56 - INFO - ID: 347259 #COLUMN: fulltext #URL: http://security.debian.org/dists/stable/updates/binary-
+m68k/smbclient_2.0.5a-1_m68k.deb replaced with http://security.debian.org/dists/stable/updates/binary-m68k/smbclient_2.0.5a-1_m68k.deb
+2023-09-01 00:02:56 - INFO - ID: 347259 #COLUMN: fulltext #URL: http://security.debian.org/dists/stable/updates/binary-
+m68k/smbfs_2.0.5a-1_m68k.deb replaced with http://security.debian.org/dists/stable/updates/binary-m68k/smbfs_2.0.5a-1_m68k.deb
+2023-09-01 00:02:56 - INFO - ID: 347259 #COLUMN: fulltext #URL: http://security.debian.org/dists/stable/updates/binary-
+m68k/smbwrapper_2.0.5a-1_m68k.deb replaced with http://security.debian.org/dists/stable/updates/binary-m68k/smbwrapper_2.0.5a-1_m68k.deb
+2023-09-01 00:02:56 - INFO - ID: 347259 #COLUMN: fulltext #URL: http://security.debian.org/dists/stable/updates/binary-
+m68k/swat_2.0.5a-1_m68k.deb replaced with http://security.debian.org/dists/stable/updates/binary-m68k/swat_2.0.5a-1_m68k.deb
+2023-09-01 00:05:14 - WARNING - #ID: 347259 #URL http://security.debian.org/dists/stable/updates/binary-m68k/samba_2.0.5a-1_m68k.deb Error: Message: Failed to read marionette port
+
+2023-09-01 00:05:14 - WARNING - #ID: 347259 #URL http://security.debian.org/dists/stable/updates/binary-m68k/smbclient_2.0.5a-1_m68k.deb Error: 
+2023-09-01 00:05:14 - INFO - #ID: 347259 #URL http://security.debian.org/dists/stable/updates/binary-m68k/smbclient_2.0.5a-1_m68k.deb - Requesting again using GET request instead of HEAD
+2023-09-01 00:05:14 - WARNING - #ID: 347259 #URL http://security.debian.org/dists/stable/updates/binary-m68k/smbfs_2.0.5a-1_m68k.deb Error: 
+2023-09-01 00:05:14 - INFO - #ID: 347259 #URL http://security.debian.org/dists/stable/updates/binary-m68k/smbfs_2.0.5a-1_m68k.deb - Requesting again using GET request instead of HEAD
+2023-09-01 00:05:14 - WARNING - #ID: 347259 #URL http://security.debian.org/dists/stable/updates/binary-m68k/swat_2.0.5a-1_m68k.deb Error: 
+2023-09-01 00:05:14 - INFO - #ID: 347259 #URL http://security.debian.org/dists/stable/updates/binary-m68k/swat_2.0.5a-1_m68k.deb - Requesting again using GET request instead of HEAD
+2023-09-01 00:05:14 - WARNING - #ID: 347259 #URL http://security.debian.org/dists/stable/updates/binary-m68k/smbwrapper_2.0.5a-1_m68k.deb Error: 
+2023-09-01 00:05:14 - INFO - #ID: 347259 #URL http://security.debian.org/dists/stable/updates/binary-m68k/smbwrapper_2.0.5a-1_m68k.deb - Requesting again using GET request instead of HEAD
+2023-09-01 00:06:24 - ERROR - #ID: 347259 #URL http://security.debian.org/dists/stable/updates/binary-m68k/swat_2.0.5a-1_m68k.deb Error: Message: Failed to read marionette port
+
+2023-09-01 00:06:29 - INFO - ID: 347259 #COLUMN: fulltext #URL: http://security.debian.org/dists/stable/updates/binary-m68k/samba_2.0.5a-1_m68k.deb added for more checking
+2023-09-01 00:08:23 - INFO - Skipped ID: 347259 #COLUMN: fulltext #URL: http://security.debian.org/dists/stable/updates/binary-m68k/smbclient_2.0.5a-1_m68k.deb #STATUS_CODE: 404 #Replace with NULL
+2023-09-01 00:08:25 - INFO - Skipped ID: 347259 #COLUMN: fulltext #URL: http://security.debian.org/dists/stable/updates/binary-m68k/smbfs_2.0.5a-1_m68k.deb #STATUS_CODE: 404 #Replace with NULL
+2023-09-01 00:08:26 - INFO - Skipped ID: 347259 #COLUMN: fulltext #URL: http://security.debian.org/dists/stable/updates/binary-m68k/smbwrapper_2.0.5a-1_m68k.deb #STATUS_CODE: 404 #Replace with NULL
+2023-09-01 00:08:28 - INFO - Skipped ID: 347259 #COLUMN: fulltext #URL: http://security.debian.org/dists/stable/updates/binary-m68k/swat_2.0.5a-1_m68k.deb #STATUS_CODE: 404 #Replace with NULL

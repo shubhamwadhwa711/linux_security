@@ -399,7 +399,8 @@ async def check_http_urls(logger:Logger, id:int,field:str,updates:list,base_url:
                 if result.get('status_code')==404:
                     a_tags = soup.find_all('a', attrs={'href': url})
                     if len(a_tags) == 0 and url in str_soup:
-                        str_soup=str_soup.replace(url," ")
+                        # str_soup=str_soup.replace(url," ")
+                        str_soup = re.sub(rf"{re.escape(url)}\n", "", str_soup)
                         logger.info(f'Skipped ID: {id} #COLUMN: {field} #URL: {url} #STATUS_CODE: {result.get("status_code")} #Replace with {"NULL"}')
                         updates.append(True)
                         soup=BeautifulSoup(str_soup,"html.parser")

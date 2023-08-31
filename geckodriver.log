@@ -1,0 +1,4 @@
+1693505951864	geckodriver	INFO	Listening on 127.0.0.1:40091
+1693505952677	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--headless" "--remote-debugging-port" "55471" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofilemMY6xl"
+1693506783456	geckodriver	INFO	Listening on 127.0.0.1:35289
+1693506784255	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--headless" "--remote-debugging-port" "41391" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofile3K7mIV"
