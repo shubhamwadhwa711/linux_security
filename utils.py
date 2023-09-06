@@ -35,6 +35,7 @@ SKIP_CHECK_SITES = ['twitter.com', 'facebook.com', 'linkedin.com','www.facebook.
 DECOMPOSE_URLS=['ftp.redhat.com', 'download.fedora.redhat.com', 'kbase.redhat.com', 'listserv.fnal.gov', 'fedora.redhat.com', 'updates.redhat.com', ]
 # SITE_WITH_GET_METHOD = ['portswigger.net']
 SITE_WITH_GET_METHOD = ['portswigger.net', 'www.amd.com']
+FTP_DECOMPOSE_URLS=['security.debian.org','ftp.redhat.com','download.fedora.redhat.com','updates.redhat.com','fedora.redhat.com','listserv.fnal.gov','kbase.redhat.com']
 
 formatter = logging.Formatter(
     fmt='%(asctime)s - %(levelname)s - %(message)s',

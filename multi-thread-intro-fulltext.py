@@ -15,14 +15,17 @@ import re
 import json
 from pymysql import MySQLError
 from ftplib import all_errors
+from functools import partial
 
 # import logging
-from concurrent.futures import ThreadPoolExecutor, as_completed
+from concurrent.futures import ThreadPoolExecutor, as_completed,ProcessPoolExecutor
 from bs4 import BeautifulSoup, MarkupResemblesLocatorWarning
 from typing import Dict, Any, Optional
 import copy
 import asyncio
 import aiohttp
+import multiprocessing
+import threading
 
 warnings.filterwarnings("ignore", category=MarkupResemblesLocatorWarning)
 from utils import (
@@ -36,13 +39,31 @@ from utils import (
     new_check_http_broken_link,
     write_file,
     DECOMPOSE_URLS,
+    FTP_DECOMPOSE_URLS,
     HTTP_REQUEST_TIMEOUT,
     FTP_REQUEST_TIMEOUT,
     VALID_HTTP_STATUS_CODES,
     STATUS_CODES_FOR_FURTHER_CHECK,
     SKIP_CHECK_SITES,
+    ColoredFormatter,
+)
+import logging
+
+formatter = logging.Formatter(
+    fmt='%(asctime)s - %(levelname)s - %(message)s',
+    datefmt='%Y-%m-%d %H:%M:%S'
 )
 
+def get_logger(name, log_file, level=logging.INFO):
+    logger = logging.getLogger(name)
+    logger.setLevel(level)
+    file = logging.FileHandler(log_file)        
+    file.setFormatter(formatter)
+    logger.addHandler(file)
+    console = logging.StreamHandler()
+    console.setFormatter(ColoredFormatter("%(asctime)s - %(levelname)s - %(message)s"))
+    logger.addHandler(console)
+    return logger
 
 @timeit
 def do_update(
@@ -87,10 +108,9 @@ def find_broken_urls(text):
     return broken_links
 
 def find_urls(text):
-        # pattern=r"""\b(?:(?:(?:(?:http[s]?|ftp[s]):\/\/)|(?:www))|(?<=href="|href=\'))[^\s<>]+\b[\/]?"""
-        pattern = r"""\b(?:(?:(?:(?:https?|ftp?|sftp?):\/\/)|(?:www\.))|(?:ftp:)|(?<=href="|href=\'))[^\s<>;]+\b[\/]?"""
-        matches=re.findall(pattern,text)
-        return matches
+    pattern = r"""\b(?:(?:(?:(?:https?|ftp?|sftp?):\/\/)|(?:www\.))|(?:ftp:)|(?<=href="|href=\'))[^\s<>;]+\b[\/]?"""
+    matches=re.findall(pattern,text)
+    return matches
 
 
 def process_broken_urls(html: str,logger:Logger,id:int,field:str):
@@ -108,37 +128,53 @@ def decompose_known_urls(html:str,logger:Logger,id:int,field:str,updates:list):
     soup=BeautifulSoup(html,'html.parser')
     for url in all_urls:
         parsed_url = urlparse(url)
-        domain = parsed_url.netloc
-        domain=domain.lower()
-        str_soup = str(soup)
-        if domain in DECOMPOSE_URLS:
-            a_tags = soup.find_all('a', attrs={'href': url})
-            if len(a_tags)==0 and url in str_soup:
-                str_soup=str_soup.replace(url," ")
-                logger.info(f'ID: {id} #COLUMN: {field} #URL: {url} replaced with {"null"}')
-                updates.append(True)
-                soup=BeautifulSoup(str_soup,'html.parser')
-            for tag in a_tags:
-                text=tag.text.strip()
-                updates.append(True)
-                if text and len(text)>0 and url not in text:
-                    tag.replace_with(text)
-                    logger.info(f'ID: {id} #COLUMN: {field} #URL: {url} replaced with {text}')
-                else:
-                    tag.decompose()
-                    logger.info(f'ID: {id} #COLUMN: {field} #URL: {url} replaced with {" "}')
+        if parsed_url.scheme in ['http','https']:
+            domain = parsed_url.netloc
+            domain=domain.lower()
+            str_soup = str(soup)
+            if domain in DECOMPOSE_URLS:
+                a_tags = soup.find_all('a', attrs={'href': url})
+                if len(a_tags)==0 and url in str_soup:
+                    str_soup=str_soup.replace(url,"")
+                    logger.info(f'ID: {id} #COLUMN: {field} #URL: {url} replaced with {"null"}')
+                    updates.append(True)
+                    pattern = r'((\n\s\n)|(\n{2}))'
+                    str_soup=re.sub(pattern,'\n',str_soup)
+                    soup=BeautifulSoup(str_soup,'html.parser')
+                for tag in a_tags:
+                    text=tag.text.strip()
+                    updates.append(True)
+                    if text and len(text)>0 and url not in text:
+                        tag.replace_with(text)
+                        logger.info(f'ID: {id} #COLUMN: {field} #URL: {url} replaced with {text}')
+                    else:
+                        tag.decompose()
+                        logger.info(f'ID: {id} #COLUMN: {field} #URL: {url} replaced with {" "}')
+        elif parsed_url.scheme in ['ftp']:
+            domain = parsed_url.netloc
+            domain=domain.lower()
+            str_soup = str(soup)
+            if domain in FTP_DECOMPOSE_URLS:
+                a_tags = soup.find_all('a', attrs={'href': url})
+                if len(a_tags)==0 and url in str_soup:
+                    str_soup=str_soup.replace(url,"")
+                    logger.info(f'ID: {id} #COLUMN: {field} #URL: {url} replaced with {"null"}')
+                    updates.append(True)
+                    pattern = r'((\n\s\n)|(\n{2}))'
+                    str_soup=re.sub(pattern,'\n',str_soup)
+                    soup=BeautifulSoup(str_soup,'html.parser')
+                for tag in a_tags:
+                    text=tag.text.strip()
+                    updates.append(True)
+                    if text and len(text)>0 and url not in text:
+                        tag.replace_with(text)
+                        logger.info(f'ID: {id} #COLUMN: {field} #URL: {url} replaced with {text}')
+                    else:
+                        tag.decompose()
+                        logger.info(f'ID: {id} #COLUMN: {field} #URL: {url} replaced with {" "}')
+
     return str(soup),updates
     
-            
-# def create_relative_urls(urls_obj:dict,base_url:str=None):
-#     for url in urls_obj.keys():
-#         original_url=copy.deepcopy(url)
-#         if not any(url.startswith(element) for element in ['http', 'https', 'www', 'ftp', 'ftps',"mailto:", "tel:", "#"]):
-#             url = f'{base_url}/{url[1:] if url.startswith("/") else url}'
-#             del urls_obj[original_url]
-#             urls_obj.update({url:original_url})
-#     return urls_obj
-
 
 def create_relative_urls(urls_obj: dict, base_url: str = None):
     urls_to_modify = list(urls_obj.keys())  # Create a copy of the keys as a list
@@ -216,74 +252,7 @@ async def new_do_http_request(urls,session,logger:Logger,id:int):
                 logger.error(f'#ID: {id} #URL {url} Error: {exception_message}')
                 yield {'is_broken': True, 'status_code': 500, 'url': response['url']}
 
-        # try:
-        #     url=response.url 
-        #     if response.status< 400 or response.status in VALID_HTTP_STATUS_CODES:
-        #         yield {'is_broken': False, 'status_code': response.status, 'url': url}
-        #     else:
-        #         yield {'is_broken': True, 'status_code': response.status, 'url': url}
-        # except AttributeError as e:
-        #     url_dict=response.__dict__
-        #     if url_dict['_conn_key'].is_ssl==False:
-        #         url=f"http://{url_dict['_conn_key'].host}"
-        #     else:
-        #         url=f"https://{url_dict['_conn_key'].host}"
 
-             
-        #     if any(keyword in str(e) for keyword in ['ClientConnectorError','ClientConnectionError']):
-        #         error=url_dict.get('_os_error',None)
-        #         if error in ["[Errno -2] Name or service not known","[Errno 11001] getaddrinfo failed","[Errno 8] nodename nor servname","[Errno -5] No address associated with hostname"]:
-        #             logger.error(f'#ID: {id} #URL {url} Error: {str(e)}')
-        #             yield {'is_broken': True, 'status_code': 500, 'url': url}
-        #         else:
-        #             logger.warning(f'#ID: {id} #URL {url} Error: {str(e)}') 
-        #             yield {'is_broken': False, 'status_code': 'ConnectionError', 'url': url}
-            
-        #     if 'ClientSSLError' in str(e):
-        #         logger.warning(f'#ID: {id} #URL {url} Error: SSLError {str(e)}')
-        #         yield {'is_broken': False, 'status_code': 'SSLError', 'url': url}
-        #     if 'TimeoutError' in str(e):
-        #         logger.warning(f'#ID: {id} Error: Timeout {str(e)}')
-        #         yield {'is_broken': False, 'status_code': 'Timeout', 'url': url}
-        # except Exception as e:
-        #     logger.error(f'#ID: {id} #URL {url} Error: {str(e)}')
-        #     yield {'is_broken': True, 'status_code': 500, 'url': f"http://{response.host}"}
-    
-        
-   
-
-# def do_http_request(urls, logger: Logger, id: int):
-#     with ThreadPoolExecutor() as executor:
-#         futures = {executor.submit(check_http_broken_link, url=url, logger=logger, id=id, timeout=HTTP_REQUEST_TIMEOUT): url for url in urls}
-#         for future in as_completed(futures):
-#             url = futures[future]
-#             try:
-#                 response = future.result()
-#             except requests.Timeout as e:
-#                 logger.warning(f'#ID: {id} #URL {url} Error: Timeout {str(e)}')
-#                 yield {'is_broken': False, 'status_code': 'Timeout', 'url': url}
-#             except requests.exceptions.SSLError as e:
-#                 logger.warning(f'#ID: {id} #URL {url} Error: SSLError {str(e)}')
-#                 yield {'is_broken': False, 'status_code': 'SSLError', 'url': url}
-#             except requests.exceptions.ConnectionError as e:
-#                 if ("[Errno 11001] getaddrinfo failed" in str(e) or     # Windows
-#                     "[Errno -2] Name or service not known" in str(e) or # Linux
-#                     "[Errno 8] nodename nor servname" in str(e) or
-#                     "[Errno -5] No address associated with hostname" in str(e)):      # OS X
-#                     logger.error(f'#ID: {id} #URL {url} Error: {str(e)}')
-#                     yield {'is_broken': True, 'status_code': 500, 'url': url}
-#                 else:
-#                     logger.warning(f'#ID: {id} #URL {url} Error: {str(e)}')
-#                     yield {'is_broken': False, 'status_code': 'ConnectionError', 'url': url}
-#             except Exception as e:
-#                 logger.error(f'#ID: {id} #URL {url} Error: {str(e)}')
-#                 logger.error(str(e))
-#                 yield {'is_broken': True, 'status_code': 500, 'url': url}
-#             else:
-#                 if response.status_code < 400 or response.status_code in VALID_HTTP_STATUS_CODES:
-#                     yield {'is_broken': False, 'status_code': response.status_code, 'url': url}
-#                 else:
-#                     yield {'is_broken': True, 'status_code': response.status_code, 'url': url}
 
 def do_ftp_request(urls, logger: Logger, id: int):
     with ThreadPoolExecutor() as executor:
@@ -327,6 +296,8 @@ def check_ftp_urls( logger:Logger, id:int, updates:list,field:str, html: Optiona
             if len(a_tags) == 0 and url in str_soup:
                 str_soup=str_soup.replace(url," ")
                 updates.append(True)
+                pattern = r'((\n\s\n)|(\n{2}))'
+                str_soup=re.sub(pattern,'\n',str_soup)
                 soup=BeautifulSoup(str_soup,'html.parser')
             updates.append(True)
             for tag in a_tags:
@@ -344,7 +315,6 @@ def check_ftp_urls( logger:Logger, id:int, updates:list,field:str, html: Optiona
     return str(soup), updates,for_more_check_urls
 
 async def check_http_urls(logger:Logger, id:int,field:str,updates:list,base_url:str,html:Optional[str]=None, urls:list=None,for_more_check_urls:set=None):
-    # for_more_check_urls = set()
     soup=BeautifulSoup(html,'html.parser')
     str_soup=str(soup)
     urls_obj=get_double_https(urls)
@@ -353,23 +323,8 @@ async def check_http_urls(logger:Logger, id:int,field:str,updates:list,base_url:
     if len(urls)!=0:
         async with aiohttp.ClientSession() as session:
             async for result in new_do_http_request(urls=urls, session=session, logger=logger, id=id):            
-        # for result in do_http_request(urls=urls, logger=logger, id=id):
                 parsed_url = result.get('url')
                 url=urls_obj.get(str(parsed_url),"")
-                # if str(parsed_url)!=url and str(parsed_url).startswith('https://www.'):
-                #     new_parsed_url=str(parsed_url).replace('https://www.','http://')
-                #     url=urls_obj[new_parsed_url]
-                #     if not result.get('is_broken',False):
-                #         a_tags = soup.find_all('a', attrs={'href': url})
-                #         if len(a_tags)==0 and url in str_soup:
-                #             str_soup=str_soup.replace(url,str(parsed_url))
-                #             logger.info(f'ID: {id} #COLUMN: {field} #URL: {url} replaced with {str(parsed_url)}') 
-                #         for tag in a_tags:
-                #             tag['href']=str(parsed_url)
-                #             logger.info(f'ID: {id} #COLUMN: {field} #URL: {url} replaced with {parsed_url}') 
-                #             logger.info(f'Skipped ID: {id} #COLUMN: {field} #URL: {parsed_url} #STATUS_CODE: {result.get("status_code")}')
-                #         updates.append(True)
-                #         continue
                 if not result.get('is_broken', False):
                     if check_https_urls(url):
                         a_tags = soup.find_all('a', attrs={'href': url})
@@ -399,9 +354,11 @@ async def check_http_urls(logger:Logger, id:int,field:str,updates:list,base_url:
                 if result.get('status_code')==404:
                     a_tags = soup.find_all('a', attrs={'href': url})
                     if len(a_tags) == 0 and url in str_soup:
-                        str_soup=str_soup.replace(url," ")
+                        str_soup=str_soup.replace(url,"")
                         logger.info(f'Skipped ID: {id} #COLUMN: {field} #URL: {url} #STATUS_CODE: {result.get("status_code")} #Replace with {"NULL"}')
                         updates.append(True)
+                        pattern = r'((\n\s\n)|(\n{2}))'
+                        str_soup=re.sub(pattern,'\n',str_soup)
                         soup=BeautifulSoup(str_soup,"html.parser")
                     updates.append(True)
                     for tag in a_tags:
@@ -415,25 +372,6 @@ async def check_http_urls(logger:Logger, id:int,field:str,updates:list,base_url:
                 else:
                     for_more_check_urls.add(url)
                     logger.info(f'ID: {id} #COLUMN: {field} #URL: {url} added for more checking')
-    # if len(www_urls) > 0:
-    #     www_urls_keys=list(www_urls.keys())
-    #     async with aiohttp.ClientSession() as session:
-    #         async for result in new_do_http_request(urls=www_urls_keys, session=session, logger=logger, id=id): 
-    #                 url = result.get('url')
-    #                 original_url=www_urls[url]
-    #                 if not result.get('is_broken', False):
-    #                     if result.get('status_code') in STATUS_CODES_FOR_FURTHER_CHECK:
-    #                         for_more_check_urls.add(original_url)
-    #                         logger.info(f'ID: {id} #COLUMN: {field} #URL: {original_url} added for more checking')
-    #                     else:
-    #                         str_soup = re.sub(re.escape(original_url), url,str_soup )
-    #                         updates.append(True)
-    #                         logger.info(f'ID: {id} #COLUMN: {field} #URL: {original_url if original_url else ("null")} #STATUS_CODE: {result.get("status_code")} - Replaced with: {url}')
-    #                     continue
-                
-    #                 updates.append(True)
-    #                 str_soup = re.sub(re.escape(original_url), ' ', str_soup)
-    #                 logger.info(f'ID: {id} #COLUMN: {field} #URL: {url if url else ("null")} #STATUS_CODE: {result.get("status_code")} - Replaced with #TEXT: (null)')
     return str(soup),updates,for_more_check_urls
 
 def skip_check_sites(html,logger:Logger):
@@ -446,29 +384,12 @@ def skip_check_sites(html,logger:Logger):
         remaining_urls.append(url)
     return remaining_urls
 
-# def urlstartswith_www(urls):
-#     www_urls={}
-#     http_urls=[]
-#     for url in urls:
-#         parsed_url=urlparse(url  )
-#         if parsed_url.scheme=="" and url.startswith('www'):
-#             new_parsed_url=f"https://{url}"
-#             www_urls[new_parsed_url]=url
-#         else:
-#             http_urls.append(url)
-#     return http_urls,www_urls()
-    
-    
-        
-            # logger.info(f'ID: {id} #COLUMN: {field} #URL: {url} replaced with {new_parsed_url}')
-            # soup = re.sub(re.escape(url), new_parsed_url, str(soup))
-            # updates.append(True)
+
+
 
 
 def check_is_url_valid(html:str, logger:Logger, id:int,field:str,base_url:str,updates:list):
-    # urls = create_relative_urls(html,base_url)
     all_urls=skip_check_sites(html,logger)
-    # all_urls,www_urls=urlstartswith_www(all_urls)
     ftp_urls = list(filter(lambda x: is_ftp_links(x), all_urls))
     http_urls = list(filter(lambda x: not is_ftp_links(x), all_urls))
     html,updates,for_more_check_urls = check_ftp_urls(html=html,urls= ftp_urls, logger=logger, id=id,field=field,updates=updates)
@@ -529,6 +450,72 @@ def do_remove_url(record: Dict[str, Any], logger: Logger, base_url: str):
     )
 
 
+
+
+
+
+def process_record(records, log_file, base_url, timeout_file, connection, commit):
+    logger = get_logger(name=log_file, log_file=log_file)
+    is_any_update_failed = False  # Flag to track if any update fails
+
+    for record in records:
+        try:
+            logger.info(f'{"*"*20} Processing ID: {record.get("id")} {"*"*20}')
+            introtext, fulltext, is_update, timeout_urls = do_remove_url(
+                record=record, logger=logger, base_url=base_url
+            )
+
+            if timeout_urls and len(timeout_urls) > 0:
+                write_file(
+                    filename=timeout_file,
+                    id=record.get("id"),
+                    urls=timeout_urls,
+                )
+
+            if is_update is False:
+                # Set the flag to True but continue processing other records
+                is_any_update_failed = True
+            else:
+                if commit:
+                    succeed = do_update(
+                        connection=connection,
+                        logger=logger,
+                        id=record.get("id"),
+                        introtext=introtext,
+                        fulltext=fulltext,
+                    )
+                    if succeed:
+                        logger.info(
+                            f'ID: {record.get("id")} has been updated in the database'
+                        )
+
+            logger.info(f'Processing ID: {record.get("id")} completed')
+        except KeyboardInterrupt as e:
+            current_id = record.get("id")
+            raise e
+        except Exception as e:
+            logger.error(e)
+            continue
+
+    latest = records[-1]
+    current_id = latest.get("id")
+    return current_id, is_any_update_failed
+
+    
+
+
+def get_data_chunk(start, chunk_size,connection):
+    offset = start  
+    limit = chunk_size  
+    sql="SELECT c.id, c.introtext, c.fulltext FROM xu5gc_content AS c LEFT JOIN xu5gc_categories cat ON cat.id = c.catid WHERE c.state = 1 AND cat.published = 1 ORDER BY c.id  LIMIT %s OFFSET %s"
+    with connection.cursor() as cursor:
+        cursor.execute(sql, (limit, offset))
+        results = cursor.fetchall()
+        return results
+
+
+
+
 def main(commit: bool = False, id: Optional[int] = 0):
     config = configparser.ConfigParser(interpolation=None)
     config.read(os.path.join(os.path.dirname(__file__), "config.ini"))
@@ -568,86 +555,131 @@ def main(commit: bool = False, id: Optional[int] = 0):
     else:
         current_id = 0
         counter = 0
+    
+    chunk_size=total//multiprocessing.cpu_count()
+    data_chunks=[]
+    all_data=False
+    
 
     while True:
         try:
             if current_id > 0:
                 sql = "SELECT c.id, c.introtext, c.fulltext FROM xu5gc_content AS c LEFT JOIN xu5gc_categories cat ON cat.id = c.catid WHERE c.state = 1 AND cat.published = 1 AND c.id < %s ORDER BY  c.id DESC LIMIT %s"
                 args = (current_id, limit)
+                with connection.cursor() as cursor:
+                    cursor.execute(sql, args)
+                    result = cursor.fetchall()
+
             elif id > 0:
                 sql = "SELECT c.id, c.introtext, c.fulltext FROM xu5gc_content AS c WHERE id =%s"
                 args = id
+                with connection.cursor() as cursor:
+                    cursor.execute(sql, args)
+                    result = cursor.fetchall()
             else:
-                sql = "SELECT c.id, c.introtext, c.fulltext FROM xu5gc_content AS c LEFT JOIN xu5gc_categories cat ON cat.id = c.catid WHERE c.state = 1 AND cat.published = 1 ORDER BY c.id DESC LIMIT %s"
-                args = limit
+                all_data=True
+                for start in range(0, total, chunk_size):
+                    data_chunk = get_data_chunk(start, chunk_size,connection)
+                    data_chunks.append(data_chunk)
+                chunk_completion = {i: False for i in range(len(data_chunks))}
+                nested_log_files = [f"process_{i}.log"for i in range(len(data_chunks))]
+                with ThreadPoolExecutor() as executor:
+                    futures = executor.map(process_record, data_chunks, nested_log_files, [base_url] * len(data_chunks), [timeout_file] * len(data_chunks), [connection] * len(data_chunks), [commit] * len(data_chunks))
 
-            with connection.cursor() as cursor:
-                cursor.execute(sql, args)
-                result = cursor.fetchall()
+                    # futures = [executor.submit(process_record, record, base_url, timeout_file, connection, commit, log_file) for record, log_file in zip(data_chunks, nested_log_files)]
+                # for future in as_completed(futures):
+                for future in futures:
+                    i, is_any_update_failed = future
 
-            if len(result) == 0:
-                logger.info(f'{"="*20} All records have been processed {"="*20}')
-                break
-
-            for record in result:
-                counter += 1
-                try:
-                    logger.info(
-                        f'{"*"*20} Processing ID: {record.get("id")} {"*"*20} ({counter}/{total} - {percentage(counter, total)})'
-                    )
-                    introtext, fulltext, is_update, timeout_urls = do_remove_url(
-                        record=record, logger=logger, base_url=base_url
-                    )
-                    if timeout_urls and len(timeout_urls) > 0:
-                        write_file(
-                            filename=timeout_file,
-                            id=record.get("id"),
-                            urls=timeout_urls,
+                    if commit and id == 0:
+                        current_state(
+                            store_state_file, id=i, counter=counter, mode="w"
                         )
+                    for idx,chunk in enumerate(data_chunks):
+                        if chunk[-1]['id']==i:
+                            chunk_completion[idx] = True   
+                    if is_any_update_failed:
+                        pass
+                        # logger.info(f'{"="*20}  chunk {i} has no upddates {"="*20}')
 
-                    if is_update is False:
-                        continue
+                for i, completed in chunk_completion.items():
+                    if completed:
+                        logger.info(f'{"="*20}  chunk {i} records have been processed {"="*20}')
+                    else:
+                        print(f"Chunk {i} is still processing")
 
-                    if commit:
-                        succeed = do_update(
-                            connection=connection,
-                            logger=logger,
-                            id=record.get("id"),
-                            introtext=introtext,
-                            fulltext=fulltext,
+                with open(log_file, "w") as consolidated_log:
+                    for i in nested_log_files:
+                        with open(i, "r") as individual_log:
+                            consolidated_log.write(individual_log.read())   
+                break    
+
+ 
+
+                # with multiprocessing.Pool() as p:
+                #     p.starmap(process_record, [(records, logger, base_url, timeout_file, connection, commit) for records in data_chunks])
+            if not all_data:
+                if len(result) == 0:
+                    logger.info(f'{"="*20} All records have been processed {"="*20}')
+                    break
+
+                for record in result:
+                    counter += 1
+                    try:
+                        logger.info(
+                            f'{"*"*20} Processing ID: {record.get("id")} {"*"*20} ({counter}/{total} - {percentage(counter, total)})'
                         )
-                        if succeed:
-                            logger.info(
-                                f'ID: {record.get("id")} has been updated in database'
+                        introtext, fulltext, is_update, timeout_urls = do_remove_url(
+                            record=record, logger=logger, base_url=base_url
+                        )
+                        if timeout_urls and len(timeout_urls) > 0:
+                            write_file(
+                                filename=timeout_file,
+                                id=record.get("id"),
+                                urls=timeout_urls,
                             )
 
-                    logger.info(f'Processing ID: {record.get("id")} completed')
-                except KeyboardInterrupt as e:
-                    current_id = record.get("id")
-                    raise e
-                except Exception as e:
-                    logger.error(e)
-                    continue
+                        if is_update is False:
+                            continue
 
-            if id > 0:
-                logger.info(f'{"="*20} All records have been processed {"="*20}')
-                break
+                        if commit:
+                            succeed = do_update(
+                                connection=connection,
+                                logger=logger,
+                                id=record.get("id"),
+                                introtext=introtext,
+                                fulltext=fulltext,
+                            )
+                            if succeed:
+                                logger.info(
+                                    f'ID: {record.get("id")} has been updated in database'
+                                )
 
-            latest = result[-1]
-            current_id = latest.get("id")
+                        logger.info(f'Processing ID: {record.get("id")} completed')
+                    except KeyboardInterrupt as e:
+                        current_id = record.get("id")
+                        raise e
+                    except Exception as e:
+                        logger.error(e)
+                        continue
+                if id > 0:
+                    logger.info(f'{"="*20} All records have been processed {"="*20}')
+                    break
 
-            if commit and id == 0:
-                # write current running state to file if commit is True
-                current_state(
-                    store_state_file, id=current_id, counter=counter, mode="w"
-                )
+                latest = result[-1]
+                current_id = latest.get("id")
+
+                if commit and id == 0:
+                    # write current running state to file if commit is True
+                    current_state(
+                        store_state_file, id=current_id, counter=counter, mode="w"
+                    )
         except KeyboardInterrupt:
             if commit and id == 0:
                 current_state(
                     store_state_file, id=current_id, counter=counter, mode="w"
                 )
             break
-
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
