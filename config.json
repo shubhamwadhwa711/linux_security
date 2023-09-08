@@ -1,0 +1,66 @@
+{
+    "SKIP_CHECK_SITES": [
+      "twitter.com", 
+      "facebook.com", 
+      "linkedin.com",
+      "www.facebook.com",
+      "www.linkedin.com",
+      "www.twitter.com",
+      "security.archlinux.org",
+      "listman.redhat.com",
+      "nvd.nist.gov",
+      "web.nvd.nist.gov"
+    ],
+    "DECOMPOSE_URLS": [
+      "ftp.redhat.com",
+      "download.fedora.redhat.com",
+      "kbase.redhat.com",
+      "listserv.fnal.gov",
+      "fedora.redhat.com",
+      "updates.redhat.com",
+      "enigmail.mozdev.org",
+      "www.securityfocus.com",
+      "securityfocus.com",
+      "www.cve.mitre.org",
+      "www.scientificlinux.org",
+      "linux.fnal.gov",
+      "git.libav.org",
+      "slapi-nis.fedorahosted.org",
+      "article.gmane.org",
+      "cgit.kde.org",
+      "www.trustix.com",
+      "www.wirex.com",
+      "securityportal.com",
+      "linstage.guardiandigital.com"
+    ],
+    "SITE_WITH_GET_METHOD": [
+      "portswigger.net",
+      "www.amd.com",
+      "ftp.suse.com",
+      "bugzilla.suse.com",
+      "access.redhat.com",
+      "www.suse.de",
+      "www.debian.org",
+      "bugzilla.redhat.com",
+      "www.kb.cert.org",
+      "svcs.affero.net",
+      "packages.debian.org",
+      "www.wired.com",
+      "cve.mitre.org",
+      "www.adobe.com",
+      "www.redhat.com",
+      "bugzilla.novell.com",
+      "security.debian.org"
+    ],
+    "FTP_DECOMPOSE_URLS": [
+      "security.debian.org",
+      "ftp.redhat.com",
+      "download.fedora.redhat.com",
+      "updates.redhat.com",
+      "fedora.redhat.com",
+      "listserv.fnal.gov",
+      "kbase.redhat.com",
+      "ftp.debian.org"
+    ]
+  }
+  

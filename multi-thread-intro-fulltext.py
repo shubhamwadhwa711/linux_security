@@ -38,15 +38,28 @@ from utils import (
     check_url_against_domains,
     new_check_http_broken_link,
     write_file,
-    DECOMPOSE_URLS,
-    FTP_DECOMPOSE_URLS,
     HTTP_REQUEST_TIMEOUT,
     FTP_REQUEST_TIMEOUT,
     VALID_HTTP_STATUS_CODES,
     STATUS_CODES_FOR_FURTHER_CHECK,
-    SKIP_CHECK_SITES,
     ColoredFormatter,
 )
+
+
+import json
+
+# Load the configuration file
+with open('config.json', 'r') as config_file:
+    config_data = json.load(config_file)
+
+# Access the lists
+SKIP_CHECK_SITES = config_data['SKIP_CHECK_SITES']
+DECOMPOSE_URLS = config_data['DECOMPOSE_URLS']
+SITE_WITH_GET_METHOD = config_data['SITE_WITH_GET_METHOD']
+FTP_DECOMPOSE_URLS = config_data['FTP_DECOMPOSE_URLS']
+
+
+
 import logging
 
 formatter = logging.Formatter(
@@ -456,11 +469,15 @@ def do_remove_url(record: Dict[str, Any], logger: Logger, base_url: str):
 
 def process_record(records, log_file, base_url, timeout_file, connection, commit):
     logger = get_logger(name=log_file, log_file=log_file)
-    is_any_update_failed = False  # Flag to track if any update fails
-
+    is_any_update_failed = False 
+    counter=0 # Flag to track if any update fails
+    total=len(records)
     for record in records:
+        counter+=1
         try:
-            logger.info(f'{"*"*20} Processing ID: {record.get("id")} {"*"*20}')
+            logger.info(
+                        f'{"*"*20} Processing ID: {record.get("id")} {"*"*20} ({counter}/{total} - {percentage(counter, total)})'
+                    )
             introtext, fulltext, is_update, timeout_urls = do_remove_url(
                 record=record, logger=logger, base_url=base_url
             )
