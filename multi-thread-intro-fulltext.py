@@ -511,7 +511,6 @@ def process_record(records, log_file, base_url, timeout_file, connection, commit
             current_id = record.get("id")
             raise e
         except Exception as e:
-            logger.error(e)
             continue
 
     latest = records[-1]
