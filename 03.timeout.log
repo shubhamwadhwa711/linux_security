@@ -1,0 +1,33 @@
+2023-09-11 11:16:39 - INFO - ******************** Processing ID: 277969 ********************
+2023-09-11 11:19:03 - WARNING - #ID: 277969 #URL https://www.scientificlinux.org Error: HTTPSConnectionPool(host='www.scientificlinux.org', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1007)')))
+2023-09-11 11:19:03 - INFO - #ID: 277969 #URL https://www.scientificlinux.org - Requesting again using GET request instead of HEAD
+2023-09-11 11:19:04 - ERROR - #ID 277969 #URL https://www.scientificlinux.org Error: SSLError HTTPSConnectionPool(host='www.scientificlinux.org', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1007)')))
+2023-09-11 11:21:31 - INFO - ******************** Processing ID: 277969 ********************
+2023-09-11 11:21:36 - WARNING - #ID: 277969 #URL https://www.scientificlinux.org Error: HTTPSConnectionPool(host='www.scientificlinux.org', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1007)')))
+2023-09-11 11:21:36 - INFO - #ID: 277969 #URL https://www.scientificlinux.org - Requesting again using GET request instead of HEAD
+2023-09-11 11:21:37 - ERROR - #ID 277969 #URL https://www.scientificlinux.org Error: SSLError HTTPSConnectionPool(host='www.scientificlinux.org', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1007)')))
+2023-09-11 11:22:18 - INFO - ******************** Processing ID: 277969 ********************
+2023-09-11 11:25:24 - WARNING - #ID: 277969 #URL https://www.scientificlinux.org Error: HTTPSConnectionPool(host='www.scientificlinux.org', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1007)')))
+2023-09-11 11:25:29 - INFO - #ID: 277969 #URL https://www.scientificlinux.org - Requesting again using GET request instead of HEAD
+2023-09-11 11:25:37 - ERROR - #ID 277969 #URL https://www.scientificlinux.org Error: SSLError HTTPSConnectionPool(host='www.scientificlinux.org', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1007)')))
+2023-09-11 11:28:13 - INFO - ******************** Processing ID: 277969 ********************
+2023-09-11 11:30:48 - WARNING - #ID: 277969 #URL https://www.scientificlinux.org Error: HTTPSConnectionPool(host='www.scientificlinux.org', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1007)')))
+2023-09-11 11:33:22 - INFO - ******************** Processing ID: 277969 ********************
+2023-09-11 11:33:28 - WARNING - #ID: 277969 #URL https://www.scientificlinux.org Error: HTTPSConnectionPool(host='www.scientificlinux.org', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1007)')))
+2023-09-11 11:33:28 - INFO - #ID: 277969 #URL https://www.scientificlinux.org - Requesting again using GET request instead of HEAD
+2023-09-11 11:33:29 - ERROR - #ID 277969 #URL https://www.scientificlinux.org Error: SSLError HTTPSConnectionPool(host='www.scientificlinux.org', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1007)')))
+2023-09-11 11:34:47 - INFO - ******************** Processing ID: 277969 ********************
+2023-09-11 11:34:55 - WARNING - #ID: 277969 #URL https://www.scientificlinux.org Error: HTTPSConnectionPool(host='www.scientificlinux.org', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1007)')))
+2023-09-11 11:34:55 - INFO - #ID: 277969 #URL https://www.scientificlinux.org - Requesting again using GET request instead of HEAD
+2023-09-11 11:40:06 - INFO - ******************** Processing ID: 277969 ********************
+2023-09-11 11:40:10 - WARNING - #ID: 277969 #URL https://www.scientificlinux.org Error: HTTPSConnectionPool(host='www.scientificlinux.org', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1007)')))
+2023-09-11 11:40:10 - INFO - #ID: 277969 #URL https://www.scientificlinux.org - Requesting again using GET request instead of HEAD
+2023-09-11 11:40:25 - INFO - Skipped ID: 277969 #URL: https://www.scientificlinux.org #STATUS_CODE: 200
+2023-09-11 12:15:50 - INFO - ******************** Processing ID: 275712 ********************
+2023-09-11 12:16:00 - ERROR - #ID 275712 #URL ftp://ftp.scientificlinux.org/linux/scientific/301,302,303,304,305,307/i386,x86_64/errata/SL/RPMS/ Error: No connection adapters were found for 'ftp://ftp.scientificlinux.org/linux/scientific/301,302,303,304,305,307/i386,x86_64/errata/SL/RPMS/'
+2023-09-11 12:17:41 - INFO - #COLUMN: fulltext #URL: ftp://ftp.scientificlinux.org/linux/scientific/301,302,303,304,305,307/i386,x86_64/errata/SL/RPMS/ - Replaced with  (empty) removed
+2023-09-11 12:18:43 - INFO - ******************** Processing ID: 275712 ********************
+2023-09-11 12:18:43 - ERROR - #ID 275712 #URL ftp://ftp.scientificlinux.org/linux/scientific/301,302,303,304,305,307/i386,x86_64/errata/SL/RPMS/ Error: No connection adapters were found for 'ftp://ftp.scientificlinux.org/linux/scientific/301,302,303,304,305,307/i386,x86_64/errata/SL/RPMS/'
+2023-09-11 12:18:43 - INFO - #COLUMN: fulltext #URL: ftp://ftp.scientificlinux.org/linux/scientific/301,302,303,304,305,307/i386,x86_64/errata/SL/RPMS/ - Replaced with  (empty) removed
+2023-09-11 12:18:43 - INFO - ID: 275712 has been updated in database
+2023-09-11 12:18:43 - INFO - Processing ID: 275712 completed

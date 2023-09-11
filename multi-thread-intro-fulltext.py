@@ -465,19 +465,32 @@ def do_remove_url(record: Dict[str, Any], logger: Logger, base_url: str):
 
 
 
+shared_counter_lock = threading.Lock()
+shared_counter = 0
+def update_shared_counter(value):
+    global shared_counter
+    with shared_counter_lock:
+        shared_counter += value
+
+def get_shared_counter_value():
+    global shared_counter
+    with shared_counter_lock:
+        return shared_counter
 
 
-def process_record(records, log_file, base_url, timeout_file, connection, commit):
-    logger = get_logger(name=log_file, log_file=log_file)
-    is_any_update_failed = False 
+def process_record(records, log_file, base_url, timeout_file, connection, commit,total):
+    logger = get_logger(name=log_file, log_file=log_file) 
     counter=0 # Flag to track if any update fails
-    total=len(records)
+    thread_id=threading.get_ident()
     for record in records:
-        counter+=1
         try:
-            logger.info(
-                        f'{"*"*20} Processing ID: {record.get("id")} {"*"*20} ({counter}/{total} - {percentage(counter, total)})'
-                    )
+            update_shared_counter(1)
+            shared_counter_value = get_shared_counter_value()
+            logger.info(f'Multi-Thread script (Thread ID : {thread_id}): Processing ID :{record.get("id")}  {"*"*10}  {shared_counter_value}/{total} - {percentage(shared_counter_value,total)}')
+           
+            # logger.info(
+            #             f'{"*"*20} Processing ID: {record.get("id")} {"*"*20} ({counter}/{total} - {percentage(counter, total)})'
+            #         )
             introtext, fulltext, is_update, timeout_urls = do_remove_url(
                 record=record, logger=logger, base_url=base_url
             )
@@ -490,8 +503,9 @@ def process_record(records, log_file, base_url, timeout_file, connection, commit
                 )
 
             if is_update is False:
+                continue
                 # Set the flag to True but continue processing other records
-                is_any_update_failed = True
+                # is_any_update_failed = True
             else:
                 if commit:
                     succeed = do_update(
@@ -515,7 +529,8 @@ def process_record(records, log_file, base_url, timeout_file, connection, commit
 
     latest = records[-1]
     current_id = latest.get("id")
-    return current_id, is_any_update_failed
+    shared_counter_value = get_shared_counter_value()
+    return current_id,shared_counter_value
 
     
 
@@ -600,36 +615,33 @@ def main(commit: bool = False, id: Optional[int] = 0):
                 chunk_completion = {i: False for i in range(len(data_chunks))}
                 nested_log_files = [f"process_{i}.log"for i in range(len(data_chunks))]
                 with ThreadPoolExecutor() as executor:
-                    futures = executor.map(process_record, data_chunks, nested_log_files, [base_url] * len(data_chunks), [timeout_file] * len(data_chunks), [connection] * len(data_chunks), [commit] * len(data_chunks))
+                    futures = executor.map(process_record, data_chunks, nested_log_files, [base_url] * len(data_chunks), [timeout_file] * len(data_chunks), [connection] * len(data_chunks), [commit] * len(data_chunks),[total] *len(data_chunks))
 
-                    # futures = [executor.submit(process_record, record, base_url, timeout_file, connection, commit, log_file) for record, log_file in zip(data_chunks, nested_log_files)]
-                # for future in as_completed(futures):
-                for future in futures:
-                    i, is_any_update_failed = future
+                        # futures = [executor.submit(process_record, record, base_url, timeout_file, connection, commit, log_file) for record, log_file in zip(data_chunks, nested_log_files)]
+                    # for future in as_completed(futures):
+                    for future in futures:
+                        i,counter = future
 
-                    if commit and id == 0:
-                        current_state(
-                            store_state_file, id=i, counter=counter, mode="w"
-                        )
-                    for idx,chunk in enumerate(data_chunks):
-                        if chunk[-1]['id']==i:
-                            chunk_completion[idx] = True   
-                    if is_any_update_failed:
-                        pass
-                        # logger.info(f'{"="*20}  chunk {i} has no upddates {"="*20}')
+                        if commit and id == 0:
+                            current_state(
+                                store_state_file, id=i, counter=counter, mode="w"
+                            )
+                        for idx,chunk in enumerate(data_chunks):
+                            if chunk[-1]['id']==i:
+                                chunk_completion[idx] = True   
+                            # logger.info(f'{"="*20}  chunk {i} has no upddates {"="*20}')
 
-                for i, completed in chunk_completion.items():
-                    if completed:
-                        logger.info(f'{"="*20}  chunk {i} records have been processed {"="*20}')
-                    else:
-                        print(f"Chunk {i} is still processing")
+                    for i, completed in chunk_completion.items():
+                        if completed:
+                            logger.info(f'{"="*20}  chunk {i} records have been processed {"="*20}')
+                        else:
+                            print(f"Chunk {i} is still processing")
 
-                with open(log_file, "w") as consolidated_log:
-                    for i in nested_log_files:
-                        with open(i, "r") as individual_log:
-                            consolidated_log.write(individual_log.read())   
-                break    
-
+                    with open(log_file, "w") as consolidated_log:
+                        for i in nested_log_files:
+                            with open(i, "r") as individual_log:
+                                consolidated_log.write(individual_log.read())   
+                    break  
  
 
                 # with multiprocessing.Pool() as p:

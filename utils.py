@@ -20,6 +20,11 @@ from selenium.webdriver.firefox.service import Service
 import asyncio
 import aiohttp
 from webdriver_manager.firefox import GeckoDriverManager
+import requests
+from requests.packages.urllib3.exceptions import InsecureRequestWarning
+
+# Suppress the InsecureRequestWarning
+requests.packages.urllib3.disable_warnings(InsecureRequestWarning)
 
 HTTP_REQUEST_TIMEOUT = 10
 FTP_REQUEST_TIMEOUT = 5
@@ -98,8 +103,8 @@ def get_logger(name, log_file, level=logging.INFO):
 async def new_selenium_check(url,response,logger):
     options = FirefoxOptions()
     options.add_argument("--headless")
-    servi=Service(executable_path="/usr/local/bin/geckodriver")
-    driver = webdriver.Firefox(service=servi,options=options)
+    # servi=Service(executable_path="/usr/local/bin/geckodriver")
+    driver = webdriver.Firefox(options=options)
     driver.get(url)
     search_texts = ["404", "not found", "page not found"]  # Add more search texts if needed
     for text in search_texts:
@@ -233,7 +238,7 @@ def check_http_broken_link(url,logger, id, timeout: int = HTTP_REQUEST_TIMEOUT):
         response = requests.get(
             url=url,
             headers = {"User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36"},
-            timeout=timeout
+            timeout=timeout,verify=False
         )
         return response
     return response
