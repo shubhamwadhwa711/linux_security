@@ -103,7 +103,9 @@ def get_logger(name, log_file, level=logging.INFO):
 async def new_selenium_check(url,response,logger):
     options = FirefoxOptions()
     options.add_argument("--headless")
-    # servi=Service(executable_path="/usr/local/bin/geckodriver")
+    # service=Service(executable_path="/home/admin123/Downloads/geckodriver-v0.33.0-linux-aarch64")
+    # driver = webdriver.Firefox()
+    # servi=Service(executable_path="/home/admin123/Downloads/geckodriver-v0.33.0-linux-aarch64 (1)")
     driver = webdriver.Firefox(options=options)
     driver.get(url)
     search_texts = ["404", "not found", "page not found"]  # Add more search texts if needed

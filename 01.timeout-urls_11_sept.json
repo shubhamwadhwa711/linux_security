@@ -1,0 +1,555 @@
+{
+    "185398": [
+        "http://security.gentoo.org/glsa/glsa-200708-08.xml",
+        "http://bugs.gentoo.org",
+        "http://security.gentoo.org/",
+        "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2005-1924",
+        "http://creativecommons.org/licenses/by-sa/2.5",
+        "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2006-4169"
+    ],
+    "101911": [
+        "http://www.RedHat.com/corp/contact.html"
+    ],
+    "293228": [
+        "https://bugzilla.redhat.com/show_bug.cgi?id=1957455",
+        "https://www.djangoproject.com/",
+        "https://fedoraproject.org/wiki/Mailing_list_guidelines",
+        "https://fedoraproject.org/keys",
+        "http://dnf.readthedocs.io/en/latest/command_ref.html#upgrade-command-label",
+        "https://pagure.io/fedora-infrastructure",
+        "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org",
+        "https://docs.fedoraproject.org/en-US/project/code-of-conduct/",
+        "https://bugzilla.redhat.com/show_bug.cgi?id=1944801"
+    ],
+    "185399": [
+        "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2007-3781",
+        "http://bugs.gentoo.org",
+        "http://security.gentoo.org/",
+        "http://creativecommons.org/licenses/by-sa/2.5",
+        "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2007-3780",
+        "http://security.gentoo.org/glsa/glsa-200708-10.xml"
+    ],
+    "293229": [
+        "https://bugzilla.redhat.com/show_bug.cgi?id=1957101",
+        "https://www.mozilla.org/firefox/",
+        "https://fedoraproject.org/wiki/Mailing_list_guidelines",
+        "https://fedoraproject.org/keys",
+        "http://dnf.readthedocs.io/en/latest/command_ref.html#upgrade-command-label",
+        "https://www.mozilla.org/en-US/security/advisories/mfsa2021-20/",
+        "https://pagure.io/fedora-infrastructure",
+        "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org",
+        "https://docs.fedoraproject.org/en-US/project/code-of-conduct/"
+    ],
+    "185400": [
+        "http://bugs.gentoo.org"
+    ],
+    "293230": [
+        "https://access.redhat.com/errata/RHSA-2021:1546",
+        "https://access.redhat.com/security/updates/classification/#important",
+        "https://access.redhat.com/security/team/contact/",
+        "https://access.redhat.com/security/team/key/",
+        "https://access.redhat.com/articles/11258",
+        "https://bugzilla.redhat.com/",
+        "https://access.redhat.com/security/cve/CVE-2021-31204"
+    ],
+    "185401": [
+        "http://bugs.gentoo.org",
+        "http://security.gentoo.org/glsa/glsa-200708-12.xml",
+        "http://creativecommons.org/licenses/by-sa/2.5",
+        "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2007-3390",
+        "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2007-3391",
+        "http://security.gentoo.org/",
+        "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2007-3389",
+        "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2007-3392",
+        "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2007-3393"
+    ],
+    "293231": [
+        "https://access.redhat.com/errata/RHSA-2021:1547",
+        "https://access.redhat.com/security/updates/classification/#important",
+        "https://access.redhat.com/security/team/contact/",
+        "https://access.redhat.com/security/team/key/",
+        "https://access.redhat.com/articles/11258",
+        "https://bugzilla.redhat.com/",
+        "https://access.redhat.com/security/cve/CVE-2021-31204"
+    ],
+    "185402": [
+        "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2007-2926",
+        "http://bugs.gentoo.org",
+        "http://security.gentoo.org/",
+        "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2007-2925",
+        "http://creativecommons.org/licenses/by-sa/2.5",
+        "http://security.gentoo.org/glsa/glsa-200708-13.xml"
+    ],
+    "293232": [
+        "https://bugs.mageia.org/show_bug.cgi?id=28557",
+        "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/thread/JUEIABR4Y6L5J5MZDFWU46ZWXMJO64U3/",
+        "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-13977",
+        "https://advisories.mageia.org/MGASA-2021-0209.html"
+    ],
+    "101912": [
+        "http://www.RedHat.com/corp/support/docs/XFree86-upgrade/XFree86-upgrade.html",
+        "http://www.xfree86.org/3.3.5/RELNOTES.html",
+        "http://www.RedHat.com/corp/contac",
+        "http://www.xfree86.org/#news"
+    ],
+    "293233": [
+        "https://bugs.mageia.org/show_bug.cgi?id=28879",
+        "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/DGE643ALPDU76YXVRUPIB5FNWLYX3PXF/",
+        "https://advisories.mageia.org/MGASA-2021-0210.html"
+    ],
+    "185403": [
+        "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2007-3736",
+        "http://security.gentoo.org/glsa/glsa-200708-09.xml",
+        "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2007-3089",
+        "http://bugs.gentoo.org",
+        "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2007-3844",
+        "http://creativecommons.org/licenses/by-sa/2.5",
+        "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2007-3735",
+        "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2007-3738",
+        "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2007-3656",
+        "http://security.gentoo.org/",
+        "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2007-3734",
+        "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2007-3737"
+    ],
+    "293234": [
+        "https://bugs.mageia.org/show_bug.cgi?id=28896",
+        "https://mariadb.com/kb/en/mariadb-10329-release-notes/",
+        "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-2154",
+        "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-2166",
+        "https://advisories.mageia.org/MGASA-2021-0211.html"
+    ],
+    "185404": [
+        "http://bugs.gentoo.org",
+        "http://security.gentoo.org/glsa/glsa-200708-14.xml",
+        "http://security.gentoo.org/",
+        "http://creativecommons.org/licenses/by-sa/2.5",
+        "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2007-3532"
+    ],
+    "293235": [
+        "https://security-tracker.debian.org/tracker/lz4",
+        "https://wiki.debian.org/LTS",
+        "https://www.debian.org/lts/security/"
+    ],
+    "185405": [
+        "http://creativecommons.org/licenses/by-sa/1.0",
+        "http://security.gentoo.org",
+        "http://security.gentoo.org/glsa/glsa-200404-12.xml",
+        "http://bugs.gentoo.org"
+    ],
+    "293236": [
+        "https://www.microsoft.com/security/blog/2021/05/11/threat-and-vulnerability-management-now-supports-all-major-platforms/"
+    ],
+    "185406": [
+        "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2007-1860",
+        "http://bugs.gentoo.org",
+        "http://security.gentoo.org/glsa/glsa-200708-15.xml",
+        "http://security.gentoo.org/",
+        "http://creativecommons.org/licenses/by-sa/2.5"
+    ],
+    "293239": [
+        "https://bugzilla.suse.com/1181918",
+        "https://www.suse.com/security/cve/CVE-2020-26664.html"
+    ],
+    "101913": [
+        "http://www.RedHat.com/corp/contac"
+    ],
+    "185407": [
+        "http://bugs.gentoo.org",
+        "http://security.gentoo.org/",
+        "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2007-3388",
+        "http://creativecommons.org/licenses/by-sa/2.5",
+        "http://security.gentoo.org/glsa/glsa-200708-16.xml"
+    ],
+    "293240": [
+        "https://fedoraproject.org/wiki/Mailing_list_guidelines",
+        "https://fedoraproject.org/keys",
+        "https://bugzilla.redhat.com/show_bug.cgi?id=1955757",
+        "http://dnf.readthedocs.io/en/latest/command_ref.html#upgrade-command-label",
+        "https://pagure.io/fedora-infrastructure",
+        "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org",
+        "https://docs.fedoraproject.org/en-US/project/code-of-conduct/",
+        "https://github.com/PHPMailer/PHPMailer"
+    ],
+    "185408": [
+        "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2007-4367",
+        "http://bugs.gentoo.org",
+        "http://creativecommons.org/licenses/by-sa/2.5",
+        "http://security.gentoo.org/glsa/glsa-200708-17.xml",
+        "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2007-3819",
+        "http://www.opera.com/support/search/view/861/",
+        "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2007-3929",
+        "http://security.gentoo.org/",
+        "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2007-3142"
+    ],
+    "293241": [
+        "https://dom4j.github.io/",
+        "https://fedoraproject.org/wiki/Mailing_list_guidelines",
+        "https://bugzilla.redhat.com/show_bug.cgi?id=1620529",
+        "https://fedoraproject.org/keys",
+        "http://dnf.readthedocs.io/en/latest/command_ref.html#upgrade-command-label",
+        "https://pagure.io/fedora-infrastructure",
+        "https://fedoraproject.org/wiki/Fedora_34_Mass_Rebuild",
+        "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org",
+        "https://docs.fedoraproject.org/en-US/project/code-of-conduct/"
+    ],
+    "185410": [
+        "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2007-2951",
+        "http://bugs.gentoo.org",
+        "http://creativecommons.org/licenses/by-sa/2.5",
+        "http://security.gentoo.org/glsa/glsa-200709-02.xml"
+    ],
+    "185411": [
+        "http://security.gentoo.org/glsa/glsa-200709-03.xml",
+        "http://bugs.gentoo.org",
+        "http://security.gentoo.org/",
+        "http://creativecommons.org/licenses/by-sa/2.5",
+        "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2007-4337"
+    ],
+    "293242": [
+        "https://bugzilla.redhat.com/show_bug.cgi?id=1957414",
+        "https://fedoraproject.org/wiki/Mailing_list_guidelines",
+        "https://fedoraproject.org/keys",
+        "http://dnf.readthedocs.io/en/latest/command_ref.html#upgrade-command-label",
+        "https://bugzilla.redhat.com/show_bug.cgi?id=1957410",
+        "https://pagure.io/fedora-infrastructure",
+        "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org",
+        "https://docs.fedoraproject.org/en-US/project/code-of-conduct/",
+        "https://redis.io"
+    ],
+    "101914": [
+        "http://www.RedHat.com/corp/contac"
+    ],
+    "185412": [
+        "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2007-4462",
+        "http://bugs.gentoo.org",
+        "http://security.gentoo.org/",
+        "http://creativecommons.org/licenses/by-sa/2.5",
+        "http://security.gentoo.org/glsa/glsa-200709-04.xml"
+    ],
+    "293243": [
+        "http://www.php.net/releases/7_4_19.php",
+        "http://www.php.net/",
+        "https://fedoraproject.org/wiki/Mailing_list_guidelines",
+        "https://fedoraproject.org/keys",
+        "http://dnf.readthedocs.io/en/latest/command_ref.html#upgrade-command-label",
+        "http://www.php.net/releases/7_4_18.php",
+        "https://pagure.io/fedora-infrastructure",
+        "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org",
+        "https://docs.fedoraproject.org/en-US/project/code-of-conduct/"
+    ],
+    "185413": [
+        "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2007-3410",
+        "http://bugs.gentoo.org",
+        "http://security.gentoo.org/glsa/glsa-200709-05.xml",
+        "http://security.gentoo.org/",
+        "http://creativecommons.org/licenses/by-sa/2.5"
+    ],
+    "293244": [
+        "https://bugzilla.suse.com/1172794",
+        "https://bugzilla.suse.com/989759",
+        "https://bugzilla.suse.com/1003362",
+        "https://www.suse.com/security/cve/CVE-2016-6209.html",
+        "https://bugzilla.suse.com/1014637",
+        "https://www.suse.com/security/cve/CVE-2020-13977.html",
+        "https://bugzilla.suse.com/1182398"
+    ],
+    "185414": [
+        "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2007-3507",
+        "http://bugs.gentoo.org",
+        "http://security.gentoo.org/",
+        "http://creativecommons.org/licenses/by-sa/2.5",
+        "http://security.gentoo.org/glsa/glsa-200709-06.xml"
+    ],
+    "101882": [
+        "http://www.chkrootkit.org"
+    ],
+    "101887": [
+        "content/blogcategory/90/103/",
+        "content/blogcategory/99/111/",
+        "content/blogcategory/94/107/",
+        "content/blogcategory/95/108/",
+        "content/blogcategory/91/104",
+        "content/blogcategory/98/110/",
+        "content/blogcategory/88/101/",
+        "content/blogcategory/122/114/",
+        "content/blogcategory/85/98/",
+        "content/blogcategory/89/102/",
+        "content/blogcategory/86/99/",
+        "content/blogcategory/92/105/",
+        "content/blogcategory/97/109/",
+        "content/blogcategory/101/113/",
+        "content/blogcategory/87/100/"
+    ],
+    "101898": [
+        "http://www.RedHat.com/corp/contac"
+    ],
+    "101899": [
+        "http://www.RedHat.com/corp/contac"
+    ],
+    "101910": [
+        "http://www.debian.org/security/"
+    ],
+    "101915": [
+        "http://www.RedHat.com/corp/contact.html"
+    ],
+    "101916": [
+        "http://www.RedHat.com/corp/contac"
+    ],
+    "101917": [
+        "http://www.RedHat.com/corp/contac"
+    ],
+    "101919": [
+        "http://www.RedHat.com/corp/contac"
+    ],
+    "101920": [
+        "http://www.RedHat.com/corp/contac"
+    ],
+    "101921": [
+        "http://www.RedHat.com/corp/contac"
+    ],
+    "101922": [
+        "http://www.RedHat.com/corp/contac"
+    ],
+    "278756": [
+        "https://doc.opensuse.org/documentation/leap/startup/html/book.opensuse.startup/cha.update.osuse.html"
+    ],
+    "185384": [
+        "http://www.uniras.gov.uk/vuls/2004/006489/h323.htm",
+        "http://creativecommons.org/licenses/by-sa/1.0",
+        "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2004-0097"
+    ],
+    "293219": [
+        "https://bugzilla.redhat.com/show_bug.cgi?id=1945109",
+        "https://bugzilla.redhat.com/show_bug.cgi?id=1950436",
+        "https://bugzilla.redhat.com/show_bug.cgi?id=1950450",
+        "https://bugzilla.redhat.com/show_bug.cgi?id=1945110",
+        "https://bugzilla.redhat.com/show_bug.cgi?id=1954051",
+        "https://bugzilla.redhat.com/show_bug.cgi?id=1951742",
+        "https://bugzilla.redhat.com/show_bug.cgi?id=1945108",
+        "https://bugzilla.redhat.com/show_bug.cgi?id=1950453",
+        "https://bugzilla.redhat.com/show_bug.cgi?id=1950438",
+        "https://bugzilla.redhat.com/show_bug.cgi?id=1950446",
+        "https://bugzilla.redhat.com/show_bug.cgi?id=1950447",
+        "https://bugzilla.redhat.com/show_bug.cgi?id=1954054",
+        "https://pagure.io/fedora-infrastructure",
+        "https://bugzilla.redhat.com/show_bug.cgi?id=1951744",
+        "https://bugzilla.redhat.com/show_bug.cgi?id=1954053",
+        "https://bugzilla.redhat.com/show_bug.cgi?id=1951741",
+        "http://dnf.readthedocs.io/en/latest/command_ref.html#upgrade-command-label",
+        "https://bugzilla.redhat.com/show_bug.cgi?id=1951745",
+        "https://bugzilla.redhat.com/show_bug.cgi?id=1950445",
+        "https://bugzilla.redhat.com/show_bug.cgi?id=1950444",
+        "https://bugzilla.redhat.com/show_bug.cgi?id=1945106",
+        "https://bugzilla.redhat.com/show_bug.cgi?id=1950452",
+        "https://bugzilla.redhat.com/show_bug.cgi?id=1950439",
+        "https://bugzilla.redhat.com/show_bug.cgi?id=1950440",
+        "https://bugzilla.redhat.com/show_bug.cgi?id=1954052",
+        "https://bugzilla.redhat.com/show_bug.cgi?id=1950443",
+        "https://fedoraproject.org/wiki/Mailing_list_guidelines",
+        "https://bugzilla.redhat.com/show_bug.cgi?id=1950441",
+        "https://bugzilla.redhat.com/show_bug.cgi?id=1949617",
+        "https://bugzilla.redhat.com/show_bug.cgi?id=1950448",
+        "https://docs.fedoraproject.org/en-US/project/code-of-conduct/",
+        "https://bugzilla.redhat.com/show_bug.cgi?id=1950451",
+        "https://bugzilla.redhat.com/show_bug.cgi?id=1949618",
+        "https://bugzilla.redhat.com/show_bug.cgi?id=1950449",
+        "https://bugzilla.redhat.com/show_bug.cgi?id=1950442",
+        "https://bugzilla.redhat.com/show_bug.cgi?id=1951743",
+        "https://bugzilla.redhat.com/show_bug.cgi?id=1945107",
+        "https://bugzilla.redhat.com/show_bug.cgi?id=1950437",
+        "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org",
+        "https://bugzilla.redhat.com/show_bug.cgi?id=1950454",
+        "https://fedoraproject.org/keys"
+    ],
+    "262135": [
+        "https://developer.mozilla.org/en-US/docs/Mozilla/Projects/NSS/NSS_3.39_release_notes"
+    ],
+    "185426": [
+        "http://ccvs.cvshome.org/source/browse/ccvs/NEWS?rev=1.116.2.92&amp"
+    ],
+    "185428": [
+        "http://mail.nl.linux.org/xchat-announce/2004-04/msg00000.html"
+    ],
+    "293225": [
+        "https://dev.mysql.com/doc/relnotes/mysql/8.0/en/news-8-0-24.html"
+    ],
+    "185429": [
+        "http://www.tildeslash.com/monit/secadv_20040305.txt"
+    ],
+    "262136": [
+        "http://www.mozilla.org/projects/security/pki/nss/",
+        "https://developer.mozilla.org/en-US/docs/Mozilla/Projects/NSS/NSS_3.39_release_notes",
+        "https://getfedora.org/code-of-conduct.html",
+        "https://fedoraproject.org/keys",
+        "http://dnf.readthedocs.io/en/latest/command_ref.html#upgrade-command-label",
+        "https://bugzilla.redhat.com/show_bug.cgi?id=1578106",
+        "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org"
+    ],
+    "185467": [
+        "http://lists.omnipotent.net/pipermail/lcdproc/2004-April/008884.html"
+    ],
+    "185478": [
+        "http://nettwerked.mg2.org/advisories/xinebug"
+    ],
+    "185491": [
+        "http://lists.vmware.com/pipermail/security-announce/2007/000001.html"
+    ],
+    "293278": [
+        "https://security-tracker.debian.org/tracker/postgresql-9.6"
+    ],
+    "293280": [
+        "http://kube-dns.kube-system.svc.cluster.local:9153/metrics",
+        "https://localhost:10250/metrics",
+        "http://pi.hole"
+    ],
+    "293282": [
+        "ftp://ftp.slackware.com/pub/slackware/slackware64-14.2/patches/packages/libxml2-2.9.12-x86_64-1_slack14.2.txz",
+        "ftp://ftp.slackware.com/pub/slackware/slackware-current/slackware/l/libxml2-2.9.12-i586-1.txz",
+        "ftp://ftp.slackware.com/pub/slackware/slackware64-current/slackware64/l/libxml2-2.9.12-x86_64-1.txz",
+        "ftp://ftp.slackware.com/pub/slackware/slackware-14.0/patches/packages/libxml2-2.9.12-i486-1_slack14.0.txz",
+        "ftp://ftp.slackware.com/pub/slackware/slackware64-14.0/patches/packages/libxml2-2.9.12-x86_64-1_slack14.0.txz",
+        "ftp://ftp.slackware.com/pub/slackware/slackware-14.2/patches/packages/libxml2-2.9.12-i586-1_slack14.2.txz",
+        "ftp://ftp.slackware.com/pub/slackware/slackware-14.1/patches/packages/libxml2-2.9.12-i486-1_slack14.1.txz",
+        "ftp://ftp.slackware.com/pub/slackware/slackware64-14.1/patches/packages/libxml2-2.9.12-x86_64-1_slack14.1.txz"
+    ],
+    "262137": [
+        "http://www.mozilla.org/projects/security/pki/nss/",
+        "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org",
+        "https://fedoraproject.org/keys"
+    ],
+    "101925": [
+        "http://www.geek-girl.com/bugtraq/1999_2/0685.html",
+        "http://www.RedHat.com/corp/contac"
+    ],
+    "101930": [
+        "http://home.netscape.com/eng/mozilla/4.7/relnotes/unix-4.7.html"
+    ],
+    "293194": [
+        "https://fedoraproject.org/keys",
+        "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org",
+        "http://www.openexr.com/"
+    ],
+    "185385": [
+        "http://creativecommons.org/licenses/by-sa/2.5"
+    ],
+    "293195": [
+        "https://pagure.io/fedora-infrastructure",
+        "http://xmlsoft.org/",
+        "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org",
+        "https://fedoraproject.org/keys"
+    ],
+    "185386": [
+        "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2007-2798",
+        "http://bugs.gentoo.org",
+        "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2007-2442"
+    ],
+    "101883": [
+        "http://www.guardiandigital.com"
+    ],
+    "293197": [
+        "https://fedoraproject.org/keys"
+    ],
+    "185388": [
+        "http://creativecommons.org/licenses/by-sa/2.5",
+        "http://bugs.gentoo.org"
+    ],
+    "293198": [
+        "https://pagure.io/fedora-infrastructure",
+        "https://fedoraproject.org/keys"
+    ],
+    "185389": [
+        "http://creativecommons.org/licenses/by-sa/2.5",
+        "http://security.gentoo.org/glsa/glsa-200707-14.xml",
+        "http://security.gentoo.org/"
+    ],
+    "262138": [
+        "https://bugzilla.redhat.com/show_bug.cgi?id=1620207",
+        "http://www.mozilla.org/projects/security/pki/nss/",
+        "https://developer.mozilla.org/en-US/docs/Mozilla/Projects/NSS/NSS_3.39_release_notes",
+        "https://fedoraproject.org/keys",
+        "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org"
+    ],
+    "185390": [
+        "http://bugs.gentoo.org",
+        "http://security.gentoo.org/glsa/glsa-200708-01.xml",
+        "http://creativecommons.org/licenses/by-sa/2.5",
+        "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2007-3456",
+        "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2007-3457",
+        "http://security.gentoo.org/"
+    ],
+    "293199": [
+        "news/vendors-products/the-10-best-linux-server-distributions",
+        "features/protect-your-wordpress-sites-with-crowdsec",
+        "features/features/protect-your-wordpress-sites-with-crowdsec",
+        "howtos/secure-my-firewall/how-to-configure-the-firewall-in-ubuntu-with-ufw",
+        "news/organizations-events/linux-s-technical-advisory-board-reports-on-the-umn-hypocrite-commits-patches",
+        "features/21nails-multiple-critical-vulnerabilities-discovered-in-exim-mail-server-patch-now",
+        "howtos/learn-tips-and-tricks/10-monitoring-tools-for-linux-system-administrators-you-should-know-about",
+        "news/vendors-products/linux-mint-18-x-reaches-end-of-life-upgrade-now",
+        "news/iot-security/putting-an-ultra-tiny-linux-board-in-a-phone-charger-eventually"
+    ],
+    "262139": [
+        "https://bugzilla.redhat.com/show_bug.cgi?id=1626265",
+        "https://fedoraproject.org/wiki/Fedora_28_Mass_Rebuild",
+        "https://fedoraproject.org/wiki/Mailing_list_guidelines",
+        "https://fedoraproject.org/keys",
+        "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org",
+        "https://www.kde.org/applications/graphics/okular/"
+    ],
+    "185391": [
+        "http://creativecommons.org/licenses/by-sa/2.5",
+        "http://bugs.gentoo.org",
+        "http://security.gentoo.org/glsa/glsa-200708-02.xml",
+        "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2007-3329"
+    ],
+    "262140": [
+        "https://usn.ubuntu.com/usn/usn-3766-1"
+    ],
+    "185392": [
+        "http://creativecommons.org/licenses/by-sa/2.5",
+        "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2007-3641",
+        "http://security.gentoo.org/glsa/glsa-200708-03.xml"
+    ],
+    "262141": [
+        "https://usn.ubuntu.com/usn/usn-3722-1"
+    ],
+    "293204": [
+        "https://www.suse.com/security/cve/CVE-2021-22204.html",
+        "https://bugzilla.suse.com/1185547"
+    ],
+    "185393": [
+        "http://creativecommons.org/licenses/by-sa/2.5",
+        "http://bugs.gentoo.org",
+        "http://security.gentoo.org/",
+        "http://security.gentoo.org/glsa/glsa-200708-04.xml"
+    ],
+    "262142": [
+        "https://usn.ubuntu.com/usn/usn-3722-6",
+        "https://usn.ubuntu.com/usn/usn-3722-1",
+        "https://launchpad.net/bugs/1792051"
+    ],
+    "185395": [
+        "http://creativecommons.org/licenses/by-sa/2.5",
+        "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2007-3473",
+        "http://security.gentoo.org/",
+        "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2007-2756",
+        "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2007-3478",
+        "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2007-3474",
+        "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2007-3477",
+        "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2007-3472",
+        "http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2007-3476"
+    ],
+    "262150": [
+        "https://usn.ubuntu.com/usn/usn-3767-1"
+    ],
+    "262151": [
+        "https://usn.ubuntu.com/usn/usn-3767-1"
+    ],
+    "293213": [
+        "https://www.debian.org/lts/security/",
+        "https://wiki.debian.org/LTS"
+    ],
+    "101933": [
+        "http://www.RedHat.com/corp/contac"
+    ]
+}

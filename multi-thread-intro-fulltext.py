@@ -93,10 +93,10 @@ def do_update(
         if introtext and fulltext:
             sql = "UPDATE xu5gc_content SET `introtext`=%s, `fulltext`=%s WHERE id=%s"
             args = (introtext, fulltext, id)
-        elif introtext and fulltext is None:
+        elif introtext and fulltext is None or fulltext=="":
             sql = "UPDATE xu5gc_content SET `introtext`=%s WHERE id=%s"
             args = (introtext, id)
-        elif fulltext and introtext is None:
+        elif fulltext and introtext is None or introtext=="":
             sql = "UPDATE xu5gc_content SET `fulltext`=%s WHERE id=%s"
             args = (fulltext, id)
         else:
@@ -107,7 +107,7 @@ def do_update(
         connection.commit()
         return True
     except MySQLError as e:
-        logger.error(e)
+        # logger.error(e)
         connection.rollback()
         raise e
     
@@ -148,11 +148,13 @@ def decompose_known_urls(html:str,logger:Logger,id:int,field:str,updates:list):
             if domain in DECOMPOSE_URLS:
                 a_tags = soup.find_all('a', attrs={'href': url})
                 if len(a_tags)==0 and url in str_soup:
-                    str_soup=str_soup.replace(url,"")
+                    pattern = r'(\n)' + re.escape(url) + r'(\n)'
+                    if re.search(pattern, str_soup):
+                        str_soup = re.sub(pattern, '', str_soup)
+                    else:
+                        str_soup = str_soup.replace(url, '')
                     logger.info(f'ID: {id} #COLUMN: {field} #URL: {url} replaced with {"null"}')
                     updates.append(True)
-                    pattern = r'((\n\s\n)|(\n{2}))'
-                    str_soup=re.sub(pattern,'\n',str_soup)
                     soup=BeautifulSoup(str_soup,'html.parser')
                 for tag in a_tags:
                     text=tag.text.strip()
@@ -170,11 +172,13 @@ def decompose_known_urls(html:str,logger:Logger,id:int,field:str,updates:list):
             if domain in FTP_DECOMPOSE_URLS:
                 a_tags = soup.find_all('a', attrs={'href': url})
                 if len(a_tags)==0 and url in str_soup:
-                    str_soup=str_soup.replace(url,"")
+                    pattern = r'(\n)' + re.escape(url) + r'(\n)'
+                    if re.search(pattern, str_soup):
+                        str_soup = re.sub(pattern, '', str_soup)
+                    else:
+                        str_soup = str_soup.replace(url, '')
                     logger.info(f'ID: {id} #COLUMN: {field} #URL: {url} replaced with {"null"}')
                     updates.append(True)
-                    pattern = r'((\n\s\n)|(\n{2}))'
-                    str_soup=re.sub(pattern,'\n',str_soup)
                     soup=BeautifulSoup(str_soup,'html.parser')
                 for tag in a_tags:
                     text=tag.text.strip()
@@ -307,10 +311,12 @@ def check_ftp_urls( logger:Logger, id:int, updates:list,field:str, html: Optiona
             a_tags = soup.find_all('a', attrs={'href': url})
             str_soup=str(soup)
             if len(a_tags) == 0 and url in str_soup:
-                str_soup=str_soup.replace(url," ")
+                pattern = r'(\n)' + re.escape(url) + r'(\n)'
+                if re.search(pattern, str_soup):
+                    str_soup = re.sub(pattern, '', str_soup)
+                else:
+                    str_soup = str_soup.replace(url, '')
                 updates.append(True)
-                pattern = r'((\n\s\n)|(\n{2}))'
-                str_soup=re.sub(pattern,'\n',str_soup)
                 soup=BeautifulSoup(str_soup,'html.parser')
             updates.append(True)
             for tag in a_tags:
@@ -367,11 +373,13 @@ async def check_http_urls(logger:Logger, id:int,field:str,updates:list,base_url:
                 if result.get('status_code')==404:
                     a_tags = soup.find_all('a', attrs={'href': url})
                     if len(a_tags) == 0 and url in str_soup:
-                        str_soup=str_soup.replace(url,"")
+                        pattern = r'(\n)' + re.escape(url) + r'(\n)'
+                        if re.search(pattern, str_soup):
+                            str_soup = re.sub(pattern, '', str_soup)
+                        else:
+                            str_soup = str_soup.replace(url, '')
                         logger.info(f'Skipped ID: {id} #COLUMN: {field} #URL: {url} #STATUS_CODE: {result.get("status_code")} #Replace with {"NULL"}')
                         updates.append(True)
-                        pattern = r'((\n\s\n)|(\n{2}))'
-                        str_soup=re.sub(pattern,'\n',str_soup)
                         soup=BeautifulSoup(str_soup,"html.parser")
                     updates.append(True)
                     for tag in a_tags:
@@ -478,8 +486,26 @@ def get_shared_counter_value():
         return shared_counter
 
 
-def process_record(records, log_file, base_url, timeout_file, connection, commit,total):
+def get_db_connection(config,logger):
+    try:
+        # Connect to the database
+        connection= pymysql.connect(
+            host=config.get("mysql", "host"),
+            port=int(config.get("mysql", "port")),
+            user=config.get("mysql", "user"),
+            password=config.get("mysql", "password"),
+            database=config.get("mysql", "database"),
+            cursorclass=pymysql.cursors.DictCursor,
+        )
+        return connection
+    except MySQLError as e:
+        logger.error(e)
+        raise e
+
+def process_record(records, log_file, base_url, timeout_file,config, commit,total):
+   
     logger = get_logger(name=log_file, log_file=log_file) 
+    connection=get_db_connection(config,logger)
     counter=0 # Flag to track if any update fails
     thread_id=threading.get_ident()
     for record in records:
@@ -560,19 +586,7 @@ def main(commit: bool = False, id: Optional[int] = 0):
 
     logger: Logger = get_logger(name=log_file, log_file=log_file)
 
-    try:
-        # Connect to the database
-        connection: Connection = pymysql.connect(
-            host=config.get("mysql", "host"),
-            port=int(config.get("mysql", "port")),
-            user=config.get("mysql", "user"),
-            password=config.get("mysql", "password"),
-            database=config.get("mysql", "database"),
-            cursorclass=pymysql.cursors.DictCursor,
-        )
-    except MySQLError as e:
-        logger.error(e)
-        raise e
+    connection=get_db_connection(config,logger)
 
     with connection.cursor() as cursor:
         sql = "SELECT count(c.id) as total FROM xu5gc_content c LEFT JOIN xu5gc_categories cat ON cat.id = c.catid WHERE c.state = 1 AND cat.published = 1"
@@ -615,33 +629,29 @@ def main(commit: bool = False, id: Optional[int] = 0):
                 chunk_completion = {i: False for i in range(len(data_chunks))}
                 nested_log_files = [f"process_{i}.log"for i in range(len(data_chunks))]
                 with ThreadPoolExecutor() as executor:
-                    futures = executor.map(process_record, data_chunks, nested_log_files, [base_url] * len(data_chunks), [timeout_file] * len(data_chunks), [connection] * len(data_chunks), [commit] * len(data_chunks),[total] *len(data_chunks))
+                    futures = executor.map(process_record, data_chunks, nested_log_files, [base_url] * len(data_chunks), [timeout_file] * len(data_chunks), [config] * len(data_chunks), [commit] * len(data_chunks),[total] *len(data_chunks))
+                for future in futures:
+                    i,counter = future
 
-                        # futures = [executor.submit(process_record, record, base_url, timeout_file, connection, commit, log_file) for record, log_file in zip(data_chunks, nested_log_files)]
-                    # for future in as_completed(futures):
-                    for future in futures:
-                        i,counter = future
+                    if commit and id == 0:
+                        current_state(
+                            store_state_file, id=i, counter=counter, mode="w"
+                        )
+                    for idx,chunk in enumerate(data_chunks):
+                        if chunk[-1]['id']==i:
+                            chunk_completion[idx] = True   
 
-                        if commit and id == 0:
-                            current_state(
-                                store_state_file, id=i, counter=counter, mode="w"
-                            )
-                        for idx,chunk in enumerate(data_chunks):
-                            if chunk[-1]['id']==i:
-                                chunk_completion[idx] = True   
-                            # logger.info(f'{"="*20}  chunk {i} has no upddates {"="*20}')
+                for i, completed in chunk_completion.items():
+                    if completed:
+                        logger.info(f'{"="*20}  chunk {i} records have been processed {"="*20}')
+                    else:
+                        print(f"Chunk {i} is still processing")
 
-                    for i, completed in chunk_completion.items():
-                        if completed:
-                            logger.info(f'{"="*20}  chunk {i} records have been processed {"="*20}')
-                        else:
-                            print(f"Chunk {i} is still processing")
-
-                    with open(log_file, "w") as consolidated_log:
-                        for i in nested_log_files:
-                            with open(i, "r") as individual_log:
-                                consolidated_log.write(individual_log.read())   
-                    break  
+                with open(log_file, "w") as consolidated_log:
+                    for i in nested_log_files:
+                        with open(i, "r") as individual_log:
+                            consolidated_log.write(individual_log.read())   
+                break  
  
 
                 # with multiprocessing.Pool() as p:
