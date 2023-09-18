@@ -101,46 +101,54 @@ def get_logger(name, log_file, level=logging.INFO):
 
 
 async def new_selenium_check(url,response,logger):
-    options = FirefoxOptions()
-    options.add_argument("--headless")
-    # service=Service(executable_path="/home/admin123/Downloads/geckodriver-v0.33.0-linux-aarch64")
-    # driver = webdriver.Firefox()
-    # servi=Service(executable_path="/home/admin123/Downloads/geckodriver-v0.33.0-linux-aarch64 (1)")
-    driver = webdriver.Firefox(options=options)
-    driver.get(url)
-    search_texts = ["404", "not found", "page not found"]  # Add more search texts if needed
-    for text in search_texts:
-        if text.lower() in driver.page_source.lower():
-            driver.quit()
-            return {'url':url,'status_code':404,'is_error':True}
-    response.status=200
-    driver.quit()
-    return {'url':url,'status_code':200,'is_error':False}
-
+    try:
+        options = FirefoxOptions()  
+        options.add_argument("--headless")
+        service=Service(executable_path="/home/admin123/Downloads/geckodriver-v0.33.0-linux-aarch64")
+        driver = webdriver.Firefox(service=service,options=options)
+        # service=Service(executable_path="/home/admin123/Downloads/geckodriver-v0.33.0-linux-aarch64")
+        # driver = webdriver.Firefox()
+        # servi=Service(executable_path="/home/admin123/Downloads/geckodriver-v0.33.0-linux-aarch64 (1)")
+        driver.get(url)
+        search_texts = ["404", "not found", "page not found"]  # Add more search texts if needed
+        for text in search_texts:
+            if text.lower() in driver.page_source.lower():
+                driver.quit()
+                return {'url':url,'status_code':404,'is_error':True}
+        response.status=200
+        driver.quit()
+        return {'url':url,'status_code':200,'is_error':False}
+    except Exception as e:
+        driver.quit()
+        return {'url':url,'status_code':500,'is_error':True}
 
 def selenium_check(url,response,logger):
-    options = FirefoxOptions()  
-    options.add_argument("--headless")
-    service=Service(executable_path="/home/admin123/Downloads/geckodriver-v0.33.0-linux-aarch64")
-    driver = webdriver.Firefox(service=service,options=options)
-    # chrome_options = Options()
-    # chrome_options.add_argument("--headless")
-    # chrome_service = Service(executable_path="chromedriver")
-    # driver = webdriver.Chrome(options=chrome_options, service=chrome_service)
-    driver.get(url)
-    search_texts = ["404", "not found", "page not found"]  # Add more search texts if needed
-    for text in search_texts:
-        if text.lower() in driver.page_source.lower():
-            driver.quit()
-            # if str(response.url) != url:
-            #     logger.info(f"response url not match with original url set the original url with in place of response url ")
-            #     st=response.url
-            #     st=url
-            #     response=st
-            return response
-    response.status_code=200
-    driver.quit()
-    return response
+    try:
+        options = FirefoxOptions()  
+        options.add_argument("--headless")
+        service=Service(executable_path="/home/admin123/Downloads/geckodriver-v0.33.0-linux-aarch64")
+        driver = webdriver.Firefox(service=service,options=options)
+        # chrome_options = Options()
+        # chrome_options.add_argument("--headless")
+        # chrome_service = Service(executable_path="chromedriver")
+        # driver = webdriver.Chrome(options=chrome_options, service=chrome_service)
+        driver.get(url)
+        search_texts = ["404", "not found", "page not found"]  # Add more search texts if needed
+        for text in search_texts:
+            if text.lower() in driver.page_source.lower():
+                driver.quit()
+                # if str(response.url) != url:
+                #     logger.info(f"response url not match with original url set the original url with in place of response url ")
+                #     st=response.url
+                #     st=url
+                #     response=st
+                return response
+        response.status_code=200
+        driver.quit()
+        return response
+    except Exception as e:
+        driver.quit()
+        return response
 
 
 def check_url_against_domains(url):

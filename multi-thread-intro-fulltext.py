@@ -67,15 +67,16 @@ formatter = logging.Formatter(
     datefmt='%Y-%m-%d %H:%M:%S'
 )
 
-def get_logger(name, log_file, level=logging.INFO):
+def get_logger(name, log_file,log_level, level=logging.INFO):
     logger = logging.getLogger(name)
     logger.setLevel(level)
     file = logging.FileHandler(log_file)        
     file.setFormatter(formatter)
     logger.addHandler(file)
-    console = logging.StreamHandler()
-    console.setFormatter(ColoredFormatter("%(asctime)s - %(levelname)s - %(message)s"))
-    logger.addHandler(console)
+    if not log_level:
+        console = logging.StreamHandler()
+        console.setFormatter(ColoredFormatter("%(asctime)s - %(levelname)s - %(message)s"))
+        logger.addHandler(console)
     return logger
 
 @timeit
@@ -502,9 +503,9 @@ def get_db_connection(config,logger):
         logger.error(e)
         raise e
 
-def process_record(records, log_file, base_url, timeout_file,config, commit,total):
+def process_record(records, log_file, base_url, timeout_file,config, commit,total,log_level):
    
-    logger = get_logger(name=log_file, log_file=log_file) 
+    logger = get_logger(name=log_file, log_file=log_file,log_level=log_level) 
     connection=get_db_connection(config,logger)
     counter=0 # Flag to track if any update fails
     thread_id=threading.get_ident()
@@ -573,7 +574,7 @@ def get_data_chunk(start, chunk_size,connection):
 
 
 
-def main(commit: bool = False, id: Optional[int] = 0):
+def main(commit: bool = False, id: Optional[int] = 0,log_level:bool=False):
     config = configparser.ConfigParser(interpolation=None)
     config.read(os.path.join(os.path.dirname(__file__), "config.ini"))
 
@@ -584,7 +585,7 @@ def main(commit: bool = False, id: Optional[int] = 0):
     limit: int = config["script-01"].getint("limit")
     base_url: str = config.get("script-01", "base_url")
 
-    logger: Logger = get_logger(name=log_file, log_file=log_file)
+    logger: Logger = get_logger(name=log_file, log_file=log_file,log_level=log_level)
 
     connection=get_db_connection(config,logger)
 
@@ -629,7 +630,7 @@ def main(commit: bool = False, id: Optional[int] = 0):
                 chunk_completion = {i: False for i in range(len(data_chunks))}
                 nested_log_files = [f"process_{i}.log"for i in range(len(data_chunks))]
                 with ThreadPoolExecutor() as executor:
-                    futures = executor.map(process_record, data_chunks, nested_log_files, [base_url] * len(data_chunks), [timeout_file] * len(data_chunks), [config] * len(data_chunks), [commit] * len(data_chunks),[total] *len(data_chunks))
+                    futures = executor.map(process_record, data_chunks, nested_log_files, [base_url] * len(data_chunks), [timeout_file] * len(data_chunks), [config] * len(data_chunks), [commit] * len(data_chunks),[total] *len(data_chunks),[log_level]*len(data_chunks))
                 for future in futures:
                     i,counter = future
 
@@ -723,9 +724,11 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("--commit", action="store_true", help="Update the database")
     parser.add_argument("--id", default=0, type=int, help="Check for specific ID")
+    parser.add_argument('--q',action="store_true", help=" To hide looging in console")
 
     args = parser.parse_args()
     is_commit = args.commit
     specific_id = args.id
+    hide_log=args.q
 
-    main(commit=is_commit, id=specific_id)
+    main(commit=is_commit, id=specific_id,log_level=hide_log)
