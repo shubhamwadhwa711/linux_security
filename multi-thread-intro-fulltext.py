@@ -149,7 +149,7 @@ def decompose_known_urls(html:str,logger:Logger,id:int,field:str,updates:list):
             if domain in DECOMPOSE_URLS:
                 a_tags = soup.find_all('a', attrs={'href': url})
                 if len(a_tags)==0 and url in str_soup:
-                    pattern = r'(\n)' + re.escape(url) + r'(\n)'
+                    pattern = re.escape(url) + r'(\r\n|\n)'
                     if re.search(pattern, str_soup):
                         str_soup = re.sub(pattern, '', str_soup)
                     else:
@@ -173,7 +173,7 @@ def decompose_known_urls(html:str,logger:Logger,id:int,field:str,updates:list):
             if domain in FTP_DECOMPOSE_URLS:
                 a_tags = soup.find_all('a', attrs={'href': url})
                 if len(a_tags)==0 and url in str_soup:
-                    pattern = r'(\n)' + re.escape(url) + r'(\n)'
+                    pattern = re.escape(url) + r'(\r\n|\n)'
                     if re.search(pattern, str_soup):
                         str_soup = re.sub(pattern, '', str_soup)
                     else:
@@ -312,7 +312,7 @@ def check_ftp_urls( logger:Logger, id:int, updates:list,field:str, html: Optiona
             a_tags = soup.find_all('a', attrs={'href': url})
             str_soup=str(soup)
             if len(a_tags) == 0 and url in str_soup:
-                pattern = r'(\n)' + re.escape(url) + r'(\n)'
+                pattern = re.escape(url) + r'(\r\n|\n)'
                 if re.search(pattern, str_soup):
                     str_soup = re.sub(pattern, '', str_soup)
                 else:
@@ -374,7 +374,7 @@ async def check_http_urls(logger:Logger, id:int,field:str,updates:list,base_url:
                 if result.get('status_code')==404:
                     a_tags = soup.find_all('a', attrs={'href': url})
                     if len(a_tags) == 0 and url in str_soup:
-                        pattern = r'(\n)' + re.escape(url) + r'(\n)'
+                        pattern = re.escape(url) + r'(\r\n|\n)'
                         if re.search(pattern, str_soup):
                             str_soup = re.sub(pattern, '', str_soup)
                         else:
@@ -624,9 +624,16 @@ def main(commit: bool = False, id: Optional[int] = 0,log_level:bool=False):
                     result = cursor.fetchall()
             else:
                 all_data=True
-                for start in range(0, total, chunk_size):
-                    data_chunk = get_data_chunk(start, chunk_size,connection)
-                    data_chunks.append(data_chunk)
+                # for start in range(0, total, chunk_size):
+                #     data_chunk = get_data_chunk(start, chunk_size,connection)
+                #     data_chunks.append(data_chunk)
+
+                sql = "SELECT c.id, c.introtext, c.fulltext FROM xu5gc_content AS c WHERE id =%s"
+                args = id
+                with connection.cursor() as cursor:
+                    cursor.execute(sql, args)
+                    result = cursor.fetchall()
+                data_chunks=[result]
                 chunk_completion = {i: False for i in range(len(data_chunks))}
                 nested_log_files = [f"process_{i}.log"for i in range(len(data_chunks))]
                 with ThreadPoolExecutor() as executor:

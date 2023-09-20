@@ -903,3 +903,104 @@
 2023-09-12 16:30:25 - INFO - #ID: 101884 #URL http://ccrypt.sourceforge.net/ - Requesting again using GET request instead of HEAD
 2023-09-12 16:30:25 - WARNING - #ID: 101884 #URL http://www.gnupg.org Error: 
 2023-09-12 16:30:25 - INFO - #ID: 101884 #URL http://www.gnupg.org - Requesting again using GET request instead of HEAD
+2023-09-20 12:35:30 - INFO - ******************** Processing ID: 135861 ******************** (1/1 - 100.0%)
+2023-09-20 12:35:30 - INFO - processing  135861 - introtext is not JSON, proceeding further to check HTML
+2023-09-20 12:35:54 - INFO - processing 135861 - fulltext is not json proceeding further to check html
+2023-09-20 12:35:57 - INFO - ID: 135861 #COLUMN: fulltext #URL: ftp://security.debian.org/debian-security replaced with null
+2023-09-20 12:37:06 - WARNING - #ID: 135861 #URL http://security.debian.org/pool/updates/main/i/iceweasel/iceweasel_2.0.0.13-0etch1_i386.deb Error: local variable 'driver' referenced before assignment
+2023-09-20 12:37:06 - WARNING - #ID: 135861 #URL http://security.debian.org/pool/updates/main/i/iceweasel/iceweasel_2.0.0.13.orig.tar.gz Error: local variable 'driver' referenced before assignment
+2023-09-20 12:37:06 - WARNING - #ID: 135861 #URL http://security.debian.org/pool/updates/main/i/iceweasel/firefox_2.0.0.13-0etch1_all.deb Error: local variable 'driver' referenced before assignment
+2023-09-20 12:37:06 - WARNING - #ID: 135861 #URL http://security.debian.org/pool/updates/main/i/iceweasel/firefox-dom-inspector_2.0.0.13-0etch1_all.deb Error: local variable 'driver' referenced before assignment
+2023-09-20 12:37:06 - WARNING - #ID: 135861 #URL http://security.debian.org/pool/updates/main/i/iceweasel/iceweasel-gnome-support_2.0.0.13-0etch1_arm.deb Error: local variable 'driver' referenced before assignment
+2023-09-20 12:37:06 - WARNING - #ID: 135861 #URL http://security.debian.org/pool/updates/main/i/iceweasel/iceweasel-gnome-support_2.0.0.13-0etch1_amd64.deb Error: local variable 'driver' referenced before assignment
+2023-09-20 12:37:06 - WARNING - #ID: 135861 #URL http://security.debian.org/pool/updates/main/i/iceweasel/iceweasel-gnome-support_2.0.0.13-0etch1_ia64.deb Error: local variable 'driver' referenced before assignment
+2023-09-20 12:37:06 - WARNING - #ID: 135861 #URL http://security.debian.org/pool/updates/main/i/iceweasel/iceweasel_2.0.0.13-0etch1_amd64.deb Error: local variable 'driver' referenced before assignment
+2023-09-20 12:37:06 - WARNING - #ID: 135861 #URL http://security.debian.org/pool/updates/main/i/iceweasel/iceweasel-dbg_2.0.0.13-0etch1_amd64.deb Error: local variable 'driver' referenced before assignment
+2023-09-20 12:37:06 - WARNING - #ID: 135861 #URL http://security.debian.org/pool/updates/main/i/iceweasel/mozilla-firefox_2.0.0.13-0etch1_all.deb Error: local variable 'driver' referenced before assignment
+2023-09-20 12:37:06 - WARNING - #ID: 135861 #URL http://security.debian.org/pool/updates/main/i/iceweasel/iceweasel-dbg_2.0.0.13-0etch1_i386.deb Error: local variable 'driver' referenced before assignment
+2023-09-20 12:37:06 - WARNING - #ID: 135861 #URL http://security.debian.org/pool/updates/main/i/iceweasel/iceweasel-dbg_2.0.0.13-0etch1_ia64.deb Error: local variable 'driver' referenced before assignment
+2023-09-20 12:37:06 - WARNING - #ID: 135861 #URL http://security.debian.org/pool/updates/main/i/iceweasel/iceweasel-gnome-support_2.0.0.13-0etch1_mipsel.deb Error: local variable 'driver' referenced before assignment
+2023-09-20 12:37:06 - WARNING - #ID: 135861 #URL http://security.debian.org/pool/updates/main/i/iceweasel/iceweasel-gnome-support_2.0.0.13-0etch1_s390.deb Error: local variable 'driver' referenced before assignment
+2023-09-20 12:37:06 - WARNING - #ID: 135861 #URL http://security.debian.org/pool/updates/main/i/iceweasel/iceweasel-dbg_2.0.0.13-0etch1_s390.deb Error: local variable 'driver' referenced before assignment
+2023-09-20 12:37:06 - WARNING - #ID: 135861 #URL http://security.debian.org/pool/updates/main/i/iceweasel/iceweasel_2.0.0.13-0etch1_powerpc.deb Error: local variable 'driver' referenced before assignment
+2023-09-20 12:37:06 - WARNING - #ID: 135861 #URL http://security.debian.org/pool/updates/main/i/iceweasel/iceweasel_2.0.0.13-0etch1_sparc.deb Error: local variable 'driver' referenced before assignment
+2023-09-20 12:37:06 - WARNING - #ID: 135861 #URL http://security.debian.org/pool/updates/main/i/iceweasel/iceweasel-dbg_2.0.0.13-0etch1_sparc.deb Error: local variable 'driver' referenced before assignment
+2023-09-20 12:37:06 - WARNING - #ID: 135861 #URL http://security.debian.org/pool/updates/main/i/iceweasel/iceweasel-gnome-support_2.0.0.13-0etch1_powerpc.deb Error: local variable 'driver' referenced before assignment
+2023-09-20 12:37:06 - WARNING - #ID: 135861 #URL http://security.debian.org/pool/updates/main/i/iceweasel/iceweasel-dbg_2.0.0.13-0etch1_powerpc.deb Error: local variable 'driver' referenced before assignment
+2023-09-20 12:37:06 - WARNING - #ID: 135861 #URL http://security.debian.org/pool/updates/main/i/iceweasel/iceweasel-gnome-support_2.0.0.13-0etch1_sparc.deb Error: local variable 'driver' referenced before assignment
+2023-09-20 12:37:06 - WARNING - #ID: 135861 #URL http://security.debian.org/pool/updates/main/i/iceweasel/iceweasel_2.0.0.13-0etch1_s390.deb Error: local variable 'driver' referenced before assignment
+2023-09-20 12:37:06 - WARNING - #ID: 135861 #URL http://security.debian.org/pool/updates/main/i/iceweasel/iceweasel_2.0.0.13-0etch1.diff.gz Error: local variable 'driver' referenced before assignment
+2023-09-20 12:37:06 - WARNING - #ID: 135861 #URL http://security.debian.org/pool/updates/main/i/iceweasel/mozilla-firefox-dom-inspector_2.0.0.13-0etch1_all.deb Error: local variable 'driver' referenced before assignment
+2023-09-20 12:37:06 - WARNING - #ID: 135861 #URL http://security.debian.org/pool/updates/main/i/iceweasel/iceweasel_2.0.0.13-0etch1.dsc Error: local variable 'driver' referenced before assignment
+2023-09-20 12:37:06 - WARNING - #ID: 135861 #URL http://security.debian.org/pool/updates/main/i/iceweasel/iceweasel_2.0.0.13-0etch1_arm.deb Error: local variable 'driver' referenced before assignment
+2023-09-20 12:37:06 - WARNING - #ID: 135861 #URL http://security.debian.org/pool/updates/main/i/iceweasel/iceweasel-dbg_2.0.0.13-0etch1_arm.deb Error: local variable 'driver' referenced before assignment
+2023-09-20 12:37:06 - WARNING - #ID: 135861 #URL http://security.debian.org/pool/updates/main/i/iceweasel/iceweasel-gnome-support_2.0.0.13-0etch1_i386.deb Error: local variable 'driver' referenced before assignment
+2023-09-20 12:37:06 - WARNING - #ID: 135861 #URL http://security.debian.org/pool/updates/main/i/iceweasel/mozilla-firefox-gnome-support_2.0.0.13-0etch1_all.deb Error: local variable 'driver' referenced before assignment
+2023-09-20 12:37:06 - WARNING - #ID: 135861 #URL http://security.debian.org/pool/updates/main/i/iceweasel/firefox-gnome-support_2.0.0.13-0etch1_all.deb Error: local variable 'driver' referenced before assignment
+2023-09-20 12:37:06 - WARNING - #ID: 135861 #URL http://security.debian.org/pool/updates/main/i/iceweasel/iceweasel-dom-inspector_2.0.0.13-0etch1_all.deb Error: local variable 'driver' referenced before assignment
+2023-09-20 12:37:06 - WARNING - #ID: 135861 #URL http://security.debian.org/pool/updates/main/i/iceweasel/iceweasel_2.0.0.13-0etch1_mips.deb Error: local variable 'driver' referenced before assignment
+2023-09-20 12:37:06 - WARNING - #ID: 135861 #URL http://security.debian.org/pool/updates/main/i/iceweasel/iceweasel_2.0.0.13-0etch1_mipsel.deb Error: local variable 'driver' referenced before assignment
+2023-09-20 12:37:06 - WARNING - #ID: 135861 #URL http://security.debian.org/pool/updates/main/i/iceweasel/iceweasel-dbg_2.0.0.13-0etch1_mipsel.deb Error: local variable 'driver' referenced before assignment
+2023-09-20 12:37:06 - WARNING - #ID: 135861 #URL http://security.debian.org/pool/updates/main/i/iceweasel/iceweasel-gnome-support_2.0.0.13-0etch1_mips.deb Error: local variable 'driver' referenced before assignment
+2023-09-20 12:37:06 - WARNING - #ID: 135861 #URL http://security.debian.org/pool/updates/main/i/iceweasel/iceweasel-dbg_2.0.0.13-0etch1_mips.deb Error: local variable 'driver' referenced before assignment
+2023-09-20 12:37:06 - WARNING - #ID: 135861 #URL http://security.debian.org/pool/updates/main/i/iceweasel/iceweasel_2.0.0.13-0etch1_ia64.deb Error: local variable 'driver' referenced before assignment
+2023-09-20 12:38:26 - INFO - ******************** Processing ID: 135861 ******************** (1/1 - 100.0%)
+2023-09-20 12:38:26 - INFO - processing  135861 - introtext is not JSON, proceeding further to check HTML
+2023-09-20 12:38:29 - INFO - processing 135861 - fulltext is not json proceeding further to check html
+2023-09-20 12:38:30 - INFO - ID: 135861 #COLUMN: fulltext #URL: ftp://security.debian.org/debian-security replaced with null
+2023-09-20 12:38:57 - INFO - Skipped ID: 135861 #COLUMN: fulltext #URL: http://www.debian.org/security/ #STATUS_CODE: 200
+2023-09-20 12:39:10 - INFO - Skipped ID: 135861 #COLUMN: fulltext #URL: http://www.debian.org/security/faq #STATUS_CODE: 200
+2023-09-20 12:45:59 - INFO - ******************** Processing ID: 135861 ******************** (1/1 - 100.0%)
+2023-09-20 12:45:59 - INFO - processing  135861 - introtext is not JSON, proceeding further to check HTML
+2023-09-20 12:46:01 - INFO - processing 135861 - fulltext is not json proceeding further to check html
+2023-09-20 12:46:02 - INFO - ID: 135861 #COLUMN: fulltext #URL: ftp://security.debian.org/debian-security replaced with null
+2023-09-20 12:46:06 - INFO - Skipped ID: 135861 #COLUMN: fulltext #URL: http://www.debian.org/security/ #STATUS_CODE: 200
+2023-09-20 12:46:07 - INFO - Skipped ID: 135861 #COLUMN: fulltext #URL: http://www.debian.org/security/faq #STATUS_CODE: 200
+2023-09-20 12:46:30 - INFO - Skipped ID: 135861 #COLUMN: fulltext #URL: http://security.debian.org/pool/updates/main/i/iceweasel/iceweasel_2.0.0.13-0etch1.diff.gz #STATUS_CODE: 404 #Replace with NULL
+2023-09-20 12:48:02 - INFO - ******************** Processing ID: 135861 ******************** (1/1 - 100.0%)
+2023-09-20 12:48:02 - INFO - processing  135861 - introtext is not JSON, proceeding further to check HTML
+2023-09-20 12:48:29 - INFO - processing 135861 - fulltext is not json proceeding further to check html
+2023-09-20 12:48:30 - INFO - ID: 135861 #COLUMN: fulltext #URL: ftp://security.debian.org/debian-security replaced with null
+2023-09-20 12:48:35 - INFO - Skipped ID: 135861 #COLUMN: fulltext #URL: http://www.debian.org/security/ #STATUS_CODE: 200
+2023-09-20 12:48:36 - INFO - Skipped ID: 135861 #COLUMN: fulltext #URL: http://www.debian.org/security/faq #STATUS_CODE: 200
+2023-09-20 12:48:46 - INFO - Skipped ID: 135861 #COLUMN: fulltext #URL: http://security.debian.org/pool/updates/main/i/iceweasel/iceweasel_2.0.0.13-0etch1.diff.gz #STATUS_CODE: 404 #Replace with NULL
+2023-09-20 12:49:11 - INFO - Skipped ID: 135861 #COLUMN: fulltext #URL: http://security.debian.org/pool/updates/main/i/iceweasel/iceweasel_2.0.0.13-0etch1.dsc #STATUS_CODE: 404 #Replace with NULL
+2023-09-20 12:49:30 - INFO - Skipped ID: 135861 #COLUMN: fulltext #URL: http://security.debian.org/pool/updates/main/i/iceweasel/iceweasel_2.0.0.13.orig.tar.gz #STATUS_CODE: 404 #Replace with NULL
+2023-09-20 12:49:30 - INFO - Skipped ID: 135861 #COLUMN: fulltext #URL: http://security.debian.org/pool/updates/main/i/iceweasel/mozilla-firefox-dom-inspector_2.0.0.13-0etch1_all.deb #STATUS_CODE: 404 #Replace with NULL
+2023-09-20 12:49:30 - INFO - Skipped ID: 135861 #COLUMN: fulltext #URL: http://security.debian.org/pool/updates/main/i/iceweasel/firefox_2.0.0.13-0etch1_all.deb #STATUS_CODE: 404 #Replace with NULL
+2023-09-20 12:49:30 - INFO - Skipped ID: 135861 #COLUMN: fulltext #URL: http://security.debian.org/pool/updates/main/i/iceweasel/firefox-dom-inspector_2.0.0.13-0etch1_all.deb #STATUS_CODE: 404 #Replace with NULL
+2023-09-20 12:49:30 - INFO - Skipped ID: 135861 #COLUMN: fulltext #URL: http://security.debian.org/pool/updates/main/i/iceweasel/firefox-gnome-support_2.0.0.13-0etch1_all.deb #STATUS_CODE: 404 #Replace with NULL
+2023-09-20 12:49:30 - INFO - Skipped ID: 135861 #COLUMN: fulltext #URL: http://security.debian.org/pool/updates/main/i/iceweasel/mozilla-firefox-gnome-support_2.0.0.13-0etch1_all.deb #STATUS_CODE: 404 #Replace with NULL
+2023-09-20 12:49:30 - INFO - Skipped ID: 135861 #COLUMN: fulltext #URL: http://security.debian.org/pool/updates/main/i/iceweasel/iceweasel-dom-inspector_2.0.0.13-0etch1_all.deb #STATUS_CODE: 404 #Replace with NULL
+2023-09-20 12:49:30 - INFO - Skipped ID: 135861 #COLUMN: fulltext #URL: http://security.debian.org/pool/updates/main/i/iceweasel/mozilla-firefox_2.0.0.13-0etch1_all.deb #STATUS_CODE: 404 #Replace with NULL
+2023-09-20 12:49:30 - INFO - Skipped ID: 135861 #COLUMN: fulltext #URL: http://security.debian.org/pool/updates/main/i/iceweasel/iceweasel_2.0.0.13-0etch1_amd64.deb #STATUS_CODE: 404 #Replace with NULL
+2023-09-20 12:49:30 - INFO - Skipped ID: 135861 #COLUMN: fulltext #URL: http://security.debian.org/pool/updates/main/i/iceweasel/iceweasel-dbg_2.0.0.13-0etch1_amd64.deb #STATUS_CODE: 404 #Replace with NULL
+2023-09-20 12:49:30 - INFO - Skipped ID: 135861 #COLUMN: fulltext #URL: http://security.debian.org/pool/updates/main/i/iceweasel/iceweasel-gnome-support_2.0.0.13-0etch1_amd64.deb #STATUS_CODE: 404 #Replace with NULL
+2023-09-20 12:49:30 - INFO - Skipped ID: 135861 #COLUMN: fulltext #URL: http://security.debian.org/pool/updates/main/i/iceweasel/iceweasel_2.0.0.13-0etch1_arm.deb #STATUS_CODE: 404 #Replace with NULL
+2023-09-20 12:49:30 - INFO - Skipped ID: 135861 #COLUMN: fulltext #URL: http://security.debian.org/pool/updates/main/i/iceweasel/iceweasel-dbg_2.0.0.13-0etch1_arm.deb #STATUS_CODE: 404 #Replace with NULL
+2023-09-20 12:49:30 - INFO - Skipped ID: 135861 #COLUMN: fulltext #URL: http://security.debian.org/pool/updates/main/i/iceweasel/iceweasel-gnome-support_2.0.0.13-0etch1_arm.deb #STATUS_CODE: 404 #Replace with NULL
+2023-09-20 12:49:30 - INFO - Skipped ID: 135861 #COLUMN: fulltext #URL: http://security.debian.org/pool/updates/main/i/iceweasel/iceweasel-gnome-support_2.0.0.13-0etch1_i386.deb #STATUS_CODE: 404 #Replace with NULL
+2023-09-20 12:49:30 - INFO - Skipped ID: 135861 #COLUMN: fulltext #URL: http://security.debian.org/pool/updates/main/i/iceweasel/iceweasel_2.0.0.13-0etch1_i386.deb #STATUS_CODE: 404 #Replace with NULL
+2023-09-20 12:49:30 - INFO - Skipped ID: 135861 #COLUMN: fulltext #URL: http://security.debian.org/pool/updates/main/i/iceweasel/iceweasel-dbg_2.0.0.13-0etch1_i386.deb #STATUS_CODE: 404 #Replace with NULL
+2023-09-20 12:49:30 - INFO - Skipped ID: 135861 #COLUMN: fulltext #URL: http://security.debian.org/pool/updates/main/i/iceweasel/iceweasel-gnome-support_2.0.0.13-0etch1_ia64.deb #STATUS_CODE: 404 #Replace with NULL
+2023-09-20 12:49:30 - INFO - Skipped ID: 135861 #COLUMN: fulltext #URL: http://security.debian.org/pool/updates/main/i/iceweasel/iceweasel-dbg_2.0.0.13-0etch1_ia64.deb #STATUS_CODE: 404 #Replace with NULL
+2023-09-20 12:49:30 - INFO - Skipped ID: 135861 #COLUMN: fulltext #URL: http://security.debian.org/pool/updates/main/i/iceweasel/iceweasel_2.0.0.13-0etch1_ia64.deb #STATUS_CODE: 404 #Replace with NULL
+2023-09-20 12:49:30 - INFO - Skipped ID: 135861 #COLUMN: fulltext #URL: http://security.debian.org/pool/updates/main/i/iceweasel/iceweasel-dbg_2.0.0.13-0etch1_mips.deb #STATUS_CODE: 404 #Replace with NULL
+2023-09-20 12:49:30 - INFO - Skipped ID: 135861 #COLUMN: fulltext #URL: http://security.debian.org/pool/updates/main/i/iceweasel/iceweasel_2.0.0.13-0etch1_mips.deb #STATUS_CODE: 404 #Replace with NULL
+2023-09-20 12:49:30 - INFO - Skipped ID: 135861 #COLUMN: fulltext #URL: http://security.debian.org/pool/updates/main/i/iceweasel/iceweasel-gnome-support_2.0.0.13-0etch1_mips.deb #STATUS_CODE: 404 #Replace with NULL
+2023-09-20 12:49:30 - INFO - Skipped ID: 135861 #COLUMN: fulltext #URL: http://security.debian.org/pool/updates/main/i/iceweasel/iceweasel_2.0.0.13-0etch1_mipsel.deb #STATUS_CODE: 404 #Replace with NULL
+2023-09-20 12:49:30 - INFO - Skipped ID: 135861 #COLUMN: fulltext #URL: http://security.debian.org/pool/updates/main/i/iceweasel/iceweasel-dbg_2.0.0.13-0etch1_mipsel.deb #STATUS_CODE: 404 #Replace with NULL
+2023-09-20 12:49:30 - INFO - Skipped ID: 135861 #COLUMN: fulltext #URL: http://security.debian.org/pool/updates/main/i/iceweasel/iceweasel-gnome-support_2.0.0.13-0etch1_mipsel.deb #STATUS_CODE: 404 #Replace with NULL
+2023-09-20 12:49:30 - INFO - Skipped ID: 135861 #COLUMN: fulltext #URL: http://security.debian.org/pool/updates/main/i/iceweasel/iceweasel-dbg_2.0.0.13-0etch1_powerpc.deb #STATUS_CODE: 404 #Replace with NULL
+2023-09-20 12:49:30 - INFO - Skipped ID: 135861 #COLUMN: fulltext #URL: http://security.debian.org/pool/updates/main/i/iceweasel/iceweasel-gnome-support_2.0.0.13-0etch1_powerpc.deb #STATUS_CODE: 404 #Replace with NULL
+2023-09-20 12:49:30 - INFO - Skipped ID: 135861 #COLUMN: fulltext #URL: http://security.debian.org/pool/updates/main/i/iceweasel/iceweasel_2.0.0.13-0etch1_powerpc.deb #STATUS_CODE: 404 #Replace with NULL
+2023-09-20 12:49:30 - INFO - Skipped ID: 135861 #COLUMN: fulltext #URL: http://security.debian.org/pool/updates/main/i/iceweasel/iceweasel-gnome-support_2.0.0.13-0etch1_s390.deb #STATUS_CODE: 404 #Replace with NULL
+2023-09-20 12:49:30 - INFO - Skipped ID: 135861 #COLUMN: fulltext #URL: http://security.debian.org/pool/updates/main/i/iceweasel/iceweasel_2.0.0.13-0etch1_s390.deb #STATUS_CODE: 404 #Replace with NULL
+2023-09-20 12:49:30 - INFO - Skipped ID: 135861 #COLUMN: fulltext #URL: http://security.debian.org/pool/updates/main/i/iceweasel/iceweasel-dbg_2.0.0.13-0etch1_s390.deb #STATUS_CODE: 404 #Replace with NULL
+2023-09-20 12:49:30 - INFO - Skipped ID: 135861 #COLUMN: fulltext #URL: http://security.debian.org/pool/updates/main/i/iceweasel/iceweasel-gnome-support_2.0.0.13-0etch1_sparc.deb #STATUS_CODE: 404 #Replace with NULL
+2023-09-20 12:49:30 - INFO - Skipped ID: 135861 #COLUMN: fulltext #URL: http://security.debian.org/pool/updates/main/i/iceweasel/iceweasel_2.0.0.13-0etch1_sparc.deb #STATUS_CODE: 404 #Replace with NULL
+2023-09-20 12:49:30 - INFO - Skipped ID: 135861 #COLUMN: fulltext #URL: http://security.debian.org/pool/updates/main/i/iceweasel/iceweasel-dbg_2.0.0.13-0etch1_sparc.deb #STATUS_CODE: 404 #Replace with NULL
+2023-09-20 12:49:30 - INFO - Skipped ID: 135861 #COLUMN: fulltext #URL: http://security.debian.org/ #STATUS_CODE: 200
+2023-09-20 12:49:55 - INFO - ID: 135861 has been updated in database
+2023-09-20 12:49:55 - INFO - Processing ID: 135861 completed
+2023-09-20 12:50:02 - INFO - ==================== All records have been processed ====================

@@ -83,7 +83,7 @@ def find_a_tag_in_html(logger: Logger, field: str, html: Optional[str] = None, u
         for url in urls:
             a_tags = soup.find_all('a', attrs={'href': url})
             if len(a_tags) == 0 and url in str_soup:
-                pattern = r'(\n)' + re.escape(url) + r'(\n)'
+                pattern = re.escape(url) + r'(\r\n|\n)'
                 if re.search(pattern, str_soup):
                     str_soup = re.sub(pattern, '', str_soup)
                 else:
