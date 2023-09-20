@@ -400,8 +400,8 @@ def skip_check_sites(html,logger:Logger):
     all_urls = find_urls(html)
     remaining_urls=[]
     for url in all_urls:
-        if url.startswith('#') or urlparse(url).netloc in SKIP_CHECK_SITES or urlparse(url).scheme in ["mailto", "tel"]or url.startswith('@'):
-            if urlparse(url).scheme in ["mailto", "tel"]or url.startswith('#') or url.startswith('@'):
+        if url.startswith('#') or urlparse(url).netloc in SKIP_CHECK_SITES or urlparse(url).scheme in ["mailto", "tel"]or '@' in url:
+            if urlparse(url).scheme in ["mailto", "tel"]or url.startswith('#') or '@' in url:
                 continue
             logger.info(f"{url} is skiped for checking:- present in SKIP_CHECK_SITES ")
             continue
