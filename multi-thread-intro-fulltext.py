@@ -626,16 +626,9 @@ def main(commit: bool = False, id: Optional[int] = 0,log_level:bool=False):
                     result = cursor.fetchall()
             else:
                 all_data=True
-                # for start in range(0, total, chunk_size):
-                #     data_chunk = get_data_chunk(start, chunk_size,connection)
-                #     data_chunks.append(data_chunk)
-
-                sql = "SELECT c.id, c.introtext, c.fulltext FROM xu5gc_content AS c WHERE id =%s"
-                args = id
-                with connection.cursor() as cursor:
-                    cursor.execute(sql, args)
-                    result = cursor.fetchall()
-                data_chunks=[result]
+                for start in range(0, total, chunk_size):
+                    data_chunk = get_data_chunk(start, chunk_size,connection)
+                    data_chunks.append(data_chunk)
                 chunk_completion = {i: False for i in range(len(data_chunks))}
                 nested_log_files = [f"process_{i}.log"for i in range(len(data_chunks))]
                 with ThreadPoolExecutor() as executor:
