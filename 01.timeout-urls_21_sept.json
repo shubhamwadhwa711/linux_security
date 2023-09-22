@@ -1,0 +1,118 @@
+{
+    "101899": [
+        "http://www.RedHat.com/corp/contac"
+    ],
+    "101911": [
+        "http://www.RedHat.com/corp/contact.html"
+    ],
+    "101914": [
+        "http://www.RedHat.com/corp/contac"
+    ],
+    "101916": [
+        "http://www.RedHat.com/corp/contac"
+    ],
+    "101933": [
+        "http://www.RedHat.com/corp/contac"
+    ],
+    "101934": [
+        "http://www.RedHat.com/corp/contac"
+    ],
+    "101935": [
+        "http://www.RedHat.com/corp/contact"
+    ],
+    "101936": [
+        "http://www.RedHat.com/corp/contac"
+    ],
+    "101937": [
+        "http://www.RedHat.com/corp/contac"
+    ],
+    "101938": [
+        "http://www.RedHat.com/corp/contac"
+    ],
+    "101941": [
+        "ftp://ftp.suse.com/pub/suse_update/kernel/"
+    ],
+    "101942": [
+        "ftp://ftp.suse.com/pub/SuSE-Linux/suse_update/XFree86-3.3.3.1-SuSE/glibc",
+        "http://www.suse.com/ftp_new.html",
+        "ftp://ftp.suse.com/pub/SuSE-Linux/suse_update/XFree86-3.3.3.1-SuSE/libc5"
+    ],
+    "101944": [
+        "http://www.suse.com/ftp_new.html",
+        "ftp://ftp.suse.com/pub/SuSE-Linux/suse_update/kernel/linux-2.2.7.SuSE.tgz",
+        "ftp://ftp.suse.com/pub/SuSE-Linux/suse_update/suse61/d1/lx_suse-2.2.7.SuSE-3.i386.rpm"
+    ],
+    "101945": [
+        "ftp://ftp.suse.com/pub/suse/axp/update/6.1/n1/pine.rpm",
+        "ftp://ftp.suse.com/pub/suse/i386/update/6.1/n1/pine.rpm",
+        "http://www.suse.com/ftp_new.html",
+        "ftp://ftp.suse.com/pub/suse/i386/update/6.1/zq/pine.spm"
+    ],
+    "101946": [
+        "http://www.suse.com/ftp_new.html",
+        "ftp://ftp.suse.com/pub/suse/i386/update/6.1/a1/man-2.3.10-76.i386.rpm",
+        "ftp://ftp.suse.com/pub/suse/i386/update/6.1/zq1/man-2.3.10-76.src.rpm"
+    ],
+    "101947": [
+        "ftp://ftp.suse.com/pub/suse/i386/update/6.1/kde2/kbase-1.1.1-15.i386.rpm",
+        "http://www.suse.com/ftp_new.html"
+    ],
+    "101948": [
+        "http://www.suse.com/ftp_new.html"
+    ],
+    "101949": [
+        "http://www.suse.com/ftp_new.html"
+    ],
+    "101950": [
+        "ftp://ftp.suse.com/pub/suse/axp/update/6.1/a1/termcap.rpm",
+        "http://www.suse.com/ftp_new.html",
+        "ftp://ftp.suse.com/pub/suse/i386/update/6.2/a1/termcap.rpm",
+        "ftp://ftp.suse.com/pub/suse/i386/update/6.1/a1/termcap.rpm"
+    ],
+    "101951": [
+        "ftp://ftp.suse.com/pub/suse/i386/update/6.2/n1/trn_spl-3.6-61.i386.rpm",
+        "http://www.suse.com/ftp_new.html",
+        "ftp://ftp.suse.com/pub/suse/i386/update/6.2/n1/trn-3.6-70.i386.rpm"
+    ],
+    "101952": [
+        "http://www.suse.com/ftp_new.html"
+    ],
+    "101953": [
+        "ftp://ftp.suse.com/pub/suse/i386/update/6.2/n1/rsync.rpm",
+        "http://www.suse.com/ftp_new.html"
+    ],
+    "101954": [
+        "http://www.suse.com/ftp_new.html",
+        "ftp://ftp.suse.com/pub/suse/i386/update/6.1/a1/cron-3.0.1-82.i386.rpm",
+        "ftp://ftp.suse.com/pub/suse/i386/update/6.2/a1/cron-3.0.1-84.i386.rpm"
+    ],
+    "101956": [
+        "ftp://ftp.suse.com/pub/suse/i386/update/5.3/n1/pine.rpm",
+        "ftp://ftp.suse.com/pub/suse/i386/update/6.2/n1/pine.rpm",
+        "ftp://ftp.suse.com/pub/suse/axp/update/6.1/n1/pine.rpm",
+        "ftp://ftp.suse.com/pub/suse/i386/update/6.1/n1/pine.rpm",
+        "http://www.suse.com/ftp_new.html"
+    ],
+    "101957": [
+        "ftp://ftp.suse.com/pub/suse/i386/update/6.1/n1/lynx-2.8.3dev9-76.i386.rpm",
+        "ftp://ftp.suse.com/pub/suse/i386/update/5.3/n1/lynx-2.8.3dev9-76.i386.rpm",
+        "ftp://ftp.suse.com/pub/suse/axp/update/6.1/n1/lynx-2.8.3dev9-76.alpha.rpm",
+        "http://www.suse.com/ftp_new.html",
+        "ftp://ftp.suse.com/pub/suse/i386/update/6.2/n1/lynx-2.8.3dev9-76.i386.rpm"
+    ],
+    "101958": [
+        "ftp://koobera.math.uic.edu/www/anonftpd.html",
+        "http://www.suse.com/ftp_new.html"
+    ],
+    "101959": [
+        "ftp://ftp.suse.com/pub/suse/i386/update/6.2/n1/marsnwe-0.99.pl17-54.i386.rpm",
+        "ftp://ftp.suse.com/pub/suse/i386/update/6.1/n1/marsnwe-0.99.pl17-54.i386.rpm",
+        "ftp://ftp.suse.com/pub/suse/axp/update/6.1/n1/marsnwe-0.99.pl17-54.alpha.rpm",
+        "http://www.suse.com/ftp_new.html",
+        "ftp://ftp.suse.com/pub/suse/i386/update/5.3/n1/marsnwe-0.99.pl17-54.i386.rpm"
+    ],
+    "101960": [
+        "http://www.suse.com/ftp_new.html",
+        "ftp://ftp.suse.com/pub/suse/i386/update/6.2/ham1/pbpg-1.2-0.i386.rpm"
+    ]
+}

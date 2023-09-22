@@ -1,1006 +1,363 @@
-2023-09-12 09:53:08 - INFO - Multi-Thread script (Thread ID : 140473961797184): Processing ID :14  **********  1/93342 - 0.0%
-2023-09-12 09:53:08 - INFO - processing  14 - introtext is not JSON, proceeding further to check HTML
-2023-09-12 09:53:11 - INFO - Skipped ID: 14 #COLUMN: introtext #URL: https://www.LinuxSecurity.com #STATUS_CODE: 200
-2023-09-12 09:53:11 - INFO - processing 14 - fulltext is not json proceeding further to check html
-2023-09-12 09:53:11 - INFO - Multi-Thread script (Thread ID : 140473961797184): Processing ID :17  **********  6/93342 - 0.0%
-2023-09-12 09:53:11 - INFO - processing  17 - introtext is not JSON, proceeding further to check HTML
-2023-09-12 09:53:11 - INFO - mailto:security@linuxsecurity.com is skiped for checking:- present in SKIP_CHECK_SITES 
-2023-09-12 09:53:11 - INFO - mailto:contribute@linuxsecurity.com is skiped for checking:- present in SKIP_CHECK_SITES 
-2023-09-12 09:53:11 - INFO - mailto:info@linuxsecurity.com is skiped for checking:- present in SKIP_CHECK_SITES 
-2023-09-12 09:53:11 - INFO - mailto:editorial@linuxsecurity.com is skiped for checking:- present in SKIP_CHECK_SITES 
-2023-09-12 09:53:11 - INFO - mailto:sales@linuxsecurity.com is skiped for checking:- present in SKIP_CHECK_SITES 
-2023-09-12 09:53:11 - INFO - processing 17 - fulltext is not json proceeding further to check html
-2023-09-12 09:53:11 - INFO - Multi-Thread script (Thread ID : 140473961797184): Processing ID :18  **********  7/93342 - 0.0%
-2023-09-12 09:53:11 - INFO - processing  18 - introtext is not JSON, proceeding further to check HTML
-2023-09-12 09:53:11 - INFO - mailto:security-discuss-request@linuxsecurity.com?Subject=subscribe is skiped for checking:- present in SKIP_CHECK_SITES 
-2023-09-12 09:53:11 - INFO - mailto:vuln-newsletter-request@linuxsecurity.com?Subject=subscribe is skiped for checking:- present in SKIP_CHECK_SITES 
-2023-09-12 09:53:11 - INFO - processing 18 - fulltext is not json proceeding further to check html
-2023-09-12 09:53:11 - INFO - Multi-Thread script (Thread ID : 140473961797184): Processing ID :20  **********  8/93342 - 0.0%
-2023-09-12 09:53:11 - INFO - processing  20 - introtext is not JSON, proceeding further to check HTML
-2023-09-12 09:53:12 - INFO - processing 20 - fulltext is not json proceeding further to check html
-2023-09-12 09:53:12 - INFO - Multi-Thread script (Thread ID : 140473961797184): Processing ID :86096  **********  9/93342 - 0.0%
-2023-09-12 09:53:12 - INFO - processing  86096 - introtext is not JSON, proceeding further to check HTML
-2023-09-12 09:53:12 - INFO - processing 86096 - fulltext is not json proceeding further to check html
-2023-09-12 09:53:12 - INFO - Multi-Thread script (Thread ID : 140473961797184): Processing ID :101882  **********  10/93342 - 0.0%
-2023-09-12 09:53:12 - INFO - processing  101882 - introtext is not JSON, proceeding further to check HTML
-2023-09-12 09:53:12 - INFO - processing 101882 - fulltext is not json proceeding further to check html
-2023-09-12 09:55:24 - WARNING - #ID: 101882 #URL https://linuxsecurity.com/mailo:ciaglia@netwosix.org Error: Message: Failed to read marionette port
-
-2023-09-12 09:55:24 - WARNING - #ID: 101882 #URL http://www.chkrootkit.org Error: 
-2023-09-12 09:55:24 - INFO - #ID: 101882 #URL http://www.chkrootkit.org - Requesting again using GET request instead of HEAD
-2023-09-12 09:55:24 - WARNING - #ID: 101882 #URL https://www.chkrootkit.org Error: 
-2023-09-12 09:55:24 - INFO - #ID: 101882 #URL https://www.chkrootkit.org - Requesting again using GET request instead of HEAD
-2023-09-12 09:55:28 - INFO - Skipped ID: 101882 #COLUMN: fulltext #URL: http://www.chkrootkit.org #STATUS_CODE: 200
-2023-09-12 09:55:28 - INFO - Skipped ID: 101882 #COLUMN: fulltext #URL: https://www.chkrootkit.org #STATUS_CODE: 200
-2023-09-12 09:55:28 - ERROR - #ID: 101882 #URL https://linuxsecurity.com/mailo:ciaglia@netwosix.org Error: Message: Failed to read marionette port
-
-2023-09-12 09:55:28 - INFO - ID: 101882 #COLUMN: fulltext #URL: mailo:ciaglia@netwosix.org added for more checking
-2023-09-12 09:55:28 - INFO - Multi-Thread script (Thread ID : 140473961797184): Processing ID :101883  **********  67/93342 - 0.1%
-2023-09-12 09:55:28 - INFO - processing  101883 - introtext is not JSON, proceeding further to check HTML
-2023-09-12 09:55:28 - INFO - processing 101883 - fulltext is not json proceeding further to check html
-2023-09-12 09:55:35 - INFO - Skipped ID: 101883 #COLUMN: fulltext #URL: http://www.guardiandigital.com #STATUS_CODE: 200
-2023-09-12 09:55:35 - INFO - Multi-Thread script (Thread ID : 140473961797184): Processing ID :101884  **********  73/93342 - 0.1%
-2023-09-12 09:55:35 - INFO - processing  101884 - introtext is not JSON, proceeding further to check HTML
-2023-09-12 09:55:35 - INFO - processing 101884 - fulltext is not json proceeding further to check html
-2023-09-12 09:55:35 - INFO - mailto:duane@sukkha.info is skiped for checking:- present in SKIP_CHECK_SITES 
-2023-09-12 09:55:37 - INFO - Skipped ID: 101884 #COLUMN: fulltext #URL: http://ccrypt.sourceforge.net/ #STATUS_CODE: 200
-2023-09-12 09:55:37 - INFO - Skipped ID: 101884 #COLUMN: fulltext #URL: http://www.gnupg.org #STATUS_CODE: 307
-2023-09-12 09:55:37 - INFO - Multi-Thread script (Thread ID : 140473961797184): Processing ID :101887  **********  74/93342 - 0.1%
-2023-09-12 09:55:37 - INFO - processing  101887 - introtext is not JSON, proceeding further to check HTML
-2023-09-12 09:57:49 - WARNING - #ID: 101887 #URL https://linuxsecurity.com/content/blogcategory/99/111/ Error: Message: Failed to read marionette port
-
-2023-09-12 10:00:00 - WARNING - #ID: 101887 #URL https://linuxsecurity.com/content/blogcategory/94/107/ Error: Message: Failed to read marionette port
-
-2023-09-12 10:00:00 - WARNING - #ID: 101887 #URL https://linuxsecurity.com/content/blogcategory/87/100/ Error: 
-2023-09-12 10:00:00 - INFO - #ID: 101887 #URL https://linuxsecurity.com/content/blogcategory/87/100/ - Requesting again using GET request instead of HEAD
-2023-09-12 10:00:00 - WARNING - #ID: 101887 #URL https://linuxsecurity.com/content/blogcategory/122/114/ Error: 
-2023-09-12 10:00:00 - INFO - #ID: 101887 #URL https://linuxsecurity.com/content/blogcategory/122/114/ - Requesting again using GET request instead of HEAD
-2023-09-12 10:00:00 - WARNING - #ID: 101887 #URL https://linuxsecurity.com/content/blogcategory/86/99/ Error: 
-2023-09-12 10:00:00 - INFO - #ID: 101887 #URL https://linuxsecurity.com/content/blogcategory/86/99/ - Requesting again using GET request instead of HEAD
-2023-09-12 10:00:00 - WARNING - #ID: 101887 #URL https://linuxsecurity.com/content/blogcategory/97/109/ Error: 
-2023-09-12 10:00:00 - INFO - #ID: 101887 #URL https://linuxsecurity.com/content/blogcategory/97/109/ - Requesting again using GET request instead of HEAD
-2023-09-12 10:00:00 - WARNING - #ID: 101887 #URL https://linuxsecurity.com/content/blogcategory/89/102/ Error: 
-2023-09-12 10:00:00 - INFO - #ID: 101887 #URL https://linuxsecurity.com/content/blogcategory/89/102/ - Requesting again using GET request instead of HEAD
-2023-09-12 10:00:00 - WARNING - #ID: 101887 #URL https://linuxsecurity.com/content/blogcategory/93/106/ Error: 
-2023-09-12 10:00:00 - INFO - #ID: 101887 #URL https://linuxsecurity.com/content/blogcategory/93/106/ - Requesting again using GET request instead of HEAD
-2023-09-12 10:00:00 - WARNING - #ID: 101887 #URL https://linuxsecurity.com/content/blogcategory/100/112/ Error: 
-2023-09-12 10:00:00 - INFO - #ID: 101887 #URL https://linuxsecurity.com/content/blogcategory/100/112/ - Requesting again using GET request instead of HEAD
-2023-09-12 10:00:00 - WARNING - #ID: 101887 #URL https://linuxsecurity.com/content/blogcategory/101/113/ Error: 
-2023-09-12 10:00:00 - INFO - #ID: 101887 #URL https://linuxsecurity.com/content/blogcategory/101/113/ - Requesting again using GET request instead of HEAD
-2023-09-12 10:00:00 - WARNING - #ID: 101887 #URL https://linuxsecurity.com/content/blogcategory/90/103/ Error: 
-2023-09-12 10:00:00 - INFO - #ID: 101887 #URL https://linuxsecurity.com/content/blogcategory/90/103/ - Requesting again using GET request instead of HEAD
-2023-09-12 10:00:00 - WARNING - #ID: 101887 #URL https://linuxsecurity.com/content/blogcategory/91/104 Error: 
-2023-09-12 10:00:00 - INFO - #ID: 101887 #URL https://linuxsecurity.com/content/blogcategory/91/104 - Requesting again using GET request instead of HEAD
-2023-09-12 10:00:00 - WARNING - #ID: 101887 #URL https://linuxsecurity.com/content/blogcategory/88/101/ Error: 
-2023-09-12 10:00:00 - INFO - #ID: 101887 #URL https://linuxsecurity.com/content/blogcategory/88/101/ - Requesting again using GET request instead of HEAD
-2023-09-12 10:00:00 - WARNING - #ID: 101887 #URL https://linuxsecurity.com/content/blogcategory/95/108/ Error: 
-2023-09-12 10:00:00 - INFO - #ID: 101887 #URL https://linuxsecurity.com/content/blogcategory/95/108/ - Requesting again using GET request instead of HEAD
-2023-09-12 10:00:00 - WARNING - #ID: 101887 #URL https://linuxsecurity.com/content/blogcategory/92/105/ Error: 
-2023-09-12 10:00:00 - INFO - #ID: 101887 #URL https://linuxsecurity.com/content/blogcategory/92/105/ - Requesting again using GET request instead of HEAD
-2023-09-12 10:00:00 - WARNING - #ID: 101887 #URL https://linuxsecurity.com/content/blogcategory/85/98/ Error: 
-2023-09-12 10:00:00 - INFO - #ID: 101887 #URL https://linuxsecurity.com/content/blogcategory/85/98/ - Requesting again using GET request instead of HEAD
-2023-09-12 10:00:00 - WARNING - #ID: 101887 #URL https://linuxsecurity.com/content/blogcategory/98/110/ Error: 
-2023-09-12 10:00:00 - INFO - #ID: 101887 #URL https://linuxsecurity.com/content/blogcategory/98/110/ - Requesting again using GET request instead of HEAD
-2023-09-12 10:00:03 - INFO - ID: 101887 #COLUMN: introtext #URL: content/blogcategory/93/106/ #STATUS_CODE: 404 #TEXT: (null) removed
-2023-09-12 10:00:03 - INFO - ID: 101887 #COLUMN: introtext #URL: content/blogcategory/91/104 #STATUS_CODE: 404 #TEXT: (null) removed
-2023-09-12 10:00:03 - INFO - ID: 101887 #COLUMN: introtext #URL: content/blogcategory/88/101/ #STATUS_CODE: 404 #TEXT: (null) removed
-2023-09-12 10:00:03 - INFO - ID: 101887 #COLUMN: introtext #URL: content/blogcategory/92/105/ #STATUS_CODE: 404 #TEXT: (null) removed
-2023-09-12 10:00:03 - ERROR - #ID: 101887 #URL https://linuxsecurity.com/content/blogcategory/97/109/ Error: Message: Failed to read marionette port
-
-2023-09-12 10:00:03 - INFO - ID: 101887 #COLUMN: introtext #URL: content/blogcategory/94/107/ added for more checking
-2023-09-12 10:00:03 - INFO - ID: 101887 #COLUMN: introtext #URL: content/blogcategory/90/103/ #STATUS_CODE: 404 #TEXT: (null) removed
-2023-09-12 10:00:03 - ERROR - #ID: 101887 #URL https://linuxsecurity.com/content/blogcategory/97/109/ Error: Message: Failed to read marionette port
-
-2023-09-12 10:00:03 - INFO - ID: 101887 #COLUMN: introtext #URL: content/blogcategory/99/111/ added for more checking
-2023-09-12 10:00:03 - INFO - ID: 101887 #COLUMN: introtext #URL: content/blogcategory/95/108/ #STATUS_CODE: 404 #TEXT: (null) removed
-2023-09-12 10:00:03 - INFO - ID: 101887 #COLUMN: introtext #URL: content/blogcategory/100/112/ #STATUS_CODE: 404 #TEXT: (null) removed
-2023-09-12 10:00:03 - INFO - ID: 101887 #COLUMN: introtext #URL: content/blogcategory/98/110/ #STATUS_CODE: 404 #TEXT: (null) removed
-2023-09-12 10:00:03 - INFO - ID: 101887 #COLUMN: introtext #URL: content/blogcategory/122/114/ #STATUS_CODE: 404 #TEXT: (null) removed
-2023-09-12 10:00:03 - INFO - ID: 101887 #COLUMN: introtext #URL: content/blogcategory/101/113/ #STATUS_CODE: 404 #TEXT: (null) removed
-2023-09-12 10:00:03 - INFO - ID: 101887 #COLUMN: introtext #URL: content/blogcategory/87/100/ #STATUS_CODE: 404 #TEXT: (null) removed
-2023-09-12 10:00:03 - INFO - ID: 101887 #COLUMN: introtext #URL: content/blogcategory/85/98/ #STATUS_CODE: 404 #TEXT: (null) removed
-2023-09-12 10:00:03 - INFO - ID: 101887 #COLUMN: introtext #URL: content/blogcategory/89/102/ #STATUS_CODE: 404 #TEXT: (null) removed
-2023-09-12 10:00:03 - INFO - ID: 101887 #COLUMN: introtext #URL: content/blogcategory/86/99/ #STATUS_CODE: 404 #TEXT: (null) removed
-2023-09-12 10:00:03 - INFO - ID: 101887 #COLUMN: introtext #URL: content/blogcategory/97/109/ #STATUS_CODE: 404 #TEXT: (null) removed
-2023-09-12 10:00:03 - INFO - processing 101887 - fulltext is not json proceeding further to check html
-2023-09-12 10:00:03 - INFO - Processing ID: 101887 completed
-2023-09-12 10:00:03 - INFO - Multi-Thread script (Thread ID : 140473961797184): Processing ID :101892  **********  164/93342 - 0.2%
-2023-09-12 10:00:03 - INFO - processing  101892 - introtext is not JSON, proceeding further to check HTML
-2023-09-12 10:00:03 - INFO - processing 101892 - fulltext is not json proceeding further to check html
-2023-09-12 10:00:03 - INFO - Multi-Thread script (Thread ID : 140473961797184): Processing ID :101897  **********  165/93342 - 0.2%
-2023-09-12 10:00:03 - INFO - processing  101897 - introtext is not JSON, proceeding further to check HTML
-2023-09-12 10:00:03 - INFO - processing 101897 - fulltext is not json proceeding further to check html
-2023-09-12 10:00:03 - INFO - Multi-Thread script (Thread ID : 140473961797184): Processing ID :101898  **********  166/93342 - 0.2%
-2023-09-12 10:00:03 - INFO - processing  101898 - introtext is not JSON, proceeding further to check HTML
-2023-09-12 10:00:03 - INFO - processing 101898 - fulltext is not json proceeding further to check html
-2023-09-12 10:02:18 - WARNING - #ID: 101898 #URL http://www.RedHat.com/corp/contac Error: Message: Failed to read marionette port
-
-2023-09-12 10:02:18 - ERROR - #ID: 101898 #URL http://www.RedHat.com/corp/contac Error: Message: Failed to read marionette port
-
-2023-09-12 10:02:18 - INFO - ID: 101898 #COLUMN: fulltext #URL: http://www.RedHat.com/corp/contac added for more checking
-2023-09-12 10:02:18 - INFO - Multi-Thread script (Thread ID : 140473961797184): Processing ID :101899  **********  209/93342 - 0.2%
-2023-09-12 10:02:18 - INFO - processing  101899 - introtext is not JSON, proceeding further to check HTML
-2023-09-12 10:02:18 - INFO - processing 101899 - fulltext is not json proceeding further to check html
-2023-09-12 10:04:32 - WARNING - #ID: 101899 #URL http://www.RedHat.com/corp/contac Error: Message: Failed to read marionette port
-
-2023-09-12 10:04:32 - ERROR - #ID: 101899 #URL http://www.RedHat.com/corp/contac Error: Message: Failed to read marionette port
-
-2023-09-12 10:04:32 - INFO - ID: 101899 #COLUMN: fulltext #URL: http://www.RedHat.com/corp/contac added for more checking
-2023-09-12 10:04:32 - INFO - Multi-Thread script (Thread ID : 140473961797184): Processing ID :101910  **********  273/93342 - 0.3%
-2023-09-12 10:04:32 - INFO - processing  101910 - introtext is not JSON, proceeding further to check HTML
-2023-09-12 10:04:32 - INFO - processing 101910 - fulltext is not json proceeding further to check html
-2023-09-12 10:06:44 - WARNING - #ID: 101910 #URL http://security.debian.org/dists/stable/updates/source/bind_8.2.2p5-0slink1.dsc Error: Message: Failed to read marionette port
-
-2023-09-12 10:06:44 - WARNING - #ID: 101910 #URL http://security.debian.org/ Error: 
-2023-09-12 10:06:44 - INFO - #ID: 101910 #URL http://security.debian.org/ - Requesting again using GET request instead of HEAD
-2023-09-12 10:06:44 - WARNING - #ID: 101910 #URL http://www.debian.org/security/ Error: 
-2023-09-12 10:06:44 - INFO - #ID: 101910 #URL http://www.debian.org/security/ - Requesting again using GET request instead of HEAD
-2023-09-12 10:06:45 - INFO - Skipped ID: 101910 #COLUMN: fulltext #URL: http://www.debian.org/security/ #STATUS_CODE: 200
-2023-09-12 10:06:45 - ERROR - #ID: 101910 #URL http://security.debian.org/ Error: Message: Failed to read marionette port
-
-2023-09-12 10:06:45 - INFO - ID: 101910 #COLUMN: fulltext #URL: http://security.debian.org/dists/stable/updates/source/bind_8.2.2p5-0slink1.dsc added for more checking
-2023-09-12 10:06:45 - INFO - Skipped ID: 101910 #COLUMN: fulltext #URL: http://security.debian.org/ #STATUS_CODE: 200
-2023-09-12 10:06:45 - INFO - Multi-Thread script (Thread ID : 140473961797184): Processing ID :101911  **********  381/93342 - 0.4%
-2023-09-12 10:06:45 - INFO - processing  101911 - introtext is not JSON, proceeding further to check HTML
-2023-09-12 10:06:46 - INFO - processing 101911 - fulltext is not json proceeding further to check html
-2023-09-12 10:07:41 - WARNING - #ID: 101911 #URL http://home.netscape.com/eng/mozilla/4.7/relnotes/unix-4.7.html Error: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-2023-09-12 10:07:41 - WARNING - #ID: 101911 #URL http://www.RedHat.com/corp/contact.html Error: 
-2023-09-12 10:07:41 - INFO - #ID: 101911 #URL http://www.RedHat.com/corp/contact.html - Requesting again using GET request instead of HEAD
-2023-09-12 10:07:41 - ERROR - #ID: 101911 #URL http://www.RedHat.com/corp/contact.html Error: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-2023-09-12 10:07:41 - INFO - ID: 101911 #COLUMN: fulltext #URL: http://home.netscape.com/eng/mozilla/4.7/relnotes/unix-4.7.html added for more checking
-2023-09-12 10:07:41 - ERROR - #ID: 101911 #URL http://www.RedHat.com/corp/contact.html Error: cannot schedule new futures after shutdown
-2023-09-12 10:07:41 - INFO - ID: 101911 #COLUMN: fulltext #URL: http://www.RedHat.com/corp/contact.html added for more checking
-2023-09-12 10:07:41 - INFO - Multi-Thread script (Thread ID : 140473961797184): Processing ID :101912  **********  413/93342 - 0.4%
-2023-09-12 10:07:41 - INFO - processing  101912 - introtext is not JSON, proceeding further to check HTML
-2023-09-12 10:07:41 - INFO - processing 101912 - fulltext is not json proceeding further to check html
-2023-09-12 10:07:41 - WARNING - #ID: 101912 #URL http://www.RedHat.com/corp/support/docs/XFree86-upgrade/XFree86-upgrade.html Error: cannot schedule new futures after interpreter shutdown
-2023-09-12 10:07:41 - WARNING - #ID: 101912 #URL http://www.RedHat.com/corp/contac Error: cannot schedule new futures after interpreter shutdown
-2023-09-12 10:07:41 - WARNING - #ID: 101912 #URL http://www.xfree86.org/#news Error: cannot schedule new futures after interpreter shutdown
-2023-09-12 10:07:41 - WARNING - #ID: 101912 #URL http://www.xfree86.org/3.3.5/RELNOTES.html Error: cannot schedule new futures after interpreter shutdown
-2023-09-12 10:07:41 - ERROR - #ID: 101912 #URL http://www.xfree86.org/3.3.5/RELNOTES.html Error: cannot schedule new futures after interpreter shutdown
-2023-09-12 10:07:41 - INFO - ID: 101912 #COLUMN: fulltext #URL: http://www.RedHat.com/corp/support/docs/XFree86-upgrade/XFree86-upgrade.html added for more checking
-2023-09-12 10:07:41 - ERROR - #ID: 101912 #URL http://www.xfree86.org/3.3.5/RELNOTES.html Error: cannot schedule new futures after interpreter shutdown
-2023-09-12 10:07:41 - INFO - ID: 101912 #COLUMN: fulltext #URL: http://www.RedHat.com/corp/contac added for more checking
-2023-09-12 10:07:41 - ERROR - #ID: 101912 #URL http://www.xfree86.org/3.3.5/RELNOTES.html Error: cannot schedule new futures after interpreter shutdown
-2023-09-12 10:07:41 - INFO - ID: 101912 #COLUMN: fulltext #URL: http://www.xfree86.org/#news added for more checking
-2023-09-12 10:07:41 - ERROR - #ID: 101912 #URL http://www.xfree86.org/3.3.5/RELNOTES.html Error: cannot schedule new futures after interpreter shutdown
-2023-09-12 10:07:41 - INFO - ID: 101912 #COLUMN: fulltext #URL: http://www.xfree86.org/3.3.5/RELNOTES.html added for more checking
-2023-09-12 10:07:41 - INFO - Multi-Thread script (Thread ID : 140473961797184): Processing ID :101913  **********  414/93342 - 0.4%
-2023-09-12 10:07:41 - INFO - processing  101913 - introtext is not JSON, proceeding further to check HTML
-2023-09-12 10:07:41 - INFO - processing 101913 - fulltext is not json proceeding further to check html
-2023-09-12 10:21:42 - INFO - Multi-Thread script (Thread ID : 140131586537024): Processing ID :101925  **********  1/93342 - 0.0%
-2023-09-12 10:21:42 - INFO - processing  101925 - introtext is not JSON, proceeding further to check HTML
-2023-09-12 10:21:44 - INFO - processing 101925 - fulltext is not json proceeding further to check html
-2023-09-12 10:21:44 - INFO - ID: 101925 #COLUMN: fulltext #URL: ftp://updates.RedHat.com/6.0/i386/ replaced with null
-2023-09-12 10:21:44 - INFO - ID: 101925 #COLUMN: fulltext #URL: ftp://updates.RedHat.com/6.0/alpha/ replaced with null
-2023-09-12 10:21:44 - INFO - ID: 101925 #COLUMN: fulltext #URL: ftp://updates.RedHat.com/6.0/sparc/ replaced with null
-2023-09-12 10:26:36 - WARNING - #ID: 101925 #URL http://www.RedHat.com/corp/contac Error: Message: Failed to read marionette port
-
-2023-09-12 10:26:36 - WARNING - #ID: 101925 #URL http://www.geek-girl.com/bugtraq/1999_2/0685.html Error: 
-2023-09-12 10:26:36 - INFO - #ID: 101925 #URL http://www.geek-girl.com/bugtraq/1999_2/0685.html - Requesting again using GET request instead of HEAD
-2023-09-12 10:26:39 - ERROR - #ID: 101925 #URL http://www.geek-girl.com/bugtraq/1999_2/0685.html Error: Message: Failed to read marionette port
-
-2023-09-12 10:30:44 - INFO - Multi-Thread script (Thread ID : 140643653375552): Processing ID :101925  **********  1/93342 - 0.0%
-2023-09-12 10:30:44 - INFO - processing  101925 - introtext is not JSON, proceeding further to check HTML
-2023-09-12 10:30:50 - INFO - processing 101925 - fulltext is not json proceeding further to check html
-2023-09-12 10:30:50 - INFO - ID: 101925 #COLUMN: fulltext #URL: ftp://updates.RedHat.com/6.0/i386/ replaced with null
-2023-09-12 10:30:50 - INFO - ID: 101925 #COLUMN: fulltext #URL: ftp://updates.RedHat.com/6.0/alpha/ replaced with null
-2023-09-12 10:30:50 - INFO - ID: 101925 #COLUMN: fulltext #URL: ftp://updates.RedHat.com/6.0/sparc/ replaced with null
-2023-09-12 10:32:41 - WARNING - #ID: 101925 #URL http://www.RedHat.com/corp/contac Error: Message: Process unexpectedly closed with status 1
-
-2023-09-12 10:32:43 - WARNING - #ID: 101925 #URL http://www.geek-girl.com/bugtraq/1999_2/0685.html Error: Message: Process unexpectedly closed with status 1
-
-2023-09-12 10:32:43 - ERROR - #ID: 101925 #URL http://www.geek-girl.com/bugtraq/1999_2/0685.html Error: Message: Process unexpectedly closed with status 1
-
-2023-09-12 10:33:16 - INFO - Multi-Thread script (Thread ID : 139916126180928): Processing ID :101925  **********  1/93342 - 0.0%
-2023-09-12 10:33:16 - INFO - processing  101925 - introtext is not JSON, proceeding further to check HTML
-2023-09-12 10:33:17 - INFO - processing 101925 - fulltext is not json proceeding further to check html
-2023-09-12 10:33:17 - INFO - ID: 101925 #COLUMN: fulltext #URL: ftp://updates.RedHat.com/6.0/i386/ replaced with null
-2023-09-12 10:33:17 - INFO - ID: 101925 #COLUMN: fulltext #URL: ftp://updates.RedHat.com/6.0/alpha/ replaced with null
-2023-09-12 10:33:17 - INFO - ID: 101925 #COLUMN: fulltext #URL: ftp://updates.RedHat.com/6.0/sparc/ replaced with null
-2023-09-12 10:33:30 - WARNING - #ID: 101925 #URL http://www.geek-girl.com/bugtraq/1999_2/0685.html Error: Message: Process unexpectedly closed with status 1
-
-2023-09-12 10:33:31 - WARNING - #ID: 101925 #URL http://www.RedHat.com/corp/contac Error: Message: Process unexpectedly closed with status 1
-
-2023-09-12 10:33:31 - ERROR - #ID: 101925 #URL http://www.geek-girl.com/bugtraq/1999_2/0685.html Error: Message: Process unexpectedly closed with status 1
-
-2023-09-12 10:34:39 - INFO - Multi-Thread script (Thread ID : 140362517792320): Processing ID :101925  **********  1/93342 - 0.0%
-2023-09-12 10:34:39 - INFO - processing  101925 - introtext is not JSON, proceeding further to check HTML
-2023-09-12 10:34:41 - INFO - processing 101925 - fulltext is not json proceeding further to check html
-2023-09-12 10:34:41 - INFO - ID: 101925 #COLUMN: fulltext #URL: ftp://updates.RedHat.com/6.0/i386/ replaced with null
-2023-09-12 10:34:41 - INFO - ID: 101925 #COLUMN: fulltext #URL: ftp://updates.RedHat.com/6.0/alpha/ replaced with null
-2023-09-12 10:34:41 - INFO - ID: 101925 #COLUMN: fulltext #URL: ftp://updates.RedHat.com/6.0/sparc/ replaced with null
-2023-09-12 10:34:47 - WARNING - #ID: 101925 #URL http://www.RedHat.com/corp/contac Error: Message: binary is not a Firefox executable
-
-2023-09-12 10:34:48 - WARNING - #ID: 101925 #URL http://www.geek-girl.com/bugtraq/1999_2/0685.html Error: Message: binary is not a Firefox executable
-
-2023-09-12 10:34:48 - ERROR - #ID: 101925 #URL http://www.geek-girl.com/bugtraq/1999_2/0685.html Error: Message: binary is not a Firefox executable
-
-2023-09-12 10:37:18 - INFO - Multi-Thread script (Thread ID : 140199963346496): Processing ID :101925  **********  1/93342 - 0.0%
-2023-09-12 10:37:18 - INFO - processing  101925 - introtext is not JSON, proceeding further to check HTML
-2023-09-12 10:37:19 - INFO - processing 101925 - fulltext is not json proceeding further to check html
-2023-09-12 10:37:19 - INFO - ID: 101925 #COLUMN: fulltext #URL: ftp://updates.RedHat.com/6.0/i386/ replaced with null
-2023-09-12 10:37:19 - INFO - ID: 101925 #COLUMN: fulltext #URL: ftp://updates.RedHat.com/6.0/alpha/ replaced with null
-2023-09-12 10:37:19 - INFO - ID: 101925 #COLUMN: fulltext #URL: ftp://updates.RedHat.com/6.0/sparc/ replaced with null
-2023-09-12 10:43:32 - WARNING - #ID: 101925 #URL http://www.geek-girl.com/bugtraq/1999_2/0685.html Error: Message: binary is not a Firefox executable
-
-2023-09-12 10:43:32 - WARNING - #ID: 101925 #URL http://www.RedHat.com/corp/contac Error: 
-2023-09-12 10:43:32 - INFO - #ID: 101925 #URL http://www.RedHat.com/corp/contac - Requesting again using GET request instead of HEAD
-2023-09-12 11:20:44 - INFO - Multi-Thread script (Thread ID : 140276336379456): Processing ID :101925  **********  1/93342 - 0.0%
-2023-09-12 11:20:44 - INFO - processing  101925 - introtext is not JSON, proceeding further to check HTML
-2023-09-12 11:20:48 - INFO - processing 101925 - fulltext is not json proceeding further to check html
-2023-09-12 11:20:51 - INFO - ID: 101925 #COLUMN: fulltext #URL: ftp://updates.RedHat.com/6.0/i386/ replaced with null
-2023-09-12 11:21:08 - INFO - ID: 101925 #COLUMN: fulltext #URL: ftp://updates.RedHat.com/6.0/alpha/ replaced with null
-2023-09-12 11:21:10 - INFO - ID: 101925 #COLUMN: fulltext #URL: ftp://updates.RedHat.com/6.0/sparc/ replaced with null
-2023-09-12 11:23:37 - INFO - Multi-Thread script (Thread ID : 140539315877440): Processing ID :101925  **********  1/93342 - 0.0%
-2023-09-12 11:23:37 - INFO - processing  101925 - introtext is not JSON, proceeding further to check HTML
-2023-09-12 11:23:40 - INFO - processing 101925 - fulltext is not json proceeding further to check html
-2023-09-12 11:23:45 - INFO - ID: 101925 #COLUMN: fulltext #URL: ftp://updates.RedHat.com/6.0/i386/ replaced with null
-2023-09-12 11:23:45 - INFO - ID: 101925 #COLUMN: fulltext #URL: ftp://updates.RedHat.com/6.0/alpha/ replaced with null
-2023-09-12 11:23:45 - INFO - ID: 101925 #COLUMN: fulltext #URL: ftp://updates.RedHat.com/6.0/sparc/ replaced with null
-2023-09-12 11:23:54 - WARNING - #ID: 101925 #URL http://www.geek-girl.com/bugtraq/1999_2/0685.html Error: Message: Unable to locate or obtain driver for firefox; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors/driver_location
-
-2023-09-12 11:24:07 - WARNING - #ID: 101925 #URL http://www.RedHat.com/corp/contac Error: Message: Unable to locate or obtain driver for firefox; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors/driver_location
-
-2023-09-12 11:24:07 - ERROR - #ID: 101925 #URL http://www.geek-girl.com/bugtraq/1999_2/0685.html Error: Message: Unable to locate or obtain driver for firefox; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors/driver_location
-
-2023-09-12 11:24:07 - INFO - ID: 101925 #COLUMN: fulltext #URL: http://www.RedHat.com/corp/contac added for more checking
-2023-09-12 11:24:07 - ERROR - #ID: 101925 #URL http://www.geek-girl.com/bugtraq/1999_2/0685.html Error: Message: Unable to locate or obtain driver for firefox; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors/driver_location
-
-2023-09-12 11:24:07 - INFO - ID: 101925 #COLUMN: fulltext #URL: http://www.geek-girl.com/bugtraq/1999_2/0685.html added for more checking
-2023-09-12 11:24:07 - INFO - ID: 101925 has been updated in the database
-2023-09-12 11:24:07 - INFO - Processing ID: 101925 completed
-2023-09-12 11:33:18 - INFO - Multi-Thread script (Thread ID : 140381792224832): Processing ID :101925  **********  1/93342 - 0.0%
-2023-09-12 11:33:18 - INFO - processing  101925 - introtext is not JSON, proceeding further to check HTML
-2023-09-12 11:33:21 - INFO - processing 101925 - fulltext is not json proceeding further to check html
-2023-09-12 11:34:12 - WARNING - #ID: 101925 #URL http://www.RedHat.com/corp/contac Error: Message: Unable to locate or obtain driver for firefox; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors/driver_location
-
-2023-09-12 11:34:12 - WARNING - #ID: 101925 #URL http://www.geek-girl.com/bugtraq/1999_2/0685.html Error: 
-2023-09-12 11:34:12 - INFO - #ID: 101925 #URL http://www.geek-girl.com/bugtraq/1999_2/0685.html - Requesting again using GET request instead of HEAD
-2023-09-12 11:34:17 - ERROR - #ID: 101925 #URL http://www.geek-girl.com/bugtraq/1999_2/0685.html Error: Message: Unable to locate or obtain driver for firefox; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors/driver_location
-
-2023-09-12 11:34:38 - INFO - ID: 101925 #COLUMN: fulltext #URL: http://www.RedHat.com/corp/contac added for more checking
-2023-09-12 11:49:45 - INFO - Multi-Thread script (Thread ID : 140018819528256): Processing ID :101930  **********  1/93342 - 0.0%
-2023-09-12 11:49:45 - INFO - processing  101930 - introtext is not JSON, proceeding further to check HTML
-2023-09-12 11:49:47 - INFO - processing 101930 - fulltext is not json proceeding further to check html
-2023-09-12 11:49:47 - INFO - ID: 101930 #COLUMN: fulltext #URL: ftp://updates.RedHat.com/6.1/i386/ replaced with null
-2023-09-12 11:49:47 - INFO - ID: 101930 #COLUMN: fulltext #URL: ftp://updates.RedHat.com/6.1/SRPMS replaced with null
-2023-09-12 11:52:32 - WARNING - #ID: 101930 #URL http://home.netscape.com/eng/mozilla/4.7/relnotes/unix-4.7.html Error: Message: Unable to locate or obtain driver for firefox; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors/driver_location
-
-2023-09-12 11:52:38 - WARNING - #ID: 101930 #URL http://www.RedHat.com/corp/contact.html Error: Message: Unable to locate or obtain driver for firefox; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors/driver_location
-
-2023-09-12 11:52:38 - ERROR - #ID: 101930 #URL http://www.RedHat.com/corp/contact.html Error: Message: Unable to locate or obtain driver for firefox; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors/driver_location
-
-2023-09-12 11:52:50 - INFO - ID: 101930 #COLUMN: fulltext #URL: http://home.netscape.com/eng/mozilla/4.7/relnotes/unix-4.7.html added for more checking
-2023-09-12 11:52:50 - ERROR - #ID: 101930 #URL http://www.RedHat.com/corp/contact.html Error: Message: Unable to locate or obtain driver for firefox; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors/driver_location
-
-2023-09-12 12:07:12 - INFO - Multi-Thread script (Thread ID : 139772186060352): Processing ID :101930  **********  1/93342 - 0.0%
-2023-09-12 12:07:12 - INFO - processing  101930 - introtext is not JSON, proceeding further to check HTML
-2023-09-12 12:07:15 - INFO - processing 101930 - fulltext is not json proceeding further to check html
-2023-09-12 12:07:15 - INFO - ID: 101930 #COLUMN: fulltext #URL: ftp://updates.RedHat.com/6.1/i386/ replaced with null
-2023-09-12 12:07:15 - INFO - ID: 101930 #COLUMN: fulltext #URL: ftp://updates.RedHat.com/6.1/SRPMS replaced with null
-2023-09-12 12:10:03 - WARNING - #ID: 101930 #URL http://home.netscape.com/eng/mozilla/4.7/relnotes/unix-4.7.html Error: Message: binary is not a Firefox executable
-
-2023-09-12 12:10:12 - WARNING - #ID: 101930 #URL http://www.RedHat.com/corp/contact.html Error: Message: binary is not a Firefox executable
-
-2023-09-12 12:10:12 - ERROR - #ID: 101930 #URL http://www.RedHat.com/corp/contact.html Error: Message: binary is not a Firefox executable
-
-2023-09-12 12:10:21 - INFO - ID: 101930 #COLUMN: fulltext #URL: http://home.netscape.com/eng/mozilla/4.7/relnotes/unix-4.7.html added for more checking
-2023-09-12 12:10:21 - ERROR - #ID: 101930 #URL http://www.RedHat.com/corp/contact.html Error: Message: binary is not a Firefox executable
-
-2023-09-12 12:15:06 - INFO - Multi-Thread script (Thread ID : 140453819184704): Processing ID :101930  **********  1/93342 - 0.0%
-2023-09-12 12:15:06 - INFO - processing  101930 - introtext is not JSON, proceeding further to check HTML
-2023-09-12 12:15:07 - INFO - processing 101930 - fulltext is not json proceeding further to check html
-2023-09-12 12:15:07 - INFO - ID: 101930 #COLUMN: fulltext #URL: ftp://updates.RedHat.com/6.1/i386/ replaced with null
-2023-09-12 12:15:07 - INFO - ID: 101930 #COLUMN: fulltext #URL: ftp://updates.RedHat.com/6.1/SRPMS replaced with null
-2023-09-12 12:15:20 - WARNING - #ID: 101930 #URL http://home.netscape.com/eng/mozilla/4.7/relnotes/unix-4.7.html Error: WebDriver.__init__() got an unexpected keyword argument 'executable_path'
-2023-09-12 12:15:20 - WARNING - #ID: 101930 #URL http://www.RedHat.com/corp/contact.html Error: 
-2023-09-12 12:15:20 - INFO - #ID: 101930 #URL http://www.RedHat.com/corp/contact.html - Requesting again using GET request instead of HEAD
-2023-09-12 12:15:22 - ERROR - #ID: 101930 #URL http://www.RedHat.com/corp/contact.html Error: WebDriver.__init__() got an unexpected keyword argument 'executable_path'
-2023-09-12 12:15:22 - INFO - ID: 101930 #COLUMN: fulltext #URL: http://home.netscape.com/eng/mozilla/4.7/relnotes/unix-4.7.html added for more checking
-2023-09-12 12:15:22 - INFO - Skipped ID: 101930 #COLUMN: fulltext #URL: http://www.RedHat.com/corp/contact.html #STATUS_CODE: 404 #Replace with NULL
-2023-09-12 12:15:22 - INFO - ID: 101930 has been updated in the database
-2023-09-12 12:15:22 - INFO - Processing ID: 101930 completed
-2023-09-12 12:30:38 - INFO - Multi-Thread script (Thread ID : 140631532656192): Processing ID :101930  **********  1/93342 - 0.0%
-2023-09-12 12:30:38 - INFO - processing  101930 - introtext is not JSON, proceeding further to check HTML
-2023-09-12 12:30:39 - INFO - processing 101930 - fulltext is not json proceeding further to check html
-2023-09-12 12:30:57 - WARNING - #ID: 101930 #URL http://home.netscape.com/eng/mozilla/4.7/relnotes/unix-4.7.html Error: WebDriver.__init__() got an unexpected keyword argument 'executable_path'
-2023-09-12 12:30:57 - WARNING - #ID: 101930 #URL http://www.RedHat.com/corp/contact.html Error: 
-2023-09-12 12:30:57 - INFO - #ID: 101930 #URL http://www.RedHat.com/corp/contact.html - Requesting again using GET request instead of HEAD
-2023-09-12 12:30:59 - ERROR - #ID: 101930 #URL http://www.RedHat.com/corp/contact.html Error: WebDriver.__init__() got an unexpected keyword argument 'executable_path'
-2023-09-12 12:31:14 - INFO - ID: 101930 #COLUMN: fulltext #URL: http://home.netscape.com/eng/mozilla/4.7/relnotes/unix-4.7.html added for more checking
-2023-09-12 13:14:13 - INFO - Multi-Thread script (Thread ID : 140212113196608): Processing ID :101933  **********  1/93342 - 0.0%
-2023-09-12 13:14:13 - INFO - processing  101933 - introtext is not JSON, proceeding further to check HTML
-2023-09-12 13:14:15 - INFO - processing 101933 - fulltext is not json proceeding further to check html
-2023-09-12 13:14:15 - INFO - ID: 101933 #COLUMN: fulltext #URL: ftp://updates.RedHat.com/6.1/i386/ replaced with null
-2023-09-12 13:14:15 - INFO - ID: 101933 #COLUMN: fulltext #URL: ftp://updates.RedHat.com/6.0/alpha replaced with null
-2023-09-12 13:14:15 - INFO - ID: 101933 #COLUMN: fulltext #URL: ftp://updates.RedHat.com/6.0/sparc replaced with null
-2023-09-12 13:14:15 - INFO - ID: 101933 #COLUMN: fulltext #URL: ftp://updates.RedHat.com/6.1/SRPMS replaced with null
-2023-09-12 13:14:15 - INFO - ID: 101933 #COLUMN: fulltext #URL: ftp://updates.RedHat.com/6.1/noarch/ replaced with null
-2023-09-12 13:15:15 - WARNING - #ID: 101933 #URL http://www.RedHat.com/corp/contac Error: WebDriver.__init__() got an unexpected keyword argument 'executable_path'
-2023-09-12 13:15:30 - INFO - Skipped ID: 101933 #COLUMN: fulltext #URL: http://developer.Red #STATUS_CODE: 200
-2023-09-12 13:15:30 - ERROR - #ID: 101933 #URL http://www.RedHat.com/corp/contac Error: WebDriver.__init__() got an unexpected keyword argument 'executable_path'
-2023-09-12 13:20:58 - INFO - Multi-Thread script (Thread ID : 139883184121408): Processing ID :101933  **********  1/93342 - 0.0%
-2023-09-12 13:20:58 - INFO - processing  101933 - introtext is not JSON, proceeding further to check HTML
-2023-09-12 13:20:59 - INFO - processing 101933 - fulltext is not json proceeding further to check html
-2023-09-12 13:20:59 - INFO - ID: 101933 #COLUMN: fulltext #URL: ftp://updates.RedHat.com/6.1/i386/ replaced with null
-2023-09-12 13:20:59 - INFO - ID: 101933 #COLUMN: fulltext #URL: ftp://updates.RedHat.com/6.0/alpha replaced with null
-2023-09-12 13:20:59 - INFO - ID: 101933 #COLUMN: fulltext #URL: ftp://updates.RedHat.com/6.0/sparc replaced with null
-2023-09-12 13:20:59 - INFO - ID: 101933 #COLUMN: fulltext #URL: ftp://updates.RedHat.com/6.1/SRPMS replaced with null
-2023-09-12 13:20:59 - INFO - ID: 101933 #COLUMN: fulltext #URL: ftp://updates.RedHat.com/6.1/noarch/ replaced with null
-2023-09-12 13:21:34 - WARNING - #ID: 101933 #URL http://www.RedHat.com/corp/contac Error: Message: Process unexpectedly closed with status 1
-
-2023-09-12 13:23:21 - INFO - Multi-Thread script (Thread ID : 140392800441920): Processing ID :101933  **********  1/93342 - 0.0%
-2023-09-12 13:23:21 - INFO - processing  101933 - introtext is not JSON, proceeding further to check HTML
-2023-09-12 13:23:22 - INFO - processing 101933 - fulltext is not json proceeding further to check html
-2023-09-12 13:23:22 - INFO - ID: 101933 #COLUMN: fulltext #URL: ftp://updates.RedHat.com/6.1/i386/ replaced with null
-2023-09-12 13:23:22 - INFO - ID: 101933 #COLUMN: fulltext #URL: ftp://updates.RedHat.com/6.0/alpha replaced with null
-2023-09-12 13:23:22 - INFO - ID: 101933 #COLUMN: fulltext #URL: ftp://updates.RedHat.com/6.0/sparc replaced with null
-2023-09-12 13:23:22 - INFO - ID: 101933 #COLUMN: fulltext #URL: ftp://updates.RedHat.com/6.1/SRPMS replaced with null
-2023-09-12 13:23:22 - INFO - ID: 101933 #COLUMN: fulltext #URL: ftp://updates.RedHat.com/6.1/noarch/ replaced with null
-2023-09-12 13:23:50 - WARNING - #ID: 101933 #URL http://www.RedHat.com/corp/contac Error: Message: Process unexpectedly closed with status 1
-
-2023-09-12 13:24:40 - INFO - Multi-Thread script (Thread ID : 139997041415744): Processing ID :101933  **********  1/93342 - 0.0%
-2023-09-12 13:24:40 - INFO - processing  101933 - introtext is not JSON, proceeding further to check HTML
-2023-09-12 13:24:41 - INFO - processing 101933 - fulltext is not json proceeding further to check html
-2023-09-12 13:24:41 - INFO - ID: 101933 #COLUMN: fulltext #URL: ftp://updates.RedHat.com/6.1/i386/ replaced with null
-2023-09-12 13:24:41 - INFO - ID: 101933 #COLUMN: fulltext #URL: ftp://updates.RedHat.com/6.0/alpha replaced with null
-2023-09-12 13:24:42 - INFO - ID: 101933 #COLUMN: fulltext #URL: ftp://updates.RedHat.com/6.0/sparc replaced with null
-2023-09-12 13:24:42 - INFO - ID: 101933 #COLUMN: fulltext #URL: ftp://updates.RedHat.com/6.1/SRPMS replaced with null
-2023-09-12 13:24:42 - INFO - ID: 101933 #COLUMN: fulltext #URL: ftp://updates.RedHat.com/6.1/noarch/ replaced with null
-2023-09-12 13:27:13 - WARNING - #ID: 101933 #URL http://www.RedHat.com/corp/contac Error: Message: Failed to read marionette port
-
-2023-09-12 13:27:33 - INFO - Skipped ID: 101933 #COLUMN: fulltext #URL: http://developer.Red #STATUS_CODE: 200
-2023-09-12 13:27:33 - ERROR - #ID: 101933 #URL http://www.RedHat.com/corp/contac Error: Message: Failed to read marionette port
-
-2023-09-12 13:30:09 - INFO - Multi-Thread script (Thread ID : 140706949625408): Processing ID :101933  **********  1/93342 - 0.0%
-2023-09-12 13:30:09 - INFO - processing  101933 - introtext is not JSON, proceeding further to check HTML
-2023-09-12 13:30:10 - INFO - processing 101933 - fulltext is not json proceeding further to check html
-2023-09-12 13:30:10 - INFO - ID: 101933 #COLUMN: fulltext #URL: ftp://updates.RedHat.com/6.1/i386/ replaced with null
-2023-09-12 13:30:10 - INFO - ID: 101933 #COLUMN: fulltext #URL: ftp://updates.RedHat.com/6.0/alpha replaced with null
-2023-09-12 13:30:10 - INFO - ID: 101933 #COLUMN: fulltext #URL: ftp://updates.RedHat.com/6.0/sparc replaced with null
-2023-09-12 13:30:11 - INFO - ID: 101933 #COLUMN: fulltext #URL: ftp://updates.RedHat.com/6.1/SRPMS replaced with null
-2023-09-12 13:30:11 - INFO - ID: 101933 #COLUMN: fulltext #URL: ftp://updates.RedHat.com/6.1/noarch/ replaced with null
-2023-09-12 13:30:19 - WARNING - #ID: 101933 #URL http://www.RedHat.com/corp/contac Error: Message: Unable to locate or obtain driver for firefox; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors/driver_location
-
-2023-09-12 13:34:10 - INFO - Multi-Thread script (Thread ID : 140357599753792): Processing ID :101933  **********  1/93342 - 0.0%
-2023-09-12 13:34:10 - INFO - processing  101933 - introtext is not JSON, proceeding further to check HTML
-2023-09-12 13:34:11 - INFO - processing 101933 - fulltext is not json proceeding further to check html
-2023-09-12 13:34:11 - INFO - ID: 101933 #COLUMN: fulltext #URL: ftp://updates.RedHat.com/6.1/i386/ replaced with null
-2023-09-12 13:34:11 - INFO - ID: 101933 #COLUMN: fulltext #URL: ftp://updates.RedHat.com/6.0/alpha replaced with null
-2023-09-12 13:34:11 - INFO - ID: 101933 #COLUMN: fulltext #URL: ftp://updates.RedHat.com/6.0/sparc replaced with null
-2023-09-12 13:34:11 - INFO - ID: 101933 #COLUMN: fulltext #URL: ftp://updates.RedHat.com/6.1/SRPMS replaced with null
-2023-09-12 13:34:11 - INFO - ID: 101933 #COLUMN: fulltext #URL: ftp://updates.RedHat.com/6.1/noarch/ replaced with null
-2023-09-12 13:36:36 - WARNING - #ID: 101933 #URL http://www.RedHat.com/corp/contac Error: Message: Failed to read marionette port
-
-2023-09-12 13:36:46 - INFO - Skipped ID: 101933 #COLUMN: fulltext #URL: http://developer.Red #STATUS_CODE: 200
-2023-09-12 13:36:46 - ERROR - #ID: 101933 #URL http://www.RedHat.com/corp/contac Error: Message: Failed to read marionette port
-
-2023-09-12 13:49:54 - INFO - Multi-Thread script (Thread ID : 140169940297280): Processing ID :278756  **********  1/93342 - 0.0%
-2023-09-12 13:49:54 - INFO - processing  278756 - introtext is not JSON, proceeding further to check HTML
-2023-09-12 13:50:13 - INFO - processing 278756 - fulltext is not json proceeding further to check html
-2023-09-12 13:51:06 - WARNING - #ID: 278756 #URL https://doc.opensuse.org/documentation/leap/startup/html/book.opensuse.startup/cha.update.osuse.html Error: [Errno 8] Exec format error: '/usr/local/bin/geckodriver'
-2023-09-12 13:51:24 - INFO - Skipped ID: 278756 #COLUMN: fulltext #URL: https://en.opensuse.org/Lifetime #STATUS_CODE: 200
-2023-09-12 13:51:24 - ERROR - #ID: 278756 #URL https://en.opensuse.org/SDB:Offline_upgrade Error: [Errno 8] Exec format error: '/usr/local/bin/geckodriver'
-2023-09-12 13:52:45 - INFO - Multi-Thread script (Thread ID : 139762463667776): Processing ID :278756  **********  1/93342 - 0.0%
-2023-09-12 13:52:45 - INFO - processing  278756 - introtext is not JSON, proceeding further to check HTML
-2023-09-12 13:52:46 - INFO - processing 278756 - fulltext is not json proceeding further to check html
-2023-09-12 13:52:59 - WARNING - #ID: 278756 #URL https://doc.opensuse.org/documentation/leap/startup/html/book.opensuse.startup/cha.update.osuse.html Error: [Errno 8] Exec format error: '/usr/local/bin/geckodriver'
-2023-09-12 13:52:59 - WARNING - #ID: 278756 #URL https://en.opensuse.org/SDB:System_upgrade Error: 
-2023-09-12 13:52:59 - INFO - #ID: 278756 #URL https://en.opensuse.org/SDB:System_upgrade - Requesting again using GET request instead of HEAD
-2023-09-12 13:53:11 - INFO - Skipped ID: 278756 #COLUMN: fulltext #URL: https://en.opensuse.org/Lifetime #STATUS_CODE: 200
-2023-09-12 13:53:11 - ERROR - #ID: 278756 #URL https://en.opensuse.org/SDB:Offline_upgrade Error: [Errno 8] Exec format error: '/usr/local/bin/geckodriver'
-2023-09-12 13:57:06 - INFO - Multi-Thread script (Thread ID : 140099835872832): Processing ID :278756  **********  1/93342 - 0.0%
-2023-09-12 13:57:06 - INFO - processing  278756 - introtext is not JSON, proceeding further to check HTML
-2023-09-12 13:57:07 - INFO - processing 278756 - fulltext is not json proceeding further to check html
-2023-09-12 13:57:18 - WARNING - #ID: 278756 #URL https://en.opensuse.org/Lifetime Error: 
-2023-09-12 13:57:18 - INFO - #ID: 278756 #URL https://en.opensuse.org/Lifetime - Requesting again using GET request instead of HEAD
-2023-09-12 13:57:18 - WARNING - #ID: 278756 #URL https://en.opensuse.org/SDB:System_upgrade Error: 
-2023-09-12 13:57:18 - INFO - #ID: 278756 #URL https://en.opensuse.org/SDB:System_upgrade - Requesting again using GET request instead of HEAD
-2023-09-12 13:57:18 - WARNING - #ID: 278756 #URL https://doc.opensuse.org/documentation/leap/startup/html/book.opensuse.startup/cha.update.osuse.html Error: 
-2023-09-12 13:57:18 - INFO - #ID: 278756 #URL https://doc.opensuse.org/documentation/leap/startup/html/book.opensuse.startup/cha.update.osuse.html - Requesting again using GET request instead of HEAD
-2023-09-12 13:57:29 - WARNING - #ID: 278756 Error: Timeout 
-2023-09-12 13:57:42 - INFO - ID: 278756 #COLUMN: fulltext #URL: https://en.opensuse.org/Lifetime added for more checking
-2023-09-12 13:57:42 - WARNING - #ID: 278756 Error: Timeout 
-2023-09-12 13:57:50 - INFO - ID: 278756 #COLUMN: fulltext #URL: https://doc.opensuse.org/documentation/leap/startup/html/book.opensuse.startup/cha.update.osuse.html added for more checking
-2023-09-12 13:57:57 - INFO - Skipped ID: 278756 #COLUMN: fulltext #URL: https://en.opensuse.org/SDB:System_upgrade #STATUS_CODE: 200
-2023-09-12 14:00:09 - INFO - Multi-Thread script (Thread ID : 140491691869760): Processing ID :278756  **********  1/93342 - 0.0%
-2023-09-12 14:00:09 - INFO - processing  278756 - introtext is not JSON, proceeding further to check HTML
-2023-09-12 14:00:11 - INFO - processing 278756 - fulltext is not json proceeding further to check html
-2023-09-12 14:00:22 - WARNING - #ID: 278756 #URL https://en.opensuse.org/Lifetime Error: 
-2023-09-12 14:00:22 - INFO - #ID: 278756 #URL https://en.opensuse.org/Lifetime - Requesting again using GET request instead of HEAD
-2023-09-12 14:00:22 - WARNING - #ID: 278756 #URL https://doc.opensuse.org/documentation/leap/startup/html/book.opensuse.startup/cha.update.osuse.html Error: 
-2023-09-12 14:00:22 - INFO - #ID: 278756 #URL https://doc.opensuse.org/documentation/leap/startup/html/book.opensuse.startup/cha.update.osuse.html - Requesting again using GET request instead of HEAD
-2023-09-12 14:00:33 - WARNING - #ID: 278756 Error: Timeout 
-2023-09-12 14:00:48 - INFO - ID: 278756 #COLUMN: fulltext #URL: https://en.opensuse.org/Lifetime added for more checking
-2023-09-12 14:00:48 - WARNING - #ID: 278756 Error: Timeout 
-2023-09-12 15:04:56 - INFO - Multi-Thread script (Thread ID : 140179746584128): Processing ID :278756  **********  1/93342 - 0.0%
-2023-09-12 15:04:56 - INFO - processing  278756 - introtext is not JSON, proceeding further to check HTML
-2023-09-12 15:05:12 - INFO - processing 278756 - fulltext is not json proceeding further to check html
-2023-09-12 15:05:32 - INFO - Skipped ID: 278756 #COLUMN: fulltext #URL: https://en.opensuse.org/Lifetime #STATUS_CODE: 200
-2023-09-12 15:06:25 - INFO - Skipped ID: 278756 #COLUMN: fulltext #URL: https://doc.opensuse.org/documentation/leap/startup/html/book.opensuse.startup/cha.update.osuse.html #STATUS_CODE: 404 #Replace with NULL
-2023-09-12 15:07:09 - INFO - Skipped ID: 278756 #COLUMN: fulltext #URL: https://en.opensuse.org/SDB:System_upgrade #STATUS_CODE: 200
-2023-09-12 15:07:10 - INFO - Skipped ID: 278756 #COLUMN: fulltext #URL: https://en.opensuse.org/SDB:Offline_upgrade #STATUS_CODE: 200
-2023-09-12 15:07:42 - INFO - ID: 278756 has been updated in the database
-2023-09-12 15:07:43 - INFO - Processing ID: 278756 completed
-2023-09-12 15:43:27 - INFO - Multi-Thread script (Thread ID : 139727365731904): Processing ID :14  **********  3/93342 - 0.0%
-2023-09-12 15:43:56 - INFO - processing  14 - introtext is not JSON, proceeding further to check HTML
-2023-09-12 15:44:07 - WARNING - #ID: 14 #URL https://www.LinuxSecurity.com Error: 
-2023-09-12 15:44:07 - INFO - #ID: 14 #URL https://www.LinuxSecurity.com - Requesting again using GET request instead of HEAD
-2023-09-12 15:44:18 - INFO - Skipped ID: 14 #COLUMN: introtext #URL: https://www.LinuxSecurity.com #STATUS_CODE: 200
-2023-09-12 15:44:18 - INFO - processing 14 - fulltext is not json proceeding further to check html
-2023-09-12 15:44:30 - INFO - Multi-Thread script (Thread ID : 139727365731904): Processing ID :17  **********  6/93342 - 0.0%
-2023-09-12 15:44:30 - INFO - processing  17 - introtext is not JSON, proceeding further to check HTML
-2023-09-12 15:44:30 - INFO - mailto:security@linuxsecurity.com is skiped for checking:- present in SKIP_CHECK_SITES 
-2023-09-12 15:44:30 - INFO - mailto:contribute@linuxsecurity.com is skiped for checking:- present in SKIP_CHECK_SITES 
-2023-09-12 15:44:38 - INFO - mailto:info@linuxsecurity.com is skiped for checking:- present in SKIP_CHECK_SITES 
-2023-09-12 15:44:38 - INFO - mailto:editorial@linuxsecurity.com is skiped for checking:- present in SKIP_CHECK_SITES 
-2023-09-12 15:44:38 - INFO - mailto:sales@linuxsecurity.com is skiped for checking:- present in SKIP_CHECK_SITES 
-2023-09-12 15:44:38 - INFO - processing 17 - fulltext is not json proceeding further to check html
-2023-09-12 15:44:43 - INFO - Multi-Thread script (Thread ID : 139727365731904): Processing ID :18  **********  7/93342 - 0.0%
-2023-09-12 15:44:43 - INFO - processing  18 - introtext is not JSON, proceeding further to check HTML
-2023-09-12 15:44:43 - INFO - mailto:security-discuss-request@linuxsecurity.com?Subject=subscribe is skiped for checking:- present in SKIP_CHECK_SITES 
-2023-09-12 15:44:43 - INFO - mailto:vuln-newsletter-request@linuxsecurity.com?Subject=subscribe is skiped for checking:- present in SKIP_CHECK_SITES 
-2023-09-12 15:44:43 - INFO - processing 18 - fulltext is not json proceeding further to check html
-2023-09-12 15:44:43 - INFO - Multi-Thread script (Thread ID : 139727365731904): Processing ID :20  **********  8/93342 - 0.0%
-2023-09-12 15:44:43 - INFO - processing  20 - introtext is not JSON, proceeding further to check HTML
-2023-09-12 15:44:47 - INFO - processing 20 - fulltext is not json proceeding further to check html
-2023-09-12 15:44:47 - INFO - Multi-Thread script (Thread ID : 139727365731904): Processing ID :86096  **********  13/93342 - 0.0%
-2023-09-12 15:44:47 - INFO - processing  86096 - introtext is not JSON, proceeding further to check HTML
-2023-09-12 15:44:47 - INFO - processing 86096 - fulltext is not json proceeding further to check html
-2023-09-12 15:44:47 - INFO - Multi-Thread script (Thread ID : 139727365731904): Processing ID :101882  **********  14/93342 - 0.0%
-2023-09-12 15:44:47 - INFO - processing  101882 - introtext is not JSON, proceeding further to check HTML
-2023-09-12 15:44:47 - INFO - processing 101882 - fulltext is not json proceeding further to check html
-2023-09-12 15:45:06 - WARNING - #ID: 101882 #URL http://www.chkrootkit.org Error: 
-2023-09-12 15:45:06 - INFO - #ID: 101882 #URL http://www.chkrootkit.org - Requesting again using GET request instead of HEAD
-2023-09-12 15:45:17 - WARNING - #ID: 101882 Error: Timeout 
-2023-09-12 15:45:17 - INFO - ID: 101882 #COLUMN: fulltext #URL: http://www.chkrootkit.org added for more checking
-2023-09-12 15:45:17 - INFO - Skipped ID: 101882 #COLUMN: fulltext #URL: https://www.chkrootkit.org #STATUS_CODE: 200
-2023-09-12 15:45:17 - INFO - ID: 101882 #COLUMN: fulltext #URL: mailo:ciaglia@netwosix.org #STATUS_CODE: 404 - Replaced with #TEXT: ciaglia@netwosix.org
-2023-09-12 15:45:18 - INFO - ID: 101882 has been updated in the database
-2023-09-12 15:45:18 - INFO - Processing ID: 101882 completed
-2023-09-12 15:45:18 - INFO - Multi-Thread script (Thread ID : 139727365731904): Processing ID :101883  **********  16/93342 - 0.0%
-2023-09-12 15:45:18 - INFO - processing  101883 - introtext is not JSON, proceeding further to check HTML
-2023-09-12 15:45:18 - INFO - processing 101883 - fulltext is not json proceeding further to check html
-2023-09-12 15:45:28 - WARNING - #ID: 101883 #URL http://www.guardiandigital.com Error: 
-2023-09-12 15:45:28 - INFO - #ID: 101883 #URL http://www.guardiandigital.com - Requesting again using GET request instead of HEAD
-2023-09-12 15:45:39 - WARNING - #ID: 101883 Error: Timeout 
-2023-09-12 15:45:39 - INFO - ID: 101883 #COLUMN: fulltext #URL: http://www.guardiandigital.com added for more checking
-2023-09-12 15:45:40 - INFO - Multi-Thread script (Thread ID : 139727365731904): Processing ID :101884  **********  21/93342 - 0.0%
-2023-09-12 15:45:40 - INFO - processing  101884 - introtext is not JSON, proceeding further to check HTML
-2023-09-12 15:45:40 - INFO - processing 101884 - fulltext is not json proceeding further to check html
-2023-09-12 15:45:40 - INFO - mailto:duane@sukkha.info is skiped for checking:- present in SKIP_CHECK_SITES 
-2023-09-12 15:45:49 - INFO - Skipped ID: 101884 #COLUMN: fulltext #URL: http://ccrypt.sourceforge.net/ #STATUS_CODE: 200
-2023-09-12 15:45:49 - INFO - Skipped ID: 101884 #COLUMN: fulltext #URL: http://www.gnupg.org #STATUS_CODE: 307
-2023-09-12 15:45:49 - INFO - Multi-Thread script (Thread ID : 139727365731904): Processing ID :101887  **********  23/93342 - 0.0%
-2023-09-12 15:45:49 - INFO - processing  101887 - introtext is not JSON, proceeding further to check HTML
-2023-09-12 15:45:59 - WARNING - #ID: 101887 #URL https://linuxsecurity.com/content/blogcategory/93/106/ Error: 
-2023-09-12 15:45:59 - INFO - #ID: 101887 #URL https://linuxsecurity.com/content/blogcategory/93/106/ - Requesting again using GET request instead of HEAD
-2023-09-12 15:45:59 - WARNING - #ID: 101887 #URL https://linuxsecurity.com/content/blogcategory/88/101/ Error: 
-2023-09-12 15:45:59 - INFO - #ID: 101887 #URL https://linuxsecurity.com/content/blogcategory/88/101/ - Requesting again using GET request instead of HEAD
-2023-09-12 15:45:59 - WARNING - #ID: 101887 #URL https://linuxsecurity.com/content/blogcategory/99/111/ Error: 
-2023-09-12 15:45:59 - INFO - #ID: 101887 #URL https://linuxsecurity.com/content/blogcategory/99/111/ - Requesting again using GET request instead of HEAD
-2023-09-12 15:45:59 - WARNING - #ID: 101887 #URL https://linuxsecurity.com/content/blogcategory/89/102/ Error: 
-2023-09-12 15:45:59 - INFO - #ID: 101887 #URL https://linuxsecurity.com/content/blogcategory/89/102/ - Requesting again using GET request instead of HEAD
-2023-09-12 15:45:59 - WARNING - #ID: 101887 #URL https://linuxsecurity.com/content/blogcategory/85/98/ Error: 
-2023-09-12 15:45:59 - INFO - #ID: 101887 #URL https://linuxsecurity.com/content/blogcategory/85/98/ - Requesting again using GET request instead of HEAD
-2023-09-12 15:45:59 - WARNING - #ID: 101887 #URL https://linuxsecurity.com/content/blogcategory/87/100/ Error: 
-2023-09-12 15:46:00 - INFO - #ID: 101887 #URL https://linuxsecurity.com/content/blogcategory/87/100/ - Requesting again using GET request instead of HEAD
-2023-09-12 15:46:00 - WARNING - #ID: 101887 #URL https://linuxsecurity.com/content/blogcategory/101/113/ Error: 
-2023-09-12 15:46:00 - INFO - #ID: 101887 #URL https://linuxsecurity.com/content/blogcategory/101/113/ - Requesting again using GET request instead of HEAD
-2023-09-12 15:46:00 - WARNING - #ID: 101887 #URL https://linuxsecurity.com/content/blogcategory/94/107/ Error: 
-2023-09-12 15:46:00 - INFO - #ID: 101887 #URL https://linuxsecurity.com/content/blogcategory/94/107/ - Requesting again using GET request instead of HEAD
-2023-09-12 15:46:00 - WARNING - #ID: 101887 #URL https://linuxsecurity.com/content/blogcategory/122/114/ Error: 
-2023-09-12 15:46:00 - INFO - #ID: 101887 #URL https://linuxsecurity.com/content/blogcategory/122/114/ - Requesting again using GET request instead of HEAD
-2023-09-12 15:46:00 - WARNING - #ID: 101887 #URL https://linuxsecurity.com/content/blogcategory/98/110/ Error: 
-2023-09-12 15:46:00 - INFO - #ID: 101887 #URL https://linuxsecurity.com/content/blogcategory/98/110/ - Requesting again using GET request instead of HEAD
-2023-09-12 15:46:00 - WARNING - #ID: 101887 #URL https://linuxsecurity.com/content/blogcategory/92/105/ Error: 
-2023-09-12 15:46:00 - INFO - #ID: 101887 #URL https://linuxsecurity.com/content/blogcategory/92/105/ - Requesting again using GET request instead of HEAD
-2023-09-12 15:46:00 - WARNING - #ID: 101887 #URL https://linuxsecurity.com/content/blogcategory/95/108/ Error: 
-2023-09-12 15:46:00 - INFO - #ID: 101887 #URL https://linuxsecurity.com/content/blogcategory/95/108/ - Requesting again using GET request instead of HEAD
-2023-09-12 15:46:00 - WARNING - #ID: 101887 #URL https://linuxsecurity.com/content/blogcategory/97/109/ Error: 
-2023-09-12 15:46:00 - INFO - #ID: 101887 #URL https://linuxsecurity.com/content/blogcategory/97/109/ - Requesting again using GET request instead of HEAD
-2023-09-12 15:46:00 - WARNING - #ID: 101887 #URL https://linuxsecurity.com/content/blogcategory/86/99/ Error: 
-2023-09-12 15:46:00 - INFO - #ID: 101887 #URL https://linuxsecurity.com/content/blogcategory/86/99/ - Requesting again using GET request instead of HEAD
-2023-09-12 15:46:10 - INFO - ID: 101887 #COLUMN: introtext #URL: content/blogcategory/93/106/ #STATUS_CODE: 404 #TEXT: (null) removed
-2023-09-12 15:46:10 - INFO - ID: 101887 #COLUMN: introtext #URL: content/blogcategory/91/104 #STATUS_CODE: 404 #TEXT: (null) removed
-2023-09-12 15:46:10 - INFO - ID: 101887 #COLUMN: introtext #URL: content/blogcategory/88/101/ #STATUS_CODE: 404 #TEXT: (null) removed
-2023-09-12 15:46:10 - INFO - ID: 101887 #COLUMN: introtext #URL: content/blogcategory/92/105/ #STATUS_CODE: 404 #TEXT: (null) removed
-2023-09-12 15:46:10 - WARNING - #ID: 101887 Error: Timeout 
-2023-09-12 15:46:11 - INFO - ID: 101887 #COLUMN: introtext #URL: content/blogcategory/94/107/ added for more checking
-2023-09-12 15:46:11 - INFO - ID: 101887 #COLUMN: introtext #URL: content/blogcategory/90/103/ #STATUS_CODE: 404 #TEXT: (null) removed
-2023-09-12 15:46:11 - INFO - ID: 101887 #COLUMN: introtext #URL: content/blogcategory/99/111/ #STATUS_CODE: 404 #TEXT: (null) removed
-2023-09-12 15:46:11 - INFO - ID: 101887 #COLUMN: introtext #URL: content/blogcategory/95/108/ #STATUS_CODE: 404 #TEXT: (null) removed
-2023-09-12 15:46:11 - INFO - ID: 101887 #COLUMN: introtext #URL: content/blogcategory/100/112/ #STATUS_CODE: 404 #TEXT: (null) removed
-2023-09-12 15:46:11 - WARNING - #ID: 101887 Error: Timeout 
-2023-09-12 15:46:11 - INFO - ID: 101887 #COLUMN: introtext #URL: content/blogcategory/98/110/ added for more checking
-2023-09-12 15:46:11 - INFO - ID: 101887 #COLUMN: introtext #URL: content/blogcategory/122/114/ #STATUS_CODE: 404 #TEXT: (null) removed
-2023-09-12 15:46:11 - WARNING - #ID: 101887 Error: Timeout 
-2023-09-12 15:46:11 - INFO - ID: 101887 #COLUMN: introtext #URL: content/blogcategory/101/113/ added for more checking
-2023-09-12 15:46:11 - INFO - ID: 101887 #COLUMN: introtext #URL: content/blogcategory/87/100/ #STATUS_CODE: 404 #TEXT: (null) removed
-2023-09-12 15:46:11 - WARNING - #ID: 101887 Error: Timeout 
-2023-09-12 15:46:11 - INFO - ID: 101887 #COLUMN: introtext #URL: content/blogcategory/85/98/ added for more checking
-2023-09-12 15:46:11 - WARNING - #ID: 101887 Error: Timeout 
-2023-09-12 15:46:11 - INFO - ID: 101887 #COLUMN: introtext #URL: content/blogcategory/89/102/ added for more checking
-2023-09-12 15:46:11 - INFO - ID: 101887 #COLUMN: introtext #URL: content/blogcategory/86/99/ #STATUS_CODE: 404 #TEXT: (null) removed
-2023-09-12 15:46:11 - INFO - ID: 101887 #COLUMN: introtext #URL: content/blogcategory/97/109/ #STATUS_CODE: 404 #TEXT: (null) removed
-2023-09-12 15:46:11 - INFO - processing 101887 - fulltext is not json proceeding further to check html
-2023-09-12 15:46:11 - INFO - Processing ID: 101887 completed
-2023-09-12 15:46:11 - INFO - Multi-Thread script (Thread ID : 139727365731904): Processing ID :101892  **********  27/93342 - 0.0%
-2023-09-12 15:46:11 - INFO - processing  101892 - introtext is not JSON, proceeding further to check HTML
-2023-09-12 15:46:11 - INFO - processing 101892 - fulltext is not json proceeding further to check html
-2023-09-12 15:46:11 - INFO - Multi-Thread script (Thread ID : 139727365731904): Processing ID :101897  **********  28/93342 - 0.0%
-2023-09-12 15:46:11 - INFO - processing  101897 - introtext is not JSON, proceeding further to check HTML
-2023-09-12 15:46:11 - INFO - processing 101897 - fulltext is not json proceeding further to check html
-2023-09-12 15:46:11 - INFO - Multi-Thread script (Thread ID : 139727365731904): Processing ID :101898  **********  29/93342 - 0.0%
-2023-09-12 15:46:11 - INFO - processing  101898 - introtext is not JSON, proceeding further to check HTML
-2023-09-12 15:46:11 - INFO - processing 101898 - fulltext is not json proceeding further to check html
-2023-09-12 15:46:23 - INFO - Skipped ID: 101898 #COLUMN: fulltext #URL: http://www.RedHat.com/corp/contac #STATUS_CODE: 404 #Replace with NULL
-2023-09-12 15:46:23 - INFO - ID: 101898 has been updated in the database
-2023-09-12 15:46:23 - INFO - Processing ID: 101898 completed
-2023-09-12 15:46:23 - INFO - Multi-Thread script (Thread ID : 139727365731904): Processing ID :101899  **********  30/93342 - 0.0%
-2023-09-12 15:46:23 - INFO - processing  101899 - introtext is not JSON, proceeding further to check HTML
-2023-09-12 15:46:23 - INFO - processing 101899 - fulltext is not json proceeding further to check html
-2023-09-12 15:46:34 - WARNING - #ID: 101899 #URL http://www.RedHat.com/corp/contac Error: 
-2023-09-12 15:46:34 - INFO - #ID: 101899 #URL http://www.RedHat.com/corp/contac - Requesting again using GET request instead of HEAD
-2023-09-12 15:46:45 - WARNING - #ID: 101899 Error: Timeout 
-2023-09-12 15:46:45 - INFO - ID: 101899 #COLUMN: fulltext #URL: http://www.RedHat.com/corp/contac added for more checking
-2023-09-12 15:46:46 - INFO - Multi-Thread script (Thread ID : 139727365731904): Processing ID :101910  **********  33/93342 - 0.0%
-2023-09-12 15:46:46 - INFO - processing  101910 - introtext is not JSON, proceeding further to check HTML
-2023-09-12 15:46:46 - INFO - processing 101910 - fulltext is not json proceeding further to check html
-2023-09-12 15:46:56 - WARNING - #ID: 101910 #URL http://www.debian.org/security/ Error: 
-2023-09-12 15:46:56 - INFO - #ID: 101910 #URL http://www.debian.org/security/ - Requesting again using GET request instead of HEAD
-2023-09-12 15:46:56 - WARNING - #ID: 101910 #URL http://security.debian.org/ Error: 
-2023-09-12 15:46:56 - INFO - #ID: 101910 #URL http://security.debian.org/ - Requesting again using GET request instead of HEAD
-2023-09-12 15:46:56 - WARNING - #ID: 101910 #URL http://security.debian.org/dists/stable/updates/source/bind_8.2.2p5-0slink1.dsc Error: 
-2023-09-12 15:46:56 - INFO - #ID: 101910 #URL http://security.debian.org/dists/stable/updates/source/bind_8.2.2p5-0slink1.dsc - Requesting again using GET request instead of HEAD
-2023-09-12 15:47:06 - ERROR - #ID: 101910 #URL http://security.debian.org/ Error: Server disconnected
-2023-09-12 15:47:06 - INFO - ID: 101910 #COLUMN: fulltext #URL: http://www.debian.org/security/ added for more checking
-2023-09-12 15:47:06 - INFO - Skipped ID: 101910 #COLUMN: fulltext #URL: http://security.debian.org/dists/stable/updates/source/bind_8.2.2p5-0slink1.dsc #STATUS_CODE: 404 #Replace with NULL
-2023-09-12 15:47:06 - INFO - Skipped ID: 101910 #COLUMN: fulltext #URL: http://security.debian.org/ #STATUS_CODE: 200
-2023-09-12 15:47:06 - INFO - ID: 101910 has been updated in the database
-2023-09-12 15:47:06 - INFO - Processing ID: 101910 completed
-2023-09-12 15:47:06 - INFO - Multi-Thread script (Thread ID : 139727365731904): Processing ID :101911  **********  35/93342 - 0.0%
-2023-09-12 15:47:06 - INFO - processing  101911 - introtext is not JSON, proceeding further to check HTML
-2023-09-12 15:47:06 - INFO - processing 101911 - fulltext is not json proceeding further to check html
-2023-09-12 15:47:16 - WARNING - #ID: 101911 #URL http://www.RedHat.com/corp/contact.html Error: 
-2023-09-12 15:47:16 - INFO - #ID: 101911 #URL http://www.RedHat.com/corp/contact.html - Requesting again using GET request instead of HEAD
-2023-09-12 15:47:27 - INFO - Skipped ID: 101911 #COLUMN: fulltext #URL: http://home.netscape.com/eng/mozilla/4.7/relnotes/unix-4.7.html #STATUS_CODE: 404 #Replace with NULL
-2023-09-12 15:47:27 - WARNING - #ID: 101911 Error: Timeout 
-2023-09-12 15:47:27 - INFO - ID: 101911 #COLUMN: fulltext #URL: http://www.RedHat.com/corp/contact.html added for more checking
-2023-09-12 15:47:28 - INFO - ID: 101911 has been updated in the database
-2023-09-12 15:47:28 - INFO - Processing ID: 101911 completed
-2023-09-12 15:47:28 - INFO - Multi-Thread script (Thread ID : 139727365731904): Processing ID :101912  **********  39/93342 - 0.0%
-2023-09-12 15:47:28 - INFO - processing  101912 - introtext is not JSON, proceeding further to check HTML
-2023-09-12 15:47:28 - INFO - processing 101912 - fulltext is not json proceeding further to check html
-2023-09-12 15:47:38 - WARNING - #ID: 101912 #URL http://www.xfree86.org/#news Error: 
-2023-09-12 15:47:38 - INFO - #ID: 101912 #URL http://www.xfree86.org/#news - Requesting again using GET request instead of HEAD
-2023-09-12 15:47:38 - WARNING - #ID: 101912 #URL http://www.xfree86.org/3.3.5/RELNOTES.html Error: 
-2023-09-12 15:47:38 - INFO - #ID: 101912 #URL http://www.xfree86.org/3.3.5/RELNOTES.html - Requesting again using GET request instead of HEAD
-2023-09-12 15:47:43 - INFO - Skipped ID: 101912 #COLUMN: fulltext #URL: http://www.RedHat.com/corp/support/docs/XFree86-upgrade/XFree86-upgrade.html #STATUS_CODE: 404 #Replace with NULL
-2023-09-12 15:47:44 - INFO - Skipped ID: 101912 #COLUMN: fulltext #URL: http://www.RedHat.com/corp/contac #STATUS_CODE: 404 #Replace with NULL
-2023-09-12 15:47:44 - INFO - Skipped ID: 101912 #COLUMN: fulltext #URL: http://www.xfree86.org/#news #STATUS_CODE: 200
-2023-09-12 15:47:44 - INFO - Skipped ID: 101912 #COLUMN: fulltext #URL: http://www.xfree86.org/3.3.5/RELNOTES.html #STATUS_CODE: 404 #Replace with NULL
-2023-09-12 15:47:44 - INFO - ID: 101912 has been updated in the database
-2023-09-12 15:47:44 - INFO - Processing ID: 101912 completed
-2023-09-12 15:47:44 - INFO - Multi-Thread script (Thread ID : 139727365731904): Processing ID :101913  **********  42/93342 - 0.0%
-2023-09-12 15:47:44 - INFO - processing  101913 - introtext is not JSON, proceeding further to check HTML
-2023-09-12 15:47:44 - INFO - processing 101913 - fulltext is not json proceeding further to check html
-2023-09-12 15:47:50 - INFO - Skipped ID: 101913 #COLUMN: fulltext #URL: http://www.RedHat.com/corp/contac #STATUS_CODE: 404 #Replace with NULL
-2023-09-12 15:47:50 - INFO - ID: 101913 has been updated in the database
-2023-09-12 15:47:50 - INFO - Processing ID: 101913 completed
-2023-09-12 15:47:50 - INFO - Multi-Thread script (Thread ID : 139727365731904): Processing ID :101914  **********  46/93342 - 0.0%
-2023-09-12 15:47:50 - INFO - processing  101914 - introtext is not JSON, proceeding further to check HTML
-2023-09-12 15:47:50 - INFO - processing 101914 - fulltext is not json proceeding further to check html
-2023-09-12 15:48:06 - WARNING - #ID: 101914 #URL http://www.RedHat.com/corp/contac Error: 
-2023-09-12 15:48:06 - INFO - #ID: 101914 #URL http://www.RedHat.com/corp/contac - Requesting again using GET request instead of HEAD
-2023-09-12 15:48:17 - WARNING - #ID: 101914 Error: Timeout 
-2023-09-12 15:48:17 - INFO - ID: 101914 #COLUMN: fulltext #URL: http://www.RedHat.com/corp/contac added for more checking
-2023-09-12 15:48:18 - INFO - Multi-Thread script (Thread ID : 139727365731904): Processing ID :101915  **********  50/93342 - 0.1%
-2023-09-12 15:48:18 - INFO - processing  101915 - introtext is not JSON, proceeding further to check HTML
-2023-09-12 15:48:18 - INFO - processing 101915 - fulltext is not json proceeding further to check html
-2023-09-12 15:48:37 - INFO - Skipped ID: 101915 #COLUMN: fulltext #URL: http://www.RedHat.com/corp/contact.html #STATUS_CODE: 404 #Replace with NULL
-2023-09-12 15:48:37 - INFO - ID: 101915 has been updated in the database
-2023-09-12 15:48:37 - INFO - Processing ID: 101915 completed
-2023-09-12 15:48:37 - INFO - Multi-Thread script (Thread ID : 139727365731904): Processing ID :101916  **********  53/93342 - 0.1%
-2023-09-12 15:48:37 - INFO - processing  101916 - introtext is not JSON, proceeding further to check HTML
-2023-09-12 15:48:37 - INFO - processing 101916 - fulltext is not json proceeding further to check html
-2023-09-12 15:48:51 - WARNING - #ID: 101916 #URL http://www.RedHat.com/corp/contac Error: 
-2023-09-12 15:48:51 - INFO - #ID: 101916 #URL http://www.RedHat.com/corp/contac - Requesting again using GET request instead of HEAD
-2023-09-12 15:49:02 - WARNING - #ID: 101916 Error: Timeout 
-2023-09-12 15:49:02 - INFO - ID: 101916 #COLUMN: fulltext #URL: http://www.RedHat.com/corp/contac added for more checking
-2023-09-12 15:49:03 - INFO - Multi-Thread script (Thread ID : 139727365731904): Processing ID :101917  **********  57/93342 - 0.1%
-2023-09-12 15:49:03 - INFO - processing  101917 - introtext is not JSON, proceeding further to check HTML
-2023-09-12 15:49:03 - INFO - processing 101917 - fulltext is not json proceeding further to check html
-2023-09-12 15:49:05 - INFO - Skipped ID: 101917 #COLUMN: fulltext #URL: http://www.RedHat.com/corp/contac #STATUS_CODE: 404 #Replace with NULL
-2023-09-12 15:49:06 - INFO - ID: 101917 has been updated in the database
-2023-09-12 15:49:06 - INFO - Processing ID: 101917 completed
-2023-09-12 15:49:06 - INFO - Multi-Thread script (Thread ID : 139727365731904): Processing ID :101918  **********  58/93342 - 0.1%
-2023-09-12 15:49:06 - INFO - processing  101918 - introtext is not JSON, proceeding further to check HTML
-2023-09-12 15:49:06 - INFO - processing 101918 - fulltext is not json proceeding further to check html
-2023-09-12 15:49:06 - INFO - Multi-Thread script (Thread ID : 139727365731904): Processing ID :101919  **********  59/93342 - 0.1%
-2023-09-12 15:49:06 - INFO - processing  101919 - introtext is not JSON, proceeding further to check HTML
-2023-09-12 15:49:06 - INFO - processing 101919 - fulltext is not json proceeding further to check html
-2023-09-12 15:49:07 - INFO - Skipped ID: 101919 #COLUMN: fulltext #URL: http://www.RedHat.com/corp/contac #STATUS_CODE: 404 #Replace with NULL
-2023-09-12 15:49:07 - INFO - ID: 101919 has been updated in the database
-2023-09-12 15:49:07 - INFO - Processing ID: 101919 completed
-2023-09-12 15:49:07 - INFO - Multi-Thread script (Thread ID : 139727365731904): Processing ID :101920  **********  64/93342 - 0.1%
-2023-09-12 15:49:07 - INFO - processing  101920 - introtext is not JSON, proceeding further to check HTML
-2023-09-12 15:49:07 - INFO - processing 101920 - fulltext is not json proceeding further to check html
-2023-09-12 15:49:09 - INFO - Skipped ID: 101920 #COLUMN: fulltext #URL: http://www.RedHat.com/corp/contac #STATUS_CODE: 404 #Replace with NULL
-2023-09-12 15:49:09 - INFO - ID: 101920 has been updated in the database
-2023-09-12 15:49:09 - INFO - Processing ID: 101920 completed
-2023-09-12 15:49:09 - INFO - Multi-Thread script (Thread ID : 139727365731904): Processing ID :101921  **********  65/93342 - 0.1%
-2023-09-12 15:49:09 - INFO - processing  101921 - introtext is not JSON, proceeding further to check HTML
-2023-09-12 15:49:09 - INFO - processing 101921 - fulltext is not json proceeding further to check html
-2023-09-12 15:49:15 - INFO - Skipped ID: 101921 #COLUMN: fulltext #URL: http://www.RedHat.com/corp/contac #STATUS_CODE: 404 #Replace with NULL
-2023-09-12 15:49:15 - INFO - ID: 101921 has been updated in the database
-2023-09-12 15:49:15 - INFO - Processing ID: 101921 completed
-2023-09-12 15:49:15 - INFO - Multi-Thread script (Thread ID : 139727365731904): Processing ID :101922  **********  68/93342 - 0.1%
-2023-09-12 15:49:15 - INFO - processing  101922 - introtext is not JSON, proceeding further to check HTML
-2023-09-12 15:49:15 - INFO - processing 101922 - fulltext is not json proceeding further to check html
-2023-09-12 15:49:17 - INFO - Skipped ID: 101922 #COLUMN: fulltext #URL: http://www.RedHat.com/corp/contac #STATUS_CODE: 404 #Replace with NULL
-2023-09-12 15:49:17 - INFO - ID: 101922 has been updated in the database
-2023-09-12 15:49:17 - INFO - Processing ID: 101922 completed
-2023-09-12 15:49:17 - INFO - Multi-Thread script (Thread ID : 139727365731904): Processing ID :101923  **********  70/93342 - 0.1%
-2023-09-12 15:49:17 - INFO - processing  101923 - introtext is not JSON, proceeding further to check HTML
-2023-09-12 15:49:17 - INFO - processing 101923 - fulltext is not json proceeding further to check html
-2023-09-12 15:49:17 - INFO - Multi-Thread script (Thread ID : 139727365731904): Processing ID :101924  **********  71/93342 - 0.1%
-2023-09-12 15:49:17 - INFO - processing  101924 - introtext is not JSON, proceeding further to check HTML
-2023-09-12 15:49:17 - INFO - processing 101924 - fulltext is not json proceeding further to check html
-2023-09-12 15:49:17 - INFO - Multi-Thread script (Thread ID : 139727365731904): Processing ID :101925  **********  72/93342 - 0.1%
-2023-09-12 15:49:17 - INFO - processing  101925 - introtext is not JSON, proceeding further to check HTML
-2023-09-12 15:49:17 - INFO - processing 101925 - fulltext is not json proceeding further to check html
-2023-09-12 15:49:20 - INFO - Skipped ID: 101925 #COLUMN: fulltext #URL: http://www.RedHat.com/corp/contac #STATUS_CODE: 404 #Replace with NULL
-2023-09-12 15:49:21 - INFO - Skipped ID: 101925 #COLUMN: fulltext #URL: http://www.geek-girl.com/bugtraq/1999_2/0685.html #STATUS_CODE: 404 #Replace with NULL
-2023-09-12 15:49:21 - INFO - ID: 101925 has been updated in the database
-2023-09-12 15:49:21 - INFO - Processing ID: 101925 completed
-2023-09-12 15:49:21 - INFO - Multi-Thread script (Thread ID : 139727365731904): Processing ID :101926  **********  75/93342 - 0.1%
-2023-09-12 15:49:21 - INFO - processing  101926 - introtext is not JSON, proceeding further to check HTML
-2023-09-12 15:49:21 - INFO - processing 101926 - fulltext is not json proceeding further to check html
-2023-09-12 15:49:21 - INFO - ID: 101926 #COLUMN: fulltext #URL: ftp://updates.RedHat.com/6.0/i386/ replaced with null
-2023-09-12 15:49:21 - INFO - ID: 101926 #COLUMN: fulltext #URL: ftp://updates.RedHat.com/6.0/alpha/ replaced with null
-2023-09-12 15:49:21 - INFO - ID: 101926 #COLUMN: fulltext #URL: ftp://updates.RedHat.com/6.0/sparc replaced with null
-2023-09-12 15:49:21 - INFO - ID: 101926 has been updated in the database
-2023-09-12 15:49:21 - INFO - Processing ID: 101926 completed
-2023-09-12 15:49:21 - INFO - Multi-Thread script (Thread ID : 139727365731904): Processing ID :101930  **********  76/93342 - 0.1%
-2023-09-12 15:49:21 - INFO - processing  101930 - introtext is not JSON, proceeding further to check HTML
-2023-09-12 15:49:21 - INFO - processing 101930 - fulltext is not json proceeding further to check html
-2023-09-12 15:49:31 - WARNING - #ID: 101930 #URL http://home.netscape.com/eng/mozilla/4.7/relnotes/unix-4.7.html Error: 
-2023-09-12 15:49:31 - INFO - #ID: 101930 #URL http://home.netscape.com/eng/mozilla/4.7/relnotes/unix-4.7.html - Requesting again using GET request instead of HEAD
-2023-09-12 15:49:34 - INFO - Skipped ID: 101930 #COLUMN: fulltext #URL: http://home.netscape.com/eng/mozilla/4.7/relnotes/unix-4.7.html #STATUS_CODE: 404 #Replace with NULL
-2023-09-12 15:49:34 - INFO - Skipped ID: 101930 #COLUMN: fulltext #URL: http://www.RedHat.com/corp/contact.html #STATUS_CODE: 404 #Replace with NULL
-2023-09-12 15:49:34 - INFO - ID: 101930 has been updated in the database
-2023-09-12 15:49:34 - INFO - Processing ID: 101930 completed
-2023-09-12 15:49:34 - INFO - Multi-Thread script (Thread ID : 139727365731904): Processing ID :101931  **********  80/93342 - 0.1%
-2023-09-12 15:49:34 - INFO - processing  101931 - introtext is not JSON, proceeding further to check HTML
-2023-09-12 15:49:34 - INFO - processing 101931 - fulltext is not json proceeding further to check html
-2023-09-12 15:49:34 - INFO - ID: 101931 #COLUMN: fulltext #URL: ftp://updates.RedHat.com/6.1/i386/ replaced with null
-2023-09-12 15:49:34 - INFO - ID: 101931 #COLUMN: fulltext #URL: ftp://updates.RedHat.com/6.1/SRPMS replaced with null
-2023-09-12 15:49:35 - INFO - ID: 101931 #COLUMN: fulltext #URL: ftp://updates.RedHat.com/6.1/noarch/ replaced with null
-2023-09-12 15:49:45 - INFO - Skipped ID: 101931 #COLUMN: fulltext #URL: http://developer.Red #STATUS_CODE: 200
-2023-09-12 15:49:45 - INFO - Skipped ID: 101931 #COLUMN: fulltext #URL: http://www.RedHat.com/corp/contac #STATUS_CODE: 404 #Replace with NULL
-2023-09-12 15:49:45 - INFO - ID: 101931 has been updated in the database
-2023-09-12 15:49:45 - INFO - Processing ID: 101931 completed
-2023-09-12 15:49:45 - INFO - Multi-Thread script (Thread ID : 139727365731904): Processing ID :101932  **********  82/93342 - 0.1%
-2023-09-12 15:49:45 - INFO - processing  101932 - introtext is not JSON, proceeding further to check HTML
-2023-09-12 15:49:45 - INFO - processing 101932 - fulltext is not json proceeding further to check html
-2023-09-12 15:49:45 - INFO - ID: 101932 #COLUMN: fulltext #URL: ftp://updates.RedHat.com/6.1/i386/ replaced with null
-2023-09-12 15:49:45 - INFO - ID: 101932 #COLUMN: fulltext #URL: ftp://updates.RedHat.com/6.1/SRPMS replaced with null
-2023-09-12 15:49:45 - INFO - ID: 101932 #COLUMN: fulltext #URL: ftp://updates.RedHat.com/6.1/noarch/ replaced with null
-2023-09-12 15:49:53 - INFO - Skipped ID: 101932 #COLUMN: fulltext #URL: http://developer.Red #STATUS_CODE: 200
-2023-09-12 15:49:53 - INFO - Skipped ID: 101932 #COLUMN: fulltext #URL: http://www.RedHat.com/corp/contac #STATUS_CODE: 404 #Replace with NULL
-2023-09-12 15:49:53 - INFO - ID: 101932 has been updated in the database
-2023-09-12 15:49:53 - INFO - Processing ID: 101932 completed
-2023-09-12 15:49:53 - INFO - Multi-Thread script (Thread ID : 139727365731904): Processing ID :101933  **********  85/93342 - 0.1%
-2023-09-12 15:49:53 - INFO - processing  101933 - introtext is not JSON, proceeding further to check HTML
-2023-09-12 15:49:53 - INFO - processing 101933 - fulltext is not json proceeding further to check html
-2023-09-12 15:49:54 - INFO - ID: 101933 #COLUMN: fulltext #URL: ftp://updates.RedHat.com/6.1/i386/ replaced with null
-2023-09-12 15:49:54 - INFO - ID: 101933 #COLUMN: fulltext #URL: ftp://updates.RedHat.com/6.0/alpha replaced with null
-2023-09-12 15:49:54 - INFO - ID: 101933 #COLUMN: fulltext #URL: ftp://updates.RedHat.com/6.0/sparc replaced with null
-2023-09-12 15:49:54 - INFO - ID: 101933 #COLUMN: fulltext #URL: ftp://updates.RedHat.com/6.1/SRPMS replaced with null
-2023-09-12 15:49:54 - INFO - ID: 101933 #COLUMN: fulltext #URL: ftp://updates.RedHat.com/6.1/noarch/ replaced with null
-2023-09-12 15:50:06 - WARNING - #ID: 101933 #URL http://www.RedHat.com/corp/contac Error: 
-2023-09-12 15:50:06 - INFO - #ID: 101933 #URL http://www.RedHat.com/corp/contac - Requesting again using GET request instead of HEAD
-2023-09-12 15:50:17 - INFO - Skipped ID: 101933 #COLUMN: fulltext #URL: http://developer.Red #STATUS_CODE: 200
-2023-09-12 15:50:17 - WARNING - #ID: 101933 Error: Timeout 
-2023-09-12 15:50:17 - INFO - ID: 101933 #COLUMN: fulltext #URL: http://www.RedHat.com/corp/contac added for more checking
-2023-09-12 15:50:18 - INFO - ID: 101933 has been updated in the database
-2023-09-12 15:50:18 - INFO - Processing ID: 101933 completed
-2023-09-12 15:50:18 - INFO - Multi-Thread script (Thread ID : 139727365731904): Processing ID :101934  **********  90/93342 - 0.1%
-2023-09-12 15:50:18 - INFO - processing  101934 - introtext is not JSON, proceeding further to check HTML
-2023-09-12 15:50:18 - INFO - processing 101934 - fulltext is not json proceeding further to check html
-2023-09-12 15:50:18 - INFO - ID: 101934 #COLUMN: fulltext #URL: ftp://updates.RedHat.com/6.1/i386/ replaced with null
-2023-09-12 15:50:18 - INFO - ID: 101934 #COLUMN: fulltext #URL: ftp://updates.RedHat.com/6.0/alpha replaced with null
-2023-09-12 15:50:18 - INFO - ID: 101934 #COLUMN: fulltext #URL: ftp://updates.RedHat.com/6.1/sparc replaced with null
-2023-09-12 15:50:18 - INFO - ID: 101934 #COLUMN: fulltext #URL: ftp://updates.RedHat.com/6.1/SRPMS replaced with null
-2023-09-12 15:50:18 - INFO - ID: 101934 #COLUMN: fulltext #URL: ftp://updates.RedHat.com/6.1/noarch/ replaced with null
-2023-09-12 15:50:28 - WARNING - #ID: 101934 #URL http://www.RedHat.com/corp/contac Error: 
-2023-09-12 15:50:28 - INFO - #ID: 101934 #URL http://www.RedHat.com/corp/contac - Requesting again using GET request instead of HEAD
-2023-09-12 15:59:11 - INFO - Multi-Thread script (Thread ID : 140668015998528): Processing ID :101887  **********  1/93342 - 0.0%
-2023-09-12 15:59:11 - INFO - processing  101887 - introtext is not JSON, proceeding further to check HTML
-2023-09-12 16:00:07 - WARNING - #ID: 101887 #URL https://linuxsecurity.com/content/blogcategory/93/106/ Error: 
-2023-09-12 16:00:07 - INFO - #ID: 101887 #URL https://linuxsecurity.com/content/blogcategory/93/106/ - Requesting again using GET request instead of HEAD
-2023-09-12 16:00:07 - WARNING - #ID: 101887 #URL https://linuxsecurity.com/content/blogcategory/99/111/ Error: 
-2023-09-12 16:00:07 - INFO - #ID: 101887 #URL https://linuxsecurity.com/content/blogcategory/99/111/ - Requesting again using GET request instead of HEAD
-2023-09-12 16:00:07 - WARNING - #ID: 101887 #URL https://linuxsecurity.com/content/blogcategory/90/103/ Error: 
-2023-09-12 16:00:07 - INFO - #ID: 101887 #URL https://linuxsecurity.com/content/blogcategory/90/103/ - Requesting again using GET request instead of HEAD
-2023-09-12 16:00:07 - WARNING - #ID: 101887 #URL https://linuxsecurity.com/content/blogcategory/87/100/ Error: 
-2023-09-12 16:00:07 - INFO - #ID: 101887 #URL https://linuxsecurity.com/content/blogcategory/87/100/ - Requesting again using GET request instead of HEAD
-2023-09-12 16:00:07 - WARNING - #ID: 101887 #URL https://linuxsecurity.com/content/blogcategory/101/113/ Error: 
-2023-09-12 16:00:07 - INFO - #ID: 101887 #URL https://linuxsecurity.com/content/blogcategory/101/113/ - Requesting again using GET request instead of HEAD
-2023-09-12 16:00:07 - WARNING - #ID: 101887 #URL https://linuxsecurity.com/content/blogcategory/122/114/ Error: 
-2023-09-12 16:00:07 - INFO - #ID: 101887 #URL https://linuxsecurity.com/content/blogcategory/122/114/ - Requesting again using GET request instead of HEAD
-2023-09-12 16:00:07 - WARNING - #ID: 101887 #URL https://linuxsecurity.com/content/blogcategory/95/108/ Error: 
-2023-09-12 16:00:07 - INFO - #ID: 101887 #URL https://linuxsecurity.com/content/blogcategory/95/108/ - Requesting again using GET request instead of HEAD
-2023-09-12 16:00:07 - WARNING - #ID: 101887 #URL https://linuxsecurity.com/content/blogcategory/97/109/ Error: 
-2023-09-12 16:00:07 - INFO - #ID: 101887 #URL https://linuxsecurity.com/content/blogcategory/97/109/ - Requesting again using GET request instead of HEAD
-2023-09-12 16:05:56 - INFO - ID: 101887 #COLUMN: introtext #URL: content/blogcategory/93/106/ #STATUS_CODE: 404 #TEXT: (null) removed
-2023-09-12 16:07:00 - INFO - ID: 101887 #COLUMN: introtext #URL: content/blogcategory/91/104 #STATUS_CODE: 404 #TEXT: (null) removed
-2023-09-12 16:07:04 - INFO - ID: 101887 #COLUMN: introtext #URL: content/blogcategory/88/101/ #STATUS_CODE: 404 #TEXT: (null) removed
-2023-09-12 16:07:04 - INFO - ID: 101887 #COLUMN: introtext #URL: content/blogcategory/92/105/ #STATUS_CODE: 404 #TEXT: (null) removed
-2023-09-12 16:07:04 - INFO - ID: 101887 #COLUMN: introtext #URL: content/blogcategory/94/107/ #STATUS_CODE: 404 #TEXT: (null) removed
-2023-09-12 16:07:04 - INFO - ID: 101887 #COLUMN: introtext #URL: content/blogcategory/90/103/ #STATUS_CODE: 404 #TEXT: (null) removed
-2023-09-12 16:07:04 - WARNING - #ID: 101887 Error: Timeout 
-2023-09-12 16:07:04 - INFO - ID: 101887 #COLUMN: introtext #URL: content/blogcategory/99/111/ added for more checking
-2023-09-12 16:07:04 - INFO - ID: 101887 #COLUMN: introtext #URL: content/blogcategory/95/108/ #STATUS_CODE: 404 #TEXT: (null) removed
-2023-09-12 16:07:04 - INFO - ID: 101887 #COLUMN: introtext #URL: content/blogcategory/100/112/ #STATUS_CODE: 404 #TEXT: (null) removed
-2023-09-12 16:07:04 - INFO - ID: 101887 #COLUMN: introtext #URL: content/blogcategory/98/110/ #STATUS_CODE: 404 #TEXT: (null) removed
-2023-09-12 16:07:04 - INFO - ID: 101887 #COLUMN: introtext #URL: content/blogcategory/122/114/ #STATUS_CODE: 404 #TEXT: (null) removed
-2023-09-12 16:07:04 - INFO - ID: 101887 #COLUMN: introtext #URL: content/blogcategory/101/113/ #STATUS_CODE: 404 #TEXT: (null) removed
-2023-09-12 16:07:04 - INFO - ID: 101887 #COLUMN: introtext #URL: content/blogcategory/87/100/ #STATUS_CODE: 404 #TEXT: (null) removed
-2023-09-12 16:07:04 - INFO - ID: 101887 #COLUMN: introtext #URL: content/blogcategory/85/98/ #STATUS_CODE: 404 #TEXT: (null) removed
-2023-09-12 16:07:04 - INFO - ID: 101887 #COLUMN: introtext #URL: content/blogcategory/89/102/ #STATUS_CODE: 404 #TEXT: (null) removed
-2023-09-12 16:07:04 - INFO - ID: 101887 #COLUMN: introtext #URL: content/blogcategory/86/99/ #STATUS_CODE: 404 #TEXT: (null) removed
-2023-09-12 16:07:04 - INFO - ID: 101887 #COLUMN: introtext #URL: content/blogcategory/97/109/ #STATUS_CODE: 404 #TEXT: (null) removed
-2023-09-12 16:08:34 - INFO - processing 101887 - fulltext is not json proceeding further to check html
-2023-09-12 16:19:53 - INFO - Multi-Thread script (Thread ID : 140620014286400): Processing ID :101887  **********  1/93342 - 0.0%
-2023-09-12 16:19:53 - INFO - processing  101887 - introtext is not JSON, proceeding further to check HTML
-2023-09-12 16:20:03 - WARNING - #ID: 101887 #URL https://linuxsecurity.com/content/blogcategory/93/106/ Error: 
-2023-09-12 16:20:03 - INFO - #ID: 101887 #URL https://linuxsecurity.com/content/blogcategory/93/106/ - Requesting again using GET request instead of HEAD
-2023-09-12 16:20:03 - WARNING - #ID: 101887 #URL https://linuxsecurity.com/content/blogcategory/88/101/ Error: 
-2023-09-12 16:20:03 - INFO - #ID: 101887 #URL https://linuxsecurity.com/content/blogcategory/88/101/ - Requesting again using GET request instead of HEAD
-2023-09-12 16:20:03 - WARNING - #ID: 101887 #URL https://linuxsecurity.com/content/blogcategory/99/111/ Error: 
-2023-09-12 16:20:03 - INFO - #ID: 101887 #URL https://linuxsecurity.com/content/blogcategory/99/111/ - Requesting again using GET request instead of HEAD
-2023-09-12 16:20:03 - WARNING - #ID: 101887 #URL https://linuxsecurity.com/content/blogcategory/89/102/ Error: 
-2023-09-12 16:20:03 - INFO - #ID: 101887 #URL https://linuxsecurity.com/content/blogcategory/89/102/ - Requesting again using GET request instead of HEAD
-2023-09-12 16:20:03 - WARNING - #ID: 101887 #URL https://linuxsecurity.com/content/blogcategory/85/98/ Error: 
-2023-09-12 16:20:03 - INFO - #ID: 101887 #URL https://linuxsecurity.com/content/blogcategory/85/98/ - Requesting again using GET request instead of HEAD
-2023-09-12 16:20:03 - WARNING - #ID: 101887 #URL https://linuxsecurity.com/content/blogcategory/97/109/ Error: 
-2023-09-12 16:20:03 - INFO - #ID: 101887 #URL https://linuxsecurity.com/content/blogcategory/97/109/ - Requesting again using GET request instead of HEAD
-2023-09-12 16:20:03 - WARNING - #ID: 101887 #URL https://linuxsecurity.com/content/blogcategory/86/99/ Error: 
-2023-09-12 16:20:03 - INFO - #ID: 101887 #URL https://linuxsecurity.com/content/blogcategory/86/99/ - Requesting again using GET request instead of HEAD
-2023-09-12 16:20:03 - WARNING - #ID: 101887 #URL https://linuxsecurity.com/content/blogcategory/90/103/ Error: 
-2023-09-12 16:20:03 - INFO - #ID: 101887 #URL https://linuxsecurity.com/content/blogcategory/90/103/ - Requesting again using GET request instead of HEAD
-2023-09-12 16:20:03 - WARNING - #ID: 101887 #URL https://linuxsecurity.com/content/blogcategory/101/113/ Error: 
-2023-09-12 16:20:03 - INFO - #ID: 101887 #URL https://linuxsecurity.com/content/blogcategory/101/113/ - Requesting again using GET request instead of HEAD
-2023-09-12 16:20:03 - WARNING - #ID: 101887 #URL https://linuxsecurity.com/content/blogcategory/87/100/ Error: 
-2023-09-12 16:20:03 - INFO - #ID: 101887 #URL https://linuxsecurity.com/content/blogcategory/87/100/ - Requesting again using GET request instead of HEAD
-2023-09-12 16:20:03 - WARNING - #ID: 101887 #URL https://linuxsecurity.com/content/blogcategory/122/114/ Error: 
-2023-09-12 16:20:03 - INFO - #ID: 101887 #URL https://linuxsecurity.com/content/blogcategory/122/114/ - Requesting again using GET request instead of HEAD
-2023-09-12 16:20:03 - WARNING - #ID: 101887 #URL https://linuxsecurity.com/content/blogcategory/98/110/ Error: 
-2023-09-12 16:20:03 - INFO - #ID: 101887 #URL https://linuxsecurity.com/content/blogcategory/98/110/ - Requesting again using GET request instead of HEAD
-2023-09-12 16:20:03 - WARNING - #ID: 101887 #URL https://linuxsecurity.com/content/blogcategory/100/112/ Error: 
-2023-09-12 16:20:03 - INFO - #ID: 101887 #URL https://linuxsecurity.com/content/blogcategory/100/112/ - Requesting again using GET request instead of HEAD
-2023-09-12 16:20:04 - WARNING - #ID: 101887 #URL https://linuxsecurity.com/content/blogcategory/95/108/ Error: 
-2023-09-12 16:20:04 - INFO - #ID: 101887 #URL https://linuxsecurity.com/content/blogcategory/95/108/ - Requesting again using GET request instead of HEAD
-2023-09-12 16:20:04 - WARNING - #ID: 101887 #URL https://linuxsecurity.com/content/blogcategory/91/104 Error: 
-2023-09-12 16:20:04 - INFO - #ID: 101887 #URL https://linuxsecurity.com/content/blogcategory/91/104 - Requesting again using GET request instead of HEAD
-2023-09-12 16:20:04 - WARNING - #ID: 101887 #URL https://linuxsecurity.com/content/blogcategory/92/105/ Error: 
-2023-09-12 16:20:04 - INFO - #ID: 101887 #URL https://linuxsecurity.com/content/blogcategory/92/105/ - Requesting again using GET request instead of HEAD
-2023-09-12 16:20:04 - WARNING - #ID: 101887 #URL https://linuxsecurity.com/content/blogcategory/94/107/ Error: 
-2023-09-12 16:20:04 - INFO - #ID: 101887 #URL https://linuxsecurity.com/content/blogcategory/94/107/ - Requesting again using GET request instead of HEAD
-2023-09-12 16:20:14 - WARNING - #ID: 101887 Error: Timeout 
-2023-09-12 16:20:14 - INFO - ID: 101887 #COLUMN: introtext #URL: content/blogcategory/93/106/ added for more checking
-2023-09-12 16:20:14 - WARNING - #ID: 101887 Error: Timeout 
-2023-09-12 16:20:14 - INFO - ID: 101887 #COLUMN: introtext #URL: content/blogcategory/91/104 added for more checking
-2023-09-12 16:20:14 - WARNING - #ID: 101887 Error: Timeout 
-2023-09-12 16:20:14 - INFO - ID: 101887 #COLUMN: introtext #URL: content/blogcategory/88/101/ added for more checking
-2023-09-12 16:20:14 - WARNING - #ID: 101887 Error: Timeout 
-2023-09-12 16:20:14 - INFO - ID: 101887 #COLUMN: introtext #URL: content/blogcategory/92/105/ added for more checking
-2023-09-12 16:20:14 - WARNING - #ID: 101887 Error: Timeout 
-2023-09-12 16:20:14 - INFO - ID: 101887 #COLUMN: introtext #URL: content/blogcategory/94/107/ added for more checking
-2023-09-12 16:20:14 - WARNING - #ID: 101887 Error: Timeout 
-2023-09-12 16:20:14 - INFO - ID: 101887 #COLUMN: introtext #URL: content/blogcategory/90/103/ added for more checking
-2023-09-12 16:20:14 - WARNING - #ID: 101887 Error: Timeout 
-2023-09-12 16:20:14 - INFO - ID: 101887 #COLUMN: introtext #URL: content/blogcategory/99/111/ added for more checking
-2023-09-12 16:20:14 - WARNING - #ID: 101887 Error: Timeout 
-2023-09-12 16:20:14 - INFO - ID: 101887 #COLUMN: introtext #URL: content/blogcategory/95/108/ added for more checking
-2023-09-12 16:20:14 - WARNING - #ID: 101887 Error: Timeout 
-2023-09-12 16:20:14 - INFO - ID: 101887 #COLUMN: introtext #URL: content/blogcategory/100/112/ added for more checking
-2023-09-12 16:20:14 - INFO - ID: 101887 #COLUMN: introtext #URL: content/blogcategory/98/110/ #STATUS_CODE: 404 #TEXT: (null) removed
-2023-09-12 16:20:14 - WARNING - #ID: 101887 Error: Timeout 
-2023-09-12 16:20:14 - INFO - ID: 101887 #COLUMN: introtext #URL: content/blogcategory/122/114/ added for more checking
-2023-09-12 16:20:14 - WARNING - #ID: 101887 Error: Timeout 
-2023-09-12 16:20:14 - INFO - ID: 101887 #COLUMN: introtext #URL: content/blogcategory/101/113/ added for more checking
-2023-09-12 16:20:14 - WARNING - #ID: 101887 Error: Timeout 
-2023-09-12 16:20:14 - INFO - ID: 101887 #COLUMN: introtext #URL: content/blogcategory/87/100/ added for more checking
-2023-09-12 16:20:14 - WARNING - #ID: 101887 Error: Timeout 
-2023-09-12 16:20:14 - INFO - ID: 101887 #COLUMN: introtext #URL: content/blogcategory/85/98/ added for more checking
-2023-09-12 16:20:14 - WARNING - #ID: 101887 Error: Timeout 
-2023-09-12 16:20:14 - INFO - ID: 101887 #COLUMN: introtext #URL: content/blogcategory/89/102/ added for more checking
-2023-09-12 16:20:14 - WARNING - #ID: 101887 Error: Timeout 
-2023-09-12 16:20:14 - INFO - ID: 101887 #COLUMN: introtext #URL: content/blogcategory/86/99/ added for more checking
-2023-09-12 16:20:14 - WARNING - #ID: 101887 Error: Timeout 
-2023-09-12 16:20:14 - INFO - ID: 101887 #COLUMN: introtext #URL: content/blogcategory/97/109/ added for more checking
-2023-09-12 16:20:19 - INFO - processing 101887 - fulltext is not json proceeding further to check html
-2023-09-12 16:27:02 - INFO - Multi-Thread script (Thread ID : 139732860266048): Processing ID :101887  **********  1/93342 - 0.0%
-2023-09-12 16:27:02 - INFO - processing  101887 - introtext is not JSON, proceeding further to check HTML
-2023-09-12 16:27:12 - WARNING - #ID: 101887 #URL https://linuxsecurity.com/content/blogcategory/93/106/ Error: 
-2023-09-12 16:27:12 - INFO - #ID: 101887 #URL https://linuxsecurity.com/content/blogcategory/93/106/ - Requesting again using GET request instead of HEAD
-2023-09-12 16:27:12 - WARNING - #ID: 101887 #URL https://linuxsecurity.com/content/blogcategory/88/101/ Error: 
-2023-09-12 16:27:12 - INFO - #ID: 101887 #URL https://linuxsecurity.com/content/blogcategory/88/101/ - Requesting again using GET request instead of HEAD
-2023-09-12 16:27:12 - WARNING - #ID: 101887 #URL https://linuxsecurity.com/content/blogcategory/99/111/ Error: 
-2023-09-12 16:27:12 - INFO - #ID: 101887 #URL https://linuxsecurity.com/content/blogcategory/99/111/ - Requesting again using GET request instead of HEAD
-2023-09-12 16:27:12 - WARNING - #ID: 101887 #URL https://linuxsecurity.com/content/blogcategory/89/102/ Error: 
-2023-09-12 16:27:12 - INFO - #ID: 101887 #URL https://linuxsecurity.com/content/blogcategory/89/102/ - Requesting again using GET request instead of HEAD
-2023-09-12 16:27:12 - WARNING - #ID: 101887 #URL https://linuxsecurity.com/content/blogcategory/97/109/ Error: 
-2023-09-12 16:27:12 - INFO - #ID: 101887 #URL https://linuxsecurity.com/content/blogcategory/97/109/ - Requesting again using GET request instead of HEAD
-2023-09-12 16:27:12 - WARNING - #ID: 101887 #URL https://linuxsecurity.com/content/blogcategory/85/98/ Error: 
-2023-09-12 16:27:12 - INFO - #ID: 101887 #URL https://linuxsecurity.com/content/blogcategory/85/98/ - Requesting again using GET request instead of HEAD
-2023-09-12 16:27:12 - WARNING - #ID: 101887 #URL https://linuxsecurity.com/content/blogcategory/86/99/ Error: 
-2023-09-12 16:27:12 - INFO - #ID: 101887 #URL https://linuxsecurity.com/content/blogcategory/86/99/ - Requesting again using GET request instead of HEAD
-2023-09-12 16:27:12 - WARNING - #ID: 101887 #URL https://linuxsecurity.com/content/blogcategory/87/100/ Error: 
-2023-09-12 16:27:12 - INFO - #ID: 101887 #URL https://linuxsecurity.com/content/blogcategory/87/100/ - Requesting again using GET request instead of HEAD
-2023-09-12 16:27:12 - WARNING - #ID: 101887 #URL https://linuxsecurity.com/content/blogcategory/101/113/ Error: 
-2023-09-12 16:27:12 - INFO - #ID: 101887 #URL https://linuxsecurity.com/content/blogcategory/101/113/ - Requesting again using GET request instead of HEAD
-2023-09-12 16:27:12 - WARNING - #ID: 101887 #URL https://linuxsecurity.com/content/blogcategory/122/114/ Error: 
-2023-09-12 16:27:12 - INFO - #ID: 101887 #URL https://linuxsecurity.com/content/blogcategory/122/114/ - Requesting again using GET request instead of HEAD
-2023-09-12 16:27:12 - WARNING - #ID: 101887 #URL https://linuxsecurity.com/content/blogcategory/98/110/ Error: 
-2023-09-12 16:27:12 - INFO - #ID: 101887 #URL https://linuxsecurity.com/content/blogcategory/98/110/ - Requesting again using GET request instead of HEAD
-2023-09-12 16:27:12 - WARNING - #ID: 101887 #URL https://linuxsecurity.com/content/blogcategory/100/112/ Error: 
-2023-09-12 16:27:12 - INFO - #ID: 101887 #URL https://linuxsecurity.com/content/blogcategory/100/112/ - Requesting again using GET request instead of HEAD
-2023-09-12 16:27:12 - WARNING - #ID: 101887 #URL https://linuxsecurity.com/content/blogcategory/90/103/ Error: 
-2023-09-12 16:27:12 - INFO - #ID: 101887 #URL https://linuxsecurity.com/content/blogcategory/90/103/ - Requesting again using GET request instead of HEAD
-2023-09-12 16:27:12 - WARNING - #ID: 101887 #URL https://linuxsecurity.com/content/blogcategory/95/108/ Error: 
-2023-09-12 16:27:12 - INFO - #ID: 101887 #URL https://linuxsecurity.com/content/blogcategory/95/108/ - Requesting again using GET request instead of HEAD
-2023-09-12 16:27:12 - WARNING - #ID: 101887 #URL https://linuxsecurity.com/content/blogcategory/94/107/ Error: 
-2023-09-12 16:27:12 - INFO - #ID: 101887 #URL https://linuxsecurity.com/content/blogcategory/94/107/ - Requesting again using GET request instead of HEAD
-2023-09-12 16:27:12 - WARNING - #ID: 101887 #URL https://linuxsecurity.com/content/blogcategory/91/104 Error: 
-2023-09-12 16:27:12 - INFO - #ID: 101887 #URL https://linuxsecurity.com/content/blogcategory/91/104 - Requesting again using GET request instead of HEAD
-2023-09-12 16:27:12 - WARNING - #ID: 101887 #URL https://linuxsecurity.com/content/blogcategory/92/105/ Error: 
-2023-09-12 16:27:12 - INFO - #ID: 101887 #URL https://linuxsecurity.com/content/blogcategory/92/105/ - Requesting again using GET request instead of HEAD
-2023-09-12 16:27:23 - INFO - ID: 101887 #COLUMN: introtext #URL: content/blogcategory/93/106/ #STATUS_CODE: 404 #TEXT: (null) removed
-2023-09-12 16:27:23 - WARNING - #ID: 101887 Error: Timeout 
-2023-09-12 16:27:23 - INFO - ID: 101887 #COLUMN: introtext #URL: content/blogcategory/91/104 added for more checking
-2023-09-12 16:27:23 - WARNING - #ID: 101887 Error: Timeout 
-2023-09-12 16:27:23 - INFO - ID: 101887 #COLUMN: introtext #URL: content/blogcategory/88/101/ added for more checking
-2023-09-12 16:27:23 - WARNING - #ID: 101887 Error: Timeout 
-2023-09-12 16:27:23 - INFO - ID: 101887 #COLUMN: introtext #URL: content/blogcategory/92/105/ added for more checking
-2023-09-12 16:27:23 - WARNING - #ID: 101887 Error: Timeout 
-2023-09-12 16:27:23 - INFO - ID: 101887 #COLUMN: introtext #URL: content/blogcategory/94/107/ added for more checking
-2023-09-12 16:27:23 - WARNING - #ID: 101887 Error: Timeout 
-2023-09-12 16:27:23 - INFO - ID: 101887 #COLUMN: introtext #URL: content/blogcategory/90/103/ added for more checking
-2023-09-12 16:27:23 - WARNING - #ID: 101887 Error: Timeout 
-2023-09-12 16:27:23 - INFO - ID: 101887 #COLUMN: introtext #URL: content/blogcategory/99/111/ added for more checking
-2023-09-12 16:27:23 - WARNING - #ID: 101887 Error: Timeout 
-2023-09-12 16:27:23 - INFO - ID: 101887 #COLUMN: introtext #URL: content/blogcategory/95/108/ added for more checking
-2023-09-12 16:27:23 - INFO - ID: 101887 #COLUMN: introtext #URL: content/blogcategory/100/112/ #STATUS_CODE: 404 #TEXT: (null) removed
-2023-09-12 16:27:23 - WARNING - #ID: 101887 Error: Timeout 
-2023-09-12 16:27:23 - INFO - ID: 101887 #COLUMN: introtext #URL: content/blogcategory/98/110/ added for more checking
-2023-09-12 16:27:23 - WARNING - #ID: 101887 Error: Timeout 
-2023-09-12 16:27:23 - INFO - ID: 101887 #COLUMN: introtext #URL: content/blogcategory/122/114/ added for more checking
-2023-09-12 16:27:23 - WARNING - #ID: 101887 Error: Timeout 
-2023-09-12 16:27:23 - INFO - ID: 101887 #COLUMN: introtext #URL: content/blogcategory/101/113/ added for more checking
-2023-09-12 16:27:23 - WARNING - #ID: 101887 Error: Timeout 
-2023-09-12 16:27:23 - INFO - ID: 101887 #COLUMN: introtext #URL: content/blogcategory/87/100/ added for more checking
-2023-09-12 16:27:23 - WARNING - #ID: 101887 Error: Timeout 
-2023-09-12 16:27:23 - INFO - ID: 101887 #COLUMN: introtext #URL: content/blogcategory/85/98/ added for more checking
-2023-09-12 16:27:23 - WARNING - #ID: 101887 Error: Timeout 
-2023-09-12 16:27:23 - INFO - ID: 101887 #COLUMN: introtext #URL: content/blogcategory/89/102/ added for more checking
-2023-09-12 16:27:23 - WARNING - #ID: 101887 Error: Timeout 
-2023-09-12 16:27:23 - INFO - ID: 101887 #COLUMN: introtext #URL: content/blogcategory/86/99/ added for more checking
-2023-09-12 16:27:23 - WARNING - #ID: 101887 Error: Timeout 
-2023-09-12 16:27:23 - INFO - ID: 101887 #COLUMN: introtext #URL: content/blogcategory/97/109/ added for more checking
-2023-09-12 16:27:26 - INFO - processing 101887 - fulltext is not json proceeding further to check html
-2023-09-12 16:27:47 - INFO - ID: 101887 has been updated in the database
-2023-09-12 16:27:47 - INFO - Processing ID: 101887 completed
-2023-09-12 16:29:48 - INFO - ******************** Processing ID: 101884 ******************** (2/93342 - 0.0%)
-2023-09-12 16:29:48 - INFO - processing  101884 - introtext is not JSON, proceeding further to check HTML
-2023-09-12 16:30:14 - INFO - processing 101884 - fulltext is not json proceeding further to check html
-2023-09-12 16:30:15 - INFO - mailto:duane@sukkha.info is skiped for checking:- present in SKIP_CHECK_SITES 
-2023-09-12 16:30:25 - WARNING - #ID: 101884 #URL http://ccrypt.sourceforge.net/ Error: 
-2023-09-12 16:30:25 - INFO - #ID: 101884 #URL http://ccrypt.sourceforge.net/ - Requesting again using GET request instead of HEAD
-2023-09-12 16:30:25 - WARNING - #ID: 101884 #URL http://www.gnupg.org Error: 
-2023-09-12 16:30:25 - INFO - #ID: 101884 #URL http://www.gnupg.org - Requesting again using GET request instead of HEAD
-2023-09-20 12:35:30 - INFO - ******************** Processing ID: 135861 ******************** (1/1 - 100.0%)
-2023-09-20 12:35:30 - INFO - processing  135861 - introtext is not JSON, proceeding further to check HTML
-2023-09-20 12:35:54 - INFO - processing 135861 - fulltext is not json proceeding further to check html
-2023-09-20 12:35:57 - INFO - ID: 135861 #COLUMN: fulltext #URL: ftp://security.debian.org/debian-security replaced with null
-2023-09-20 12:37:06 - WARNING - #ID: 135861 #URL http://security.debian.org/pool/updates/main/i/iceweasel/iceweasel_2.0.0.13-0etch1_i386.deb Error: local variable 'driver' referenced before assignment
-2023-09-20 12:37:06 - WARNING - #ID: 135861 #URL http://security.debian.org/pool/updates/main/i/iceweasel/iceweasel_2.0.0.13.orig.tar.gz Error: local variable 'driver' referenced before assignment
-2023-09-20 12:37:06 - WARNING - #ID: 135861 #URL http://security.debian.org/pool/updates/main/i/iceweasel/firefox_2.0.0.13-0etch1_all.deb Error: local variable 'driver' referenced before assignment
-2023-09-20 12:37:06 - WARNING - #ID: 135861 #URL http://security.debian.org/pool/updates/main/i/iceweasel/firefox-dom-inspector_2.0.0.13-0etch1_all.deb Error: local variable 'driver' referenced before assignment
-2023-09-20 12:37:06 - WARNING - #ID: 135861 #URL http://security.debian.org/pool/updates/main/i/iceweasel/iceweasel-gnome-support_2.0.0.13-0etch1_arm.deb Error: local variable 'driver' referenced before assignment
-2023-09-20 12:37:06 - WARNING - #ID: 135861 #URL http://security.debian.org/pool/updates/main/i/iceweasel/iceweasel-gnome-support_2.0.0.13-0etch1_amd64.deb Error: local variable 'driver' referenced before assignment
-2023-09-20 12:37:06 - WARNING - #ID: 135861 #URL http://security.debian.org/pool/updates/main/i/iceweasel/iceweasel-gnome-support_2.0.0.13-0etch1_ia64.deb Error: local variable 'driver' referenced before assignment
-2023-09-20 12:37:06 - WARNING - #ID: 135861 #URL http://security.debian.org/pool/updates/main/i/iceweasel/iceweasel_2.0.0.13-0etch1_amd64.deb Error: local variable 'driver' referenced before assignment
-2023-09-20 12:37:06 - WARNING - #ID: 135861 #URL http://security.debian.org/pool/updates/main/i/iceweasel/iceweasel-dbg_2.0.0.13-0etch1_amd64.deb Error: local variable 'driver' referenced before assignment
-2023-09-20 12:37:06 - WARNING - #ID: 135861 #URL http://security.debian.org/pool/updates/main/i/iceweasel/mozilla-firefox_2.0.0.13-0etch1_all.deb Error: local variable 'driver' referenced before assignment
-2023-09-20 12:37:06 - WARNING - #ID: 135861 #URL http://security.debian.org/pool/updates/main/i/iceweasel/iceweasel-dbg_2.0.0.13-0etch1_i386.deb Error: local variable 'driver' referenced before assignment
-2023-09-20 12:37:06 - WARNING - #ID: 135861 #URL http://security.debian.org/pool/updates/main/i/iceweasel/iceweasel-dbg_2.0.0.13-0etch1_ia64.deb Error: local variable 'driver' referenced before assignment
-2023-09-20 12:37:06 - WARNING - #ID: 135861 #URL http://security.debian.org/pool/updates/main/i/iceweasel/iceweasel-gnome-support_2.0.0.13-0etch1_mipsel.deb Error: local variable 'driver' referenced before assignment
-2023-09-20 12:37:06 - WARNING - #ID: 135861 #URL http://security.debian.org/pool/updates/main/i/iceweasel/iceweasel-gnome-support_2.0.0.13-0etch1_s390.deb Error: local variable 'driver' referenced before assignment
-2023-09-20 12:37:06 - WARNING - #ID: 135861 #URL http://security.debian.org/pool/updates/main/i/iceweasel/iceweasel-dbg_2.0.0.13-0etch1_s390.deb Error: local variable 'driver' referenced before assignment
-2023-09-20 12:37:06 - WARNING - #ID: 135861 #URL http://security.debian.org/pool/updates/main/i/iceweasel/iceweasel_2.0.0.13-0etch1_powerpc.deb Error: local variable 'driver' referenced before assignment
-2023-09-20 12:37:06 - WARNING - #ID: 135861 #URL http://security.debian.org/pool/updates/main/i/iceweasel/iceweasel_2.0.0.13-0etch1_sparc.deb Error: local variable 'driver' referenced before assignment
-2023-09-20 12:37:06 - WARNING - #ID: 135861 #URL http://security.debian.org/pool/updates/main/i/iceweasel/iceweasel-dbg_2.0.0.13-0etch1_sparc.deb Error: local variable 'driver' referenced before assignment
-2023-09-20 12:37:06 - WARNING - #ID: 135861 #URL http://security.debian.org/pool/updates/main/i/iceweasel/iceweasel-gnome-support_2.0.0.13-0etch1_powerpc.deb Error: local variable 'driver' referenced before assignment
-2023-09-20 12:37:06 - WARNING - #ID: 135861 #URL http://security.debian.org/pool/updates/main/i/iceweasel/iceweasel-dbg_2.0.0.13-0etch1_powerpc.deb Error: local variable 'driver' referenced before assignment
-2023-09-20 12:37:06 - WARNING - #ID: 135861 #URL http://security.debian.org/pool/updates/main/i/iceweasel/iceweasel-gnome-support_2.0.0.13-0etch1_sparc.deb Error: local variable 'driver' referenced before assignment
-2023-09-20 12:37:06 - WARNING - #ID: 135861 #URL http://security.debian.org/pool/updates/main/i/iceweasel/iceweasel_2.0.0.13-0etch1_s390.deb Error: local variable 'driver' referenced before assignment
-2023-09-20 12:37:06 - WARNING - #ID: 135861 #URL http://security.debian.org/pool/updates/main/i/iceweasel/iceweasel_2.0.0.13-0etch1.diff.gz Error: local variable 'driver' referenced before assignment
-2023-09-20 12:37:06 - WARNING - #ID: 135861 #URL http://security.debian.org/pool/updates/main/i/iceweasel/mozilla-firefox-dom-inspector_2.0.0.13-0etch1_all.deb Error: local variable 'driver' referenced before assignment
-2023-09-20 12:37:06 - WARNING - #ID: 135861 #URL http://security.debian.org/pool/updates/main/i/iceweasel/iceweasel_2.0.0.13-0etch1.dsc Error: local variable 'driver' referenced before assignment
-2023-09-20 12:37:06 - WARNING - #ID: 135861 #URL http://security.debian.org/pool/updates/main/i/iceweasel/iceweasel_2.0.0.13-0etch1_arm.deb Error: local variable 'driver' referenced before assignment
-2023-09-20 12:37:06 - WARNING - #ID: 135861 #URL http://security.debian.org/pool/updates/main/i/iceweasel/iceweasel-dbg_2.0.0.13-0etch1_arm.deb Error: local variable 'driver' referenced before assignment
-2023-09-20 12:37:06 - WARNING - #ID: 135861 #URL http://security.debian.org/pool/updates/main/i/iceweasel/iceweasel-gnome-support_2.0.0.13-0etch1_i386.deb Error: local variable 'driver' referenced before assignment
-2023-09-20 12:37:06 - WARNING - #ID: 135861 #URL http://security.debian.org/pool/updates/main/i/iceweasel/mozilla-firefox-gnome-support_2.0.0.13-0etch1_all.deb Error: local variable 'driver' referenced before assignment
-2023-09-20 12:37:06 - WARNING - #ID: 135861 #URL http://security.debian.org/pool/updates/main/i/iceweasel/firefox-gnome-support_2.0.0.13-0etch1_all.deb Error: local variable 'driver' referenced before assignment
-2023-09-20 12:37:06 - WARNING - #ID: 135861 #URL http://security.debian.org/pool/updates/main/i/iceweasel/iceweasel-dom-inspector_2.0.0.13-0etch1_all.deb Error: local variable 'driver' referenced before assignment
-2023-09-20 12:37:06 - WARNING - #ID: 135861 #URL http://security.debian.org/pool/updates/main/i/iceweasel/iceweasel_2.0.0.13-0etch1_mips.deb Error: local variable 'driver' referenced before assignment
-2023-09-20 12:37:06 - WARNING - #ID: 135861 #URL http://security.debian.org/pool/updates/main/i/iceweasel/iceweasel_2.0.0.13-0etch1_mipsel.deb Error: local variable 'driver' referenced before assignment
-2023-09-20 12:37:06 - WARNING - #ID: 135861 #URL http://security.debian.org/pool/updates/main/i/iceweasel/iceweasel-dbg_2.0.0.13-0etch1_mipsel.deb Error: local variable 'driver' referenced before assignment
-2023-09-20 12:37:06 - WARNING - #ID: 135861 #URL http://security.debian.org/pool/updates/main/i/iceweasel/iceweasel-gnome-support_2.0.0.13-0etch1_mips.deb Error: local variable 'driver' referenced before assignment
-2023-09-20 12:37:06 - WARNING - #ID: 135861 #URL http://security.debian.org/pool/updates/main/i/iceweasel/iceweasel-dbg_2.0.0.13-0etch1_mips.deb Error: local variable 'driver' referenced before assignment
-2023-09-20 12:37:06 - WARNING - #ID: 135861 #URL http://security.debian.org/pool/updates/main/i/iceweasel/iceweasel_2.0.0.13-0etch1_ia64.deb Error: local variable 'driver' referenced before assignment
-2023-09-20 12:38:26 - INFO - ******************** Processing ID: 135861 ******************** (1/1 - 100.0%)
-2023-09-20 12:38:26 - INFO - processing  135861 - introtext is not JSON, proceeding further to check HTML
-2023-09-20 12:38:29 - INFO - processing 135861 - fulltext is not json proceeding further to check html
-2023-09-20 12:38:30 - INFO - ID: 135861 #COLUMN: fulltext #URL: ftp://security.debian.org/debian-security replaced with null
-2023-09-20 12:38:57 - INFO - Skipped ID: 135861 #COLUMN: fulltext #URL: http://www.debian.org/security/ #STATUS_CODE: 200
-2023-09-20 12:39:10 - INFO - Skipped ID: 135861 #COLUMN: fulltext #URL: http://www.debian.org/security/faq #STATUS_CODE: 200
-2023-09-20 12:45:59 - INFO - ******************** Processing ID: 135861 ******************** (1/1 - 100.0%)
-2023-09-20 12:45:59 - INFO - processing  135861 - introtext is not JSON, proceeding further to check HTML
-2023-09-20 12:46:01 - INFO - processing 135861 - fulltext is not json proceeding further to check html
-2023-09-20 12:46:02 - INFO - ID: 135861 #COLUMN: fulltext #URL: ftp://security.debian.org/debian-security replaced with null
-2023-09-20 12:46:06 - INFO - Skipped ID: 135861 #COLUMN: fulltext #URL: http://www.debian.org/security/ #STATUS_CODE: 200
-2023-09-20 12:46:07 - INFO - Skipped ID: 135861 #COLUMN: fulltext #URL: http://www.debian.org/security/faq #STATUS_CODE: 200
-2023-09-20 12:46:30 - INFO - Skipped ID: 135861 #COLUMN: fulltext #URL: http://security.debian.org/pool/updates/main/i/iceweasel/iceweasel_2.0.0.13-0etch1.diff.gz #STATUS_CODE: 404 #Replace with NULL
-2023-09-20 12:48:02 - INFO - ******************** Processing ID: 135861 ******************** (1/1 - 100.0%)
-2023-09-20 12:48:02 - INFO - processing  135861 - introtext is not JSON, proceeding further to check HTML
-2023-09-20 12:48:29 - INFO - processing 135861 - fulltext is not json proceeding further to check html
-2023-09-20 12:48:30 - INFO - ID: 135861 #COLUMN: fulltext #URL: ftp://security.debian.org/debian-security replaced with null
-2023-09-20 12:48:35 - INFO - Skipped ID: 135861 #COLUMN: fulltext #URL: http://www.debian.org/security/ #STATUS_CODE: 200
-2023-09-20 12:48:36 - INFO - Skipped ID: 135861 #COLUMN: fulltext #URL: http://www.debian.org/security/faq #STATUS_CODE: 200
-2023-09-20 12:48:46 - INFO - Skipped ID: 135861 #COLUMN: fulltext #URL: http://security.debian.org/pool/updates/main/i/iceweasel/iceweasel_2.0.0.13-0etch1.diff.gz #STATUS_CODE: 404 #Replace with NULL
-2023-09-20 12:49:11 - INFO - Skipped ID: 135861 #COLUMN: fulltext #URL: http://security.debian.org/pool/updates/main/i/iceweasel/iceweasel_2.0.0.13-0etch1.dsc #STATUS_CODE: 404 #Replace with NULL
-2023-09-20 12:49:30 - INFO - Skipped ID: 135861 #COLUMN: fulltext #URL: http://security.debian.org/pool/updates/main/i/iceweasel/iceweasel_2.0.0.13.orig.tar.gz #STATUS_CODE: 404 #Replace with NULL
-2023-09-20 12:49:30 - INFO - Skipped ID: 135861 #COLUMN: fulltext #URL: http://security.debian.org/pool/updates/main/i/iceweasel/mozilla-firefox-dom-inspector_2.0.0.13-0etch1_all.deb #STATUS_CODE: 404 #Replace with NULL
-2023-09-20 12:49:30 - INFO - Skipped ID: 135861 #COLUMN: fulltext #URL: http://security.debian.org/pool/updates/main/i/iceweasel/firefox_2.0.0.13-0etch1_all.deb #STATUS_CODE: 404 #Replace with NULL
-2023-09-20 12:49:30 - INFO - Skipped ID: 135861 #COLUMN: fulltext #URL: http://security.debian.org/pool/updates/main/i/iceweasel/firefox-dom-inspector_2.0.0.13-0etch1_all.deb #STATUS_CODE: 404 #Replace with NULL
-2023-09-20 12:49:30 - INFO - Skipped ID: 135861 #COLUMN: fulltext #URL: http://security.debian.org/pool/updates/main/i/iceweasel/firefox-gnome-support_2.0.0.13-0etch1_all.deb #STATUS_CODE: 404 #Replace with NULL
-2023-09-20 12:49:30 - INFO - Skipped ID: 135861 #COLUMN: fulltext #URL: http://security.debian.org/pool/updates/main/i/iceweasel/mozilla-firefox-gnome-support_2.0.0.13-0etch1_all.deb #STATUS_CODE: 404 #Replace with NULL
-2023-09-20 12:49:30 - INFO - Skipped ID: 135861 #COLUMN: fulltext #URL: http://security.debian.org/pool/updates/main/i/iceweasel/iceweasel-dom-inspector_2.0.0.13-0etch1_all.deb #STATUS_CODE: 404 #Replace with NULL
-2023-09-20 12:49:30 - INFO - Skipped ID: 135861 #COLUMN: fulltext #URL: http://security.debian.org/pool/updates/main/i/iceweasel/mozilla-firefox_2.0.0.13-0etch1_all.deb #STATUS_CODE: 404 #Replace with NULL
-2023-09-20 12:49:30 - INFO - Skipped ID: 135861 #COLUMN: fulltext #URL: http://security.debian.org/pool/updates/main/i/iceweasel/iceweasel_2.0.0.13-0etch1_amd64.deb #STATUS_CODE: 404 #Replace with NULL
-2023-09-20 12:49:30 - INFO - Skipped ID: 135861 #COLUMN: fulltext #URL: http://security.debian.org/pool/updates/main/i/iceweasel/iceweasel-dbg_2.0.0.13-0etch1_amd64.deb #STATUS_CODE: 404 #Replace with NULL
-2023-09-20 12:49:30 - INFO - Skipped ID: 135861 #COLUMN: fulltext #URL: http://security.debian.org/pool/updates/main/i/iceweasel/iceweasel-gnome-support_2.0.0.13-0etch1_amd64.deb #STATUS_CODE: 404 #Replace with NULL
-2023-09-20 12:49:30 - INFO - Skipped ID: 135861 #COLUMN: fulltext #URL: http://security.debian.org/pool/updates/main/i/iceweasel/iceweasel_2.0.0.13-0etch1_arm.deb #STATUS_CODE: 404 #Replace with NULL
-2023-09-20 12:49:30 - INFO - Skipped ID: 135861 #COLUMN: fulltext #URL: http://security.debian.org/pool/updates/main/i/iceweasel/iceweasel-dbg_2.0.0.13-0etch1_arm.deb #STATUS_CODE: 404 #Replace with NULL
-2023-09-20 12:49:30 - INFO - Skipped ID: 135861 #COLUMN: fulltext #URL: http://security.debian.org/pool/updates/main/i/iceweasel/iceweasel-gnome-support_2.0.0.13-0etch1_arm.deb #STATUS_CODE: 404 #Replace with NULL
-2023-09-20 12:49:30 - INFO - Skipped ID: 135861 #COLUMN: fulltext #URL: http://security.debian.org/pool/updates/main/i/iceweasel/iceweasel-gnome-support_2.0.0.13-0etch1_i386.deb #STATUS_CODE: 404 #Replace with NULL
-2023-09-20 12:49:30 - INFO - Skipped ID: 135861 #COLUMN: fulltext #URL: http://security.debian.org/pool/updates/main/i/iceweasel/iceweasel_2.0.0.13-0etch1_i386.deb #STATUS_CODE: 404 #Replace with NULL
-2023-09-20 12:49:30 - INFO - Skipped ID: 135861 #COLUMN: fulltext #URL: http://security.debian.org/pool/updates/main/i/iceweasel/iceweasel-dbg_2.0.0.13-0etch1_i386.deb #STATUS_CODE: 404 #Replace with NULL
-2023-09-20 12:49:30 - INFO - Skipped ID: 135861 #COLUMN: fulltext #URL: http://security.debian.org/pool/updates/main/i/iceweasel/iceweasel-gnome-support_2.0.0.13-0etch1_ia64.deb #STATUS_CODE: 404 #Replace with NULL
-2023-09-20 12:49:30 - INFO - Skipped ID: 135861 #COLUMN: fulltext #URL: http://security.debian.org/pool/updates/main/i/iceweasel/iceweasel-dbg_2.0.0.13-0etch1_ia64.deb #STATUS_CODE: 404 #Replace with NULL
-2023-09-20 12:49:30 - INFO - Skipped ID: 135861 #COLUMN: fulltext #URL: http://security.debian.org/pool/updates/main/i/iceweasel/iceweasel_2.0.0.13-0etch1_ia64.deb #STATUS_CODE: 404 #Replace with NULL
-2023-09-20 12:49:30 - INFO - Skipped ID: 135861 #COLUMN: fulltext #URL: http://security.debian.org/pool/updates/main/i/iceweasel/iceweasel-dbg_2.0.0.13-0etch1_mips.deb #STATUS_CODE: 404 #Replace with NULL
-2023-09-20 12:49:30 - INFO - Skipped ID: 135861 #COLUMN: fulltext #URL: http://security.debian.org/pool/updates/main/i/iceweasel/iceweasel_2.0.0.13-0etch1_mips.deb #STATUS_CODE: 404 #Replace with NULL
-2023-09-20 12:49:30 - INFO - Skipped ID: 135861 #COLUMN: fulltext #URL: http://security.debian.org/pool/updates/main/i/iceweasel/iceweasel-gnome-support_2.0.0.13-0etch1_mips.deb #STATUS_CODE: 404 #Replace with NULL
-2023-09-20 12:49:30 - INFO - Skipped ID: 135861 #COLUMN: fulltext #URL: http://security.debian.org/pool/updates/main/i/iceweasel/iceweasel_2.0.0.13-0etch1_mipsel.deb #STATUS_CODE: 404 #Replace with NULL
-2023-09-20 12:49:30 - INFO - Skipped ID: 135861 #COLUMN: fulltext #URL: http://security.debian.org/pool/updates/main/i/iceweasel/iceweasel-dbg_2.0.0.13-0etch1_mipsel.deb #STATUS_CODE: 404 #Replace with NULL
-2023-09-20 12:49:30 - INFO - Skipped ID: 135861 #COLUMN: fulltext #URL: http://security.debian.org/pool/updates/main/i/iceweasel/iceweasel-gnome-support_2.0.0.13-0etch1_mipsel.deb #STATUS_CODE: 404 #Replace with NULL
-2023-09-20 12:49:30 - INFO - Skipped ID: 135861 #COLUMN: fulltext #URL: http://security.debian.org/pool/updates/main/i/iceweasel/iceweasel-dbg_2.0.0.13-0etch1_powerpc.deb #STATUS_CODE: 404 #Replace with NULL
-2023-09-20 12:49:30 - INFO - Skipped ID: 135861 #COLUMN: fulltext #URL: http://security.debian.org/pool/updates/main/i/iceweasel/iceweasel-gnome-support_2.0.0.13-0etch1_powerpc.deb #STATUS_CODE: 404 #Replace with NULL
-2023-09-20 12:49:30 - INFO - Skipped ID: 135861 #COLUMN: fulltext #URL: http://security.debian.org/pool/updates/main/i/iceweasel/iceweasel_2.0.0.13-0etch1_powerpc.deb #STATUS_CODE: 404 #Replace with NULL
-2023-09-20 12:49:30 - INFO - Skipped ID: 135861 #COLUMN: fulltext #URL: http://security.debian.org/pool/updates/main/i/iceweasel/iceweasel-gnome-support_2.0.0.13-0etch1_s390.deb #STATUS_CODE: 404 #Replace with NULL
-2023-09-20 12:49:30 - INFO - Skipped ID: 135861 #COLUMN: fulltext #URL: http://security.debian.org/pool/updates/main/i/iceweasel/iceweasel_2.0.0.13-0etch1_s390.deb #STATUS_CODE: 404 #Replace with NULL
-2023-09-20 12:49:30 - INFO - Skipped ID: 135861 #COLUMN: fulltext #URL: http://security.debian.org/pool/updates/main/i/iceweasel/iceweasel-dbg_2.0.0.13-0etch1_s390.deb #STATUS_CODE: 404 #Replace with NULL
-2023-09-20 12:49:30 - INFO - Skipped ID: 135861 #COLUMN: fulltext #URL: http://security.debian.org/pool/updates/main/i/iceweasel/iceweasel-gnome-support_2.0.0.13-0etch1_sparc.deb #STATUS_CODE: 404 #Replace with NULL
-2023-09-20 12:49:30 - INFO - Skipped ID: 135861 #COLUMN: fulltext #URL: http://security.debian.org/pool/updates/main/i/iceweasel/iceweasel_2.0.0.13-0etch1_sparc.deb #STATUS_CODE: 404 #Replace with NULL
-2023-09-20 12:49:30 - INFO - Skipped ID: 135861 #COLUMN: fulltext #URL: http://security.debian.org/pool/updates/main/i/iceweasel/iceweasel-dbg_2.0.0.13-0etch1_sparc.deb #STATUS_CODE: 404 #Replace with NULL
-2023-09-20 12:49:30 - INFO - Skipped ID: 135861 #COLUMN: fulltext #URL: http://security.debian.org/ #STATUS_CODE: 200
-2023-09-20 12:49:55 - INFO - ID: 135861 has been updated in database
-2023-09-20 12:49:55 - INFO - Processing ID: 135861 completed
-2023-09-20 12:50:02 - INFO - ==================== All records have been processed ====================
+2023-09-22 18:14:46 - INFO - Multi-Thread script (Thread ID : 140519569086016): Processing ID :14  **********  1/50 - 2.0%
+2023-09-22 18:14:46 - INFO - processing  14 - introtext is not JSON, proceeding further to check HTML
+2023-09-22 18:14:47 - INFO - Skipped ID: 14 #COLUMN: introtext #URL: https://www.LinuxSecurity.com #STATUS_CODE: 200
+2023-09-22 18:14:47 - INFO - processing 14 - fulltext is not json proceeding further to check html
+2023-09-22 18:14:47 - INFO - Multi-Thread script (Thread ID : 140519569086016): Processing ID :17  **********  7/50 - 14.0%
+2023-09-22 18:14:47 - INFO - processing  17 - introtext is not JSON, proceeding further to check HTML
+2023-09-22 18:14:47 - INFO - processing 17 - fulltext is not json proceeding further to check html
+2023-09-22 18:14:47 - INFO - Multi-Thread script (Thread ID : 140519569086016): Processing ID :18  **********  8/50 - 16.0%
+2023-09-22 18:14:47 - INFO - processing  18 - introtext is not JSON, proceeding further to check HTML
+2023-09-22 18:14:48 - INFO - processing 18 - fulltext is not json proceeding further to check html
+2023-09-22 18:14:48 - INFO - Multi-Thread script (Thread ID : 140519569086016): Processing ID :20  **********  10/50 - 20.0%
+2023-09-22 18:14:48 - INFO - processing  20 - introtext is not JSON, proceeding further to check HTML
+2023-09-22 18:14:48 - INFO - processing 20 - fulltext is not json proceeding further to check html
+2023-09-22 18:14:48 - INFO - Multi-Thread script (Thread ID : 140519569086016): Processing ID :86096  **********  12/50 - 24.0%
+2023-09-22 18:14:48 - INFO - processing  86096 - introtext is not JSON, proceeding further to check HTML
+2023-09-22 18:14:48 - INFO - processing 86096 - fulltext is not json proceeding further to check html
+2023-09-22 18:14:48 - INFO - Multi-Thread script (Thread ID : 140519569086016): Processing ID :101882  **********  13/50 - 26.0%
+2023-09-22 18:14:48 - INFO - processing  101882 - introtext is not JSON, proceeding further to check HTML
+2023-09-22 18:14:48 - INFO - processing 101882 - fulltext is not json proceeding further to check html
+2023-09-22 18:14:51 - INFO - Skipped ID: 101882 #COLUMN: fulltext #URL: http://www.chkrootkit.org #STATUS_CODE: 200
+2023-09-22 18:14:51 - INFO - Skipped ID: 101882 #COLUMN: fulltext #URL: https://www.chkrootkit.org #STATUS_CODE: 200
+2023-09-22 18:14:51 - INFO - Multi-Thread script (Thread ID : 140519569086016): Processing ID :101883  **********  24/50 - 48.0%
+2023-09-22 18:14:51 - INFO - processing  101883 - introtext is not JSON, proceeding further to check HTML
+2023-09-22 18:14:51 - INFO - processing 101883 - fulltext is not json proceeding further to check html
+2023-09-22 18:14:54 - INFO - Skipped ID: 101883 #COLUMN: fulltext #URL: http://www.guardiandigital.com #STATUS_CODE: 200
+2023-09-22 18:14:54 - INFO - Multi-Thread script (Thread ID : 140519569086016): Processing ID :101884  **********  33/50 - 66.0%
+2023-09-22 18:14:54 - INFO - processing  101884 - introtext is not JSON, proceeding further to check HTML
+2023-09-22 18:14:54 - INFO - processing 101884 - fulltext is not json proceeding further to check html
+2023-09-22 18:14:56 - INFO - Skipped ID: 101884 #COLUMN: fulltext #URL: http://ccrypt.sourceforge.net/ #STATUS_CODE: 200
+2023-09-22 18:14:56 - INFO - Skipped ID: 101884 #COLUMN: fulltext #URL: http://www.gnupg.org #STATUS_CODE: 307
+2023-09-22 18:14:56 - INFO - Multi-Thread script (Thread ID : 140519569086016): Processing ID :101887  **********  38/50 - 76.0%
+2023-09-22 18:14:56 - INFO - processing  101887 - introtext is not JSON, proceeding further to check HTML
+2023-09-22 18:14:58 - INFO - Skipped ID: 101887 #COLUMN: introtext #URL: https://linuxsecurity.com/content/blogcategory/91/104 #STATUS_CODE: 200
+2023-09-22 18:14:58 - INFO - Skipped ID: 101887 #COLUMN: introtext #URL: https://linuxsecurity.com/content/blogcategory/88/101/ #STATUS_CODE: 200
+2023-09-22 18:14:58 - INFO - Skipped ID: 101887 #COLUMN: introtext #URL: https://linuxsecurity.com/content/blogcategory/92/105/ #STATUS_CODE: 200
+2023-09-22 18:14:58 - INFO - Skipped ID: 101887 #COLUMN: introtext #URL: https://linuxsecurity.com/content/blogcategory/94/107/ #STATUS_CODE: 200
+2023-09-22 18:14:58 - INFO - Skipped ID: 101887 #COLUMN: introtext #URL: https://linuxsecurity.com/content/blogcategory/90/103/ #STATUS_CODE: 200
+2023-09-22 18:14:58 - INFO - Skipped ID: 101887 #COLUMN: introtext #URL: https://linuxsecurity.com/content/blogcategory/99/111/ #STATUS_CODE: 200
+2023-09-22 18:14:58 - INFO - Skipped ID: 101887 #COLUMN: introtext #URL: https://linuxsecurity.com/content/blogcategory/95/108/ #STATUS_CODE: 200
+2023-09-22 18:14:58 - INFO - Skipped ID: 101887 #COLUMN: introtext #URL: https://linuxsecurity.com/content/blogcategory/98/110/ #STATUS_CODE: 200
+2023-09-22 18:14:58 - INFO - Skipped ID: 101887 #COLUMN: introtext #URL: https://linuxsecurity.com/content/blogcategory/122/114/ #STATUS_CODE: 200
+2023-09-22 18:14:58 - INFO - Skipped ID: 101887 #COLUMN: introtext #URL: https://linuxsecurity.com/content/blogcategory/101/113/ #STATUS_CODE: 200
+2023-09-22 18:14:58 - INFO - Skipped ID: 101887 #COLUMN: introtext #URL: https://linuxsecurity.com/content/blogcategory/87/100/ #STATUS_CODE: 200
+2023-09-22 18:14:58 - INFO - Skipped ID: 101887 #COLUMN: introtext #URL: https://linuxsecurity.com/content/blogcategory/85/98/ #STATUS_CODE: 200
+2023-09-22 18:14:58 - INFO - Skipped ID: 101887 #COLUMN: introtext #URL: https://linuxsecurity.com/content/blogcategory/89/102/ #STATUS_CODE: 200
+2023-09-22 18:14:58 - INFO - Skipped ID: 101887 #COLUMN: introtext #URL: https://linuxsecurity.com/content/blogcategory/86/99/ #STATUS_CODE: 200
+2023-09-22 18:14:58 - INFO - Skipped ID: 101887 #COLUMN: introtext #URL: https://linuxsecurity.com/content/blogcategory/97/109/ #STATUS_CODE: 200
+2023-09-22 18:14:58 - INFO - processing 101887 - fulltext is not json proceeding further to check html
+2023-09-22 18:14:58 - INFO - Multi-Thread script (Thread ID : 140519569086016): Processing ID :101892  **********  44/50 - 88.0%
+2023-09-22 18:14:58 - INFO - processing  101892 - introtext is not JSON, proceeding further to check HTML
+2023-09-22 18:14:58 - INFO - processing 101892 - fulltext is not json proceeding further to check html
+2023-09-22 18:14:58 - INFO - Multi-Thread script (Thread ID : 140519569086016): Processing ID :101897  **********  45/50 - 90.0%
+2023-09-22 18:14:58 - INFO - processing  101897 - introtext is not JSON, proceeding further to check HTML
+2023-09-22 18:14:58 - INFO - processing 101897 - fulltext is not json proceeding further to check html
+2023-09-22 18:14:58 - INFO - Multi-Thread script (Thread ID : 140519569086016): Processing ID :101898  **********  46/50 - 92.0%
+2023-09-22 18:14:58 - INFO - processing  101898 - introtext is not JSON, proceeding further to check HTML
+2023-09-22 18:14:58 - INFO - processing 101898 - fulltext is not json proceeding further to check html
+2023-09-22 18:14:46 - INFO - Multi-Thread script (Thread ID : 140519250327104): Processing ID :101899  **********  2/50 - 4.0%
+2023-09-22 18:14:46 - INFO - processing  101899 - introtext is not JSON, proceeding further to check HTML
+2023-09-22 18:14:46 - INFO - processing 101899 - fulltext is not json proceeding further to check html
+2023-09-22 18:14:48 - WARNING - #ID: 101899 #URL http://www.RedHat.com/corp/contac Error: local variable 'driver' referenced before assignment
+2023-09-22 18:14:48 - ERROR - #ID: 101899 #URL http://www.RedHat.com/corp/contac Error: local variable 'driver' referenced before assignment
+2023-09-22 18:14:48 - INFO - ID: 101899 #COLUMN: fulltext #URL: http://www.RedHat.com/corp/contac added for more checking
+2023-09-22 18:14:48 - INFO - Multi-Thread script (Thread ID : 140519250327104): Processing ID :101910  **********  14/50 - 28.0%
+2023-09-22 18:14:48 - INFO - processing  101910 - introtext is not JSON, proceeding further to check HTML
+2023-09-22 18:14:48 - INFO - processing 101910 - fulltext is not json proceeding further to check html
+2023-09-22 18:14:50 - INFO - Skipped ID: 101910 #COLUMN: fulltext #URL: http://www.debian.org/security/ #STATUS_CODE: 200
+2023-09-22 18:14:50 - INFO - Skipped ID: 101910 #COLUMN: fulltext #URL: http://security.debian.org/ #STATUS_CODE: 200
+2023-09-22 18:14:50 - INFO - Multi-Thread script (Thread ID : 140519250327104): Processing ID :101911  **********  21/50 - 42.0%
+2023-09-22 18:14:50 - INFO - processing  101911 - introtext is not JSON, proceeding further to check HTML
+2023-09-22 18:14:50 - INFO - processing 101911 - fulltext is not json proceeding further to check html
+2023-09-22 18:14:51 - WARNING - #ID: 101911 #URL http://www.RedHat.com/corp/contact.html Error: local variable 'driver' referenced before assignment
+2023-09-22 18:14:51 - ERROR - #ID: 101911 #URL http://www.RedHat.com/corp/contact.html Error: local variable 'driver' referenced before assignment
+2023-09-22 18:14:51 - INFO - ID: 101911 #COLUMN: fulltext #URL: http://www.RedHat.com/corp/contact.html added for more checking
+2023-09-22 18:14:51 - INFO - Multi-Thread script (Thread ID : 140519250327104): Processing ID :101912  **********  27/50 - 54.0%
+2023-09-22 18:14:51 - INFO - processing  101912 - introtext is not JSON, proceeding further to check HTML
+2023-09-22 18:14:51 - INFO - processing 101912 - fulltext is not json proceeding further to check html
+2023-09-22 18:14:53 - INFO - Skipped ID: 101912 #COLUMN: fulltext #URL: http://www.xfree86.org/#news #STATUS_CODE: 200
+2023-09-22 18:14:53 - INFO - Multi-Thread script (Thread ID : 140519250327104): Processing ID :101913  **********  29/50 - 58.0%
+2023-09-22 18:14:53 - INFO - processing  101913 - introtext is not JSON, proceeding further to check HTML
+2023-09-22 18:14:53 - INFO - processing 101913 - fulltext is not json proceeding further to check html
+2023-09-22 18:14:53 - INFO - Multi-Thread script (Thread ID : 140519250327104): Processing ID :101914  **********  31/50 - 62.0%
+2023-09-22 18:14:53 - INFO - processing  101914 - introtext is not JSON, proceeding further to check HTML
+2023-09-22 18:14:53 - INFO - processing 101914 - fulltext is not json proceeding further to check html
+2023-09-22 18:14:55 - WARNING - #ID: 101914 #URL http://www.RedHat.com/corp/contac Error: local variable 'driver' referenced before assignment
+2023-09-22 18:14:55 - ERROR - #ID: 101914 #URL http://www.RedHat.com/corp/contac Error: local variable 'driver' referenced before assignment
+2023-09-22 18:14:55 - INFO - ID: 101914 #COLUMN: fulltext #URL: http://www.RedHat.com/corp/contac added for more checking
+2023-09-22 18:14:55 - INFO - Multi-Thread script (Thread ID : 140519250327104): Processing ID :101915  **********  36/50 - 72.0%
+2023-09-22 18:14:55 - INFO - processing  101915 - introtext is not JSON, proceeding further to check HTML
+2023-09-22 18:14:55 - INFO - processing 101915 - fulltext is not json proceeding further to check html
+2023-09-22 18:14:55 - INFO - Multi-Thread script (Thread ID : 140519250327104): Processing ID :101916  **********  37/50 - 74.0%
+2023-09-22 18:14:55 - INFO - processing  101916 - introtext is not JSON, proceeding further to check HTML
+2023-09-22 18:14:55 - INFO - processing 101916 - fulltext is not json proceeding further to check html
+2023-09-22 18:14:56 - WARNING - #ID: 101916 #URL http://www.RedHat.com/corp/contac Error: local variable 'driver' referenced before assignment
+2023-09-22 18:14:56 - ERROR - #ID: 101916 #URL http://www.RedHat.com/corp/contac Error: local variable 'driver' referenced before assignment
+2023-09-22 18:14:56 - INFO - ID: 101916 #COLUMN: fulltext #URL: http://www.RedHat.com/corp/contac added for more checking
+2023-09-22 18:14:56 - INFO - Multi-Thread script (Thread ID : 140519250327104): Processing ID :101917  **********  39/50 - 78.0%
+2023-09-22 18:14:56 - INFO - processing  101917 - introtext is not JSON, proceeding further to check HTML
+2023-09-22 18:14:56 - INFO - processing 101917 - fulltext is not json proceeding further to check html
+2023-09-22 18:14:57 - INFO - Multi-Thread script (Thread ID : 140519250327104): Processing ID :101918  **********  40/50 - 80.0%
+2023-09-22 18:14:57 - INFO - processing  101918 - introtext is not JSON, proceeding further to check HTML
+2023-09-22 18:14:57 - INFO - processing 101918 - fulltext is not json proceeding further to check html
+2023-09-22 18:14:57 - INFO - Multi-Thread script (Thread ID : 140519250327104): Processing ID :101919  **********  41/50 - 82.0%
+2023-09-22 18:14:57 - INFO - processing  101919 - introtext is not JSON, proceeding further to check HTML
+2023-09-22 18:14:57 - INFO - processing 101919 - fulltext is not json proceeding further to check html
+2023-09-22 18:14:57 - INFO - Multi-Thread script (Thread ID : 140519250327104): Processing ID :101920  **********  42/50 - 84.0%
+2023-09-22 18:14:57 - INFO - processing  101920 - introtext is not JSON, proceeding further to check HTML
+2023-09-22 18:14:57 - INFO - processing 101920 - fulltext is not json proceeding further to check html
+2023-09-22 18:14:46 - INFO - Multi-Thread script (Thread ID : 140519233541696): Processing ID :101921  **********  3/50 - 6.0%
+2023-09-22 18:14:46 - INFO - processing  101921 - introtext is not JSON, proceeding further to check HTML
+2023-09-22 18:14:46 - INFO - processing 101921 - fulltext is not json proceeding further to check html
+2023-09-22 18:14:47 - INFO - Multi-Thread script (Thread ID : 140519233541696): Processing ID :101922  **********  6/50 - 12.0%
+2023-09-22 18:14:47 - INFO - processing  101922 - introtext is not JSON, proceeding further to check HTML
+2023-09-22 18:14:47 - INFO - processing 101922 - fulltext is not json proceeding further to check html
+2023-09-22 18:14:47 - INFO - Multi-Thread script (Thread ID : 140519233541696): Processing ID :101923  **********  9/50 - 18.0%
+2023-09-22 18:14:47 - INFO - processing  101923 - introtext is not JSON, proceeding further to check HTML
+2023-09-22 18:14:47 - INFO - processing 101923 - fulltext is not json proceeding further to check html
+2023-09-22 18:14:48 - INFO - Multi-Thread script (Thread ID : 140519233541696): Processing ID :101924  **********  11/50 - 22.0%
+2023-09-22 18:14:48 - INFO - processing  101924 - introtext is not JSON, proceeding further to check HTML
+2023-09-22 18:14:48 - INFO - processing 101924 - fulltext is not json proceeding further to check html
+2023-09-22 18:14:49 - INFO - Multi-Thread script (Thread ID : 140519233541696): Processing ID :101925  **********  16/50 - 32.0%
+2023-09-22 18:14:49 - INFO - processing  101925 - introtext is not JSON, proceeding further to check HTML
+2023-09-22 18:14:49 - INFO - processing 101925 - fulltext is not json proceeding further to check html
+2023-09-22 18:14:49 - INFO - Multi-Thread script (Thread ID : 140519233541696): Processing ID :101926  **********  17/50 - 34.0%
+2023-09-22 18:14:49 - INFO - processing  101926 - introtext is not JSON, proceeding further to check HTML
+2023-09-22 18:14:49 - INFO - processing 101926 - fulltext is not json proceeding further to check html
+2023-09-22 18:14:49 - INFO - Multi-Thread script (Thread ID : 140519233541696): Processing ID :101930  **********  18/50 - 36.0%
+2023-09-22 18:14:49 - INFO - processing  101930 - introtext is not JSON, proceeding further to check HTML
+2023-09-22 18:14:49 - INFO - processing 101930 - fulltext is not json proceeding further to check html
+2023-09-22 18:14:50 - INFO - Multi-Thread script (Thread ID : 140519233541696): Processing ID :101931  **********  19/50 - 38.0%
+2023-09-22 18:14:50 - INFO - processing  101931 - introtext is not JSON, proceeding further to check HTML
+2023-09-22 18:14:50 - INFO - processing 101931 - fulltext is not json proceeding further to check html
+2023-09-22 18:14:50 - INFO - Skipped ID: 101931 #COLUMN: fulltext #URL: http://developer.Red #STATUS_CODE: 200
+2023-09-22 18:14:50 - INFO - Multi-Thread script (Thread ID : 140519233541696): Processing ID :101932  **********  22/50 - 44.0%
+2023-09-22 18:14:50 - INFO - processing  101932 - introtext is not JSON, proceeding further to check HTML
+2023-09-22 18:14:51 - INFO - processing 101932 - fulltext is not json proceeding further to check html
+2023-09-22 18:14:52 - INFO - Skipped ID: 101932 #COLUMN: fulltext #URL: http://developer.Red #STATUS_CODE: 200
+2023-09-22 18:14:52 - INFO - Multi-Thread script (Thread ID : 140519233541696): Processing ID :101933  **********  28/50 - 56.0%
+2023-09-22 18:14:52 - INFO - processing  101933 - introtext is not JSON, proceeding further to check HTML
+2023-09-22 18:14:52 - INFO - processing 101933 - fulltext is not json proceeding further to check html
+2023-09-22 18:14:53 - WARNING - #ID: 101933 #URL http://www.RedHat.com/corp/contac Error: local variable 'driver' referenced before assignment
+2023-09-22 18:14:53 - INFO - Skipped ID: 101933 #COLUMN: fulltext #URL: http://developer.Red #STATUS_CODE: 200
+2023-09-22 18:14:53 - ERROR - #ID: 101933 #URL http://www.RedHat.com/corp/contac Error: local variable 'driver' referenced before assignment
+2023-09-22 18:14:53 - INFO - ID: 101933 #COLUMN: fulltext #URL: http://www.RedHat.com/corp/contac added for more checking
+2023-09-22 18:14:53 - INFO - Multi-Thread script (Thread ID : 140519233541696): Processing ID :101934  **********  30/50 - 60.0%
+2023-09-22 18:14:53 - INFO - processing  101934 - introtext is not JSON, proceeding further to check HTML
+2023-09-22 18:14:53 - INFO - processing 101934 - fulltext is not json proceeding further to check html
+2023-09-22 18:14:54 - WARNING - #ID: 101934 #URL http://www.RedHat.com/corp/contac Error: local variable 'driver' referenced before assignment
+2023-09-22 18:14:54 - ERROR - #ID: 101934 #URL http://www.RedHat.com/corp/contac Error: local variable 'driver' referenced before assignment
+2023-09-22 18:14:54 - INFO - ID: 101934 #COLUMN: fulltext #URL: http://www.RedHat.com/corp/contac added for more checking
+2023-09-22 18:14:54 - INFO - Multi-Thread script (Thread ID : 140519233541696): Processing ID :101935  **********  35/50 - 70.0%
+2023-09-22 18:14:54 - INFO - processing  101935 - introtext is not JSON, proceeding further to check HTML
+2023-09-22 18:14:54 - INFO - processing 101935 - fulltext is not json proceeding further to check html
+2023-09-22 18:14:56 - WARNING - #ID: 101935 #URL http://www.RedHat.com/corp/contact Error: local variable 'driver' referenced before assignment
+2023-09-22 18:14:56 - ERROR - #ID: 101935 #URL http://www.RedHat.com/corp/contact Error: local variable 'driver' referenced before assignment
+2023-09-22 18:14:56 - INFO - ID: 101935 #COLUMN: fulltext #URL: http://www.RedHat.com/corp/contact added for more checking
+2023-09-22 18:14:46 - INFO - Multi-Thread script (Thread ID : 140519225148992): Processing ID :101936  **********  4/50 - 8.0%
+2023-09-22 18:14:46 - INFO - processing  101936 - introtext is not JSON, proceeding further to check HTML
+2023-09-22 18:14:46 - INFO - processing 101936 - fulltext is not json proceeding further to check html
+2023-09-22 18:14:48 - WARNING - #ID: 101936 #URL http://www.RedHat.com/corp/contac Error: local variable 'driver' referenced before assignment
+2023-09-22 18:14:48 - ERROR - #ID: 101936 #URL http://www.RedHat.com/corp/contac Error: local variable 'driver' referenced before assignment
+2023-09-22 18:14:48 - INFO - ID: 101936 #COLUMN: fulltext #URL: http://www.RedHat.com/corp/contac added for more checking
+2023-09-22 18:14:48 - INFO - Multi-Thread script (Thread ID : 140519225148992): Processing ID :101937  **********  15/50 - 30.0%
+2023-09-22 18:14:48 - INFO - processing  101937 - introtext is not JSON, proceeding further to check HTML
+2023-09-22 18:14:48 - INFO - processing 101937 - fulltext is not json proceeding further to check html
+2023-09-22 18:14:50 - WARNING - #ID: 101937 #URL http://www.RedHat.com/corp/contac Error: local variable 'driver' referenced before assignment
+2023-09-22 18:14:50 - ERROR - #ID: 101937 #URL http://www.RedHat.com/corp/contac Error: local variable 'driver' referenced before assignment
+2023-09-22 18:14:50 - INFO - ID: 101937 #COLUMN: fulltext #URL: http://www.RedHat.com/corp/contac added for more checking
+2023-09-22 18:14:50 - INFO - Multi-Thread script (Thread ID : 140519225148992): Processing ID :101938  **********  20/50 - 40.0%
+2023-09-22 18:14:50 - INFO - processing  101938 - introtext is not JSON, proceeding further to check HTML
+2023-09-22 18:14:50 - INFO - processing 101938 - fulltext is not json proceeding further to check html
+2023-09-22 18:14:51 - WARNING - #ID: 101938 #URL http://www.RedHat.com/corp/contac Error: local variable 'driver' referenced before assignment
+2023-09-22 18:14:51 - ERROR - #ID: 101938 #URL http://www.RedHat.com/corp/contac Error: local variable 'driver' referenced before assignment
+2023-09-22 18:14:51 - INFO - ID: 101938 #COLUMN: fulltext #URL: http://www.RedHat.com/corp/contac added for more checking
+2023-09-22 18:14:51 - INFO - Multi-Thread script (Thread ID : 140519225148992): Processing ID :101939  **********  25/50 - 50.0%
+2023-09-22 18:14:51 - INFO - processing  101939 - introtext is not JSON, proceeding further to check HTML
+2023-09-22 18:14:51 - INFO - processing 101939 - fulltext is not json proceeding further to check html
+2023-09-22 18:14:51 - INFO - Multi-Thread script (Thread ID : 140519225148992): Processing ID :101940  **********  26/50 - 52.0%
+2023-09-22 18:14:51 - INFO - processing  101940 - introtext is not JSON, proceeding further to check HTML
+2023-09-22 18:14:53 - INFO - Skipped ID: 101940 #COLUMN: introtext #URL: https://www.fullcircle.com #STATUS_CODE: 200
+2023-09-22 18:14:53 - INFO - processing 101940 - fulltext is not json proceeding further to check html
+2023-09-22 18:14:54 - INFO - Skipped ID: 101940 #COLUMN: fulltext #URL: https://www.fullcircle.com #STATUS_CODE: 200
+2023-09-22 18:14:54 - INFO - Multi-Thread script (Thread ID : 140519225148992): Processing ID :101941  **********  34/50 - 68.0%
+2023-09-22 18:14:54 - INFO - processing  101941 - introtext is not JSON, proceeding further to check HTML
+2023-09-22 18:14:54 - INFO - processing 101941 - fulltext is not json proceeding further to check html
+2023-09-22 18:14:55 - ERROR - #ID: 101941 #FTP_URL ftp://ftp.suse.com/pub/suse_update/kernel/ #Error: 550 Could not get file modification time.
+2023-09-22 18:14:58 - INFO - Skipped ID: 101941 #COLUMN: fulltext #URL: http://www.suse.de/patches/index.html #STATUS_CODE: 200
+2023-09-22 18:14:58 - INFO - Skipped ID: 101941 #COLUMN: fulltext #URL: http://www.suse.de/ftp.html #STATUS_CODE: 200
+2023-09-22 18:14:58 - INFO - Skipped ID: 101941 #COLUMN: fulltext #URL: http://www.suse.com/en/ftp.html #STATUS_CODE: 200
+2023-09-22 18:14:58 - INFO - Multi-Thread script (Thread ID : 140519225148992): Processing ID :101942  **********  47/50 - 94.0%
+2023-09-22 18:14:58 - INFO - processing  101942 - introtext is not JSON, proceeding further to check HTML
+2023-09-22 18:14:58 - INFO - processing 101942 - fulltext is not json proceeding further to check html
+2023-09-22 18:14:59 - ERROR - #ID: 101942 #FTP_URL ftp://ftp.suse.com/pub/SuSE-Linux/suse_update/XFree86-3.3.3.1-SuSE/glibc #Error: 550 Could not get file modification time.
+2023-09-22 18:14:59 - ERROR - #ID: 101942 #FTP_URL ftp://ftp.suse.com/pub/SuSE-Linux/suse_update/XFree86-3.3.3.1-SuSE/libc5 #Error: 550 Could not get file modification time.
+2023-09-22 18:15:00 - WARNING - #ID: 101942 #URL http://www.suse.com/ftp_new.html Error: local variable 'driver' referenced before assignment
+2023-09-22 18:15:02 - INFO - Skipped ID: 101942 #COLUMN: fulltext #URL: http://www.suse.de/patches/index.html #STATUS_CODE: 200
+2023-09-22 18:15:02 - INFO - Skipped ID: 101942 #COLUMN: fulltext #URL: http://www.suse.de/ftp.html #STATUS_CODE: 200
+2023-09-22 18:15:02 - ERROR - #ID: 101942 #URL http://www.suse.com/ftp_new.html Error: local variable 'driver' referenced before assignment
+2023-09-22 18:15:02 - INFO - ID: 101942 #COLUMN: fulltext #URL: http://www.suse.com/ftp_new.html added for more checking
+2023-09-22 18:15:02 - INFO - Multi-Thread script (Thread ID : 140519225148992): Processing ID :101943  **********  49/50 - 98.0%
+2023-09-22 18:15:02 - INFO - processing  101943 - introtext is not JSON, proceeding further to check HTML
+2023-09-22 18:15:02 - INFO - processing 101943 - fulltext is not json proceeding further to check html
+2023-09-22 18:15:02 - INFO - Multi-Thread script (Thread ID : 140519225148992): Processing ID :101944  **********  50/50 - 100.0%
+2023-09-22 18:15:02 - INFO - processing  101944 - introtext is not JSON, proceeding further to check HTML
+2023-09-22 18:15:02 - INFO - processing 101944 - fulltext is not json proceeding further to check html
+2023-09-22 18:15:02 - INFO - ID: 101944 #COLUMN: fulltext #URL: ftp://ftp.suse.com/pub/SuSE-Linux/suse_update/suse61/d1/lx_suse-2.2.7.SuSE-
+3.i386.rpm replaced with ftp://ftp.suse.com/pub/SuSE-Linux/suse_update/suse61/d1/lx_suse-2.2.7.SuSE-3.i386.rpm
+2023-09-22 18:15:02 - ERROR - #ID: 101944 #FTP_URL ftp://ftp.suse.com/pub/SuSE-Linux/suse_update/kernel/linux-2.2.7.SuSE.tgz #Error: 550 Could not get file modification time.
+2023-09-22 18:15:02 - ERROR - #ID: 101944 #FTP_URL ftp://ftp.suse.com/pub/SuSE-Linux/suse_update/suse61/d1/lx_suse-2.2.7.SuSE-3.i386.rpm #Error: 550 Could not get file modification time.
+2023-09-22 18:15:04 - WARNING - #ID: 101944 #URL http://www.suse.com/ftp_new.html Error: local variable 'driver' referenced before assignment
+2023-09-22 18:15:05 - INFO - Skipped ID: 101944 #COLUMN: fulltext #URL: http://www.suse.de/patches/index.html #STATUS_CODE: 200
+2023-09-22 18:15:05 - INFO - Skipped ID: 101944 #COLUMN: fulltext #URL: http://www.suse.de/ftp.html #STATUS_CODE: 200
+2023-09-22 18:15:05 - ERROR - #ID: 101944 #URL http://www.suse.com/ftp_new.html Error: local variable 'driver' referenced before assignment
+2023-09-22 18:15:05 - INFO - ID: 101944 #COLUMN: fulltext #URL: http://www.suse.com/ftp_new.html added for more checking
+2023-09-22 18:15:05 - INFO - Processing ID: 101944 completed
+2023-09-22 18:15:05 - INFO - Multi-Thread script (Thread ID : 140519225148992): Processing ID :101945  **********  52/50 - 104.0%
+2023-09-22 18:15:05 - INFO - processing  101945 - introtext is not JSON, proceeding further to check HTML
+2023-09-22 18:15:05 - INFO - processing 101945 - fulltext is not json proceeding further to check html
+2023-09-22 18:15:06 - ERROR - #ID: 101945 #FTP_URL ftp://ftp.suse.com/pub/suse/i386/update/6.1/n1/pine.rpm #Error: 550 Could not get file modification time.
+2023-09-22 18:15:06 - ERROR - #ID: 101945 #FTP_URL ftp://ftp.suse.com/pub/suse/i386/update/6.1/zq/pine.spm #Error: 550 Could not get file modification time.
+2023-09-22 18:15:06 - ERROR - #ID: 101945 #FTP_URL ftp://ftp.suse.com/pub/suse/axp/update/6.1/n1/pine.rpm #Error: 550 Could not get file modification time.
+2023-09-22 18:15:07 - WARNING - #ID: 101945 #URL http://www.suse.com/ftp_new.html Error: local variable 'driver' referenced before assignment
+2023-09-22 18:15:08 - INFO - Skipped ID: 101945 #COLUMN: fulltext #URL: http://www.suse.de/patches/index.html #STATUS_CODE: 200
+2023-09-22 18:15:08 - INFO - Skipped ID: 101945 #COLUMN: fulltext #URL: http://www.suse.de/ftp.html #STATUS_CODE: 200
+2023-09-22 18:15:08 - ERROR - #ID: 101945 #URL http://www.suse.com/ftp_new.html Error: local variable 'driver' referenced before assignment
+2023-09-22 18:15:08 - INFO - ID: 101945 #COLUMN: fulltext #URL: http://www.suse.com/ftp_new.html added for more checking
+2023-09-22 18:15:08 - INFO - Multi-Thread script (Thread ID : 140519225148992): Processing ID :101946  **********  54/50 - 108.0%
+2023-09-22 18:15:08 - INFO - processing  101946 - introtext is not JSON, proceeding further to check HTML
+2023-09-22 18:15:08 - INFO - processing 101946 - fulltext is not json proceeding further to check html
+2023-09-22 18:15:09 - ERROR - #ID: 101946 #FTP_URL ftp://ftp.suse.com/pub/suse/i386/update/6.1/zq1/man-2.3.10-76.src.rpm #Error: 550 Could not get file modification time.
+2023-09-22 18:15:09 - ERROR - #ID: 101946 #FTP_URL ftp://ftp.suse.com/pub/suse/i386/update/6.1/a1/man-2.3.10-76.i386.rpm #Error: 550 Could not get file modification time.
+2023-09-22 18:15:10 - WARNING - #ID: 101946 #URL http://www.suse.com/ftp_new.html Error: local variable 'driver' referenced before assignment
+2023-09-22 18:15:12 - INFO - Skipped ID: 101946 #COLUMN: fulltext #URL: http://www.suse.de/patches/index.html #STATUS_CODE: 200
+2023-09-22 18:15:12 - INFO - Skipped ID: 101946 #COLUMN: fulltext #URL: http://www.suse.de/ftp.html #STATUS_CODE: 200
+2023-09-22 18:15:12 - ERROR - #ID: 101946 #URL http://www.suse.com/ftp_new.html Error: local variable 'driver' referenced before assignment
+2023-09-22 18:15:12 - INFO - ID: 101946 #COLUMN: fulltext #URL: http://www.suse.com/ftp_new.html added for more checking
+2023-09-22 18:15:12 - INFO - Multi-Thread script (Thread ID : 140519225148992): Processing ID :101947  **********  56/50 - 112.0%
+2023-09-22 18:15:12 - INFO - processing  101947 - introtext is not JSON, proceeding further to check HTML
+2023-09-22 18:15:12 - INFO - processing 101947 - fulltext is not json proceeding further to check html
+2023-09-22 18:15:13 - ERROR - #ID: 101947 #FTP_URL ftp://ftp.suse.com/pub/suse/i386/update/6.1/kde2/kbase-1.1.1-15.i386.rpm #Error: 550 Could not get file modification time.
+2023-09-22 18:15:14 - WARNING - #ID: 101947 #URL http://www.suse.com/ftp_new.html Error: local variable 'driver' referenced before assignment
+2023-09-22 18:15:15 - INFO - Skipped ID: 101947 #COLUMN: fulltext #URL: http://www.suse.de/patches/index.html #STATUS_CODE: 200
+2023-09-22 18:15:15 - INFO - Skipped ID: 101947 #COLUMN: fulltext #URL: http://www.suse.de/ftp.html #STATUS_CODE: 200
+2023-09-22 18:15:15 - ERROR - #ID: 101947 #URL http://www.suse.com/ftp_new.html Error: local variable 'driver' referenced before assignment
+2023-09-22 18:15:15 - INFO - ID: 101947 #COLUMN: fulltext #URL: http://www.suse.com/ftp_new.html added for more checking
+2023-09-22 18:14:46 - INFO - Multi-Thread script (Thread ID : 140519208363584): Processing ID :101948  **********  5/50 - 10.0%
+2023-09-22 18:14:46 - INFO - processing  101948 - introtext is not JSON, proceeding further to check HTML
+2023-09-22 18:14:46 - INFO - processing 101948 - fulltext is not json proceeding further to check html
+2023-09-22 18:14:50 - WARNING - #ID: 101948 #URL http://www.suse.com/ftp_new.html Error: local variable 'driver' referenced before assignment
+2023-09-22 18:14:51 - INFO - Skipped ID: 101948 #COLUMN: fulltext #URL: http://www.suse.de/patches/index.html #STATUS_CODE: 200
+2023-09-22 18:14:51 - INFO - Skipped ID: 101948 #COLUMN: fulltext #URL: http://www.suse.de/ftp.html #STATUS_CODE: 200
+2023-09-22 18:14:51 - ERROR - #ID: 101948 #URL http://www.suse.com/ftp_new.html Error: local variable 'driver' referenced before assignment
+2023-09-22 18:14:51 - INFO - ID: 101948 #COLUMN: fulltext #URL: http://www.suse.com/ftp_new.html added for more checking
+2023-09-22 18:14:51 - INFO - Multi-Thread script (Thread ID : 140519208363584): Processing ID :101949  **********  23/50 - 46.0%
+2023-09-22 18:14:51 - INFO - processing  101949 - introtext is not JSON, proceeding further to check HTML
+2023-09-22 18:14:51 - INFO - processing 101949 - fulltext is not json proceeding further to check html
+2023-09-22 18:14:52 - WARNING - #ID: 101949 #URL http://www.suse.com/ftp_new.html Error: local variable 'driver' referenced before assignment
+2023-09-22 18:14:53 - INFO - Skipped ID: 101949 #COLUMN: fulltext #URL: http://www.suse.de/patches/index.html #STATUS_CODE: 200
+2023-09-22 18:14:53 - INFO - Skipped ID: 101949 #COLUMN: fulltext #URL: http://www.suse.de/ftp.html #STATUS_CODE: 200
+2023-09-22 18:14:53 - ERROR - #ID: 101949 #URL http://www.suse.com/ftp_new.html Error: local variable 'driver' referenced before assignment
+2023-09-22 18:14:53 - INFO - ID: 101949 #COLUMN: fulltext #URL: http://www.suse.com/ftp_new.html added for more checking
+2023-09-22 18:14:53 - INFO - Multi-Thread script (Thread ID : 140519208363584): Processing ID :101950  **********  32/50 - 64.0%
+2023-09-22 18:14:53 - INFO - processing  101950 - introtext is not JSON, proceeding further to check HTML
+2023-09-22 18:14:53 - INFO - processing 101950 - fulltext is not json proceeding further to check html
+2023-09-22 18:14:55 - ERROR - #ID: 101950 #FTP_URL ftp://ftp.suse.com/pub/suse/axp/update/6.1/a1/termcap.rpm #Error: 550 Could not get file modification time.
+2023-09-22 18:14:55 - ERROR - #ID: 101950 #FTP_URL ftp://ftp.suse.com/pub/suse/i386/update/6.2/a1/termcap.rpm #Error: 550 Could not get file modification time.
+2023-09-22 18:14:55 - ERROR - #ID: 101950 #FTP_URL ftp://ftp.suse.com/pub/suse/i386/update/6.1/a1/termcap.rpm #Error: 550 Could not get file modification time.
+2023-09-22 18:14:56 - WARNING - #ID: 101950 #URL http://www.suse.com/ftp_new.html Error: local variable 'driver' referenced before assignment
+2023-09-22 18:14:58 - INFO - Skipped ID: 101950 #COLUMN: fulltext #URL: http://www.suse.de/patches/index.html #STATUS_CODE: 200
+2023-09-22 18:14:58 - INFO - Skipped ID: 101950 #COLUMN: fulltext #URL: http://www.suse.de/ftp.html #STATUS_CODE: 200
+2023-09-22 18:14:58 - ERROR - #ID: 101950 #URL http://www.suse.com/ftp_new.html Error: local variable 'driver' referenced before assignment
+2023-09-22 18:14:58 - INFO - ID: 101950 #COLUMN: fulltext #URL: http://www.suse.com/ftp_new.html added for more checking
+2023-09-22 18:14:58 - INFO - Multi-Thread script (Thread ID : 140519208363584): Processing ID :101951  **********  43/50 - 86.0%
+2023-09-22 18:14:58 - INFO - processing  101951 - introtext is not JSON, proceeding further to check HTML
+2023-09-22 18:14:58 - INFO - processing 101951 - fulltext is not json proceeding further to check html
+2023-09-22 18:14:59 - ERROR - #ID: 101951 #FTP_URL ftp://ftp.suse.com/pub/suse/i386/update/6.2/n1/trn-3.6-70.i386.rpm #Error: 550 Could not get file modification time.
+2023-09-22 18:14:59 - ERROR - #ID: 101951 #FTP_URL ftp://ftp.suse.com/pub/suse/i386/update/6.2/n1/trn_spl-3.6-61.i386.rpm #Error: 550 Could not get file modification time.
+2023-09-22 18:15:00 - WARNING - #ID: 101951 #URL http://www.suse.com/ftp_new.html Error: local variable 'driver' referenced before assignment
+2023-09-22 18:15:01 - INFO - Skipped ID: 101951 #COLUMN: fulltext #URL: http://www.suse.de/patches/index.html #STATUS_CODE: 200
+2023-09-22 18:15:01 - INFO - Skipped ID: 101951 #COLUMN: fulltext #URL: http://www.suse.de/ftp.html #STATUS_CODE: 200
+2023-09-22 18:15:01 - ERROR - #ID: 101951 #URL http://www.suse.com/ftp_new.html Error: local variable 'driver' referenced before assignment
+2023-09-22 18:15:01 - INFO - ID: 101951 #COLUMN: fulltext #URL: http://www.suse.com/ftp_new.html added for more checking
+2023-09-22 18:15:01 - INFO - Multi-Thread script (Thread ID : 140519208363584): Processing ID :101952  **********  48/50 - 96.0%
+2023-09-22 18:15:01 - INFO - processing  101952 - introtext is not JSON, proceeding further to check HTML
+2023-09-22 18:15:01 - INFO - processing 101952 - fulltext is not json proceeding further to check html
+2023-09-22 18:15:02 - WARNING - #ID: 101952 #URL http://www.suse.com/ftp_new.html Error: local variable 'driver' referenced before assignment
+2023-09-22 18:15:03 - INFO - Skipped ID: 101952 #COLUMN: fulltext #URL: http://www.suse.de/patches/index.html #STATUS_CODE: 200
+2023-09-22 18:15:03 - INFO - Skipped ID: 101952 #COLUMN: fulltext #URL: http://www.suse.de/ftp.html #STATUS_CODE: 200
+2023-09-22 18:15:03 - ERROR - #ID: 101952 #URL http://www.suse.com/ftp_new.html Error: local variable 'driver' referenced before assignment
+2023-09-22 18:15:03 - INFO - ID: 101952 #COLUMN: fulltext #URL: http://www.suse.com/ftp_new.html added for more checking
+2023-09-22 18:15:03 - INFO - Multi-Thread script (Thread ID : 140519208363584): Processing ID :101953  **********  51/50 - 102.0%
+2023-09-22 18:15:03 - INFO - processing  101953 - introtext is not JSON, proceeding further to check HTML
+2023-09-22 18:15:03 - INFO - processing 101953 - fulltext is not json proceeding further to check html
+2023-09-22 18:15:04 - ERROR - #ID: 101953 #FTP_URL ftp://ftp.suse.com/pub/suse/i386/update/6.2/n1/rsync.rpm #Error: 550 Could not get file modification time.
+2023-09-22 18:15:05 - WARNING - #ID: 101953 #URL http://www.suse.com/ftp_new.html Error: local variable 'driver' referenced before assignment
+2023-09-22 18:15:07 - INFO - Skipped ID: 101953 #COLUMN: fulltext #URL: http://www.suse.de/patches/index.html #STATUS_CODE: 200
+2023-09-22 18:15:07 - INFO - Skipped ID: 101953 #COLUMN: fulltext #URL: http://www.suse.de/ftp.html #STATUS_CODE: 200
+2023-09-22 18:15:07 - ERROR - #ID: 101953 #URL http://www.suse.com/ftp_new.html Error: local variable 'driver' referenced before assignment
+2023-09-22 18:15:07 - INFO - ID: 101953 #COLUMN: fulltext #URL: http://www.suse.com/ftp_new.html added for more checking
+2023-09-22 18:15:07 - INFO - Multi-Thread script (Thread ID : 140519208363584): Processing ID :101954  **********  53/50 - 106.0%
+2023-09-22 18:15:07 - INFO - processing  101954 - introtext is not JSON, proceeding further to check HTML
+2023-09-22 18:15:07 - INFO - processing 101954 - fulltext is not json proceeding further to check html
+2023-09-22 18:15:08 - ERROR - #ID: 101954 #FTP_URL ftp://ftp.suse.com/pub/suse/i386/update/6.2/a1/cron-3.0.1-84.i386.rpm #Error: 550 Could not get file modification time.
+2023-09-22 18:15:08 - ERROR - #ID: 101954 #FTP_URL ftp://ftp.suse.com/pub/suse/i386/update/6.1/a1/cron-3.0.1-82.i386.rpm #Error: 550 Could not get file modification time.
+2023-09-22 18:15:09 - WARNING - #ID: 101954 #URL http://www.suse.com/ftp_new.html Error: local variable 'driver' referenced before assignment
+2023-09-22 18:15:10 - INFO - Skipped ID: 101954 #COLUMN: fulltext #URL: http://www.suse.de/patches/index.html #STATUS_CODE: 200
+2023-09-22 18:15:10 - INFO - Skipped ID: 101954 #COLUMN: fulltext #URL: http://www.suse.de/ftp.html #STATUS_CODE: 200
+2023-09-22 18:15:10 - ERROR - #ID: 101954 #URL http://www.suse.com/ftp_new.html Error: local variable 'driver' referenced before assignment
+2023-09-22 18:15:10 - INFO - ID: 101954 #COLUMN: fulltext #URL: http://www.suse.com/ftp_new.html added for more checking
+2023-09-22 18:15:10 - INFO - Multi-Thread script (Thread ID : 140519208363584): Processing ID :101956  **********  55/50 - 110.0%
+2023-09-22 18:15:10 - INFO - processing  101956 - introtext is not JSON, proceeding further to check HTML
+2023-09-22 18:15:10 - INFO - processing 101956 - fulltext is not json proceeding further to check html
+2023-09-22 18:15:11 - ERROR - #ID: 101956 #FTP_URL ftp://ftp.suse.com/pub/suse/axp/update/6.1/n1/pine.rpm #Error: 550 Could not get file modification time.
+2023-09-22 18:15:11 - ERROR - #ID: 101956 #FTP_URL ftp://ftp.suse.com/pub/suse/i386/update/6.1/n1/pine.rpm #Error: 550 Could not get file modification time.
+2023-09-22 18:15:11 - ERROR - #ID: 101956 #FTP_URL ftp://ftp.suse.com/pub/suse/i386/update/5.3/n1/pine.rpm #Error: 550 Could not get file modification time.
+2023-09-22 18:15:11 - ERROR - #ID: 101956 #FTP_URL ftp://ftp.suse.com/pub/suse/i386/update/6.2/n1/pine.rpm #Error: 550 Could not get file modification time.
+2023-09-22 18:15:12 - WARNING - #ID: 101956 #URL http://www.suse.com/ftp_new.html Error: local variable 'driver' referenced before assignment
+2023-09-22 18:15:13 - INFO - Skipped ID: 101956 #COLUMN: fulltext #URL: http://www.suse.de/patches/index.html #STATUS_CODE: 200
+2023-09-22 18:15:13 - INFO - Skipped ID: 101956 #COLUMN: fulltext #URL: http://www.suse.de/ftp.html #STATUS_CODE: 200
+2023-09-22 18:15:13 - ERROR - #ID: 101956 #URL http://www.suse.com/ftp_new.html Error: local variable 'driver' referenced before assignment
+2023-09-22 18:15:13 - INFO - ID: 101956 #COLUMN: fulltext #URL: http://www.suse.com/ftp_new.html added for more checking
+2023-09-22 18:15:13 - INFO - Multi-Thread script (Thread ID : 140519208363584): Processing ID :101957  **********  57/50 - 114.0%
+2023-09-22 18:15:13 - INFO - processing  101957 - introtext is not JSON, proceeding further to check HTML
+2023-09-22 18:15:13 - INFO - processing 101957 - fulltext is not json proceeding further to check html
+2023-09-22 18:15:14 - ERROR - #ID: 101957 #FTP_URL ftp://ftp.suse.com/pub/suse/axp/update/6.1/n1/lynx-2.8.3dev9-76.alpha.rpm #Error: 550 Could not get file modification time.
+2023-09-22 18:15:14 - ERROR - #ID: 101957 #FTP_URL ftp://ftp.suse.com/pub/suse/i386/update/5.3/n1/lynx-2.8.3dev9-76.i386.rpm #Error: 550 Could not get file modification time.
+2023-09-22 18:15:14 - ERROR - #ID: 101957 #FTP_URL ftp://ftp.suse.com/pub/suse/i386/update/6.1/n1/lynx-2.8.3dev9-76.i386.rpm #Error: 550 Could not get file modification time.
+2023-09-22 18:15:14 - ERROR - #ID: 101957 #FTP_URL ftp://ftp.suse.com/pub/suse/i386/update/6.2/n1/lynx-2.8.3dev9-76.i386.rpm #Error: 550 Could not get file modification time.
+2023-09-22 18:15:15 - WARNING - #ID: 101957 #URL http://www.suse.com/ftp_new.html Error: local variable 'driver' referenced before assignment
+2023-09-22 18:15:16 - INFO - Skipped ID: 101957 #COLUMN: fulltext #URL: http://www.suse.de/patches/index.html #STATUS_CODE: 200
+2023-09-22 18:15:16 - INFO - Skipped ID: 101957 #COLUMN: fulltext #URL: http://www.suse.de/ftp.html #STATUS_CODE: 200
+2023-09-22 18:15:16 - ERROR - #ID: 101957 #URL http://www.suse.com/ftp_new.html Error: local variable 'driver' referenced before assignment
+2023-09-22 18:15:16 - INFO - ID: 101957 #COLUMN: fulltext #URL: http://www.suse.com/ftp_new.html added for more checking
+2023-09-22 18:15:16 - INFO - Multi-Thread script (Thread ID : 140519208363584): Processing ID :101958  **********  58/50 - 116.0%
+2023-09-22 18:15:16 - INFO - processing  101958 - introtext is not JSON, proceeding further to check HTML
+2023-09-22 18:15:16 - INFO - processing 101958 - fulltext is not json proceeding further to check html
+2023-09-22 18:15:17 - ERROR - #ID: 101958 #FTP_URL ftp://koobera.math.uic.edu/www/anonftpd.html #Error: [Errno -2] Name or service not known
+2023-09-22 18:15:19 - WARNING - #ID: 101958 #URL http://www.suse.com/ftp_new.html Error: local variable 'driver' referenced before assignment
+2023-09-22 18:15:19 - INFO - Skipped ID: 101958 #COLUMN: fulltext #URL: http://www.suse.de/patches/index.html #STATUS_CODE: 200
+2023-09-22 18:15:19 - INFO - Skipped ID: 101958 #COLUMN: fulltext #URL: http://www.suse.de/ftp.html #STATUS_CODE: 200
+2023-09-22 18:15:19 - ERROR - #ID: 101958 #URL http://www.suse.com/ftp_new.html Error: local variable 'driver' referenced before assignment
+2023-09-22 18:15:19 - INFO - ID: 101958 #COLUMN: fulltext #URL: http://www.suse.com/ftp_new.html added for more checking
+2023-09-22 18:15:19 - INFO - Multi-Thread script (Thread ID : 140519208363584): Processing ID :101959  **********  59/50 - 118.0%
+2023-09-22 18:15:19 - INFO - processing  101959 - introtext is not JSON, proceeding further to check HTML
+2023-09-22 18:15:19 - INFO - processing 101959 - fulltext is not json proceeding further to check html
+2023-09-22 18:15:20 - ERROR - #ID: 101959 #FTP_URL ftp://ftp.suse.com/pub/suse/i386/update/5.3/n1/marsnwe-0.99.pl17-54.i386.rpm #Error: 550 Could not get file modification time.
+2023-09-22 18:15:20 - ERROR - #ID: 101959 #FTP_URL ftp://ftp.suse.com/pub/suse/i386/update/6.1/n1/marsnwe-0.99.pl17-54.i386.rpm #Error: 550 Could not get file modification time.
+2023-09-22 18:15:20 - ERROR - #ID: 101959 #FTP_URL ftp://ftp.suse.com/pub/suse/i386/update/6.2/n1/marsnwe-0.99.pl17-54.i386.rpm #Error: 550 Could not get file modification time.
+2023-09-22 18:15:20 - ERROR - #ID: 101959 #FTP_URL ftp://ftp.suse.com/pub/suse/axp/update/6.1/n1/marsnwe-0.99.pl17-54.alpha.rpm #Error: 550 Could not get file modification time.
+2023-09-22 18:15:22 - WARNING - #ID: 101959 #URL http://www.suse.com/ftp_new.html Error: local variable 'driver' referenced before assignment
+2023-09-22 18:15:23 - INFO - Skipped ID: 101959 #COLUMN: fulltext #URL: http://www.suse.de/patches/index.html #STATUS_CODE: 200
+2023-09-22 18:15:23 - INFO - Skipped ID: 101959 #COLUMN: fulltext #URL: http://www.suse.de/ftp.html #STATUS_CODE: 200
+2023-09-22 18:15:23 - ERROR - #ID: 101959 #URL http://www.suse.com/ftp_new.html Error: local variable 'driver' referenced before assignment
+2023-09-22 18:15:23 - INFO - ID: 101959 #COLUMN: fulltext #URL: http://www.suse.com/ftp_new.html added for more checking
+2023-09-22 18:15:23 - INFO - Multi-Thread script (Thread ID : 140519208363584): Processing ID :101960  **********  60/50 - 120.0%
+2023-09-22 18:15:23 - INFO - processing  101960 - introtext is not JSON, proceeding further to check HTML
+2023-09-22 18:15:23 - INFO - processing 101960 - fulltext is not json proceeding further to check html
+2023-09-22 18:15:24 - ERROR - #ID: 101960 #FTP_URL ftp://ftp.suse.com/pub/suse/i386/update/6.2/ham1/pbpg-1.2-0.i386.rpm #Error: 550 Could not get file modification time.
+2023-09-22 18:15:25 - WARNING - #ID: 101960 #URL http://www.suse.com/ftp_new.html Error: local variable 'driver' referenced before assignment
+2023-09-22 18:15:26 - INFO - Skipped ID: 101960 #COLUMN: fulltext #URL: http://www.suse.de/patches/index.html #STATUS_CODE: 200
+2023-09-22 18:15:26 - INFO - Skipped ID: 101960 #COLUMN: fulltext #URL: http://www.suse.de/ftp.html #STATUS_CODE: 200
+2023-09-22 18:15:26 - ERROR - #ID: 101960 #URL http://www.suse.com/ftp_new.html Error: local variable 'driver' referenced before assignment
+2023-09-22 18:15:26 - INFO - ID: 101960 #COLUMN: fulltext #URL: http://www.suse.com/ftp_new.html added for more checking
