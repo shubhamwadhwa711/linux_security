@@ -10,6 +10,7 @@ import os
 import sys
 from pymysql import Connection
 import validators
+from ftplib import all_errors
 import warnings
 import argparse
 import configparser
@@ -71,6 +72,27 @@ def do_http_request(urls, logger: Logger, id: int, timeout = HTTP_REQUEST_TIMEOU
                     yield {'is_broken': False, 'status_code': response.status_code, 'url': url}
                 else:
                     yield {'is_broken': True, 'status_code': response.status_code, 'url': url}
+
+
+def do_ftp_request(urls, logger: Logger, id: int):
+    with ThreadPoolExecutor() as executor:
+        futures = {executor.submit(check_ftp_broken_link, url=url, timeout=FTP_REQUEST_TIMEOUT): url for url in urls}
+        for future in as_completed(futures):
+            url = futures[future]
+            try:
+                response = future.result()
+            except all_errors as e:
+                logger.error(f'#ID: {id} #FTP_URL {url} #Error: {str(e)}')
+                try:
+                    errorcode = int(str(e).split(None, 1)[0])
+                except:
+                    errorcode = str(e)
+                yield {'is_broken': True, 'status_code': errorcode, 'url': url}
+            else:
+                if response:
+                    yield {'is_broken': False, 'status_code': 200, 'url': url}
+                else:
+                    yield {'is_broken': True, 'status_code': 500, 'url': url}
 
 def find_a_tag_in_html(logger: Logger, field: str, html: Optional[str] = None, urls: Optional[List[str]] = None):
     try:
@@ -262,8 +284,9 @@ def main(commit, file_path, is_urla: bool = False, timeout: int = 15):
             remain_urls = [*urls]
             replace_urls = []
             urls=[url.replace("http://https://","http://").replace("https://https://","https://") if url.startswith("http://https://") or url.startswith("https://https://") else url for url in urls]
-            urls=[f"https://{url}" if url.startswith('www.') else url  for url in urls]
-            for result in do_http_request(urls=urls, logger=logger, id=id, timeout=timeout):
+            http_urls=list(filter(lambda x: not x.startswith('ftp://'),[f"https://{url}" if url.startswith('www.') else url  for url in urls]))
+            ftp_urls = list(filter(lambda x: x.startswith('ftp://'), urls))
+            for result in do_http_request(urls=http_urls, logger=logger, id=id, timeout=timeout):
                 url = result.get('url')
                 if not result.get('is_broken', False):
                     logger.info(f'Skipped ID: {id} #URL: {url} #STATUS_CODE: {result.get("status_code")}')
@@ -271,6 +294,16 @@ def main(commit, file_path, is_urla: bool = False, timeout: int = 15):
                     continue
                 
                 replace_urls.append(url)
+
+            for result in do_ftp_request(urls=ftp_urls, logger=logger, id=id):
+                url = result.get('url')
+                if not result.get('is_broken', False):
+                    logger.info(f'Skipped ID: {id} #URL: {url} #STATUS_CODE: {result.get("status_code")}')
+                    remain_urls = [href for href in remain_urls if href != url]
+                    continue
+                
+                replace_urls.append(url)
+
 
             do_update(
                 connection=connection,
