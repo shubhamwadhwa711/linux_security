@@ -55,7 +55,7 @@ def check_ftp_broken_link(url, timeout: int = 10):
 # Test the function with the provided FTP URL
 # url = "ftp://ftp.slackware.com/pub/slackware/slackware-9.1/patches/packages/kernel-source-2.4.23-noarch-2.tgz"
 # url = "ftp://ftp.slackware.com/pub/slackware/slackware-9.1/patches/kernels/"
-url = "ftp://ftp.suse.com/"
+url = "ftp://ftp.slackware.com/pub/slackware/slackware-current/slackware/l"
 
 
 if is_ftp_url_working(url):

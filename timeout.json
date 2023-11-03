@@ -1,20 +1,8 @@
 {
-    "190437": [
-        "ftp://ftp.slackware.com/pub/slackware/slackware-9.1/patches/packages/kernel-source-2.4.23-noarch-2.tgz",
-        "ftp://ftp.slackware.com/pub/slackware/slackware-9.1/patches/packages/alsa-driver-0.9.8-i486-1.tgz",
-        "ftp://ftp.slackware.com/pub/slackware/slackware-current/slackware/d/kernel-headers-2.4.23-i386-1.tgz",
-        "ftp://ftp.slackware.com/pub/slackware/slackware-current/slackware/ap/alsa-utils-0.9.8-i486-1.tgz",
-        "ftp://ftp.slackware.com/pub/slackware/slackware-9.1/patches/packages/kernel-modules-xfs/alsa-driver-xfs-0.9.8-i486-1.tgz",
-        "ftp://ftp.slackware.com/pub/slackware/slackware-current/slackware/k/kernel-source-2.4.23-noarch-2.tgz",
-        "ftp://ftp.slackware.com/pub/slackware/slackware-9.1/patches/packages/kernel-modules-xfs/kernel-modules-xfs-2.4.23-i486-1.tgz",
-        "ftp://ftp.slackware.com/pub/slackware/slackware-9.1/patches/packages/kernel-modules-2.4.23-i486-1.tgz",
-        "ftp://ftp.slackware.com/pub/slackware/slackware-9.1/patches/packages/kernel-ide-2.4.23-i486-1.tgz",
-        "ftp://ftp.slackware.com/pub/slackware/slackware-current/slackware/l/alsa-driver-0.9.8-i486-1.tgz",
-        "ftp://ftp.slackware.com/pub/slackware/slackware-current/extra/kernel-modules-xfs/alsa-driver-xfs-0.9.8-i486-1.tgz",
-        "ftp://ftp.slackware.com/pub/slackware/slackware-current/extra/kernel-modules-xfs/kernel-modules-xfs-2.4.23-i486-1.tgz",
-        "ftp://ftp.slackware.com/pub/slackware/slackware-current/slackware/l/alsa-lib-0.9.8-i486-1.tgz",
-        "ftp://ftp.slackware.com/pub/slackware/slackware-current/slackware/a/kernel-ide-2.4.23-i486-1.tgz",
-        "ftp://ftp.slackware.com/pub/slackware/slackware-current/slackware/a/kernel-modules-2.4.23-i486-1.tgz",
-        "ftp://ftp.slackware.com/pub/slackware/slackware-current/slackware/l/alsa-oss-0.9.8-i486-1.tgz"
-    ]
+    "286932": [
+        "advisories/opensuse/opensuse-2020-1015-1-moderate-openexr-20-14-54",
+        "advisories/suse/suse-2020-1970-1-moderate-suse-manager-client-tools-02-50-31",
+        "advisories/deblts/debian-lts-dla-2286-1-tomcat8-security-update-14-39-36",
+        "advisories/suse/suse-2020-1972-1-moderate-suse-manager-client-tools-02-58-27"
+        ]
 }

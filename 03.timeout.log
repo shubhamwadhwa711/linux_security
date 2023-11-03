@@ -31,3 +31,101 @@
 2023-09-11 12:18:43 - INFO - #COLUMN: fulltext #URL: ftp://ftp.scientificlinux.org/linux/scientific/301,302,303,304,305,307/i386,x86_64/errata/SL/RPMS/ - Replaced with  (empty) removed
 2023-09-11 12:18:43 - INFO - ID: 275712 has been updated in database
 2023-09-11 12:18:43 - INFO - Processing ID: 275712 completed
+2023-10-11 23:58:32 - INFO - ******************** Processing ID: 190437 ********************
+2023-10-12 00:00:00 - INFO - ******************** Processing ID: 190437 ********************
+2023-10-12 00:00:19 - INFO - ******************** Processing ID: 190437 ********************
+2023-10-12 00:00:26 - INFO - Skipped ID: 190437 #URL: ftp://ftp.slackware.com/pub/slackware/slackware-9.1/patches/packages/alsa-oss-0.9.8-i486-1.tgz #STATUS_CODE: 200
+2023-10-12 00:00:27 - INFO - Skipped ID: 190437 #URL: ftp://ftp.slackware.com/pub/slackware/slackware-9.1/patches/CHECKSUMS.md5 #STATUS_CODE: 200
+2023-10-12 00:00:27 - INFO - Skipped ID: 190437 #URL: ftp://ftp.slackware.com/pub/slackware/slackware-9.1/patches/CHECKSUMS.md5.asc #STATUS_CODE: 200
+2023-10-12 00:00:27 - INFO - #COLUMN: fulltext #URL: ftp://ftp.slackware.com/pub/slackware/slackware-current/CHECKSUMS.md5.asc - Replaced with  (empty) removed
+2023-10-12 00:00:27 - INFO - #COLUMN: fulltext #URL: ftp://ftp.slackware.com/pub/slackware/slackware-9.1/patches/packages/alsa-lib-0.9.8-i486-1.tgz - Replaced with  (empty) removed
+2023-10-12 00:00:27 - INFO - #COLUMN: fulltext #URL: ftp://ftp.slackware.com/pub/slackware/slackware-current/extra/kernel-modules-xfs/kernel-modules-xfs-2.4.23-i486-1.tgz - Replaced with  (empty) removed
+2023-10-12 00:00:27 - INFO - #COLUMN: fulltext #URL: ftp://ftp.slackware.com/pub/slackware/slackware-current/slackware/a/kernel-ide-2.4.23-i486-1.tgz - Replaced with  (empty) removed
+2023-10-12 00:00:27 - INFO - #COLUMN: fulltext #URL: ftp://ftp.slackware.com/pub/slackware/slackware-9.1/patches/packages/kernel-ide-2.4.23-i486-1.tgz - Replaced with  (empty) removed
+2023-10-12 00:00:27 - INFO - #COLUMN: fulltext #URL: ftp://ftp.slackware.com/pub/slackware/slackware-9.1/patches/packages/kernel-source-2.4.23-noarch-2.tgz - Replaced with  (empty) removed
+2023-10-12 00:00:27 - INFO - #COLUMN: fulltext #URL: ftp://ftp.slackware.com/pub/slackware/slackware-current/extra/kernel-modules-xfs/alsa-driver-xfs-0.9.8-i486-1.tgz - Replaced with  (empty) removed
+2023-10-12 00:00:27 - INFO - #COLUMN: fulltext #URL: ftp://ftp.slackware.com/pub/slackware/slackware-current/CHECKSUMS.md5 - Replaced with  (empty) removed
+2023-10-12 00:00:27 - INFO - #COLUMN: fulltext #URL: ftp://ftp.slackware.com/pub/slackware/slackware-current/slackware/l/alsa-lib-0.9.8-i486-1.tgz - Replaced with  (empty) removed
+2023-10-12 00:00:27 - INFO - #COLUMN: fulltext #URL: ftp://ftp.slackware.com/pub/slackware/slackware-9.1/patches/packages/kernel-modules-2.4.23-i486-1.tgz - Replaced with  (empty) removed
+2023-10-12 00:00:27 - INFO - #COLUMN: fulltext #URL: ftp://ftp.slackware.com/pub/slackware/slackware-9.1/patches/kernels/ - Replaced with  (empty) removed
+2023-10-12 00:00:27 - INFO - #COLUMN: fulltext #URL: ftp://ftp.slackware.com/pub/slackware/slackware-current/slackware/k/kernel-source-2.4.23-noarch-2.tgz - Replaced with  (empty) removed
+2023-10-12 00:00:27 - INFO - #COLUMN: fulltext #URL: ftp://ftp.slackware.com/pub/slackware/slackware-9.1/patches/packages/kernel-modules-xfs/alsa-driver-xfs-0.9.8-i486-1.tgz - Replaced with  (empty) removed
+2023-10-12 00:00:27 - INFO - #COLUMN: fulltext #URL: ftp://ftp.slackware.com/pub/slackware/slackware-current/slackware/l/alsa-driver-0.9.8-i486-1.tgz - Replaced with  (empty) removed
+2023-10-12 00:00:27 - INFO - #COLUMN: fulltext #URL: ftp://ftp.slackware.com/pub/slackware/slackware-current/slackware/d/kernel-headers-2.4.23-i386-1.tgz - Replaced with  (empty) removed
+2023-10-12 00:00:27 - INFO - #COLUMN: fulltext #URL: ftp://ftp.slackware.com/pub/slackware/slackware-9.1/patches/packages/kernel-modules-xfs/kernel-modules-xfs-2.4.23-i486-1.tgz - Replaced with  (empty) removed
+2023-10-12 00:00:27 - INFO - #COLUMN: fulltext #URL: ftp://ftp.slackware.com/pub/slackware/slackware-current/slackware/ap/alsa-utils-0.9.8-i486-1.tgz - Replaced with  (empty) removed
+2023-10-12 00:00:27 - INFO - #COLUMN: fulltext #URL: ftp://ftp.slackware.com/pub/slackware/slackware-9.1/patches/packages/alsa-driver-0.9.8-i486-1.tgz - Replaced with  (empty) removed
+2023-10-12 00:00:27 - INFO - #COLUMN: fulltext #URL: ftp://ftp.slackware.com/pub/slackware/slackware-current/slackware/a/kernel-modules-2.4.23-i486-1.tgz - Replaced with  (empty) removed
+2023-10-12 00:00:27 - INFO - #COLUMN: fulltext #URL: ftp://ftp.slackware.com/pub/slackware/slackware-current/slackware/l/alsa-oss-0.9.8-i486-1.tgz - Replaced with  (empty) removed
+2023-10-12 00:00:27 - INFO - Processing ID: 190437 completed
+2023-10-12 00:01:19 - INFO - ******************** Processing ID: 190437 ********************
+2023-10-12 00:03:25 - INFO - ******************** Processing ID: 190437 ********************
+2023-10-12 00:03:33 - INFO - Skipped ID: 190437 #URL: ftp://ftp.slackware.com/pub/slackware/slackware-9.1/patches/packages/alsa-lib-0.9.8-i486-1.tgz #STATUS_CODE: 200
+2023-10-12 00:03:33 - INFO - #COLUMN: fulltext #URL: ftp://ftp.slackware.com/pub/slackware/slackware-current/CHECKSUMS.md5.asc - Replaced with  (empty) removed
+2023-10-12 00:03:33 - INFO - #COLUMN: fulltext #URL: ftp://ftp.slackware.com/pub/slackware/slackware-9.1/patches/kernels/ - Replaced with  (empty) removed
+2023-10-12 00:03:33 - INFO - #COLUMN: fulltext #URL: ftp://ftp.slackware.com/pub/slackware/slackware-9.1/patches/packages/alsa-driver-0.9.8-i486-1.tgz - Replaced with  (empty) removed
+2023-10-12 00:03:33 - INFO - #COLUMN: fulltext #URL: ftp://ftp.slackware.com/pub/slackware/slackware-current/slackware/a/kernel-ide-2.4.23-i486-1.tgz - Replaced with  (empty) removed
+2023-10-12 00:03:33 - INFO - #COLUMN: fulltext #URL: ftp://ftp.slackware.com/pub/slackware/slackware-current/slackware/k/kernel-source-2.4.23-noarch-2.tgz - Replaced with  (empty) removed
+2023-10-12 00:03:33 - INFO - #COLUMN: fulltext #URL: ftp://ftp.slackware.com/pub/slackware/slackware-current/CHECKSUMS.md5 - Replaced with  (empty) removed
+2023-10-12 00:03:33 - INFO - #COLUMN: fulltext #URL: ftp://ftp.slackware.com/pub/slackware/slackware-current/extra/kernel-modules-xfs/kernel-modules-xfs-2.4.23-i486-1.tgz - Replaced with  (empty) removed
+2023-10-12 00:03:33 - INFO - #COLUMN: fulltext #URL: ftp://ftp.slackware.com/pub/slackware/slackware-9.1/patches/packages/kernel-modules-xfs/alsa-driver-xfs-0.9.8-i486-1.tgz - Replaced with  (empty) removed
+2023-10-12 00:03:33 - INFO - #COLUMN: fulltext #URL: ftp://ftp.slackware.com/pub/slackware/slackware-9.1/patches/packages/kernel-modules-xfs/kernel-modules-xfs-2.4.23-i486-1.tgz - Replaced with  (empty) removed
+2023-10-12 00:03:33 - INFO - #COLUMN: fulltext #URL: ftp://ftp.slackware.com/pub/slackware/slackware-current/extra/kernel-modules-xfs/alsa-driver-xfs-0.9.8-i486-1.tgz - Replaced with  (empty) removed
+2023-10-12 00:03:33 - INFO - #COLUMN: fulltext #URL: ftp://ftp.slackware.com/pub/slackware/slackware-9.1/patches/packages/kernel-ide-2.4.23-i486-1.tgz - Replaced with  (empty) removed
+2023-10-12 00:03:33 - INFO - #COLUMN: fulltext #URL: ftp://ftp.slackware.com/pub/slackware/slackware-current/slackware/d/kernel-headers-2.4.23-i386-1.tgz - Replaced with  (empty) removed
+2023-10-12 00:03:33 - INFO - #COLUMN: fulltext #URL: ftp://ftp.slackware.com/pub/slackware/slackware-current/slackware/a/kernel-modules-2.4.23-i486-1.tgz - Replaced with  (empty) removed
+2023-10-12 00:03:33 - INFO - #COLUMN: fulltext #URL: ftp://ftp.slackware.com/pub/slackware/slackware-9.1/patches/packages/kernel-source-2.4.23-noarch-2.tgz - Replaced with  (empty) removed
+2023-10-12 00:03:33 - INFO - #COLUMN: fulltext #URL: ftp://ftp.slackware.com/pub/slackware/slackware-9.1/patches/packages/kernel-modules-2.4.23-i486-1.tgz - Replaced with  (empty) removed
+2023-10-12 00:03:33 - INFO - #COLUMN: fulltext #URL: ftp://ftp.slackware.com/pub/slackware/slackware-current/slackware/ap/alsa-utils-0.9.8-i486-1.tgz - Replaced with  (empty) removed
+2023-10-12 00:03:33 - INFO - #COLUMN: fulltext #URL: ftp://ftp.slackware.com/pub/slackware/slackware-current/slackware/l/alsa-driver-0.9.8-i486-1.tgz - Replaced with  (empty) removed
+2023-10-12 00:03:33 - INFO - #COLUMN: fulltext #URL: ftp://ftp.slackware.com/pub/slackware/slackware-current/slackware/l/alsa-lib-0.9.8-i486-1.tgz - Replaced with  (empty) removed
+2023-10-12 00:03:33 - INFO - #COLUMN: fulltext #URL: ftp://ftp.slackware.com/pub/slackware/slackware-current/slackware/l/alsa-oss-0.9.8-i486-1.tgz - Replaced with  (empty) removed
+2023-10-12 00:03:33 - INFO - Processing ID: 190437 completed
+2023-10-12 00:03:46 - INFO - ******************** Processing ID: 190437 ********************
+2023-10-12 00:04:02 - INFO - ******************** Processing ID: 190437 ********************
+2023-10-12 00:05:46 - INFO - ******************** Processing ID: 190437 ********************
+2023-10-12 00:05:50 - INFO - Skipped ID: 190437 #URL: ftp://ftp.slackware.com/pub/slackware/slackware-current/CHECKSUMS.md5.asc #STATUS_CODE: 200
+2023-10-12 00:05:51 - INFO - #COLUMN: fulltext #URL: ftp://ftp.slackware.com/pub/slackware/slackware-current/slackware/d/kernel-headers-2.4.23-i386-1.tgz - Replaced with  (empty) removed
+2023-10-12 00:05:51 - INFO - #COLUMN: fulltext #URL: ftp://ftp.slackware.com/pub/slackware/slackware-current/CHECKSUMS.md5 - Replaced with  (empty) removed
+2023-10-12 00:05:51 - INFO - #COLUMN: fulltext #URL: ftp://ftp.slackware.com/pub/slackware/slackware-9.1/patches/kernels/ - Replaced with  (empty) removed
+2023-10-12 00:05:51 - INFO - #COLUMN: fulltext #URL: ftp://ftp.slackware.com/pub/slackware/slackware-current/slackware/k/kernel-source-2.4.23-noarch-2.tgz - Replaced with  (empty) removed
+2023-10-12 00:05:51 - INFO - #COLUMN: fulltext #URL: ftp://ftp.slackware.com/pub/slackware/slackware-9.1/patches/packages/kernel-ide-2.4.23-i486-1.tgz - Replaced with  (empty) removed
+2023-10-12 00:05:51 - INFO - #COLUMN: fulltext #URL: ftp://ftp.slackware.com/pub/slackware/slackware-9.1/patches/packages/kernel-modules-2.4.23-i486-1.tgz - Replaced with  (empty) removed
+2023-10-12 00:05:51 - INFO - #COLUMN: fulltext #URL: ftp://ftp.slackware.com/pub/slackware/slackware-9.1/patches/packages/kernel-modules-xfs/alsa-driver-xfs-0.9.8-i486-1.tgz - Replaced with  (empty) removed
+2023-10-12 00:05:51 - INFO - #COLUMN: fulltext #URL: ftp://ftp.slackware.com/pub/slackware/slackware-9.1/patches/packages/kernel-modules-xfs/kernel-modules-xfs-2.4.23-i486-1.tgz - Replaced with  (empty) removed
+2023-10-12 00:05:51 - INFO - #COLUMN: fulltext #URL: ftp://ftp.slackware.com/pub/slackware/slackware-current/extra/kernel-modules-xfs/alsa-driver-xfs-0.9.8-i486-1.tgz - Replaced with  (empty) removed
+2023-10-12 00:05:51 - INFO - #COLUMN: fulltext #URL: ftp://ftp.slackware.com/pub/slackware/slackware-current/extra/kernel-modules-xfs/kernel-modules-xfs-2.4.23-i486-1.tgz - Replaced with  (empty) removed
+2023-10-12 00:05:51 - INFO - #COLUMN: fulltext #URL: ftp://ftp.slackware.com/pub/slackware/slackware-current/slackware/a/kernel-modules-2.4.23-i486-1.tgz - Replaced with  (empty) removed
+2023-10-12 00:05:51 - INFO - #COLUMN: fulltext #URL: ftp://ftp.slackware.com/pub/slackware/slackware-current/slackware/ap/alsa-utils-0.9.8-i486-1.tgz - Replaced with  (empty) removed
+2023-10-12 00:05:51 - INFO - #COLUMN: fulltext #URL: ftp://ftp.slackware.com/pub/slackware/slackware-current/slackware/a/kernel-ide-2.4.23-i486-1.tgz - Replaced with  (empty) removed
+2023-10-12 00:05:51 - INFO - #COLUMN: fulltext #URL: ftp://ftp.slackware.com/pub/slackware/slackware-current/slackware/l/alsa-lib-0.9.8-i486-1.tgz - Replaced with  (empty) removed
+2023-10-12 00:05:51 - INFO - #COLUMN: fulltext #URL: ftp://ftp.slackware.com/pub/slackware/slackware-9.1/patches/packages/alsa-driver-0.9.8-i486-1.tgz - Replaced with  (empty) removed
+2023-10-12 00:05:51 - INFO - #COLUMN: fulltext #URL: ftp://ftp.slackware.com/pub/slackware/slackware-current/slackware/l/alsa-oss-0.9.8-i486-1.tgz - Replaced with  (empty) removed
+2023-10-12 00:05:51 - INFO - #COLUMN: fulltext #URL: ftp://ftp.slackware.com/pub/slackware/slackware-current/slackware/l/alsa-driver-0.9.8-i486-1.tgz - Replaced with  (empty) removed
+2023-10-12 00:05:51 - INFO - #COLUMN: fulltext #URL: ftp://ftp.slackware.com/pub/slackware/slackware-9.1/patches/packages/kernel-source-2.4.23-noarch-2.tgz - Replaced with  (empty) removed
+2023-10-12 00:05:51 - INFO - Processing ID: 190437 completed
+2023-10-12 00:06:20 - INFO - ******************** Processing ID: 190437 ********************
+2023-10-12 00:06:25 - INFO - Skipped ID: 190437 #URL: ftp://ftp.slackware.com/pub/slackware/slackware-9.1/patches/kernels/ #STATUS_CODE: 200
+2023-10-12 00:06:25 - INFO - Skipped ID: 190437 #URL: ftp://ftp.slackware.com/pub/slackware/slackware-current/CHECKSUMS.md5 #STATUS_CODE: 200
+2023-10-12 00:06:25 - INFO - #COLUMN: fulltext #URL: ftp://ftp.slackware.com/pub/slackware/slackware-9.1/patches/packages/kernel-source-2.4.23-noarch-2.tgz - Replaced with  (empty) removed
+2023-10-12 00:06:25 - INFO - #COLUMN: fulltext #URL: ftp://ftp.slackware.com/pub/slackware/slackware-current/slackware/l/alsa-oss-0.9.8-i486-1.tgz - Replaced with  (empty) removed
+2023-10-12 00:06:25 - INFO - #COLUMN: fulltext #URL: ftp://ftp.slackware.com/pub/slackware/slackware-current/extra/kernel-modules-xfs/kernel-modules-xfs-2.4.23-i486-1.tgz - Replaced with  (empty) removed
+2023-10-12 00:06:25 - INFO - #COLUMN: fulltext #URL: ftp://ftp.slackware.com/pub/slackware/slackware-current/slackware/l/alsa-lib-0.9.8-i486-1.tgz - Replaced with  (empty) removed
+2023-10-12 00:06:25 - INFO - #COLUMN: fulltext #URL: ftp://ftp.slackware.com/pub/slackware/slackware-current/extra/kernel-modules-xfs/alsa-driver-xfs-0.9.8-i486-1.tgz - Replaced with  (empty) removed
+2023-10-12 00:06:25 - INFO - #COLUMN: fulltext #URL: ftp://ftp.slackware.com/pub/slackware/slackware-9.1/patches/packages/kernel-modules-xfs/alsa-driver-xfs-0.9.8-i486-1.tgz - Replaced with  (empty) removed
+2023-10-12 00:06:25 - INFO - #COLUMN: fulltext #URL: ftp://ftp.slackware.com/pub/slackware/slackware-9.1/patches/packages/kernel-modules-xfs/kernel-modules-xfs-2.4.23-i486-1.tgz - Replaced with  (empty) removed
+2023-10-12 00:06:25 - INFO - #COLUMN: fulltext #URL: ftp://ftp.slackware.com/pub/slackware/slackware-current/slackware/ap/alsa-utils-0.9.8-i486-1.tgz - Replaced with  (empty) removed
+2023-10-12 00:06:25 - INFO - #COLUMN: fulltext #URL: ftp://ftp.slackware.com/pub/slackware/slackware-9.1/patches/packages/kernel-modules-2.4.23-i486-1.tgz - Replaced with  (empty) removed
+2023-10-12 00:06:25 - INFO - #COLUMN: fulltext #URL: ftp://ftp.slackware.com/pub/slackware/slackware-current/slackware/d/kernel-headers-2.4.23-i386-1.tgz - Replaced with  (empty) removed
+2023-10-12 00:06:25 - INFO - #COLUMN: fulltext #URL: ftp://ftp.slackware.com/pub/slackware/slackware-current/slackware/a/kernel-ide-2.4.23-i486-1.tgz - Replaced with  (empty) removed
+2023-10-12 00:06:25 - INFO - #COLUMN: fulltext #URL: ftp://ftp.slackware.com/pub/slackware/slackware-current/slackware/a/kernel-modules-2.4.23-i486-1.tgz - Replaced with  (empty) removed
+2023-10-12 00:06:25 - INFO - #COLUMN: fulltext #URL: ftp://ftp.slackware.com/pub/slackware/slackware-9.1/patches/packages/kernel-ide-2.4.23-i486-1.tgz - Replaced with  (empty) removed
+2023-10-12 00:06:25 - INFO - #COLUMN: fulltext #URL: ftp://ftp.slackware.com/pub/slackware/slackware-current/slackware/k/kernel-source-2.4.23-noarch-2.tgz - Replaced with  (empty) removed
+2023-10-12 00:06:25 - INFO - #COLUMN: fulltext #URL: ftp://ftp.slackware.com/pub/slackware/slackware-9.1/patches/packages/alsa-driver-0.9.8-i486-1.tgz - Replaced with  (empty) removed
+2023-10-12 00:06:25 - INFO - #COLUMN: fulltext #URL: ftp://ftp.slackware.com/pub/slackware/slackware-current/slackware/l/alsa-driver-0.9.8-i486-1.tgz - Replaced with  (empty) removed
+2023-10-12 00:06:25 - INFO - Processing ID: 190437 completed
+2023-10-12 00:22:50 - INFO - ******************** Processing ID: 190437 ********************
+2023-10-12 00:22:54 - INFO - Skipped ID: 190437 #URL: ftp://ftp.slackware.com/pub/slackware/slackware-current/slackware/a #STATUS_CODE: 200
+2023-10-12 00:22:54 - INFO - Skipped ID: 190437 #URL: ftp://ftp.slackware.com/pub/slackware/slackware-current/slackware/l #STATUS_CODE: 200
+2023-10-12 00:22:54 - INFO - Skipped ID: 190437 #URL: ftp://ftp.slackware.com/pub/slackware/slackware-current/extra/ #STATUS_CODE: 200
+2023-10-12 00:22:54 - INFO - Processing ID: 190437 completed
