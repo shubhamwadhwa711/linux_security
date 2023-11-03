@@ -596,15 +596,18 @@ def main(commit: bool = False, id: Optional[int] = 0):
     total = result.get("total") if id == 0 else 1
     if commit and id == 0:
         # read current running state from file if commit is True
+        print("as", commit)
         current_id, counter = current_state(store_state_file, mode="r")
     else:
         current_id = 0
         counter = 0
-    
-    chunk_size=total//multiprocessing.cpu_count()
+    cpu_count = multiprocessing.cpu_count()
+    if cpu_count > 4:
+        cpu_count = cpu_count-2
+    chunk_size=total//cpu_count
     data_chunks=[]
     all_data=False
-    
+    print("assss", chunk_size)
 
     while True:
         try:

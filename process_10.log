@@ -1,0 +1,24 @@
+2023-09-13 14:15:08 - INFO - Multi-Thread script (Thread ID : 140453550749248): Processing ID :348475  **********  12/93342 - 0.0%
+2023-09-13 14:15:08 - INFO - processing  348475 - introtext is not JSON, proceeding further to check HTML
+2023-09-13 14:15:08 - INFO - processing 348475 - fulltext is not json proceeding further to check html
+2023-09-13 14:15:14 - INFO - Skipped ID: 348475 #COLUMN: fulltext #URL: http://www.openssh.com/portable.html #STATUS_CODE: 200
+2023-09-13 14:15:14 - INFO - Skipped ID: 348475 #COLUMN: fulltext #URL: https://bugzilla.redhat.com/show_bug.cgi?id=2224173 #STATUS_CODE: 200
+2023-09-13 14:15:14 - INFO - Skipped ID: 348475 #COLUMN: fulltext #URL: http://dnf.readthedocs.io/en/latest/command_ref.html#upgrade-command-label #STATUS_CODE: 200
+2023-09-13 14:15:14 - INFO - Skipped ID: 348475 #COLUMN: fulltext #URL: https://fedoraproject.org/keys #STATUS_CODE: 200
+2023-09-13 14:15:14 - INFO - Skipped ID: 348475 #COLUMN: fulltext #URL: https://docs.fedoraproject.org/en-US/project/code-of-conduct/ #STATUS_CODE: 200
+2023-09-13 14:15:14 - INFO - Skipped ID: 348475 #COLUMN: fulltext #URL: https://fedoraproject.org/wiki/Mailing_list_guidelines #STATUS_CODE: 200
+2023-09-13 14:15:14 - INFO - Skipped ID: 348475 #COLUMN: fulltext #URL: https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org #STATUS_CODE: 200
+2023-09-13 14:15:14 - INFO - Skipped ID: 348475 #COLUMN: fulltext #URL: https://pagure.io/fedora-infrastructure/new_issue #STATUS_CODE: 200
+2023-09-13 14:15:14 - INFO - Multi-Thread script (Thread ID : 140453550749248): Processing ID :348476  **********  28/93342 - 0.0%
+2023-09-13 14:15:14 - INFO - processing  348476 - introtext is not JSON, proceeding further to check HTML
+2023-09-13 14:15:14 - INFO - processing 348476 - fulltext is not json proceeding further to check html
+2023-09-13 14:15:25 - WARNING - #ID: 348476 #URL https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-22018 Error: 
+2023-09-13 14:15:25 - INFO - #ID: 348476 #URL https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-22018 - Requesting again using GET request instead of HEAD
+2023-09-13 14:15:25 - WARNING - #ID: 348476 #URL https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-22016 Error: 
+2023-09-13 14:15:25 - INFO - #ID: 348476 #URL https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-22016 - Requesting again using GET request instead of HEAD
+2023-09-13 14:15:26 - INFO - Skipped ID: 348476 #COLUMN: fulltext #URL: https://advisories.mageia.org/MGASA-2023-0239.html #STATUS_CODE: 200
+2023-09-13 14:15:26 - INFO - Skipped ID: 348476 #COLUMN: fulltext #URL: https://bugs.mageia.org/show_bug.cgi?id=32124 #STATUS_CODE: 200
+2023-09-13 14:15:26 - INFO - Skipped ID: 348476 #COLUMN: fulltext #URL: https://www.oracle.com/security-alerts/cpujul2023.html#AppendixOVIR #STATUS_CODE: 200
+2023-09-13 14:15:26 - INFO - Skipped ID: 348476 #COLUMN: fulltext #URL: https://www.virtualbox.org/wiki/Changelog-7.0#v10 #STATUS_CODE: 200
+2023-09-13 14:15:26 - INFO - Skipped ID: 348476 #COLUMN: fulltext #URL: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-22016 #STATUS_CODE: 200
+2023-09-13 14:15:26 - INFO - Skipped ID: 348476 #COLUMN: fulltext #URL: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-22018 #STATUS_CODE: 200
