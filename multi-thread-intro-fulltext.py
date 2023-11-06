@@ -67,15 +67,16 @@ formatter = logging.Formatter(
     datefmt='%Y-%m-%d %H:%M:%S'
 )
 
-def get_logger(name, log_file, level=logging.INFO):
+def get_logger(name, log_file,log_level, level=logging.INFO):
     logger = logging.getLogger(name)
     logger.setLevel(level)
     file = logging.FileHandler(log_file)        
     file.setFormatter(formatter)
     logger.addHandler(file)
-    console = logging.StreamHandler()
-    console.setFormatter(ColoredFormatter("%(asctime)s - %(levelname)s - %(message)s"))
-    logger.addHandler(console)
+    if not log_level:
+        console = logging.StreamHandler()
+        console.setFormatter(ColoredFormatter("%(asctime)s - %(levelname)s - %(message)s"))
+        logger.addHandler(console)
     return logger
 
 @timeit
@@ -148,7 +149,7 @@ def decompose_known_urls(html:str,logger:Logger,id:int,field:str,updates:list):
             if domain in DECOMPOSE_URLS:
                 a_tags = soup.find_all('a', attrs={'href': url})
                 if len(a_tags)==0 and url in str_soup:
-                    pattern = r'(\n)' + re.escape(url) + r'(\n)'
+                    pattern = re.escape(url) + r'(\r\n|\n)'
                     if re.search(pattern, str_soup):
                         str_soup = re.sub(pattern, '', str_soup)
                     else:
@@ -172,7 +173,7 @@ def decompose_known_urls(html:str,logger:Logger,id:int,field:str,updates:list):
             if domain in FTP_DECOMPOSE_URLS:
                 a_tags = soup.find_all('a', attrs={'href': url})
                 if len(a_tags)==0 and url in str_soup:
-                    pattern = r'(\n)' + re.escape(url) + r'(\n)'
+                    pattern = re.escape(url) + r'(\r\n|\n)'
                     if re.search(pattern, str_soup):
                         str_soup = re.sub(pattern, '', str_soup)
                     else:
@@ -311,7 +312,7 @@ def check_ftp_urls( logger:Logger, id:int, updates:list,field:str, html: Optiona
             a_tags = soup.find_all('a', attrs={'href': url})
             str_soup=str(soup)
             if len(a_tags) == 0 and url in str_soup:
-                pattern = r'(\n)' + re.escape(url) + r'(\n)'
+                pattern = re.escape(url) + r'(\r\n|\n)'
                 if re.search(pattern, str_soup):
                     str_soup = re.sub(pattern, '', str_soup)
                 else:
@@ -373,12 +374,12 @@ async def check_http_urls(logger:Logger, id:int,field:str,updates:list,base_url:
                 if result.get('status_code')==404:
                     a_tags = soup.find_all('a', attrs={'href': url})
                     if len(a_tags) == 0 and url in str_soup:
-                        pattern = r'(\n)' + re.escape(url) + r'(\n)'
+                        pattern = re.escape(url) + r'(\r\n|\n)'
                         if re.search(pattern, str_soup):
                             str_soup = re.sub(pattern, '', str_soup)
                         else:
                             str_soup = str_soup.replace(url, '')
-                        logger.info(f'Skipped ID: {id} #COLUMN: {field} #URL: {url} #STATUS_CODE: {result.get("status_code")} #Replace with {"NULL"}')
+                        logger.info(f'Skipped ID: {id} #COLUMN: {field} #URL: {parsed_url} #STATUS_CODE: {result.get("status_code")} #Replace with {"NULL"}')
                         updates.append(True)
                         soup=BeautifulSoup(str_soup,"html.parser")
                     updates.append(True)
@@ -392,14 +393,16 @@ async def check_http_urls(logger:Logger, id:int,field:str,updates:list,base_url:
                             logger.info(f'ID: {id} #COLUMN: {field} #URL: {url if url else "(null)"} #STATUS_CODE: {result.get("status_code")} - Replaced with #TEXT: {text}')
                 else:
                     for_more_check_urls.add(url)
-                    logger.info(f'ID: {id} #COLUMN: {field} #URL: {url} added for more checking')
+                    logger.info(f'ID: {id} #COLUMN: {field} #URL: {parsed_url} added for more checking')
     return str(soup),updates,for_more_check_urls
 
 def skip_check_sites(html,logger:Logger):
     all_urls = find_urls(html)
     remaining_urls=[]
     for url in all_urls:
-        if url.startswith('#') or urlparse(url).netloc in SKIP_CHECK_SITES or urlparse(url).scheme in ["mailto", "tel"]:
+        if url.startswith('#') or urlparse(url).netloc in SKIP_CHECK_SITES or urlparse(url).scheme in ["mailto", "tel"]or '@' in url:
+            if urlparse(url).scheme in ["mailto", "tel"]or url.startswith('#') or '@' in url:
+                continue
             logger.info(f"{url} is skiped for checking:- present in SKIP_CHECK_SITES ")
             continue
         remaining_urls.append(url)
@@ -502,9 +505,9 @@ def get_db_connection(config,logger):
         logger.error(e)
         raise e
 
-def process_record(records, log_file, base_url, timeout_file,config, commit,total):
+def process_record(records, log_file, base_url, timeout_file,config, commit,total,log_level):
    
-    logger = get_logger(name=log_file, log_file=log_file) 
+    logger = get_logger(name=log_file, log_file=log_file,log_level=log_level) 
     connection=get_db_connection(config,logger)
     counter=0 # Flag to track if any update fails
     thread_id=threading.get_ident()
@@ -573,7 +576,7 @@ def get_data_chunk(start, chunk_size,connection):
 
 
 
-def main(commit: bool = False, id: Optional[int] = 0):
+def main(commit: bool = False, id: Optional[int] = 0,log_level:bool=False):
     config = configparser.ConfigParser(interpolation=None)
     config.read(os.path.join(os.path.dirname(__file__), "config.ini"))
 
@@ -584,7 +587,7 @@ def main(commit: bool = False, id: Optional[int] = 0):
     limit: int = config["script-01"].getint("limit")
     base_url: str = config.get("script-01", "base_url")
 
-    logger: Logger = get_logger(name=log_file, log_file=log_file)
+    logger: Logger = get_logger(name=log_file, log_file=log_file,log_level=log_level)
 
     connection=get_db_connection(config,logger)
 
@@ -596,18 +599,15 @@ def main(commit: bool = False, id: Optional[int] = 0):
     total = result.get("total") if id == 0 else 1
     if commit and id == 0:
         # read current running state from file if commit is True
-        print("as", commit)
         current_id, counter = current_state(store_state_file, mode="r")
     else:
         current_id = 0
         counter = 0
-    cpu_count = multiprocessing.cpu_count()
-    if cpu_count > 4:
-        cpu_count = cpu_count-2
-    chunk_size=total//cpu_count
+    
+    chunk_size=total//multiprocessing.cpu_count()
     data_chunks=[]
     all_data=False
-    print("assss", chunk_size)
+    
 
     while True:
         try:
@@ -631,8 +631,9 @@ def main(commit: bool = False, id: Optional[int] = 0):
                     data_chunks.append(data_chunk)
                 chunk_completion = {i: False for i in range(len(data_chunks))}
                 nested_log_files = [f"process_{i}.log"for i in range(len(data_chunks))]
+                nested_timeout_files=[f'process_{i}.json' for i in range(len(data_chunks))]
                 with ThreadPoolExecutor() as executor:
-                    futures = executor.map(process_record, data_chunks, nested_log_files, [base_url] * len(data_chunks), [timeout_file] * len(data_chunks), [config] * len(data_chunks), [commit] * len(data_chunks),[total] *len(data_chunks))
+                    futures = executor.map(process_record, data_chunks, nested_log_files, [base_url] * len(data_chunks), nested_timeout_files, [config] * len(data_chunks), [commit] * len(data_chunks),[total] *len(data_chunks),[log_level]*len(data_chunks))
                 for future in futures:
                     i,counter = future
 
@@ -649,7 +650,14 @@ def main(commit: bool = False, id: Optional[int] = 0):
                         logger.info(f'{"="*20}  chunk {i} records have been processed {"="*20}')
                     else:
                         print(f"Chunk {i} is still processing")
-
+                merged_data={}
+                for i in nested_timeout_files:
+                    if os.path.exists(i):
+                        with open(i, "r") as json_file:
+                            data = json.load(json_file)  
+                            merged_data.update(data)
+                with open(timeout_file,"w") as final_timeout_urls:
+                    json.dump(merged_data,final_timeout_urls,indent=4)
                 with open(log_file, "w") as consolidated_log:
                     for i in nested_log_files:
                         with open(i, "r") as individual_log:
@@ -726,9 +734,11 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("--commit", action="store_true", help="Update the database")
     parser.add_argument("--id", default=0, type=int, help="Check for specific ID")
+    parser.add_argument('--q',action="store_true", help=" To hide looging in console")
 
     args = parser.parse_args()
     is_commit = args.commit
     specific_id = args.id
+    hide_log=args.q
 
-    main(commit=is_commit, id=specific_id)
+    main(commit=is_commit, id=specific_id,log_level=hide_log)
