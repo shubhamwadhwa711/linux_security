@@ -19,7 +19,8 @@ from selenium.webdriver.firefox.options import Options
 from selenium.webdriver.firefox.service import Service
 import asyncio
 import aiohttp
-from webdriver_manager.firefox import GeckoDriverManager
+import csv
+# from webdriver_manager.firefox import GeckoDriverManager
 import requests
 from requests.packages.urllib3.exceptions import InsecureRequestWarning
 
@@ -101,46 +102,54 @@ def get_logger(name, log_file, level=logging.INFO):
 
 
 async def new_selenium_check(url,response,logger):
-    options = FirefoxOptions()
-    options.add_argument("--headless")
-    # service=Service(executable_path="/home/admin123/Downloads/geckodriver-v0.33.0-linux-aarch64")
-    # driver = webdriver.Firefox()
-    # servi=Service(executable_path="/home/admin123/Downloads/geckodriver-v0.33.0-linux-aarch64 (1)")
-    driver = webdriver.Firefox(options=options)
-    driver.get(url)
-    search_texts = ["404", "not found", "page not found"]  # Add more search texts if needed
-    for text in search_texts:
-        if text.lower() in driver.page_source.lower():
-            driver.quit()
-            return {'url':url,'status_code':404,'is_error':True}
-    response.status=200
-    driver.quit()
-    return {'url':url,'status_code':200,'is_error':False}
-
+    try:
+        options = FirefoxOptions()  
+        options.add_argument("--headless")
+        service=Service(executable_path="/home/admin123/Downloads/geckodriver-v0.33.0-linux-aarch64")
+        driver = webdriver.Firefox(service=service,options=options)
+        # service=Service(executable_path="/home/admin123/Downloads/geckodriver-v0.33.0-linux-aarch64")
+        # driver = webdriver.Firefox()
+        # servi=Service(executable_path="/home/admin123/Downloads/geckodriver-v0.33.0-linux-aarch64 (1)")
+        driver.get(url)
+        search_texts = ["404", "not found", "page not found"]  # Add more search texts if needed
+        for text in search_texts:
+            if text.lower() in driver.page_source.lower():
+                driver.quit()
+                return {'url':url,'status_code':404,'is_error':True}
+        response.status=200
+        driver.quit()
+        return {'url':url,'status_code':200,'is_error':False}
+    except Exception as e:
+        driver.quit()
+        return {'url':url,'status_code':500,'is_error':True}
 
 def selenium_check(url,response,logger):
-    options = FirefoxOptions()  
-    options.add_argument("--headless")
-    service=Service(executable_path="/home/admin123/Downloads/geckodriver-v0.33.0-linux-aarch64")
-    driver = webdriver.Firefox(service=service,options=options)
-    # chrome_options = Options()
-    # chrome_options.add_argument("--headless")
-    # chrome_service = Service(executable_path="chromedriver")
-    # driver = webdriver.Chrome(options=chrome_options, service=chrome_service)
-    driver.get(url)
-    search_texts = ["404", "not found", "page not found"]  # Add more search texts if needed
-    for text in search_texts:
-        if text.lower() in driver.page_source.lower():
-            driver.quit()
-            # if str(response.url) != url:
-            #     logger.info(f"response url not match with original url set the original url with in place of response url ")
-            #     st=response.url
-            #     st=url
-            #     response=st
-            return response
-    response.status_code=200
-    driver.quit()
-    return response
+    try:
+        options = FirefoxOptions()  
+        options.add_argument("--headless")
+        service=Service(executable_path="/home/admin123/Downloads/geckodriver-v0.33.0-linux-aarch64")
+        driver = webdriver.Firefox(service=service,options=options)
+        # chrome_options = Options()
+        # chrome_options.add_argument("--headless")
+        # chrome_service = Service(executable_path="chromedriver")
+        # driver = webdriver.Chrome(options=chrome_options, service=chrome_service)
+        driver.get(url)
+        search_texts = ["404", "not found", "page not found"]  # Add more search texts if needed
+        for text in search_texts:
+            if text.lower() in driver.page_source.lower():
+                driver.quit()
+                # if str(response.url) != url:
+                #     logger.info(f"response url not match with original url set the original url with in place of response url ")
+                #     st=response.url
+                #     st=url
+                #     response=st
+                return response
+        response.status_code=200
+        driver.quit()
+        return response
+    except Exception as e:
+        driver.quit()
+        return response
 
 
 def check_url_against_domains(url):
@@ -254,23 +263,58 @@ def check_broken_url(url, timeout):
     
     """
 
-def check_ftp_broken_link(url, timeout: int = FTP_REQUEST_TIMEOUT):
-    ftp_urls = url.replace("ftp://","").split("/")
+# def check_ftp_broken_link(url, timeout: int = FTP_REQUEST_TIMEOUT):
+#     ftp_urls = url.replace("ftp://","").split("/")
         
-    host_url = ""
-    main_path = ""
+#     host_url = ""
+#     main_path = ""
 
-    for single_path in ftp_urls:
-        if host_url == "":
-            host_url = single_path
-        else:
-            main_path = main_path + "/" + single_path
+#     for single_path in ftp_urls:
+#         if host_url == "":
+#             host_url = single_path
+#         else:
+#             main_path = main_path + "/" + single_path
+#     print("FTP_Host_URL",host_url)
+#     ftp = FTP(host_url, timeout=timeout)
+#     print(ftp.login())
+#     ftp.login()
+#     resp = ftp.sendcmd(f'MDTM {main_path}')
+#     ftp.quit()
+#     print("response",resp)
+#     return resp
 
-    ftp = FTP(host_url, timeout=timeout)
-    ftp.login()
-    resp = ftp.sendcmd(f'MDTM {main_path}')
-    ftp.quit()
-    return resp
+def check_ftp_broken_link(url, timeout: int = FTP_REQUEST_TIMEOUT):
+    try:
+        # Parse the URL
+        parsed_url = urlparse(url)
+
+        # Check if the scheme is 'ftp'
+        if parsed_url.scheme != 'ftp':
+            return False
+
+        with FTP(parsed_url.netloc, timeout=timeout) as ftp:
+            # Login anonymously or provide credentials if needed
+            ftp.login()
+
+            # Extract the directory and file name
+            path_parts = parsed_url.path.strip('/').split('/')
+            dir_path = '/'.join(path_parts[:-1])  # Directory path
+            file_name = path_parts[-1]  # File name
+
+            # Change the current working directory to the directory containing the file
+            if dir_path:
+                ftp.cwd(dir_path)
+
+            if not file_name:
+                return True
+            # Check if the file exists
+            file_exists = file_name in ftp.nlst()
+
+            return file_exists
+
+    except Exception as e:
+        print(f"Error while checking FTP url {url}: {e}")
+        return False
 
 
 def current_state(index_filename: str, id: int = 0, counter: int = 0, mode='r'):
@@ -325,3 +369,18 @@ def write_file(filename: str, id, urls: Optional[Tuple[str]] = None):
     with open(filename, 'w') as f:
         str_ = json.dumps(data, indent=4)
         f.write(str_)
+
+def write_img_urls(filename:str,id,urls:Optional[Tuple[str]]=None):
+    if urls is None:
+        return
+    try:
+        with open(filename,mode='r',newline='') as file:
+            reader=csv.reader(file)
+            existing_data=list(reader)
+    except FileNotFoundError:
+        existing_data=[]
+
+    existing_data.extend([[id, url] for url in urls])
+    with open(filename,mode='w',newline='') as file:
+        writer=csv.writer(file)
+        writer.writerows(existing_data)

@@ -16,7 +16,7 @@ import json
 from pymysql import MySQLError
 from ftplib import all_errors
 from functools import partial
-
+import csv
 # import logging
 from concurrent.futures import ThreadPoolExecutor, as_completed,ProcessPoolExecutor
 from bs4 import BeautifulSoup, MarkupResemblesLocatorWarning
@@ -43,6 +43,7 @@ from utils import (
     VALID_HTTP_STATUS_CODES,
     STATUS_CODES_FOR_FURTHER_CHECK,
     ColoredFormatter,
+    write_img_urls,
 )
 
 
@@ -242,11 +243,19 @@ async def new_do_http_request(urls,session,logger:Logger,id:int):
         tasks.append(task)
     result = await asyncio.gather(*tasks)
     for response in result:
+        is_image = response['url'].lower().endswith(('.jpg','.jpeg','.png'))
+
+        # if response['url'].lower().endswith(('.jpg','.jpeg','.png')):
+        #     if response['is_error']:
+        #         yield {'is_broken': True, 'status_code': response['status_code'], 'url': response['url'],'img':True}
+        #     else:
+        #         yield {'is_broken': False, 'status_code': response['status_code'], 'url': response['url'],'img':True}
+
         if not response['is_error'] or isinstance(response['status_code'],int):
             if response['status_code']< 400 or response['status_code'] in VALID_HTTP_STATUS_CODES:
-                yield {'is_broken': False, 'status_code': response['status_code'], 'url': response['url']}
+                yield {'is_broken': False, 'status_code': response['status_code'], 'url': response['url'],'img':is_image}
             else:
-                yield {'is_broken': True, 'status_code': response['status_code'], 'url': response['url']}
+                yield {'is_broken': True, 'status_code': response['status_code'], 'url': response['url'],'img':is_image}
         else:
             data=response['status_code']
             exception_type=str(data['type'])
@@ -254,21 +263,21 @@ async def new_do_http_request(urls,session,logger:Logger,id:int):
             if any(keyword in exception_type for keyword in ['ClientConnectorError','ClientConnectionError']):  
                 if any(keyword in exception_message for keyword in ["Name or service not known","getaddrinfo failed","nodename nor servname","No address associated with hostname"]):
                     logger.error(f"#ID: {id} #URL {response['url']} Error: {exception_message}")
-                    yield {'is_broken': True, 'status_code': 500, 'url': response['url']}
+                    yield {'is_broken': True, 'status_code': 500, 'url': response['url'],'img':is_image}
                 else:
                     logger.warning(f"#ID: {id} #URL {response['url']} Error: {exception_message}") 
-                    yield {'is_broken': False, 'status_code': 'ConnectionError', 'url': response['url']}
+                    yield {'is_broken': False, 'status_code': 'ConnectionError', 'url': response['url'],"img":is_image}
 
             elif any(keyword in exception_type for keyword in ['ClientSSLError','ClientConnectorSSLError']):
                 logger.warning(f"#ID: {id} #URL {response['url']} Error: SSLError {exception_message}")
-                yield {'is_broken': False, 'status_code': 'SSLError', 'url': response['url']}
+                yield {'is_broken': False, 'status_code': 'SSLError', 'url': response['url'],"img":is_image}
 
             elif any(keyword in exception_type for keyword in ['TimeoutError']):
                 logger.warning(f'#ID: {id} Error: Timeout {exception_message}')
-                yield {'is_broken': False, 'status_code': 'Timeout', 'url': response['url']}
+                yield {'is_broken': False, 'status_code': 'Timeout', 'url': response['url'],'img':is_image}
             else:
                 logger.error(f'#ID: {id} #URL {url} Error: {exception_message}')
-                yield {'is_broken': True, 'status_code': 500, 'url': response['url']}
+                yield {'is_broken': True, 'status_code': 500, 'url': response['url'],"img":is_image}
 
 
 
@@ -340,11 +349,20 @@ async def check_http_urls(logger:Logger, id:int,field:str,updates:list,base_url:
     urls_obj=get_double_https(urls)
     urls = create_relative_urls(urls_obj,base_url)
     urls=list(urls_obj.keys())
+    added_img_urls=set()
     if len(urls)!=0:
         async with aiohttp.ClientSession() as session:
             async for result in new_do_http_request(urls=urls, session=session, logger=logger, id=id):            
                 parsed_url = result.get('url')
                 url=urls_obj.get(str(parsed_url),"")
+                if result.get('img'):
+                    if result.get('status_code') ==200:
+                        logger.info(f'ID: {id} #URL: {parsed_url} #STATUS_CODE: {result.get("status_code")}')
+                    else:
+                        added_img_urls.add(url)
+                        logger.info(f'ID: {id} #COLUMN: {field} #URL: {parsed_url} added as img url')
+                    continue
+
                 if not result.get('is_broken', False):
                     if check_https_urls(url):
                         a_tags = soup.find_all('a', attrs={'href': url})
@@ -394,7 +412,7 @@ async def check_http_urls(logger:Logger, id:int,field:str,updates:list,base_url:
                 else:
                     for_more_check_urls.add(url)
                     logger.info(f'ID: {id} #COLUMN: {field} #URL: {parsed_url} added for more checking')
-    return str(soup),updates,for_more_check_urls
+    return str(soup),updates,for_more_check_urls,added_img_urls
 
 def skip_check_sites(html,logger:Logger):
     all_urls = find_urls(html)
@@ -417,8 +435,8 @@ def check_is_url_valid(html:str, logger:Logger, id:int,field:str,base_url:str,up
     ftp_urls = list(filter(lambda x: is_ftp_links(x), all_urls))
     http_urls = list(filter(lambda x: not is_ftp_links(x), all_urls))
     html,updates,for_more_check_urls = check_ftp_urls(html=html,urls= ftp_urls, logger=logger, id=id,field=field,updates=updates)
-    html,updates,for_more_check_urls = asyncio.run(check_http_urls(html=html, urls=http_urls, logger=logger, id=id,field=field,updates=updates,base_url=base_url,for_more_check_urls=for_more_check_urls))
-    return html,any(updates),for_more_check_urls
+    html,updates,for_more_check_urls,added_img_urls = asyncio.run(check_http_urls(html=html, urls=http_urls, logger=logger, id=id,field=field,updates=updates,base_url=base_url,for_more_check_urls=for_more_check_urls))
+    return html,any(updates),for_more_check_urls,added_img_urls
 
 def process_html_text(logger: Logger, id: int, field: str, html: Optional[str] = None, base_url: str = None):
     try:
@@ -427,8 +445,8 @@ def process_html_text(logger: Logger, id: int, field: str, html: Optional[str] =
             return None, False, for_more_check_urls
         html,updates = process_broken_urls(html,logger=logger,id=id,field=field)
         html,updates = decompose_known_urls(html,logger=logger,id=id,field=field,updates=updates)
-        html,updates,for_more_check_urls=check_is_url_valid(html,logger=logger,id=id,field=field,base_url=base_url,updates=updates)
-        return html,updates,for_more_check_urls
+        html,updates,for_more_check_urls,added_img_urls=check_is_url_valid(html,logger=logger,id=id,field=field,base_url=base_url,updates=updates)
+        return html,updates,for_more_check_urls,added_img_urls
     except Exception as e:
         logger.exception(e)
         raise e
@@ -443,7 +461,7 @@ def do_remove_url(record: Dict[str, Any], logger: Logger, base_url: str):
         adjusted_introtext, need_update_introtext, intro_timeout_urls = None, None, []
     else:
         logger.info(f"processing  {id} - introtext is not JSON, proceeding further to check HTML")
-        adjusted_introtext, need_update_introtext, intro_timeout_urls = process_html_text(
+        adjusted_introtext, need_update_introtext, intro_timeout_urls,intro_img_urls = process_html_text(
             logger=logger, id=id, field="introtext", html=introtext, base_url=base_url
         )
 
@@ -457,20 +475,21 @@ def do_remove_url(record: Dict[str, Any], logger: Logger, base_url: str):
         adjusted_fulltext, need_update_fulltext, full_timeout_urls = None, None, []
     else:
         logger.info(f"processing {id} - fulltext is not json proceeding further to check html")
-        adjusted_fulltext, need_update_fulltext, full_timeout_urls = process_html_text(
+        adjusted_fulltext, need_update_fulltext, full_timeout_urls, full_img_urls= process_html_text(
             logger=logger, id=id, field="fulltext", html=fulltext, base_url=base_url
         )
     if adjusted_introtext is None and adjusted_fulltext is None:
         logger.info(
             f"Skipped ID: {id} - Not found any URLs in both introtext, fulltext fields"
         )
-        return None, None, any([need_update_introtext, need_update_fulltext]), None
+        return None, None, any([need_update_introtext, need_update_fulltext]), None,None
 
     return (
         adjusted_introtext if adjusted_introtext else introtext,
         adjusted_fulltext if adjusted_fulltext else fulltext,
         any([need_update_introtext, need_update_fulltext]),
         intro_timeout_urls.union(full_timeout_urls),
+        intro_img_urls.union(full_img_urls)
     )
 
 
@@ -505,7 +524,7 @@ def get_db_connection(config,logger):
         logger.error(e)
         raise e
 
-def process_record(records, log_file, base_url, timeout_file,config, commit,total,log_level):
+def process_record(records, log_file, base_url, timeout_file,nested_img_file,config, commit,total,log_level):
    
     logger = get_logger(name=log_file, log_file=log_file,log_level=log_level) 
     connection=get_db_connection(config,logger)
@@ -520,7 +539,7 @@ def process_record(records, log_file, base_url, timeout_file,config, commit,tota
             # logger.info(
             #             f'{"*"*20} Processing ID: {record.get("id")} {"*"*20} ({counter}/{total} - {percentage(counter, total)})'
             #         )
-            introtext, fulltext, is_update, timeout_urls = do_remove_url(
+            introtext, fulltext, is_update, timeout_urls,img_urls = do_remove_url(
                 record=record, logger=logger, base_url=base_url
             )
 
@@ -530,7 +549,11 @@ def process_record(records, log_file, base_url, timeout_file,config, commit,tota
                     id=record.get("id"),
                     urls=timeout_urls,
                 )
-
+            if img_urls and len(img_urls)>0:
+                write_img_urls(filename=nested_img_file,
+                               id=record.get('id'),
+                               urls=img_urls
+                               )
             if is_update is False:
                 continue
                 # Set the flag to True but continue processing other records
@@ -583,6 +606,7 @@ def main(commit: bool = False, id: Optional[int] = 0,log_level:bool=False):
     log_file = config.get("script-01", "log_file")
     store_state_file = config.get("script-01", "store_state_file")
     timeout_file = config.get("script-01", "timeout_file")
+    img_file = config.get("script-01", "img_csv_file")
 
     limit: int = config["script-01"].getint("limit")
     base_url: str = config.get("script-01", "base_url")
@@ -626,14 +650,21 @@ def main(commit: bool = False, id: Optional[int] = 0,log_level:bool=False):
                     result = cursor.fetchall()
             else:
                 all_data=True
-                for start in range(0, total, chunk_size):
-                    data_chunk = get_data_chunk(start, chunk_size,connection)
-                    data_chunks.append(data_chunk)
+                # for start in range(0, total, chunk_size):
+                #     data_chunk = get_data_chunk(start, chunk_size,connection)
+                #     data_chunks.append(data_chunk)
+                sql = "SELECT c.id, c.introtext, c.fulltext FROM xu5gc_content AS c WHERE id =%s"
+                args = 108724
+                with connection.cursor() as cursor:
+                    cursor.execute(sql, args)
+                    result = cursor.fetchall()
+                data_chunks=[result]
                 chunk_completion = {i: False for i in range(len(data_chunks))}
                 nested_log_files = [f"process_{i}.log"for i in range(len(data_chunks))]
                 nested_timeout_files=[f'process_{i}.json' for i in range(len(data_chunks))]
+                nested_imgcsv_files=[f'Thread_{i}_imgcsv.csv' for i in range(len(data_chunks))]
                 with ThreadPoolExecutor() as executor:
-                    futures = executor.map(process_record, data_chunks, nested_log_files, [base_url] * len(data_chunks), nested_timeout_files, [config] * len(data_chunks), [commit] * len(data_chunks),[total] *len(data_chunks),[log_level]*len(data_chunks))
+                    futures = executor.map(process_record, data_chunks, nested_log_files, [base_url] * len(data_chunks), nested_timeout_files,nested_imgcsv_files, [config] * len(data_chunks), [commit] * len(data_chunks),[total] *len(data_chunks),[log_level]*len(data_chunks))
                 for future in futures:
                     i,counter = future
 
@@ -656,12 +687,25 @@ def main(commit: bool = False, id: Optional[int] = 0,log_level:bool=False):
                         with open(i, "r") as json_file:
                             data = json.load(json_file)  
                             merged_data.update(data)
+                            os.remove(i)
                 with open(timeout_file,"w") as final_timeout_urls:
                     json.dump(merged_data,final_timeout_urls,indent=4)
+                all_img_data=[]
+                for i in nested_imgcsv_files:
+                    if os.path.exists(i):
+                        with open(i,'r',newline='') as file:
+                            reader=csv.reader(file)
+                            all_img_data.extend(row for row in reader)
+                            os.remove(i)
+                with open(img_file, 'w', newline='') as outfile:
+                    writer = csv.writer(outfile)
+                    writer.writerows(all_img_data)
+
                 with open(log_file, "w") as consolidated_log:
                     for i in nested_log_files:
                         with open(i, "r") as individual_log:
-                            consolidated_log.write(individual_log.read())   
+                            consolidated_log.write(individual_log.read())
+                            os.remove(i)   
                 break  
  
 
@@ -678,7 +722,7 @@ def main(commit: bool = False, id: Optional[int] = 0,log_level:bool=False):
                         logger.info(
                             f'{"*"*20} Processing ID: {record.get("id")} {"*"*20} ({counter}/{total} - {percentage(counter, total)})'
                         )
-                        introtext, fulltext, is_update, timeout_urls = do_remove_url(
+                        introtext, fulltext, is_update, timeout_urls,img_urls = do_remove_url(
                             record=record, logger=logger, base_url=base_url
                         )
                         if timeout_urls and len(timeout_urls) > 0:
@@ -687,6 +731,11 @@ def main(commit: bool = False, id: Optional[int] = 0,log_level:bool=False):
                                 id=record.get("id"),
                                 urls=timeout_urls,
                             )
+                        if img_urls and len(img_urls)>0:
+                            write_img_urls(filename=img_file,
+                                        id=record.get('id'),
+                                        urls=img_urls
+                                        )
 
                         if is_update is False:
                             continue
