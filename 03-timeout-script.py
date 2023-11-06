@@ -286,10 +286,12 @@ def main(commit, file_path, is_urla: bool = False, timeout: int = 15):
             urls=[url.replace("http://https://","http://").replace("https://https://","https://") if url.startswith("http://https://") or url.startswith("https://https://") else url for url in urls]
             http_urls=list(filter(lambda x: not x.startswith('ftp://'),[f"https://{url}" if url.startswith('www.') else url  for url in urls]))
             ftp_urls = list(filter(lambda x: x.startswith('ftp://'), urls))
-            for result in do_http_request(urls=http_urls, logger=logger, id=id, timeout=timeout):
-                url = result.get('url')
+            new_http_urls = {(f"https://linuxsecurity.com/{url}" if not url.startswith(("https://", "http://")) else url): url for url in http_urls}
+            for result in do_http_request(urls=new_http_urls.keys(), logger=logger, id=id, timeout=timeout):
+                parsed_url = result.get('url')
+                url=new_http_urls[parsed_url]
                 if not result.get('is_broken', False):
-                    logger.info(f'Skipped ID: {id} #URL: {url} #STATUS_CODE: {result.get("status_code")}')
+                    logger.info(f'Skipped ID: {id} #URL: {parsed_url} #STATUS_CODE: {result.get("status_code")}')
                     remain_urls = [href for href in remain_urls if href != url]
                     continue
                 

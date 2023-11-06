@@ -1,12 +1,1 @@
-{
-    "108724": [
-        "ftp://ftp.free.fr/pub/Distributions_Linux/Mandrake/updates/6.0/RPMS/",
-        "http://www.linuxsecurity.com/sponsors/opendocs.html",
-        "http://www.immunix.org:8080/ImmunixOS/6.2/updates/RPMS/",
-        "ftp://ftp.slackware.com/pub/slackware/slackware-current/slakware/n1/",
-        "ftp://ftp.free.fr/pub/Distributions_Linux/Mandrake/updates/7.0/RPMS/",
-        "ftp://ftp.free.fr/pub/Distributions_Linux/Mandrake/updates/7.1/RPMS/",
-        "ftp://ftp.slackware.com/pub/slackware/slackware-current/slakware/x1/",
-        "ftp://ftp.free.fr/pub/Distributions_Linux/Mandrake/updates/6.1/RPMS/"
-    ]
-}
+{}
