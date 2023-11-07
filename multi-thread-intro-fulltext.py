@@ -236,14 +236,19 @@ def get_double_https(urls):
     return obj
 
 
-async def new_do_http_request(urls,session,logger:Logger,id:int):
+async def new_do_http_request(urls_obj,session,logger:Logger,id:int,image_urls:list):
+    urls=list(urls_obj.keys())
     tasks=[]
     for url in urls:
         task = asyncio.create_task(new_check_http_broken_link(url=url, session=session,logger=logger,id=id))
         tasks.append(task)
     result = await asyncio.gather(*tasks)
     for response in result:
-        is_image = response['url'].lower().endswith(('.jpg','.jpeg','.png'))
+        if urls_obj[response['url']] in image_urls:
+            # is_image = response['url'].lower().endswith(('.jpg','.jpeg','.png'))
+            is_image=True
+        else:
+            is_image=False
 
         # if response['url'].lower().endswith(('.jpg','.jpeg','.png')):
         #     if response['is_error']:
@@ -343,16 +348,15 @@ def check_ftp_urls( logger:Logger, id:int, updates:list,field:str, html: Optiona
             for_more_check_urls.add(url)
     return str(soup), updates,for_more_check_urls
 
-async def check_http_urls(logger:Logger, id:int,field:str,updates:list,base_url:str,html:Optional[str]=None, urls:list=None,for_more_check_urls:set=None):
+async def check_http_urls(logger:Logger, id:int,field:str,updates:list,base_url:str,html:Optional[str]=None, urls:list=None,for_more_check_urls:set=None,image_urls:list=None):
     soup=BeautifulSoup(html,'html.parser')
     str_soup=str(soup)
     urls_obj=get_double_https(urls)
-    urls = create_relative_urls(urls_obj,base_url)
-    urls=list(urls_obj.keys())
+    urls_obj = create_relative_urls(urls_obj,base_url)
     added_img_urls=set()
     if len(urls)!=0:
         async with aiohttp.ClientSession() as session:
-            async for result in new_do_http_request(urls=urls, session=session, logger=logger, id=id):            
+            async for result in new_do_http_request(urls_obj=urls_obj, session=session, logger=logger, id=id,image_urls=image_urls):            
                 parsed_url = result.get('url')
                 url=urls_obj.get(str(parsed_url),"")
                 if result.get('img'):
@@ -426,16 +430,21 @@ def skip_check_sites(html,logger:Logger):
         remaining_urls.append(url)
     return remaining_urls
 
-
+def img_urls(html):
+    img_tag_regex = r'<img[^>]+src="([^">]+)"'
+    matches=re.findall(img_tag_regex,html)
+    return matches
 
 
 
 def check_is_url_valid(html:str, logger:Logger, id:int,field:str,base_url:str,updates:list):
     all_urls=skip_check_sites(html,logger)
+    image_urls=img_urls(html)
+    all_urls=list(set(all_urls+image_urls))
     ftp_urls = list(filter(lambda x: is_ftp_links(x), all_urls))
     http_urls = list(filter(lambda x: not is_ftp_links(x), all_urls))
     html,updates,for_more_check_urls = check_ftp_urls(html=html,urls= ftp_urls, logger=logger, id=id,field=field,updates=updates)
-    html,updates,for_more_check_urls,added_img_urls = asyncio.run(check_http_urls(html=html, urls=http_urls, logger=logger, id=id,field=field,updates=updates,base_url=base_url,for_more_check_urls=for_more_check_urls))
+    html,updates,for_more_check_urls,added_img_urls = asyncio.run(check_http_urls(html=html, urls=http_urls, logger=logger, id=id,field=field,updates=updates,base_url=base_url,for_more_check_urls=for_more_check_urls,image_urls=image_urls))
     return html,any(updates),for_more_check_urls,added_img_urls
 
 def process_html_text(logger: Logger, id: int, field: str, html: Optional[str] = None, base_url: str = None):
