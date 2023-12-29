@@ -292,7 +292,9 @@ def main(commit, file_path, is_urla: bool = False, timeout: int = 15):
                 url=new_http_urls[parsed_url]
                 if not result.get('is_broken', False):
                     logger.info(f'Skipped ID: {id} #URL: {parsed_url} #STATUS_CODE: {result.get("status_code")}')
-                    remain_urls = [href for href in remain_urls if href != url]
+                    if commit:
+                         remain_urls = [href for href in remain_urls if href != url]
+
                     continue
                 
                 replace_urls.append(url)
@@ -301,7 +303,8 @@ def main(commit, file_path, is_urla: bool = False, timeout: int = 15):
                 url = result.get('url')
                 if not result.get('is_broken', False):
                     logger.info(f'Skipped ID: {id} #URL: {url} #STATUS_CODE: {result.get("status_code")}')
-                    remain_urls = [href for href in remain_urls if href != url]
+                    if commit:
+                        remain_urls = [href for href in remain_urls if href != url]
                     continue
                 
                 replace_urls.append(url)

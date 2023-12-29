@@ -61,6 +61,10 @@
       "listserv.fnal.gov",
       "kbase.redhat.com",
       "ftp.debian.org"
+    ],
+
+    "PREDETERMINE_LIST":[
+      "component/socialads/track/redirect/"
     ]
   }
   

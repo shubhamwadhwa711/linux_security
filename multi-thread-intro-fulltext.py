@@ -58,6 +58,7 @@ SKIP_CHECK_SITES = config_data['SKIP_CHECK_SITES']
 DECOMPOSE_URLS = config_data['DECOMPOSE_URLS']
 SITE_WITH_GET_METHOD = config_data['SITE_WITH_GET_METHOD']
 FTP_DECOMPOSE_URLS = config_data['FTP_DECOMPOSE_URLS']
+PREDETERMINE_LIST=config_data['PREDETERMINE_LIST']
 
 
 
@@ -191,6 +192,19 @@ def decompose_known_urls(html:str,logger:Logger,id:int,field:str,updates:list):
                     else:
                         tag.decompose()
                         logger.info(f'ID: {id} #COLUMN: {field} #URL: {url} replaced with {" "}')
+        elif any(i in url for i in PREDETERMINE_LIST):
+            url=url.split('?')[0]
+            a_tags = soup.find_all('a',href=lambda href:href and url in href)
+            for tag in a_tags:
+                text=tag.text.strip()
+                updates.append(True)
+                if text and len(text)>0 and url not in text:
+                    tag.replace_with(text)
+                    logger.info(f'ID: {id} #COLUMN: {field} #URL: {url} replaced with {text}')
+                else:
+                    tag.decompose()
+                    logger.info(f'ID: {id} #COLUMN: {field} #URL: {url} replaced with {" "}')
+
 
     return str(soup),updates
     
