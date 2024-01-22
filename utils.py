@@ -15,7 +15,6 @@ from urllib.request import urlopen
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.firefox.options import Options as FirefoxOptions
-from selenium.webdriver.firefox.options import Options
 from selenium.webdriver.firefox.service import Service
 import asyncio
 import aiohttp
@@ -100,6 +99,18 @@ def get_logger(name, log_file, level=logging.INFO):
     logger.addHandler(console)
     return logger
 
+async def selenium_call(url):
+    driver = webdriver.Chrome()
+    driver.get(url)
+    exact_url=driver.current_url
+    search_texts = ["404", "not found", "page not found"] 
+    for text in search_texts:
+        if text.lower() in driver.page_source.lower():
+            driver.quit()
+            return {'url':url,'status_code':404,'is_error':True,"is_redirect":False}
+    driver.quit()
+    return {'url':url, "redirect_url":exact_url,"is_redirect":True,'is_error':False,"status_code":200}
+
 
 async def new_selenium_check(url,response,logger):
     try:
@@ -107,21 +118,18 @@ async def new_selenium_check(url,response,logger):
         options.add_argument("--headless")
         service=Service(executable_path="/home/admin123/Downloads/geckodriver-v0.33.0-linux-aarch64")
         driver = webdriver.Firefox(service=service,options=options)
-        # service=Service(executable_path="/home/admin123/Downloads/geckodriver-v0.33.0-linux-aarch64")
-        # driver = webdriver.Firefox()
-        # servi=Service(executable_path="/home/admin123/Downloads/geckodriver-v0.33.0-linux-aarch64 (1)")
         driver.get(url)
-        search_texts = ["404", "not found", "page not found"]  # Add more search texts if needed
+        search_texts = ["404", "not found", "page not found"]  
         for text in search_texts:
             if text.lower() in driver.page_source.lower():
                 driver.quit()
-                return {'url':url,'status_code':404,'is_error':True}
+                return {'url':url,'status_code':404,'is_error':True,"is_redirect":False}
         response.status=200
         driver.quit()
-        return {'url':url,'status_code':200,'is_error':False}
+        return {'url':url,'status_code':200,'is_error':False,"is_redirect":False}
     except Exception as e:
         driver.quit()
-        return {'url':url,'status_code':500,'is_error':True}
+        return {'url':url,'status_code':500,'is_error':True,"is_redirect":False}
 
 def selenium_check(url,response,logger):
     try:
@@ -129,20 +137,11 @@ def selenium_check(url,response,logger):
         options.add_argument("--headless")
         service=Service(executable_path="/home/admin123/Downloads/geckodriver-v0.33.0-linux-aarch64")
         driver = webdriver.Firefox(service=service,options=options)
-        # chrome_options = Options()
-        # chrome_options.add_argument("--headless")
-        # chrome_service = Service(executable_path="chromedriver")
-        # driver = webdriver.Chrome(options=chrome_options, service=chrome_service)
         driver.get(url)
-        search_texts = ["404", "not found", "page not found"]  # Add more search texts if needed
+        search_texts = ["404", "not found", "page not found"] 
         for text in search_texts:
             if text.lower() in driver.page_source.lower():
                 driver.quit()
-                # if str(response.url) != url:
-                #     logger.info(f"response url not match with original url set the original url with in place of response url ")
-                #     st=response.url
-                #     st=url
-                #     response=st
                 return response
         response.status_code=200
         driver.quit()
@@ -183,28 +182,26 @@ async  def new_check_http_broken_link(url, session:aiohttp.ClientSession, logger
             async with session.get(url, headers={"User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36"}, timeout=timeout) as response:
                 if response.status == 404:
                     return await new_selenium_check(url, response,logger)
-                return {'url':url,'status_code':response.status,'is_error':False}
+                return {'url':url,'status_code':response.status,'is_error':False,"is_redirect":False}
         else:
             async with session.head(url, headers={"User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36"}, timeout=timeout) as response:
-                if response.status in [405, 403, 301, 302]:
-                    async with session.get(url, headers={"User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36"}, timeout=timeout) as response:
-                        pass  
                 if response.status == 404:
                     return await new_selenium_check(url, response,logger)
-
-                return {'url':url,'status_code':response.status,'is_error':False}
+                if response.status in [405, 403, 301, 302]:
+                    return await selenium_call(url)
+                return {'url':url,'status_code':response.status,'is_error':False,"is_redirect":False}
            
     except (aiohttp.ClientError, asyncio.TimeoutError) as e:
         logger.warning(f'#ID: {id} #URL {url} Error: {str(e)}')
         logger.info(f'#ID: {id} #URL {url} - Requesting again using GET request instead of HEAD')
         try:
             async with session.get(url, headers={"User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36"}, timeout=timeout) as response:
-                return {'url':url,'status_code':response.status,'is_error':False}
+                return {'url':url,'status_code':response.status,'is_error':False,"is_redirect":False}
         except Exception as e:
-            return {'url':url,'status_code':{'type':type(e) ,'message':str(e)},'is_error':True}
+            return {'url':url,'status_code':{'type':type(e) ,'message':str(e)},'is_error':True,"is_redirect":False}
     except Exception as e:
         logger.warning(f'#ID: {id} #URL {url} Error: {str(e)}')
-        return {'url':url,'status_code':{'type':type(e) ,'message':str(e)},'is_error':True}
+        return {'url':url,'status_code':{'type':type(e) ,'message':str(e)},'is_error':True,"is_redirect":False}
         
     
 
@@ -384,3 +381,76 @@ def write_img_urls(filename:str,id,urls:Optional[Tuple[str]]=None):
     with open(filename,mode='w',newline='') as file:
         writer=csv.writer(file)
         writer.writerows(existing_data)
+
+
+
+def write_redirect_urls(filename:str,data:dict):
+    try:
+        with open(filename,'r') as file:
+           file_data = json.load(file)
+    except FileNotFoundError:
+        file_data = []
+
+    file_data.append(data)
+    with open(filename,'w') as f:
+        json.dump(file_data,f,indent=4)
+
+
+
+def concatenate_log_files(nested_log_files,log_file):
+    consolidated_data=[]
+    for i in nested_log_files:
+        with open(i, "r") as individual_log:
+            try:
+                file_data = json.load(individual_log)
+                if isinstance(file_data, list):
+                    consolidated_data.extend(file_data)
+                else:
+                    consolidated_data.append(file_data)
+            except json.JSONDecodeError:
+                individual_log.seek(0)  # Go back to the start of the file
+                for line in individual_log:
+                    if line.strip():
+                        consolidated_data.append(json.loads(line.strip()))
+            os.remove(i)   
+    with open(log_file, "w") as consolidated_log:
+        json.dump(consolidated_data, consolidated_log, indent=4)
+
+
+
+def concatenate_img_csv_files(nested_imgcsv_files,img_file):
+    all_img_data=[]
+    for i in nested_imgcsv_files:
+        if os.path.exists(i):
+            with open(i,'r',newline='') as file:
+                reader=csv.reader(file)
+                all_img_data.extend(row for row in reader)
+                os.remove(i)
+    with open(img_file, 'w', newline='') as outfile:
+        writer = csv.writer(outfile)
+        writer.writerows(all_img_data)
+
+
+def concatenate_timeout_files(nested_timeout_files,timeout_file):
+    merged_data={}
+    for i in nested_timeout_files:
+        if os.path.exists(i):
+            with open(i, "r") as json_file:
+                data = json.load(json_file)  
+                merged_data.update(data)
+                os.remove(i)
+    with open(timeout_file,"w") as final_timeout_urls:
+        json.dump(merged_data,final_timeout_urls,indent=4)
+
+
+def concatenate_redirected_urls_file(redirect_urls_files,redirected_file):
+    merged_data=[]
+    for i in redirect_urls_files:
+        if os.path.exists(i):
+            with open(i, "r") as json_file:
+                data = json.load(json_file)  
+                merged_data.extend(data)
+                os.remove(i)
+    with open(redirected_file,"w") as final_redirect_file:
+        json.dump(merged_data,final_redirect_file,indent=4)
+
