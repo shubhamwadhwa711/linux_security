@@ -8,7 +8,7 @@
             "name": "Python: Current File",
             "type": "python",
             "request": "launch",
-            "program": "${file}",
+            "program": "multi-thread-intro-fulltext.py",
             "console": "integratedTerminal",
             // "args": ["--file", "01.timeout-urls_13_sept.json"],
             "args": ["--id","108767"],

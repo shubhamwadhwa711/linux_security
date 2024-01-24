@@ -6,6 +6,7 @@ import logging
 import requests
 from ftplib import FTP
 from copy import copy
+import configparser
 from pathlib import Path
 from typing import Tuple, Optional
 from requests.exceptions import ConnectionError, ReadTimeout
@@ -25,6 +26,8 @@ from requests.packages.urllib3.exceptions import InsecureRequestWarning
 
 # Suppress the InsecureRequestWarning
 requests.packages.urllib3.disable_warnings(InsecureRequestWarning)
+config = configparser.ConfigParser(interpolation=None)
+config.read(os.path.join(os.path.dirname(__file__), "config.ini"))
 
 HTTP_REQUEST_TIMEOUT = 10
 FTP_REQUEST_TIMEOUT = 5
@@ -100,14 +103,13 @@ def get_logger(name, log_file, level=logging.INFO):
     return logger
 
 async def selenium_call(url):
-    # options = FirefoxOptions()  
-    # options.add_argument("--headless")
-    service=Service(executable_path="/home/admin123/Downloads/geckodriver-v0.31.0-linux64/geckodriver")
-    driver = webdriver.Firefox(service=service)
-    # driver = webdriver.Chrome()
+    options = FirefoxOptions()  
+    options.add_argument("--headless")
+    service=Service(executable_path=config.get('script-01', 'gecodriver_path'))
+    driver = webdriver.Firefox(service=service, options=options)
     driver.get(url)
     exact_url=driver.current_url
-    search_texts = ["404", "not found", "page not found"] 
+    search_texts = ["not found", "page not found"] 
     for text in search_texts:
         if text.lower() in driver.page_source.lower():
             driver.quit()
@@ -120,10 +122,10 @@ async def new_selenium_check(url,response,logger):
     try:
         options = FirefoxOptions()  
         options.add_argument("--headless")
-        service=Service(executable_path="/home/admin123/Downloads/geckodriver-v0.33.0-linux-aarch64")
+        service=Service(executable_path=config.get('script-01', 'gecodriver_path'))
         driver = webdriver.Firefox(service=service,options=options)
         driver.get(url)
-        search_texts = ["404", "not found", "page not found"]  
+        search_texts = ["not found", "page not found"]  
         for text in search_texts:
             if text.lower() in driver.page_source.lower():
                 driver.quit()
@@ -139,10 +141,10 @@ def selenium_check(url,response,logger):
     try:
         options = FirefoxOptions()  
         options.add_argument("--headless")
-        service=Service(executable_path="/home/admin123/Downloads/geckodriver-v0.33.0-linux-aarch64")
+        service=Service(executable_path=config.get('script-01', 'gecodriver_path'))
         driver = webdriver.Firefox(service=service,options=options)
         driver.get(url)
-        search_texts = ["404", "not found", "page not found"] 
+        search_texts = ["not found", "page not found"] 
         for text in search_texts:
             if text.lower() in driver.page_source.lower():
                 driver.quit()
