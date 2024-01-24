@@ -28,6 +28,8 @@ from requests.packages.urllib3.exceptions import InsecureRequestWarning
 requests.packages.urllib3.disable_warnings(InsecureRequestWarning)
 config = configparser.ConfigParser(interpolation=None)
 config.read(os.path.join(os.path.dirname(__file__), "config.ini"))
+gecodriver_path = config.get('script-01', 'gecodriver_path')
+gecodriver_required = eval(config.get('script-01', 'gecodriver_required'))
 
 HTTP_REQUEST_TIMEOUT = 10
 FTP_REQUEST_TIMEOUT = 5
@@ -104,9 +106,12 @@ def get_logger(name, log_file, level=logging.INFO):
 
 async def selenium_call(url):
     options = FirefoxOptions()  
-    options.add_argument("--headless")
-    service=Service(executable_path=config.get('script-01', 'gecodriver_path'))
-    driver = webdriver.Firefox(service=service, options=options)
+    options.add_argument("--headless")    
+    if not gecodriver_required:
+        driver = webdriver.Firefox(options=options)
+    else:
+        service=Service(executable_path=gecodriver_path)
+        driver = webdriver.Firefox(service=service,options=options)
     driver.get(url)
     exact_url=driver.current_url
     search_texts = ["not found", "page not found"] 
@@ -122,8 +127,11 @@ async def new_selenium_check(url,response,logger):
     try:
         options = FirefoxOptions()  
         options.add_argument("--headless")
-        service=Service(executable_path=config.get('script-01', 'gecodriver_path'))
-        driver = webdriver.Firefox(service=service,options=options)
+        if not gecodriver_required:
+            driver = webdriver.Firefox(options=options)
+        else:
+            service=Service(executable_path=gecodriver_path)
+            driver = webdriver.Firefox(service=service,options=options)
         driver.get(url)
         search_texts = ["not found", "page not found"]  
         for text in search_texts:
@@ -141,8 +149,11 @@ def selenium_check(url,response,logger):
     try:
         options = FirefoxOptions()  
         options.add_argument("--headless")
-        service=Service(executable_path=config.get('script-01', 'gecodriver_path'))
-        driver = webdriver.Firefox(service=service,options=options)
+        if not gecodriver_required:
+            driver = webdriver.Firefox(options=options)
+        else:
+            service=Service(executable_path=gecodriver_path)
+            driver = webdriver.Firefox(service=service,options=options)
         driver.get(url)
         search_texts = ["not found", "page not found"] 
         for text in search_texts:

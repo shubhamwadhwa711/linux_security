@@ -17,6 +17,7 @@ pip install -r requirements.txt
 Please make sure that you have changed the configs inside `config.ini` depending on your machine before execute the scripts
 - `[mysql]` section for database
 - `script-01` section for introtext and fulltext script [Gecodriver `geckodriver-v0.32.0-linux64` is added with the current build which is compatible with `Mozilla Firefox 120.0` you can change this based on your system configuration and firefox version and define the path in `config.ini`]
+- `config.inin > gecodriver_required` is set to `False` by default so it will not invoke gecodriver and use system defaults, but if there is need for gecodriver chnage the value to `True` and execute the scipts, ideally it should work with value as `False`
 - `script-02` section for URLs script
 
 ### Run multi-thread-intro-fulltext.py for introtext and fulltext fields with multiple processes

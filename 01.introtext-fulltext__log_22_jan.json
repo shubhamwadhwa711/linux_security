@@ -50,3 +50,30 @@
 {"time": "2024-01-24 22:35:43,387", "level": "INFO", "message": "ID:108767 #column fulltext #URL http://www.linuxsecurity.com/feature_stories/interview-avi.html REDIRECTS TO https://linuxsecurity.com/features replaced with redirected url"}
 {"time": "2024-01-24 22:35:43,392", "level": "INFO", "message": "Processing ID: 108767 completed"}
 {"time": "2024-01-24 22:35:43,393", "level": "INFO", "message": "==================== All records have been processed ===================="}
+{"time": "2024-01-24 23:08:38,361", "level": "INFO", "message": "******************** Processing ID: 108767 ******************** (1/80 - 1.2%)"}
+{"time": "2024-01-24 23:08:38,363", "level": "INFO", "message": "processing  108767 - introtext is not JSON, proceeding further to check HTML"}
+{"time": "2024-01-24 23:08:38,387", "level": "INFO", "message": "processing 108767 - fulltext is not json proceeding further to check html"}
+{"time": "2024-01-24 23:08:54,603", "level": "INFO", "message": "ID:108767 #column fulltext #URL http://www.linuxsecurity.com/feature_stories/interview-avi.html REDIRECTS TO https://linuxsecurity.com/features replaced with redirected url"}
+{"time": "2024-01-24 23:08:54,617", "level": "INFO", "message": "Processing ID: 108767 completed"}
+{"time": "2024-01-24 23:08:54,617", "level": "INFO", "message": "==================== All records have been processed ===================="}
+{"time": "2024-01-24 23:09:24,695", "level": "INFO", "message": "******************** Processing ID: 108767 ******************** (1/80 - 1.2%)"}
+{"time": "2024-01-24 23:09:24,696", "level": "INFO", "message": "processing  108767 - introtext is not JSON, proceeding further to check HTML"}
+{"time": "2024-01-24 23:09:24,714", "level": "INFO", "message": "processing 108767 - fulltext is not json proceeding further to check html"}
+{"time": "2024-01-24 23:09:34,941", "level": "INFO", "message": "ID:108767 #column fulltext #URL http://www.linuxsecurity.com/feature_stories/interview-avi.html REDIRECTS TO https://linuxsecurity.com/features replaced with redirected url"}
+{"time": "2024-01-24 23:09:34,955", "level": "INFO", "message": "Processing ID: 108767 completed"}
+{"time": "2024-01-24 23:09:34,956", "level": "INFO", "message": "==================== All records have been processed ===================="}
+{"time": "2024-01-24 23:13:12,373", "level": "INFO", "message": "******************** Processing ID: 108767 ******************** (1/80 - 1.2%)"}
+{"time": "2024-01-24 23:13:12,375", "level": "INFO", "message": "processing  108767 - introtext is not JSON, proceeding further to check HTML"}
+{"time": "2024-01-24 23:13:12,391", "level": "INFO", "message": "processing 108767 - fulltext is not json proceeding further to check html"}
+{"time": "2024-01-24 23:14:53,380", "level": "INFO", "message": "******************** Processing ID: 108767 ******************** (1/80 - 1.2%)"}
+{"time": "2024-01-24 23:14:53,381", "level": "INFO", "message": "processing  108767 - introtext is not JSON, proceeding further to check HTML"}
+{"time": "2024-01-24 23:14:53,389", "level": "INFO", "message": "processing 108767 - fulltext is not json proceeding further to check html"}
+{"time": "2024-01-24 23:15:26,591", "level": "INFO", "message": "ID:108767 #column fulltext #URL http://www.linuxsecurity.com/feature_stories/interview-avi.html REDIRECTS TO https://linuxsecurity.com/features replaced with redirected url"}
+{"time": "2024-01-24 23:15:26,597", "level": "INFO", "message": "Processing ID: 108767 completed"}
+{"time": "2024-01-24 23:15:26,598", "level": "INFO", "message": "==================== All records have been processed ===================="}
+{"time": "2024-01-24 23:15:41,581", "level": "INFO", "message": "******************** Processing ID: 108767 ******************** (1/80 - 1.2%)"}
+{"time": "2024-01-24 23:15:41,581", "level": "INFO", "message": "processing  108767 - introtext is not JSON, proceeding further to check HTML"}
+{"time": "2024-01-24 23:15:41,588", "level": "INFO", "message": "processing 108767 - fulltext is not json proceeding further to check html"}
+{"time": "2024-01-24 23:16:01,015", "level": "INFO", "message": "ID:108767 #column fulltext #URL http://www.linuxsecurity.com/feature_stories/interview-avi.html REDIRECTS TO https://linuxsecurity.com/features replaced with redirected url"}
+{"time": "2024-01-24 23:16:01,031", "level": "INFO", "message": "Processing ID: 108767 completed"}
+{"time": "2024-01-24 23:16:01,031", "level": "INFO", "message": "==================== All records have been processed ===================="}
