@@ -396,6 +396,7 @@ async def check_http_urls(logger:Logger, id:int,field:str,updates:list,base_url:
                 url=urls_obj.get(str(parsed_url),"")
                 if result.get("redirected_url") is not None:
                     soup,updates=await update_redirected_url(result,soup,updates,logger,field,id,redirected_file)
+                    continue
 
                 if result.get('img'):
                     if result.get('status_code') ==200:

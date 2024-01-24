@@ -100,7 +100,11 @@ def get_logger(name, log_file, level=logging.INFO):
     return logger
 
 async def selenium_call(url):
-    driver = webdriver.Chrome()
+    # options = FirefoxOptions()  
+    # options.add_argument("--headless")
+    service=Service(executable_path="/home/admin123/Downloads/geckodriver-v0.31.0-linux64/geckodriver")
+    driver = webdriver.Firefox(service=service)
+    # driver = webdriver.Chrome()
     driver.get(url)
     exact_url=driver.current_url
     search_texts = ["404", "not found", "page not found"] 

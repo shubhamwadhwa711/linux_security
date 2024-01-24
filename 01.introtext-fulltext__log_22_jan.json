@@ -1,0 +1,24 @@
+{"time": "2024-01-24 21:41:28,745", "level": "INFO", "message": "******************** Processing ID: 101938 ******************** (1/80 - 1.2%)"}
+{"time": "2024-01-24 21:41:28,748", "level": "INFO", "message": "processing  101938 - introtext is not JSON, proceeding further to check HTML"}
+{"time": "2024-01-24 21:41:28,770", "level": "INFO", "message": "processing 101938 - fulltext is not json proceeding further to check html"}
+{"time": "2024-01-24 21:41:28,819", "level": "INFO", "message": "ID: 101938 #COLUMN: fulltext #URL: ftp://updates.RedHat.com/6.1/i386/ replaced with null"}
+{"time": "2024-01-24 21:41:28,856", "level": "INFO", "message": "ID: 101938 #COLUMN: fulltext #URL: ftp://updates.RedHat.com/6.1/sparc/ replaced with null"}
+{"time": "2024-01-24 21:41:28,898", "level": "INFO", "message": "ID: 101938 #COLUMN: fulltext #URL: ftp://updates.RedHat.com/6.1/SRPMS replaced with null"}
+{"time": "2024-01-24 21:46:20,640", "level": "WARNING", "message": "#ID: 101938 #URL http://www.RedHat.com/corp/contac Error: Message: Unable to locate or obtain driver for firefox; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors/driver_location\n"}
+{"time": "2024-01-24 21:46:20,654", "level": "ERROR", "message": "#ID: 101938 #URL http://www.RedHat.com/corp/contac Error: Message: Unable to locate or obtain driver for firefox; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors/driver_location\n"}
+{"time": "2024-01-24 21:46:20,656", "level": "INFO", "message": "ID: 101938 #COLUMN: fulltext #URL: http://www.RedHat.com/corp/contac added for more checking"}
+{"time": "2024-01-24 21:46:20,716", "level": "INFO", "message": "Processing ID: 101938 completed"}
+{"time": "2024-01-24 21:46:20,718", "level": "INFO", "message": "==================== All records have been processed ===================="}
+{"time": "2024-01-24 21:49:22,815", "level": "INFO", "message": "******************** Processing ID: 108767 ******************** (1/80 - 1.2%)"}
+{"time": "2024-01-24 21:49:22,817", "level": "INFO", "message": "processing  108767 - introtext is not JSON, proceeding further to check HTML"}
+{"time": "2024-01-24 21:49:22,839", "level": "INFO", "message": "processing 108767 - fulltext is not json proceeding further to check html"}
+{"time": "2024-01-24 21:50:01,840", "level": "WARNING", "message": "#ID: 108767 #URL http://www.linuxsecurity.com/feature_stories/interview-avi.html Error: [Errno 8] Exec format error: '/home/admin123/Downloads/geckodriver-v0.31.0-linux64.tar.gz'"}
+{"time": "2024-01-24 21:50:01,847", "level": "ERROR", "message": "#ID: 108767 #URL http://www.linuxsecurity.com/feature_stories/interview-avi.html Error: [Errno 8] Exec format error: '/home/admin123/Downloads/geckodriver-v0.31.0-linux64.tar.gz'"}
+{"time": "2024-01-24 21:50:01,850", "level": "INFO", "message": "ID: 108767 #COLUMN: fulltext #URL: http://www.linuxsecurity.com/feature_stories/interview-avi.html added for more checking"}
+{"time": "2024-01-24 21:50:01,870", "level": "INFO", "message": "==================== All records have been processed ===================="}
+{"time": "2024-01-24 21:53:59,444", "level": "INFO", "message": "******************** Processing ID: 108767 ******************** (1/80 - 1.2%)"}
+{"time": "2024-01-24 21:53:59,445", "level": "INFO", "message": "processing  108767 - introtext is not JSON, proceeding further to check HTML"}
+{"time": "2024-01-24 21:53:59,457", "level": "INFO", "message": "processing 108767 - fulltext is not json proceeding further to check html"}
+{"time": "2024-01-24 22:00:56,524", "level": "INFO", "message": "******************** Processing ID: 108767 ******************** (1/80 - 1.2%)"}
+{"time": "2024-01-24 22:00:56,525", "level": "INFO", "message": "processing  108767 - introtext is not JSON, proceeding further to check HTML"}
+{"time": "2024-01-24 22:00:56,542", "level": "INFO", "message": "processing 108767 - fulltext is not json proceeding further to check html"}
