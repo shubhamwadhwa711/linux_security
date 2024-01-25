@@ -104,41 +104,33 @@ def get_logger(name, log_file, level=logging.INFO):
     logger.addHandler(console)
     return logger
 
-async def selenium_call(url):
-    options = FirefoxOptions()  
-    options.add_argument("--headless")    
+def common_selenium_call(url):
+    options=FirefoxOptions()
+    options.add_argument("--headless")
     if not gecodriver_required:
-        driver = webdriver.Firefox(options=options)
+        driver=webdriver.Firefox(options=options)
     else:
         service=Service(executable_path=gecodriver_path)
-        driver = webdriver.Firefox(service=service,options=options)
+        driver=webdriver.Firefox(options=options,service=service)
     driver.get(url)
+    return driver
+
+async def selenium_call(url):
+    driver=common_selenium_call(url)
     exact_url=driver.current_url
-    search_texts = ["not found", "page not found"] 
-    for text in search_texts:
-        if text.lower() in driver.page_source.lower():
-            driver.quit()
-            return {'url':url,'status_code':404,'is_error':True,"is_redirect":False}
+    if "Error" in driver.title or "Not Found" in driver.title:     
+        driver.quit()
+        return {'url':url,'status_code':404,'is_error':True,"is_redirect":False}
     driver.quit()
     return {'url':url, "redirect_url":exact_url,"is_redirect":True,'is_error':False,"status_code":200}
 
 
 async def new_selenium_check(url,response,logger):
     try:
-        options = FirefoxOptions()  
-        options.add_argument("--headless")
-        if not gecodriver_required:
-            driver = webdriver.Firefox(options=options)
-        else:
-            service=Service(executable_path=gecodriver_path)
-            driver = webdriver.Firefox(service=service,options=options)
-        driver.get(url)
-        search_texts = ["not found", "page not found"]  
-        for text in search_texts:
-            if text.lower() in driver.page_source.lower():
-                driver.quit()
-                return {'url':url,'status_code':404,'is_error':True,"is_redirect":False}
-        response.status=200
+        driver=common_selenium_call(url)
+        if "Error" in driver.title or "Not Found" in driver.title:     
+            driver.quit()
+            return {'url':url,'status_code':404,'is_error':True,"is_redirect":False}
         driver.quit()
         return {'url':url,'status_code':200,'is_error':False,"is_redirect":False}
     except Exception as e:
@@ -147,19 +139,10 @@ async def new_selenium_check(url,response,logger):
 
 def selenium_check(url,response,logger):
     try:
-        options = FirefoxOptions()  
-        options.add_argument("--headless")
-        if not gecodriver_required:
-            driver = webdriver.Firefox(options=options)
-        else:
-            service=Service(executable_path=gecodriver_path)
-            driver = webdriver.Firefox(service=service,options=options)
-        driver.get(url)
-        search_texts = ["not found", "page not found"] 
-        for text in search_texts:
-            if text.lower() in driver.page_source.lower():
-                driver.quit()
-                return response
+        driver=common_selenium_call(url)
+        if "Error" in driver.title or "Not Found" in driver.title:     
+            driver.quit()
+            return {'url':url,'status_code':404,'is_error':True,"is_redirect":False}
         response.status_code=200
         driver.quit()
         return response

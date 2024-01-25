@@ -77,3 +77,88 @@
 {"time": "2024-01-24 23:16:01,015", "level": "INFO", "message": "ID:108767 #column fulltext #URL http://www.linuxsecurity.com/feature_stories/interview-avi.html REDIRECTS TO https://linuxsecurity.com/features replaced with redirected url"}
 {"time": "2024-01-24 23:16:01,031", "level": "INFO", "message": "Processing ID: 108767 completed"}
 {"time": "2024-01-24 23:16:01,031", "level": "INFO", "message": "==================== All records have been processed ===================="}
+{"time": "2024-01-25 23:19:16,415", "level": "ERROR", "message": "(1045, \"Access denied for user 'root'@'localhost' (using password: YES)\")"}
+{"time": "2024-01-25 23:19:44,545", "level": "ERROR", "message": "(1045, \"Access denied for user 'root'@'localhost' (using password: YES)\")"}
+{"time": "2024-01-25 23:21:05,406", "level": "INFO", "message": "******************** Processing ID: 101883 ******************** (1/1 - 100.0%)"}
+{"time": "2024-01-25 23:21:24,844", "level": "INFO", "message": "processing  101883 - introtext is not JSON, proceeding further to check HTML"}
+{"time": "2024-01-25 23:21:42,178", "level": "INFO", "message": "processing 101883 - fulltext is not json proceeding further to check html"}
+{"time": "2024-01-25 23:23:16,160", "level": "WARNING", "message": "#ID: 101883 #URL http://www.guardiandigital.com Error: Message: binary is not a Firefox executable\n"}
+{"time": "2024-01-25 23:23:16,169", "level": "ERROR", "message": "#ID: 101883 #URL http://www.guardiandigital.com Error: Message: binary is not a Firefox executable\n"}
+{"time": "2024-01-25 23:23:16,170", "level": "INFO", "message": "ID: 101883 #COLUMN: fulltext #URL: http://www.guardiandigital.com added for more checking"}
+{"time": "2024-01-25 23:23:16,190", "level": "INFO", "message": "==================== All records have been processed ===================="}
+{"time": "2024-01-25 23:24:17,123", "level": "INFO", "message": "******************** Processing ID: 101883 ******************** (1/1 - 100.0%)"}
+{"time": "2024-01-25 23:24:22,855", "level": "INFO", "message": "processing  101883 - introtext is not JSON, proceeding further to check HTML"}
+{"time": "2024-01-25 23:24:24,666", "level": "INFO", "message": "processing 101883 - fulltext is not json proceeding further to check html"}
+{"time": "2024-01-25 23:24:37,563", "level": "WARNING", "message": "#ID: 101883 #URL http://www.guardiandigital.com Error: Message: Unable to locate or obtain driver for firefox; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors/driver_location\n"}
+{"time": "2024-01-25 23:24:37,565", "level": "ERROR", "message": "#ID: 101883 #URL http://www.guardiandigital.com Error: Message: Unable to locate or obtain driver for firefox; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors/driver_location\n"}
+{"time": "2024-01-25 23:24:37,566", "level": "INFO", "message": "ID: 101883 #COLUMN: fulltext #URL: http://www.guardiandigital.com added for more checking"}
+{"time": "2024-01-25 23:24:37,579", "level": "INFO", "message": "==================== All records have been processed ===================="}
+{"time": "2024-01-25 23:30:15,098", "level": "INFO", "message": "******************** Processing ID: 101883 ******************** (1/1 - 100.0%)"}
+{"time": "2024-01-25 23:30:15,101", "level": "INFO", "message": "processing  101883 - introtext is not JSON, proceeding further to check HTML"}
+{"time": "2024-01-25 23:30:26,576", "level": "INFO", "message": "processing 101883 - fulltext is not json proceeding further to check html"}
+{"time": "2024-01-25 23:32:49,872", "level": "INFO", "message": "******************** Processing ID: 101883 ******************** (1/1 - 100.0%)"}
+{"time": "2024-01-25 23:32:49,874", "level": "INFO", "message": "processing  101883 - introtext is not JSON, proceeding further to check HTML"}
+{"time": "2024-01-25 23:32:49,885", "level": "INFO", "message": "processing 101883 - fulltext is not json proceeding further to check html"}
+{"time": "2024-01-25 23:34:12,792", "level": "INFO", "message": "******************** Processing ID: 101883 ******************** (1/1 - 100.0%)"}
+{"time": "2024-01-25 23:34:12,793", "level": "INFO", "message": "processing  101883 - introtext is not JSON, proceeding further to check HTML"}
+{"time": "2024-01-25 23:34:12,810", "level": "INFO", "message": "processing 101883 - fulltext is not json proceeding further to check html"}
+{"time": "2024-01-25 23:34:19,666", "level": "WARNING", "message": "#ID: 101883 #URL http://www.guardiandigital.com Error: Message: Unable to locate or obtain driver for firefox; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors/driver_location\n"}
+{"time": "2024-01-25 23:34:19,672", "level": "ERROR", "message": "#ID: 101883 #URL http://www.guardiandigital.com Error: Message: Unable to locate or obtain driver for firefox; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors/driver_location\n"}
+{"time": "2024-01-25 23:34:19,675", "level": "INFO", "message": "ID: 101883 #COLUMN: fulltext #URL: http://www.guardiandigital.com added for more checking"}
+{"time": "2024-01-25 23:34:19,699", "level": "INFO", "message": "==================== All records have been processed ===================="}
+{"time": "2024-01-25 23:36:40,076", "level": "INFO", "message": "******************** Processing ID: 101883 ******************** (1/1 - 100.0%)"}
+{"time": "2024-01-25 23:36:40,078", "level": "INFO", "message": "processing  101883 - introtext is not JSON, proceeding further to check HTML"}
+{"time": "2024-01-25 23:36:40,104", "level": "INFO", "message": "processing 101883 - fulltext is not json proceeding further to check html"}
+{"time": "2024-01-25 23:36:49,148", "level": "WARNING", "message": "#ID: 101883 #URL http://www.guardiandigital.com Error: Message: Unable to locate or obtain driver for firefox; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors/driver_location\n"}
+{"time": "2024-01-25 23:36:49,156", "level": "ERROR", "message": "#ID: 101883 #URL http://www.guardiandigital.com Error: Message: Unable to locate or obtain driver for firefox; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors/driver_location\n"}
+{"time": "2024-01-25 23:36:49,160", "level": "INFO", "message": "ID: 101883 #COLUMN: fulltext #URL: http://www.guardiandigital.com added for more checking"}
+{"time": "2024-01-25 23:36:49,198", "level": "INFO", "message": "==================== All records have been processed ===================="}
+{"time": "2024-01-25 23:37:20,952", "level": "INFO", "message": "******************** Processing ID: 101883 ******************** (1/1 - 100.0%)"}
+{"time": "2024-01-25 23:37:20,953", "level": "INFO", "message": "processing  101883 - introtext is not JSON, proceeding further to check HTML"}
+{"time": "2024-01-25 23:37:20,966", "level": "INFO", "message": "processing 101883 - fulltext is not json proceeding further to check html"}
+{"time": "2024-01-25 23:39:38,029", "level": "WARNING", "message": "#ID: 101883 #URL http://www.guardiandigital.com Error: Message: Failed to read marionette port\n"}
+{"time": "2024-01-25 23:39:38,033", "level": "ERROR", "message": "#ID: 101883 #URL http://www.guardiandigital.com Error: Message: Failed to read marionette port\n"}
+{"time": "2024-01-25 23:39:38,033", "level": "INFO", "message": "ID: 101883 #COLUMN: fulltext #URL: http://www.guardiandigital.com added for more checking"}
+{"time": "2024-01-25 23:39:38,043", "level": "INFO", "message": "==================== All records have been processed ===================="}
+{"time": "2024-01-25 23:47:05,378", "level": "INFO", "message": "******************** Processing ID: 101883 ******************** (1/1 - 100.0%)"}
+{"time": "2024-01-25 23:47:05,381", "level": "INFO", "message": "processing  101883 - introtext is not JSON, proceeding further to check HTML"}
+{"time": "2024-01-25 23:47:05,404", "level": "INFO", "message": "processing 101883 - fulltext is not json proceeding further to check html"}
+{"time": "2024-01-25 23:49:25,648", "level": "WARNING", "message": "#ID: 101883 #URL http://www.guardiandigital.com Error: Message: Failed to read marionette port\n"}
+{"time": "2024-01-25 23:49:25,652", "level": "ERROR", "message": "#ID: 101883 #URL http://www.guardiandigital.com Error: Message: Failed to read marionette port\n"}
+{"time": "2024-01-25 23:49:25,653", "level": "INFO", "message": "ID: 101883 #COLUMN: fulltext #URL: http://www.guardiandigital.com added for more checking"}
+{"time": "2024-01-25 23:49:25,668", "level": "INFO", "message": "==================== All records have been processed ===================="}
+{"time": "2024-01-25 23:50:52,930", "level": "INFO", "message": "******************** Processing ID: 101883 ******************** (1/1 - 100.0%)"}
+{"time": "2024-01-25 23:50:52,934", "level": "INFO", "message": "processing  101883 - introtext is not JSON, proceeding further to check HTML"}
+{"time": "2024-01-25 23:50:52,955", "level": "INFO", "message": "processing 101883 - fulltext is not json proceeding further to check html"}
+{"time": "2024-01-26 00:02:38,300", "level": "INFO", "message": "******************** Processing ID: 101883 ******************** (1/1 - 100.0%)"}
+{"time": "2024-01-26 00:02:38,301", "level": "INFO", "message": "processing  101883 - introtext is not JSON, proceeding further to check HTML"}
+{"time": "2024-01-26 00:02:38,314", "level": "INFO", "message": "processing 101883 - fulltext is not json proceeding further to check html"}
+{"time": "2024-01-26 00:05:37,123", "level": "INFO", "message": "ID: 101883 #COLUMN: fulltext #URL: http://www.guardiandigital.com #STATUS_CODE: 404 - Replaced with #TEXT: Guardian Digital, Inc."}
+{"time": "2024-01-26 00:05:37,141", "level": "INFO", "message": "Processing ID: 101883 completed"}
+{"time": "2024-01-26 00:05:37,142", "level": "INFO", "message": "==================== All records have been processed ===================="}
+{"time": "2024-01-26 00:07:28,064", "level": "INFO", "message": "******************** Processing ID: 101883 ******************** (1/1 - 100.0%)"}
+{"time": "2024-01-26 00:07:28,065", "level": "INFO", "message": "processing  101883 - introtext is not JSON, proceeding further to check HTML"}
+{"time": "2024-01-26 00:07:28,074", "level": "INFO", "message": "processing 101883 - fulltext is not json proceeding further to check html"}
+{"time": "2024-01-26 00:08:21,349", "level": "INFO", "message": "ID:101883 #column fulltext #URL http://www.guardiandigital.com REDIRECTS TO https://guardiandigital.com/ replaced with redirected url"}
+{"time": "2024-01-26 00:08:21,362", "level": "INFO", "message": "Processing ID: 101883 completed"}
+{"time": "2024-01-26 00:08:21,362", "level": "INFO", "message": "==================== All records have been processed ===================="}
+{"time": "2024-01-26 00:14:13,165", "level": "INFO", "message": "******************** Processing ID: 101883 ******************** (1/1 - 100.0%)"}
+{"time": "2024-01-26 00:14:13,168", "level": "INFO", "message": "processing  101883 - introtext is not JSON, proceeding further to check HTML"}
+{"time": "2024-01-26 00:14:13,189", "level": "INFO", "message": "processing 101883 - fulltext is not json proceeding further to check html"}
+{"time": "2024-01-26 00:14:35,141", "level": "WARNING", "message": "#ID: 101883 #URL http://www.guardiandigital.com Error: Message: Unable to locate or obtain driver for firefox; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors/driver_location\n"}
+{"time": "2024-01-26 00:14:35,146", "level": "ERROR", "message": "#ID: 101883 #URL http://www.guardiandigital.com Error: Message: Unable to locate or obtain driver for firefox; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors/driver_location\n"}
+{"time": "2024-01-26 00:14:35,147", "level": "INFO", "message": "ID: 101883 #COLUMN: fulltext #URL: http://www.guardiandigital.com added for more checking"}
+{"time": "2024-01-26 00:14:35,161", "level": "INFO", "message": "==================== All records have been processed ===================="}
+{"time": "2024-01-26 00:15:18,769", "level": "INFO", "message": "******************** Processing ID: 101883 ******************** (1/1 - 100.0%)"}
+{"time": "2024-01-26 00:15:18,773", "level": "INFO", "message": "processing  101883 - introtext is not JSON, proceeding further to check HTML"}
+{"time": "2024-01-26 00:15:18,792", "level": "INFO", "message": "processing 101883 - fulltext is not json proceeding further to check html"}
+{"time": "2024-01-26 00:15:42,337", "level": "WARNING", "message": "#ID: 101883 #URL http://www.guardiandigital.com Error: Message: Unable to locate or obtain driver for firefox; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors/driver_location\n"}
+{"time": "2024-01-26 00:15:42,344", "level": "ERROR", "message": "#ID: 101883 #URL http://www.guardiandigital.com Error: Message: Unable to locate or obtain driver for firefox; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors/driver_location\n"}
+{"time": "2024-01-26 00:15:42,346", "level": "INFO", "message": "ID: 101883 #COLUMN: fulltext #URL: http://www.guardiandigital.com added for more checking"}
+{"time": "2024-01-26 00:15:42,369", "level": "INFO", "message": "==================== All records have been processed ===================="}
+{"time": "2024-01-26 00:16:28,151", "level": "INFO", "message": "******************** Processing ID: 101883 ******************** (1/1 - 100.0%)"}
+{"time": "2024-01-26 00:16:28,153", "level": "INFO", "message": "processing  101883 - introtext is not JSON, proceeding further to check HTML"}
+{"time": "2024-01-26 00:16:28,172", "level": "INFO", "message": "processing 101883 - fulltext is not json proceeding further to check html"}
+{"time": "2024-01-26 00:17:48,208", "level": "INFO", "message": "ID:101883 #column fulltext #URL http://www.guardiandigital.com REDIRECTS TO https://guardiandigital.com/ replaced with redirected url"}
+{"time": "2024-01-26 00:17:48,236", "level": "INFO", "message": "Processing ID: 101883 completed"}
+{"time": "2024-01-26 00:17:48,237", "level": "INFO", "message": "==================== All records have been processed ===================="}

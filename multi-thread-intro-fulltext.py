@@ -374,11 +374,11 @@ async def update_redirected_url(result ,soup,updates,logger,field,id,redirected_
     a_tags = soup.find_all('a', attrs={'href': result.get('url')})
     if len(a_tags)==0 and result.get('url') in str_soup:
         str_soup=str_soup.replace(result.get('url'),result.get("redirected_url"))
-        logger.info(f'ID:{id} #column {field} #URL {result.get("url")} REDIRECTS TO {result.get("redirected_url")} replaced with redirected url' )
+        logger.info(f'ID:{id} #column {field} #URL {result.get("url")} REDIRECTS TO {result.get("redirected_url")} #STATUS_CODE: {result.get("status_code")}' )
         soup=BeautifulSoup(str_soup,"html.parser")
     for tag in a_tags:
         tag['href']=result.get("redirected_url")
-        logger.info(f'ID:{id} #column {field} #URL {result.get("url")} REDIRECTS TO {result.get("redirected_url")} replaced with redirected url' )
+        logger.info(f'ID:{id} #column {field} #URL {result.get("url")} REDIRECTS TO {result.get("redirected_url")} #STATUS_CODE: {result.get("status_code")}' )
     updates.append(True)
     write_redirect_urls(redirected_file,result)
     return soup,updates
@@ -674,7 +674,6 @@ def main(commit: bool = False, id: Optional[int] = 0,log_level:bool=False):
     else:
         current_id = 0
         counter = 0
-    total=80
     chunk_size=total//multiprocessing.cpu_count()
     data_chunks=[]
     all_data=False

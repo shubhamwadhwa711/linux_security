@@ -38,5 +38,21 @@
         "img": false,
         "redirected_url": "https://linuxsecurity.com/features",
         "id": 108767
+    },
+    {
+        "is_broken": false,
+        "status_code": 200,
+        "url": "http://www.guardiandigital.com",
+        "img": false,
+        "redirected_url": "https://guardiandigital.com/",
+        "id": 101883
+    },
+    {
+        "is_broken": false,
+        "status_code": 200,
+        "url": "http://www.guardiandigital.com",
+        "img": false,
+        "redirected_url": "https://guardiandigital.com/",
+        "id": 101883
     }
 ]
