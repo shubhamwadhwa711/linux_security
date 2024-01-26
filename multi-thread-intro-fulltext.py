@@ -368,17 +368,17 @@ def check_ftp_urls( logger:Logger, id:int, updates:list,field:str, html: Optiona
             for_more_check_urls.add(url)
     return str(soup), updates,for_more_check_urls
 
-async def update_redirected_url(result ,soup,updates,logger,field,id,redirected_file):
+async def update_redirected_url(url,result ,soup,updates,logger,field,id,redirected_file):
     result.update({"id":id})
     str_soup=str(soup)
     a_tags = soup.find_all('a', attrs={'href': result.get('url')})
-    if len(a_tags)==0 and result.get('url') in str_soup:
-        str_soup=str_soup.replace(result.get('url'),result.get("redirected_url"))
-        logger.info(f'ID:{id} #column {field} #URL {result.get("url")} REDIRECTS TO {result.get("redirected_url")} #STATUS_CODE: {result.get("status_code")}' )
+    if len(a_tags)==0 and url in str_soup:
+        str_soup=str_soup.replace(url,result.get("redirected_url"))
+        logger.info(f'ID:{id} #column {field} #URL {url} REDIRECTS TO {result.get("redirected_url")} #STATUS_CODE: {result.get("status_code")}' )
         soup=BeautifulSoup(str_soup,"html.parser")
     for tag in a_tags:
         tag['href']=result.get("redirected_url")
-        logger.info(f'ID:{id} #column {field} #URL {result.get("url")} REDIRECTS TO {result.get("redirected_url")} #STATUS_CODE: {result.get("status_code")}' )
+        logger.info(f'ID:{id} #column {field} #URL {url} REDIRECTS TO {result.get("redirected_url")} #STATUS_CODE: {result.get("status_code")}' )
     updates.append(True)
     write_redirect_urls(redirected_file,result)
     return soup,updates
@@ -395,7 +395,7 @@ async def check_http_urls(logger:Logger, id:int,field:str,updates:list,base_url:
                 parsed_url = result.get('url')
                 url=urls_obj.get(str(parsed_url),"")
                 if result.get("redirected_url") is not None:
-                    soup,updates=await update_redirected_url(result,soup,updates,logger,field,id,redirected_file)
+                    soup,updates=await update_redirected_url(url,result,soup,updates,logger,field,id,redirected_file)
                     continue
 
                 if result.get('img'):
@@ -489,7 +489,7 @@ def process_html_text(logger: Logger, id: int, field: str, html: Optional[str] =
     try:
         for_more_check_urls = set()
         if html is None or len(html) == 0:
-            return None, False, for_more_check_urls
+            return None, False, for_more_check_urls,[]
         html,updates = process_broken_urls(html,logger=logger,id=id,field=field)
         html,updates = decompose_known_urls(html,logger=logger,id=id,field=field,updates=updates)
         html,updates,for_more_check_urls,added_img_urls=check_is_url_valid(html,logger=logger,id=id,field=field,base_url=base_url,updates=updates,redirected_file=redirected_file)
@@ -655,19 +655,22 @@ def main(commit: bool = False, id: Optional[int] = 0,log_level:bool=False):
     timeout_file = config.get("script-01", "timeout_file")
     img_file = config.get("script-01", "img_csv_file")
     redirected_file=config.get("script-01","redirected_url_file")
-    limit: int = config["script-01"].getint("limit")
+    limit: int = config["script-01"].getint("limit",0)
     base_url: str = config.get("script-01", "base_url")
 
     logger: Logger = get_logger(name=log_file, log_file=log_file,log_level=log_level)
 
     connection=get_db_connection(config,logger)
-
-    with connection.cursor() as cursor:
-        sql = "SELECT count(c.id) as total FROM xu5gc_content c LEFT JOIN xu5gc_categories cat ON cat.id = c.catid WHERE c.state = 1 AND cat.published = 1"
-        cursor.execute(sql)
-        result = cursor.fetchone()
-
-    total = result.get("total") if id == 0 else 1
+    
+    if limit==0:
+        with connection.cursor() as cursor:
+            sql = "SELECT count(c.id) as total FROM xu5gc_content c LEFT JOIN xu5gc_categories cat ON cat.id = c.catid WHERE c.state = 1 AND cat.published = 1"
+            cursor.execute(sql)
+            result = cursor.fetchone()
+        
+        total = result.get("total") if id == 0 else 1
+    else:
+        total=limit if id==0 else 1
     if commit and id == 0:
         # read current running state from file if commit is True
         current_id, counter = current_state(store_state_file, mode="r")
