@@ -115,14 +115,14 @@ def common_selenium_call(url):
     driver.get(url)
     return driver
 
-async def selenium_call(url):
+async def selenium_call(url,response):
     driver=common_selenium_call(url)
     exact_url=driver.current_url
     if "Error" in driver.title or "Not Found" in driver.title:     
         driver.quit()
         return {'url':url,'status_code':404,'is_error':True,"is_redirect":False}
     driver.quit()
-    return {'url':url, "redirect_url":exact_url,"is_redirect":True,'is_error':False,"status_code":200}
+    return {'url':url, "redirect_url":exact_url,"is_redirect":True,'is_error':False,"status_code":response.status}
 
 
 async def new_selenium_check(url,response,logger):
@@ -188,7 +188,7 @@ async  def new_check_http_broken_link(url, session:aiohttp.ClientSession, logger
                 if response.status == 404:
                     return await new_selenium_check(url, response,logger)
                 if response.status in [405, 403, 301, 302]:
-                    return await selenium_call(url)
+                    return await selenium_call(url,response)
                 return {'url':url,'status_code':response.status,'is_error':False,"is_redirect":False}
            
     except (aiohttp.ClientError, asyncio.TimeoutError) as e:

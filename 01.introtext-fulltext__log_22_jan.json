@@ -162,3 +162,9 @@
 {"time": "2024-01-26 00:17:48,208", "level": "INFO", "message": "ID:101883 #column fulltext #URL http://www.guardiandigital.com REDIRECTS TO https://guardiandigital.com/ replaced with redirected url"}
 {"time": "2024-01-26 00:17:48,236", "level": "INFO", "message": "Processing ID: 101883 completed"}
 {"time": "2024-01-26 00:17:48,237", "level": "INFO", "message": "==================== All records have been processed ===================="}
+{"time": "2024-01-26 17:20:29,407", "level": "INFO", "message": "******************** Processing ID: 101883 ******************** (1/1 - 100.0%)"}
+{"time": "2024-01-26 17:20:29,408", "level": "INFO", "message": "processing  101883 - introtext is not JSON, proceeding further to check HTML"}
+{"time": "2024-01-26 17:20:29,418", "level": "INFO", "message": "processing 101883 - fulltext is not json proceeding further to check html"}
+{"time": "2024-01-26 17:21:01,308", "level": "INFO", "message": "ID:101883 #column fulltext #URL http://www.guardiandigital.com REDIRECTS TO https://guardiandigital.com/ #STATUS_CODE: 301"}
+{"time": "2024-01-26 17:21:01,377", "level": "INFO", "message": "Processing ID: 101883 completed"}
+{"time": "2024-01-26 17:21:01,380", "level": "INFO", "message": "==================== All records have been processed ===================="}

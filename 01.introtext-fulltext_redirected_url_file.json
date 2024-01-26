@@ -54,5 +54,13 @@
         "img": false,
         "redirected_url": "https://guardiandigital.com/",
         "id": 101883
+    },
+    {
+        "is_broken": false,
+        "status_code": 301,
+        "url": "http://www.guardiandigital.com",
+        "img": false,
+        "redirected_url": "https://guardiandigital.com/",
+        "id": 101883
     }
 ]
