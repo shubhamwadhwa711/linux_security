@@ -176,32 +176,61 @@ def timeit(method):
     return wrapper
 
 
-async  def new_check_http_broken_link(url, session:aiohttp.ClientSession, logger,id,timeout: int = HTTP_REQUEST_TIMEOUT):
+async def new_check_http_broken_link(url, session, logger, id, timeout=HTTP_REQUEST_TIMEOUT):
+    async def make_request(method):
+        headers = {
+            "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36"
+        }
+        try:
+            async with session.request(method, url, headers=headers, timeout=timeout) as response:
+                status_code = response.status
+                if status_code == 404:
+                    return await new_selenium_check(url, response, logger)
+                if status_code in [405, 403, 301, 302]:
+                    redirect_url = str(response.url)
+                    return {'url': url,'redirect_url': redirect_url,'is_redirect': True,'is_error': False,'status_code': status_code}
+                return {'url': url,'status_code': status_code,'is_error': False,'is_redirect': False}
+        except Exception as e:
+            logger.warning(f'#ID: {id} #URL {url} Error: {repr(e)}')
+            return {'url': url,'status_code': {'type': type(e), 'message': str(e)},'is_error': True,'is_redirect': False}
+
     try:
         if any(site in url for site in SITE_WITH_GET_METHOD):
-            async with session.get(url, headers={"User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36"}, timeout=timeout) as response:
-                if response.status == 404:
-                    return await new_selenium_check(url, response,logger)
-                return {'url':url,'status_code':response.status,'is_error':False,"is_redirect":False}
+            return await make_request("GET")
         else:
-            async with session.head(url, headers={"User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36"}, timeout=timeout) as response:
-                if response.status == 404:
-                    return await new_selenium_check(url, response,logger)
-                if response.status in [405, 403, 301, 302]:
-                    return await selenium_call(url,response)
-                return {'url':url,'status_code':response.status,'is_error':False,"is_redirect":False}
-           
-    except (aiohttp.ClientError, asyncio.TimeoutError) as e:
-        logger.warning(f'#ID: {id} #URL {url} Error: {str(e)}')
-        logger.info(f'#ID: {id} #URL {url} - Requesting again using GET request instead of HEAD')
-        try:
-            async with session.get(url, headers={"User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36"}, timeout=timeout) as response:
-                return {'url':url,'status_code':response.status,'is_error':False,"is_redirect":False}
-        except Exception as e:
-            return {'url':url,'status_code':{'type':type(e) ,'message':str(e)},'is_error':True,"is_redirect":False}
+            return await make_request("HEAD")
     except Exception as e:
-        logger.warning(f'#ID: {id} #URL {url} Error: {str(e)}')
-        return {'url':url,'status_code':{'type':type(e) ,'message':str(e)},'is_error':True,"is_redirect":False}
+        logger.warning(f'#ID: {id} #URL {url} Error: {repr(e)}')
+        return {'url': url,'status_code': {'type': type(e), 'message': str(e)},'is_error': True,'is_redirect': False}
+
+
+# async  def new_check_http_broken_link(url, session:aiohttp.ClientSession, logger,id,timeout: int = HTTP_REQUEST_TIMEOUT):
+#     try:
+#         if any(site in url for site in SITE_WITH_GET_METHOD):
+#             async with session.get(url, headers={"User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36"}, timeout=timeout) as response:
+#                 if response.status == 404:
+#                     return await new_selenium_check(url, response,logger)
+#                 return {'url':url,'status_code':response.status,'is_error':False,"is_redirect":False}
+#         else:
+#             async with session.head(url, headers={"User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36"}, timeout=timeout) as response:
+#                 if response.status == 404:
+#                     return await new_selenium_check(url, response,logger)
+#                 if response.status in [405, 403, 301, 302]:
+#                     async with session.get(url, headers={"User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36"}, timeout=timeout) as response:
+#                         return {'url':url, "redirect_url":str(response.url),"is_redirect":True,'is_error':False,"status_code":response.status}
+#                 return {'url':url,'status_code':response.status,'is_error':False,"is_redirect":False}
+           
+#     except (aiohttp.ClientError, asyncio.TimeoutError) as e:
+#         logger.warning(f'#ID: {id} #URL {url} Error: {repr(e)}')
+#         logger.info(f'#ID: {id} #URL {url} - Requesting again using GET request instead of HEAD')
+#         try:
+#             async with session.get(url, headers={"User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36"}, timeout=timeout) as response:
+#                 return {'url':url,'status_code':response.status,'is_error':False,"is_redirect":False}
+#         except Exception as e:
+#             return {'url':url,'status_code':{'type':type(e) ,'message':str(e)},'is_error':True,"is_redirect":False}
+#     except Exception as e:
+#         logger.warning(f'#ID: {id} #URL {url} Error: {repr(e)}')
+#         return {'url':url,'status_code':{'type':type(e) ,'message':str(e)},'is_error':True,"is_redirect":False}
         
     
 

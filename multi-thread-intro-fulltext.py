@@ -298,7 +298,7 @@ async def new_do_http_request(urls_obj,session,logger:Logger,id:int,image_urls:l
                 yield {'is_broken': False, 'status_code': 'SSLError', 'url': response['url'],"img":is_image,"redirected_url":redirect_url}
 
             elif any(keyword in exception_type for keyword in ['TimeoutError']):
-                logger.warning(f'#ID: {id} Error: Timeout {exception_message}')
+                logger.warning(f"#ID: {id} #URL {response['url']}  Error: Timeout {exception_message}")
                 yield {'is_broken': False, 'status_code': 'Timeout', 'url': response['url'],'img':is_image,"redirected_url":redirect_url}
             else:
                 logger.error(f'#ID: {id} #URL {url} Error: {exception_message}')
