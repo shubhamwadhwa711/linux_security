@@ -298,10 +298,10 @@ async def new_do_http_request(urls_obj,session,logger:Logger,id:int,image_urls:l
                 yield {'is_broken': False, 'status_code': 'SSLError', 'url': response['url'],"img":is_image,"redirected_url":redirect_url}
 
             elif any(keyword in exception_type for keyword in ['TimeoutError']):
-                logger.warning(f"#ID: {id} #URL {response['url']}  Error: Timeout {exception_message}")
+                logger.warning(f"#ID: {id} #URL {response['url']}  Error: {exception_message}")
                 yield {'is_broken': False, 'status_code': 'Timeout', 'url': response['url'],'img':is_image,"redirected_url":redirect_url}
             else:
-                logger.error(f'#ID: {id} #URL {url} Error: {exception_message}')
+                # logger.error(f'#ID: {id} #URL {url} Error: {exception_type}')
                 yield {'is_broken': True, 'status_code': 500, 'url': response['url'],"img":is_image,"redirected_url":redirect_url}
 
 
@@ -394,7 +394,7 @@ async def check_http_urls(logger:Logger, id:int,field:str,updates:list,base_url:
             async for result in new_do_http_request(urls_obj=urls_obj, session=session, logger=logger, id=id,image_urls=image_urls):            
                 parsed_url = result.get('url')
                 url=urls_obj.get(str(parsed_url),"")
-                if result.get("redirected_url") is not None:
+                if result.get("redirected_url") is not None and result.get('status_code')!=404:
                     soup,updates=await update_redirected_url(url,result,soup,updates,logger,field,id,redirected_file)
                     continue
 
