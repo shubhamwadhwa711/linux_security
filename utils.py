@@ -185,12 +185,12 @@ async  def new_check_http_broken_link(url, session:aiohttp.ClientSession, logger
         if any(site in url for site in SITE_WITH_GET_METHOD):
             async with session.get(url, headers={"User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36"}, timeout=timeout) as response:
                 if response.status == 404:
-                    return await check_url_with_selenium(url, response,logger)
+                    return await check_url_with_selenium(url=url,logger=logger)
                 return {'url':url,'status_code':response.status,'is_error':False,"is_redirect":False}
         else:
             async with session.head(url, headers={"User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36"}, timeout=timeout) as response:
                 if response.status == 404:
-                    return await check_url_with_selenium(url, response,logger)
+                    return await check_url_with_selenium(url=url,logger=logger)
                 if response.status in [405, 403, 301, 302]:
                     async with session.get(url, headers={"User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36"}, timeout=timeout) as response:
                         return {'url':url, "redirect_url":str(response.url),"is_redirect":True,'is_error':False,"status_code":response.status}
@@ -205,7 +205,6 @@ async  def new_check_http_broken_link(url, session:aiohttp.ClientSession, logger
     #     except Exception as e:
     #         return {'url':url,'status_code':{'type':type(e) ,'message':str(e)},'is_error':True,"is_redirect":False}
     except Exception as e:
-        logger.warning(f'#ID: {id} #URL {url} Error: {repr(e)}')
         return {'url':url,'status_code':{'type':type(e) ,'message':str(e)},'is_error':True,"is_redirect":False}
         
     

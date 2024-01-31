@@ -237,7 +237,7 @@ def strip_trailing_in_anchor(url):
     if url.endswith(('.',':',';','>', '*', ',', '<pkg>','!')):
         url = url.rstrip('.;:,>*,!')
     # if url.endswith(('&gt;', '&gt')):
-    url = url.replace('&gt', '')
+    url = url.replace('&gt', '').replace('&lt',"")
     return url
 
 
@@ -287,10 +287,10 @@ async def new_do_http_request(urls_obj,session,logger:Logger,id:int,image_urls:l
             exception_message=data['message']
             if any(keyword in exception_type for keyword in ['ClientConnectorError','ClientConnectionError']):  
                 if any(keyword in exception_message for keyword in ["Name or service not known","getaddrinfo failed","nodename nor servname","No address associated with hostname"]):
-                    logger.error(f"#ID: {id} #URL {response['url']} Error: {exception_message}")
+                    logger.error(f"#ID: {id} #URL {response['url']} Error: No service {exception_message}")
                     yield {'is_broken': True, 'status_code': 500, 'url': response['url'],'img':is_image,"redirected_url":redirect_url}
                 else:
-                    logger.warning(f"#ID: {id} #URL {response['url']} Error: {exception_message}") 
+                    logger.warning(f"#ID: {id} #URL {response['url']} Error: Client connection error {exception_message}") 
                     yield {'is_broken': False, 'status_code': 'ConnectionError', 'url': response['url'],"img":is_image,"redirected_url":redirect_url}
 
             elif any(keyword in exception_type for keyword in ['ClientSSLError','ClientConnectorSSLError']):
@@ -298,10 +298,10 @@ async def new_do_http_request(urls_obj,session,logger:Logger,id:int,image_urls:l
                 yield {'is_broken': False, 'status_code': 'SSLError', 'url': response['url'],"img":is_image,"redirected_url":redirect_url}
 
             elif any(keyword in exception_type for keyword in ['TimeoutError']):
-                logger.warning(f"#ID: {id} #URL {response['url']}  Error: {exception_message}")
+                logger.warning(f"#ID: {id} #URL {response['url']}  Error: Timeout error {exception_message}")
                 yield {'is_broken': False, 'status_code': 'Timeout', 'url': response['url'],'img':is_image,"redirected_url":redirect_url}
             else:
-                # logger.error(f'#ID: {id} #URL {url} Error: {exception_type}')
+                logger.error(f'#ID: {id} #URL {url} Error: {exception_type}')
                 yield {'is_broken': True, 'status_code': 500, 'url': response['url'],"img":is_image,"redirected_url":redirect_url}
 
 
