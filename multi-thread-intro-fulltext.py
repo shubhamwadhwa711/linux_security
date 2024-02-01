@@ -47,7 +47,9 @@ from utils import (
     concatenate_log_files,
     concatenate_img_csv_files,
     concatenate_timeout_files,
-    concatenate_redirected_urls_file
+    concatenate_redirected_urls_file,
+    write_generic_modified_url_file,
+    concatenate_generic_modfiled_url_file
 )
 
 
@@ -99,21 +101,23 @@ def do_update(
     connection: Connection,
     logger: Logger,
     id,
+    table_prefix,
     introtext: Optional[str] = None,
     fulltext: Optional[str] = None,
+    
 ):
     try:
         if introtext is None and fulltext is None:
             return False
 
         if introtext and fulltext:
-            sql = "UPDATE xu5gc_content SET `introtext`=%s, `fulltext`=%s WHERE id=%s"
+            sql = f"UPDATE {table_prefix}_content SET `introtext`=%s, `fulltext`=%s WHERE id=%s"
             args = (introtext, fulltext, id)
         elif introtext and fulltext is None or fulltext=="":
-            sql = "UPDATE xu5gc_content SET `introtext`=%s WHERE id=%s"
+            sql = f"UPDATE {table_prefix} SET `introtext`=%s WHERE id=%s"
             args = (introtext, id)
         elif fulltext and introtext is None or introtext=="":
-            sql = "UPDATE xu5gc_content SET `fulltext`=%s WHERE id=%s"
+            sql = f"UPDATE {table_prefix}_content SET `fulltext`=%s WHERE id=%s"
             args = (fulltext, id)
         else:
             return False
@@ -142,19 +146,22 @@ def find_urls(text):
     return matches
 
 
-def process_broken_urls(html: str,logger:Logger,id:int,field:str):
+def process_broken_urls(html: str,logger:Logger,id:int,field:str,generic_nested_url_file:str):
     broken_links = find_broken_urls(html)
     updates=[]
     for correct_url, broken_url in broken_links.items():
         html = re.sub(broken_url, correct_url, html)
         logger.info(f'ID: {id} #COLUMN: {field} #URL: {broken_url} replaced with {correct_url}')
         updates.append(True)
+        data={"id":id,"field":field,"broken_url":broken_url,"correct_url":correct_url,"decompose_url":None,"url":None,"status_code":None,"action":"Replace with correct url"}
+        write_generic_modified_url_file(filename=generic_nested_url_file,data=data)
     return html,updates
 
 
-def decompose_known_urls(html:str,logger:Logger,id:int,field:str,updates:list):
+def decompose_known_urls(html:str,logger:Logger,id:int,field:str,updates:list,generic_nested_url_file:str):
     all_urls = find_urls(html)
     soup=BeautifulSoup(html,'html.parser')
+    data={"id":id,"field":field,"broken_url":None,"correct_url":None,"decompose_url":None,"url":None,"status_code":None,"action":None}
     for url in all_urls:
         parsed_url = urlparse(url)
         if parsed_url.scheme in ['http','https']:
@@ -181,6 +188,8 @@ def decompose_known_urls(html:str,logger:Logger,id:int,field:str,updates:list):
                     else:
                         tag.decompose()
                         logger.info(f'ID: {id} #COLUMN: {field} #URL: {url} replaced with {" "}')
+                data.update({"decompose_url":url,"action":"Decompose url"})
+                write_generic_modified_url_file(filename=generic_nested_url_file,data=data)
         elif parsed_url.scheme in ['ftp']:
             domain = parsed_url.netloc
             domain=domain.lower()
@@ -205,6 +214,8 @@ def decompose_known_urls(html:str,logger:Logger,id:int,field:str,updates:list):
                     else:
                         tag.decompose()
                         logger.info(f'ID: {id} #COLUMN: {field} #URL: {url} replaced with {" "}')
+                data.update({"decompose_url":url,"action":"Decompose url"})
+                write_generic_modified_url_file(filename=generic_nested_url_file,data=data)
         elif any(i in url for i in PREDETERMINE_LIST):
             url=url.split('?')[0]
             a_tags = soup.find_all('a',href=lambda href:href and url in href)
@@ -217,6 +228,8 @@ def decompose_known_urls(html:str,logger:Logger,id:int,field:str,updates:list):
                 else:
                     tag.decompose()
                     logger.info(f'ID: {id} #COLUMN: {field} #URL: {url} replaced with {" "}')
+                data.update({"decompose_url":url,"action":" Decompose Predetermine List"})
+                write_generic_modified_url_file(filename=generic_nested_url_file,data=data)
 
 
     return str(soup),updates
@@ -332,7 +345,7 @@ def is_ftp_links(url):
         return True
     return False
 
-def check_ftp_urls( logger:Logger, id:int, updates:list,field:str, html: Optional[str] = None, urls:list=None):
+def check_ftp_urls( logger:Logger, id:int, updates:list,field:str, html: Optional[str] = None, urls:list=None,generic_nested_url_file:str=None,data:dict=None):
     for_more_check_urls = set()
     soup=BeautifulSoup(html,'html.parser')
     for result in do_ftp_request(urls=urls, logger=logger, id=id):
@@ -341,6 +354,8 @@ def check_ftp_urls( logger:Logger, id:int, updates:list,field:str, html: Optiona
             # Link is still existing - no need to do anything
             updates.append(False)
             logger.info(f'Skipped ID: {id} #COLUMN: {field} #FTP_URL: {url if url else ("null")} #STATUS_CODE: {result.get("status_code")}')
+            data.update({"url":url,"status_code":result.get("status_code"),"action":"Do Ftp Request"})
+            write_generic_modified_url_file(filename=generic_nested_url_file,data=data)
             continue
         if result.get('status_code')==404:
             a_tags = soup.find_all('a', attrs={'href': url})
@@ -364,26 +379,35 @@ def check_ftp_urls( logger:Logger, id:int, updates:list,field:str, html: Optiona
                     # Replace tag with tag text only
                     tag.replace_with(text)
                     logger.info(f'ID: {id} #COLUMN: {field} #URL: {url if url else "(null)"} #STATUS_CODE: {result.get("status_code")} - Replaced with #TEXT: {text}')
+            data.update({"url":url,"status_code":result.get("status_code"),"action":"Do Ftp Request"})
+            write_generic_modified_url_file(filename=generic_nested_url_file,data=data)
         else:
             for_more_check_urls.add(url)
+            data.update({"url":url,"status_code":result.get("status_code"),"action":"Do Ftp Request Added into check urls"})
+            write_generic_modified_url_file(filename=generic_nested_url_file,data=data)
     return str(soup), updates,for_more_check_urls
 
 async def update_redirected_url(url,result ,soup,updates,logger,field,id,redirected_file):
     result.update({"id":id})
     str_soup=str(soup)
-    a_tags = soup.find_all('a', attrs={'href': result.get('url')})
+    a_tags = soup.find_all('a', attrs={'href': url})
     if len(a_tags)==0 and url in str_soup:
         str_soup=str_soup.replace(url,result.get("redirected_url"))
         logger.info(f'ID:{id} #column {field} #URL {url} REDIRECTS TO {result.get("redirected_url")} #STATUS_CODE: {result.get("status_code")}' )
         soup=BeautifulSoup(str_soup,"html.parser")
     for tag in a_tags:
-        tag['href']=result.get("redirected_url")
-        logger.info(f'ID:{id} #column {field} #URL {url} REDIRECTS TO {result.get("redirected_url")} #STATUS_CODE: {result.get("status_code")}' )
+        if not any(url.startswith(element) for element in ['http', 'https', 'www', 'ftp', 'ftps', "mailto:", "tel:", "#"]):
+            parsed_url=urlparse(result.get("redirected_url")).path
+            tag['href']=parsed_url
+            logger.info(f'ID:{id} #column {field} #URL {url} REDIRECTS TO {parsed_url} #STATUS_CODE: {result.get("status_code")}' )
+        else:
+            tag['href']=result.get("redirected_url")
+            logger.info(f'ID:{id} #column {field} #URL {url} REDIRECTS TO {result.get("redirected_url")} #STATUS_CODE: {result.get("status_code")}' )
     updates.append(True)
     write_redirect_urls(redirected_file,result)
     return soup,updates
 
-async def check_http_urls(logger:Logger, id:int,field:str,updates:list,base_url:str,html:Optional[str]=None, urls:list=None,for_more_check_urls:set=None,image_urls:list=None,redirected_file:str=None):
+async def check_http_urls(logger:Logger, id:int,field:str,updates:list,base_url:str,html:Optional[str]=None, urls:list=None,for_more_check_urls:set=None,image_urls:list=None,redirected_file:str=None,generic_nested_url_file:str=None,data:dict=None):
     soup=BeautifulSoup(html,'html.parser')
     str_soup=str(soup)
     urls_obj=get_double_https(urls)
@@ -401,9 +425,12 @@ async def check_http_urls(logger:Logger, id:int,field:str,updates:list,base_url:
                 if result.get('img'):
                     if result.get('status_code') ==200:
                         logger.info(f'ID: {id} #URL: {parsed_url} #STATUS_CODE: {result.get("status_code")}')
+                        data.update({"url":parsed_url,"status_code":result.get("status_code"),"action":"Do Http Request"})
+                        write_generic_modified_url_file(filename=generic_nested_url_file,data=data)
                     else:
                         added_img_urls.add(url)
                         logger.info(f'ID: {id} #COLUMN: {field} #URL: {parsed_url} added as img url')
+                        
                     continue
 
                 if not result.get('is_broken', False):
@@ -411,24 +438,30 @@ async def check_http_urls(logger:Logger, id:int,field:str,updates:list,base_url:
                         a_tags = soup.find_all('a', attrs={'href': url})
                         if len(a_tags)==0 and url in str_soup:
                             str_soup=str_soup.replace(url,parsed_url) 
-                            updates.append(True)
                             logger.info(f'ID: {id} #COLUMN: {field} #URL: {url} replaced with {parsed_url}')
                             soup=BeautifulSoup(str_soup,"html.parser")
                         for tag in a_tags:
                             tag['href']=parsed_url 
                             logger.info(f'ID: {id} #COLUMN: {field} #URL: {url} replaced with {parsed_url}') 
                         updates.append(True)
+                        data.update({"broken_url":url,"correct_url":parsed_url,"url":parsed_url,"status_code":result.get("status_code"),"action":"Do Http Request"}) 
+                        write_generic_modified_url_file(filename=generic_nested_url_file,data=data)
                         continue
 
                     updates.append(False)
                     if result.get('status_code') in VALID_HTTP_STATUS_CODES:
                         logger.warning(f'ID: {id} #COLUMN: {field} #URL: {parsed_url} #STATUS_CODE: {result.get("status_code")}')
+                        data.update({'url':parsed_url,"status_code":result.get("status_code"),"action":"Do Http Request"})
+                        write_generic_modified_url_file(filename=generic_nested_url_file,data=data)
                     else:
                         if result.get('status_code') in STATUS_CODES_FOR_FURTHER_CHECK:
                             logger.info(f'ID: {id} #COLUMN: {field} #URL: {url} added for more checking')
                             for_more_check_urls.add(url)
+                            data.update({'url':parsed_url,"status_code":result.get("status_code"),"action":"Do Http Request Added for moew check"})
                         else:
                             logger.info(f'Skipped ID: {id} #COLUMN: {field} #URL: {parsed_url} #STATUS_CODE: {result.get("status_code")}')
+                            data.update({'url':parsed_url,"status_code":result.get("status_code"),"action":"Do Http Request"})
+                        write_generic_modified_url_file(filename=generic_nested_url_file,data=data)
                     continue
                 
                 
@@ -451,19 +484,22 @@ async def check_http_urls(logger:Logger, id:int,field:str,updates:list,base_url:
                         else:
                             tag.replace_with(text)
                             logger.info(f'ID: {id} #COLUMN: {field} #URL: {url if url else "(null)"} #STATUS_CODE: {result.get("status_code")} - Replaced with #TEXT: {text}')
+                    data.update({'url':parsed_url,"status_code":result.get("status_code"),"action":"Do Http Request"})
                 else:
                     for_more_check_urls.add(url)
                     logger.info(f'ID: {id} #COLUMN: {field} #URL: {parsed_url} added for more checking')
+                    data.update({'url':parsed_url,"status_code":result.get("status_code"),"action":"Do Http Request-Added into more urls"})
+                write_generic_modified_url_file(filename=generic_nested_url_file,data=data)
     return str(soup),updates,for_more_check_urls,added_img_urls
 
-def skip_check_sites(html,logger:Logger):
+def skip_check_sites(html,logger:Logger,generic_nested_url_file:str,data:dict):
     all_urls = find_urls(html)
     remaining_urls=[]
     for url in all_urls:
         if url.startswith('#') or urlparse(url).netloc in SKIP_CHECK_SITES or urlparse(url).scheme in ["mailto", "tel"]or '@' in url:
-            if urlparse(url).scheme in ["mailto", "tel"]or url.startswith('#') or '@' in url:
-                continue
             logger.info(f"{url} is skiped for checking:- present in SKIP_CHECK_SITES ")
+            data.update({"url":url,'action':"Skipped url"})
+            write_generic_modified_url_file(filename=generic_nested_url_file,data=data)
             continue
         remaining_urls.append(url)
     return remaining_urls
@@ -475,31 +511,32 @@ def img_urls(html):
 
 
 
-def check_is_url_valid(html:str, logger:Logger, id:int,field:str,base_url:str,updates:list,redirected_file:str):
-    all_urls=skip_check_sites(html,logger)
+def check_is_url_valid(html:str, logger:Logger, id:int,field:str,base_url:str,updates:list,redirected_file:str,generic_nested_url_file:str):
+    data={"id":id,"field":field,"broken_url":None,"correct_url":None,"decompose_url":None,"url":None,"status_code":None,"action":None}
+    all_urls=skip_check_sites(html,logger,generic_nested_url_file,data)
     image_urls=img_urls(html)
     all_urls=list(set(all_urls+image_urls))
     ftp_urls = list(filter(lambda x: is_ftp_links(x), all_urls))
     http_urls = list(filter(lambda x: not is_ftp_links(x), all_urls))
-    html,updates,for_more_check_urls = check_ftp_urls(html=html,urls= ftp_urls, logger=logger, id=id,field=field,updates=updates)
-    html,updates,for_more_check_urls,added_img_urls = asyncio.run(check_http_urls(html=html, urls=http_urls, logger=logger, id=id,field=field,updates=updates,base_url=base_url,for_more_check_urls=for_more_check_urls,image_urls=image_urls,redirected_file=redirected_file))
+    html,updates,for_more_check_urls = check_ftp_urls(html=html,urls= ftp_urls, logger=logger, id=id,field=field,updates=updates,generic_nested_url_file=generic_nested_url_file,data=data)
+    html,updates,for_more_check_urls,added_img_urls = asyncio.run(check_http_urls(html=html, urls=http_urls, logger=logger, id=id,field=field,updates=updates,base_url=base_url,for_more_check_urls=for_more_check_urls,image_urls=image_urls,redirected_file=redirected_file,generic_nested_url_file=generic_nested_url_file,data=data))
     return html,any(updates),for_more_check_urls,added_img_urls
 
-def process_html_text(logger: Logger, id: int, field: str, html: Optional[str] = None, base_url: str = None,redirected_file:str=None):
+def process_html_text(logger: Logger, id: int, field: str, html: Optional[str] = None, base_url: str = None,redirected_file:str=None,generic_nested_url_file:str=None):
     try:
         for_more_check_urls = set()
         if html is None or len(html) == 0:
             return None, False, for_more_check_urls,[]
-        html,updates = process_broken_urls(html,logger=logger,id=id,field=field)
-        html,updates = decompose_known_urls(html,logger=logger,id=id,field=field,updates=updates)
-        html,updates,for_more_check_urls,added_img_urls=check_is_url_valid(html,logger=logger,id=id,field=field,base_url=base_url,updates=updates,redirected_file=redirected_file)
+        html,updates = process_broken_urls(html,logger=logger,id=id,field=field,generic_nested_url_file=generic_nested_url_file)
+        html,updates = decompose_known_urls(html,logger=logger,id=id,field=field,updates=updates,generic_nested_url_file=generic_nested_url_file)
+        html,updates,for_more_check_urls,added_img_urls=check_is_url_valid(html,logger=logger,id=id,field=field,base_url=base_url,updates=updates,redirected_file=redirected_file,generic_nested_url_file=generic_nested_url_file)
         return html,updates,for_more_check_urls,added_img_urls
     except Exception as e:
         logger.exception(e)
         raise e
 
 
-def do_remove_url(record: Dict[str, Any], logger: Logger, base_url: str,redirected_file:str):
+def do_remove_url(record: Dict[str, Any], logger: Logger, base_url: str,redirected_file:str,generic_nested_url_file:str):
     id = record.get("id")
     introtext = record.get("introtext")
     introtext_json_data = introtext.strip().strip("\\")
@@ -509,7 +546,7 @@ def do_remove_url(record: Dict[str, Any], logger: Logger, base_url: str,redirect
     else:
         logger.info(f"processing  {id} - introtext is not JSON, proceeding further to check HTML")
         adjusted_introtext, need_update_introtext, intro_timeout_urls,intro_img_urls = process_html_text(
-            logger=logger, id=id, field="introtext", html=introtext, base_url=base_url,redirected_file=redirected_file
+            logger=logger, id=id, field="introtext", html=introtext, base_url=base_url,redirected_file=redirected_file,generic_nested_url_file=generic_nested_url_file
         )
 
 
@@ -523,7 +560,7 @@ def do_remove_url(record: Dict[str, Any], logger: Logger, base_url: str,redirect
     else:
         logger.info(f"processing {id} - fulltext is not json proceeding further to check html")
         adjusted_fulltext, need_update_fulltext, full_timeout_urls, full_img_urls= process_html_text(
-            logger=logger, id=id, field="fulltext", html=fulltext, base_url=base_url,redirected_file=redirected_file
+            logger=logger, id=id, field="fulltext", html=fulltext, base_url=base_url,redirected_file=redirected_file,generic_nested_url_file=generic_nested_url_file
         )
     if adjusted_introtext is None and adjusted_fulltext is None:
         logger.info(
@@ -571,7 +608,7 @@ def get_db_connection(config,logger):
         logger.error(e)
         raise e
 
-def process_record(records, log_file, base_url, timeout_file,nested_img_file,config, commit,total,log_level,redirected_file):
+def process_record(records, log_file, base_url, timeout_file,nested_img_file,config, commit,total,log_level,redirected_file,table_prefix,generic_nested_url_file)-> tuple:
    
     logger = get_logger(name=log_file, log_file=log_file,log_level=log_level) 
     connection=get_db_connection(config,logger)
@@ -587,7 +624,7 @@ def process_record(records, log_file, base_url, timeout_file,nested_img_file,con
             #             f'{"*"*20} Processing ID: {record.get("id")} {"*"*20} ({counter}/{total} - {percentage(counter, total)})'
             #         )
             introtext, fulltext, is_update, timeout_urls,img_urls = do_remove_url(
-                record=record, logger=logger, base_url=base_url,redirected_file=redirected_file
+                record=record, logger=logger, base_url=base_url,redirected_file=redirected_file,generic_nested_url_file=generic_nested_url_file
             )
 
             if timeout_urls and len(timeout_urls) > 0:
@@ -613,6 +650,7 @@ def process_record(records, log_file, base_url, timeout_file,nested_img_file,con
                         id=record.get("id"),
                         introtext=introtext,
                         fulltext=fulltext,
+                        table_prefix=table_prefix
                     )
                     if succeed:
                         logger.info(
@@ -634,10 +672,10 @@ def process_record(records, log_file, base_url, timeout_file,nested_img_file,con
     
 
 
-def get_data_chunk(start, chunk_size,connection):
+def get_data_chunk(start, chunk_size,connection,table_prefix):
     offset = start  
     limit = chunk_size  
-    sql="SELECT c.id, c.introtext, c.fulltext FROM xu5gc_content AS c LEFT JOIN xu5gc_categories cat ON cat.id = c.catid WHERE c.state = 1 AND cat.published = 1 ORDER BY c.id  LIMIT %s OFFSET %s"
+    sql=f"SELECT c.id, c.introtext, c.fulltext FROM {table_prefix}_content AS c LEFT JOIN {table_prefix}_categories cat ON cat.id = c.catid WHERE c.state = 1 AND cat.published = 1 ORDER BY c.id  LIMIT %s OFFSET %s"
     with connection.cursor() as cursor:
         cursor.execute(sql, (limit, offset))
         results = cursor.fetchall()
@@ -651,10 +689,12 @@ def main(commit: bool = False, id: Optional[int] = 0,log_level:bool=False):
     config.read(os.path.join(os.path.dirname(__file__), "config.ini"))
 
     log_file = config.get("script-01", "log_file")
+    table_prefix=config.get("script-01","table_prefix")
     store_state_file = config.get("script-01", "store_state_file")
     timeout_file = config.get("script-01", "timeout_file")
     img_file = config.get("script-01", "img_csv_file")
     redirected_file=config.get("script-01","redirected_url_file")
+    generic_modified_file=config.get("script-01","generic_modified_url_file")
     limit: int = config["script-01"].getint("limit",0)
     base_url: str = config.get("script-01", "base_url")
 
@@ -664,7 +704,7 @@ def main(commit: bool = False, id: Optional[int] = 0,log_level:bool=False):
     
     if limit==0:
         with connection.cursor() as cursor:
-            sql = "SELECT count(c.id) as total FROM xu5gc_content c LEFT JOIN xu5gc_categories cat ON cat.id = c.catid WHERE c.state = 1 AND cat.published = 1"
+            sql = f"SELECT count(c.id) as total FROM {table_prefix}_content c LEFT JOIN {table_prefix}_categories cat ON cat.id = c.catid WHERE c.state = 1 AND cat.published = 1"
             cursor.execute(sql)
             result = cursor.fetchone()
         
@@ -685,14 +725,14 @@ def main(commit: bool = False, id: Optional[int] = 0,log_level:bool=False):
     while True:
         try:
             if current_id > 0:
-                sql = "SELECT c.id, c.introtext, c.fulltext FROM xu5gc_content AS c LEFT JOIN xu5gc_categories cat ON cat.id = c.catid WHERE c.state = 1 AND cat.published = 1 AND c.id < %s ORDER BY  c.id DESC LIMIT %s"
+                sql = f"SELECT c.id, c.introtext, c.fulltext FROM {table_prefix}_content AS c LEFT JOIN xu5gc_categories cat ON cat.id = c.catid WHERE c.state = 1 AND cat.published = 1 AND c.id < %s ORDER BY  c.id DESC LIMIT %s"
                 args = (current_id, limit)
                 with connection.cursor() as cursor:
                     cursor.execute(sql, args)
                     result = cursor.fetchall()
 
             elif id > 0:
-                sql = "SELECT c.id, c.introtext, c.fulltext FROM xu5gc_content AS c WHERE id =%s"
+                sql = f"SELECT c.id, c.introtext, c.fulltext FROM {table_prefix}_content AS c WHERE id =%s"
                 args = id
                 with connection.cursor() as cursor:
                     cursor.execute(sql, args)
@@ -700,15 +740,16 @@ def main(commit: bool = False, id: Optional[int] = 0,log_level:bool=False):
             else:
                 all_data=True
                 for start in range(0, total, chunk_size):
-                    data_chunk = get_data_chunk(start, chunk_size,connection)
+                    data_chunk = get_data_chunk(start, chunk_size,connection,table_prefix)
                     data_chunks.append(data_chunk)
                 chunk_completion = {i: False for i in range(len(data_chunks))}
                 nested_log_files = [f"process_{i}_log.json"for i in range(len(data_chunks))]
                 nested_timeout_files=[f'process_{i}_timeout.json' for i in range(len(data_chunks))]
                 nested_imgcsv_files=[f'Thread_{i}_imgcsv.csv' for i in range(len(data_chunks))]
                 redirect_urls_files=[f'Thread_{i}_redirect_url.json' for i in range((len(data_chunks)))]
+                generic_nested_modified_file=[f'Thread_{i}_generic_url_file.json' for i in range((len(data_chunks)))]
                 with ThreadPoolExecutor() as executor:
-                    futures = executor.map(process_record, data_chunks, nested_log_files, [base_url] * len(data_chunks), nested_timeout_files,nested_imgcsv_files, [config] * len(data_chunks), [commit] * len(data_chunks),[total] *len(data_chunks),[log_level]*len(data_chunks),redirect_urls_files)
+                    futures = executor.map(process_record, data_chunks, nested_log_files, [base_url] * len(data_chunks), nested_timeout_files,nested_imgcsv_files, [config] * len(data_chunks), [commit] * len(data_chunks),[total] *len(data_chunks),[log_level]*len(data_chunks),redirect_urls_files,[table_prefix]*len(data_chunks),generic_nested_modified_file)
                 for future in futures:
                     i,counter = future
                     if commit and id == 0:
@@ -728,6 +769,7 @@ def main(commit: bool = False, id: Optional[int] = 0,log_level:bool=False):
                 concatenate_img_csv_files(nested_imgcsv_files,img_file)
                 concatenate_log_files(nested_log_files,log_file)
                 concatenate_redirected_urls_file(redirect_urls_files,redirected_file)
+                concatenate_generic_modfiled_url_file(generic_nested_modified_file,generic_modified_file)
                 break  
  
             if not all_data:
@@ -742,7 +784,7 @@ def main(commit: bool = False, id: Optional[int] = 0,log_level:bool=False):
                             f'{"*"*20} Processing ID: {record.get("id")} {"*"*20} ({counter}/{total} - {percentage(counter, total)})'
                         )
                         introtext, fulltext, is_update, timeout_urls,img_urls = do_remove_url(
-                            record=record, logger=logger, base_url=base_url,redirected_file=redirected_file
+                            record=record, logger=logger, base_url=base_url,redirected_file=redirected_file,generic_nested_url_file=generic_modified_file
                         )
                         if timeout_urls and len(timeout_urls) > 0:
                             write_file(
@@ -766,6 +808,7 @@ def main(commit: bool = False, id: Optional[int] = 0,log_level:bool=False):
                                 id=record.get("id"),
                                 introtext=introtext,
                                 fulltext=fulltext,
+                                table_prefix=table_prefix
                             )
                             if succeed:
                                 logger.info(

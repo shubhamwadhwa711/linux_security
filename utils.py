@@ -181,29 +181,21 @@ def timeit(method):
 
 
 async  def new_check_http_broken_link(url, session:aiohttp.ClientSession, logger,id,timeout: int = HTTP_REQUEST_TIMEOUT):
+    headers={"User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36"}
     try:
         if any(site in url for site in SITE_WITH_GET_METHOD):
-            async with session.get(url, headers={"User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36"}, timeout=timeout) as response:
+            async with session.get(url, headers=headers, timeout=timeout) as response:
                 if response.status == 404:
                     return await check_url_with_selenium(url=url,logger=logger)
                 return {'url':url,'status_code':response.status,'is_error':False,"is_redirect":False}
         else:
-            async with session.head(url, headers={"User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36"}, timeout=timeout) as response:
+            async with session.head(url, headers=headers, timeout=timeout) as response:
                 if response.status == 404:
                     return await check_url_with_selenium(url=url,logger=logger)
                 if response.status in [405, 403, 301, 302]:
-                    async with session.get(url, headers={"User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36"}, timeout=timeout) as response:
+                    async with session.get(url,headers=headers, timeout=timeout) as response:
                         return {'url':url, "redirect_url":str(response.url),"is_redirect":True,'is_error':False,"status_code":response.status}
                 return {'url':url,'status_code':response.status,'is_error':False,"is_redirect":False}
-           
-    # except (aiohttp.ClientError, asyncio.TimeoutError) as e:
-    #     logger.warning(f'#ID: {id} #URL {url} Error: {repr(e)}')
-    #     logger.info(f'#ID: {id} #URL {url} - Requesting again using GET request instead of HEAD')
-    #     try:
-    #         async with session.get(url, headers={"User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36"}, timeout=timeout) as response:
-    #             return {'url':url,'status_code':response.status,'is_error':False,"is_redirect":False}
-    #     except Exception as e:
-    #         return {'url':url,'status_code':{'type':type(e) ,'message':str(e)},'is_error':True,"is_redirect":False}
     except Exception as e:
         return {'url':url,'status_code':{'type':type(e) ,'message':str(e)},'is_error':True,"is_redirect":False}
         
@@ -458,3 +450,27 @@ def concatenate_redirected_urls_file(redirect_urls_files,redirected_file):
     with open(redirected_file,"w") as final_redirect_file:
         json.dump(merged_data,final_redirect_file,indent=4)
 
+
+
+def write_generic_modified_url_file(filename:str,data:dict):
+    try:
+        with open(filename,'r') as file:
+           file_data = json.load(file)
+    except FileNotFoundError:
+        file_data = []
+
+    file_data.append(data)
+    with open(filename,'w') as f:
+        json.dump(file_data,f,indent=4)
+
+
+def concatenate_generic_modfiled_url_file(generic_nested_url_file,generic_file):
+    merged_data=[]
+    for i in generic_nested_url_file:
+        if os.path.exists(i):
+            with open(i, "r") as json_file:
+                data = json.load(json_file)  
+                merged_data.extend(data)
+                os.remove(i)
+    with open(generic_file,"w") as final_redirect_file:
+        json.dump(merged_data,final_redirect_file,indent=4)
