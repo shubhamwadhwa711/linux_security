@@ -396,8 +396,11 @@ async def update_redirected_url(url,result ,soup,updates,logger,field,id,redirec
         logger.info(f'ID:{id} #column {field} #URL {url} REDIRECTS TO {result.get("redirected_url")} #STATUS_CODE: {result.get("status_code")}' )
         soup=BeautifulSoup(str_soup,"html.parser")
     for tag in a_tags:
+        text=tag.text.strip()
+        parsed_url=urlparse(result.get("redirected_url")).path
+        if text==url:
+            tag.string=parsed_url
         if not any(url.startswith(element) for element in ['http', 'https', 'www', 'ftp', 'ftps', "mailto:", "tel:", "#"]):
-            parsed_url=urlparse(result.get("redirected_url")).path
             tag['href']=parsed_url
             logger.info(f'ID:{id} #column {field} #URL {url} REDIRECTS TO {parsed_url} #STATUS_CODE: {result.get("status_code")}' )
         else:
