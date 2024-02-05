@@ -390,6 +390,8 @@ def check_ftp_urls( logger:Logger, id:int, updates:list,field:str, html: Optiona
 async def update_redirected_url(url,result ,soup,updates,logger,field,id,redirected_file):
     result.update({"id":id})
     str_soup=str(soup)
+    redirected_url=urlparse(result.get("redirected_url"))._replace(query=None).geturl()
+    result.update({"redirected_url":redirected_url})
     a_tags = soup.find_all('a', attrs={'href': url})
     if len(a_tags)==0 and url in str_soup:
         str_soup=str_soup.replace(url,result.get("redirected_url"))
