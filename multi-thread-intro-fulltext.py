@@ -430,12 +430,12 @@ async def check_http_urls(logger:Logger, id:int,field:str,updates:list,base_url:
                 if result.get('img'):
                     if result.get('status_code') ==200:
                         logger.info(f'ID: {id} #URL: {parsed_url} #STATUS_CODE: {result.get("status_code")}')
-                        data.update({"url":parsed_url,"status_code":result.get("status_code"),"action":"Do Http Request"})
-                        write_generic_modified_url_file(filename=generic_nested_url_file,data=data)
+                        data.update({"url":parsed_url,"status_code":result.get("status_code"),"action":"Do Http Request img URL"})
                     else:
                         added_img_urls.add(url)
+                        data.update({"url":parsed_url,"status_code":result.get("status_code"),"action":"Added for more checking img url"})
                         logger.info(f'ID: {id} #COLUMN: {field} #URL: {parsed_url} added as img url')
-                        
+                    write_generic_modified_url_file(filename=generic_nested_url_file,data=data)  
                     continue
 
                 if not result.get('is_broken', False):
