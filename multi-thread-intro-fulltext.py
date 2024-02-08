@@ -702,6 +702,7 @@ def main(commit: bool = False, id: Optional[int] = 0,log_level:bool=False):
     generic_modified_file=config.get("script-01","generic_modified_url_file")
     limit: int = config["script-01"].getint("limit",0)
     base_url: str = config.get("script-01", "base_url")
+    offset:int=config["script-01"].getint("offset",0)
 
     logger: Logger = get_logger(name=log_file, log_file=log_file,log_level=log_level)
 
@@ -716,12 +717,6 @@ def main(commit: bool = False, id: Optional[int] = 0,log_level:bool=False):
         total = result.get("total") if id == 0 else 1
     else:
         total=limit if id==0 else 1
-    if commit and id == 0:
-        # read current running state from file if commit is True
-        current_id, counter = current_state(store_state_file, mode="r")
-    else:
-        current_id = 0
-        counter = 0
     chunk_size=total//multiprocessing.cpu_count()
     data_chunks=[]
     all_data=False
@@ -729,14 +724,7 @@ def main(commit: bool = False, id: Optional[int] = 0,log_level:bool=False):
 
     while True:
         try:
-            if current_id > 0:
-                sql = f"SELECT c.id, c.introtext, c.fulltext FROM {table_prefix}_content AS c LEFT JOIN xu5gc_categories cat ON cat.id = c.catid WHERE c.state = 1 AND cat.published = 1 AND c.id < %s ORDER BY  c.id DESC LIMIT %s"
-                args = (current_id, limit)
-                with connection.cursor() as cursor:
-                    cursor.execute(sql, args)
-                    result = cursor.fetchall()
-
-            elif id > 0:
+            if id > 0:
                 sql = f"SELECT c.id, c.introtext, c.fulltext FROM {table_prefix}_content AS c WHERE id =%s"
                 args = id
                 with connection.cursor() as cursor:
@@ -744,7 +732,7 @@ def main(commit: bool = False, id: Optional[int] = 0,log_level:bool=False):
                     result = cursor.fetchall()
             else:
                 all_data=True
-                for start in range(0, total, chunk_size):
+                for start in range(offset, total+offset, chunk_size):
                     data_chunk = get_data_chunk(start, chunk_size,connection,table_prefix)
                     data_chunks.append(data_chunk)
                 chunk_completion = {i: False for i in range(len(data_chunks))}
@@ -757,10 +745,6 @@ def main(commit: bool = False, id: Optional[int] = 0,log_level:bool=False):
                     futures = executor.map(process_record, data_chunks, nested_log_files, [base_url] * len(data_chunks), nested_timeout_files,nested_imgcsv_files, [config] * len(data_chunks), [commit] * len(data_chunks),[total] *len(data_chunks),[log_level]*len(data_chunks),redirect_urls_files,[table_prefix]*len(data_chunks),generic_nested_modified_file)
                 for future in futures:
                     i,counter = future
-                    if commit and id == 0:
-                        current_state(
-                            store_state_file, id=i, counter=counter, mode="w"
-                        )
                     for idx,chunk in enumerate(data_chunks):
                         if chunk[-1]['id']==i:
                             chunk_completion[idx] = True   
@@ -834,16 +818,8 @@ def main(commit: bool = False, id: Optional[int] = 0,log_level:bool=False):
                 latest = result[-1]
                 current_id = latest.get("id")
 
-                if commit and id == 0:
-                    # write current running state to file if commit is True
-                    current_state(
-                        store_state_file, id=current_id, counter=counter, mode="w"
-                    )
+                
         except KeyboardInterrupt:
-            if commit and id == 0:
-                current_state(
-                    store_state_file, id=current_id, counter=counter, mode="w"
-                )
             break
 
 if __name__ == "__main__":

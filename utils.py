@@ -92,12 +92,21 @@ class ColoredFormatter(logging.Formatter):
         colored_record.levelname = colored_levelname
         return logging.Formatter.format(self, colored_record)
     
+class JsonFormatter(logging.Formatter):
+    def format(self, record):
+        log_record = {
+            "time": self.formatTime(record, self.datefmt),
+            "level": record.levelname,
+            "message": json.loads(record.getMessage())
+        }
+        return json.dumps(log_record)
+    
 def get_logger(name, log_file, level=logging.INFO):
     logger = logging.getLogger(name)
     logger.setLevel(level)
-
-    file = logging.FileHandler(log_file)        
-    file.setFormatter(formatter)
+    file = logging.FileHandler(log_file)  
+    json_formatter = JsonFormatter()      
+    file.setFormatter(json_formatter)
     logger.addHandler(file)
 
     console = logging.StreamHandler()

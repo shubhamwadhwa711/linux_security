@@ -59,13 +59,13 @@ def do_http_request(urls, logger: Logger, id: int, timeout = HTTP_REQUEST_TIMEOU
             try:
                 response = future.result()
             except requests.Timeout as e:
-                logger.error(f'#ID {id} #URL {url} Error: Timeout {str(e)}')
+                logger.error(json.dumps({'ID': id, 'URL': url ,'Error':f" Timeout {str(e)}"}))
                 yield {'is_broken': True, 'status_code': 'Timeout', 'url': url}
             except requests.exceptions.SSLError as e:
-                logger.error(f'#ID {id} #URL {url} Error: SSLError {str(e)}')
+                logger.error(json.dumps({'ID': id, 'URL': url ,'Error':f" SSL {str(e)}"}))
                 yield {'is_broken': True, 'status_code': 'SSLError', 'url': url}
             except Exception as e:
-                logger.error(f'#ID {id} #URL {url} Error: {str(e)}')
+                logger.error(json.dumps({'ID': id, 'URL': url ,'Error':str(e)}))
                 yield {'is_broken': True, 'status_code': 500, 'url': url}
             else:
                 if response.status_code < 400 or response.status_code in VALID_HTTP_STATUS_CODES:
@@ -82,7 +82,7 @@ def do_ftp_request(urls, logger: Logger, id: int):
             try:
                 response = future.result()
             except all_errors as e:
-                logger.error(f'#ID: {id} #FTP_URL {url} #Error: {str(e)}')
+                logger.error(json.dumps({'ID': id,'FTP_URL': url,'Error': str(e)}))
                 try:
                     errorcode = int(str(e).split(None, 1)[0])
                 except:
@@ -110,7 +110,7 @@ def find_a_tag_in_html(logger: Logger, field: str, html: Optional[str] = None, u
                     str_soup = re.sub(pattern, '', str_soup)
                 else:
                     str_soup = str_soup.replace(url, '')
-                logger.info(f'#COLUMN: {field} #URL: {url} - Replaced with  (empty) removed')
+                logger.info(json.dumps({"COLUMN":field, "URL": url , "Action": "Replaced with  (empty) removed"}))
                 updates.append(True)
                 soup = BeautifulSoup(str_soup, 'html.parser')
             for tag in a_tags:
@@ -118,14 +118,13 @@ def find_a_tag_in_html(logger: Logger, field: str, html: Optional[str] = None, u
                 updates.append(True)
                 if text and len(text) > 0 and url not in text:
                     tag.replace_with(text)
-                    # html = html.replace(str(tag), f'{text} ')
-                    logger.info(f'#COLUMN: {field} #URL: {url} - Replaced with #TEXT: {text}')
+                    logger.info(json.dumps({"COLUMN":field, "URL": url , "Action": f"Replaced with  {text} removed"}))
                 else:
                     tag.decompose()
-                    logger.info(f'#COLUMN: {field} #URL: {url} #TEXT: (empty) removed')
+                    logger.info(json.dumps({"COLUMN":field, "URL": url , "Action": "Replaced with  (empty) removed"}))
         return soup, any(updates)
     except Exception as e:
-        logger.exception(e)
+        logger.error(json.dumps({"Error":str(e)}))
         raise e
     
 def get_database_record(connection: Connection, logger: Logger, id: int, is_urla: bool = False):
@@ -140,7 +139,7 @@ def get_database_record(connection: Connection, logger: Logger, id: int, is_urla
             result =  cursor.fetchone()
         return result
     except MySQLError as e:
-        logger.error(e)
+        logger.error(json.dumps({"ERROR":str(e)}))
         raise e
 
 def do_update_intro_fulltext(record, connection: Connection, logger: Logger, id: int, urls: List[str], commit: bool = False):
@@ -164,7 +163,8 @@ def do_update_intro_fulltext(record, connection: Connection, logger: Logger, id:
             with connection.cursor() as cursor:
                 cursor.execute(sql, tuple(args))
             connection.commit()
-            logger.info(f'ID: {id} has been updated in database')
+
+            logger.info(json.dumps({"ID":id,"Action":"update in database"}))
         return True
     except MySQLError as e:
         connection.rollback()
@@ -206,25 +206,24 @@ def do_update_urla(record, connection: Connection, logger: Logger, id: int, comm
     
         updated_urls = urls.copy()
         updated_urls['urla'] = ""
-        logger.info(f'ID: {id} #COLUMN urls #OLD {urls} #NEW {updated_urls}')
-
+        logger.info(json.dumps({"ID":id,"old_urls":urls,"updated_urls":updated_urls,"Action":"change old to new"}))
         if commit:
             with connection.cursor() as cursor:
                 sql = 'UPDATE xu5gc_content SET `urls`=%s, `fulltext`=%s WHERE id=%s'
                 args = (json.dumps(updated_urls), replaced_fulltext, id)
                 cursor.execute(sql, args)
             connection.commit()
-            logger.info(f'ID: {id} has been updated in database')
+            logger.info(json.dumps({"ID" :id,"Action":"update database"}))
         return True
     except JSONDecodeError as e:
-        logger.warning(e)
+        logger.warning(json.dumps({"id":id,"Error":str(e)}))
         return False
     except MySQLError as e:
-        logger.error(e)
+        logger.error(json.dumps({"id":id,"Error":str(e)}))
         connection.rollback()
         raise e
     except Exception as e:
-        logger.error(e)
+        logger.error(json.dumps({"id":id,"Error":str(e)}))
         raise e
 
 def do_update(connection: Connection, logger: Logger, id: int, urls: List[str], is_urla: bool = False, commit: bool = False):
@@ -234,7 +233,7 @@ def do_update(connection: Connection, logger: Logger, id: int, urls: List[str], 
 
         record = get_database_record(connection=connection, logger=logger, id=id, is_urla=is_urla)
         if record is None:
-            logger.info(f'ID {id} does not exist')
+            logger.info(json.dumps({"ID": id,"Action":"does not exist"}))
             return False
         
         if is_urla:
@@ -243,10 +242,10 @@ def do_update(connection: Connection, logger: Logger, id: int, urls: List[str], 
             succeed = do_update_intro_fulltext(record=record, connection=connection, logger=logger, id=id, urls=urls, commit=commit)
         return succeed
     except MySQLError as e:
-        logger.error(e)
+        logger.error(json.dumps({"id":id,"Error":str(e)}))
         connection.rollback()
     except Exception as e:
-        logger.error(e)
+        logger.error(json.dumps({"id":id,"Error":str(e)}))
         raise e
 
 def main(commit, file_path, is_urla: bool = False, timeout: int = 15):
@@ -271,16 +270,16 @@ def main(commit, file_path, is_urla: bool = False, timeout: int = 15):
             cursorclass=pymysql.cursors.DictCursor
         )
     except MySQLError as e:
-        logger.error(e)
+        logger.error(json.dumps({"error":str(e)}))
         raise e
     
     try:
         data = read_file(file_path)
         if not data:
-            logger.info('There is no URLs to check')
+            logger.info(json.dumps({"Action":"There is no URLs to check"}))
 
         for id, urls in data.items():
-            logger.info(f'{"*"*20} Processing ID: {id} {"*"*20}')
+            logger.info(json.dumps({"Action":f"Processing ID: {id}"}))
             remain_urls = [*urls]
             replace_urls = []
             urls=[url.replace("http://https://","http://").replace("https://https://","https://") if url.startswith("http://https://") or url.startswith("https://https://") else url for url in urls]
@@ -291,7 +290,7 @@ def main(commit, file_path, is_urla: bool = False, timeout: int = 15):
                 parsed_url = result.get('url')
                 url=new_http_urls[parsed_url]
                 if not result.get('is_broken', False):
-                    logger.info(f'Skipped ID: {id} #URL: {parsed_url} #STATUS_CODE: {result.get("status_code")}')
+                    logger.info(json.dumps({'Skipped ID': id, "URL": parsed_url, "STATUS_CODE": result.get("status_code")}))
                     if commit:
                          remain_urls = [href for href in remain_urls if href != url]
 
@@ -302,7 +301,7 @@ def main(commit, file_path, is_urla: bool = False, timeout: int = 15):
             for result in do_ftp_request(urls=ftp_urls, logger=logger, id=id):
                 url = result.get('url')
                 if not result.get('is_broken', False):
-                    logger.info(f'Skipped ID: {id} #URL: {url} #STATUS_CODE: {result.get("status_code")}')
+                    logger.info(json.dumps({'Skipped ID': id, "URL": parsed_url, "STATUS_CODE": result.get("status_code")}))
                     if commit:
                         remain_urls = [href for href in remain_urls if href != url]
                     continue
@@ -324,7 +323,7 @@ def main(commit, file_path, is_urla: bool = False, timeout: int = 15):
             else:
                 write_file(filename=file_path, id=id, urls=None)
 
-            logger.info(f'Processing ID: {id} completed')
+            logger.info(json.dumps({"ID":id ,"Action":f"Processing ID: {id} completed"}))
     except Exception as e:
         raise e
 
