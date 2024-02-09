@@ -1,7 +1,6 @@
 # -*- coding: utf-8 -*-
 import requests
 import lxml
-import chardet
 import pymysql.cursors
 import validators
 import json
@@ -44,7 +43,7 @@ def do_update(connection: Connection, id: int, urls: Optional[Any] = None, fullt
         connection.commit()
         return True
     except MySQLError as e:
-        logger.error(e)
+        logger.error(json.dumps({"Error":str(e)}))
         connection.rollback()
         raise e
 
@@ -57,24 +56,23 @@ def do_http_request(urls: List[str], logger: Logger, id: int):
             try:
                 response = future.result()
             except requests.Timeout as e:
-                logger.warning(f'#ID: {id} #URL {url} Error: Timeout {str(e)}')
+                logger.warning(json.dumps({'ID': id, "URL": url, "Error": f"Timeout {str(e)}"}))
                 yield {'is_broken': False, 'status_code': 'Timeout', 'url': url}
             except requests.exceptions.SSLError as e:
-                logger.warning(f'#ID: {id} #URL {url} Error: SSLError {str(e)}')
+                logger.warning(json.dumps({'ID': id, "URL": url, "Error": f"SSL ERROR {str(e)}"}))
                 yield {'is_broken': False, 'status_code': 'SSLError', 'url': url}
             except requests.exceptions.ConnectionError as e:
                 if ("[Errno 11001] getaddrinfo failed" in str(e) or     # Windows
                     "[Errno -2] Name or service not known" in str(e) or # Linux
                     "[Errno 8] nodename nor servname" in str(e) or
                     "[Errno -5] No address associated with hostname" in str(e)):      # OS X
-                    logger.error(f'#ID: {id} #URL {url} Error: {str(e)}')
+                    logger.warning(json.dumps({'ID': id, "URL": url, "Error": str(e)}))
                     yield {'is_broken': True, 'status_code': 500, 'url': url}
                 else:
-                    logger.warning(f'#ID: {id} #URL {url} Error: {str(e)}')
+                    logger.warning(json.dumps({'ID': id, "URL": url, "Error": str(e)}))
                     yield {'is_broken': False, 'status_code': 'ConnectionError', 'url': url}
             except Exception as e:
-                logger.error(f'#ID: {id} #URL {url} Error: {e}')
-                logger.error(str(e))
+                logger.error(json.dumps({'ID': id, "URL": url, "Error": str(e)}))
                 yield {'is_broken': True, 'status_code': 500, 'url': url}
             else:
                 if response.status_code < 400 or response.status_code in VALID_HTTP_STATUS_CODES:
@@ -90,7 +88,7 @@ def do_ftp_request(urls: List[str], logger: Logger):
             try:
                 response = future.result()
             except all_errors as e:
-                logger.error(e)
+                logger.error(json.dumps({"Error":str(e)}))
                 try:
                     errorcode = int(str(e).split(None, 1)[0])
                 except:
@@ -131,24 +129,24 @@ def is_broken_url(id: int, url: str, logger: Logger, timeout_file: str):
         for result in do_ftp_request(urls=[url], logger=logger):
             is_broken = result.get('is_broken', False)
             if is_broken is False :
-                logger.info(f'Skipped ID: {id} #URL: {url} #STATUS_CODE: {result.get("status_code")}')
+                logger.info(json.dumps({'Skipped ID': id, "URL": url ,"STATUS_CODE": result.get("status_code")}))
             else:
-                logger.info(f'ID: {id} #URL: {url} #STATUS_CODE: {result.get("status_code")} will be removed')
+                logger.info(json.dumps({'ID': id, "URL": url ,"STATUS_CODE": f"{result.get('status_code')}removed"}))
             return is_broken
     else:
         for result in do_http_request(urls=[url], logger=logger, id=id):
             is_broken = result.get('is_broken', False)
             if is_broken is False :
                 if result.get('status_code') in VALID_HTTP_STATUS_CODES:
-                    logger.warning(f'ID: {id} #URL: {url} #STATUS_CODE: {result.get("status_code")}')
+                    logger.warning(json.dumps({'ID': id, "URL": url ,"STATUS_CODE": result.get("status_code")}))
                 else:
                     if result.get('status_code') in STATUS_CODES_FOR_FURTHER_CHECK:
-                        logger.info(f'ID: {id} #URL: {url} added for more checking')
+                        logger.info(json.dumps({'ID': id, "URL": url ,"Action": "Added for more checking"}))
                         write_file(filename=timeout_file, id=id, urls=[url])
                     else:
-                        logger.info(f'Skipped ID: {id} #URL: {url} #STATUS_CODE: {result.get("status_code")}')
+                        logger.info(json.dumps({'Skipped ID': id, "URL": url ,"STATUS_CODE": result.get("status_code")}))
             else:
-                logger.info(f'ID: {id} #URL: {url} #STATUS_CODE: {result.get("status_code")} will be removed')
+                logger.info(json.dumps({'ID': id, "URL": url ,"STATUS_CODE": f"{result.get('status_code')} removed "}))
             return is_broken
     
 def main(commit: bool = False, id: Optional[int] = 0):
@@ -172,7 +170,7 @@ def main(commit: bool = False, id: Optional[int] = 0):
             cursorclass=pymysql.cursors.DictCursor
         )
     except MySQLError as e:
-        logger.error(e)
+        logger.error(json.dumps({"Error":str(e)}))
         raise e
     
     with connection.cursor() as cursor:
@@ -206,28 +204,28 @@ def main(commit: bool = False, id: Optional[int] = 0):
                 result =  cursor.fetchall()
             
             if len(result) == 0:
-                logger.info(f'{"="*20} All records have been processed {"="*20}')
+                logger.info(json.dumps({"Action":"All records have been processed"}))
                 break
 
             for record in result:
                 counter += 1
                 try:
-                    logger.info(f'{"*"*20} Processing ID: {record.get("id")} {"*"*20} ({counter}/{total} - {percentage(counter, total)})')
+                    logger.info(json.dumps({"Processing ID": record.get("id"),"processed_records":f"({counter}/{total}" ,"percentage": percentage(counter, total)}))
                     raw_urls = record.get('urls')
                     if raw_urls is None or len(raw_urls) == 0:
-                        logger.info(f'Skipped ID: {record.get("id")} #urls {raw_urls} - URLs is empty')
+                        logger.info(json.dumps({'Skipped ID': record.get("id") ,"urls": raw_urls,"Action" : "URLs is empty"}))
                         continue
 
                     try:
                         urls = json.loads(raw_urls, strict=False)
                     except JSONDecodeError as e:
-                        logger.error(f'Skipped ID: {record.get("id")} #urls {raw_urls} #JSON Error: {str(e)}')
+                        logger.error(json.dumps({'Skipped ID': record.get("id"), "url": raw_urls,"JSON Error": str(e)}))
                         continue
 
                     urla = urls.get('urla')
                     urlatext = urls.get('urlatext')
                     if urla is None or isinstance(urla, bool) or len(urla) == 0:
-                        logger.info(f'Skipped ID: {record.get("id")}  #urls {urls} - URLA is empty')
+                        logger.info(json.dumps({'Skipped ID': record.get("id") ,"urls": urls,"Action" : "URLs is empty"}))
                         continue
 
                     is_broken = is_broken_url(id=record.get("id"), url=urla, logger=logger, timeout_file=timeout_file)
@@ -238,7 +236,7 @@ def main(commit: bool = False, id: Optional[int] = 0):
                     updated_fulltext = append_text(html=fulltext, text=urlatext)
                     updated_urls = urls.copy()
                     updated_urls['urla'] = ""
-                    logger.info(f'ID: {record.get("id")} #COLUMN urls #OLD {urls} #NEW {updated_urls}')
+                    logger.info(json.dumps({"ID": record.get("id"), "old_urls": urls, "new urls" :updated_urls}))
 
                     if commit:
                         succeed = do_update(
@@ -249,17 +247,17 @@ def main(commit: bool = False, id: Optional[int] = 0):
                             logger=logger
                         )
                         if succeed:
-                            logger.info(f'ID: {record.get("id")} has been updated in database')
-                    logger.info(f'Processed - ID: {record.get("id")} completed')
+                            logger.info(json.dumps({'ID': record.get("id"),"Action":"updated in database"}))
+                    logger.info(json.dumps({"Processed - ID": record.get("id"),"Action":"Processing completed"}))
                 except KeyboardInterrupt as e:
                     current_id = record.get("id")
                     raise e
                 except Exception as e:
-                    logger.error(e)
+                    logger.error(json.dumps({"Error":str(e)}))
                     continue
             
             if id > 0:
-                logger.info(f'{"="*20} All records have been processed {"="*20}')
+                logger.info(json.dumps({"Action":"All records have been processed"}))
                 break
         
             latest = result[-1]

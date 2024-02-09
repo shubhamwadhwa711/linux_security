@@ -720,6 +720,7 @@ def main(commit: bool = False, id: Optional[int] = 0,log_level:bool=False):
     chunk_size=total//multiprocessing.cpu_count()
     data_chunks=[]
     all_data=False
+    counter=0
     
 
     while True:
