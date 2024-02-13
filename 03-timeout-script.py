@@ -76,7 +76,7 @@ def do_http_request(urls, logger: Logger, id: int, timeout = HTTP_REQUEST_TIMEOU
 
 def do_ftp_request(urls, logger: Logger, id: int):
     with ThreadPoolExecutor() as executor:
-        futures = {executor.submit(check_ftp_broken_link, url=url, timeout=FTP_REQUEST_TIMEOUT): url for url in urls}
+        futures = {executor.submit(check_ftp_broken_link, url=url,logger=logger, timeout=FTP_REQUEST_TIMEOUT): url for url in urls}
         for future in as_completed(futures):
             url = futures[future]
             try:

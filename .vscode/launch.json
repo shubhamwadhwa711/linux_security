@@ -8,10 +8,10 @@
             "name": "Python: Current File",
             "type": "python",
             "request": "launch",
-            "program": "multi-thread-intro-fulltext.py",
+            "program": "03-timeout-script.py",
             "console": "integratedTerminal",
-            "args": ["--file", "01.timeout-urls_22_jan.json"],
-            "args": ["--id","155667","--q","--commit"],
+            "args": ["--file", "01.timeout-urls_22_jan.json","--commit"],
+            // "args": ["--id","122177","--commit"],
             // 
             "justMyCode": false
         }

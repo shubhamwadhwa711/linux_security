@@ -244,8 +244,8 @@ def check_http_broken_link(url,logger, id, timeout: int = HTTP_REQUEST_TIMEOUT):
             return response
 
     except (ReadTimeout, ConnectionError) as e:
-        logger.warning(f'#ID: {id} #URL {url} Error: {str(e)}')
-        logger.info(f'#ID: {id} #URL {url} - Requesting again using GET request instead of HEAD')
+        logger.warning(json.dumps({'ID': id, 'URL': url ,'Error': str(e)}))
+        logger.info(json.dumps({'#ID': id, 'URL' :url,"action" : "Requesting again using GET request instead of HEAD"}))
         response = requests.get(
             url=url,
             headers = {"User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36"},
@@ -283,7 +283,7 @@ def check_broken_url(url, timeout):
 #     print("response",resp)
 #     return resp
 
-def check_ftp_broken_link(url, timeout: int = FTP_REQUEST_TIMEOUT):
+def check_ftp_broken_link(url,logger, timeout: int = FTP_REQUEST_TIMEOUT):
     try:
         # Parse the URL
         parsed_url = urlparse(url)
@@ -313,7 +313,7 @@ def check_ftp_broken_link(url, timeout: int = FTP_REQUEST_TIMEOUT):
             return file_exists
 
     except Exception as e:
-        print(f"Error while checking FTP url {url}: {e}")
+        logger.error(json.dumps({"ERROR":f"Error while checking FTP url {url}: {e}"}))
         return False
 
 
