@@ -16,7 +16,7 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 from bs4 import BeautifulSoup, MarkupResemblesLocatorWarning
 from typing import Dict, Any, Optional, List
 import warnings
-
+from urllib.parse import urlparse
 warnings.filterwarnings("ignore", category=MarkupResemblesLocatorWarning)
 
 from utils import (
@@ -32,6 +32,11 @@ from utils import (
     VALID_HTTP_STATUS_CODES,
     STATUS_CODES_FOR_FURTHER_CHECK
 )
+with open('config.json', 'r') as config_file:
+    config_data = json.load(config_file)
+DECOMPOSE_URLS = config_data['DECOMPOSE_URLS']
+FTP_DECOMPOSE_URLS = config_data['FTP_DECOMPOSE_URLS']
+PREDETERMINE_LIST=config_data['PREDETERMINE_LIST']
 
 @timeit
 def do_update(connection: Connection, id: int, urls: Optional[Any] = None, fulltext: Optional[str] = None, logger: Logger = None):
@@ -46,6 +51,24 @@ def do_update(connection: Connection, id: int, urls: Optional[Any] = None, fullt
         logger.error(json.dumps({"Error":str(e)}))
         connection.rollback()
         raise e
+
+
+def decompose_url(url):
+    parsed_url = urlparse(url)
+    if parsed_url.scheme in ['http','https']:
+        domain = parsed_url.netloc
+        domain=domain.lower()
+        if domain in DECOMPOSE_URLS:
+            return True
+    elif parsed_url.scheme in ['ftp']:
+            domain = parsed_url.netloc
+            domain=domain.lower()
+            if domain in FTP_DECOMPOSE_URLS:
+                return True
+    elif any(i in url for i in PREDETERMINE_LIST):
+        return  True
+    return False
+
 
 # @timeit
 def do_http_request(urls: List[str], logger: Logger, id: int):
@@ -122,9 +145,8 @@ def append_text(html: Optional[str] = None, text: str = None):
 def is_broken_url(id: int, url: str, logger: Logger, timeout_file: str):
     is_valid_url = validators.url(url)
     if not is_valid_url:
-        logger.info(f'ID: {id} #URL: {url} #STATUS_CODE: INVALID URL')
+        logger.info(json.dumps({'ID': id ,"URL": url ,"STATUS_CODE": "INVALID URL"}))
         return True
-    
     if url.startswith('ftp'):
         for result in do_ftp_request(urls=[url], logger=logger):
             is_broken = result.get('is_broken', False)
@@ -227,10 +249,11 @@ def main(commit: bool = False, id: Optional[int] = 0):
                     if urla is None or isinstance(urla, bool) or len(urla) == 0:
                         logger.info(json.dumps({'Skipped ID': record.get("id") ,"urls": urls,"Action" : "URLs is empty"}))
                         continue
-
-                    is_broken = is_broken_url(id=record.get("id"), url=urla, logger=logger, timeout_file=timeout_file)
-                    if is_broken is False:
-                        continue
+                    result=decompose_url(urla)
+                    if not result:
+                        is_broken = is_broken_url(id=record.get("id"), url=urla, logger=logger, timeout_file=timeout_file)
+                        if is_broken is False:
+                            continue
                     
                     fulltext = record.get('fulltext')
                     updated_fulltext = append_text(html=fulltext, text=urlatext)
