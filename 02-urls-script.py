@@ -249,8 +249,8 @@ def main(commit: bool = False, id: Optional[int] = 0):
                     if urla is None or isinstance(urla, bool) or len(urla) == 0:
                         logger.info(json.dumps({'Skipped ID': record.get("id") ,"urls": urls,"Action" : "URLs is empty"}))
                         continue
-                    result=decompose_url(urla)
-                    if not result:
+                    decompose_url_result=decompose_url(urla)
+                    if not decompose_url_result:
                         is_broken = is_broken_url(id=record.get("id"), url=urla, logger=logger, timeout_file=timeout_file)
                         if is_broken is False:
                             continue
