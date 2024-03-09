@@ -158,10 +158,10 @@ def selenium_check(url,response,logger):
             return {'url':url,'status_code':404,'is_error':True,"is_redirect":False}
         response.status_code=200
         driver.quit()
-        return response
+        return {'url':url,'status_code':200,'is_error':False,"is_redirect":False}
     except Exception as e:
         driver.quit()
-        return response
+        return {'url':url,'status_code':500,'is_error':True,"is_redirect":False}
 
 
 def check_url_against_domains(url):
