@@ -226,7 +226,7 @@ def check_http_broken_link(url,logger, id, timeout: int = HTTP_REQUEST_TIMEOUT):
             )
             if response.status_code==404:
                 return selenium_check(url,response,logger)
-            return response
+            return {'url':url,'status_code':response.status_code,'is_error':False,"is_redirect":False}
         else:
             response = requests.head(
                 url=url,
@@ -241,7 +241,7 @@ def check_http_broken_link(url,logger, id, timeout: int = HTTP_REQUEST_TIMEOUT):
                 )
             if response.status_code==404:
                 return selenium_check(url,response,logger)
-            return response
+            return {'url':url,'status_code':response.status_code,'is_error':False,"is_redirect":False}
 
     except (ReadTimeout, ConnectionError) as e:
         logger.warning(json.dumps({'ID': id, 'URL': url ,'Error': str(e)}))
@@ -251,8 +251,8 @@ def check_http_broken_link(url,logger, id, timeout: int = HTTP_REQUEST_TIMEOUT):
             headers = {"User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36"},
             timeout=timeout,verify=False
         )
-        return response
-    return response
+        return {'url':url,'status_code':response.status_code,'is_error':False,"is_redirect":False}
+
 
 def check_broken_url(url, timeout):
     """
