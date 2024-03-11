@@ -68,10 +68,10 @@ def do_http_request(urls, logger: Logger, id: int, timeout = HTTP_REQUEST_TIMEOU
                 logger.error(json.dumps({'ID': id, 'URL': url ,'Error':str(e)}))
                 yield {'is_broken': True, 'status_code': 500, 'url': url}
             else:
-                if response.status_code < 400 or response.status_code in VALID_HTTP_STATUS_CODES:
-                    yield {'is_broken': False, 'status_code': response.status_code, 'url': url}
+                if response['status_code'] < 400 or response['status_code'] in VALID_HTTP_STATUS_CODES:
+                    yield {'is_broken': False, 'status_code': response['status_code'], 'url': url}
                 else:
-                    yield {'is_broken': True, 'status_code': response.status_code, 'url': url}
+                    yield {'is_broken': True, 'status_code': response['status_code'], 'url': url}
 
 
 def do_ftp_request(urls, logger: Logger, id: int):
