@@ -3,6 +3,7 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 from json import JSONDecodeError
 import json
 import requests
+import html as ht
 # import lxml
 # import chardet
 import pymysql.cursors
@@ -103,16 +104,8 @@ def find_a_tag_in_html(logger: Logger, field: str, html: Optional[str] = None, u
         str_soup=str(soup)
         updates = []
         for url in urls:
-            a_tags = soup.find_all('a', attrs={'href': url})
-            if len(a_tags) == 0 and url in str_soup:
-                pattern = re.escape(url) + r'(\r\n|\n)'
-                if re.search(pattern, str_soup):
-                    str_soup = re.sub(pattern, '', str_soup)
-                else:
-                    str_soup = str_soup.replace(url, '')
-                logger.info(json.dumps({"COLUMN":field, "URL": url , "Action": "Replaced with  (empty) removed"}))
-                updates.append(True)
-                soup = BeautifulSoup(str_soup, 'html.parser')
+            decode_url=ht.unescape(url)
+            a_tags = soup.find_all('a', attrs={'href': decode_url})
             for tag in a_tags:
                 text = tag.text.strip()
                 updates.append(True)
@@ -122,6 +115,15 @@ def find_a_tag_in_html(logger: Logger, field: str, html: Optional[str] = None, u
                 else:
                     tag.decompose()
                     logger.info(json.dumps({"COLUMN":field, "URL": url , "Action": "Replaced with  (empty) removed"}))
+            if len(a_tags) == 0 and url in str_soup:
+                pattern = re.escape(url) + r'(\r\n|\n)'
+                if re.search(pattern, str_soup):
+                    str_soup = re.sub(pattern, '', str_soup)
+                else:
+                    str_soup = str_soup.replace(url, '')
+                logger.info(json.dumps({"COLUMN":field, "URL": url , "Action": "Replaced with  (empty) removed"}))
+                updates.append(True)
+                soup = BeautifulSoup(str_soup, 'html.parser')
         return soup, any(updates)
     except Exception as e:
         logger.error(json.dumps({"Error":str(e)}))

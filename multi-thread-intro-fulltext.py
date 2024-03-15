@@ -7,6 +7,7 @@ import pymysql.cursors
 from pymysql import Connection
 import validators
 import warnings
+import html as ht
 import argparse
 import configparser
 import os
@@ -141,7 +142,8 @@ def find_broken_urls(text):
     return broken_links
 
 def find_urls(text):
-    pattern = r"""\b(?:(?:(?:(?:https?|ftp?|sftp?):\/\/)|(?:www\.))|(?:ftp:)|(?<=href="|href=\'))[^\s<>;]+\b[\/]?"""
+    # pattern = r"""\b(?:(?:(?:(?:https?|ftp?|sftp?):\/\/)|(?:www\.))|(?:ftp:)|(?<=href="|href=\'))[^\s<>;]+\b[\/]?"""
+    pattern=r"""\b(?:(?:(?:(?:https?|ftp?|sftp?):\/\/)|(?:www\.))|(?:ftp:)|(?<=href="|href=\'|href="|href=\'))[^\s<>"&;]+(?:&amp;[^\s<>"&;?]+=[^\s<>"&;?]+)*\b[\/]?(?<!;q\s)(?!;<>)"""
     matches=re.findall(pattern,text)
     return matches
 
@@ -163,22 +165,14 @@ def decompose_known_urls(html:str,logger:Logger,id:int,field:str,updates:list,ge
     soup=BeautifulSoup(html,'html.parser')
     data={"id":id,"field":field,"broken_url":None,"correct_url":None,"decompose_url":None,"url":None,"status_code":None,"action":None}
     for url in all_urls:
+        dececode_url=ht.unescape(url)
         parsed_url = urlparse(url)
         if parsed_url.scheme in ['http','https']:
             domain = parsed_url.netloc
             domain=domain.lower()
             str_soup = str(soup)
             if domain in DECOMPOSE_URLS:
-                a_tags = soup.find_all('a', attrs={'href': url})
-                if len(a_tags)==0 and url in str_soup:
-                    pattern = re.escape(url) + r'(\r\n|\n)'
-                    if re.search(pattern, str_soup):
-                        str_soup = re.sub(pattern, '', str_soup)
-                    else:
-                        str_soup = str_soup.replace(url, '')
-                    logger.info(f'ID: {id} #COLUMN: {field} #URL: {url} replaced with {"null"}')
-                    updates.append(True)
-                    soup=BeautifulSoup(str_soup,'html.parser')
+                a_tags = soup.find_all('a', attrs={'href': dececode_url})
                 for tag in a_tags:
                     text=tag.text.strip()
                     updates.append(True)
@@ -188,6 +182,15 @@ def decompose_known_urls(html:str,logger:Logger,id:int,field:str,updates:list,ge
                     else:
                         tag.decompose()
                         logger.info(f'ID: {id} #COLUMN: {field} #URL: {url} replaced with {" "}')
+                if len(a_tags)==0 and url in str_soup:
+                    pattern = re.escape(url) + r'(\r\n|\n)'
+                    if re.search(pattern, str_soup):
+                        str_soup = re.sub(pattern, '', str_soup)
+                    else:
+                        str_soup = str_soup.replace(url, '')
+                    logger.info(f'ID: {id} #COLUMN: {field} #URL: {url} replaced with {"null"}')
+                    updates.append(True)
+                    soup=BeautifulSoup(str_soup,'html.parser')
                 data.update({"decompose_url":url,"action":"Decompose url"})
                 write_generic_modified_url_file(filename=generic_nested_url_file,data=data)
         elif parsed_url.scheme in ['ftp']:
@@ -195,16 +198,7 @@ def decompose_known_urls(html:str,logger:Logger,id:int,field:str,updates:list,ge
             domain=domain.lower()
             str_soup = str(soup)
             if domain in FTP_DECOMPOSE_URLS:
-                a_tags = soup.find_all('a', attrs={'href': url})
-                if len(a_tags)==0 and url in str_soup:
-                    pattern = re.escape(url) + r'(\r\n|\n)'
-                    if re.search(pattern, str_soup):
-                        str_soup = re.sub(pattern, '', str_soup)
-                    else:
-                        str_soup = str_soup.replace(url, '')
-                    logger.info(f'ID: {id} #COLUMN: {field} #URL: {url} replaced with {"null"}')
-                    updates.append(True)
-                    soup=BeautifulSoup(str_soup,'html.parser')
+                a_tags = soup.find_all('a', attrs={'href': dececode_url})
                 for tag in a_tags:
                     text=tag.text.strip()
                     updates.append(True)
@@ -214,6 +208,15 @@ def decompose_known_urls(html:str,logger:Logger,id:int,field:str,updates:list,ge
                     else:
                         tag.decompose()
                         logger.info(f'ID: {id} #COLUMN: {field} #URL: {url} replaced with {" "}')
+                if len(a_tags)==0 and url in str_soup:
+                    pattern = re.escape(url) + r'(\r\n|\n)'
+                    if re.search(pattern, str_soup):
+                        str_soup = re.sub(pattern, '', str_soup)
+                    else:
+                        str_soup = str_soup.replace(url, '')
+                    logger.info(f'ID: {id} #COLUMN: {field} #URL: {url} replaced with {"null"}')
+                    updates.append(True)
+                    soup=BeautifulSoup(str_soup,'html.parser')
                 data.update({"decompose_url":url,"action":"Decompose url"})
                 write_generic_modified_url_file(filename=generic_nested_url_file,data=data)
         elif any(i in url for i in PREDETERMINE_LIST):
@@ -358,17 +361,9 @@ def check_ftp_urls( logger:Logger, id:int, updates:list,field:str, html: Optiona
             write_generic_modified_url_file(filename=generic_nested_url_file,data=data)
             continue
         if result.get('status_code')==404:
-            a_tags = soup.find_all('a', attrs={'href': url})
+            decode_url=ht.unescape(url)
+            a_tags = soup.find_all('a', attrs={'href': decode_url})
             str_soup=str(soup)
-            if len(a_tags) == 0 and url in str_soup:
-                pattern = re.escape(url) + r'(\r\n|\n)'
-                if re.search(pattern, str_soup):
-                    str_soup = re.sub(pattern, '', str_soup)
-                else:
-                    str_soup = str_soup.replace(url, '')
-                updates.append(True)
-                soup=BeautifulSoup(str_soup,'html.parser')
-            updates.append(True)
             for tag in a_tags:
                 text = tag.text.strip()
                 if text == url or len(text) == 0:
@@ -379,6 +374,15 @@ def check_ftp_urls( logger:Logger, id:int, updates:list,field:str, html: Optiona
                     # Replace tag with tag text only
                     tag.replace_with(text)
                     logger.info(f'ID: {id} #COLUMN: {field} #URL: {url if url else "(null)"} #STATUS_CODE: {result.get("status_code")} - Replaced with #TEXT: {text}')
+            if len(a_tags) == 0 and url in str_soup:
+                pattern = re.escape(url) + r'(\r\n|\n)'
+                if re.search(pattern, str_soup):
+                    str_soup = re.sub(pattern, '', str_soup)
+                else:
+                    str_soup = str_soup.replace(url, '')
+                updates.append(True)
+                soup=BeautifulSoup(str_soup,'html.parser')
+            updates.append(True)
             data.update({"url":url,"status_code":result.get("status_code"),"action":"Do Ftp Request"})
             write_generic_modified_url_file(filename=generic_nested_url_file,data=data)
         else:
@@ -392,11 +396,8 @@ async def update_redirected_url(url,result ,soup,updates,logger,field,id,redirec
     str_soup=str(soup)
     redirected_url=urlparse(result.get("redirected_url"))._replace(query=None).geturl()
     result.update({"redirected_url":redirected_url})
-    a_tags = soup.find_all('a', attrs={'href': url})
-    if len(a_tags)==0 and url in str_soup:
-        str_soup=str_soup.replace(url,result.get("redirected_url"))
-        logger.info(f'ID:{id} #column {field} #URL {url} REDIRECTS TO {result.get("redirected_url")} #STATUS_CODE: {result.get("status_code")}' )
-        soup=BeautifulSoup(str_soup,"html.parser")
+    decode_url=ht.unescape(url)
+    a_tags = soup.find_all('a', attrs={'href': decode_url})
     for tag in a_tags:
         text=tag.text.strip()
         parsed_url=urlparse(result.get("redirected_url")).path
@@ -408,6 +409,10 @@ async def update_redirected_url(url,result ,soup,updates,logger,field,id,redirec
         else:
             tag['href']=result.get("redirected_url")
             logger.info(f'ID:{id} #column {field} #URL {url} REDIRECTS TO {result.get("redirected_url")} #STATUS_CODE: {result.get("status_code")}' )
+    if len(a_tags)==0 and url in str_soup:
+        str_soup=str_soup.replace(url,result.get("redirected_url"))
+        logger.info(f'ID:{id} #column {field} #URL {url} REDIRECTS TO {result.get("redirected_url")} #STATUS_CODE: {result.get("status_code")}' )
+        soup=BeautifulSoup(str_soup,"html.parser")
     updates.append(True)
     write_redirect_urls(redirected_file,result)
     return soup,updates
@@ -440,14 +445,15 @@ async def check_http_urls(logger:Logger, id:int,field:str,updates:list,base_url:
 
                 if not result.get('is_broken', False):
                     if check_https_urls(url):
-                        a_tags = soup.find_all('a', attrs={'href': url})
+                        decode_url=ht.unescape(url)
+                        a_tags = soup.find_all('a', attrs={'href': decode_url})
+                        for tag in a_tags:
+                            tag['href']=parsed_url 
+                            logger.info(f'ID: {id} #COLUMN: {field} #URL: {url} replaced with {parsed_url}')
                         if len(a_tags)==0 and url in str_soup:
                             str_soup=str_soup.replace(url,parsed_url) 
                             logger.info(f'ID: {id} #COLUMN: {field} #URL: {url} replaced with {parsed_url}')
                             soup=BeautifulSoup(str_soup,"html.parser")
-                        for tag in a_tags:
-                            tag['href']=parsed_url 
-                            logger.info(f'ID: {id} #COLUMN: {field} #URL: {url} replaced with {parsed_url}') 
                         updates.append(True)
                         data.update({"broken_url":url,"correct_url":parsed_url,"url":parsed_url,"status_code":result.get("status_code"),"action":"Do Http Request"}) 
                         write_generic_modified_url_file(filename=generic_nested_url_file,data=data)
@@ -471,7 +477,16 @@ async def check_http_urls(logger:Logger, id:int,field:str,updates:list,base_url:
                 
                 
                 if result.get('status_code')==404:
-                    a_tags = soup.find_all('a', attrs={'href': url})
+                    decode_url=ht.unescape(url)
+                    a_tags = soup.find_all('a', attrs={'href': decode_url})
+                    for tag in a_tags:
+                        text = tag.text.strip()
+                        if text == url or len(text) == 0:
+                            logger.info(f'ID: {id} #COLUMN: {field} #URL: {url if url else "(null)"} #STATUS_CODE: {result.get("status_code")} #TEXT: {"(null)" if len(text) == 0 else text} removed')
+                            tag.decompose()
+                        else:
+                            tag.replace_with(text)
+                            logger.info(f'ID: {id} #COLUMN: {field} #URL: {url if url else "(null)"} #STATUS_CODE: {result.get("status_code")} - Replaced with #TEXT: {text}')
                     if len(a_tags) == 0 and url in str_soup:
                         pattern = re.escape(url) + r'(\r\n|\n)'
                         if re.search(pattern, str_soup):
@@ -481,14 +496,6 @@ async def check_http_urls(logger:Logger, id:int,field:str,updates:list,base_url:
                         logger.info(f'Skipped ID: {id} #COLUMN: {field} #URL: {parsed_url} #STATUS_CODE: {result.get("status_code")} #Replace with {"NULL"}')
                         soup=BeautifulSoup(str_soup,"html.parser")
                     updates.append(True)
-                    for tag in a_tags:
-                        text = tag.text.strip()
-                        if text == url or len(text) == 0:
-                            logger.info(f'ID: {id} #COLUMN: {field} #URL: {url if url else "(null)"} #STATUS_CODE: {result.get("status_code")} #TEXT: {"(null)" if len(text) == 0 else text} removed')
-                            tag.decompose()
-                        else:
-                            tag.replace_with(text)
-                            logger.info(f'ID: {id} #COLUMN: {field} #URL: {url if url else "(null)"} #STATUS_CODE: {result.get("status_code")} - Replaced with #TEXT: {text}')
                     data.update({'url':parsed_url,"status_code":result.get("status_code"),"action":"Do Http Request"})
                 else:
                     for_more_check_urls.add(url)
