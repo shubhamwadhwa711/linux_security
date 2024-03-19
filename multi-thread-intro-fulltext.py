@@ -715,16 +715,22 @@ def main(commit: bool = False, id: Optional[int] = 0,log_level:bool=False):
 
     connection=get_db_connection(config,logger)
     
-    if limit==0:
-        with connection.cursor() as cursor:
-            sql = f"SELECT count(c.id) as total FROM {table_prefix}_content c LEFT JOIN {table_prefix}_categories cat ON cat.id = c.catid WHERE c.state = 1 AND cat.published = 1"
-            cursor.execute(sql)
-            result = cursor.fetchone()
-        
-        total = result.get("total") if id == 0 else 1
+    if limit>0:
+        sql=f"SELECT COUNT(*) as total FROM (SELECT c.id FROM {table_prefix}_content c LEFT JOIN {table_prefix}_categories cat ON cat.id = c.catid WHERE c.state = 1 AND cat.published = 1 LIMIT {limit} ) AS limited_rows"
+        # sql = f"SELECT count(c.id) as total FROM {table_prefix}_content c LEFT JOIN {table_prefix}_categories cat ON cat.id = c.catid WHERE c.state = 1 AND cat.published = 1 LIMIT {limit}"  
     else:
-        total=limit if id==0 else 1
-    chunk_size=total//multiprocessing.cpu_count()
+        sql=f"SELECT count(c.id) as total FROM {table_prefix}_content c LEFT JOIN {table_prefix}_categories cat ON cat.id = c.catid WHERE c.state = 1 AND cat.published = 1 "
+    with connection.cursor() as cursor:
+        cursor.execute(sql)
+        result = cursor.fetchone()
+    
+    total = result.get("total") if id == 0 else 1 
+    # else:
+    #     total=limit if id==0 else 1
+    chunk_size=1
+    core_count=multiprocessing.cpu_count()
+    if total>core_count:
+        chunk_size=total//core_count
     data_chunks=[]
     all_data=False
     counter=0
