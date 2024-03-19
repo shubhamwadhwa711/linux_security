@@ -755,7 +755,7 @@ def main(commit: bool = False, id: Optional[int] = 0,log_level:bool=False):
                 nested_imgcsv_files=[f'Thread_{i}_imgcsv.csv' for i in range(len(data_chunks))]
                 redirect_urls_files=[f'Thread_{i}_redirect_url.json' for i in range((len(data_chunks)))]
                 generic_nested_modified_file=[f'Thread_{i}_generic_url_file.json' for i in range((len(data_chunks)))]
-                with ProcessPoolExecutor() as executor:
+                with ThreadPoolExecutor() as executor:
                     futures = executor.map(process_record, data_chunks, nested_log_files, [base_url] * len(data_chunks), nested_timeout_files,nested_imgcsv_files, [config] * len(data_chunks), [commit] * len(data_chunks),[total] *len(data_chunks),[log_level]*len(data_chunks),redirect_urls_files,[table_prefix]*len(data_chunks),generic_nested_modified_file)
                 for future in futures:
                     i,counter = future
