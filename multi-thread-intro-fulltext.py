@@ -508,7 +508,7 @@ def skip_check_sites(html,logger:Logger,generic_nested_url_file:str,data:dict):
     all_urls = find_urls(html)
     remaining_urls=[]
     for url in all_urls:
-        if url.startswith('#') or urlparse(url).netloc in SKIP_CHECK_SITES or urlparse(url).scheme in ["mailto", "tel"]or '@' in url:
+        if url.startswith('#') or urlparse(url).netloc in SKIP_CHECK_SITES or urlparse(url).scheme in ["mailto", "tel"]:
             logger.info(f"{url} is skiped for checking:- present in SKIP_CHECK_SITES ")
             data.update({"url":url,'action':"Skipped url"})
             write_generic_modified_url_file(filename=generic_nested_url_file,data=data)
