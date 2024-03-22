@@ -324,7 +324,7 @@ async def new_do_http_request(urls_obj,session,logger:Logger,id:int,image_urls:l
 
 def do_ftp_request(urls, logger: Logger, id: int):
     with ThreadPoolExecutor() as executor:
-        futures = {executor.submit(check_ftp_broken_link, url=url, timeout=FTP_REQUEST_TIMEOUT): url for url in urls}
+        futures = {executor.submit(check_ftp_broken_link, url=url, logger=logger,timeout=FTP_REQUEST_TIMEOUT): url for url in urls}
         for future in as_completed(futures):
             url = futures[future]
             try:
@@ -367,23 +367,28 @@ def check_ftp_urls( logger:Logger, id:int, updates:list,field:str, html: Optiona
             for tag in a_tags:
                 text = tag.text.strip()
                 if text == url or len(text) == 0:
+                    for_more_check_urls.add(url)
+                    logger.info(f'ID: {id} #COLUMN: {field} #URL: {url if url else "(null)"} #STATUS_CODE: {result.get("status_code")} -Added for more for check urls')
                     # If the link text is also a URL, we should probably remove the entire link and link text, as it will also create a problem
-                    logger.info(f'ID: {id} #COLUMN: {field} #URL: {url if url else "(null)"} #STATUS_CODE: {result.get("status_code")} #TEXT: {"(null)" if len(text) == 0 else text} removed')
-                    tag.decompose()
+                    # logger.info(f'ID: {id} #COLUMN: {field} #URL: {url if url else "(null)"} #STATUS_CODE: {result.get("status_code")} #TEXT: {"(null)" if len(text) == 0 else text} removed')
+                    # tag.decompose()
                 else:
+                    for_more_check_urls.add(url)
+                    logger.info(f'ID: {id} #COLUMN: {field} #URL: {url if url else "(null)"} #STATUS_CODE: {result.get("status_code")} -Added for more for check urls')
                     # Replace tag with tag text only
-                    tag.replace_with(text)
-                    logger.info(f'ID: {id} #COLUMN: {field} #URL: {url if url else "(null)"} #STATUS_CODE: {result.get("status_code")} - Replaced with #TEXT: {text}')
+                    # tag.replace_with(text)
+                    # logger.info(f'ID: {id} #COLUMN: {field} #URL: {url if url else "(null)"} #STATUS_CODE: {result.get("status_code")} - Replaced with #TEXT: {text}')
             if len(a_tags) == 0 and url in str_soup:
-                pattern = re.escape(url) + r'(\r\n|\n)'
-                if re.search(pattern, str_soup):
-                    str_soup = re.sub(pattern, '', str_soup)
-                else:
-                    str_soup = str_soup.replace(url, '')
+                for_more_check_urls.add(url)
+                # pattern = re.escape(url) + r'(\r\n|\n)'
+                # if re.search(pattern, str_soup):
+                #     str_soup = re.sub(pattern, '', str_soup)
+                # else:
+                #     str_soup = str_soup.replace(url, '')
                 updates.append(True)
                 soup=BeautifulSoup(str_soup,'html.parser')
             updates.append(True)
-            data.update({"url":url,"status_code":result.get("status_code"),"action":"Do Ftp Request"})
+            data.update({"url":url,"status_code":result.get("status_code"),"action":"Do Ftp Request Added into check urls"})
             write_generic_modified_url_file(filename=generic_nested_url_file,data=data)
         else:
             for_more_check_urls.add(url)
@@ -468,7 +473,7 @@ async def check_http_urls(logger:Logger, id:int,field:str,updates:list,base_url:
                         if result.get('status_code') in STATUS_CODES_FOR_FURTHER_CHECK:
                             logger.info(f'ID: {id} #COLUMN: {field} #URL: {url} added for more checking')
                             for_more_check_urls.add(url)
-                            data.update({'url':parsed_url,"status_code":result.get("status_code"),"action":"Do Http Request Added for moew check"})
+                            data.update({'url':parsed_url,"status_code":result.get("status_code"),"action":"Do Http Request Added for more check"})
                         else:
                             logger.info(f'Skipped ID: {id} #COLUMN: {field} #URL: {parsed_url} #STATUS_CODE: {result.get("status_code")}')
                             data.update({'url':parsed_url,"status_code":result.get("status_code"),"action":"Do Http Request"})
@@ -482,21 +487,26 @@ async def check_http_urls(logger:Logger, id:int,field:str,updates:list,base_url:
                     for tag in a_tags:
                         text = tag.text.strip()
                         if text == url or len(text) == 0:
-                            logger.info(f'ID: {id} #COLUMN: {field} #URL: {url if url else "(null)"} #STATUS_CODE: {result.get("status_code")} #TEXT: {"(null)" if len(text) == 0 else text} removed')
-                            tag.decompose()
+                            for_more_check_urls.add(url)
+                            logger.info(f'ID: {id} #COLUMN: {field} #URL: {url if url else "(null)"} #STATUS_CODE: {result.get("status_code")} - Added for more check')
+                            # tag.decompose()
                         else:
-                            tag.replace_with(text)
-                            logger.info(f'ID: {id} #COLUMN: {field} #URL: {url if url else "(null)"} #STATUS_CODE: {result.get("status_code")} - Replaced with #TEXT: {text}')
+                            for_more_check_urls.add(url)
+                            # tag.replace_with(text)
+                            logger.info(f'ID: {id} #COLUMN: {field} #URL: {url if url else "(null)"} #STATUS_CODE: {result.get("status_code")} -  Added for more check')
+                            # logger.info(f'ID: {id} #COLUMN: {field} #URL: {url if url else "(null)"} #STATUS_CODE: {result.get("status_code")} - Replaced with #TEXT: {text}')
                     if len(a_tags) == 0 and url in str_soup:
-                        pattern = re.escape(url) + r'(\r\n|\n)'
-                        if re.search(pattern, str_soup):
-                            str_soup = re.sub(pattern, '', str_soup)
-                        else:
-                            str_soup = str_soup.replace(url, '')
-                        logger.info(f'Skipped ID: {id} #COLUMN: {field} #URL: {parsed_url} #STATUS_CODE: {result.get("status_code")} #Replace with {"NULL"}')
+                        for_more_check_urls.add(url)
+                        logger.info(f'Skipped ID: {id} #COLUMN: {field} #URL: {parsed_url} #STATUS_CODE: {result.get("status_code")} -  Added for more check')
+                        # pattern = re.escape(url) + r'(\r\n|\n)'
+                        # if re.search(pattern, str_soup):
+                        #     str_soup = re.sub(pattern, '', str_soup)
+                        # else:
+                        #     str_soup = str_soup.replace(url, '')
+                        # logger.info(f'Skipped ID: {id} #COLUMN: {field} #URL: {parsed_url} #STATUS_CODE: {result.get("status_code")} #Replace with {"NULL"}')
                         soup=BeautifulSoup(str_soup,"html.parser")
-                    updates.append(True)
-                    data.update({'url':parsed_url,"status_code":result.get("status_code"),"action":"Do Http Request"})
+                    updates.append(False)
+                    data.update({'url':parsed_url,"status_code":result.get("status_code"),"action":"Do Http Request -Added into more urls"})
                 else:
                     for_more_check_urls.add(url)
                     logger.info(f'ID: {id} #COLUMN: {field} #URL: {parsed_url} added for more checking')
@@ -625,7 +635,7 @@ def process_record(records, log_file, base_url, timeout_file,nested_img_file,con
     logger = get_logger(name=log_file, log_file=log_file,log_level=log_level) 
     connection=get_db_connection(config,logger)
     counter=0 # Flag to track if any update fails
-    thread_id=os.getpid()
+    thread_id=threading.get_ident()
     for record in records:
         try:
             update_shared_counter(1)
