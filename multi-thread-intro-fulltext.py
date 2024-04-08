@@ -143,7 +143,8 @@ def find_broken_urls(text):
 
 def find_urls(text):
     # pattern = r"""\b(?:(?:(?:(?:https?|ftp?|sftp?):\/\/)|(?:www\.))|(?:ftp:)|(?<=href="|href=\'))[^\s<>;]+\b[\/]?"""
-    pattern=r"""\b(?:(?:(?:(?:https?|ftp?|sftp?):\/\/)|(?:www\.))|(?:ftp:)|(?<=href="|href=\'|href="|href=\'))[^\s<>"&;]+(?:&amp;[^\s<>"&;?]+=[^\s<>"&;?]+)*\b[\/]?(?<!;q\s)(?!;<>)"""
+    pattern=r"""\b(?:(?:(?:(?:https?|ftp?|sftp?):\/\/)|(?:www\.))|(?:ftp:)|(?<=href="|href=\'|href="|href=\'))[^\s<>"&]+(?:&amp;[^\s<>"&;?]+=[^\s<>"&;?]+)*\b[\/]?(?<!;q\s)(?!;<>)"""
+    # pattern=r"""\b(?:(?:(?:(?:https?|ftp?|sftp?):\/\/)|(?:www\.))|(?:ftp:)|(?<=href="|href=\'|href="|href=\'))[^\s<>"&;]+(?:&amp;[^\s<>"&;?]+=[^\s<>"&;?]+)*\b[\/]?(?<!;q\s)(?!;<>)"""
     matches=re.findall(pattern,text)
     return matches
 

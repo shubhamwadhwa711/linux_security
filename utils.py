@@ -134,7 +134,7 @@ async def check_url_with_selenium(url, logger, gecodriver_required=False, gecodr
     with create_webdriver(options, gecodriver_required, gecodriver_path) as driver:
         try:
             driver.get(url)
-            if "Error" in driver.title or "Not Found" in driver.title:
+            if "Error" in driver.title or "Not Found" in driver.title or "Page not found" in driver.title:
                 return {'url': url, 'status_code': 404, 'is_error': True, "is_redirect": False}
             return {'url': url, 'status_code': 200, 'is_error': False, "is_redirect": False}
         except Exception as e:

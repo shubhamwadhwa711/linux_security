@@ -33,7 +33,8 @@
       "securityportal.com",
       "9to5linux.com",
       "linstage.guardiandigital.com",
-      "www.manageengine.com"
+      "www.manageengine.com",
+      "www.crowdsec.net"
     ],
     "SITE_WITH_GET_METHOD": [
       "portswigger.net",
