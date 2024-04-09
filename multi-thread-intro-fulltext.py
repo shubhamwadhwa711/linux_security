@@ -142,10 +142,14 @@ def find_broken_urls(text):
     return broken_links
 
 def find_urls(text):
+    # ragax to find urls that present in anchor tags 
+    anchor_tag_pattern=r"""<a\s+(?:[^>]*?\s+)?href=["']([^"']*)["']"""
+    text_url_pattern=r"""(?<!href=["'])(?<!href=["']https:\/\/)(?<!>)(?:https?|ftp|sftp):\/\/[^\s<>"';]+|(?<!href=["']https:\/\/)(?<!href=["']http:\/\/)(?<!>)(?<!href=["'])www\.[^\s<>"';]+\.[^\s<>"';]+""" 
     # pattern = r"""\b(?:(?:(?:(?:https?|ftp?|sftp?):\/\/)|(?:www\.))|(?:ftp:)|(?<=href="|href=\'))[^\s<>;]+\b[\/]?"""
-    pattern=r"""\b(?:(?:(?:(?:https?|ftp?|sftp?):\/\/)|(?:www\.))|(?:ftp:)|(?<=href="|href=\'|href="|href=\'))[^\s<>"&]+(?:&amp;[^\s<>"&;?]+=[^\s<>"&;?]+)*\b[\/]?(?<!;q\s)(?!;<>)"""
     # pattern=r"""\b(?:(?:(?:(?:https?|ftp?|sftp?):\/\/)|(?:www\.))|(?:ftp:)|(?<=href="|href=\'|href="|href=\'))[^\s<>"&;]+(?:&amp;[^\s<>"&;?]+=[^\s<>"&;?]+)*\b[\/]?(?<!;q\s)(?!;<>)"""
-    matches=re.findall(pattern,text)
+    anchor_url_matches=re.findall(anchor_tag_pattern,text)
+    text_url_matches=re.findall(text_url_pattern,text)
+    matches=list(set(anchor_url_matches+text_url_matches))
     return matches
 
 
