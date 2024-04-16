@@ -141,14 +141,26 @@ def find_broken_urls(text):
         broken_links[joined_url]=m
     return broken_links
 
+def fix_text_matches(text_matches):
+    return [i[0] if i[0] else i[1] for i in text_matches]
+    # matches=[]
+    # for i in  text_matches:
+    #     if i[0] is not None and i[0]!="":
+    #         matches.append(i[0])
+    #     else:
+    #         matches.append(i[1])
+    # return matches
+
 def find_urls(text):
     # ragax to find urls that present in anchor tags 
     anchor_tag_pattern=r"""<a\s+(?:[^>]*?\s+)?href=["']([^"']*)["']"""
-    text_url_pattern=r"""(?<!href=["'])(?<!href=["']https:\/\/)(?<!>)(?:https?|ftp|sftp):\/\/[^\s<>"';]+|(?<!href=["']https:\/\/)(?<!href=["']http:\/\/)(?<!>)(?<!href=["'])www\.[^\s<>"';]+\.[^\s<>"';]+""" 
+    text_url_pattern=r"""\(((?<!href=["'])(?<!href=["']https:\/\/)(?<!>)(?:https?|ftp|sftp):\/\/[^\s<>"';]+|(?<!href=["']https:\/\/)(?<!href=["']http:\/\/)(?<!>)(?<!href=["'])www\.[^\s<>"';]+\.[^\s<>"';]+)\)|((?<!href=["'])(?<!href=["']https:\/\/)(?<!>)(?:https?|ftp|sftp):\/\/[^\s<>"';]+|(?<!href=["']https:\/\/)(?<!href=["']http:\/\/)(?<!>)(?<!href=["'])www\.[^\s<>"';]+\.[^\s<>"';]+)"""
+    # text_url_pattern=r"""(?<!href=["'])(?<!href=["']https:\/\/)(?<!>)(?:https?|ftp|sftp):\/\/[^\s<>"';]+|(?<!href=["']https:\/\/)(?<!href=["']http:\/\/)(?<!>)(?<!href=["'])www\.[^\s<>"';]+\.[^\s<>"';]+""" 
     # pattern = r"""\b(?:(?:(?:(?:https?|ftp?|sftp?):\/\/)|(?:www\.))|(?:ftp:)|(?<=href="|href=\'))[^\s<>;]+\b[\/]?"""
     # pattern=r"""\b(?:(?:(?:(?:https?|ftp?|sftp?):\/\/)|(?:www\.))|(?:ftp:)|(?<=href="|href=\'|href="|href=\'))[^\s<>"&;]+(?:&amp;[^\s<>"&;?]+=[^\s<>"&;?]+)*\b[\/]?(?<!;q\s)(?!;<>)"""
     anchor_url_matches=re.findall(anchor_tag_pattern,text)
-    text_url_matches=re.findall(text_url_pattern,text)
+    text_url_tuple_matches=re.findall(text_url_pattern,text)
+    text_url_matches=fix_text_matches(text_url_tuple_matches)
     matches=list(set(anchor_url_matches+text_url_matches))
     return matches
 
