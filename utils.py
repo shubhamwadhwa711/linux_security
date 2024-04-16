@@ -23,10 +23,10 @@ import csv
 import contextlib
 # from webdriver_manager.firefox import GeckoDriverManager
 import requests
-from requests.packages.urllib3.exceptions import InsecureRequestWarning
+# from requests.packages.urllib3.exceptions import InsecureRequestWarning
 
-# Suppress the InsecureRequestWarning
-requests.packages.urllib3.disable_warnings(InsecureRequestWarning)
+# # Suppress the InsecureRequestWarning
+# requests.packages.urllib3.disable_warnings(InsecureRequestWarning)
 config = configparser.ConfigParser(interpolation=None)
 config.read(os.path.join(os.path.dirname(__file__), "config.ini"))
 gecodriver_path = config.get('script-01', 'gecodriver_path')
