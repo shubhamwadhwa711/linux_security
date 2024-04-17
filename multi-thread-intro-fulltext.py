@@ -172,15 +172,15 @@ def process_broken_urls(html: str,logger:Logger,id:int,field:str,generic_nested_
         html = re.sub(broken_url, correct_url, html)
         logger.info(f'ID: {id} #COLUMN: {field} #URL: {broken_url} replaced with {correct_url}')
         updates.append(True)
-        data={"id":id,"field":field,"broken_url":broken_url,"correct_url":correct_url,"decompose_url":None,"url":None,"status_code":None,"action":"Replace with correct url"}
-        write_generic_modified_url_file(filename=generic_nested_url_file,data=data)
+        # data={"id":id,"field":field,"broken_url":broken_url,"correct_url":correct_url,"decompose_url":None,"url":None,"status_code":None,"action":"Replace with correct url"}
+        # write_generic_modified_url_file(filename=generic_nested_url_file,data=data)
     return html,updates
 
 
 def decompose_known_urls(html:str,logger:Logger,id:int,field:str,updates:list,generic_nested_url_file:str):
     all_urls = find_urls(html)
     soup=BeautifulSoup(html,'html.parser')
-    data={"id":id,"field":field,"broken_url":None,"correct_url":None,"decompose_url":None,"url":None,"status_code":None,"action":None}
+    data={"id":id,"field":field,"decompose_url":None,"url":None,"status_code":None,"action":None}
     for url in all_urls:
         dececode_url=ht.unescape(url)
         parsed_url = urlparse(url)
@@ -477,7 +477,7 @@ async def check_http_urls(logger:Logger, id:int,field:str,updates:list,base_url:
                             logger.info(f'ID: {id} #COLUMN: {field} #URL: {url} replaced with {parsed_url}')
                             soup=BeautifulSoup(str_soup,"html.parser")
                         updates.append(True)
-                        data.update({"broken_url":url,"correct_url":parsed_url,"url":parsed_url,"status_code":result.get("status_code"),"action":"Do Http Request"}) 
+                        data.update({"url":parsed_url,"status_code":result.get("status_code"),"action":"Do Http Request"}) 
                         write_generic_modified_url_file(filename=generic_nested_url_file,data=data)
                         continue
 
@@ -551,7 +551,7 @@ def img_urls(html):
 
 
 def check_is_url_valid(html:str, logger:Logger, id:int,field:str,base_url:str,updates:list,redirected_file:str,generic_nested_url_file:str):
-    data={"id":id,"field":field,"broken_url":None,"correct_url":None,"decompose_url":None,"url":None,"status_code":None,"action":None}
+    data={"id":id,"field":field,"decompose_url":None,"url":None,"status_code":None,"action":None}
     all_urls=skip_check_sites(html,logger,generic_nested_url_file,data)
     image_urls=img_urls(html)
     all_urls=list(set(all_urls+image_urls))

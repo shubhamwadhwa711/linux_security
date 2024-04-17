@@ -131,15 +131,17 @@ def create_webdriver(options, gecodriver_required=False, gecodriver_path=None):
 async def check_url_with_selenium(url, logger, gecodriver_required=False, gecodriver_path=None):
     options = FirefoxOptions()
     options.add_argument("--headless")
-    with create_webdriver(options, gecodriver_required, gecodriver_path) as driver:
-        try:
-            driver.get(url)
-            if "Error" in driver.title or "Not Found" in driver.title or "Page not found" in driver.title:
-                return {'url': url, 'status_code': 404, 'is_error': True, "is_redirect": False}
-            return {'url': url, 'status_code': 200, 'is_error': False, "is_redirect": False}
-        except Exception as e:
-            logger.error(f'Error checking URL {url}: {repr(e)}')
-            return {'url': url, 'status_code': 500, 'is_error': True, "is_redirect": False}        
+    def check_url():
+        with create_webdriver(options, gecodriver_required, gecodriver_path) as driver:
+            try:
+                driver.get(url)
+                if "Error" in driver.title or "Not Found" in driver.title or "Page not found" in driver.title:
+                    return {'url': url, 'status_code': 404, 'is_error': True, "is_redirect": False}
+                return {'url': url, 'status_code': 200, 'is_error': False, "is_redirect": False}
+            except Exception as e:
+                logger.error(f'Error checking URL {url}: {repr(e)}')
+                return {'url': url, 'status_code': 500, 'is_error': True, "is_redirect": False}    
+    return await asyncio.get_event_loop().run_in_executor(None, check_url)    
 
 
 
