@@ -235,14 +235,15 @@ def check_http_broken_link(url,logger, id, timeout: int = HTTP_REQUEST_TIMEOUT):
                 headers = {"User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36"},
                 timeout=timeout
             )
+            if response.status_code==404:
+                return selenium_check(url,response,logger)
             if response.status_code  in [405,403, 301, 302] or any(site in url for site in SITE_WITH_GET_METHOD): # 405 Method Not Allowed - Try with GET instead
                 response = requests.get(
                     url=url,
                     headers = {"User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36"},
                     timeout=timeout
                 )
-            if response.status_code==404:
-                return selenium_check(url,response,logger)
+                return {'url':str(response.url),'status_code':response.status_code,'is_error':False,"is_redirect":True}
             return {'url':url,'status_code':response.status_code,'is_error':False,"is_redirect":False}
 
     except (ReadTimeout, ConnectionError) as e:
@@ -253,7 +254,7 @@ def check_http_broken_link(url,logger, id, timeout: int = HTTP_REQUEST_TIMEOUT):
             headers = {"User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36"},
             timeout=timeout,verify=False
         )
-        return {'url':url,'status_code':response.status_code,'is_error':False,"is_redirect":False}
+        return {'url':str(response.url),'status_code':response.status_code,'is_error':False,"is_redirect":False}
 
 
 def check_broken_url(url, timeout):
