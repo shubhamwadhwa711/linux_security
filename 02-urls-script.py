@@ -160,15 +160,15 @@ def is_broken_url(id: int, url: str, logger: Logger, timeout_file: str):
             is_broken = result.get('is_broken', False)
             if is_broken is False :
                 if result.get('status_code') in VALID_HTTP_STATUS_CODES:
-                    logger.warning(json.dumps({'ID': id, "URL": url ,"STATUS_CODE": result.get("status_code")}))
+                    logger.warning(json.dumps({'ID': id, "URL": result.get('url') ,"STATUS_CODE": result.get("status_code")}))
                 else:
                     if result.get('status_code') in STATUS_CODES_FOR_FURTHER_CHECK:
                         logger.info(json.dumps({'ID': id, "URL": url ,"Action": "Added for more checking"}))
                         write_file(filename=timeout_file, id=id, urls=[url])
                     else:
-                        logger.info(json.dumps({'Skipped ID': id, "URL": url ,"STATUS_CODE": result.get("status_code")}))
+                        logger.info(json.dumps({'Skipped ID': id, "URL": result.get('url') ,"STATUS_CODE": result.get("status_code")}))
             else:
-                logger.info(json.dumps({'ID': id, "URL": url ,"STATUS_CODE": f"{result.get('status_code')} removed "}))
+                logger.info(json.dumps({'ID': id, "URL": result.get('url') ,"STATUS_CODE": f"{result.get('status_code')} removed "}))
             return is_broken
     
 def main(commit: bool = False, id: Optional[int] = 0):
